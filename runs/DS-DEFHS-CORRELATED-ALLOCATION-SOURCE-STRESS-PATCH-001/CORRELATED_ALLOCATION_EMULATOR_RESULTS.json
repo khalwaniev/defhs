@@ -1,0 +1,80 @@
+{
+  "mission": "DS-DEFHS-CORRELATED-ALLOCATION-SOURCE-STRESS-PATCH-001",
+  "protected_gate_queried": false,
+  "baseline_emulator_status": "RETAINED",
+  "method": {
+    "pseudo_private_fractions": [0.2,0.3,0.4,0.5],
+    "class_stratified": true,
+    "allocation_distribution": "Fisher noncentral hypergeometric within emotion class",
+    "broad_screen_scenarios": 672,
+    "broad_screen_replicates_per_scenario": 75,
+    "boundary_confirmation_replicates": [1500,2000],
+    "score": "0.40 * public_macro_f1 + 0.60 * private_macro_f1"
+  },
+  "subgroup_prevalence": [
+    {"subgroup":"quant128_r0","train":0.501211,"test":0.401914},
+    {"subgroup":"quant128_r43","train":0.164649,"test":0.200957},
+    {"subgroup":"quant128_r86","train":0.145278,"test":0.200957},
+    {"subgroup":"quant128_r30","train":0.055690,"test":0.071770},
+    {"subgroup":"quant128_r94","train":0.067797,"test":0.057416},
+    {"subgroup":"quant960_r192","train":0.102906,"test":0.066986},
+    {"subgroup":"quant960_r606","train":0.049637,"test":0.052632},
+    {"subgroup":"dtype_int32","train":0.096852,"test":0.105263},
+    {"subgroup":"prompt90_beyond_duplicate","train":0.048426,"test":0.028708},
+    {"subgroup":"speaker_d0.25_beyond_duplicate","train":0.031477,"test":0.033493},
+    {"subgroup":"speaker_d0.30_beyond_duplicate","train":0.127119,"test":0.114833},
+    {"subgroup":"speaker_d0.35_beyond_duplicate","train":0.282082,"test":0.272727},
+    {"subgroup":"latent_k4_0","train":0.274818,"test":0.244019},
+    {"subgroup":"latent_k4_1","train":0.279661,"test":0.301435},
+    {"subgroup":"latent_k4_2","train":0.165860,"test":0.157895},
+    {"subgroup":"latent_k4_3","train":0.279661,"test":0.296651},
+    {"subgroup":"duration_short20","train":0.205811,"test":0.234450},
+    {"subgroup":"duration_long20","train":0.200969,"test":0.229665},
+    {"subgroup":"egemaps_outlier20","train":0.200969,"test":0.239234},
+    {"subgroup":"retrieval_covered","train_va_pseudotest":0.280872,"test":0.373206},
+    {"subgroup":"va_hard_le25pct_correct","train":0.232446,"test":null,"status":"tail-only"}
+  ],
+  "baseline": [
+    {"private_fraction":0.2,"FULL_RBF_SVM_mean":0.710773,"FULL_RBF_SVM_top_frequency":0.746},
+    {"private_fraction":0.3,"FULL_RBF_SVM_mean":0.709608,"FULL_RBF_SVM_top_frequency":0.910},
+    {"private_fraction":0.4,"FULL_RBF_SVM_mean":0.709955,"FULL_RBF_SVM_top_frequency":0.996},
+    {"private_fraction":0.5,"FULL_RBF_SVM_mean":0.709688,"FULL_RBF_SVM_top_frequency":1.000}
+  ],
+  "broad_screen_envelope": {
+    "plausible_worst_mean_rbf_minus_best_alt": 0.0038460,
+    "plausible_max_rank_reversal_frequency": 0.426667,
+    "strong_tail_worst_mean_rbf_minus_best_alt": 0.0005473,
+    "extreme_tail_worst_mean_rbf_minus_best_alt": -0.0071688
+  },
+  "high_replication_confirmations": [
+    {"scenario":"latent_k4_3 moderate enrichment","private_fraction":0.2,"odds":2.0,"reps":2000,"mean_rbf_minus_best_alt":0.0052785,"reversal_frequency":0.336,"rbf_top_frequency":0.664},
+    {"scenario":"latent_k4_0 moderate depletion","private_fraction":0.2,"odds":0.5,"reps":2000,"mean_rbf_minus_best_alt":0.0068954,"reversal_frequency":0.298,"rbf_top_frequency":0.702},
+    {"scenario":"quant960_r192 moderate enrichment","private_fraction":0.2,"odds":2.0,"reps":1500,"mean_rbf_minus_best_alt":0.0062516,"reversal_frequency":0.311333,"rbf_top_frequency":0.688667},
+    {"scenario":"prompt90 beyond-duplicate moderate enrichment","private_fraction":0.2,"odds":2.0,"reps":1500,"mean_rbf_minus_best_alt":0.0068416,"reversal_frequency":0.306,"rbf_top_frequency":0.694},
+    {"scenario":"speaker d0.35 beyond-duplicate mild depletion","private_fraction":0.2,"odds":0.666667,"reps":2000,"mean_rbf_minus_best_alt":0.0067895,"reversal_frequency":0.2965,"rbf_top_frequency":0.7035},
+    {"scenario":"retrieval-covered mild enrichment","private_fraction":0.2,"odds":1.5,"reps":2000,"mean_rbf_minus_best_alt":0.0080190,"reversal_frequency":0.2755,"rbf_top_frequency":0.7245},
+    {"scenario":"duration-long20 mild enrichment","private_fraction":0.2,"odds":1.5,"reps":2000,"mean_rbf_minus_best_alt":0.0079008,"reversal_frequency":0.280,"rbf_top_frequency":0.720},
+    {"scenario":"speaker d0.35 beyond-duplicate strong depletion","private_fraction":0.2,"odds":0.25,"reps":2000,"mean_rbf_minus_best_alt":0.0033057,"reversal_frequency":0.391,"rbf_top_frequency":0.609},
+    {"scenario":"prompt90 beyond-duplicate forced enrichment","private_fraction":0.2,"odds":"infinity","reps":2000,"pseudo_private_prevalence":0.243902,"observed_test_prevalence":0.028708,"mean_rbf_minus_best_alt":-0.0069641,"reversal_frequency":0.7045,"rbf_top_frequency":0.2955},
+    {"scenario":"quant960_r192 forced enrichment","private_fraction":0.2,"odds":"infinity","reps":2000,"pseudo_private_prevalence":0.487805,"observed_test_prevalence":0.066986,"mean_rbf_minus_best_alt":-0.0051435,"reversal_frequency":0.710,"rbf_top_frequency":0.290},
+    {"scenario":"latent_k4_3 forced enrichment","private_fraction":0.2,"odds":"infinity","reps":2000,"pseudo_private_prevalence":0.786585,"observed_test_prevalence":0.296651,"mean_rbf_minus_best_alt":-0.0066610,"reversal_frequency":0.744,"rbf_top_frequency":0.256}
+  ],
+  "redteam_forced_tail_reference": {
+    "note": "Original adversarial forced allocation is not class-stratified and therefore combines subgroup concentration with class-composition shift.",
+    "prompt90_q20_mean_rbf_minus_best_alt": -0.0064200,
+    "latent_k4_3_q20_mean_rbf_minus_best_alt": -0.0203100,
+    "latent_k4_3_q30_mean_rbf_minus_best_alt": -0.0083492
+  },
+  "ranking_risk_classification": "ONLY_FAILS_UNDER_EXTREME_STRESS",
+  "interpretation": "Mild/moderate correlated allocation preserves a positive mean FULL_RBF_SVM margin in high-replication boundary checks. Strong non-forced stress also retains a positive mean margin. Mean ranking reversal is confirmed only under forced extreme tail composition.",
+  "architecture_decision": {
+    "V_B": "primary unchanged",
+    "V_A": "secondary unchanged; shift wording strengthened",
+    "V_D": "diagnostic unchanged",
+    "V_C": "authoritative view remains rejected",
+    "quantization": "add diagnostic Q128/Q960 stress",
+    "correlated_allocation": "add secondary sensitivity envelope",
+    "retrieval": "unchanged and separate",
+    "protected_gate": "untouched confirmation-only"
+  }
+}
