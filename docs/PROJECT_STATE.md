@@ -8,123 +8,186 @@ Canonical repository: `khalwaniev/defhs`
 
 Canonical local path: `/home/fikar/zingle/defhs`
 
-Active branch: `ds/validation-hardening-002`
+Active corrective branch:
+
+`ds/correlated-allocation-source-stress-patch-001`
+
+Parent frozen DS authority:
+
+`ds/validation-hardening-002@c7da27a0f7d0927a5070da8cf825d1415546345c`
+
+Adversarial authority:
+
+`audit/final-validation-data-redteam-001@5973f06e1a710017776c2f4ced60f892eaf2c76b`
 
 Governing workflow: `WORKFLOW.md`
 
 ## Current phase
 
-**DS-DEFHS-VALIDATION-HARDENING-002 — COMPLETE.**
+**DS-DEFHS-CORRELATED-ALLOCATION-SOURCE-STRESS-PATCH-001 — COMPLETE.**
 
-Final DS verdict:
+Final corrective verdict:
 
-**REVISE_AND_FREEZE**
+**PATCH_AND_FREEZE**
 
-The earlier `FAIL_NOT_READY` state has been superseded. All four mandatory
-closure audits have executed and been scientifically interpreted.
+The adversarial review identified two bounded defects in the DS-002 freeze:
+uncatalogued sample-count quantization structure and incomplete correlated
+hidden-allocation sensitivity. Both are now classified and controlled without
+a primary-validation redesign.
 
-## Canonical data authority
-
-Raw archive:
-
-- Drive path:
-  `/DEFHS/raw/dataverse-detecting-emotions-from-hindi-speech.zip`;
-- file ID: `1D0DcnbK0vrJGTsvtb7-l7vnpdfNxc-nH`;
-- size: 99,298,085 bytes;
-- SHA-256:
-  `100b38e6ed69542df88c1d295932a7a4c1914cd931ee64f7c6c848f6053bf214`.
-
-Supplied examples: 826 train + 209 test = 1,035.
-
-The organizer prose statement of 1,036 remains an explicitly bounded metadata
-unknown.
-
-## Frozen empirical structure
-
-- IDs exactly 1..1035;
-- 227 near-duplicate groups / 467 clips;
-- 77 train-test duplicate groups / 78 affected test clips;
-- duplicate threshold 0.95;
-- one confirmed duplicate-label conflict family: IDs 75 / 636 / 878;
-- verified int16/int32 recording heterogeneity;
-- global train/test separation weak, with modest nonlinear residual shift;
-- Hindi ASR, ECAPA, eGeMAPS and joint latent-regime audits complete.
-
-## Final validation architecture
-
-### V-A
-
-Row-level stratified five-fold CV, seed 20260930.
-
-Role: **secondary competition-mimic / retrieval-aware view**.
-
-SHA-256:
-
-`dcee356b0a66cb73c506bb71a6c57962227d6d0474efd3e4d6c404168308f3d1`
+## Preserved validation backbone
 
 ### V-B
 
-Duplicate-family-safe StratifiedGroupKFold, seed 20260930.
+**Primary representation/model-family selection authority — unchanged.**
 
-Role: **primary model/representation selection authority**.
+Duplicate-family-safe CV remains the main development authority.
 
-SHA-256:
+### V-A
 
-`87c6c0b33e5ea5c05b2bd2537d29480e4285cf816d4a921a6f1bcb3ef854139b`
+**Secondary competition-mimic / retrieval-aware view — unchanged role.**
+
+Train/test-shift wording is strengthened to:
+
+> detectable moderate, representation-dependent nonlinear residual shift after
+> cross-split duplicate removal, without evidence identifying a single
+> alternate hidden grouping mechanism.
+
+This does not justify replacing V-A or treating test as a known separate domain.
 
 ### V-C
 
-**Rejected as an authoritative split.**
+**Authoritative speaker-like view remains rejected.**
 
-ECAPA clusters remain diagnostic only because stable strict clusters mostly
-reproduce duplicate families and broader clustering is threshold-sensitive.
+ECAPA structure remains diagnostic/sensitivity evidence only.
 
 ### V-D
 
-Verified int16/int32 recording-format/source stress.
+**Verified int16/int32 recording-format/source stress — unchanged.**
 
-Role: diagnostic robustness view.
+## Patch addition 1 — sample-count quantization stress
 
-SHA-256:
+The red-team's `samples % 128` finding is real but is not uniquely
+exceptional after multiplicity correction.
 
-`f310cc024d122f19321e34a826e2793b5a661b1dd01ee4d1d72709a4472f0839`
+A bounded family of scientifically plausible quantizations was audited:
 
-### Protected promotion gate
+`16, 32, 64, 80, 128, 160, 200, 256, 320, 400, 480, 512, 640, 800, 960, 1024`.
 
-Duplicate-safe seed 20261001.
+Key conclusions:
 
-SHA-256:
+- modulus 960 is the strongest family member by Cramer's V;
+- modulus 128 bootstrap median rank is 12 / 16 and is never top-five in the
+  2,000-resample exceptionality check;
+- Q128 is extremely associated with dtype;
+- under dependency deduplication plus narrow duration/dtype/ID conditioning,
+  Q128 loses conservative family-wise significance at 0.10-second and
+  0.05-second duration bins;
+- the broader quantization family remains non-random.
 
-`b102eec374967672abc987afe857f689eec47fc104d96ce2f487c6caba26f46c`
+Final classification:
 
-Status: **untouched / confirmation only**.
+**mixed duration/segmentation and source-format quantization structure.**
+
+Frozen diagnostic stress summaries:
+
+- Q128: `0 / 43 / 86 / 30 / 94 / OTHER`;
+- Q960: `384 / 192 / 576 / 606 / 926 / OTHER`.
+
+These are diagnostic strata only. They are not a new primary split and are not
+automatically promoted as model features.
+
+## Patch addition 2 — correlated-allocation envelope
+
+The original class-stratified baseline emulator is retained.
+
+A secondary correlated-allocation sensitivity envelope now covers:
+
+- quantization/source strata;
+- dtype/source;
+- prompt beyond duplicates;
+- speaker-like threshold sensitivities;
+- latent clusters;
+- duration tails;
+- eGeMAPSv02 acoustic outliers;
+- retrieval concentration.
+
+Pseudo-private fractions remain:
+
+`20% / 30% / 40% / 50%`.
+
+Mild/moderate enrichment and depletion preserve a positive mean
+`FULL_RBF_SVM` advantage in high-replication boundary checks.
+
+The worst confirmed plausible mean margin is approximately:
+
+`+0.00528`
+
+A strong non-forced checked boundary remains positive at approximately:
+
+`+0.00331`.
+
+Mean ranking reversals are confirmed only under forced extreme compositions,
+including prompt, Q960, and latent tail scenarios whose pseudo-private
+prevalence is far from observed total-test prevalence.
+
+Final ranking-risk classification:
+
+**ONLY FAILS UNDER EXTREME STRESS**
+
+Extreme scenarios remain tail sensitivities, not estimates of hidden
+public/private membership probability.
 
 ## Retrieval
 
-Retain the deterministic separate retrieval lane for 78 / 209 test clips.
+The deterministic 77-group / 78-test-clip retrieval lane is unchanged and
+remains separate from ordinary SER inference.
 
-## Closure interpretation
+The adversarial all-pair check found no evidence of transitive false joins.
 
-- ECAPA: useful speaker-sensitive diagnostic, no authoritative V-C;
-- ASR: repeated prompt structure exists but is mostly duplicate-contained;
-- no-duplicate prompt/class AMI approximately 0.0075;
-- eGeMAPS: train/test logistic AUC approximately 0.4764, no new material shift;
-- joint latent regimes: weak and not suitable for a new frozen validation view.
+## Protected promotion gate
 
-Final reproduced diagnostics:
+`VALIDATION_VP_PROTECTED_FOLDS.csv`
 
-`runs/DS-DEFHS-VALIDATION-HARDENING-002/FINAL_INTERPRETATION_DIAGNOSTICS.json`
+Status:
 
-Heavy closure artifacts and provenance:
+**UNTOUCHED / CONFIRMATION-ONLY.**
 
-`/DEFHS/ds_validation_002/`
+No candidate performance from the protected seed was read, joined, or queried
+during this patch.
 
-`runs/DS-DEFHS-VALIDATION-HARDENING-002/CLOSURE_COMPLETED_ARTIFACT_MANIFEST.tsv`
+## Canonical patch artifacts
+
+Under:
+
+`runs/DS-DEFHS-CORRELATED-ALLOCATION-SOURCE-STRESS-PATCH-001/`
+
+- `MISSION.md`;
+- `PATCH_CONFIG.json`;
+- `SAMPLE_COUNT_QUANTIZATION_PATCH_REPORT.md`;
+- `SAMPLE_COUNT_QUANTIZATION_RESULTS.json`;
+- `SAMPLE_COUNT_QUANTIZATION_RANK_STABILITY.csv`;
+- `CORRELATED_ALLOCATION_EMULATOR_SPEC.md`;
+- `CORRELATED_ALLOCATION_EMULATOR_RESULTS.json`;
+- `CORRELATED_ALLOCATION_RANK_STABILITY.csv`;
+- `POST_REDTEAM_DATA_UNKNOWN_REGISTER.md`;
+- `POST_REDTEAM_VALIDATION_AUTHORITY.md`;
+- `FINAL_PATCH_RETURN_TO_SS.md`.
+
+Reproducer:
+
+`scripts/run_ds_defhs_correlated_allocation_source_stress_patch_001.py`
+
+The reproducer explicitly rejects any input path containing
+`VP_PROTECTED`.
 
 ## Next action
 
-Return the final DS authority to SS for independent acceptance.
+Return the bounded patch to SS.
 
-The DS evidence gate is complete. Recommend that SS authorize the first serious
-SER modeling mission under V-B primary / V-A secondary / V-D stress, with
-retrieval separate and the protected seed reserved for promotion confirmation.
+Recommendation:
+
+**SS should accept `PATCH_AND_FREEZE` and authorize the planned serious RS
+SER modeling program under `POST_REDTEAM_VALIDATION_AUTHORITY.md`.**
+
+Do not restart DS-002 and do not create a new primary CV.
