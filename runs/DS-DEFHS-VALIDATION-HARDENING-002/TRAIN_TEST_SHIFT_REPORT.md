@@ -1,34 +1,64 @@
-# Train / Test Shift Report — Closure Reissue
+# Train / Test Shift Report — Final Interpretation
 
-## Existing evidence retained
+## Existing acoustic evidence
 
-From the recovered ~402-column acoustic matrix, univariate train/test differences are mostly small. The largest standardized mean differences are around 0.20 and are concentrated in log-Mel/silence-related descriptors.
+From the recovered approximately 402-column acoustic matrix, univariate
+train/test differences are mostly small.
 
 Adversarial validation:
 
-- all clips, logistic regression: AUC 0.478 ± 0.013;
-- all clips, ExtraTrees: AUC 0.489 ± 0.009;
-- excluding cross-split duplicate families, logistic regression: AUC 0.494 ± 0.017;
-- excluding cross-split duplicate families, ExtraTrees: AUC 0.581 ± 0.010.
+- all clips, logistic regression: AUC `0.478 +/- 0.013`;
+- all clips, ExtraTrees: AUC `0.489 +/- 0.009`;
+- excluding cross-split duplicate families, logistic regression:
+  AUC `0.494 +/- 0.017`;
+- excluding cross-split duplicate families, ExtraTrees:
+  AUC `0.581 +/- 0.010`.
 
-Interpretation remains: no strong globally linear split signal is present, but a modest repeatable nonlinear residual signal appears after duplicate-covered examples are removed. This is not evidence that test is from a wholly different corpus.
+This indicates no strong globally linear split signal, with a modest nonlinear
+residual signal after duplicate-covered examples are removed.
 
-## Closure limitation
+## New standardized paralinguistic evidence
 
-The shift conclusion has not yet been challenged with:
+openSMILE eGeMAPSv02:
 
-- standardized openSMILE eGeMAPSv02 descriptors;
-- pretrained speaker embeddings / speaker-like cluster proportions;
-- ASR-derived prompt/script family proportions.
+- train/test adversarial logistic AUC mean: `0.476416387656352`;
+- largest absolute univariate train/test SMD: approximately `0.150`;
+- V-A OOF macro-F1: `0.5753536951338543`;
+- V-B OOF macro-F1: `0.5601482021030706`.
 
-These are mandatory closure analyses.
+Standardized SER descriptors therefore do not expose a new material global
+train/test shift.
 
-Therefore current train/test-shift evidence remains **valid but incomplete**. It must not be promoted from “modest residual shift under current representations” to a final statement about speaker/prompt/regime shift until those artifacts exist.
+## Speaker / prompt / latent evidence
 
-Current policy remains provisional:
+ECAPA speaker-like clusters do not yield a stable independent grouping beyond
+the duplicate graph at strict thresholds. Chance-adjusted split association is
+approximately zero in the strict-to-central region.
 
-- preserve V-A row-level competition-mimic;
-- preserve V-B duplicate-safe guardrail;
-- preserve V-D recording-format stress;
-- do not add V-C until speaker evidence exists;
-- do not optimize against the adversarial separator.
+ASR reveals some repeated prompts, but at similarity 0.90 only 15
+non-singleton clusters / 46 clips add repeated-prompt structure beyond frozen
+duplicate families. After duplicate-family clips are removed, prompt/class AMI
+is only approximately `0.0075`.
+
+Joint latent clustering has split NMI only approximately
+`0.00034-0.00138`.
+
+## Final conclusion
+
+The best-supported description remains:
+
+**broadly common train/test parent mixture with weak-to-modest residual
+nonlinear shift, not a strong separate-domain split.**
+
+The exact hidden test/public/private sampling mechanism remains unknown.
+
+No new evidence justifies replacing V-A/V-B, creating a prompt split, or
+creating a latent-regime split.
+
+Policy:
+
+- V-A: secondary competition-mimic view;
+- V-B: primary duplicate-safe model/representation selection;
+- V-D: source-format stress;
+- V-C: rejected as an authoritative split;
+- do not optimize a model against the adversarial separator.
