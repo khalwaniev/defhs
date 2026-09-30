@@ -505,6 +505,84 @@ their location, version, checksums, and producer commit must be recorded.
 
 ---
 
+
+# P. Data-understanding completeness contract
+
+The mission is not complete merely because many analyses were run.
+
+Create and maintain a decision-relevant unknowns ledger covering every material
+property of the dataset/data-generating process encountered during the mission.
+
+Every material question must end in exactly one evidence state:
+
+1. **VERIFIED**
+   - directly established from competition files, official information, or a
+     reproducible deterministic audit;
+
+2. **INFERRED**
+   - not directly labeled/observed, but supported by explicit evidence;
+   - state the method, uncertainty, confidence/stability, alternative
+     explanations, and whether the inference is strong enough to affect
+     validation/modeling;
+
+3. **UNRESOLVABLE FROM AVAILABLE EVIDENCE**
+   - cannot be established honestly from available data;
+   - explain why;
+   - quantify or bound the decision impact where possible;
+   - define a robust policy that does not depend on pretending the unknown is
+     known.
+
+No material assumption may remain implicit.
+
+At minimum, explicitly close or register uncertainty for:
+
+- 1,036 stated samples versus 1,035 supplied train+test examples;
+- true speaker identities and train/test speaker overlap;
+- acted-versus-spontaneous membership;
+- source/acquisition batches;
+- script/prompt identity;
+- duplicate-family boundaries and threshold robustness;
+- annotation-noise cases;
+- ID/order/acquisition semantics;
+- public/private sample fraction;
+- hidden public/private assignment mechanism;
+- whether the test distribution is generated like a row-random split,
+  group-aware split, source-aware split, speaker-aware split, or mixture;
+- retrieval-lane applicability and confidence;
+- train/test distribution shift;
+- any other discovered structure capable of changing model selection or final
+  inference.
+
+Required additional artifacts:
+
+- `DATA_UNKNOWN_REGISTER.md`
+- `DATA_UNDERSTANDING_CERTIFICATE.md`
+
+`DATA_UNKNOWN_REGISTER.md` must contain, for every material question:
+
+- question;
+- state: VERIFIED / INFERRED / UNRESOLVABLE;
+- evidence;
+- uncertainty/confidence;
+- competing explanations;
+- decision impact;
+- resulting validation/modeling policy;
+- artifact/script reference.
+
+`DATA_UNDERSTANDING_CERTIFICATE.md` is the final concise certification that:
+
+- all material dataset questions encountered have been audited;
+- no material assumption is implicit;
+- remaining unknowable properties are explicitly registered;
+- their decision impact is controlled by validation/stress tests/sensitivity
+  analyses;
+- the final validation authority does not rely on pretending an unresolved
+  property is known.
+
+A final `PASS_FREEZE` or `REVISE_AND_FREEZE` is invalid without these two
+artifacts.
+
+
 # Stop rule
 
 This mission is intentionally comprehensive, but not ornamental.
