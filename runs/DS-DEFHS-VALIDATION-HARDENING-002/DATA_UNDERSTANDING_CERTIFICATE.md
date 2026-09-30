@@ -1,46 +1,110 @@
-# Data Understanding Certificate
+# Data Understanding Certificate — Final
 
 Mission: `DS-DEFHS-VALIDATION-HARDENING-002`
 
 ## Certificate status
 
-**NOT CERTIFIED — FAIL_NOT_READY**
+**CERTIFIED — REVISE_AND_FREEZE**
 
-The earlier provisional certificate is withdrawn for final-acceptance purposes.
+The evidence-completion contract is satisfied.
 
-## What is complete
+## Completed evidence
 
-The package, schema, duplicate structure, label-conflict evidence, low-level acoustic analysis, ID/order analysis, source/dtype structure, current train/test-shift diagnostics, V-A/V-B validation battery, retrieval simulation, private-LB fraction sensitivity, and exact validation membership preservation are reproducible and canonical.
+The following are now executed, interpreted and preserved:
 
-All required lightweight membership/evidence files that survived the closure review have now been preserved in GitHub and in the Drive canonical-evidence folder.
+- package/schema and WAV integrity;
+- label/class audit;
+- duplicate and retrieval graph;
+- low-level acoustic EDA;
+- ID/order and train/test assignment diagnostics;
+- recording/source heterogeneity;
+- V-A/V-B/V-D validation evidence;
+- private-LB emulator and public-fraction sensitivity;
+- exact byte-preserved V-A/V-B/V-D/protected memberships;
+- ECAPA speaker-verification embeddings over all 1,035 clips;
+- Hindi ASR/prompt audit over all 1,035 clips;
+- openSMILE eGeMAPSv02 standardized paralinguistics;
+- joint speaker/prompt/eGeMAPS/source latent-regime audit;
+- chance-adjusted prompt/class association analysis.
 
-## What prevents certification
+Primary closure interpretation diagnostics are preserved in:
 
-The controlling final-closure continuation requires actual execution of:
+`FINAL_INTERPRETATION_DIAGNOSTICS.json`
 
-1. a strong pretrained speaker-verification embedding audit over all 1,035 clips;
-2. a strong Hindi ASR/prompt-structure audit over all 1,035 clips;
-3. standardized openSMILE eGeMAPSv02 paralinguistic extraction and audit;
-4. a renewed acted/spontaneous latent-structure analysis after those signals exist.
+Heavy artifact provenance is preserved in:
 
-These analyses have not executed successfully in the current environment. Public model/package acquisition is blocked by the runtime's unavailable external model-download path. The private competition data has not been exposed publicly to circumvent that limitation.
+`CLOSURE_COMPLETED_ARTIFACT_MANIFEST.tsv`
 
-Execution-ready scripts have been committed, but scripts are not scientific results.
+and under:
 
-## Evidence-state integrity
+`/DEFHS/ds_validation_002/`
 
-Genuine epistemic unknowns remain explicitly distinguished from incomplete execution:
+## Final evidence states
 
-- exact organizer speaker IDs: UNRESOLVABLE from supplied files;
-- exact organizer prompt IDs: UNRESOLVABLE from supplied files;
-- exact per-clip acted/spontaneous organizer labels: UNRESOLVABLE from supplied files;
-- hidden public/private assignment/fraction: UNRESOLVABLE;
-- speaker-like grouping reliability: PENDING REQUIRED AUDIT;
-- train/test speaker-like overlap: PENDING REQUIRED AUDIT;
-- inferable prompt/script families: PENDING REQUIRED AUDIT;
-- strengthened acted/spontaneous latent regimes: PENDING REQUIRED AUDIT;
-- standardized eGeMAPS evidence: PENDING REQUIRED AUDIT.
+### VERIFIED
 
-Therefore the mission cannot honestly certify that every material question has reached a final evidence state.
+Directly observed/frozen facts include:
 
-A new certificate may be issued only after the mandatory closure executors are run and their artifacts are preserved/reviewed.
+- 826 train + 209 test = 1,035 supplied clips;
+- IDs 1..1035;
+- mono 16 kHz WAV structure;
+- 933 int16 / 102 int32;
+- 227 duplicate groups / 467 clips;
+- 77 train-test duplicate groups / 78 affected test clips;
+- frozen duplicate threshold and retrieval map;
+- the 75/636/878 label-conflict family;
+- exact V-A, V-B, V-D and protected memberships;
+- completed ECAPA, ASR, eGeMAPS and latent executors and their artifact hashes;
+- the protected gate was not queried.
+
+### INFERRED
+
+Evidence supports, without elevating to unavailable ground truth:
+
+- train/test are broadly a common mixture with modest nonlinear residual shift;
+- ECAPA contains speaker-sensitive structure, but no stable independent
+  speaker-disjoint cutoff is identified beyond the duplicate graph;
+- repeated prompt structure exists, but most is duplicate-contained and
+  chance-adjusted class association beyond duplicates is negligible;
+- joint latent regimes are weak and not sufficiently stable for a new
+  validation authority.
+
+### UNRESOLVABLE FROM AVAILABLE EVIDENCE
+
+The following remain genuinely unknowable from the competition evidence:
+
+- why organizer prose says 1,036 while the supplied package contains 1,035;
+- exact organizer speaker IDs;
+- exact organizer prompt/script IDs;
+- exact per-clip acted/spontaneous labels;
+- broader ground-truth annotation correctness beyond directly observed
+  conflicts;
+- exact hidden public/private row fraction;
+- exact hidden public/private assignment.
+
+These unknowns are explicitly bounded and do not prevent freeze.
+
+## Validation consequence
+
+The completed closure does not justify redesigning the preserved backbone.
+
+Final roles:
+
+- V-B: primary duplicate-safe representation/model-family selection authority;
+- V-A: secondary competition-mimic/retrieval-aware view;
+- V-D: verified recording-format/source robustness stress;
+- V-C: rejected as an authoritative split; ECAPA retained diagnostically;
+- prompt/script grouping: diagnostic only;
+- latent acted/spontaneous-like grouping: diagnostic only;
+- protected seed 20261001: confirmation only.
+
+## Certification statement
+
+No material decision-relevant question remains unexplored because of an
+execution limitation.
+
+The DS foundation is scientifically complete enough for serious SER modeling
+under the reissued validation authority.
+
+The DS worker does not start modeling in this mission; the authority returns to
+SS for independent acceptance and RS allocation.
