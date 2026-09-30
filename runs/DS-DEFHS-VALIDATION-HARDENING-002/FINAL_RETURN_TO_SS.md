@@ -1,53 +1,166 @@
-# Final Return to SS — Evidence-Completion Continuation
+# Final Return to SS — Scientific Freeze
 
 Mission: `DS-DEFHS-VALIDATION-HARDENING-002`
 
-## Verdict
+## 1. Final verdict
 
-**FAIL_NOT_READY**
+**REVISE_AND_FREEZE**
 
-## What closure fixed
+All mandatory closure analyses executed and all material observable questions
+now have final evidence states.
 
-The independent artifact/reproducibility findings were valid and are now repaired:
+## 2. Git authority
 
-- required lightweight DS-002 outputs are canonical;
-- V-A membership is preserved exactly;
-- V-B membership is preserved exactly;
-- protected seed 20261001 membership is preserved exactly;
-- V-D int16/int32 regime membership is explicit;
-- OOF predictions, per-class F1, validation stability, and private-LB Monte Carlo results are preserved;
-- Drive and GitHub canonical copies were checked for content parity;
-- the full acoustic matrix was reverified from Drive and its correct SHA-256 is:
-  `d8769829f6e2ca351e96068e64d89b95977cca83fb49f0ef7d0d597f11c06a53`.
+Branch:
 
-The existing package/duplicate/ID/source/shift/V-A/V-B/retrieval evidence remains scientifically valid.
+`ds/validation-hardening-002`
 
-## Why final freeze is not yet allowed
+The exact final Git HEAD is returned externally after the final repository
+write/readback because a file cannot self-contain the SHA of the commit that
+contains itself.
 
-The mandatory closure still lacks **executed**:
+## 3. V-A role
 
-1. ECAPA-TDNN speaker embeddings and speaker-like grouping audit;
-2. Hindi ASR transcripts and prompt/script audit;
-3. openSMILE eGeMAPSv02 standardized paralinguistic analysis;
-4. acted/spontaneous latent-regime reconsideration after those signals exist.
+Retain five-fold stratified row-level CV, seed 20260930, as the **secondary
+competition-mimic / retrieval-aware view**.
 
-The current runtime could not acquire the required public model/package assets, and no secure available mechanism could move the private Drive dataset into an external runner without exposing it. The data was not made public as a workaround.
+SHA-256:
 
-Execution-ready scripts are committed, but they are not substitutes for evidence.
+`dcee356b0a66cb73c506bb71a6c57962227d6d0474efd3e4d6c404168308f3d1`
 
-## Preserved candidate architecture
+## 4. V-B role
 
-Pending closure, preserve without redesign:
+Retain duplicate-family-safe StratifiedGroupKFold, seed 20260930, as the
+**primary representation/model-family selection authority**.
 
-- V-B duplicate-safe: primary candidate model-selection guardrail;
-- V-A row-level: competition-mimic candidate;
-- V-D int16/int32: source-format stress;
-- V-C: pending pretrained speaker evidence;
-- deterministic retrieval lane for 78 mapped test clips;
-- protected duplicate-safe seed 20261001: membership frozen, no exploratory evaluation.
+SHA-256:
 
-## Exact next recommendation to SS
+`87c6c0b33e5ea5c05b2bd2537d29480e4285cf816d4a921a6f1bcb3ef854139b`
 
-Do **not** authorize main SER modeling yet.
+## 5. V-C decision
 
-Authorize only the bounded closure execution in a network-enabled GPU environment that can access the private competition data without changing its visibility. Run the canonical closure executors, preserve the heavy artifacts in `/DEFHS/ds_validation_002/`, then return to DS for evidence interpretation and final freeze reissue.
+**Reject authoritative V-C.**
+
+ECAPA is highly consistent within known duplicate families. In the strict,
+stable threshold region its non-singleton clusters almost entirely reproduce
+the duplicate graph. Additional non-duplicate grouping grows only at more
+permissive thresholds where cluster stability deteriorates.
+
+Use ECAPA speaker-like clusters diagnostically; never call them organizer
+speaker IDs.
+
+## 6. V-D role
+
+Retain int16/int32 membership as a verified **recording-format/source
+robustness stress**.
+
+SHA-256:
+
+`f310cc024d122f19321e34a826e2793b5a661b1dd01ee4d1d72709a4472f0839`
+
+Do not interpret V-D as acted/spontaneous identity.
+
+## 7. Prompt/script conclusion
+
+ASR completed for 1,035 clips with zero empty transcripts.
+
+At prompt similarity 0.90:
+
+- 170 non-singleton clusters / 367 clips;
+- 155 clusters / 321 clips duplicate-contained;
+- only 15 clusters / 46 clips add structure beyond duplicate families.
+
+Raw train class NMI is approximately 0.3509, but AMI is approximately 0.0601.
+After removing duplicate-family clips, AMI is approximately 0.0075.
+
+Prompt/script structure is diagnostic only. No prompt-grouped validation is
+added.
+
+## 8. Acted/spontaneous / latent-regime conclusion
+
+The joint speaker/prompt/eGeMAPS/source clustering is weak:
+
+- silhouette approximately 0.106-0.163;
+- split NMI approximately 0.00034-0.00138;
+- adjacent-k ARI approximately 0.35-0.66.
+
+Exact organizer acted/spontaneous labels remain unresolvable. No latent-regime
+validation is added.
+
+## 9. Train/test shift conclusion
+
+The strongest defensible description remains a broadly common train/test
+mixture with **weak-to-modest residual nonlinear shift**, not a strong separate
+domain.
+
+eGeMAPS adversarial logistic AUC mean is approximately 0.4764; ECAPA
+chance-adjusted split association is approximately zero in the stable region;
+joint latent split NMI is negligible.
+
+## 10. Retrieval policy
+
+Retain the deterministic separate retrieval lane:
+
+- threshold 0.95;
+- 77 train-test duplicate groups;
+- 78 / 209 test clips mapped;
+- train labels unanimous in every usable mapped family.
+
+## 11. Private-LB emulator
+
+Retain the existing V-A retrieval-aware emulator and 20/30/40/50% public-fraction
+sensitivity **without structural revision**.
+
+The true hidden allocation remains unknown.
+
+## 12. Protected-gate status
+
+`VALIDATION_VP_PROTECTED_FOLDS.csv`
+
+SHA-256:
+
+`b102eec374967672abc987afe857f689eec47fc104d96ce2f487c6caba26f46c`
+
+**Untouched.** It was not queried by closure execution or final DS
+interpretation.
+
+## 13. Remaining genuine epistemic unknowns
+
+- reason for organizer 1,036 vs supplied 1,035 discrepancy;
+- exact organizer speaker IDs;
+- exact organizer prompt/script IDs;
+- exact per-clip acted/spontaneous labels;
+- broader annotation truth beyond observed conflicts;
+- exact public/private row fraction;
+- exact hidden public/private assignment.
+
+Their decision impact is bounded by the frozen architecture.
+
+## 14. Main RS modeling
+
+The DS evidence-completion gate is cleared.
+
+**Recommend SS authorize main RS SER modeling under the reissued authority.**
+
+No further DS closure audit is required before modeling. RS should not use the
+protected gate for exploratory optimization.
+
+## 15. Exact recommendation to SS
+
+Accept `REVISE_AND_FREEZE` and start the first serious SER modeling mission
+with:
+
+- V-B as primary model/representation selection;
+- V-A as secondary competition-mimic evidence;
+- V-D as source-format stress;
+- ECAPA/prompt/latent assignments as diagnostics, not authoritative groups;
+- the 78-test-clip retrieval lane kept separate;
+- protected seed 20261001 reserved for promotion confirmation.
+
+Heavy closure authority is under:
+
+`/DEFHS/ds_validation_002/`
+
+Complete artifact provenance:
+
+`CLOSURE_COMPLETED_ARTIFACT_MANIFEST.tsv`
