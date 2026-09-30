@@ -1,50 +1,82 @@
-# Transcript / Prompt Structure Report
+# Transcript / Prompt Structure Report — Final Interpretation
 
-## Closure status
+## Status
 
-**PENDING REQUIRED HINDI ASR AUDIT.**
+**COMPLETE.**
 
-The package supplies no transcript, prompt, or script identifiers. The earlier `UNRESOLVABLE` classification reflected unavailable ASR weights in one runtime, not completed prompt-structure evidence.
+Hindi ASR executed for all 1,035 clips using:
 
-## Required executed analysis
+`mobiuslabsgmbh/faster-whisper-large-v3-turbo`
 
-Canonical executor:
+Immutable revision:
 
-`scripts/run_ds002_asr_prompt_audit.py`
+`0a363e9161cbc7ed1431c9597a8ceaf0c4f78fcf`
 
-Planned ASR:
+Language was forced to Hindi (`hi`).
 
-`mobiuslabsgmbh/faster-whisper-large-v3-turbo`, with language forced to Hindi (`hi`). The executor resolves and records an immutable model revision at runtime.
+The transcripts are machine-generated audit evidence, not organizer ground
+truth.
 
-For all 1,035 clips it records:
+## ASR quality evidence
 
-- transcript and normalized transcript;
-- decoding segment count;
-- average log probability;
-- no-speech probability;
-- compression ratio;
-- detected-language metadata where returned.
+- rows: `1,035`;
+- empty normalized transcripts: `0`;
+- detected language: Hindi for all rows;
+- language-probability median: `1.0`;
+- exact repeated-transcript rows: `338`;
+- exact repeated normalized-transcript groups: `159`;
+- duplicate-family transcript similarity median: `1.0`;
+- duplicate-family transcript similarity p10: approximately `0.6126`.
 
-Quality is audited objectively using:
+These checks are sufficient for structural prompt auditing, while not implying
+word-perfect transcription.
 
-- transcript agreement inside the known acoustic duplicate families;
-- language/decode probability;
-- empty transcript rate;
-- confidence distributions.
+## Repeated-prompt structure
 
-Prompt structure is then assessed through:
+At character n-gram prompt similarity `0.90`:
 
-- exact repeated normalized transcripts;
-- character n-gram fuzzy similarity;
-- prompt-cluster threshold sweep;
-- train/test prompt overlap;
-- class association.
+- non-singleton prompt clusters: `170`;
+- clips in those clusters: `367`;
+- duplicate-family-contained clusters: `155`;
+- duplicate-family-contained clips: `321`;
+- clusters adding structure beyond the duplicate graph: `15`;
+- clips in those beyond-duplicate clusters: `46`.
 
-## Current policy
+The same qualitative conclusion holds across the 0.80-0.98 sweep: most
+repeated-prompt structure is already explained by duplicate families, while a
+small residual repeated-prompt signal remains.
 
-- No prompt/script grouping is authoritative yet.
-- No text-semantic SER branch is authorized by this data-understanding mission.
-- Existing duplicate handling remains valid independently of ASR.
-- Final closure requires the actual transcript artifact and prompt audit.
+## Emotion association: chance-adjusted interpretation
 
-Current evidence state for prompt/script families: **not yet classifiable; required ASR audit pending**.
+For training rows at prompt similarity 0.90:
+
+- raw NMI: `0.3509305706884669`;
+- adjusted mutual information (AMI): `0.060114333811182155`.
+
+A 2,000-permutation class-label null (seed `20261001`) gives:
+
+- null NMI mean: `0.30931240776962304`;
+- null NMI SD: `0.002074073309729764`;
+- null p95: `0.31289458566085976`.
+
+The high raw NMI is therefore substantially driven by the very high-cardinality
+cluster variable.
+
+After removing every known duplicate-family clip from training
+(`n=453`):
+
+- raw NMI: `0.36930343598857607`;
+- AMI: `0.007476930842328752`.
+
+Thus the chance-adjusted prompt/emotion association beyond the duplicate graph
+is negligible.
+
+## Validation decision
+
+Prompt/script structure is **INFERRED** and scientifically real enough to keep
+as a diagnostic, but it does **not** justify a new prompt-grouped validation
+authority.
+
+Do not authorize a text model merely from this audit.
+
+V-A/V-B remain unchanged.
