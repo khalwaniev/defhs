@@ -1,12 +1,40 @@
 # Acted / Spontaneous Report
 
-The organizers state that the corpus contains both acted and spontaneous speech, but the supplied package provides no regime labels.
+The organizers state that the corpus includes both acted and spontaneous speech, but the supplied package provides no per-clip regime labels.
 
-Observable recording-format, low-level acoustic, duration, pause and clustering structure shows latent heterogeneity, but no defensible mapping from those latent clusters to acted versus spontaneous status can be established. The int16/int32 split must not be relabeled as acted/spontaneous without evidence.
+## Closure status
 
-**Evidence state: UNRESOLVABLE for per-clip hard labels.**
+**PENDING JOINT RECONSIDERATION AFTER SPEAKER + ASR + eGeMAPS.**
 
-Policy:
-- no hard acted/spontaneous labels are created;
-- latent source/format heterogeneity is stress-tested through V-D;
-- later representation models may be checked for robustness across verified format regimes and discovered stable latent clusters, without naming them acted/spontaneous.
+The previous hard `UNRESOLVABLE` verdict was issued before the required pretrained speaker and ASR audits were executed. That verdict is therefore not retained as final evidence.
+
+Existing low-level evidence remains valid:
+
+- int16/int32 recording heterogeneity is real;
+- duration, silence/pause, and spectral structure differ across source/format regimes;
+- low-level unsupervised source clusters are not stable enough to be renamed acted/spontaneous.
+
+## Required joint analysis
+
+After the mandatory speaker, ASR, and standardized eGeMAPS artifacts exist, run:
+
+`scripts/run_ds002_latent_regime_joint_audit.py`
+
+The joint audit combines:
+
+- speaker-like clusters;
+- prompt/transcript clusters;
+- eGeMAPS paralinguistics;
+- recording dtype/source structure;
+- duration and related observable structure.
+
+It may establish stable **latent regimes**, but it is explicitly prohibited from naming a cluster "acted" or "spontaneous" without evidence that supports that semantic interpretation.
+
+## Current policy
+
+- no per-clip acted/spontaneous labels;
+- do not equate int16/int32 with acted/spontaneous;
+- V-D remains a verified recording-format stress only;
+- final evidence state must be reissued after the joint audit.
+
+Current acted/spontaneous evidence state: **not yet classifiable for final closure**.
