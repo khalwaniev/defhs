@@ -1,0 +1,29 @@
+{
+  "artifact_id": "DEFHS_COMPETITION_DATA_20260930",
+  "competition_slug": "dataverse-detecting-emotions-from-hindi-speech",
+  "artifact_name": "dataverse-detecting-emotions-from-hindi-speech.zip",
+  "role": "canonical raw competition data archive",
+  "storage": {
+    "provider": "Google Drive",
+    "folder_path": "/DEFHS/raw",
+    "folder_id": "1g5ikVyvAQhnBxBHj7MEfoguGFHRL_3F8",
+    "file_id": "1D0DcnbK0vrJGTsvtb7-l7vnpdfNxc-nH",
+    "url": "https://drive.google.com/file/d/1D0DcnbK0vrJGTsvtb7-l7vnpdfNxc-nH/view?usp=drivesdk",
+    "visibility": "private",
+    "can_download": true
+  },
+  "size_bytes": 99298085,
+  "sha256": "100b38e6ed69542df88c1d295932a7a4c1914cd931ee64f7c6c848f6053bf214",
+  "source": "competition ZIP uploaded by user and previously audited",
+  "verified_on": "2026-09-30",
+  "verification": {
+    "google_drive_readback_size_bytes": 99298085,
+    "upload_verified": true
+  },
+  "usage_policy": [
+    "Do not commit raw audio or this ZIP to GitHub.",
+    "DS/RS workers should use this exact Drive artifact or a byte-identical local copy.",
+    "Verify SHA-256 before treating a downloaded copy as canonical.",
+    "Derived heavy features, embeddings, transcripts, and checkpoints should be stored outside GitHub and separately manifested."
+  ]
+}
