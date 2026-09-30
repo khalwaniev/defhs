@@ -1,0 +1,88 @@
+{
+  "mission": "DS-DEFHS-VALIDATION-HARDENING-002",
+  "source_git_head": "4ec6a049b51022c956ff96838b0dbb5f7b3e5385",
+  "protected_gate_queried": false,
+  "heavy_artifact_verification": {
+    "SPEAKER_CLUSTER_ASSIGNMENTS.csv": {"bytes": 87083, "sha256": "a55d713d89017883f45c4d8d7f859fc4a6274445675fd5f0b962996c2af451d0"},
+    "SPEAKER_EMBEDDINGS_ECAPA.npy": {"bytes": 795008, "sha256": "a96716b5d53942cd6a3044c49c44d1e7cd0ced56416857513a62e131f4a98f42"},
+    "PROMPT_CLUSTER_ASSIGNMENTS.csv": {"bytes": 288475, "sha256": "458712cfee51e0cf65ef57d1a0deb8f81dcb70e4ecfe6ebfc73220f3aefac005"},
+    "ASR_TRANSCRIPTS.csv": {"bytes": 268870, "sha256": "a111071c53edd14a6202d9ac7b12360648c9f12e8650fee0aabf2dda0df12d01"},
+    "EGEMAPS_FEATURES.csv": {"bytes": 1769625, "sha256": "45476151fa3eaf6fd747495a3827e769bac189cbc347459559734ceb1828a0be"},
+    "EGEMAPS_SHIFT_SUMMARY.csv": {"bytes": 4386, "sha256": "bb6fab1803f88f66ef7c98ca53aca4d4ae4e83f454ba11d72a37062c867afb39"},
+    "LATENT_REGIME_ASSIGNMENTS.csv": {"bytes": 39752, "sha256": "1a67ab36c67b4d8762ee2fadfd55a77b3f68782a5ae1b56073e2a31887556bab"}
+  },
+  "speaker": {
+    "model": "speechbrain/spkrec-ecapa-voxceleb",
+    "revision": "0f99f2d0ebe89ac095bcc5903c4dd8f72b367286",
+    "embedding_shape": [1035, 192],
+    "duplicate_similarity_median": 0.9999968409538269,
+    "duplicate_similarity_min": 0.7258741855621338,
+    "nonduplicate_similarity_p95": 0.38857135772705076,
+    "nonduplicate_similarity_p99": 0.5092418485879889,
+    "beyond_duplicate_graph": {
+      "agg_d0.10": {"clusters": 0, "clips": 0},
+      "agg_d0.15": {"clusters": 0, "clips": 0},
+      "agg_d0.20": {"clusters": 2, "clips": 6},
+      "agg_d0.25": {"clusters": 11, "clips": 33},
+      "agg_d0.30": {"clusters": 42, "clips": 129},
+      "agg_d0.35": {"clusters": 88, "clips": 290}
+    },
+    "decision": "REJECT_AUTHORITATIVE_VC_RETAIN_DIAGNOSTIC"
+  },
+  "prompt": {
+    "model": "mobiuslabsgmbh/faster-whisper-large-v3-turbo",
+    "revision": "0a363e9161cbc7ed1431c9597a8ceaf0c4f78fcf",
+    "rows": 1035,
+    "empty_transcripts": 0,
+    "language_probability_median": 1.0,
+    "exact_repeated_transcript_rows": 338,
+    "sim_0.90": {
+      "non_singleton_clusters": 170,
+      "clips": 367,
+      "duplicate_contained_clusters": 155,
+      "duplicate_contained_clips": 321,
+      "beyond_duplicate_clusters": 15,
+      "beyond_duplicate_clips": 46
+    },
+    "train_class": {"n": 826, "nmi": 0.3509305706884669, "ami": 0.060114333811182155},
+    "train_class_no_duplicate_family_clips": {"n": 453, "nmi": 0.36930343598857607, "ami": 0.007476930842328752},
+    "permutation_nmi_2000": {
+      "seed": 20261001,
+      "mean": 0.30931240776962304,
+      "sd": 0.002074073309729764,
+      "p95": 0.31289458566085976,
+      "p_ge_observed": 0.0004997501249375312
+    },
+    "decision": "DIAGNOSTIC_ONLY_NO_PROMPT_GROUPED_VALIDATION"
+  },
+  "egemaps": {
+    "opensmile": "2.6.0",
+    "feature_set": "eGeMAPSv02",
+    "feature_level": "Functionals",
+    "rows": 1035,
+    "features": 88,
+    "train_test_logreg_auc_mean": 0.476416387656352,
+    "max_abs_univariate_train_test_smd": 0.149972,
+    "va_oof_macro_f1": 0.5753536951338543,
+    "vb_oof_macro_f1": 0.5601482021030706,
+    "decision": "NO_VALIDATION_ARCHITECTURE_CHANGE"
+  },
+  "latent": {
+    "silhouette_range": [0.10611281756460264, 0.16264246698556112],
+    "split_nmi_range": [0.0003436226224712281, 0.0013799608650097136],
+    "dtype_nmi_range": [0.0013119167089673434, 0.055785860115595186],
+    "adjacent_k_ari_range": [0.3505578561639628, 0.6580941456082542],
+    "acted_spontaneous_ground_truth_available": false,
+    "decision": "NO_AUTHORITATIVE_LATENT_REGIME_VALIDATION"
+  },
+  "final_interpretation": {
+    "validation_backbone_survives": true,
+    "va": "secondary competition-mimic",
+    "vb": "primary duplicate-safe model/representation selection",
+    "vc": "rejected as authoritative; ECAPA diagnostic only",
+    "vd": "retained int16/int32 source-format stress",
+    "retrieval": "retained frozen 78-test-clip lane",
+    "private_lb_emulator": "retained without structural revision",
+    "verdict": "REVISE_AND_FREEZE"
+  }
+}
