@@ -23,7 +23,7 @@ The lightweight files below were recovered from the valid runtime state, uploade
 | VALIDATION_VP_PROTECTED_FOLDS.csv | b102eec374967672abc987afe857f689eec47fc104d96ce2f487c6caba26f46c | 1oXOX8CK-X5uy1BsFEhdou-5q6ZFRkq5t |
 | VALIDATION_VD_REGIMES.csv | f310cc024d122f19321e34a826e2793b5a661b1dd01ee4d1d72709a4472f0839 | 1EthIHmlX13PNfrQGAgmgaiE-L83JZTCF |
 
-## Heavy feature artifact
+## Heavy acoustic feature artifact
 
 Path: `/DEFHS/ds_validation_002/ACOUSTIC_FEATURES_FULL.csv`
 
@@ -32,9 +32,27 @@ Drive file ID: `1vi6Wgcth_3BX7izqIMBFa7I1KMTU38RK`
 Size: 7,787,538 bytes
 
 Verified SHA-256:
+
 `d8769829f6e2ca351e96068e64d89b95977cca83fb49f0ef7d0d597f11c06a53`
 
-The Drive file was downloaded back into the execution environment and verified byte-identical to the recovered runtime matrix.
+Producer/reproducer:
+
+- script: `scripts/run_ds_defhs_validation_hardening_002_features.py`;
+- script introduction commit: `1f240e3089c4d7bcb29687c246384e3a70ee8ed2`;
+- original runtime artifact was produced before that repository preservation commit from the same recovered implementation;
+- the Drive copy was downloaded back and verified byte-identical to the recovered runtime matrix during the final closure continuation.
+
+## Closure execution assets
+
+The remaining mandatory analyses have canonical executors:
+
+- `scripts/run_ds002_speaker_ecapa_audit.py`;
+- `scripts/run_ds002_asr_prompt_audit.py`;
+- `scripts/run_ds002_opensmile_egemaps_audit.py`;
+- `scripts/run_ds002_latent_regime_joint_audit.py`;
+- `requirements/ds002_closure.txt`.
+
+They must record their own resolved model/package revisions and artifact hashes at execution time.
 
 ## Required future heavy artifacts
 
