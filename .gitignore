@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Secrets / credentials
+.env
+*.pem
+*.key
+kaggle.json
+
+# Competition data and heavy artifacts
+data/
+datasets/
+external_data/
+artifacts/
+checkpoints/
+models/
+embeddings/
+predictions/
+outputs/
+*.wav
+*.mp3
+*.flac
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+
+# Large archives
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# Local scratch
+scratch/
+tmp/
+.cache/
+
+# Allow lightweight manifests/reports anywhere
+!manifests/**
+!experiments/**

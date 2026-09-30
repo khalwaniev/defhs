@@ -1,0 +1,15 @@
+competition:
+  slug: dataverse-detecting-emotions-from-hindi-speech
+  target_column: emotion
+  id_column: Id
+  classes:
+    - angry
+    - happy
+    - neutral
+    - sad
+  metric: macro_f1
+  final_score:
+    public_weight: 0.40
+    private_weight: 0.60
+audio:
+  expected_sample_rate_hz: 16000
