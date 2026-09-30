@@ -1,40 +1,138 @@
-# Final Validation Authority
+# Final Validation Authority — Closure Reissue
 
 ## Verdict
-**REVISE_AND_FREEZE**
 
-The DS-001 candidate is retained in backbone but hardened and role-separated.
+**FAIL_NOT_READY**
 
-### Primary model-selection authority — V-B
-Five-fold duplicate-family-safe StratifiedGroupKFold, seed 20260930. Use for representation/model-family decisions.
+This verdict does **not** invalidate the preserved V-A/V-B science. It means the independent closure standard is not yet satisfied because mandatory speaker, ASR/prompt, and standardized paralinguistic audits remain unexecuted.
 
-### Competition-mimic secondary authority — V-A
-Five-fold stratified row-level CV, seed 20260930. Use to estimate row-random competition-like behavior and retrieval-aware pipeline performance.
+## Preserved provisional validation backbone
 
-### V-C speaker stress
-Not frozen. Current evidence cannot establish reliable speaker identities.
+### V-A — competition-mimic secondary view
 
-### V-D source/format stress
-Verified int16-vs-int32 leave-one-regime-out stress. Diagnostic only.
+Five-fold stratified row-level CV, seed 20260930.
 
-### Retrieval lane
-Frozen 0.95 duplicate threshold. Test retrieval applies only to the 78 test clips in the frozen cross-split map and only where training-label consensus is unanimous. Retrieval metrics are reported separately.
+Canonical membership:
 
-### Protected promotion gate
-Freeze a new duplicate-safe five-fold StratifiedGroupKFold with seed **20261001**. It has not been used for the current model battery. Fold sizes are 166/166/165/165/164 with near-identical class counts. Routine RS iteration must not query this gate; use it only for promotion checkpoints. Runtime fold CSV SHA-256: `b102eec374967672abc987afe857f689eec47fc104d96ce2f487c6caba26f46c`.
+`runs/DS-DEFHS-VALIDATION-HARDENING-002/VALIDATION_VA_FOLDS.csv`
 
-### Small-gain policy
-- gains <0.005 macro-F1: do not promote without replication across seeds/folds and non-negative V-D behavior;
-- gains 0.005–0.010: require consistent V-B improvement and no material source/format regression;
-- larger gains: still require protected-gate confirmation before production promotion.
+SHA-256:
 
-### Private-LB emulator
-Use retrieval-aware V-A pseudo-test simulation plus public-fraction sensitivity (20–50%) and V-B non-retrieval evidence. Never claim equivalence to the hidden leaderboard.
+`dcee356b0a66cb73c506bb71a6c57962227d6d0474efd3e4d6c404168308f3d1`
 
-### Label policy
-Keep observed labels. The 75/636/878 conflict is a diagnostic family, not an automatic relabel target.
+Role: approximate row-random competition behavior and allow retrieval analogues inside pseudo-test evaluation.
 
-### Heavy artifact
-`/DEFHS/ds_validation_002/ACOUSTIC_FEATURES_FULL.csv`, Drive file ID `1vi6Wgcth_3BX7izqIMBFa7I1KMTU38RK`, SHA-256 `d8769829f6e2ca351e96068e64d89b95977cca83acc4a92c14239f0f793ff42d`.
+### V-B — duplicate-safe model-selection guardrail
 
-Serious modeling may now begin under this frozen role-separated authority. Any future speaker/ASR evidence may add stress diagnostics but must not silently replace V-A/V-B without a new DS validation revision.
+Five-fold duplicate-family-safe StratifiedGroupKFold, seed 20260930.
+
+Canonical membership:
+
+`runs/DS-DEFHS-VALIDATION-HARDENING-002/VALIDATION_VB_FOLDS.csv`
+
+SHA-256:
+
+`87c6c0b33e5ea5c05b2bd2537d29480e4285cf816d4a921a6f1bcb3ef854139b`
+
+Role: prevent exact/near-duplicate memorization from selecting a representation or model family.
+
+### V-C — speaker-like stress
+
+**Not frozen. Mandatory pretrained speaker audit pending.**
+
+Do not infer speaker IDs from low-level pitch/acoustic features. V-C may be added only after the ECAPA audit establishes sufficiently reliable speaker-like grouping.
+
+### V-D — verified recording-format/source stress
+
+Canonical membership/regime definition:
+
+`runs/DS-DEFHS-VALIDATION-HARDENING-002/VALIDATION_VD_REGIMES.csv`
+
+SHA-256:
+
+`f310cc024d122f19321e34a826e2793b5a661b1dd01ee4d1d72709a4472f0839`
+
+Role: stress transfer across verified int16/int32 recording regimes. It remains diagnostic, not the primary leaderboard estimator.
+
+## Protected promotion gate
+
+Duplicate-safe StratifiedGroupKFold, seed 20261001.
+
+Canonical exact membership:
+
+`runs/DS-DEFHS-VALIDATION-HARDENING-002/VALIDATION_VP_PROTECTED_FOLDS.csv`
+
+SHA-256:
+
+`b102eec374967672abc987afe857f689eec47fc104d96ce2f487c6caba26f46c`
+
+Fold sizes: 166 / 166 / 165 / 165 / 164.
+
+This membership is frozen byte-for-byte. It has not been authorized as an exploratory tuning oracle and must remain protected.
+
+## Retrieval lane
+
+The deterministic duplicate-retrieval logic remains valid:
+
+- frozen similarity threshold: 0.95;
+- 77 train↔test groups;
+- 78 / 209 test clips mapped;
+- usable train labels are unanimous inside every mapped cross-split group.
+
+Canonical map:
+
+`runs/DS-DEFHS-VALIDATION-HARDENING-002/RETRIEVAL_MAP_FINAL.csv`
+
+SHA-256:
+
+`e08f7d06c13d64a1d365d7ae6fa741d6e831dea8816de6663d4a9c0eb113d2a7`
+
+Retrieval must remain separate from non-retrieval SER performance.
+
+## Current private-LB emulator
+
+The existing retrieval-aware V-A pseudo-test simulation and public-fraction sensitivity remain valid evidence. The actual public fraction and hidden assignment remain unknown.
+
+Canonical results:
+
+`PRIVATE_LB_EMULATOR_RESULTS.json`
+
+SHA-256:
+
+`2c5a4d06e8dc24268b4ce410f266940977918df030fe6fa10ceaee25d400c371`
+
+The emulator remains an emulator, never a claim of equivalence to the real private leaderboard.
+
+## Heavy acoustic authority
+
+Drive path:
+
+`/DEFHS/ds_validation_002/ACOUSTIC_FEATURES_FULL.csv`
+
+Drive file ID:
+
+`1vi6Wgcth_3BX7izqIMBFa7I1KMTU38RK`
+
+Size: 7,787,538 bytes
+
+Verified SHA-256:
+
+`d8769829f6e2ca351e96068e64d89b95977cca83fb49f0ef7d0d597f11c06a53`
+
+This hash supersedes the incorrectly transcribed checksum in the previous provisional authority.
+
+## Required evidence before freeze
+
+Final `PASS_FREEZE` or `REVISE_AND_FREEZE` is blocked until:
+
+- actual ECAPA speaker embeddings are extracted and audited;
+- actual Hindi ASR transcripts are produced and prompt structure audited;
+- actual openSMILE eGeMAPSv02 descriptors are extracted and analyzed;
+- acted/spontaneous latent structure is reconsidered jointly;
+- the resulting evidence is preserved and the unknown register/certificate are reissued.
+
+## Modeling authorization
+
+**Do not start the main RS SER modeling mission from this reissued authority.**
+
+Return to SS with `FAIL_NOT_READY` and execute only the bounded evidence-completion closure.
