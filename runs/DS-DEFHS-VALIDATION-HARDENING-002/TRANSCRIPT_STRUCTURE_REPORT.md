@@ -1,14 +1,50 @@
 # Transcript / Prompt Structure Report
 
-The package contains audio only; no transcript, prompt or script identifiers are supplied.
+## Closure status
 
-A Hindi-capable ASR audit was planned. In this execution environment no suitable ASR model is locally cached and pretrained weights cannot be fetched directly, so transcripts were not fabricated from weaker proxies.
+**PENDING REQUIRED HINDI ASR AUDIT.**
 
-**Evidence state: UNRESOLVABLE from currently executed evidence for exact prompt/script families.**
+The package supplies no transcript, prompt, or script identifiers. The earlier `UNRESOLVABLE` classification reflected unavailable ASR weights in one runtime, not completed prompt-structure evidence.
 
-What is still observable: near-duplicate audio families are explicitly handled by the retrieval graph and cannot silently leak across V-B.
+## Required executed analysis
 
-Policy:
-- prompt/script identity is not used as a validation grouping variable;
-- no text-semantic branch is authorized by DS evidence alone;
-- any later ASR/text branch must be evaluated on the frozen duplicate-safe authority and protected gate rather than justified by assumed prompt labels.
+Canonical executor:
+
+`scripts/run_ds002_asr_prompt_audit.py`
+
+Planned ASR:
+
+`mobiuslabsgmbh/faster-whisper-large-v3-turbo`, with language forced to Hindi (`hi`). The executor resolves and records an immutable model revision at runtime.
+
+For all 1,035 clips it records:
+
+- transcript and normalized transcript;
+- decoding segment count;
+- average log probability;
+- no-speech probability;
+- compression ratio;
+- detected-language metadata where returned.
+
+Quality is audited objectively using:
+
+- transcript agreement inside the known acoustic duplicate families;
+- language/decode probability;
+- empty transcript rate;
+- confidence distributions.
+
+Prompt structure is then assessed through:
+
+- exact repeated normalized transcripts;
+- character n-gram fuzzy similarity;
+- prompt-cluster threshold sweep;
+- train/test prompt overlap;
+- class association.
+
+## Current policy
+
+- No prompt/script grouping is authoritative yet.
+- No text-semantic SER branch is authorized by this data-understanding mission.
+- Existing duplicate handling remains valid independently of ASR.
+- Final closure requires the actual transcript artifact and prompt audit.
+
+Current evidence state for prompt/script families: **not yet classifiable; required ASR audit pending**.
