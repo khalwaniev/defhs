@@ -1,0 +1,26 @@
+{
+  "seed": 20261001,
+  "protected_gate_allowed": false,
+  "quantization_moduli": [16,32,64,80,128,160,200,256,320,400,480,512,640,800,960,1024],
+  "top_remainders_per_modulus": 5,
+  "unconditional_maxstat_permutations": 5000,
+  "conditional_duration_bins_seconds": [0.25,0.10,0.05],
+  "conditional_controls": ["dtype","sample_width_redundant_with_dtype","id_quartile","duplicate_dependency_deduplication"],
+  "conditional_permutations": 2000,
+  "rank_bootstrap_replicates": 3000,
+  "pseudo_private_fractions": [0.20,0.30,0.40,0.50],
+  "private_membership_odds": {
+    "mild_depletion": 0.6666666666666666,
+    "moderate_depletion": 0.5,
+    "strong_depletion": 0.25,
+    "extreme_depletion": 0.0,
+    "mild_enrichment": 1.5,
+    "moderate_enrichment": 2.0,
+    "strong_enrichment": 4.0,
+    "extreme_enrichment": "infinity"
+  },
+  "broad_envelope_screen_replicates": 75,
+  "boundary_confirmation_replicates": [1500,2000],
+  "allocation_model": "class-stratified Fisher noncentral hypergeometric",
+  "competition_score": "0.40 * public_macro_f1 + 0.60 * private_macro_f1"
+}
