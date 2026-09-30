@@ -1,13 +1,42 @@
 # Speaker Grouping Report
 
-**Evidence state: UNRESOLVABLE as authoritative speaker identity from the current observable package.**
+## Closure status
 
-The competition supplies no speaker IDs. Low-level acoustic and pitch features can expose voice/source structure but cannot establish identity reliably enough for a speaker-disjoint authority.
+**PENDING REQUIRED PRETRAINED SPEAKER AUDIT.**
 
-A strong pretrained ECAPA-TDNN speaker-embedding audit was attempted, but pretrained weights are not locally cached and the current execution environment cannot fetch the model weights directly. No demographic attributes are inferred from voice.
+The earlier statement that speaker structure was epistemically `UNRESOLVABLE` was too strong. What was established was only that the first runtime lacked accessible pretrained speaker weights.
 
-Policy:
-- V-C speaker-disjoint validation is **not frozen**;
-- do not invent speaker IDs from pitch or low-level clusters;
-- future execution with accessible ECAPA/x-vector weights may add a speaker stress view, but it must pass threshold and clustering-stability checks before becoming authoritative;
-- current model promotion must remain robust under duplicate-safe V-B and verified format/source stress V-D.
+The competition still supplies no organizer speaker IDs, so **true organizer speaker identity may remain unobservable**. However, reliable speaker-like grouping and train/test speaker-like overlap may be inferable and must be tested before final validation closure.
+
+## Required executed analysis
+
+Canonical executor:
+
+`scripts/run_ds002_speaker_ecapa_audit.py`
+
+Planned representation:
+
+`speechbrain/spkrec-ecapa-voxceleb` ECAPA-TDNN.
+
+The executor resolves and records an immutable model revision at runtime, extracts normalized embeddings for all 1,035 clips, and audits:
+
+- duplicate-family embedding consistency;
+- pairwise similarity distribution;
+- agglomerative threshold stability;
+- DBSCAN stability;
+- train/test mixed clusters;
+- per-cluster label diversity;
+- recording-dtype confounding;
+- cluster stability across thresholds.
+
+The script explicitly describes resulting clusters as **speaker-like hypotheses**, not true speaker IDs.
+
+## Current policy
+
+- V-C is **not frozen**.
+- The V-A/V-B backbone remains preserved.
+- No speaker identity is inferred from pitch, sex/gender, or low-level acoustics.
+- Final closure requires actual embedding results, not merely this executor.
+- If embedding evidence is stable enough, a V-C speaker-like stress view may be added. Otherwise V-C must be rejected with positive embedding evidence documenting why grouping is unreliable.
+
+Current final-evidence state for reliable speaker-like grouping: **not yet classifiable; required audit pending**.
