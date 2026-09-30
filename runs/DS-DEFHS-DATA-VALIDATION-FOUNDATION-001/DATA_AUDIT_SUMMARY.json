@@ -1,0 +1,169 @@
+{
+  "train_rows": 826,
+  "test_rows": 209,
+  "total_rows": 1035,
+  "class_counts": {
+    "neutral": 217,
+    "sad": 212,
+    "angry": 205,
+    "happy": 192
+  },
+  "sample_rates": {
+    "16000": 1035
+  },
+  "dtypes": {
+    "int16": 933,
+    "int32": 102
+  },
+  "duration_seconds": {
+    "min": 1.008,
+    "median": 2.88,
+    "mean": 3.1862321859903386,
+    "max": 11.2
+  },
+  "exact_pcm_duplicate_groups": 21,
+  "exact_pcm_cross_split_groups": 8,
+  "exact_pcm_cross_split_test_clips": 8,
+  "exact_pcm_train_only_groups": 13,
+  "exact_pcm_train_only_clips": 27,
+  "near_duplicate_threshold": 0.95,
+  "relative_fingerprint_cluster_pairs_gt_0_5": 257,
+  "relative_fingerprint_weakest_cluster_similarity": 0.9741186499595642,
+  "relative_fingerprint_strongest_noncluster_similarity": 0.2093595266342163,
+  "near_duplicate_groups": 227,
+  "near_duplicate_clips": 467,
+  "cross_split_groups": 77,
+  "cross_split_test_clips": 78,
+  "train_only_groups": 142,
+  "test_only_groups": 8,
+  "label_conflict_groups": 1,
+  "baseline": {
+    "VA_mean_macro_f1": 0.6809675385708422,
+    "VA_std_macro_f1": 0.014147754432048805,
+    "VB_mean_macro_f1": 0.5825268179387583,
+    "VB_std_macro_f1": 0.007614829467578384,
+    "mean_leakage_premium": 0.09844072063208398,
+    "runs": [
+      {
+        "seed": 20260930,
+        "validation": "VA",
+        "oof_macro_f1": 0.6896896461322786,
+        "fold_macro_f1": [
+          0.6639768414349179,
+          0.6552352070709005,
+          0.6739153328644201,
+          0.7332725890597828,
+          0.7214436989992702
+        ]
+      },
+      {
+        "seed": 20260930,
+        "validation": "VB",
+        "oof_macro_f1": 0.5880591769418047,
+        "fold_macro_f1": [
+          0.570186958504332,
+          0.5362612930547712,
+          0.6161781629441744,
+          0.6319628647214854,
+          0.5806748734066701
+        ]
+      },
+      {
+        "seed": 20260917,
+        "validation": "VA",
+        "oof_macro_f1": 0.6585872931949808,
+        "fold_macro_f1": [
+          0.6542660575066161,
+          0.6231830547998445,
+          0.6880037832478383,
+          0.6831517366364013,
+          0.6410055115163473
+        ]
+      },
+      {
+        "seed": 20260917,
+        "validation": "VB",
+        "oof_macro_f1": 0.5724134007143715,
+        "fold_macro_f1": [
+          0.5785417978882635,
+          0.5705216724204066,
+          0.5523560892986451,
+          0.5884264516617458,
+          0.570850298802685
+        ]
+      },
+      {
+        "seed": 20260911,
+        "validation": "VA",
+        "oof_macro_f1": 0.675456339307592,
+        "fold_macro_f1": [
+          0.6872412008281574,
+          0.6171369413854815,
+          0.6317092717409173,
+          0.7109126092559828,
+          0.7260192339306264
+        ]
+      },
+      {
+        "seed": 20260911,
+        "validation": "VB",
+        "oof_macro_f1": 0.590657714488977,
+        "fold_macro_f1": [
+          0.5794962260479501,
+          0.5960786424819713,
+          0.6217766516827622,
+          0.577371819460427,
+          0.56959175435301
+        ]
+      },
+      {
+        "seed": 20260923,
+        "validation": "VA",
+        "oof_macro_f1": 0.692740839006913,
+        "fold_macro_f1": [
+          0.6968239972982979,
+          0.6772286578348486,
+          0.6970614707748445,
+          0.6919235923280564,
+          0.6918020065610427
+        ]
+      },
+      {
+        "seed": 20260923,
+        "validation": "VB",
+        "oof_macro_f1": 0.584401703727816,
+        "fold_macro_f1": [
+          0.7150268171467306,
+          0.5585582230993363,
+          0.5324529637029637,
+          0.5242887504079128,
+          0.5905913459392841
+        ]
+      },
+      {
+        "seed": 42,
+        "validation": "VA",
+        "oof_macro_f1": 0.688363575212447,
+        "fold_macro_f1": [
+          0.7022565507704994,
+          0.6303962240715439,
+          0.7151625670336057,
+          0.6951158805091389,
+          0.6915894173067783
+        ]
+      },
+      {
+        "seed": 42,
+        "validation": "VB",
+        "oof_macro_f1": 0.5771020938208219,
+        "fold_macro_f1": [
+          0.6033809859391255,
+          0.5786734859341074,
+          0.6085205582041026,
+          0.5844419442021471,
+          0.5044462809466532
+        ]
+      }
+    ]
+  }
+}
