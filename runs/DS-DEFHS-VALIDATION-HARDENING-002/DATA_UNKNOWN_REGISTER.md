@@ -2,7 +2,7 @@
 
 Mission: `DS-DEFHS-VALIDATION-HARDENING-002`
 
-No decision-relevant question remains in a `PENDING REQUIRED AUDIT` state.
+All decision-relevant questions now have final evidence states.
 
 | Question | Final state | Evidence / uncertainty | Decision policy |
 |---|---|---|---|
