@@ -25,5 +25,21 @@
     "DS/RS workers should use this exact Drive artifact or a byte-identical local copy.",
     "Verify SHA-256 before treating a downloaded copy as canonical.",
     "Derived heavy features, embeddings, transcripts, and checkpoints should be stored outside GitHub and separately manifested."
-  ]
+  ],
+  "extracted_mirror": {
+    "provider": "Google Drive",
+    "folder_path": "/DEFHS/competition_extracted",
+    "folder_id": "1d4A0b7_t_kUSwkyZkJ6al3R-vzwmHmvq",
+    "url": "https://drive.google.com/drive/folders/1d4A0b7_t_kUSwkyZkJ6al3R-vzwmHmvq",
+    "role": "convenience extracted mirror derived from canonical ZIP",
+    "verified_on": "2026-09-30",
+    "verification": {
+      "remote_files": 1038,
+      "remote_wav_files": 1035,
+      "rclone_check_differences": 0,
+      "rclone_check_matching_files": 1038,
+      "terminal_verdict": "DEFHS_EXTRACTED_DRIVE_MIRROR=PASS"
+    },
+    "local_working_copy": "/home/fikar/zingle/defhs/data/raw/competition/SRCASW-BhavVaani"
+  }
 }
