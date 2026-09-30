@@ -23,7 +23,7 @@ def main():
     tx=pd.read_csv(a.out/"PROMPT_CLUSTER_ASSIGNMENTS.csv")
     eg=pd.read_csv(a.out/"EGEMAPS_FEATURES.csv")
     dm=pd.read_csv(a.out/"DATA_MANIFEST.csv")
-    base=dm[["Id","split","emotion","dtype","duration_seconds"]].merge(sp,on=["Id","split","filename"],how="left",suffixes=("","_sp"))
+    base=dm[["Id","split","filename","emotion","dtype","duration_seconds"]].merge(sp,on=["Id","split","filename"],how="left",suffixes=("","_sp"))
     keep_tx=[c for c in tx.columns if c=="Id" or c.startswith("prompt_sim_") or c in {"normalized_transcript","avg_logprob","no_speech_prob"}]
     base=base.merge(tx[keep_tx],on="Id",how="left")
     eg_cols=[c for c in eg.columns if c not in {"Id","split","filename","emotion"}]
