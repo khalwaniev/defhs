@@ -1,40 +1,51 @@
-# Acted / Spontaneous Report
+# Acted / Spontaneous Report — Final Interpretation
 
-The organizers state that the corpus includes both acted and spontaneous speech, but the supplied package provides no per-clip regime labels.
+The organizers state that both acted and spontaneous speech are present, but
+the supplied package provides no per-clip acted/spontaneous labels.
 
-## Closure status
+## Completed joint evidence
 
-**PENDING JOINT RECONSIDERATION AFTER SPEAKER + ASR + eGeMAPS.**
+The required joint audit has now executed using:
 
-The previous hard `UNRESOLVABLE` verdict was issued before the required pretrained speaker and ASR audits were executed. That verdict is therefore not retained as final evidence.
+- ECAPA speaker-like clusters;
+- ASR-derived prompt clusters;
+- openSMILE eGeMAPSv02 structure;
+- recording dtype/source information;
+- duration and observable acoustic structure.
 
-Existing low-level evidence remains valid:
+Over joint clustering `k=2..6`:
 
-- int16/int32 recording heterogeneity is real;
-- duration, silence/pause, and spectral structure differ across source/format regimes;
-- low-level unsupervised source clusters are not stable enough to be renamed acted/spontaneous.
+- silhouette: approximately `0.1061-0.1626`;
+- split NMI: approximately `0.00034-0.00138`;
+- dtype NMI: approximately `0.00131-0.05579`;
+- adjacent-k ARI: approximately `0.35-0.66`.
 
-## Required joint analysis
+The joint representation therefore does not reveal a strong, uniquely
+identified latent partition. Cluster membership changes materially with k, and
+the clusters have essentially no relationship to train/test membership.
 
-After the mandatory speaker, ASR, and standardized eGeMAPS artifacts exist, run:
+## Scientific conclusion
 
-`scripts/run_ds002_latent_regime_joint_audit.py`
+Exact organizer acted/spontaneous labels are:
 
-The joint audit combines:
+**UNRESOLVABLE FROM AVAILABLE EVIDENCE.**
 
-- speaker-like clusters;
-- prompt/transcript clusters;
-- eGeMAPS paralinguistics;
-- recording dtype/source structure;
-- duration and related observable structure.
+Latent acted/spontaneous-like structure is:
 
-It may establish stable **latent regimes**, but it is explicitly prohibited from naming a cluster "acted" or "spontaneous" without evidence that supports that semantic interpretation.
+**INFERRED WEAK / INSUFFICIENT FOR VALIDATION AUTHORITY.**
 
-## Current policy
+No cluster is to be named "acted" or "spontaneous" without ground truth.
 
-- no per-clip acted/spontaneous labels;
-- do not equate int16/int32 with acted/spontaneous;
-- V-D remains a verified recording-format stress only;
-- final evidence state must be reissued after the joint audit.
+The new evidence does not justify:
 
-Current acted/spontaneous evidence state: **not yet classifiable for final closure**.
+- per-clip acted/spontaneous pseudo-labels;
+- an acted/spontaneous training target;
+- a new latent-regime validation split;
+- replacing V-D with a semantically named regime.
+
+## Validation policy
+
+- V-A remains the row-level competition-mimic view.
+- V-B remains the primary duplicate-safe selection authority.
+- V-D remains the verified int16/int32 recording-format/source stress.
+- No new acted/spontaneous validation component is frozen.
