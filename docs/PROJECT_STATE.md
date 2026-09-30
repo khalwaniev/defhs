@@ -16,9 +16,7 @@ Current active scientific branch:
 
 `ds/validation-hardening-002`
 
-Current active branch authority:
-
-`e1502dde76d91f30c7fd72f3c2e9ab5c477c3682`
+Current active branch authority must be read from the live Git branch before execution.
 
 Governing workflow:
 
