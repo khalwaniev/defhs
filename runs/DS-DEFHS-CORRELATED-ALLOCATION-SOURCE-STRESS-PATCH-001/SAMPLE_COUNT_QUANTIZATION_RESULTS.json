@@ -1,0 +1,63 @@
+{
+  "mission": "DS-DEFHS-CORRELATED-ALLOCATION-SOURCE-STRESS-PATCH-001",
+  "protected_gate_queried": false,
+  "discovery_multiplicity": {
+    "canonical_redteam_reproducer_hardcodes_modulus_128": true,
+    "exact_original_search_history_reconstructable": false,
+    "policy": "treat modulus selection as adaptive and use bounded-family max-statistic control"
+  },
+  "bounded_quantization_family": [16,32,64,80,128,160,200,256,320,400,480,512,640,800,960,1024],
+  "unconditional_maxstat": {
+    "permutations": 5000,
+    "null_max_p95": 0.112289745937205,
+    "remainder128_raw_permutation_p": 0.0001999600079984003,
+    "remainder128_familywise_p": 0.0005998800239952009,
+    "family_max_modulus": 960,
+    "family_max_cramers_v": 0.20977991568675078,
+    "family_max_fwer_p": 0.0001999600079984003
+  },
+  "family_results": [
+    {"modulus":960,"cramers_v":0.20977991568675078,"raw_p":2.4525977452003184e-16,"fwer_p":0.0001999600079984003,"top5":[384,192,576,606,926]},
+    {"modulus":480,"cramers_v":0.2084034187437818,"raw_p":4.601970371312474e-16,"fwer_p":0.0001999600079984003,"top5":[384,192,96,126,446]},
+    {"modulus":1024,"cramers_v":0.19919931168456473,"raw_p":2.7042368424346444e-14,"fwer_p":0.0001999600079984003,"top5":[0,683,342,512,128]},
+    {"modulus":320,"cramers_v":0.19218850640143958,"raw_p":5.139686690176778e-13,"fwer_p":0.0001999600079984003,"top5":[286,64,192,256,0]},
+    {"modulus":80,"cramers_v":0.19112105691534959,"raw_p":7.950977853170767e-13,"fwer_p":0.0001999600079984003,"top5":[46,64,32,16,0]},
+    {"modulus":160,"cramers_v":0.19112105691534959,"raw_p":7.950977853170767e-13,"fwer_p":0.0001999600079984003,"top5":[126,64,32,96,0]},
+    {"modulus":640,"cramers_v":0.18729423306512571,"raw_p":3.7008265901958714e-12,"fwer_p":0.0001999600079984003,"top5":[384,512,256,0,606]},
+    {"modulus":256,"cramers_v":0.18633778217321545,"raw_p":5.400412848210278e-12,"fwer_p":0.0001999600079984003,"top5":[0,171,86,128,222]},
+    {"modulus":512,"cramers_v":0.17325140147336002,"raw_p":7.326874283541994e-10,"fwer_p":0.0001999600079984003,"top5":[0,171,342,128,256]},
+    {"modulus":16,"cramers_v":0.13701697287788564,"raw_p":4.391858170902694e-05,"fwer_p":0.0005998800239952009,"top5":[0,11,6,14,8]},
+    {"modulus":32,"cramers_v":0.1363303883543495,"raw_p":5.2089854020987815e-05,"fwer_p":0.0005998800239952009,"top5":[0,11,22,30,24]},
+    {"modulus":64,"cramers_v":0.13532135382754235,"raw_p":6.676147320474768e-05,"fwer_p":0.0005998800239952009,"top5":[0,43,22,30,24]},
+    {"modulus":128,"cramers_v":0.13482400641935843,"raw_p":7.536137271822202e-05,"fwer_p":0.0005998800239952009,"top5":[0,43,86,94,30]},
+    {"modulus":400,"cramers_v":0.11553020855765506,"raw_p":0.004583847521884852,"fwer_p":0.027194561087782444,"top5":[206,112,16,224,144]},
+    {"modulus":800,"cramers_v":0.11553020855765506,"raw_p":0.004583847521884852,"fwer_p":0.027194561087782444,"top5":[606,512,416,224,544]},
+    {"modulus":200,"cramers_v":0.11238094450166744,"raw_p":0.008017636965167663,"fwer_p":0.04979004199160168,"top5":[6,112,16,24,46]}
+  ],
+  "dependency_deduplicated_conditional_tests": [
+    {"duration_bin_seconds":0.25,"n":671,"remainder128_familywise_p":0.01999000499750125,"family_max_modulus":960,"family_max_fwer_p":0.0004997501249375312},
+    {"duration_bin_seconds":0.10,"n":671,"remainder128_familywise_p":0.1329335332333833,"family_max_modulus":960,"family_max_fwer_p":0.0004997501249375312},
+    {"duration_bin_seconds":0.05,"n":671,"remainder128_familywise_p":0.4547726136931534,"family_max_modulus":960,"family_max_fwer_p":0.0004997501249375312}
+  ],
+  "remainder128_associations": {
+    "emotion_train_cramers_v": 0.13482400641935843,
+    "emotion_train_p": 7.536137271822202e-05,
+    "dtype_all_cramers_v": 0.8384957879022081,
+    "dtype_all_p": 5.07230108334426e-155,
+    "split_all_cramers_v": 0.09331265147407412,
+    "split_all_p": 0.10858628752096525,
+    "int16_0_43_86_other_emotion_cramers_v": 0.13794634378666545,
+    "int16_0_43_86_other_p": 2.5659549790284094e-06
+  },
+  "bootstrap_128_exceptionality": {
+    "replicates": 2000,
+    "median_rank_among_16_moduli": 12,
+    "rank_95pct": [10,16],
+    "p_rank1": 0.0,
+    "p_rank_top5": 0.0
+  },
+  "interpretation": "MIXED_DURATION_SEGMENTATION_AND_SOURCE_FORMAT_QUANTIZATION",
+  "remainder128_exceptional": false,
+  "independent_source_fingerprint_supported": false,
+  "decision": "retain V-B primary; add diagnostic Q128/Q960 quantization stress; do not automatically promote remainder as a feature"
+}
