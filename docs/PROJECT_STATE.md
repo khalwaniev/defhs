@@ -8,9 +8,13 @@ Canonical repository: `khalwaniev/defhs`
 
 Canonical local path: `/home/fikar/zingle/defhs`
 
-Canonical consolidated authority:
+Canonical branch:
 
-`main@9185ffd6dbb139ea8bf1c6f9558c71dbf2546033`
+`main`
+
+Consolidation baseline:
+
+`9185ffd6dbb139ea8bf1c6f9558c71dbf2546033`
 
 Active mission branch:
 
