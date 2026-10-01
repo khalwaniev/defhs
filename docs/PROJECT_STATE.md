@@ -90,26 +90,45 @@ BhavVani versus competition SRCASW-BhavVaani provenance remains:
 
 Do not transfer licensing, speaker metadata, or source lineage between them.
 
-## Current bottleneck
+## Current mission
 
-Convert the validated project state and acquired evidence into a small,
-decision-relevant modeling program.
+Mission:
 
-The next step is evidence synthesis, not more EDA, validation redesign,
-literature discovery, or broad model experimentation.
+`RS-DEFHS-SYSTEM-DESIGN-001`
 
-## Next mission
+Worker role:
 
-`SS-DEFHS-EVIDENCE-SYNTHESIS-001`
+**Research Scientist**
 
-Active mission branch after repository consolidation:
+Purpose:
+
+**Layer-1 system/ensemble design and Astra bottleneck isolation**
+
+Active mission branch:
 
 `ss/evidence-synthesis-001`
 
-Mission objective:
+The historical `ss/...` branch name is retained intentionally. Do not create a
+second remote branch merely to rename the clarified worker role.
 
-map evidence -> mechanism -> DEFHS relevance -> hypothesis -> cheapest
-discriminating experiment -> promotion criterion.
+## Current bottleneck
+
+Exploit the frozen DEFHS empirical evidence and acquired scientific evidence to
+reduce the candidate space to a small, coherent end-to-end SER + retrieval
+system, then isolate one high-value architecture decision for Astra 6 Max.
+
+This is a design mission. It is not more EDA, validation redesign, literature
+discovery, broad benchmarking, protected-fold optimization, or leaderboard
+iteration.
+
+## Next handoff
+
+After Layer 1 completes:
+
+1. Strategic Scientist integrates the Layer-1 design;
+2. Astra 6 Max receives only the narrow bottleneck packet;
+3. a later GPT-5.6 Sol High Research Scientist implements and experimentally
+   evaluates the integrated system.
 
 ## Do not redo
 
