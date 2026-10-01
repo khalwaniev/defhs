@@ -82,3 +82,20 @@
 - Because the two frozen representation families are independent until downstream CPU evaluation, the bounded execution package was refactored to run them concurrently: emotion2vec on `cuda:0`, XLS-R-300m on `cuda:1`.
 - The runner now logs CUDA device count/names and fails before model execution if fewer than two CUDA devices are visible.
 - No scientific design, validation fold, model identity, pooling rule, downstream head, PEFT gate, protected validation, or competition submission policy was changed.
+
+## Kaggle v3 dual-GPU frozen screen — SUCCESS
+
+- Source authority: `2bf65c7c978193f8baf8930fc46124190718bc86`.
+- emotion2vec completed on `cuda:0`; XLS-R-300m completed on `cuda:1`.
+- Terminal flags: `RS_DEFHS_FROZEN_SCREEN=SUCCESS`, `DUAL_GPU_EXECUTION=TRUE`.
+- Protected validation queried: NO.
+- Kaggle competition submission made: NO.
+- Frozen results:
+  - emotion2vec_base + L2 logistic: V-B `0.7383745765682462`; V-A `0.8016519493535111`.
+  - emotion2vec_base + calibrated RBF: V-B `0.7026587840956953`; V-A `0.7582039534692412`.
+  - XLS-R-300m + L2 logistic: V-B `0.7107962132114378`; V-A `0.7676504052799028`.
+  - XLS-R-300m + calibrated RBF: V-B `0.6514871413848837`; V-A `0.7054228952640451`.
+- Interpretation is bounded: emotion2vec is the strongest standalone frozen realization in this completed screen; XLS-R remains eligible for Stage-4 complementarity testing because standalone score alone does not decide ensemble membership.
+- PEFT remains untriggered. The precommitted adaptation policy requires frozen-system closure and downstream controls before any adaptation experiment.
+- Heavy Kaggle outputs must still be imported/preserved before Stage 4.
+
