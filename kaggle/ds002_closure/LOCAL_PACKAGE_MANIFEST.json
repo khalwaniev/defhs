@@ -1,0 +1,41 @@
+{
+  "git_commit": "5be8dd571ed161dd96266cc117a303df232aa648",
+  "repo_files": {
+    "requirements/ds002_closure.txt": {
+      "sha256": "9e2ffb52b5236ed87d825d734c504d1966d9ec91523c972a760174f9bcb5cc78",
+      "bytes": 206
+    },
+    "scripts/run_ds002_speaker_ecapa_audit.py": {
+      "sha256": "09cbd3391a53b4a408c078ce32a8776473010f11f75b9ea10bb0e37b53deb3f7",
+      "bytes": 6627
+    },
+    "scripts/run_ds002_asr_prompt_audit.py": {
+      "sha256": "8e68cc9ccfa477e1ecd991ab9c23d36fdd9d786fb6b8a4c6dd829cb8983a36cc",
+      "bytes": 5742
+    },
+    "scripts/run_ds002_latent_regime_joint_audit.py": {
+      "sha256": "274290419bacd81618ea78dcb5a2fbae6d185a61195d13814fb253f018ef1ce4",
+      "bytes": 4204
+    },
+    "runs/DS-DEFHS-VALIDATION-HARDENING-002/DATA_MANIFEST.csv": {
+      "sha256": "1e5552d42aec94efae197e7dac95de41cfc96e40336f3e513b9a87e3ccc72469",
+      "bytes": 205931
+    },
+    "runs/DS-DEFHS-VALIDATION-HARDENING-002/DUPLICATE_GROUPS_FINAL.csv": {
+      "sha256": "6aee3374e27efeb1a79397a1256a515b87e3baf4d7a01536191f6e16256e81f7",
+      "bytes": 22949
+    }
+  },
+  "protected_fold_packaged": false,
+  "egemaps": {
+    "source_kernel": "khalwaniev/defhs-ds002-closure",
+    "source_version": 1,
+    "source_git_commit": "c82bb7bde5fff16771c2f08f491d54a1468cdc14",
+    "filename": "EGEMAPS_FEATURES.csv",
+    "sha256": "45476151fa3eaf6fd747495a3827e769bac189cbc347459559734ceb1828a0be",
+    "rows": 1035,
+    "raw_bytes": 1769625,
+    "compressed_bytes": 651668,
+    "recomputed": false
+  }
+}
