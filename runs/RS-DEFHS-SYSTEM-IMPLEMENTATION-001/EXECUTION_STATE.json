@@ -1,13 +1,13 @@
 {
   "mission_id": "RS-DEFHS-SYSTEM-IMPLEMENTATION-001",
   "layer": "3_OF_3",
-  "status": "STAGE3_FROZEN_SCREEN_COMPLETE_STAGE4_PENDING_ARTIFACT_IMPORT_AND_ENSEMBLE",
+  "status": "FROZEN_CLOSURE_STAGE6_CPU_RUNNING",
   "repository": "khalwaniev/defhs",
   "branch": "rs/system-implementation-001",
   "mission_start_head": "388ec75e3531c180d4f9cc936fa6eb9f17773e2f",
   "ledger_initialization_commit": "13ba0b5e7e9ba49a720041d95f9ebf139b9a7b57",
   "stage0_stop_commit": "efd312c3515acddee143a5398c003471ecd4b885",
-  "local_worktree_status": "UNKNOWN_RUNTIME_HAS_NO_ACCESS_TO_/home/fikar/zingle/defhs",
+  "local_worktree_status": "CANONICAL_CHECKOUT_VERIFIED_UNEXPECTED_TMP_PRESERVED",
   "protected_validation_status": "NOT_QUERIED",
   "kaggle_submission_status": "NOT_MADE",
   "stages": {
@@ -15,9 +15,9 @@
     "stage1": "COMPLETE_DUAL_GPU_SCAFFOLD_AND_OOF",
     "stage2": "COMPLETE_EMOTION2VEC_FROZEN_SCREEN",
     "stage3": "COMPLETE_XLSR_FROZEN_SCREEN",
-    "stage4": "PENDING_ARTIFACT_IMPORT_AND_CPU_ENSEMBLE",
-    "stage5": "NOT_STARTED",
-    "stage6": "NOT_STARTED",
+    "stage4": "COMPLETE_AUDIO_CORE_PLUS_CONDITIONAL_EGEMAPS",
+    "stage5": "COMPLETE_TEXT_KILLED",
+    "stage6": "RUNNING_ONE_PARENT_CPU_POOLING_CONTROL",
     "stage7": "NOT_STARTED",
     "stage8": "NOT_STARTED",
     "stage9": "NOT_STARTED"
@@ -88,7 +88,8 @@
     "gpu_accelerator_hours": 0,
     "model_execution": true,
     "kaggle_v1_wall_seconds_to_traceback": 80.081398354,
-    "exact_gpu_quota_charge": "UNKNOWN_NOT_QUERIED"
+    "exact_gpu_quota_charge": "UNKNOWN_NOT_QUERIED",
+    "continuation_accelerator_hours": 0
   },
   "next_decision_required_from_ss": null,
   "stage1_package": {
@@ -163,5 +164,22 @@
         }
       }
     }
-  }
+  },
+  "continuation_start_head": "16f271b50b1f6d4d3605b3ccb580d5667972dd45",
+  "artifact_preservation": {
+    "source_commit": "2bf65c7c978193f8baf8930fc46124190718bc86",
+    "drive_path": "gdrive:DEFHS/rs_system_implementation_001/kaggle_v3_frozen_screen",
+    "folder_id": "1J4AfTLha26HGj3XHmgcWbYpX-TPG7fI9",
+    "manifest_sha256": "231bbe1b070168981c54f4adb4c8fbc5b234ee2f9edbddb5fdf06363afe876de",
+    "inventory_verified_files": 17,
+    "byte_verified_files": 21,
+    "method": "rclone check --download; all 21 equal, zero differences",
+    "status": "PASS",
+    "original_manifest_note": "Original SHA256SUMS.txt retained unchanged; it has a stale self-hash. SHA256_MANIFEST.txt excludes itself."
+  },
+  "selected_E0_members": [
+    "emotion2vec_base_L2_LOGREG",
+    "EGEMAPS_L2_LOGREG"
+  ],
+  "prospective_parent": "emotion2vec_base_L2_LOGREG"
 }

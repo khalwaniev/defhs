@@ -99,3 +99,16 @@
 - PEFT remains untriggered. The precommitted adaptation policy requires frozen-system closure and downstream controls before any adaptation experiment.
 - Heavy Kaggle outputs must still be imported/preserved before Stage 4.
 
+
+## Execution continuation from required HEAD 16f271b
+
+- Local and remote branch matched the required SHA. Existing untracked `.tmp/` was preserved. No encoder extraction was repeated.
+- All 17 Kaggle inventory objects passed size/SHA256 verification. Existing Drive V3 copy lacked XLS-R frames; the missing object and separate non-self-referential SHA256 manifest were uploaded. `rclone check --download` confirms all 21 package files byte-identical.
+- Registered CPU continuation protocol/operators at `fa6ab63`, completed contrast registry at `70d2120`, before scoring the new blends. Legacy acoustic OOF contained hard labels only; cached-feature uncalibrated refit reproduced all V-A/V-B hard labels exactly. Its explicit calibrated realization uses training-only inner folds. eGeMAPS reproduces both recorded standalone scores.
+- Stage 4: neural pair V-B 0.7768156647, +0.0384410882 over emotion2vec, but simultaneous lower bound -0.0085815144. The triple adds only 0.0024990651 over the neural pair and fails fold/deletion/interval ablation. No member is retained from standalone ranking or oracle union.
+- Conditional eGeMAPS small-weight test passes narrowly: V-B 0.7488241074, +0.0104495308, lower bound 0.0000797291, four positive folds, positive every fold deletion and CLEAN point gain. Its separate conditional family is explicitly reported. V-A selects zero eGeMAPS weight, with no contradiction. E0 contains emotion2vec logistic and the conditional eGeMAPS logistic lane.
+- The initial Stage-4 serializer recorded the pre-eGeMAPS audio core after the eGeMAPS promotion; corrected the proven bookkeeping defect so E0 and subsequent controls include the promoted conditional lane. Scientific weights/gates were unchanged.
+- Stage 5: text blend gain 0.0028071290; prompt-controlled gain 0.0004669319. Neither is robust; no-close-neighbor V-B gain is negative. Text is killed; no new ASR or language model is authorized or run.
+- emotion2vec is the one prospective parent, selected before its pooling/residual controls. Stage 6 now runs one CPU attentive-statistics comparison on existing cached frames.
+- No ex-ante scalar-mixture API-unavailability record exists in the Stage-1 scaffold. Only final-frame caches were produced. This is UNKNOWN evidence, not a retrospectively declared unsupported comparison; G2 cannot pass on that omission.
+- Protected validation remains unqueried; Kaggle competition submission remains not made.

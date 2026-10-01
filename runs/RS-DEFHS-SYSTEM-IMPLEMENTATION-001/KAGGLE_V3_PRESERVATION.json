@@ -1,0 +1,11 @@
+{
+  "source_commit": "2bf65c7c978193f8baf8930fc46124190718bc86",
+  "drive_path": "gdrive:DEFHS/rs_system_implementation_001/kaggle_v3_frozen_screen",
+  "folder_id": "1J4AfTLha26HGj3XHmgcWbYpX-TPG7fI9",
+  "manifest_sha256": "231bbe1b070168981c54f4adb4c8fbc5b234ee2f9edbddb5fdf06363afe876de",
+  "inventory_verified_files": 17,
+  "byte_verified_files": 21,
+  "method": "rclone check --download; all 21 equal, zero differences",
+  "status": "PASS",
+  "original_manifest_note": "Original SHA256SUMS.txt retained unchanged; it has a stale self-hash. SHA256_MANIFEST.txt excludes itself."
+}
