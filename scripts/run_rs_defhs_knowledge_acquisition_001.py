@@ -7,7 +7,7 @@ and uploads to the existing Drive warehouse with rclone. It intentionally does
 NOT download external datasets or multi-GB model weights.
 """
 from __future__ import annotations
-import argparse, hashlib, json, os, shutil, subprocess, sys, urllib.request
+import argparse, csv, hashlib, json, os, shutil, subprocess, sys, urllib.request
 from pathlib import Path
 
 MISSION='RS-DEFHS-KNOWLEDGE-ACQUISITION-001'
@@ -26,7 +26,7 @@ PAPERS=[
  ('DEFHS-KNOW-0059__jon_2025__mater.pdf','https://www.isca-archive.org/interspeech_2025/jon25_interspeech.pdf'),
  ('DEFHS-KNOW-0060__dutta_2025__abhinaya.pdf','https://www.isca-archive.org/interspeech_2025/dutta25_interspeech.pdf'),
  ('DEFHS-KNOW-0061__naini_2025__sernc-challenge.pdf','https://www.isca-archive.org/interspeech_2025/naini25_interspeech.pdf'),
- ('DEFHS-KNOW-0064__thevakumar_2025__emota-paper.pdf','https://aclanthology.org/2025.chipsal-1.19.pdf'),
+ ('DEFHS-KNOW-0062__odyssey_2024__class-imbalance-ensemble.pdf','https://www.isca-archive.org/odyssey_2024/chen24_odyssey.pdf'),
  ('DEFHS-KNOW-0081__uniyal_2025__ssl-ser-benchmark.pdf','https://www.isca-archive.org/interspeech_2025/uniyal25_interspeech.pdf'),
  ('DEFHS-KNOW-0082__lertpetchpun_2025__sernc-framework.pdf','https://www.isca-archive.org/interspeech_2025/lertpetchpun25_interspeech.pdf'),
 ]
@@ -60,7 +60,17 @@ def main():
  ap.add_argument('--drive-remote',default=os.environ.get('DEFHS_RCLONE_REMOTE','gdrive'))
  ap.add_argument('--no-upload',action='store_true')
  a=ap.parse_args()
- stage=a.stage; (stage/'papers').mkdir(parents=True,exist_ok=True); (stage/'repositories').mkdir(parents=True,exist_ok=True)
+ stage=a.stage; run_dir=REPO/'runs'/MISSION
+ (stage/'papers').mkdir(parents=True,exist_ok=True); (stage/'repositories').mkdir(parents=True,exist_ok=True)
+ expected=set()
+ with (run_dir/'KNOWLEDGE_MANIFEST.csv').open(newline='',encoding='utf-8') as f:
+  for row in csv.DictReader(f):
+   if row.get('acquisition_status')=='PENDING_BINARY_HANDOFF':
+    expected.add(row['source_id'])
+ selected={name.split('__',1)[0] for items in (PAPERS,REPOS) for name,_ in items}
+ if selected != expected:
+  missing=sorted(expected-selected); extra=sorted(selected-expected)
+  raise RuntimeError(f'binary selection mismatch: missing={missing} extra={extra}')
  log=[]
  for kind,items in [('papers',PAPERS),('repositories',REPOS)]:
   for name,url in items:
@@ -70,14 +80,22 @@ def main():
    log.append({'kind':kind,'name':name,'url':url,'bytes':dst.stat().st_size,'sha256':digest})
    print(f'SHA256 {digest} {dst.stat().st_size} {kind}/{name}')
  checks=stage/'CHECKSUMS_SHA256.txt'
- checks.write_text(''.join(f"{x['sha256']}  {x['kind']}/{x['name']}\n" for x in log),encoding='utf-8')
+ base_checks=run_dir/'CHECKSUMS_SHA256.txt'
+ binary_entries=[(x['sha256'],f"/DEFHS/knowledge/{x['kind']}/{x['name']}") for x in log]
+ binary_paths={path for _,path in binary_entries}
+ preserved=[]
+ if base_checks.exists():
+  for line in base_checks.read_text(encoding='utf-8').splitlines():
+   if not any(line.endswith('  '+path) for path in binary_paths):
+    preserved.append(line)
+ merged=preserved+[f"{digest}  {path}" for digest,path in binary_entries]
+ checks.write_text('\n'.join(merged).rstrip()+'\n',encoding='utf-8')
  (stage/'BINARY_ACQUISITION_RESULT.json').write_text(json.dumps({'mission':MISSION,'artifacts':log},indent=2),encoding='utf-8')
  if not a.no_upload:
   remote=f'{a.drive_remote}:DEFHS/knowledge'
   run(['rclone','copy',str(stage/'papers'),remote+'/papers','--checksum','--create-empty-src-dirs'])
   run(['rclone','copy',str(stage/'repositories'),remote+'/repositories','--checksum','--create-empty-src-dirs'])
   # Preserve lightweight control-layer manifests in Drive as well as GitHub.
-  run_dir=REPO/'runs'/MISSION
   for fn in ['KNOWLEDGE_MANIFEST.csv','SOURCE_PROVENANCE.jsonl','ACQUISITION_LOG.jsonl','LICENSE_REGISTER.csv','DUPLICATE_SOURCE_MAP.csv','BHAVVAANI_PROVENANCE_RECONCILIATION.md','SOURCE_COVERAGE_REPORT.md','MISSING_EVIDENCE_REGISTER.md','POINTER_ONLY_REGISTER.md','WAREHOUSE_INDEX.md']:
    run(['rclone','copyto',str(run_dir/fn),remote+'/manifests/'+fn,'--checksum'])
   run(['rclone','copyto',str(checks),remote+'/manifests/CHECKSUMS_SHA256.txt','--checksum'])
