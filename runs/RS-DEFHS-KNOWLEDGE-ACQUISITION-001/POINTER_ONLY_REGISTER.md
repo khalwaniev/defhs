@@ -1,0 +1,70 @@
+# Pointer-Only Register
+
+Items below are intentionally not mirrored as heavy artifacts in this mission. Reasons include copyright/paywall, unresolved or restrictive license, model/dataset size, access approval, duplicate/family placeholder status, or low decision value.
+
+- **DEFHS-KNOW-0003 — Speech emotion recognition of Hindi speech using statistical and machine learning techniques**: `POINTER_ONLY`; license `POINTER_ONLY_COPYRIGHT`. publisher page/paywall may apply Exact corpus split/statistics require full paper verification; do not copy Academia.edu as authority
+- **DEFHS-KNOW-0004 — IITKGP-SEHSC: Hindi Speech Corpus for Emotion Analysis**: `POINTER_ONLY`; license `UNRESOLVED`. paper publisher access; dataset access terms unclear Dataset license and access path unresolved; some secondary surveys contain inconsistent 1,200 counts
+- **DEFHS-KNOW-0005 — Emotion Recognition in Hindi Speech Using CNN-LSTM Model**: `POINTER_ONLY`; license `UNRESOLVED`.  Full bibliographic/access details remain lower priority
+- **DEFHS-KNOW-0007 — ddlBoJack/emotion2vec official implementation**: `POINTER_ONLY`; license `UNRESOLVED`. public read access Original manifest claim “likely Apache” is unsupported and removed
+- **DEFHS-KNOW-0008 — emotion2vec Hugging Face organization/model family**: `SPLIT_TO_EXACT_RECORDS`; license `UNRESOLVED`. public cards; large weights Family record is not immutable
+- **DEFHS-KNOW-0009 — Explaining Deep Learning Embeddings for Speech Emotion Recognition by Predicting Interpretable Acoustic Features**: `POINTER_ONLY`; license `ARXIV_POINTER`. open Preprint status/venue not normalized beyond arXiv
+- **DEFHS-KNOW-0010 — Speech Emotion Recognition with OpenAI Whisper Large V3 (firdhokk)**: `POINTER_ONLY`; license `UNRESOLVED`. public model card Reported metrics not independently reproduced
+- **DEFHS-KNOW-0011 — The Geneva Minimalistic Acoustic Parameter Set (GeMAPS) for Voice Research and Affective Computing**: `POINTER_ONLY`; license `PAPER_COPYRIGHT_TOOL_LICENSE_RESTRICTED`. paper/tool access varies Paper license distinct from toolkit license
+- **DEFHS-KNOW-0012 — khalwaniev/defhs live project authority**: `INTERNAL_AUTHORITY`; license `INTERNAL`. connected authenticated access None for access in this mission
+- **DEFHS-KNOW-0013 — NLP-SBILAB/CAMuLeNet official implementation**: `POINTER_ONLY`; license `UNRESOLVED`. public read access Original owner URL corrected; no redistribution license found
+- **DEFHS-KNOW-0014 — OpenAI Whisper large-v3 exact checkpoint**: `METADATA_ONLY`; license `VERIFIED`. public; multi-GB SER utility must be evaluated under frozen validation later
+- **DEFHS-KNOW-0015 — FunASR repository / framework**: `POINTER_ONLY`; license `UNRESOLVED`. public Original “Whisper ports” description was too vague
+- **DEFHS-KNOW-0016 — audeering/opensmile**: `POINTER_ONLY`; license `VERIFIED_RESTRICTED`. public source; commercial/product restrictions Competition/downstream commercial-use implications require legal policy if relevant
+- **DEFHS-KNOW-0017 — wav2vec 2.0 / XLS-R family placeholder**: `SPLIT_TO_EXACT_RECORDS`; license `VERIFIED`. public; large weights Original wildcard was not immutable
+- **DEFHS-KNOW-0018 — HuBERT family placeholder**: `SPLIT_TO_EXACT_RECORDS`; license `VERIFIED`. public; large weights Original wildcard was not immutable
+- **DEFHS-KNOW-0019 — WavLM family placeholder**: `SPLIT_TO_EXACT_RECORDS`; license `UNRESOLVED`. public; large weights License not inferred from Hugging Face availability
+- **DEFHS-KNOW-0020 — XLS-R generic record**: `DUPLICATE_FAMILY`; license `VERIFIED`. public No separate artifact
+- **DEFHS-KNOW-0021 — Massively Multilingual Speech (MMS) exact checkpoint family**: `METADATA_ONLY`; license `VERIFIED_RESTRICTED`. public; large weights; non-commercial license Competition-use compatibility must be checked because non-commercial restriction
+- **DEFHS-KNOW-0022 — SenseVoice exact released family**: `METADATA_ONLY`; license `CODE_VERIFIED_MODEL_UNRESOLVED`. public Released small checkpoint does not list Hindi; model-weight license still unresolved
+- **DEFHS-KNOW-0023 — BhavVani dataset mirror/card (ag2003/bhavvani)**: `POINTER_ONLY`; license `RESTRICTED_TERMS_CONFLICT`. public card/data access may be gated by terms Row-count and license-history mismatch; competition compatibility not assumed
+- **DEFHS-KNOW-0024 — IITKGP-SEHSC dataset record**: `POINTER_ONLY`; license `UNRESOLVED`. access terms unclear License/access unresolved
+- **DEFHS-KNOW-0025 — Shashank21 Hindi subset**: `DUPLICATE_DERIVATIVE`; license `UNRESOLVED`. not independent corpus Exact subset cardinality/protocol unresolved
+- **DEFHS-KNOW-0026 — RAVDESS**: `METADATA_ONLY`; license `VERIFIED_RESTRICTED`. open but ~24.8 GB full archive Competition external-data compatibility not assumed
+- **DEFHS-KNOW-0027 — SAVEE**: `POINTER_ONLY`; license `VERIFIED_RESTRICTED`. registration/manual verification/password Use only after competition compatibility and access terms review
+- **DEFHS-KNOW-0028 — Toronto Emotional Speech Set (TESS)**: `POINTER_ONLY`; license `UNRESOLVED`. public metadata License needs authoritative recheck before acquisition
+- **DEFHS-KNOW-0029 — Urdu Emotional Speech Dataset**: `POINTER_ONLY`; license `RESTRICTED_OR_UNRESOLVED`. public read access Exact formal license and paper linkage should be pinned before data use
+- **DEFHS-KNOW-0030 — CREMA-D / CaFE generic bundle**: `SPLIT_TO_EXACT_RECORDS`; license `NON_SOURCE`.  Original entry bundled unrelated corpora
+- **DEFHS-KNOW-0031 — Other Indian SER corpora generic placeholder**: `SPLIT_TO_EXACT_RECORDS`; license `NON_SOURCE`.  No generic source retained as authority
+- **DEFHS-KNOW-0032 — Generic Kaggle notebooks example**: `REJECTED_NON_SOURCE`; license `NON_SOURCE`.  Original claim of participants using emotion2vec/cascade was unsupported by an immutable cited source
+- **DEFHS-KNOW-0033 — OpenReward.ai SER blog**: `POINTER_ONLY`; license `SECONDARY`.  Not used for scientific authority
+- **DEFHS-KNOW-0034 — Kaggle DataVerse Detecting Emotions from Hindi Speech competition**: `INTERNAL_COMPETITION_DATA_ALREADY_PRESENT`; license `COMPETITION_TERMS`. account/competition rules Exact source lineage and missing 1 clip unresolved
+- **DEFHS-KNOW-0036 — Any standard SER paywalled papers**: `REJECTED_NON_SOURCE`; license `NON_SOURCE`.  Replaced by exact paywalled/open records where decision-relevant
+- **DEFHS-KNOW-0037 — emotion2vec base universal representation checkpoint**: `METADATA_ONLY`; license `UNRESOLVED`. public; large weights Exact full current hub SHA/license text still to capture during binary handoff
+- **DEFHS-KNOW-0038 — emotion2vec+ seed**: `METADATA_ONLY`; license `UNRESOLVED`. public; large weights Full immutable SHA and model-license text still need capture
+- **DEFHS-KNOW-0039 — emotion2vec+ base**: `METADATA_ONLY`; license `UNRESOLVED`. public; large weights Full hub revision and license text unresolved
+- **DEFHS-KNOW-0040 — emotion2vec+ large**: `METADATA_ONLY`; license `UNRESOLVED`. public; multi-GB Full hub revision and license text unresolved
+- **DEFHS-KNOW-0041 — openai/whisper-large-v3**: `METADATA_ONLY`; license `VERIFIED`. public; large weights Not emotion-specialized; later experiment required
+- **DEFHS-KNOW-0042 — facebook/wav2vec2-xls-r-300m**: `METADATA_ONLY`; license `VERIFIED`. public; large weights Capture full immutable hub SHA before execution
+- **DEFHS-KNOW-0043 — facebook/wav2vec2-large-xlsr-53**: `METADATA_ONLY`; license `VERIFIED`. public; large weights Full current revision should be captured during handoff
+- **DEFHS-KNOW-0044 — facebook/hubert-large-ls960-ft**: `METADATA_ONLY`; license `VERIFIED`. public; large weights Full hub revision not captured in current web runtime
+- **DEFHS-KNOW-0045 — microsoft/wavlm-large**: `METADATA_ONLY`; license `UNRESOLVED`. public; large weights Do not infer license from hosting platform
+- **DEFHS-KNOW-0046 — microsoft/unispeech-sat-large**: `METADATA_ONLY`; license `UNRESOLVED`. public Full revision/license must be pinned before use
+- **DEFHS-KNOW-0047 — facebook/data2vec-audio-base-960h**: `METADATA_ONLY`; license `VERIFIED`. public Full hub revision not captured in current runtime
+- **DEFHS-KNOW-0048 — facebook/mms-1b-all**: `METADATA_ONLY`; license `VERIFIED_RESTRICTED`. public; non-commercial; very large Competition compatibility must be checked due NC license
+- **DEFHS-KNOW-0053 — MERaLiON-SER-v1: Multilingual Speech Emotion Recognition**: `METADATA_ONLY`; license `UNRESOLVED_CUSTOM`. public card; large weights Model card size/parameter-count inconsistency and custom license terms unresolved
+- **DEFHS-KNOW-0056 — Parameter-efficient fine-tuning for speech emotion recognition**: `POINTER_ONLY`; license `POINTER_ONLY_COPYRIGHT`. paywalled/publisher access Full paper not acquired; detailed conclusions should be synthesized only from accessible text
+- **DEFHS-KNOW-0063 — SUBESCO: A Bangla Speech Emotion Recognition Dataset**: `METADATA_ONLY`; license `VERIFIED`. open Competition compatibility/external-data policy must be checked before use
+- **DEFHS-KNOW-0064 — EmoTa: A Tamil Emotional Speech Dataset**: `POINTER_ONLY`; license `VERIFIED_RESTRICTED`. dataset access approval required Dataset access must be approved; no mirroring
+- **DEFHS-KNOW-0065 — CREMA-D: Crowd-sourced Emotional Multimodal Actors Dataset**: `METADATA_ONLY`; license `VERIFIED`. public; large Competition external-data compatibility not assumed
+- **DEFHS-KNOW-0066 — SAVEE authoritative dataset license/access record**: `POINTER_ONLY`; license `VERIFIED_RESTRICTED`. registration/password None beyond compatibility
+- **DEFHS-KNOW-0067 — RAVDESS authoritative Zenodo release**: `METADATA_ONLY`; license `VERIFIED_RESTRICTED`. open None beyond competition compatibility
+- **DEFHS-KNOW-0068 — URDU-Dataset official repository**: `POINTER_ONLY`; license `UNRESOLVED_RESTRICTED`. public repository Formal dataset license unresolved
+- **DEFHS-KNOW-0069 — Interspeech 2026 Speech Emotion Recognition and Representation program cluster**: `POINTER_ONLY`; license `OPEN_OFFICIAL`. open program/index Individual paper pages/DOIs may not yet all be indexed in search
+- **DEFHS-KNOW-0070 — Multi-Loss Learning for Speech Emotion Recognition with Energy-Adaptive Mixup and Frame-Level Attention**: `POINTER_ONLY`; license `OPEN_INDEX_VERIFIED`. open index/preprint Proceedings DOI/page not yet captured
+- **DEFHS-KNOW-0071 — Conflict-Aware Pseudo-Labeling via Acoustic Signals for Multi-Task Speech Emotion Recognition**: `POINTER_ONLY`; license `OPEN_INDEX_VERIFIED`. open index Detailed method/results pending paper-page capture
+- **DEFHS-KNOW-0072 — Learning Emotion-discriminative Representations for Zero-Shot Cross-Lingual Speech Emotion Recognition**: `POINTER_ONLY`; license `OPEN_INDEX_VERIFIED`. open index Detailed corpus/language results pending exact page
+- **DEFHS-KNOW-0073 — KuralHub: Exposing Typological Capability Frontiers in Multilingual Speech Emotion Recognition**: `POINTER_ONLY`; license `OPEN_INDEX_VERIFIED`. open index Hindi-specific coverage to inspect in full paper
+- **DEFHS-KNOW-0074 — TIMBRE: Layer-Wise Cross-Lingual Speech Emotion Recognition Across 49 Layers and 26 Corpora**: `POINTER_ONLY`; license `OPEN_INDEX_VERIFIED`. open index Exact encoders/results pending paper page
+- **DEFHS-KNOW-0075 — A Gated Multi-Task Whisper Framework for Speech, Emotion, and Scene Understanding**: `POINTER_ONLY`; license `OPEN_INDEX_VERIFIED`. open index Hindi transfer not established from index
+- **DEFHS-KNOW-0076 — Progressive Weak Supervision for Speech Emotion Recognition**: `POINTER_ONLY`; license `OPEN_INDEX_VERIFIED`. open index Detailed protocol pending full paper
+- **DEFHS-KNOW-0077 — How Attention Shapes Emotion: A Comparative Study of Attention Mechanisms for Speech Emotion Recognition**: `POINTER_ONLY`; license `OPEN_INDEX_VERIFIED`. open index Detailed results pending full paper
+- **DEFHS-KNOW-0078 — Dual-Stream DNN-KAN Networks with Bangla-Specific Features for Speech Emotion Recognition**: `POINTER_ONLY`; license `OPEN_INDEX_VERIFIED`. open index Method transfer to Hindi needs full-paper inspection
+- **DEFHS-KNOW-0079 — Learning from Annotation Uncertainty: Entropy-Aware Curriculum for Speech Emotion Recognition**: `POINTER_ONLY`; license `OPEN_INDEX_VERIFIED`. open index Do not relabel DEFHS data from this source; only method evidence
+- **DEFHS-KNOW-0080 — Qwen2.5-Omni**: `METADATA_ONLY`; license `VERIFIED_CODE`. public; model weights have separate card/terms No direct evidence it is preferable for small-n Hindi SER
+- **DEFHS-KNOW-0083 — A Deep Learning Approach Toward Analyzing Cross-Lingual Acoustic-Phonetic Similarities in Multilingual Speech Emotion Recognition**: `POINTER_ONLY`; license `OPEN_ARTICLE`. open Exact reuse/downsampling protocol must be considered in synthesis
+- **DEFHS-KNOW-0084 — A Review of the Advancement in Speech Emotion Recognition for Indo-Aryan and Dravidian Languages**: `POINTER_ONLY`; license `OPEN_ARTICLE`. open article Older survey; not used to override newer primary evidence
