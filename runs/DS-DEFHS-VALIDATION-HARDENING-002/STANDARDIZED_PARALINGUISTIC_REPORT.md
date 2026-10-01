@@ -1,18 +1,22 @@
-# Standardized Paralinguistic Report
+# Standardized Paralinguistic Report — Final Interpretation
 
 ## Status
 
-**PENDING REQUIRED EXECUTION — final freeze blocker.**
+**COMPLETE — incorporated into the final DS-002 freeze.**
 
-The existing ~402-column librosa-derived acoustic matrix remains valid, but it is not a substitute for the standardized feature family required by the controlling mission.
+This file supersedes the earlier in-mission placeholder that marked the
+openSMILE/eGeMAPS audit as a pending execution blocker. The required audit was
+subsequently executed and interpreted before
+`FINAL_VALIDATION_AUTHORITY.md` and the final data-understanding certificate
+were issued.
 
-## Canonical required implementation
+## Canonical implementation
 
 Executor:
 
 `scripts/run_ds002_opensmile_egemaps_audit.py`
 
-Required package:
+Package:
 
 `opensmile==2.6.0`
 
@@ -24,30 +28,53 @@ Feature level:
 
 `Functionals`
 
-The executor is designed to extract the standard 88-dimensional eGeMAPSv02 functionals for every supplied clip and then evaluate:
+The standardized audit used 88 eGeMAPSv02 descriptors over all 1,035 supplied
+clips and did not query the protected promotion gate.
 
-- feature completeness;
-- train/test standardized-feature shift;
-- low-cost V-A performance;
-- low-cost V-B performance;
-- recording/source associations;
-- whether standardized descriptors expose structure missed by the existing acoustic matrix.
+## Final evidence
 
-It explicitly does not use the protected promotion gate.
+The completed audit reported:
 
-## Why this is not marked UNRESOLVABLE
+- rows: `1,035`;
+- descriptors: `88`;
+- train/test adversarial logistic AUC mean:
+  `0.476416387656352`;
+- V-A OOF macro-F1:
+  `0.5753536951338543`;
+- V-B OOF macro-F1:
+  `0.5601482021030706`;
+- maximum absolute univariate train/test standardized mean difference:
+  approximately `0.150`.
 
-openSMILE/eGeMAPS is public and technically executable in an appropriate environment. The current failure is an execution-environment package-access limitation, not an epistemic limitation of the competition data.
+## Scientific disposition
 
-Therefore no conclusion such as "eGeMAPS adds no new structure" has been made.
+The standardized paralinguistic feature family did **not** expose a material
+new train/test shift requiring validation redesign.
 
-## Final-closure requirement
+It therefore supports the frozen architecture rather than replacing it:
 
-A final data-understanding certificate may be issued only after:
+- V-B remains the primary duplicate-family-safe representation/model-family
+  selection authority;
+- V-A remains the secondary competition-mimic / retrieval-aware view;
+- V-D remains the recording-format/source diagnostic;
+- the protected promotion gate remains confirmation-only.
 
-- `EGEMAPS_FEATURES.csv`;
-- `EGEMAPS_SHIFT_SUMMARY.csv`;
-- `EGEMAPS_AUDIT_RESULTS.json`;
-- `EGEMAPS_MANIFEST.json`
+The existing approximately 402-column librosa-derived acoustic matrix remains
+valid complementary diagnostic evidence; eGeMAPSv02 is the standardized
+paralinguistic evidence family required by the DS-002 closure contract.
 
-have actually been produced, checked, preserved, and interpreted.
+## Final authority
+
+Authoritative interpretation:
+
+`runs/DS-DEFHS-VALIDATION-HARDENING-002/FINAL_VALIDATION_AUTHORITY.md`
+
+Final DS-002 certificate:
+
+`runs/DS-DEFHS-VALIDATION-HARDENING-002/DATA_UNDERSTANDING_CERTIFICATE.md`
+
+Post-red-team governing authority:
+
+`runs/DS-DEFHS-CORRELATED-ALLOCATION-SOURCE-STRESS-PATCH-001/POST_REDTEAM_VALIDATION_AUTHORITY.md`
+
+This audit is complete and is **not** a remaining freeze blocker.
