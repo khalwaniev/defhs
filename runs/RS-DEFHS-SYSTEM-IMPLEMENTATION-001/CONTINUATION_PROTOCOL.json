@@ -1,0 +1,16 @@
+{
+  "mission_id": "RS-DEFHS-SYSTEM-IMPLEMENTATION-001",
+  "continuation_start_head": "16f271b50b1f6d4d3605b3ccb580d5667972dd45",
+  "authority": "Layer-1 ladder plus Layer-2 ADAPTATION_POLICY v1; no policy changes",
+  "class_order": ["angry", "happy", "neutral", "sad"],
+  "bootstrap": {"replicates": 2000, "rng": "PCG64", "seed": 20260930, "components": "union of existing duplicate families and frozen prompt_sim_0.90 clusters", "distribution": "Exp(1)", "interval": "simultaneous max-absolute standardized deviation, q95 higher", "sd_ddof": 1},
+  "blend": {"first": "equal probability weights", "grid": "nonnegative multiples of 1/4 summing to one, plus exact equal weights", "selection": "ADAPTATION_POLICY 5.1 verbatim", "meta_validation": "leave one existing fold out, each view separately", "membership": "smallest system with robust held-out marginal value; no deletion-neutral members"},
+  "stage4_lanes": ["emotion2vec_base_L2_LOGREG", "xls_r_300m_L2_LOGREG", "FULL_RBF_SVM_CAL"],
+  "acoustic_probability_extension": {"reason": "legacy VALIDATION_OOF_FIXED exports only hard predictions", "base": "existing imputer/StandardScaler/SVC C10 gamma scale recipe", "inner_calibration": "sigmoid, 3 fixed stratified group folds in VB and stratified folds in VA", "seed": 20260930, "requirement": "separately refit original uncalibrated anchor and check hard-prediction parity; calibrated outputs are explicitly a new realization"},
+  "egemaps": {"head": "existing imputer/StandardScaler/logistic C0.3 recipe", "allowed_addition_weights": [0, 0.25], "rule": "core vs small-weight addition only; no standalone membership search"},
+  "stage5": {"features": "one equal feature-union of word (1,2) and char_wb (3,5) TF-IDF, vocabulary/IDF fit in outer training only", "head": "L2 logistic C0.3 max_iter5000", "seed": 20260930, "controls": "unchanged folds; singleton/non-singleton/mixed/close-neighbor strata; second diagnostic fits exclude outer-validation prompt90 clusters from training"},
+  "stage6": {"candidate": "one single linear scalar temporal attention scorer plus weighted mean/std and linear four-class head", "scope": "one prospective encoder chosen once under policy 5.3", "initialization": "uniform attention and matching logistic head", "training": "CPU FP32; ordinary CE plus L2 classifier penalty; Adam LR0.001; attention L2 coefficient0.01; maximum30 epochs, patience5, cyclic training-only existing-fold stopping, epoch0 included", "seed": 20260930, "rule": "stable held-out standalone and system value required; no sweep"},
+  "offsets": {"vectors": "exact 19 zero-sum vectors from {-log2,0,+log2}^4", "selection": "policy 15 one-SD minimum-norm shrinkage", "meta_validation": "leave one existing fold out"},
+  "stress": {"authority": "existing VD/Q and correlated-allocation envelope", "gpu_extraction": "forbidden to repeat", "protected_allowed": false, "submission_allowed": false},
+  "notes": "Engineering defaults for the single authorized text/pooling implementation are registered before their OOF is produced. They are not additions to or relaxations of scientific gates. An absent supported layer-mixture control or absent ex-ante API-unavailability record remains UNKNOWN and fails G2."
+}

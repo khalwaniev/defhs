@@ -47,6 +47,7 @@ outputs/
 scratch/
 tmp/
 .cache/
+/work/
 
 # Allow lightweight manifests/reports anywhere
 !manifests/**
