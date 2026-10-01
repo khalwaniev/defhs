@@ -102,16 +102,9 @@ Worker role:
 
 Status:
 
-**COMPLETE — RETURNED TO STRATEGIC SCIENTIST**
+**COMPLETE — SS ACCEPTED**
 
-Active mission branch:
-
-`ss/evidence-synthesis-001`
-
-The historical `ss/...` branch name is retained intentionally. No replacement
-remote branch was created.
-
-Authoritative Layer-1 artifacts:
+Authoritative artifacts:
 
 - `runs/RS-DEFHS-SYSTEM-DESIGN-001/MISSION.md`
 - `runs/RS-DEFHS-SYSTEM-DESIGN-001/SYSTEM_DESIGN.md`
@@ -119,58 +112,112 @@ Authoritative Layer-1 artifacts:
 - `runs/RS-DEFHS-SYSTEM-DESIGN-001/ASTRA_BOTTLENECK_PACKET.md`
 - `runs/RS-DEFHS-SYSTEM-DESIGN-001/FINAL_RETURN_TO_SS.md`
 
-## Provisional system selected by Layer 1
+Final Layer-1 authority commit:
 
-The implementation program is frozen-first:
+`5d81af578cd67c4e9826d270c11abbe1812652c1`
 
-1. keep the certified duplicate-retrieval lane separate as a deterministic hard
-   override;
-2. screen a frozen emotion2vec-family representation as the primary
-   emotion-specialized candidate;
-3. screen frozen Vesper-4 as a second emotion-specialized candidate;
-4. run one bounded WavLM-large versus XLS-R-300m discriminator and keep at most
-   one generic/multilingual SSL lane;
-5. retain the existing FULL_RBF_SVM acoustic system only while it adds genuine
-   ensemble diversity;
-6. treat eGeMAPS and transcript semantics as conditional diversity lanes;
-7. use a simple regularized probability/logit blend and ordinary argmax first;
-8. do not perform full-model fine-tuning.
+## Layer-2 adaptation policy
 
-Every pretrained asset remains subject to execution-time checkpoint revision,
-license, and competition-policy verification.
+Mission:
 
-## Astra bottleneck
+`RS-DEFHS-ADAPTATION-POLICY-001`
 
-Primary unresolved decision:
+Worker role:
 
-**Should the system remain a fully frozen representation-diversity core, or,
-after the frozen screen selects one strongest encoder, should one bounded
-upper-layer PEFT experiment become the default next use of GPU compute?**
+**Research Scientist — Astra 6 Max**
 
-Astra receives:
+Status:
 
-`runs/RS-DEFHS-SYSTEM-DESIGN-001/ASTRA_BOTTLENECK_PACKET.md`
+**COMPLETE — SS ACCEPTED**
 
-Astra must not redo the broad evidence synthesis, validation, EDA, or knowledge
-acquisition.
+Authoritative artifacts:
 
-## Next handoff
+- `runs/RS-DEFHS-ADAPTATION-POLICY-001/MISSION.md`
+- `runs/RS-DEFHS-ADAPTATION-POLICY-001/ADAPTATION_POLICY.md`
+- `runs/RS-DEFHS-ADAPTATION-POLICY-001/FINAL_RETURN_TO_SS.md`
 
-1. Strategic Scientist reviews and integrates Layer-1 system design.
-2. Astra 6 Max answers only the adaptation-versus-diversity bottleneck.
-3. Strategic Scientist integrates the Astra answer.
-4. Layer-3 GPT-5.6 Sol High Research Scientist implements the ordered experiment
-   ladder.
+Final Layer-2 authority commit:
 
-No Layer-3 modeling has been authorized or run by this mission.
+`7a92164b3a5f664f394ac67013287e6a8417a5dc`
 
+Integrated prior:
+
+**FROZEN_DIVERSITY_PRIOR**
+
+Current PEFT status:
+
+**PENDING_FROZEN_OOF**
+
+PEFT is not an automatic implementation stage. It is permitted only if the
+precommitted RS2 entry gate passes after the frozen OOF program is complete.
+
+If triggered, the sole permitted first adaptation recipe is:
+
+`DEFHS_UPPER_QUARTER_QV_LORA_FIXED_DOWNSTREAM_V1`
+
+A failed gate or failed bounded adaptation closes adaptation under the current
+authority; no rescue search is authorized.
+
+## Frozen implementation architecture
+
+The implementation program is:
+
+1. keep certified duplicate retrieval as a separate deterministic hard override;
+2. verify checkpoint revision, license, reproducibility and competition-policy
+   authority before execution;
+3. build the common frozen representation scaffold;
+4. screen the bounded emotion2vec-family candidate and Vesper-4;
+5. run the bounded WavLM-large versus XLS-R-300m discriminator and retain at
+   most one generic/multilingual SSL lane;
+6. retain FULL_RBF_SVM only while it provides genuine ensemble value;
+7. treat eGeMAPS and transcript semantics only under their existing conditional
+   diversity gates;
+8. select a small 2-3-lane frozen ensemble using held-out marginal value;
+9. complete the authorized pooling and bounded offset controls;
+10. apply the RS2 G0-G6 PEFT entry policy;
+11. run exactly one bounded Q/V LoRA experiment only if that policy triggers;
+12. complete finalist stresses before any later SS-authorized protected
+    confirmation.
+
+No broad foundation-model zoo, full-model fine-tuning or adaptive PEFT search is
+authorized.
+
+## SS integration
+
+Mission:
+
+`SS-DEFHS-DESIGN-INTEGRATION-001`
+
+Verdict:
+
+**PASS — SCIENTIFIC DESIGN FROZEN FOR LAYER-3 IMPLEMENTATION**
+
+Authority:
+
+`runs/SS-DEFHS-DESIGN-INTEGRATION-001/FINAL_INTEGRATION.md`
+
+## Next mission
+
+`RS-DEFHS-SYSTEM-IMPLEMENTATION-001`
+
+Worker role:
+
+**Research Scientist — GPT-5.6 Sol High**
+
+Implementation begins at Stage 0.
+
+The implementation worker must preserve the frozen validation hierarchy, OOF
+alignment, experiment provenance, promote/kill rules, and the precommitted RS2
+adaptation policy.
+
+No Layer-3 experiment has been run at the moment of this integration.
 ## Protected information
 
 Protected seed 20261001 remains:
 
 **UNTOUCHED / CONFIRMATION-ONLY**
 
-No protected candidate performance was queried during Layer 1.
+No protected candidate performance was queried during Layer 1 or Layer 2.
 
 ## Do not redo
 
