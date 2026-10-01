@@ -8,17 +8,26 @@ Canonical repository: `khalwaniev/defhs`
 
 Canonical local path: `/home/fikar/zingle/defhs`
 
-Active corrective branch:
+Canonical consolidated authority:
 
-`ds/correlated-allocation-source-stress-patch-001`
+`main@9185ffd6dbb139ea8bf1c6f9558c71dbf2546033`
 
-Parent frozen DS authority:
+Active mission branch:
 
-`ds/validation-hardening-002@c7da27a0f7d0927a5070da8cf825d1415546345c`
+`rs/knowledge-discovery-001`
 
-Adversarial authority:
+Active mission starting authority:
 
-`audit/final-validation-data-redteam-001@5973f06e1a710017776c2f4ced60f892eaf2c76b`
+`9185ffd6dbb139ea8bf1c6f9558c71dbf2546033`
+
+Historical scientific authorities are preserved in the consolidated `main`
+history and by archive tags:
+
+- `archive/ds-data-validation-foundation-001`;
+- `archive/ds-validation-hardening-002`;
+- `archive/ar-final-validation-data-redteam-001`;
+- `archive/ds-correlated-allocation-source-stress-patch-001`;
+- `archive/ds002-kaggle-execution-packages`.
 
 Governing workflow: `WORKFLOW.md`
 
@@ -183,11 +192,15 @@ The reproducer explicitly rejects any input path containing
 
 ## Next action
 
-Return the bounded patch to SS.
+Validation and data-understanding work are closed under
+`PATCH_AND_FREEZE`.
 
-Recommendation:
+Current active mission:
 
-**SS should accept `PATCH_AND_FREEZE` and authorize the planned serious RS
-SER modeling program under `POST_REDTEAM_VALIDATION_AUTHORITY.md`.**
+`RS-DEFHS-KNOWLEDGE-DISCOVERY-001`
+
+The next stage is external SER knowledge discovery and evidence acquisition
+without changing the frozen validation architecture or querying the protected
+promotion gate.
 
 Do not restart DS-002 and do not create a new primary CV.
