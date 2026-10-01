@@ -1,2 +1,4 @@
 artifact_id,stage,artifact_type,location,storage_authority,sha256_or_revision,status,description
 DRIVE_ROOT,0,folder,/DEFHS/rs_system_implementation_001/,Google Drive,1yJIK5_EE_57wO-GmlzIqfs21Sc5JtRDB,VERIFIED_CREATED,Heavy-artifact root for this mission
+STAGE0_REPORT,0,markdown,runs/RS-DEFHS-SYSTEM-IMPLEMENTATION-001/STAGE0_EXECUTION_AUTHORITY.md,GitHub,stage0-milestone-commit,CREATED,Execution legality/reproducibility audit and stop decision
+STAGE0_RETURN,0,markdown,runs/RS-DEFHS-SYSTEM-IMPLEMENTATION-001/STAGE0_RETURN_TO_SS.md,GitHub,stage0-milestone-commit,CREATED,Return-to-SS packet after terminal Stage-0 stop

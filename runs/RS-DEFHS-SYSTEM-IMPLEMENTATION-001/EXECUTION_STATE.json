@@ -1,28 +1,47 @@
 {
   "mission_id": "RS-DEFHS-SYSTEM-IMPLEMENTATION-001",
   "layer": "3_OF_3",
-  "status": "STAGE_0_IN_PROGRESS",
+  "status": "RETURN_TO_SS_STAGE0_STOP",
   "repository": "khalwaniev/defhs",
   "branch": "rs/system-implementation-001",
   "mission_start_head": "388ec75e3531c180d4f9cc936fa6eb9f17773e2f",
-  "verified_remote_branch_head": "388ec75e3531c180d4f9cc936fa6eb9f17773e2f",
-  "verified_remote_main_head": "388ec75e3531c180d4f9cc936fa6eb9f17773e2f",
-  "remote_ahead_behind_main": {
-    "ahead": 0,
-    "behind": 0
-  },
+  "ledger_initialization_commit": "13ba0b5e7e9ba49a720041d95f9ebf139b9a7b57",
   "local_worktree_status": "UNKNOWN_RUNTIME_HAS_NO_ACCESS_TO_/home/fikar/zingle/defhs",
   "protected_validation_status": "NOT_QUERIED",
   "kaggle_submission_status": "NOT_MADE",
-  "stage0_status": "IN_PROGRESS",
+  "stages": {
+    "stage0": "TERMINAL_STOP_CONDITION_REACHED",
+    "stage1": "NOT_STARTED",
+    "stage2": "NOT_STARTED",
+    "stage3": "NOT_STARTED",
+    "stage4": "NOT_STARTED",
+    "stage5": "NOT_STARTED",
+    "stage6": "NOT_STARTED",
+    "stage7": "NOT_STARTED",
+    "stage8": "NOT_STARTED",
+    "stage9": "NOT_STARTED"
+  },
+  "stage0": {
+    "competition_policy_compatibility": "UNKNOWN",
+    "candidates": {
+      "emotion2vec_base": "BLOCKED_POLICY_UNKNOWN",
+      "vesper_4": "BLOCKED_NO_RELEASED_CHECKPOINT_AND_POLICY_UNKNOWN",
+      "wavlm_large": "BLOCKED_WEIGHT_TERMS_UNRESOLVED_AND_POLICY_UNKNOWN",
+      "xls_r_300m": "BLOCKED_POLICY_UNKNOWN"
+    },
+    "stop_reasons": [
+      "competition-policy ambiguity prevents intended execution",
+      "both intended emotion-specialized lanes are currently non-executable"
+    ]
+  },
   "peft_gate_status": "PENDING_FROZEN_OOF",
   "drive_mission_root": {
     "path": "/DEFHS/rs_system_implementation_001/",
     "id": "1yJIK5_EE_57wO-GmlzIqfs21Sc5JtRDB"
   },
-  "notes": [
-    "Remote Git authority verified before writes.",
-    "Frozen Drive roots verified before mission folder creation.",
-    "No model execution or benchmark has occurred."
-  ]
+  "compute_used": {
+    "gpu_accelerator_hours": 0,
+    "model_execution": false
+  },
+  "next_decision_required_from_ss": "CAPTURE_COMPETITION_PRETRAINED_MODEL_RULE_THEN_RESOLVE_VESPER_ARCHITECTURE_IF_MODELS_ALLOWED"
 }

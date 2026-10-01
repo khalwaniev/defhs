@@ -10,3 +10,14 @@
 - Stage 0 legality/reproducibility audit started before any model/GPU execution.
 - Protected validation not queried.
 - Kaggle submission not made.
+
+## Stage 0 decision
+
+- Competition-policy compatibility for third-party pretrained checkpoints could not be established from captured project authority or the retrievable official Kaggle page. Status = UNKNOWN.
+- Per the frozen mission, public availability is not permission and UNKNOWN cannot be converted into execution authority.
+- emotion2vec base therefore remains blocked from execution despite a current official ModelScope Apache-2.0 listing.
+- Vesper-4 is additionally blocked because the pinned official Apache-2.0 repository contains no released immutable pretrained Vesper-4 checkpoint; silently initializing from WavLM would change the intended candidate.
+- WavLM-large remains blocked on checkpoint-weight terms as well as global competition policy.
+- XLS-R-300m has a pinned Apache-2.0 checkpoint revision and 16 kHz preprocessing authority, but remains blocked by the global competition-policy gate.
+- Both intended emotion-specialized lanes are non-executable, and competition-policy ambiguity independently triggers the mission's explicit return-to-SS condition.
+- Stage 1 was not started.
