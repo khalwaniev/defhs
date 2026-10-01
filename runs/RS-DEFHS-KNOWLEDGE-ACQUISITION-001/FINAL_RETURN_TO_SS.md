@@ -2,78 +2,37 @@
 
 ## Verdict
 
-**BLOCKED_ACQUISITION_INCOMPLETE**
+**PASS_ACQUISITION_COMPLETE**
 
-Scientific discovery/audit is complete enough for synthesis, and the GitHub control layer plus Drive warehouse structure are preserved. One material acquisition requirement remains: the selected open paper PDFs and repository snapshots have not yet been transferred into Drive.
+The acquisition mission is complete. Scientific source discovery/audit remains unchanged from the previously committed work; the formerly outstanding binary handoff has now been executed and independently verified.
 
-## Verified authority and safety
+## Verified closure
 
-- Mission starting authority: `main@78a61ade6a86de023af1862485096cffb0109ef0`.
-- Work is confined to `rs/knowledge-discovery-001`; `main` remains unchanged.
-- Exactly two live remote branches remain.
-- Frozen validation remains `PATCH_AND_FREEZE`: V-B primary, V-A secondary, V-D diagnostic, V-C rejected, Q128/Q960 diagnostic, retrieval 77 groups / 78 test clips, protected seed 20261001 confirmation-only.
-- No protected candidate performance was queried.
-- No validation redesign, serious SER modeling, or Kaggle submission occurred.
+- Active mission branch before final closure: `rs/knowledge-discovery-001@a18a186ddc37dedf200ff33b76cdafe449389d2e`.
+- `main` remains the pre-mission authority and was not modified by this recovery.
+- WSL handoff acquired **15 paper PDFs + 2 exact-commit repository ZIPs**.
+- Total acquired binary bytes: **26,395,531**.
+- `rclone check` returned **0 differences** for both paper and repository folders.
+- Independent live Drive readback re-downloaded all 17 objects and recomputed SHA256: **17/17 exact matches**.
+- `BINARY_ACQUISITION_RESULT.json` contains exactly **17** artifacts and agrees with the final checksum register.
+- SenseVoice snapshot is pinned to `586bbdb2b052f4fe19322581825228b6810a9fb3`; Vesper snapshot is pinned to `2b62af3e15fbd526fac6d4f1d6fea279c306244d`; both ZIPs pass archive integrity testing.
+- No external datasets or multi-GB model weights were acquired.
 
-## Source/accounting state
+## Control-layer reconciliation
 
-- Normalized source records: **84**.
-- Original Deep Research records explicitly dispositioned: **36 / 36**.
-- Newly added canonical records: **48**.
-- Canonical model/checkpoint/family records: **23** (excluding the noncanonical user bundle and alternate-host duplicate pointer).
-- External dataset/dataset-license records: **14**.
-- `POINTER_ONLY` records: **33**.
-- Records marked `PENDING_BINARY_HANDOFF`: **17**.
-- License-status strings containing `UNRESOLVED`: **24**.
-- The original discovery manifest is preserved both in GitHub and as raw bytes in the clean Drive packet.
-- BhavVani vs competition SRCASW-BhavVaani provenance remains **UNRESOLVED**; no same-source/derivative claim is made.
+The 17 formerly `PENDING_BINARY_HANDOFF` records are now `ACQUIRED_VERIFIED`, with exact SHA256 values recorded in `KNOWLEDGE_MANIFEST.csv`, `SOURCE_PROVENANCE.jsonl`, and `CHECKSUMS_SHA256.txt`. `LICENSE_REGISTER.csv`, `SOURCE_COVERAGE_REPORT.md`, `MISSING_EVIDENCE_REGISTER.md`, `WAREHOUSE_INDEX.md`, and `EXECUTION_STATE.json` are reconciled to the completed acquisition state.
 
-## Drive state
+The Odyssey 2024 binary also resolved its metadata placeholder directly from the acquired official PDF: **“1st Place Solution to Odyssey Emotion Recognition Challenge Task1: Tackling Class Imbalance Problem”**, with the author list captured in the canonical manifest. No new literature/source discovery was performed.
 
-Warehouse: `/DEFHS/knowledge/` (folder ID `1asWciARNwNE_OrL-_OmKWBxF3MF8uMeR`).
+## Preserved scientific and safety boundaries
 
-All 11 required subfolders exist. The `manifests/` folder contains the clean 64,089-byte acquisition packet plus eight individually verified control files listed in `WAREHOUSE_INDEX.md`. Their verified stored size totals **179,456 bytes**. `SOURCE_PROVENANCE.jsonl` remains canonical in GitHub and is also contained in the clean packet ZIP; it is not falsely claimed as a standalone Drive file.
+- No SER modeling was started.
+- No validation redesign occurred.
+- No protected validation performance was queried.
+- No Kaggle submission was made.
+- BhavVani versus competition SRCASW-BhavVaani provenance remains **UNRESOLVED**.
+- Remaining licensing/provenance gaps in `MISSING_EVIDENCE_REGISTER.md` remain explicit rather than guessed.
 
-The packet ZIP was sanitized during recovery: no `.pyc` or `__pycache__` entry remains. Packet SHA256: `53956d73ee230e3619234c0f63dcf09c1e0f48affad79524ec3175cc193f382f`.
+## Handoff
 
-Artifact/checksum state:
-- clean packet and eight individually uploaded control files have recorded SHA256 values in `CHECKSUMS_SHA256.txt` (where exact uploaded bytes are known);
-- selected external paper/repository binary SHA256 values remain pending because those files are not yet acquired.
-
-External acquired binary state:
-- paper PDFs in Drive: **0**;
-- repository snapshots in Drive: **0**;
-- model weights copied: **0** (intentional);
-- external datasets copied: **0** (intentional pending licensing/competition compatibility).
-
-## Major corrections retained
-
-1. BhavVani and the competition SRCASW-BhavVaani corpus are not proven aliases/derivatives.
-2. IITKGP-SEHSC is corrected to the primary-construction description of 12,000 utterances / 10 professional speakers; license remains unresolved.
-3. CAMuLeNet canonical repo is `NLP-SBILAB/CAMuLeNet@1ad70873...`; repository license is unresolved.
-4. emotion2vec repository licensing is unresolved rather than assumed Apache.
-5. SenseVoice exists and is released; code and model-card licensing are kept separate, and the released small checkpoint is not documented as Hindi-capable.
-6. openSMILE is governed by the audEERING Research License, not a generic permissive license.
-7. Whisper large-v3 exact checkpoint licensing was corrected to Apache-2.0.
-8. Generic wav2vec2/HubERT/WavLM/XLS-R/MMS families were resolved into exact records.
-9. Generic Kaggle-notebook/paywalled-paper placeholders were rejected as non-sources.
-
-## Evidence expansion retained
-
-The 48 added records cover 2025–2026 naturalistic SER, attentive pooling, layer selection/freezing, PEFT/LoRA, audio-text fusion, class imbalance/ensembles, pseudo-labeling/weak supervision, cross-lingual SER, South-Asian corpora, MERaLiON-SER-v1, Vesper, SenseVoice, and the Interspeech 2026 SER evidence cluster through 2026-10-01.
-
-## Exact remaining blocker
-
-The current runtime has no functioning public-binary download + Drive/rclone bridge for the selected PDF/repository files. The committed deterministic script is therefore still the smallest remaining operation.
-
-Run from WSL:
-
-```bash
-cd /home/fikar/zingle/defhs && \
-git fetch origin && \
-git checkout rs/knowledge-discovery-001 && \
-git pull --ff-only && \
-python scripts/run_rs_defhs_knowledge_acquisition_001.py --drive-remote gdrive
-```
-
-Success must end with `BINARY_HANDOFF_COMPLETE`. After that output is returned, verify Drive readback and update this verdict to `PASS_ACQUISITION_COMPLETE`.
+The knowledge warehouse is now acquisition-complete and suitable for return to SS for evidence synthesis. This PASS does **not** authorize modeling, validation changes, protected-performance inspection, external-data use, or submission by itself.

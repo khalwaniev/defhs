@@ -12,4 +12,5 @@ As of 2026-10-01, the following gaps remain explicit rather than guessed:
 8. **Interspeech 2026 individual paper metadata:** the official 2026 index is live on the conference end date (2026-10-01); several individual paper DOI/pages were not yet reliably indexed by the available search surface. Titles/authors are preserved from the official index, not invented.
 9. **Competition external-data compatibility:** public availability or a permissive dataset license does not by itself authorize use in this Kaggle competition. SS must verify competition rules before any external training-data ingestion.
 10. **Probability calibration specific to macro-F1:** evidence coverage is thinner than for representation, pooling, PEFT, augmentation, fusion and ensemble design. This is a later synthesis gap, not a reason to redesign validation.
-11. **Binary warehouse preservation:** the current ChatGPT runtime cannot transfer newly downloaded public PDF/archive bytes into the connected Drive uploader. The exact deterministic WSL acquisition script is provided and is the only remaining operational acquisition blocker.
+
+Resolved operationally on 2026-10-01: the binary warehouse handoff completed and all 17 selected artifacts passed independent Drive SHA256 readback.

@@ -1,0 +1,124 @@
+{
+  "mission": "RS-DEFHS-KNOWLEDGE-ACQUISITION-001",
+  "artifacts": [
+    {
+      "kind": "papers",
+      "name": "DEFHS-KNOW-0001__goel_2024__camulenet-bhavvani.pdf",
+      "url": "https://www.isca-archive.org/interspeech_2024/goel24_interspeech.pdf",
+      "bytes": 3836027,
+      "sha256": "d4e3c022a598519feb7882930de9fcca1acd45cb048aba9ebdd46b23d39ca44d"
+    },
+    {
+      "kind": "papers",
+      "name": "DEFHS-KNOW-0002__kotian_2026__hindi-ser-benchmark.pdf",
+      "url": "https://ijaimlds.com/ijaimlds/article/download/9/33/80",
+      "bytes": 648306,
+      "sha256": "bf1a810fb9848189ee9914ce3cf615ec680bdc188de2c66bfefa644137ccafc0"
+    },
+    {
+      "kind": "papers",
+      "name": "DEFHS-KNOW-0006__ma_2024__emotion2vec.pdf",
+      "url": "https://aclanthology.org/2024.findings-acl.931.pdf",
+      "bytes": 959470,
+      "sha256": "5e6f3ad6a10b71b08150ee1ba2a6f6473e23b223263f59afa84794c43aadecac"
+    },
+    {
+      "kind": "papers",
+      "name": "DEFHS-KNOW-0049__funaudiollm_2024__sensevoice.pdf",
+      "url": "https://arxiv.org/pdf/2407.04051",
+      "bytes": 2280760,
+      "sha256": "ad6e8caf510332c50848a7c5681082ac64b9721a4a682acfc1becea71b275a25"
+    },
+    {
+      "kind": "papers",
+      "name": "DEFHS-KNOW-0051__vesper_2024__paper.pdf",
+      "url": "https://arxiv.org/pdf/2307.10757",
+      "bytes": 3543173,
+      "sha256": "a53f8137120497b617f3b8b7468992c2281b64937d2921a018826eda4952f7b2"
+    },
+    {
+      "kind": "papers",
+      "name": "DEFHS-KNOW-0054__leygue_2025__attentive-pooling.pdf",
+      "url": "https://www.isca-archive.org/interspeech_2025/leygue25_interspeech.pdf",
+      "bytes": 381648,
+      "sha256": "18b2185d7c113598123d51403ea5f3cf8c7a67fa5ea3769f81b1b3e0e5f067c0"
+    },
+    {
+      "kind": "papers",
+      "name": "DEFHS-KNOW-0055__icasp2025__crosslingual-peft.pdf",
+      "url": "https://arxiv.org/pdf/2409.16920",
+      "bytes": 241353,
+      "sha256": "6d4370422faebb3ae9e0ac40f1aafa64fc1c22633df2fcac8ba44b8b6ef7679d"
+    },
+    {
+      "kind": "papers",
+      "name": "DEFHS-KNOW-0057__emosllm_2025__audio-text-lora.pdf",
+      "url": "https://arxiv.org/pdf/2508.14130",
+      "bytes": 798197,
+      "sha256": "6a70c885609e5fd51d7e3faf26e1c87c48bb1bd9d335210ff5612b3089a4bfa5"
+    },
+    {
+      "kind": "papers",
+      "name": "DEFHS-KNOW-0058__2025__lora-whisper-ser-interpretability.pdf",
+      "url": "https://arxiv.org/pdf/2509.08454",
+      "bytes": 1748424,
+      "sha256": "63deb0002590e2d414d6d8f819bc0698be4d17a472640b96f70f1073105b0b13"
+    },
+    {
+      "kind": "papers",
+      "name": "DEFHS-KNOW-0059__jon_2025__mater.pdf",
+      "url": "https://www.isca-archive.org/interspeech_2025/jon25_interspeech.pdf",
+      "bytes": 964128,
+      "sha256": "62bbf49630bdafddb64ffc8ab6a86070e1ceb8427578d7262d34e9fb1dd565f2"
+    },
+    {
+      "kind": "papers",
+      "name": "DEFHS-KNOW-0060__dutta_2025__abhinaya.pdf",
+      "url": "https://www.isca-archive.org/interspeech_2025/dutta25_interspeech.pdf",
+      "bytes": 958297,
+      "sha256": "26512fb37f4934e9cd939063fe418c4839c20a7ede11b802588c583a6ab9553c"
+    },
+    {
+      "kind": "papers",
+      "name": "DEFHS-KNOW-0061__naini_2025__sernc-challenge.pdf",
+      "url": "https://www.isca-archive.org/interspeech_2025/naini25_interspeech.pdf",
+      "bytes": 693166,
+      "sha256": "da8a68a296aae95827db9cdb810019e9e395217ce892d46e7a6209c1b378237d"
+    },
+    {
+      "kind": "papers",
+      "name": "DEFHS-KNOW-0062__odyssey_2024__class-imbalance-ensemble.pdf",
+      "url": "https://www.isca-archive.org/odyssey_2024/chen24_odyssey.pdf",
+      "bytes": 279584,
+      "sha256": "c3802841d89c08ff0bb4706e854b6b5bedaced679b5352dcd5527ed94a06bfb5"
+    },
+    {
+      "kind": "papers",
+      "name": "DEFHS-KNOW-0081__uniyal_2025__ssl-ser-benchmark.pdf",
+      "url": "https://www.isca-archive.org/interspeech_2025/uniyal25_interspeech.pdf",
+      "bytes": 312174,
+      "sha256": "383a08db89670ea96967bd53be1398d8632d4bddfd858855c741400ad047bb7f"
+    },
+    {
+      "kind": "papers",
+      "name": "DEFHS-KNOW-0082__lertpetchpun_2025__sernc-framework.pdf",
+      "url": "https://www.isca-archive.org/interspeech_2025/lertpetchpun25_interspeech.pdf",
+      "bytes": 1075910,
+      "sha256": "6a70272f1eb75a2e3f25f44aaab70a95c245f49b8b57aa97b6ffcf6c345b5df5"
+    },
+    {
+      "kind": "repositories",
+      "name": "DEFHS-KNOW-0050__QwenAudio_SenseVoice__586bbdb2.zip",
+      "url": "https://codeload.github.com/QwenAudio/SenseVoice/zip/586bbdb2b052f4fe19322581825228b6810a9fb3",
+      "bytes": 7503224,
+      "sha256": "eec431f9c59781444f961f5e2031c629e57eeb6d7d2444fb480aa32664a5589f"
+    },
+    {
+      "kind": "repositories",
+      "name": "DEFHS-KNOW-0052__HappyColor_Vesper__2b62af3e.zip",
+      "url": "https://codeload.github.com/HappyColor/Vesper/zip/2b62af3e15fbd526fac6d4f1d6fea279c306244d",
+      "bytes": 171690,
+      "sha256": "7876dbac7140b821fb2983ceb50f9c6fd00c50a9307ec8e6b09de63e5760eb84"
+    }
+  ]
+}
