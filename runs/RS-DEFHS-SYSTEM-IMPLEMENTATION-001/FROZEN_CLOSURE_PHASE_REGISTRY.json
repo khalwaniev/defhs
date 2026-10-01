@@ -1,0 +1,12 @@
+{
+  "purpose": "Close additions and ablations against E after the conditional eGeMAPS and pooling decisions, then evaluate RS2 entry once",
+  "membership_candidates": "reuse every already registered one/two/three-member audio core; for cores with at most two members also the existing conditional 0-or-1/4 eGeMAPS test; no new representation/head",
+  "blend_rule": "the same policy selector for each audio core; the same registered conditional eGeMAPS selector after that core",
+  "membership_contrasts": "every candidate versus each available deletion, E0, and the selected parent; full/CLEAN VB and non-retrieval VA; register before estimates",
+  "selection": "retain E0 unless a smaller replacement or addition has robust held-out value; an addition must pass all member ablations; prefer smallest qualified system, then VB score, then immutable ID",
+  "parent": "emotion2vec_base fixed at Stage-6 entry; cannot switch encoders",
+  "J_ENTRY": "policy 5.2 complete available registered parent/head/pooling/system contrasts, offsets of P/E, all six unordered pairs for both screened XLS-R head witnesses in full/CLEAN VB and non-retrieval VA, residual ceilings, supported source-stratum harm/deletion contrasts; unknown layer comparison explicitly fails G2",
+  "PEFT": "UNKNOWN required quantities evaluate false; no GPU preparation unless G0-G5 pass",
+  "Stage8": "same 19-vector shrinkage rule after final membership lock; no joint membership/offset selection",
+  "Stage9": "unchanged VD regimes, Q128/Q960, existing correlated-allocation protocol, certified retrieval and final ablations; diagnostics only; no protected query"
+}
