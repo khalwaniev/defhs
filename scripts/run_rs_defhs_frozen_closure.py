@@ -146,6 +146,15 @@ def stage4(folds,ev,clean,nonret,legacy):
                 b='+'.join(t)
                 for v,mask,label in [('VB',None,'full'),('VB',clean,'clean'),('VA',nonret,'nonretrieval')]:
                     k=f'{v}:{label}:{a} - {b}'; specs.append((k,v,mask,a,b));contrasts[k]=ev.contrast(labels(folds[v].emotion),pred[v][a],pred[v][b],mask)
+    # Also register every prospective multi-member system against every
+    # standalone lane, including a lane outside its membership.
+    for s in subsets:
+        if len(s)<2: continue
+        a='+'.join(s)
+        for b in names:
+            if b in s: continue
+            for v,mask,label in [('VB',None,'full'),('VB',clean,'clean'),('VA',nonret,'nonretrieval')]:
+                k=f'{v}:{label}:{a} - {b}'; specs.append((k,v,mask,a,b));contrasts[k]=ev.contrast(labels(folds[v].emotion),pred[v][a],pred[v][b],mask)
     ints=ev.intervals(contrasts); checks={}
     for k,v,m,a,b in specs:
         checks[k]=robust(labels(folds[v].emotion),pred[v][a],pred[v][b],folds[v].fold.to_numpy(),ints[k]) if m is None else ints[k]
@@ -161,7 +170,7 @@ def stage4(folds,ev,clean,nonret,legacy):
             main=checks[f'VB:full:{a} - {b}']; cl=ints[f'VB:clean:{a} - {b}']; va=ints[f'VA:nonretrieval:{a} - {b}']
             good &= main['pass'] and cl['point']>0 and va['upper']>=0
         if strongest not in s:
-            good=False # no weaker alternate set displaces the clear incumbent without its contrast
+            good &= checks[f'VB:full:{a} - {strongest}']['pass'] and ints[f'VB:clean:{a} - {strongest}']['point']>0 and ints[f'VA:nonretrieval:{a} - {strongest}']['upper']>=0
         if good:eligible.append(s)
     selected=min(eligible,key=lambda s:(len(s),-result['VB']['+'.join(s)]['heldout']['macro_f1'],s)) if eligible else (strongest,)
     core='+'.join(selected)
@@ -196,7 +205,13 @@ def stage4(folds,ev,clean,nonret,legacy):
         ref=labels(legacy[(legacy.model=='FULL_RBF_SVM')&(legacy.validation=='VB')].set_index('Id').loc[folds['VB'].Id].ser_pred)
         r=robust(y,p,ref,folds['VB'].fold.to_numpy(),ji[f'VB:{n}-REFERENCE'])
         credibility=r['pass'] and ji[f'VA:{n}-REFERENCE']['upper']>=0
+        marginal=None
+        if n in selected and len(selected)>1:
+            minus='+'.join(x for x in selected if x!=n)
+            marginal=robust(y,pred['VB'][core],pred['VB'][minus],folds['VB'].fold.to_numpy(),ji[f'VB:E0-minus-{n}'])
+            credibility |= marginal['pass'] and ji[f'VA:E0-minus-{n}']['upper']>=0
         eligibility[n]={'reference_credibility':r,'VA_nonretrieval_reference':ji[f'VA:{n}-REFERENCE'],
+            'system_ablation_credibility':marginal,
             'not_credibly_inferior_to_same_encoder_RBF':ji[f'VB:{n}-RBF']['upper']>=0,'in_E0':n in selected,'credible':bool(credibility)}
     parent='emotion2vec_base_L2_LOGREG' if 'emotion2vec_base_L2_LOGREG' in selected and eligibility['emotion2vec_base_L2_LOGREG']['credible'] else ('xls_r_300m_L2_LOGREG' if 'xls_r_300m_L2_LOGREG' in selected and eligibility['xls_r_300m_L2_LOGREG']['credible'] else None)
     # No identity change may occur after this saved prospective-parent record.
