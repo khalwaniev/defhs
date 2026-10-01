@@ -160,6 +160,46 @@ def extract_all(name,recs,extract):
     npz=OUT/f"{name}_meanstd.npz"; np.savez_compressed(npz,Id=np.asarray(ids),X=np.stack(X))
     return {"frames_h5":h5p.name,"frames_sha256":sha256(h5p),"meanstd_npz":npz.name,"meanstd_sha256":sha256(npz),"shape":list(np.stack(X).shape)}
 
+def gpu_worker(family,device_index,recs,ids):
+    import traceback
+    import numpy as np, torch
+    device=f"cuda:{device_index}"
+    torch.cuda.set_device(device_index)
+    random.seed(SEED); np.random.seed(SEED); torch.manual_seed(SEED); torch.cuda.manual_seed(SEED)
+    result_path=OUT/f"{family}_GPU_RESULT.json"
+    try:
+        print(f"{family}_GPU_WORKER_START device={device} name={torch.cuda.get_device_name(device_index)}",flush=True)
+        if family=="emotion2vec_base":
+            model,root=make_e2v(device)
+            dump(OUT/"E2V_MODELSCOPE_RESOLVED_OBJECT.json",{
+                "model_id":E2V_ID,"revision":E2V_REV,"root":str(root),"files":hash_tree(root)
+            })
+            extract=lambda r:e2v_frames(model,r["path"])
+        elif family=="xls_r_300m":
+            fe,model=make_xlsr(device)
+            extract=lambda r:xlsr_frames(fe,model,read16k(r["path"]),device)
+        else:
+            raise RuntimeError(f"unknown family {family}")
+        par=parity(family,ids,recs,extract)
+        art=extract_all(family,recs,extract)
+        dump(result_path,{
+            "status":"PASS","family":family,"device_index":device_index,
+            "device_name":torch.cuda.get_device_name(device_index),
+            "parity":par,"artifact":art
+        })
+        print(f"{family}_GPU_WORKER=SUCCESS device={device}",flush=True)
+    except Exception as e:
+        dump(result_path,{
+            "status":"ERROR","family":family,"device_index":device_index,
+            "device_name":torch.cuda.get_device_name(device_index),
+            "error_type":type(e).__name__,"error":str(e),
+            "traceback":traceback.format_exc()
+        })
+        traceback.print_exc()
+        raise
+    finally:
+        torch.cuda.empty_cache()
+
 def evaluate(family,npz,folds,view):
     import numpy as np, pandas as pd
     from sklearn.calibration import CalibratedClassifierCV
@@ -200,9 +240,14 @@ def evaluate(family,npz,folds,view):
 
 def main():
     OUT.mkdir(parents=True,exist_ok=True); install(); deterministic()
-    import torch, importlib.metadata as md
+    import torch, importlib.metadata as md, multiprocessing as mp
     if not torch.cuda.is_available(): raise RuntimeError("GPU required")
-    device="cuda:0"
+    gpu_count=torch.cuda.device_count()
+    gpu_names=[torch.cuda.get_device_name(i) for i in range(gpu_count)]
+    print("CUDA_DEVICE_COUNT=",gpu_count,flush=True)
+    print("CUDA_DEVICE_NAMES=",gpu_names,flush=True)
+    if gpu_count<2:
+        raise RuntimeError(f"Dual-GPU execution requires at least 2 CUDA devices; got {gpu_count}: {gpu_names}")
     vbp=embedded("VALIDATION_VB_FOLDS.csv",VB_B64,VB_SHA); vap=embedded("VALIDATION_VA_FOLDS.csv",VA_B64,VA_SHA)
     dmp,dmp_aliases=locate_canonical("DATA_MANIFEST.csv",MANIFEST_SHA)
     vb,va,dm=validate(vbp,vap,dmp); root=audio_root()
@@ -214,22 +259,45 @@ def main():
          "DATA_MANIFEST":sha256(dmp),
          "DATA_MANIFEST_selected_path":str(dmp),
          "DATA_MANIFEST_matching_aliases":[str(p) for p in dmp_aliases],
+         "gpu_count":gpu_count,
+         "gpu_names":gpu_names,
+         "gpu_assignment":{"emotion2vec_base":"cuda:0","xls_r_300m":"cuda:1"},
          "protected_validation_queried":False,
          "kaggle_submission_made":False
     })
     (OUT/"ENVIRONMENT_VERSIONS.txt").write_text("\n".join(f"{p}={md.version(p)}" for p in ["torch","numpy","pandas","scikit-learn","transformers","modelscope","funasr","h5py","librosa","soundfile"])+"\n")
     ids=vb.Id.iloc[:3].astype(int).tolist()
-    e2v,e2root=make_e2v(device)
-    dump(OUT/"E2V_MODELSCOPE_RESOLVED_OBJECT.json",{"model_id":E2V_ID,"revision":E2V_REV,"root":str(e2root),"files":hash_tree(e2root)})
-    e2=lambda r:e2v_frames(e2v,r["path"])
-    ep=parity("emotion2vec_base",ids,recs,e2); ea=extract_all("emotion2vec_base",recs,e2)
-    del e2v; torch.cuda.empty_cache()
-    fe,xm=make_xlsr(device)
-    xx=lambda r:xlsr_frames(fe,xm,read16k(r["path"]),device)
-    xp=parity("xls_r_300m",ids,recs,xx); xa=extract_all("xls_r_300m",recs,xx)
-    del xm; torch.cuda.empty_cache()
-    dump(OUT/"STAGE1_SMOKE_RESULTS.json",{"status":"PASS","parity":{"emotion2vec_base":ep,"xls_r_300m":xp},
-         "artifacts":{"emotion2vec_base":ea,"xls_r_300m":xa},"protected_validation_queried":False,"kaggle_submission_made":False})
+
+    ctx=mp.get_context("spawn")
+    workers=[
+        ctx.Process(target=gpu_worker,args=("emotion2vec_base",0,recs,ids),name="emotion2vec_gpu0"),
+        ctx.Process(target=gpu_worker,args=("xls_r_300m",1,recs,ids),name="xlsr_gpu1"),
+    ]
+    for p in workers: p.start()
+    for p in workers: p.join()
+    bad=[{"name":p.name,"exitcode":p.exitcode} for p in workers if p.exitcode!=0]
+    if bad:
+        details={}
+        for fam in ("emotion2vec_base","xls_r_300m"):
+            rp=OUT/f"{fam}_GPU_RESULT.json"
+            if rp.exists(): details[fam]=json.loads(rp.read_text())
+        raise RuntimeError(f"Dual-GPU worker failure: {bad}; details={details}")
+
+    gres={}
+    for fam in ("emotion2vec_base","xls_r_300m"):
+        rp=OUT/f"{fam}_GPU_RESULT.json"
+        if not rp.exists(): raise RuntimeError(f"Missing GPU worker result {rp.name}")
+        gres[fam]=json.loads(rp.read_text())
+        if gres[fam].get("status")!="PASS": raise RuntimeError(f"{fam} GPU result not PASS: {gres[fam]}")
+    dump(OUT/"STAGE1_SMOKE_RESULTS.json",{
+         "status":"PASS",
+         "dual_gpu":True,
+         "gpu_names":gpu_names,
+         "parity":{fam:gres[fam]["parity"] for fam in gres},
+         "artifacts":{fam:gres[fam]["artifact"] for fam in gres},
+         "protected_validation_queried":False,
+         "kaggle_submission_made":False
+    })
     R={}
     for fam in ("emotion2vec_base","xls_r_300m"):
         npz=OUT/f"{fam}_meanstd.npz"; R[fam]={"VB":evaluate(fam,npz,vb,"VB"),"VA":evaluate(fam,npz,va,"VA")}
@@ -238,6 +306,7 @@ def main():
     dump(OUT/"OUTPUT_INVENTORY.json",{"mission":MISSION,"files":files,"protected_validation_queried":False,"kaggle_submission_made":False})
     print(json.dumps(R,indent=2),flush=True)
     print("RS_DEFHS_FROZEN_SCREEN=SUCCESS",flush=True)
+    print("DUAL_GPU_EXECUTION=TRUE",flush=True)
     print("PROTECTED_VALIDATION_NOT_QUERIED=TRUE",flush=True)
     print("KAGGLE_SUBMISSION_NOT_MADE=TRUE",flush=True)
 

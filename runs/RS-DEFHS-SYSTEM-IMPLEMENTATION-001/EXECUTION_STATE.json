@@ -1,7 +1,7 @@
 {
   "mission_id": "RS-DEFHS-SYSTEM-IMPLEMENTATION-001",
   "layer": "3_OF_3",
-  "status": "STAGE1_KAGGLE_V1_ERROR_PATCHED_READY_V2",
+  "status": "STAGE1_V3_DUAL_GPU_READY_V2_RUNNING_TO_CANCEL",
   "repository": "khalwaniev/defhs",
   "branch": "rs/system-implementation-001",
   "mission_start_head": "388ec75e3531c180d4f9cc936fa6eb9f17773e2f",
@@ -12,7 +12,7 @@
   "kaggle_submission_status": "NOT_MADE",
   "stages": {
     "stage0": "CLEARED_AFTER_SS_CONTINUATION",
-    "stage1": "V1_PRE_EXTRACTION_ERROR_PATCHED_V2_READY",
+    "stage1": "V3_DUAL_GPU_EXECUTION_PACKAGE_READY",
     "stage2": "EMOTION2VEC_NOT_REACHED_V1",
     "stage3": "XLSR_NOT_REACHED_V1",
     "stage4": "NOT_STARTED",
@@ -115,6 +115,20 @@
       "protected_validation_queried": false
     },
     "v2_patch": "accept one or more SHA256-identical canonical manifest aliases; deterministically prefer ds002_closure path and record all aliases",
-    "v2_patch_commit": "9b8fb5e83d70cd1e63a5ea7de27121c07b2c2c1c"
+    "v2_patch_commit": "9b8fb5e83d70cd1e63a5ea7de27121c07b2c2c1c",
+    "kaggle_version_2_status": "RUNNING_USER_REPORTED",
+    "kaggle_version_2_execution_design": "single-device cuda:0 sequential emotion2vec then XLS-R",
+    "v3_dual_gpu_design": {
+      "requested_accelerator": "NvidiaTeslaT4",
+      "required_cuda_device_count": 2,
+      "assignments": {
+        "emotion2vec_base": "cuda:0",
+        "xls_r_300m": "cuda:1"
+      },
+      "execution": "concurrent_spawn_processes",
+      "fail_fast_if_fewer_than_2_gpus": true,
+      "protected_validation_queried": false,
+      "kaggle_submission_made": false
+    }
   }
 }

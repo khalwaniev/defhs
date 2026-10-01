@@ -73,3 +73,12 @@
 - Patch: accept one-or-more matching canonical aliases, deterministically prefer the `ds002_closure` copy when present, and record every matching alias in `STAGE1_INPUT_AUTHORITY.json`.
 - No model result exists from v1. emotion2vec and XLS-R were not reached.
 - Protected validation was not queried. Kaggle competition submission was not made.
+
+## Dual-GPU execution correction
+
+- Kaggle v2 was launched successfully and reported RUNNING.
+- Code inspection confirmed v2 uses only `cuda:0` and executes emotion2vec then XLS-R sequentially.
+- Current official Kaggle CLI documentation defines `NvidiaTeslaT4` as the GPU T4 ×2 accelerator and supports requesting it with `--accelerator NvidiaTeslaT4`.
+- Because the two frozen representation families are independent until downstream CPU evaluation, the bounded execution package was refactored to run them concurrently: emotion2vec on `cuda:0`, XLS-R-300m on `cuda:1`.
+- The runner now logs CUDA device count/names and fails before model execution if fewer than two CUDA devices are visible.
+- No scientific design, validation fold, model identity, pooling rule, downstream head, PEFT gate, protected validation, or competition submission policy was changed.
