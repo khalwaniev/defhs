@@ -1,0 +1,2 @@
+artifact_id,stage,artifact_type,location,storage_authority,sha256_or_revision,status,description
+DRIVE_ROOT,0,folder,/DEFHS/rs_system_implementation_001/,Google Drive,1yJIK5_EE_57wO-GmlzIqfs21Sc5JtRDB,VERIFIED_CREATED,Heavy-artifact root for this mission
