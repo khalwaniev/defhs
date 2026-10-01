@@ -1,7 +1,7 @@
 {
   "mission_id": "RS-DEFHS-SYSTEM-IMPLEMENTATION-001",
   "layer": "3_OF_3",
-  "status": "ACTIVE_STAGE1_PREPARATION",
+  "status": "STAGE1_SCAFFOLD_IMPLEMENTED_AWAITING_GPU_EXECUTION",
   "repository": "khalwaniev/defhs",
   "branch": "rs/system-implementation-001",
   "mission_start_head": "388ec75e3531c180d4f9cc936fa6eb9f17773e2f",
@@ -12,9 +12,9 @@
   "kaggle_submission_status": "NOT_MADE",
   "stages": {
     "stage0": "CLEARED_AFTER_SS_CONTINUATION",
-    "stage1": "AUTHORIZED_NOT_STARTED",
-    "stage2": "NOT_STARTED",
-    "stage3": "NOT_STARTED",
+    "stage1": "SCAFFOLD_IMPLEMENTED_STATIC_SMOKE_PASS_GPU_PENDING",
+    "stage2": "EMOTION2VEC_EXECUTION_PACKAGE_READY_NOT_RUN",
+    "stage3": "XLSR_EXECUTION_PACKAGE_READY_NOT_RUN",
     "stage4": "NOT_STARTED",
     "stage5": "NOT_STARTED",
     "stage6": "NOT_STARTED",
@@ -88,5 +88,13 @@
     "gpu_accelerator_hours": 0,
     "model_execution": false
   },
-  "next_decision_required_from_ss": null
+  "next_decision_required_from_ss": null,
+  "stage1_package": {
+    "path": "kaggle/rs_system_implementation_001_frozen_screen/",
+    "kernel_id": "khalwaniev/defhs-rs-system-implementation-001-frozen-screen",
+    "competition_source": "dataverse-detecting-emotions-from-hindi-speech",
+    "kernel_source": "khalwaniev/defhs-ds002-closure",
+    "actual_gpu_execution": "NOT_RUN_CURRENT_RUNTIME_HAS_NO_CUDA_OR_AUTHENTICATED_KAGGLE_EXECUTION_SURFACE",
+    "synthetic_static_smoke": "PASS_NONSCIENTIFIC"
+  }
 }

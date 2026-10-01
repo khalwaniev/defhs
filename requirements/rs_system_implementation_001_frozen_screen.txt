@@ -1,0 +1,7 @@
+modelscope==1.40.1
+transformers==4.57.1
+scikit-learn==1.7.2
+h5py==3.14.0
+librosa==0.11.0
+soundfile==0.13.1
+git+https://github.com/modelscope/FunASR.git@4a84879ae8ca4d2430953b11c49d609217d93988

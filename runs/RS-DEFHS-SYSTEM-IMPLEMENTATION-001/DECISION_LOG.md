@@ -36,3 +36,18 @@
 - Frozen V-B/V-A authorities were read back from Drive and their recorded SHA256 values matched the canonical artifact inventory. Protected validation was not opened.
 - Protected validation not queried.
 - Kaggle submission not made.
+
+## Stage 1 scaffold implementation
+
+- Implemented the common frozen representation scaffold without changing the frozen scientific design.
+- The package embeds exact V-B/V-A fold bytes and verifies their canonical SHA256 values before evaluation.
+- Protected-fold content is neither embedded nor searched by the runner.
+- emotion2vec execution is ModelScope-only at `iic/emotion2vec_base@v2.0.4`; no Hugging Face fallback exists.
+- The resolved ModelScope cache tree is hash-inventoried before competition feature extraction.
+- XLS-R uses only the already-cleared immutable revision `1a640f32ac3e39899438a2931f9924c02f080a54`.
+- Both neural lanes share frame caching, mean+std pooling, fixed V-B/V-A folds, L2 logistic and calibrated RBF heads.
+- V-B RBF probability calibration uses group-safe inner folds.
+- Common pooling/OOF code passed a synthetic CPU smoke test; this is engineering evidence only and no synthetic score is scientific evidence.
+- Actual pretrained GPU extraction was not executed by this chat runtime because it has no CUDA accelerator or authenticated Kaggle execution surface. No score was fabricated.
+- Protected validation not queried.
+- Kaggle submission not made.
