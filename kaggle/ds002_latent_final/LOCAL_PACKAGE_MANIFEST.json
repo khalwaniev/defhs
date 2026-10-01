@@ -1,0 +1,15 @@
+{
+  "mission": "DS-DEFHS-VALIDATION-HARDENING-002",
+  "git_commit": "6292e2c4714b44f56b1c51acd4d3100e996c5e1b",
+  "latent_script_sha256": "8543960502ba3a71a8e4fa311032de5115a12f0152dd857a939209d579783b0e",
+  "source_kernel": "khalwaniev/defhs-ds002-closure",
+  "source_kernel_expected_version": 2,
+  "expected_input_sha256": {
+    "DATA_MANIFEST.csv": "1e5552d42aec94efae197e7dac95de41cfc96e40336f3e513b9a87e3ccc72469",
+    "SPEAKER_CLUSTER_ASSIGNMENTS.csv": "a55d713d89017883f45c4d8d7f859fc4a6274445675fd5f0b962996c2af451d0",
+    "PROMPT_CLUSTER_ASSIGNMENTS.csv": "458712cfee51e0cf65ef57d1a0deb8f81dcb70e4ecfe6ebfc73220f3aefac005",
+    "EGEMAPS_FEATURES.csv": "45476151fa3eaf6fd747495a3827e769bac189cbc347459559734ceb1828a0be"
+  },
+  "protected_gate_packaged": false,
+  "competition_data_attached": false
+}
