@@ -1,0 +1,3124 @@
+{
+  "policy_version": "ADAPTATION_POLICY pre-OOF v1",
+  "policy_sha256": "9f487746b34cd776d633b78dfae8fb2a7f97f4acd12e7da0f6c024f57babf43d",
+  "selected_P": "emotion2vec_base_L2_LOGREG",
+  "selected_E": "emotion2vec_base_L2_LOGREG",
+  "gate": {
+    "G0": {
+      "status": "PASS",
+      "reason": "Existing Stage0 authority; verified exact input hashes; serialized matching logistic recipe"
+    },
+    "G1": {
+      "status": "PASS",
+      "reference": {
+        "pass": true,
+        "fold_differences": [
+          0.060152989388057465,
+          0.08835214351590204,
+          0.1401857349043033,
+          0.07026935827864078,
+          0.17946289085611566
+        ],
+        "delete_fold_differences": [
+          0.11896526536455954,
+          0.11225204555827561,
+          0.09885847461300845,
+          0.11696506339122215,
+          0.08978625684752195
+        ],
+        "interval": {
+          "point": 0.10734762166389966,
+          "sd": 0.023206753641609512,
+          "lower": 0.015312776442045456,
+          "upper": 0.19938246688575387,
+          "q": 3.9658647065928476
+        }
+      }
+    },
+    "G2": {
+      "status": "UNKNOWN",
+      "reason": "Logistic/RBF and one pooling comparison completed; no scalar-mixture OOF or scaffold-time architectural/API unavailability record. No encoder re-extraction permitted."
+    },
+    "G3": {
+      "status": "FAIL",
+      "maximum_downstream_upper_bound": 0.030804844774430254,
+      "sigma_E": 0.017422136038214735,
+      "offset_checks": {
+        "P": {
+          "pass": false,
+          "fold_differences": [
+            0.0,
+            0.0,
+            -0.02376180770900238,
+            0.0,
+            -0.009221414320834787
+          ],
+          "delete_fold_differences": [
+            -0.007926347201523076,
+            -0.00809925112890808,
+            -0.002045013433452314,
+            -0.008305562857840565,
+            -0.005722868875884246
+          ],
+          "interval": {
+            "point": -0.006408611726761326,
+            "sd": 0.005069511943664142,
+            "lower": -0.026513610223789855,
+            "upper": 0.013696386770267202,
+            "q": 3.9658647065928476
+          }
+        },
+        "E": {
+          "pass": false,
+          "fold_differences": [
+            0.0,
+            0.0,
+            -0.02376180770900238,
+            0.0,
+            -0.009221414320834787
+          ],
+          "delete_fold_differences": [
+            -0.007926347201523076,
+            -0.00809925112890808,
+            -0.002045013433452314,
+            -0.008305562857840565,
+            -0.005722868875884246
+          ],
+          "interval": {
+            "point": -0.006408611726761326,
+            "sd": 0.005069511943664142,
+            "lower": -0.026513610223789855,
+            "upper": 0.013696386770267202,
+            "q": 3.9658647065928476
+          }
+        }
+      }
+    },
+    "G4": {
+      "status": "FAIL",
+      "reason": "No fully qualifying pair/witness; partial tests and oracle ceilings cannot authorize PEFT"
+    },
+    "G5": {
+      "status": "PASS",
+      "reason": "All fixed frozen membership candidates, conditional eGeMAPS, text and pooling decisions closed"
+    },
+    "G6": {
+      "status": "NOT_ENTERED",
+      "reason": "G0-G5 conjunction does not pass; no GPU engineering or adaptation training"
+    }
+  },
+  "result": "NO_PEFT:DOWNSTREAM_NOT_CLOSED",
+  "adaptation_closed": true,
+  "experiment_run": false,
+  "recipe_if_triggered": "DEFHS_UPPER_QUARTER_QV_LORA_FIXED_DOWNSTREAM_V1",
+  "contrast_registry": [
+    "VA:offset_P-P",
+    "VA:offset_E-E",
+    "VA:P-REFERENCE",
+    "VA:L2_LOGREG-P",
+    "VA:E_L2_LOGREG-E",
+    "VA:RBF_SVM_CAL-P",
+    "VA:E_RBF_SVM_CAL-E",
+    "VA:ATTENTION_STATS-P",
+    "VA:E_ATTENTION_STATS-E",
+    "VB:offset_P-P",
+    "VB:offset_E-E",
+    "VB:P-REFERENCE",
+    "VB:L2_LOGREG-P",
+    "VB:E_L2_LOGREG-E",
+    "VB:RBF_SVM_CAL-P",
+    "VB:E_RBF_SVM_CAL-E",
+    "VB:ATTENTION_STATS-P",
+    "VB:E_ATTENTION_STATS-E",
+    "VA:nonretrieval:AUC:angry|happy|xls_r_300m|L2_LOGREG",
+    "VA:ORACLE:angry|happy|xls_r_300m|L2_LOGREG",
+    "VB:full:AUC:angry|happy|xls_r_300m|L2_LOGREG",
+    "VB:clean:AUC:angry|happy|xls_r_300m|L2_LOGREG",
+    "VB:ORACLE:angry|happy|xls_r_300m|L2_LOGREG",
+    "VA:nonretrieval:AUC:angry|neutral|xls_r_300m|L2_LOGREG",
+    "VA:ORACLE:angry|neutral|xls_r_300m|L2_LOGREG",
+    "VB:full:AUC:angry|neutral|xls_r_300m|L2_LOGREG",
+    "VB:clean:AUC:angry|neutral|xls_r_300m|L2_LOGREG",
+    "VB:ORACLE:angry|neutral|xls_r_300m|L2_LOGREG",
+    "VA:nonretrieval:AUC:angry|sad|xls_r_300m|L2_LOGREG",
+    "VA:ORACLE:angry|sad|xls_r_300m|L2_LOGREG",
+    "VB:full:AUC:angry|sad|xls_r_300m|L2_LOGREG",
+    "VB:clean:AUC:angry|sad|xls_r_300m|L2_LOGREG",
+    "VB:ORACLE:angry|sad|xls_r_300m|L2_LOGREG",
+    "VA:nonretrieval:AUC:happy|neutral|xls_r_300m|L2_LOGREG",
+    "VA:ORACLE:happy|neutral|xls_r_300m|L2_LOGREG",
+    "VB:full:AUC:happy|neutral|xls_r_300m|L2_LOGREG",
+    "VB:clean:AUC:happy|neutral|xls_r_300m|L2_LOGREG",
+    "VB:ORACLE:happy|neutral|xls_r_300m|L2_LOGREG",
+    "VA:nonretrieval:AUC:happy|sad|xls_r_300m|L2_LOGREG",
+    "VA:ORACLE:happy|sad|xls_r_300m|L2_LOGREG",
+    "VB:full:AUC:happy|sad|xls_r_300m|L2_LOGREG",
+    "VB:clean:AUC:happy|sad|xls_r_300m|L2_LOGREG",
+    "VB:ORACLE:happy|sad|xls_r_300m|L2_LOGREG",
+    "VA:nonretrieval:AUC:neutral|sad|xls_r_300m|L2_LOGREG",
+    "VA:ORACLE:neutral|sad|xls_r_300m|L2_LOGREG",
+    "VB:full:AUC:neutral|sad|xls_r_300m|L2_LOGREG",
+    "VB:clean:AUC:neutral|sad|xls_r_300m|L2_LOGREG",
+    "VB:ORACLE:neutral|sad|xls_r_300m|L2_LOGREG",
+    "VA:nonretrieval:AUC:angry|happy|xls_r_300m|RBF_SVM_CAL",
+    "VA:ORACLE:angry|happy|xls_r_300m|RBF_SVM_CAL",
+    "VB:full:AUC:angry|happy|xls_r_300m|RBF_SVM_CAL",
+    "VB:clean:AUC:angry|happy|xls_r_300m|RBF_SVM_CAL",
+    "VB:ORACLE:angry|happy|xls_r_300m|RBF_SVM_CAL",
+    "VA:nonretrieval:AUC:angry|neutral|xls_r_300m|RBF_SVM_CAL",
+    "VA:ORACLE:angry|neutral|xls_r_300m|RBF_SVM_CAL",
+    "VB:full:AUC:angry|neutral|xls_r_300m|RBF_SVM_CAL",
+    "VB:clean:AUC:angry|neutral|xls_r_300m|RBF_SVM_CAL",
+    "VB:ORACLE:angry|neutral|xls_r_300m|RBF_SVM_CAL",
+    "VA:nonretrieval:AUC:angry|sad|xls_r_300m|RBF_SVM_CAL",
+    "VA:ORACLE:angry|sad|xls_r_300m|RBF_SVM_CAL",
+    "VB:full:AUC:angry|sad|xls_r_300m|RBF_SVM_CAL",
+    "VB:clean:AUC:angry|sad|xls_r_300m|RBF_SVM_CAL",
+    "VB:ORACLE:angry|sad|xls_r_300m|RBF_SVM_CAL",
+    "VA:nonretrieval:AUC:happy|neutral|xls_r_300m|RBF_SVM_CAL",
+    "VA:ORACLE:happy|neutral|xls_r_300m|RBF_SVM_CAL",
+    "VB:full:AUC:happy|neutral|xls_r_300m|RBF_SVM_CAL",
+    "VB:clean:AUC:happy|neutral|xls_r_300m|RBF_SVM_CAL",
+    "VB:ORACLE:happy|neutral|xls_r_300m|RBF_SVM_CAL",
+    "VA:nonretrieval:AUC:happy|sad|xls_r_300m|RBF_SVM_CAL",
+    "VA:ORACLE:happy|sad|xls_r_300m|RBF_SVM_CAL",
+    "VB:full:AUC:happy|sad|xls_r_300m|RBF_SVM_CAL",
+    "VB:clean:AUC:happy|sad|xls_r_300m|RBF_SVM_CAL",
+    "VB:ORACLE:happy|sad|xls_r_300m|RBF_SVM_CAL",
+    "VA:nonretrieval:AUC:neutral|sad|xls_r_300m|RBF_SVM_CAL",
+    "VA:ORACLE:neutral|sad|xls_r_300m|RBF_SVM_CAL",
+    "VB:full:AUC:neutral|sad|xls_r_300m|RBF_SVM_CAL",
+    "VB:clean:AUC:neutral|sad|xls_r_300m|RBF_SVM_CAL",
+    "VB:ORACLE:neutral|sad|xls_r_300m|RBF_SVM_CAL"
+  ],
+  "J_ENTRY_intervals": {
+    "VA:offset_P-P": {
+      "point": 0.0,
+      "sd": 0.0,
+      "lower": 0.0,
+      "upper": 0.0,
+      "q": 3.9658647065928476
+    },
+    "VA:offset_E-E": {
+      "point": 0.0,
+      "sd": 0.0,
+      "lower": 0.0,
+      "upper": 0.0,
+      "q": 3.9658647065928476
+    },
+    "VA:P-REFERENCE": {
+      "point": 0.13061325520660405,
+      "sd": 0.026304369021823086,
+      "lower": 0.02629368647376165,
+      "upper": 0.23493282393944645,
+      "q": 3.9658647065928476
+    },
+    "VA:L2_LOGREG-P": {
+      "point": 0.0,
+      "sd": 0.0,
+      "lower": 0.0,
+      "upper": 0.0,
+      "q": 3.9658647065928476
+    },
+    "VA:E_L2_LOGREG-E": {
+      "point": 0.0,
+      "sd": 0.0,
+      "lower": 0.0,
+      "upper": 0.0,
+      "q": 3.9658647065928476
+    },
+    "VA:RBF_SVM_CAL-P": {
+      "point": -0.05208546508654288,
+      "sd": 0.017833817811095276,
+      "lower": -0.12281197372737254,
+      "upper": 0.01864104355428678,
+      "q": 3.9658647065928476
+    },
+    "VA:E_RBF_SVM_CAL-E": {
+      "point": -0.05208546508654288,
+      "sd": 0.017833817811095276,
+      "lower": -0.12281197372737254,
+      "upper": 0.01864104355428678,
+      "q": 3.9658647065928476
+    },
+    "VA:ATTENTION_STATS-P": {
+      "point": 0.0,
+      "sd": 0.0,
+      "lower": 0.0,
+      "upper": 0.0,
+      "q": 3.9658647065928476
+    },
+    "VA:E_ATTENTION_STATS-E": {
+      "point": 0.0,
+      "sd": 0.0,
+      "lower": 0.0,
+      "upper": 0.0,
+      "q": 3.9658647065928476
+    },
+    "VB:offset_P-P": {
+      "point": -0.006408611726761326,
+      "sd": 0.005069511943664142,
+      "lower": -0.026513610223789855,
+      "upper": 0.013696386770267202,
+      "q": 3.9658647065928476
+    },
+    "VB:offset_E-E": {
+      "point": -0.006408611726761326,
+      "sd": 0.005069511943664142,
+      "lower": -0.026513610223789855,
+      "upper": 0.013696386770267202,
+      "q": 3.9658647065928476
+    },
+    "VB:P-REFERENCE": {
+      "point": 0.10734762166389966,
+      "sd": 0.023206753641609512,
+      "lower": 0.015312776442045456,
+      "upper": 0.19938246688575387,
+      "q": 3.9658647065928476
+    },
+    "VB:L2_LOGREG-P": {
+      "point": 0.0,
+      "sd": 0.0,
+      "lower": 0.0,
+      "upper": 0.0,
+      "q": 3.9658647065928476
+    },
+    "VB:E_L2_LOGREG-E": {
+      "point": 0.0,
+      "sd": 0.0,
+      "lower": 0.0,
+      "upper": 0.0,
+      "q": 3.9658647065928476
+    },
+    "VB:RBF_SVM_CAL-P": {
+      "point": -0.03571579247255097,
+      "sd": 0.01677329968831196,
+      "lower": -0.10223642971953219,
+      "upper": 0.030804844774430254,
+      "q": 3.9658647065928476
+    },
+    "VB:E_RBF_SVM_CAL-E": {
+      "point": -0.03571579247255097,
+      "sd": 0.01677329968831196,
+      "lower": -0.10223642971953219,
+      "upper": 0.030804844774430254,
+      "q": 3.9658647065928476
+    },
+    "VB:ATTENTION_STATS-P": {
+      "point": 0.0010479908752105693,
+      "sd": 0.0036221973215640304,
+      "lower": -0.013317153642695362,
+      "upper": 0.0154131353931165,
+      "q": 3.9658647065928476
+    },
+    "VB:E_ATTENTION_STATS-E": {
+      "point": 0.0010479908752105693,
+      "sd": 0.0036221973215640304,
+      "lower": -0.013317153642695362,
+      "upper": 0.0154131353931165,
+      "q": 3.9658647065928476
+    },
+    "VA:nonretrieval:AUC:angry|happy|xls_r_300m|L2_LOGREG": {
+      "point": -0.005294562568282979,
+      "sd": 0.013933795004422787,
+      "lower": -0.060554108405223045,
+      "upper": 0.04996498326865709,
+      "q": 3.9658647065928476
+    },
+    "VA:ORACLE:angry|happy|xls_r_300m|L2_LOGREG": {
+      "point": 0.004784688422145966,
+      "sd": 0.0027084550517350336,
+      "lower": -0.005956677876923109,
+      "upper": 0.015526054721215042,
+      "q": 3.9658647065928476
+    },
+    "VB:full:AUC:angry|happy|xls_r_300m|L2_LOGREG": {
+      "point": -0.00055894308943083,
+      "sd": 0.013019927951404083,
+      "lower": -0.052194215834286,
+      "upper": 0.051076329655424337,
+      "q": 3.9658647065928476
+    },
+    "VB:clean:AUC:angry|happy|xls_r_300m|L2_LOGREG": {
+      "point": -0.013246425567703946,
+      "sd": 0.01294847763516549,
+      "lower": -0.06459833602511358,
+      "upper": 0.038105484889705686,
+      "q": 3.9658647065928476
+    },
+    "VB:ORACLE:angry|happy|xls_r_300m|L2_LOGREG": {
+      "point": 0.003707920274798604,
+      "sd": 0.002113361282720609,
+      "lower": -0.004673384648622847,
+      "upper": 0.012089225198220055,
+      "q": 3.9658647065928476
+    },
+    "VA:nonretrieval:AUC:angry|neutral|xls_r_300m|L2_LOGREG": {
+      "point": 0.01959896240787251,
+      "sd": 0.014164211444348245,
+      "lower": -0.03657438385598669,
+      "upper": 0.07577230867173171,
+      "q": 3.9658647065928476
+    },
+    "VA:ORACLE:angry|neutral|xls_r_300m|L2_LOGREG": {
+      "point": 0.012376817345739699,
+      "sd": 0.004284705071853525,
+      "lower": -0.004615743276883567,
+      "upper": 0.029369377968362965,
+      "q": 3.9658647065928476
+    },
+    "VB:full:AUC:angry|neutral|xls_r_300m|L2_LOGREG": {
+      "point": 0.009868494998313992,
+      "sd": 0.01213176721029417,
+      "lower": -0.03824445240959203,
+      "upper": 0.05798144240622002,
+      "q": 3.9658647065928476
+    },
+    "VB:clean:AUC:angry|neutral|xls_r_300m|L2_LOGREG": {
+      "point": 0.012947907256850355,
+      "sd": 0.014420442744801518,
+      "lower": -0.044241617678200874,
+      "upper": 0.07013743219190158,
+      "q": 3.9658647065928476
+    },
+    "VB:ORACLE:angry|neutral|xls_r_300m|L2_LOGREG": {
+      "point": 0.00714301911607973,
+      "sd": 0.002930902814705416,
+      "lower": -0.004480544915214116,
+      "upper": 0.018766583147373575,
+      "q": 3.9658647065928476
+    },
+    "VA:nonretrieval:AUC:angry|sad|xls_r_300m|L2_LOGREG": {
+      "point": 0.00965355467340312,
+      "sd": 0.01070155746797182,
+      "lower": -0.032787374394401436,
+      "upper": 0.052094483741207676,
+      "q": 3.9658647065928476
+    },
+    "VA:ORACLE:angry|sad|xls_r_300m|L2_LOGREG": {
+      "point": 0.0,
+      "sd": 0.0,
+      "lower": 0.0,
+      "upper": 0.0,
+      "q": 3.9658647065928476
+    },
+    "VB:full:AUC:angry|sad|xls_r_300m|L2_LOGREG": {
+      "point": 0.0023469857340082667,
+      "sd": 0.01376354099996115,
+      "lower": -0.05223735575548129,
+      "upper": 0.05693132722349782,
+      "q": 3.9658647065928476
+    },
+    "VB:clean:AUC:angry|sad|xls_r_300m|L2_LOGREG": {
+      "point": -0.006189948263118916,
+      "sd": 0.008956873471763327,
+      "lower": -0.04171169664620284,
+      "upper": 0.02933180011996501,
+      "q": 3.9658647065928476
+    },
+    "VB:ORACLE:angry|sad|xls_r_300m|L2_LOGREG": {
+      "point": 0.005921148029566337,
+      "sd": 0.0026154878653576537,
+      "lower": -0.004451522986177448,
+      "upper": 0.01629381904531012,
+      "q": 3.9658647065928476
+    },
+    "VA:nonretrieval:AUC:happy|neutral|xls_r_300m|L2_LOGREG": {
+      "point": -0.022892341638319436,
+      "sd": 0.020279773884710278,
+      "lower": -0.10331918114537526,
+      "upper": 0.05753449786873639,
+      "q": 3.9658647065928476
+    },
+    "VA:ORACLE:happy|neutral|xls_r_300m|L2_LOGREG": {
+      "point": 0.008488618591156571,
+      "sd": 0.003796621996342638,
+      "lower": -0.006568270588412776,
+      "upper": 0.02354550777072592,
+      "q": 3.9658647065928476
+    },
+    "VB:full:AUC:happy|neutral|xls_r_300m|L2_LOGREG": {
+      "point": 0.005256336405530027,
+      "sd": 0.01648565951162144,
+      "lower": -0.060123558816516126,
+      "upper": 0.07063623162757618,
+      "q": 3.9658647065928476
+    },
+    "VB:clean:AUC:happy|neutral|xls_r_300m|L2_LOGREG": {
+      "point": -0.010456577266922062,
+      "sd": 0.019865584732014118,
+      "lower": -0.08924079863144659,
+      "upper": 0.06832764409760246,
+      "q": 3.9658647065928476
+    },
+    "VB:ORACLE:happy|neutral|xls_r_300m|L2_LOGREG": {
+      "point": 0.0075122860108292056,
+      "sd": 0.0030207627589503828,
+      "lower": -0.004467650401882154,
+      "upper": 0.019492222423540567,
+      "q": 3.9658647065928476
+    },
+    "VA:nonretrieval:AUC:happy|sad|xls_r_300m|L2_LOGREG": {
+      "point": -0.021706285253827562,
+      "sd": 0.018339323981118864,
+      "lower": -0.0944375629733187,
+      "upper": 0.05102499246566358,
+      "q": 3.9658647065928476
+    },
+    "VA:ORACLE:happy|sad|xls_r_300m|L2_LOGREG": {
+      "point": 0.012688743370914302,
+      "sd": 0.004632726974555322,
+      "lower": -0.005684025032755311,
+      "upper": 0.031061511774583914,
+      "q": 3.9658647065928476
+    },
+    "VB:full:AUC:happy|sad|xls_r_300m|L2_LOGREG": {
+      "point": -0.019752358490566002,
+      "sd": 0.013953158656387457,
+      "lower": -0.0750886979514235,
+      "upper": 0.035583980970291494,
+      "q": 3.9658647065928476
+    },
+    "VB:clean:AUC:happy|sad|xls_r_300m|L2_LOGREG": {
+      "point": -0.021747648902821326,
+      "sd": 0.01807448344944543,
+      "lower": -0.09342860490487351,
+      "upper": 0.049933307099230856,
+      "q": 3.9658647065928476
+    },
+    "VB:ORACLE:happy|sad|xls_r_300m|L2_LOGREG": {
+      "point": 0.007421986874417308,
+      "sd": 0.0030124860849016634,
+      "lower": -0.004525125368796264,
+      "upper": 0.019369099117630878,
+      "q": 3.9658647065928476
+    },
+    "VA:nonretrieval:AUC:neutral|sad|xls_r_300m|L2_LOGREG": {
+      "point": -0.05882352941176472,
+      "sd": 0.02118476033016581,
+      "lower": -0.14283942272279754,
+      "upper": 0.0251923638992681,
+      "q": 3.9658647065928476
+    },
+    "VA:ORACLE:neutral|sad|xls_r_300m|L2_LOGREG": {
+      "point": 0.007091755053031945,
+      "sd": 0.003528953673834158,
+      "lower": -0.006903597773228111,
+      "upper": 0.021087107879292,
+      "q": 3.9658647065928476
+    },
+    "VB:full:AUC:neutral|sad|xls_r_300m|L2_LOGREG": {
+      "point": -0.024280497348056707,
+      "sd": 0.02129161751322173,
+      "lower": -0.10872017179001695,
+      "upper": 0.06015917709390353,
+      "q": 3.9658647065928476
+    },
+    "VB:clean:AUC:neutral|sad|xls_r_300m|L2_LOGREG": {
+      "point": -0.03282828282828287,
+      "sd": 0.026856540748783166,
+      "lower": -0.1393376899250547,
+      "upper": 0.07368112426848893,
+      "q": 3.9658647065928476
+    },
+    "VB:ORACLE:neutral|sad|xls_r_300m|L2_LOGREG": {
+      "point": 0.0046511967715640035,
+      "sd": 0.002367182373348683,
+      "lower": -0.004736728256968232,
+      "upper": 0.01403912180009624,
+      "q": 3.9658647065928476
+    },
+    "VA:nonretrieval:AUC:angry|happy|xls_r_300m|RBF_SVM_CAL": {
+      "point": -0.10555508866291285,
+      "sd": 0.023438379308216347,
+      "lower": -0.19850852994110413,
+      "upper": -0.012601647384721568,
+      "q": 3.9658647065928476
+    },
+    "VA:ORACLE:angry|happy|xls_r_300m|RBF_SVM_CAL": {
+      "point": 0.003086983469334892,
+      "sd": 0.002174078599163149,
+      "lower": -0.005535118116445059,
+      "upper": 0.011709085055114843,
+      "q": 3.9658647065928476
+    },
+    "VB:full:AUC:angry|happy|xls_r_300m|RBF_SVM_CAL": {
+      "point": -0.09463922764227639,
+      "sd": 0.02226280732908912,
+      "lower": -0.18293050949838752,
+      "upper": -0.0063479457861652655,
+      "q": 3.9658647065928476
+    },
+    "VB:clean:AUC:angry|happy|xls_r_300m|RBF_SVM_CAL": {
+      "point": -0.11711522287636678,
+      "sd": 0.025608856840329906,
+      "lower": -0.21867648439561999,
+      "upper": -0.01555396135711358,
+      "q": 3.9658647065928476
+    },
+    "VB:ORACLE:angry|happy|xls_r_300m|RBF_SVM_CAL": {
+      "point": 0.003707920274798604,
+      "sd": 0.0021157520900703373,
+      "lower": -0.004682866267111398,
+      "upper": 0.012098706816708606,
+      "q": 3.9658647065928476
+    },
+    "VA:nonretrieval:AUC:angry|neutral|xls_r_300m|RBF_SVM_CAL": {
+      "point": -0.03512167002923372,
+      "sd": 0.01886176033564474,
+      "lower": -0.10992485964858005,
+      "upper": 0.03968151959011261,
+      "q": 3.9658647065928476
+    },
+    "VA:ORACLE:angry|neutral|xls_r_300m|RBF_SVM_CAL": {
+      "point": 0.010705866165850342,
+      "sd": 0.003977618583234155,
+      "lower": -0.00506883098968584,
+      "upper": 0.026480563321386524,
+      "q": 3.9658647065928476
+    },
+    "VB:full:AUC:angry|neutral|xls_r_300m|RBF_SVM_CAL": {
+      "point": -0.04567831853433746,
+      "sd": 0.01709169440629461,
+      "lower": -0.11346166615613165,
+      "upper": 0.022105029087456735,
+      "q": 3.9658647065928476
+    },
+    "VB:clean:AUC:angry|neutral|xls_r_300m|RBF_SVM_CAL": {
+      "point": -0.03989762119843421,
+      "sd": 0.020999721578712615,
+      "lower": -0.1231796758557268,
+      "upper": 0.04338443345885838,
+      "q": 3.9658647065928476
+    },
+    "VB:ORACLE:angry|neutral|xls_r_300m|RBF_SVM_CAL": {
+      "point": 0.00476201274405319,
+      "sd": 0.0022983795011196967,
+      "lower": -0.004353049401793891,
+      "upper": 0.013877074889900271,
+      "q": 3.9658647065928476
+    },
+    "VA:nonretrieval:AUC:angry|sad|xls_r_300m|RBF_SVM_CAL": {
+      "point": -0.024043666546373132,
+      "sd": 0.016796756852366215,
+      "lower": -0.09065733173239388,
+      "upper": 0.04256999863964761,
+      "q": 3.9658647065928476
+    },
+    "VA:ORACLE:angry|sad|xls_r_300m|RBF_SVM_CAL": {
+      "point": 0.0018365252535695875,
+      "sd": 0.0018196431859622995,
+      "lower": -0.005379933436230462,
+      "upper": 0.009052983943369636,
+      "q": 3.9658647065928476
+    },
+    "VB:full:AUC:angry|sad|xls_r_300m|RBF_SVM_CAL": {
+      "point": -0.020432581684307394,
+      "sd": 0.014614136058176411,
+      "lower": -0.07839026809477515,
+      "upper": 0.03752510472616036,
+      "q": 3.9658647065928476
+    },
+    "VB:clean:AUC:angry|sad|xls_r_300m|RBF_SVM_CAL": {
+      "point": -0.032335550628233456,
+      "sd": 0.013669365204034332,
+      "lower": -0.08654640365244155,
+      "upper": 0.02187530239597464,
+      "q": 3.9658647065928476
+    },
+    "VB:ORACLE:angry|sad|xls_r_300m|RBF_SVM_CAL": {
+      "point": 0.0023509066598893513,
+      "sd": 0.0016045926760365915,
+      "lower": -0.0040126908024615375,
+      "upper": 0.00871450412224024,
+      "q": 3.9658647065928476
+    },
+    "VA:nonretrieval:AUC:happy|neutral|xls_r_300m|RBF_SVM_CAL": {
+      "point": -0.088213661855291,
+      "sd": 0.02407668136147334,
+      "lower": -0.18369852271863996,
+      "upper": 0.007271199008057949,
+      "q": 3.9658647065928476
+    },
+    "VA:ORACLE:happy|neutral|xls_r_300m|RBF_SVM_CAL": {
+      "point": 0.010201151491833427,
+      "sd": 0.004011746487293895,
+      "lower": -0.005708892313923266,
+      "upper": 0.02611119529759012,
+      "q": 3.9658647065928476
+    },
+    "VB:full:AUC:happy|neutral|xls_r_300m|RBF_SVM_CAL": {
+      "point": -0.06936443932411673,
+      "sd": 0.02159849359672209,
+      "lower": -0.15502114279492846,
+      "upper": 0.016292264146695004,
+      "q": 3.9658647065928476
+    },
+    "VB:clean:AUC:happy|neutral|xls_r_300m|RBF_SVM_CAL": {
+      "point": -0.07958173690932313,
+      "sd": 0.027398738236935498,
+      "lower": -0.18824142588836157,
+      "upper": 0.029077952069715307,
+      "q": 3.9658647065928476
+    },
+    "VB:ORACLE:happy|neutral|xls_r_300m|RBF_SVM_CAL": {
+      "point": 0.01000109551797701,
+      "sd": 0.0034150995222646014,
+      "lower": -0.003542727146874267,
+      "upper": 0.023544918182828285,
+      "q": 3.9658647065928476
+    },
+    "VA:nonretrieval:AUC:happy|sad|xls_r_300m|RBF_SVM_CAL": {
+      "point": -0.06975221595487513,
+      "sd": 0.02144164618590073,
+      "lower": -0.15478688381479,
+      "upper": 0.015282451905039726,
+      "q": 3.9658647065928476
+    },
+    "VA:ORACLE:happy|sad|xls_r_300m|RBF_SVM_CAL": {
+      "point": 0.009044235313238391,
+      "sd": 0.003974399972750023,
+      "lower": -0.006717697268574501,
+      "upper": 0.024806167895051284,
+      "q": 3.9658647065928476
+    },
+    "VB:full:AUC:happy|sad|xls_r_300m|RBF_SVM_CAL": {
+      "point": -0.05500687893081757,
+      "sd": 0.01607831985588206,
+      "lower": -0.11877132018857123,
+      "upper": 0.008757562326936086,
+      "q": 3.9658647065928476
+    },
+    "VB:clean:AUC:happy|sad|xls_r_300m|RBF_SVM_CAL": {
+      "point": -0.06543887147335414,
+      "sd": 0.021825392001847656,
+      "lower": -0.15199542332103558,
+      "upper": 0.02111768037432729,
+      "q": 3.9658647065928476
+    },
+    "VB:ORACLE:happy|sad|xls_r_300m|RBF_SVM_CAL": {
+      "point": 0.006203542277146146,
+      "sd": 0.0027625358516128943,
+      "lower": -0.004752301157462849,
+      "upper": 0.01715938571175514,
+      "q": 3.9658647065928476
+    },
+    "VA:nonretrieval:AUC:neutral|sad|xls_r_300m|RBF_SVM_CAL": {
+      "point": -0.08685353335965262,
+      "sd": 0.026088441789803074,
+      "lower": -0.19031676390383456,
+      "upper": 0.01660969718452933,
+      "q": 3.9658647065928476
+    },
+    "VA:ORACLE:neutral|sad|xls_r_300m|RBF_SVM_CAL": {
+      "point": 0.012446321678395655,
+      "sd": 0.0046836627524955736,
+      "lower": -0.006128451129310052,
+      "upper": 0.031021094486101363,
+      "q": 3.9658647065928476
+    },
+    "VB:full:AUC:neutral|sad|xls_r_300m|RBF_SVM_CAL": {
+      "point": -0.05871228588818356,
+      "sd": 0.0236590870516993,
+      "lower": -0.15254102421672563,
+      "upper": 0.03511645244035852,
+      "q": 3.9658647065928476
+    },
+    "VB:clean:AUC:neutral|sad|xls_r_300m|RBF_SVM_CAL": {
+      "point": -0.07481060606060608,
+      "sd": 0.033153219557277847,
+      "lower": -0.20629178941273804,
+      "upper": 0.056670577291525887,
+      "q": 3.9658647065928476
+    },
+    "VB:ORACLE:neutral|sad|xls_r_300m|RBF_SVM_CAL": {
+      "point": 0.0046511967715640035,
+      "sd": 0.0023437037809555567,
+      "lower": -0.004643615336035852,
+      "upper": 0.013946008879163859,
+      "q": 3.9658647065928476
+    }
+  },
+  "pair_witnesses": {
+    "angry|happy|xls_r_300m|L2_LOGREG": {
+      "VA": {
+        "witnessed_rows": [
+          457,
+          880,
+          1012
+        ],
+        "folds_with_witness": [
+          1,
+          2
+        ],
+        "independent_components": 3,
+        "oracle_ceiling_only": 0.003736798016646392,
+        "pair_fold_auc_differences": [
+          -0.019230769230769273,
+          0.014652014652014711,
+          0.008333333333333415,
+          -0.027472527472527486,
+          0.0
+        ],
+        "source_stratum_deletions": {
+          "dtype:int16": {
+            "pair_auc_difference": -0.03703703703703709,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "dtype:int32": {
+            "pair_auc_difference": -0.010161542470036422,
+            "oracle_headroom": 0.0040823158775494806,
+            "evaluable": true
+          },
+          "Q128:0": {
+            "pair_auc_difference": -0.03513513513513511,
+            "oracle_headroom": 0.006010101010101021,
+            "evaluable": true
+          },
+          "Q128:43": {
+            "pair_auc_difference": 0.00337009803921573,
+            "oracle_headroom": 0.0029542161945157464,
+            "evaluable": true
+          },
+          "Q128:86": {
+            "pair_auc_difference": -0.013371266002844995,
+            "oracle_headroom": 0.004260716262685316,
+            "evaluable": true
+          },
+          "Q128:30": {
+            "pair_auc_difference": -0.009472880061115352,
+            "oracle_headroom": 0.003965047544029376,
+            "evaluable": true
+          },
+          "Q128:94": {
+            "pair_auc_difference": -0.01073762838468717,
+            "oracle_headroom": 0.00395150985096171,
+            "evaluable": true
+          },
+          "Q128:OTHER": {
+            "pair_auc_difference": -0.004292582417582458,
+            "oracle_headroom": 0.002626364438227391,
+            "evaluable": true
+          },
+          "Q960:384": {
+            "pair_auc_difference": -0.01379310344827589,
+            "oracle_headroom": 0.004331211647303768,
+            "evaluable": true
+          },
+          "Q960:192": {
+            "pair_auc_difference": -0.017640954686959587,
+            "oracle_headroom": 0.004354215888465296,
+            "evaluable": true
+          },
+          "Q960:576": {
+            "pair_auc_difference": -0.009127789046653123,
+            "oracle_headroom": 0.004194153740653683,
+            "evaluable": true
+          },
+          "Q960:606": {
+            "pair_auc_difference": -0.006818181818181834,
+            "oracle_headroom": 0.0038694678193111898,
+            "evaluable": true
+          },
+          "Q960:926": {
+            "pair_auc_difference": -0.008264462809917328,
+            "oracle_headroom": 0.003883228995491428,
+            "evaluable": true
+          },
+          "Q960:OTHER": {
+            "pair_auc_difference": -0.00901408450704222,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          }
+        }
+      },
+      "VB": {
+        "witnessed_rows": [
+          457,
+          880,
+          1012
+        ],
+        "folds_with_witness": [
+          0,
+          1,
+          3
+        ],
+        "independent_components": 3,
+        "oracle_ceiling_only": 0.003707920274798604,
+        "pair_fold_auc_differences": [
+          -0.03864734299516914,
+          0.0,
+          -0.037878787878787845,
+          -0.015810276679841806,
+          0.03044871794871795
+        ],
+        "source_stratum_deletions": {
+          "dtype:int16": {
+            "pair_auc_difference": -0.007407407407407418,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "dtype:int32": {
+            "pair_auc_difference": -0.014069828035435106,
+            "oracle_headroom": 0.004083431570501728,
+            "evaluable": true
+          },
+          "Q128:0": {
+            "pair_auc_difference": -0.03213213213213206,
+            "oracle_headroom": 0.005875440658049347,
+            "evaluable": true
+          },
+          "Q128:43": {
+            "pair_auc_difference": -0.005514705882352922,
+            "oracle_headroom": 0.002971932241711217,
+            "evaluable": true
+          },
+          "Q128:86": {
+            "pair_auc_difference": -0.0115694642010431,
+            "oracle_headroom": 0.004249476524613605,
+            "evaluable": true
+          },
+          "Q128:30": {
+            "pair_auc_difference": -0.01084797555385797,
+            "oracle_headroom": 0.003917996818968317,
+            "evaluable": true
+          },
+          "Q128:94": {
+            "pair_auc_difference": -0.01540616246498605,
+            "oracle_headroom": 0.003970583187045129,
+            "evaluable": true
+          },
+          "Q128:OTHER": {
+            "pair_auc_difference": -0.013221153846153855,
+            "oracle_headroom": 0.0025352622087476684,
+            "evaluable": true
+          },
+          "Q960:384": {
+            "pair_auc_difference": -0.018190904547726094,
+            "oracle_headroom": 0.004276308919137994,
+            "evaluable": true
+          },
+          "Q960:192": {
+            "pair_auc_difference": -0.01798685575925285,
+            "oracle_headroom": 0.004301877425343381,
+            "evaluable": true
+          },
+          "Q960:576": {
+            "pair_auc_difference": -0.016227180527383367,
+            "oracle_headroom": 0.004158619879116476,
+            "evaluable": true
+          },
+          "Q960:606": {
+            "pair_auc_difference": -0.009848484848484884,
+            "oracle_headroom": 0.0039046661489574586,
+            "evaluable": true
+          },
+          "Q960:926": {
+            "pair_auc_difference": -0.012175324675324672,
+            "oracle_headroom": 0.003847167253731909,
+            "evaluable": true
+          },
+          "Q960:OTHER": {
+            "pair_auc_difference": -0.00901408450704233,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          }
+        }
+      },
+      "available_gate_tests": {
+        "full_and_clean_auc_lower_positive": false,
+        "four_positive_clean_fold_aucs": false,
+        "residual_four_fold_and_lower_above_sigma": false,
+        "VA_nonretrieval_compatible": false
+      },
+      "actionable": "FAIL"
+    },
+    "angry|neutral|xls_r_300m|L2_LOGREG": {
+      "VA": {
+        "witnessed_rows": [
+          119,
+          137,
+          152,
+          285,
+          327,
+          413,
+          615,
+          982
+        ],
+        "folds_with_witness": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "independent_components": 8,
+        "oracle_ceiling_only": 0.009267525913163932,
+        "pair_fold_auc_differences": [
+          0.02341137123745818,
+          0.05291005291005291,
+          0.01388888888888884,
+          -0.006993006993006978,
+          0.07051282051282048
+        ],
+        "source_stratum_deletions": {
+          "dtype:int16": {
+            "pair_auc_difference": -0.09259259259259256,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "dtype:int32": {
+            "pair_auc_difference": 0.03252923976608191,
+            "oracle_headroom": 0.010160634796136159,
+            "evaluable": true
+          },
+          "Q128:0": {
+            "pair_auc_difference": -0.005864354920958714,
+            "oracle_headroom": 0.00425325802648735,
+            "evaluable": true
+          },
+          "Q128:43": {
+            "pair_auc_difference": 0.0311302681992337,
+            "oracle_headroom": 0.010102055193153547,
+            "evaluable": true
+          },
+          "Q128:86": {
+            "pair_auc_difference": 0.0340425531914893,
+            "oracle_headroom": 0.009767644401523556,
+            "evaluable": true
+          },
+          "Q128:30": {
+            "pair_auc_difference": 0.02908222112374359,
+            "oracle_headroom": 0.009695679978274141,
+            "evaluable": true
+          },
+          "Q128:94": {
+            "pair_auc_difference": 0.029044627559761782,
+            "oracle_headroom": 0.009890983153059585,
+            "evaluable": true
+          },
+          "Q128:OTHER": {
+            "pair_auc_difference": 0.03058698727015563,
+            "oracle_headroom": 0.009863863867187295,
+            "evaluable": true
+          },
+          "Q960:384": {
+            "pair_auc_difference": 0.025161887141535555,
+            "oracle_headroom": 0.008873898804140135,
+            "evaluable": true
+          },
+          "Q960:192": {
+            "pair_auc_difference": 0.02903171673099514,
+            "oracle_headroom": 0.009997261955013048,
+            "evaluable": true
+          },
+          "Q960:576": {
+            "pair_auc_difference": 0.016361717100633277,
+            "oracle_headroom": 0.0075384498825668,
+            "evaluable": true
+          },
+          "Q960:606": {
+            "pair_auc_difference": 0.029487179487179382,
+            "oracle_headroom": 0.009734070247106485,
+            "evaluable": true
+          },
+          "Q960:926": {
+            "pair_auc_difference": 0.026446280991735516,
+            "oracle_headroom": 0.009550300617703233,
+            "evaluable": true
+          },
+          "Q960:OTHER": {
+            "pair_auc_difference": 0.07052631578947366,
+            "oracle_headroom": 0.011704461989394899,
+            "evaluable": true
+          }
+        }
+      },
+      "VB": {
+        "witnessed_rows": [
+          152,
+          327,
+          413,
+          619,
+          794,
+          982
+        ],
+        "folds_with_witness": [
+          0,
+          2,
+          3,
+          4
+        ],
+        "independent_components": 6,
+        "oracle_ceiling_only": 0.00714301911607973,
+        "pair_fold_auc_differences": [
+          -0.024691358024691357,
+          0.04761904761904756,
+          0.051136363636363646,
+          0.011857707509881465,
+          0.007692307692307776
+        ],
+        "source_stratum_deletions": {
+          "dtype:int16": {
+            "pair_auc_difference": -0.09259259259259256,
+            "oracle_headroom": 0.01340401227957444,
+            "evaluable": true
+          },
+          "dtype:int32": {
+            "pair_auc_difference": 0.01918859649122806,
+            "oracle_headroom": 0.006457654443912553,
+            "evaluable": true
+          },
+          "Q128:0": {
+            "pair_auc_difference": -0.024732279449260597,
+            "oracle_headroom": 0.004474474474474466,
+            "evaluable": true
+          },
+          "Q128:43": {
+            "pair_auc_difference": 0.017001915708812265,
+            "oracle_headroom": 0.008995522468576267,
+            "evaluable": true
+          },
+          "Q128:86": {
+            "pair_auc_difference": 0.022956326987681908,
+            "oracle_headroom": 0.008555411114722133,
+            "evaluable": true
+          },
+          "Q128:30": {
+            "pair_auc_difference": 0.014417531718569743,
+            "oracle_headroom": 0.007490741779822785,
+            "evaluable": true
+          },
+          "Q128:94": {
+            "pair_auc_difference": 0.015582932202007016,
+            "oracle_headroom": 0.0062559396228125674,
+            "evaluable": true
+          },
+          "Q128:OTHER": {
+            "pair_auc_difference": 0.01900636492220653,
+            "oracle_headroom": 0.006368188715778711,
+            "evaluable": true
+          },
+          "Q960:384": {
+            "pair_auc_difference": 0.011748381128584673,
+            "oracle_headroom": 0.006486360457986784,
+            "evaluable": true
+          },
+          "Q960:192": {
+            "pair_auc_difference": 0.014180231582480274,
+            "oracle_headroom": 0.0077626029323158985,
+            "evaluable": true
+          },
+          "Q960:576": {
+            "pair_auc_difference": 0.0032547501759323527,
+            "oracle_headroom": 0.005261188912978665,
+            "evaluable": true
+          },
+          "Q960:606": {
+            "pair_auc_difference": 0.015384615384615441,
+            "oracle_headroom": 0.006202201326464651,
+            "evaluable": true
+          },
+          "Q960:926": {
+            "pair_auc_difference": 0.01314443132624954,
+            "oracle_headroom": 0.00733500717360136,
+            "evaluable": true
+          },
+          "Q960:OTHER": {
+            "pair_auc_difference": 0.05157894736842106,
+            "oracle_headroom": 0.01530787753697982,
+            "evaluable": true
+          }
+        }
+      },
+      "available_gate_tests": {
+        "full_and_clean_auc_lower_positive": false,
+        "four_positive_clean_fold_aucs": true,
+        "residual_four_fold_and_lower_above_sigma": false,
+        "VA_nonretrieval_compatible": true
+      },
+      "actionable": "FAIL"
+    },
+    "angry|sad|xls_r_300m|L2_LOGREG": {
+      "VA": {
+        "witnessed_rows": [],
+        "folds_with_witness": [],
+        "independent_components": 0,
+        "oracle_ceiling_only": 0.0,
+        "pair_fold_auc_differences": [
+          -0.027472527472527486,
+          -0.006802721088435382,
+          -0.009057971014492794,
+          0.0,
+          0.015050167224080258
+        ],
+        "source_stratum_deletions": {
+          "dtype:int16": {
+            "pair_auc_difference": -0.12592592592592589,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "dtype:int32": {
+            "pair_auc_difference": 0.0014419610670511895,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "Q128:0": {
+            "pair_auc_difference": -0.006515444015444016,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "Q128:43": {
+            "pair_auc_difference": -0.0028538812785388057,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "Q128:86": {
+            "pair_auc_difference": -0.006015037593984918,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "Q128:30": {
+            "pair_auc_difference": 0.000726216412490932,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "Q128:94": {
+            "pair_auc_difference": -0.0027310924369748912,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "Q128:OTHER": {
+            "pair_auc_difference": 0.0,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "Q960:384": {
+            "pair_auc_difference": -0.001242236024844745,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "Q960:192": {
+            "pair_auc_difference": -0.0020669698222406385,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "Q960:576": {
+            "pair_auc_difference": -0.0018092805449126947,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "Q960:606": {
+            "pair_auc_difference": 0.002235772357723542,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "Q960:926": {
+            "pair_auc_difference": -0.00514009272324123,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "Q960:OTHER": {
+            "pair_auc_difference": -0.03310344827586209,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          }
+        }
+      },
+      "VB": {
+        "witnessed_rows": [
+          55,
+          128,
+          356,
+          471,
+          615
+        ],
+        "folds_with_witness": [
+          0,
+          4
+        ],
+        "independent_components": 5,
+        "oracle_ceiling_only": 0.005921148029566337,
+        "pair_fold_auc_differences": [
+          -0.022222222222222254,
+          -0.01777777777777778,
+          0.025252525252525304,
+          -0.01552795031055898,
+          0.004273504273504258
+        ],
+        "source_stratum_deletions": {
+          "dtype:int16": {
+            "pair_auc_difference": -0.10370370370370374,
+            "oracle_headroom": 0.013733393043737774,
+            "evaluable": true
+          },
+          "dtype:int32": {
+            "pair_auc_difference": -0.0004806536890170632,
+            "oracle_headroom": 0.005141388174807249,
+            "evaluable": true
+          },
+          "Q128:0": {
+            "pair_auc_difference": -0.013513513513513598,
+            "oracle_headroom": 0.006586474393513564,
+            "evaluable": true
+          },
+          "Q128:43": {
+            "pair_auc_difference": -0.00784817351598166,
+            "oracle_headroom": 0.005667808767491733,
+            "evaluable": true
+          },
+          "Q128:86": {
+            "pair_auc_difference": -0.0066165413533835205,
+            "oracle_headroom": 0.007312716781743389,
+            "evaluable": true
+          },
+          "Q128:30": {
+            "pair_auc_difference": -0.0032161012553170165,
+            "oracle_headroom": 0.006243823299357354,
+            "evaluable": true
+          },
+          "Q128:94": {
+            "pair_auc_difference": -0.004201680672269004,
+            "oracle_headroom": 0.004981513188912823,
+            "evaluable": true
+          },
+          "Q128:OTHER": {
+            "pair_auc_difference": -0.0031249999999999334,
+            "oracle_headroom": 0.005202672262340835,
+            "evaluable": true
+          },
+          "Q960:384": {
+            "pair_auc_difference": -0.004451345755693503,
+            "oracle_headroom": 0.006450678643618812,
+            "evaluable": true
+          },
+          "Q960:192": {
+            "pair_auc_difference": -0.005270773046713528,
+            "oracle_headroom": 0.006292357680862115,
+            "evaluable": true
+          },
+          "Q960:576": {
+            "pair_auc_difference": -0.005959982971477151,
+            "oracle_headroom": 0.005038934335196976,
+            "evaluable": true
+          },
+          "Q960:606": {
+            "pair_auc_difference": -0.0019308943089429986,
+            "oracle_headroom": 0.006131600334509546,
+            "evaluable": true
+          },
+          "Q960:926": {
+            "pair_auc_difference": -0.007055029227978293,
+            "oracle_headroom": 0.004890004782400759,
+            "evaluable": true
+          },
+          "Q960:OTHER": {
+            "pair_auc_difference": -0.035862068965517135,
+            "oracle_headroom": 0.008439518266820878,
+            "evaluable": true
+          }
+        }
+      },
+      "available_gate_tests": {
+        "full_and_clean_auc_lower_positive": false,
+        "four_positive_clean_fold_aucs": false,
+        "residual_four_fold_and_lower_above_sigma": false,
+        "VA_nonretrieval_compatible": false
+      },
+      "actionable": "FAIL"
+    },
+    "happy|neutral|xls_r_300m|L2_LOGREG": {
+      "VA": {
+        "witnessed_rows": [
+          129,
+          232,
+          318,
+          563,
+          756
+        ],
+        "folds_with_witness": [
+          0,
+          2,
+          3,
+          4
+        ],
+        "independent_components": 5,
+        "oracle_ceiling_only": 0.006133238855628553,
+        "pair_fold_auc_differences": [
+          -0.0652173913043479,
+          0.004273504273504258,
+          -0.03809523809523807,
+          -0.04329004329004327,
+          0.0625
+        ],
+        "source_stratum_deletions": {
+          "dtype:int16": {
+            "pair_auc_difference": -0.04444444444444451,
+            "oracle_headroom": 0.013084661905198525,
+            "evaluable": true
+          },
+          "dtype:int32": {
+            "pair_auc_difference": -0.018254950495049438,
+            "oracle_headroom": 0.005462217570424643,
+            "evaluable": true
+          },
+          "Q128:0": {
+            "pair_auc_difference": -0.02012578616352212,
+            "oracle_headroom": 0.005980861244019198,
+            "evaluable": true
+          },
+          "Q128:43": {
+            "pair_auc_difference": -0.011381564119900878,
+            "oracle_headroom": 0.007287471251178235,
+            "evaluable": true
+          },
+          "Q128:86": {
+            "pair_auc_difference": -0.023864289821736606,
+            "oracle_headroom": 0.0054073408305382875,
+            "evaluable": true
+          },
+          "Q128:30": {
+            "pair_auc_difference": -0.019429590017825293,
+            "oracle_headroom": 0.006502447521549604,
+            "evaluable": true
+          },
+          "Q128:94": {
+            "pair_auc_difference": -0.015821646889608076,
+            "oracle_headroom": 0.005268036600163839,
+            "evaluable": true
+          },
+          "Q128:OTHER": {
+            "pair_auc_difference": -0.00019040365575029305,
+            "oracle_headroom": 0.006529780464984425,
+            "evaluable": true
+          },
+          "Q960:384": {
+            "pair_auc_difference": -0.007092198581560294,
+            "oracle_headroom": 0.0072274865096073615,
+            "evaluable": true
+          },
+          "Q960:192": {
+            "pair_auc_difference": -0.013841180036370915,
+            "oracle_headroom": 0.007280582882106312,
+            "evaluable": true
+          },
+          "Q960:576": {
+            "pair_auc_difference": -0.019207683073229287,
+            "oracle_headroom": 0.004199089489303143,
+            "evaluable": true
+          },
+          "Q960:606": {
+            "pair_auc_difference": -0.015297202797202702,
+            "oracle_headroom": 0.006479217342344024,
+            "evaluable": true
+          },
+          "Q960:926": {
+            "pair_auc_difference": -0.015136054421768685,
+            "oracle_headroom": 0.005088595928420148,
+            "evaluable": true
+          },
+          "Q960:OTHER": {
+            "pair_auc_difference": -0.0248332097850259,
+            "oracle_headroom": 0.007340564029955754,
+            "evaluable": true
+          }
+        }
+      },
+      "VB": {
+        "witnessed_rows": [
+          7,
+          52,
+          232,
+          318,
+          484,
+          534
+        ],
+        "folds_with_witness": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "independent_components": 6,
+        "oracle_ceiling_only": 0.0075122860108292056,
+        "pair_fold_auc_differences": [
+          -0.037267080745341685,
+          0.0766045548654245,
+          -0.06597222222222221,
+          -0.08057851239669422,
+          0.04791666666666672
+        ],
+        "source_stratum_deletions": {
+          "dtype:int16": {
+            "pair_auc_difference": -0.005555555555555536,
+            "oracle_headroom": 0.012093526628410345,
+            "evaluable": true
+          },
+          "dtype:int32": {
+            "pair_auc_difference": -0.016089108910891103,
+            "oracle_headroom": 0.007026252910960706,
+            "evaluable": true
+          },
+          "Q128:0": {
+            "pair_auc_difference": 0.002935010482180367,
+            "oracle_headroom": 0.008345651690228273,
+            "evaluable": true
+          },
+          "Q128:43": {
+            "pair_auc_difference": -0.010254676583277056,
+            "oracle_headroom": 0.007397136416284367,
+            "evaluable": true
+          },
+          "Q128:86": {
+            "pair_auc_difference": -0.015909526547824404,
+            "oracle_headroom": 0.006910923718135176,
+            "evaluable": true
+          },
+          "Q128:30": {
+            "pair_auc_difference": -0.01479500891265595,
+            "oracle_headroom": 0.007996686631833838,
+            "evaluable": true
+          },
+          "Q128:94": {
+            "pair_auc_difference": -0.011866235167206085,
+            "oracle_headroom": 0.006806860718652885,
+            "evaluable": true
+          },
+          "Q128:OTHER": {
+            "pair_auc_difference": -0.00818735719725816,
+            "oracle_headroom": 0.00793994413407817,
+            "evaluable": true
+          },
+          "Q960:384": {
+            "pair_auc_difference": -0.005991685008559622,
+            "oracle_headroom": 0.007288108912787417,
+            "evaluable": true
+          },
+          "Q960:192": {
+            "pair_auc_difference": -0.007476257829864608,
+            "oracle_headroom": 0.008933171494188707,
+            "evaluable": true
+          },
+          "Q960:576": {
+            "pair_auc_difference": -0.00800320128051224,
+            "oracle_headroom": 0.007178959725067435,
+            "evaluable": true
+          },
+          "Q960:606": {
+            "pair_auc_difference": -0.012937062937062982,
+            "oracle_headroom": 0.008032458711660806,
+            "evaluable": true
+          },
+          "Q960:926": {
+            "pair_auc_difference": -0.011479591836734637,
+            "oracle_headroom": 0.00782520325203273,
+            "evaluable": true
+          },
+          "Q960:OTHER": {
+            "pair_auc_difference": -0.030022238695329828,
+            "oracle_headroom": 0.0052442584411894755,
+            "evaluable": true
+          }
+        }
+      },
+      "available_gate_tests": {
+        "full_and_clean_auc_lower_positive": false,
+        "four_positive_clean_fold_aucs": false,
+        "residual_four_fold_and_lower_above_sigma": false,
+        "VA_nonretrieval_compatible": false
+      },
+      "actionable": "FAIL"
+    },
+    "happy|sad|xls_r_300m|L2_LOGREG": {
+      "VA": {
+        "witnessed_rows": [
+          25,
+          70,
+          159,
+          809,
+          820,
+          852,
+          862
+        ],
+        "folds_with_witness": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "independent_components": 7,
+        "oracle_ceiling_only": 0.008842295151030855,
+        "pair_fold_auc_differences": [
+          -0.0535714285714286,
+          0.008241758241758323,
+          0.02086956521739125,
+          -0.0340136054421768,
+          -0.016304347826086918
+        ],
+        "source_stratum_deletions": {
+          "dtype:int16": {
+            "pair_auc_difference": 0.013333333333333308,
+            "oracle_headroom": 0.03686066385534481,
+            "evaluable": true
+          },
+          "dtype:int32": {
+            "pair_auc_difference": -0.02387088023870887,
+            "oracle_headroom": 0.005640247535370735,
+            "evaluable": true
+          },
+          "Q128:0": {
+            "pair_auc_difference": -0.014285714285714235,
+            "oracle_headroom": 0.015015744841709644,
+            "evaluable": true
+          },
+          "Q128:43": {
+            "pair_auc_difference": -0.022025248455546542,
+            "oracle_headroom": 0.010154404661722571,
+            "evaluable": true
+          },
+          "Q128:86": {
+            "pair_auc_difference": -0.025740025740025763,
+            "oracle_headroom": 0.007172705141868185,
+            "evaluable": true
+          },
+          "Q128:30": {
+            "pair_auc_difference": -0.030415263748597154,
+            "oracle_headroom": 0.006788017234649946,
+            "evaluable": true
+          },
+          "Q128:94": {
+            "pair_auc_difference": -0.014814814814814836,
+            "oracle_headroom": 0.00815049102008314,
+            "evaluable": true
+          },
+          "Q128:OTHER": {
+            "pair_auc_difference": -0.013221153846153855,
+            "oracle_headroom": 0.009505246088317265,
+            "evaluable": true
+          },
+          "Q960:384": {
+            "pair_auc_difference": -0.023262178434592218,
+            "oracle_headroom": 0.007368919491841597,
+            "evaluable": true
+          },
+          "Q960:192": {
+            "pair_auc_difference": -0.020781483325037264,
+            "oracle_headroom": 0.010436534938727093,
+            "evaluable": true
+          },
+          "Q960:576": {
+            "pair_auc_difference": -0.016218833212297334,
+            "oracle_headroom": 0.01003398708201464,
+            "evaluable": true
+          },
+          "Q960:606": {
+            "pair_auc_difference": -0.02139689578713977,
+            "oracle_headroom": 0.007967032967032939,
+            "evaluable": true
+          },
+          "Q960:926": {
+            "pair_auc_difference": -0.02243031358885017,
+            "oracle_headroom": 0.007965758590771976,
+            "evaluable": true
+          },
+          "Q960:OTHER": {
+            "pair_auc_difference": -0.01845556095191847,
+            "oracle_headroom": 0.011890080005059644,
+            "evaluable": true
+          }
+        }
+      },
+      "VB": {
+        "witnessed_rows": [
+          70,
+          71,
+          159,
+          218,
+          820,
+          862
+        ],
+        "folds_with_witness": [
+          0,
+          2,
+          3,
+          4
+        ],
+        "independent_components": 6,
+        "oracle_ceiling_only": 0.007421986874417308,
+        "pair_fold_auc_differences": [
+          -0.08913043478260874,
+          0.01449275362318836,
+          -0.03240740740740744,
+          0.0,
+          0.004629629629629539
+        ],
+        "source_stratum_deletions": {
+          "dtype:int16": {
+            "pair_auc_difference": -0.004444444444444473,
+            "oracle_headroom": 0.023268398268398216,
+            "evaluable": true
+          },
+          "dtype:int32": {
+            "pair_auc_difference": -0.020480130204801217,
+            "oracle_headroom": 0.005538053137848609,
+            "evaluable": true
+          },
+          "Q128:0": {
+            "pair_auc_difference": -0.029761904761904767,
+            "oracle_headroom": 0.008124515606167892,
+            "evaluable": true
+          },
+          "Q128:43": {
+            "pair_auc_difference": -0.021085146387322062,
+            "oracle_headroom": 0.008435473948227745,
+            "evaluable": true
+          },
+          "Q128:86": {
+            "pair_auc_difference": -0.02072072072072073,
+            "oracle_headroom": 0.007016084926537491,
+            "evaluable": true
+          },
+          "Q128:30": {
+            "pair_auc_difference": -0.025140291806958537,
+            "oracle_headroom": 0.00529399455953139,
+            "evaluable": true
+          },
+          "Q128:94": {
+            "pair_auc_difference": -0.017824074074074048,
+            "oracle_headroom": 0.008048131402735637,
+            "evaluable": true
+          },
+          "Q128:OTHER": {
+            "pair_auc_difference": -0.018509615384615374,
+            "oracle_headroom": 0.00800673802720786,
+            "evaluable": true
+          },
+          "Q960:384": {
+            "pair_auc_difference": -0.024083196496989645,
+            "oracle_headroom": 0.004246015125734193,
+            "evaluable": true
+          },
+          "Q960:192": {
+            "pair_auc_difference": -0.022523643603783006,
+            "oracle_headroom": 0.00867525899339272,
+            "evaluable": true
+          },
+          "Q960:576": {
+            "pair_auc_difference": -0.020697167755991286,
+            "oracle_headroom": 0.008439065499321052,
+            "evaluable": true
+          },
+          "Q960:606": {
+            "pair_auc_difference": -0.018847006651884657,
+            "oracle_headroom": 0.007822474414834302,
+            "evaluable": true
+          },
+          "Q960:926": {
+            "pair_auc_difference": -0.02558797909407662,
+            "oracle_headroom": 0.006534419981718664,
+            "evaluable": true
+          },
+          "Q960:OTHER": {
+            "pair_auc_difference": -0.011656143759106286,
+            "oracle_headroom": 0.011765069169960451,
+            "evaluable": true
+          }
+        }
+      },
+      "available_gate_tests": {
+        "full_and_clean_auc_lower_positive": false,
+        "four_positive_clean_fold_aucs": false,
+        "residual_four_fold_and_lower_above_sigma": false,
+        "VA_nonretrieval_compatible": false
+      },
+      "actionable": "FAIL"
+    },
+    "neutral|sad|xls_r_300m|L2_LOGREG": {
+      "VA": {
+        "witnessed_rows": [
+          62,
+          127,
+          716,
+          989
+        ],
+        "folds_with_witness": [
+          0,
+          4
+        ],
+        "independent_components": 4,
+        "oracle_ceiling_only": 0.004682365826944146,
+        "pair_fold_auc_differences": [
+          -0.08074534161490676,
+          -0.039682539682539764,
+          -0.07246376811594202,
+          -0.09090909090909094,
+          0.021739130434782594
+        ],
+        "source_stratum_deletions": {
+          "dtype:int16": {
+            "pair_auc_difference": -0.050000000000000044,
+            "oracle_headroom": 0.010715583643263082,
+            "evaluable": true
+          },
+          "dtype:int32": {
+            "pair_auc_difference": -0.06264269406392697,
+            "oracle_headroom": 0.003962040849439408,
+            "evaluable": true
+          },
+          "Q128:0": {
+            "pair_auc_difference": -0.07648247978436662,
+            "oracle_headroom": 0.0021131461401924234,
+            "evaluable": true
+          },
+          "Q128:43": {
+            "pair_auc_difference": -0.05290505432215398,
+            "oracle_headroom": 0.0056899119399120845,
+            "evaluable": true
+          },
+          "Q128:86": {
+            "pair_auc_difference": -0.053799392097264365,
+            "oracle_headroom": 0.005664568086670374,
+            "evaluable": true
+          },
+          "Q128:30": {
+            "pair_auc_difference": -0.06656983781166792,
+            "oracle_headroom": 0.004965970487243565,
+            "evaluable": true
+          },
+          "Q128:94": {
+            "pair_auc_difference": -0.05788834951456312,
+            "oracle_headroom": 0.0038237431452343706,
+            "evaluable": true
+          },
+          "Q128:OTHER": {
+            "pair_auc_difference": -0.05173267326732667,
+            "oracle_headroom": 0.004989747095010322,
+            "evaluable": true
+          },
+          "Q960:384": {
+            "pair_auc_difference": -0.06319655521783185,
+            "oracle_headroom": 0.005135473663392398,
+            "evaluable": true
+          },
+          "Q960:192": {
+            "pair_auc_difference": -0.04998792562183052,
+            "oracle_headroom": 0.003790683824490104,
+            "evaluable": true
+          },
+          "Q960:576": {
+            "pair_auc_difference": -0.05920886873267828,
+            "oracle_headroom": 0.005064881776683516,
+            "evaluable": true
+          },
+          "Q960:606": {
+            "pair_auc_difference": -0.06531425891181997,
+            "oracle_headroom": 0.0037614509528178797,
+            "evaluable": true
+          },
+          "Q960:926": {
+            "pair_auc_difference": -0.06585365853658531,
+            "oracle_headroom": 0.004886449636793744,
+            "evaluable": true
+          },
+          "Q960:OTHER": {
+            "pair_auc_difference": -0.038112522686025385,
+            "oracle_headroom": 0.007090151228340336,
+            "evaluable": true
+          }
+        }
+      },
+      "VB": {
+        "witnessed_rows": [
+          693,
+          716,
+          760,
+          989
+        ],
+        "folds_with_witness": [
+          1,
+          4
+        ],
+        "independent_components": 4,
+        "oracle_ceiling_only": 0.0046511967715640035,
+        "pair_fold_auc_differences": [
+          -0.14761904761904765,
+          0.015873015873015817,
+          -0.04629629629629628,
+          0.02922077922077926,
+          -0.05555555555555558
+        ],
+        "source_stratum_deletions": {
+          "dtype:int16": {
+            "pair_auc_difference": -0.07777777777777772,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "dtype:int32": {
+            "pair_auc_difference": -0.02654109589041098,
+            "oracle_headroom": 0.0051838817880083266,
+            "evaluable": true
+          },
+          "Q128:0": {
+            "pair_auc_difference": -0.054245283018867885,
+            "oracle_headroom": 0.004250715647891257,
+            "evaluable": true
+          },
+          "Q128:43": {
+            "pair_auc_difference": -0.027712171311604528,
+            "oracle_headroom": 0.0028383998972233426,
+            "evaluable": true
+          },
+          "Q128:86": {
+            "pair_auc_difference": -0.03191489361702127,
+            "oracle_headroom": 0.005641746988432117,
+            "evaluable": true
+          },
+          "Q128:30": {
+            "pair_auc_difference": -0.04333091261195843,
+            "oracle_headroom": 0.004955909317569174,
+            "evaluable": true
+          },
+          "Q128:94": {
+            "pair_auc_difference": -0.02196601941747567,
+            "oracle_headroom": 0.004997118478137996,
+            "evaluable": true
+          },
+          "Q128:OTHER": {
+            "pair_auc_difference": -0.02735148514851482,
+            "oracle_headroom": 0.00503112783455395,
+            "evaluable": true
+          },
+          "Q960:384": {
+            "pair_auc_difference": -0.035587639311043584,
+            "oracle_headroom": 0.005092689041383047,
+            "evaluable": true
+          },
+          "Q960:192": {
+            "pair_auc_difference": -0.029219995170248758,
+            "oracle_headroom": 0.0037646595855558296,
+            "evaluable": true
+          },
+          "Q960:576": {
+            "pair_auc_difference": -0.028974552784076568,
+            "oracle_headroom": 0.005022547894734997,
+            "evaluable": true
+          },
+          "Q960:606": {
+            "pair_auc_difference": -0.036468105065666,
+            "oracle_headroom": 0.004886244645910254,
+            "evaluable": true
+          },
+          "Q960:926": {
+            "pair_auc_difference": -0.04123112659698025,
+            "oracle_headroom": 0.004868820604254198,
+            "evaluable": true
+          },
+          "Q960:OTHER": {
+            "pair_auc_difference": -0.008166969147005432,
+            "oracle_headroom": 0.0037309389024887674,
+            "evaluable": true
+          }
+        }
+      },
+      "available_gate_tests": {
+        "full_and_clean_auc_lower_positive": false,
+        "four_positive_clean_fold_aucs": false,
+        "residual_four_fold_and_lower_above_sigma": false,
+        "VA_nonretrieval_compatible": false
+      },
+      "actionable": "FAIL"
+    },
+    "angry|happy|xls_r_300m|RBF_SVM_CAL": {
+      "VA": {
+        "witnessed_rows": [
+          457,
+          1012
+        ],
+        "folds_with_witness": [
+          1,
+          2
+        ],
+        "independent_components": 2,
+        "oracle_ceiling_only": 0.0024409508912378586,
+        "pair_fold_auc_differences": [
+          -0.1346153846153847,
+          -0.09523809523809523,
+          -0.10999999999999999,
+          -0.1208791208791209,
+          -0.08012820512820507
+        ],
+        "source_stratum_deletions": {
+          "dtype:int16": {
+            "pair_auc_difference": -0.2148148148148148,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "dtype:int32": {
+            "pair_auc_difference": -0.11169011638005899,
+            "oracle_headroom": 0.0026762593889698705,
+            "evaluable": true
+          },
+          "Q128:0": {
+            "pair_auc_difference": -0.1786786786786786,
+            "oracle_headroom": 0.0025892819978479142,
+            "evaluable": true
+          },
+          "Q128:43": {
+            "pair_auc_difference": -0.10110294117647056,
+            "oracle_headroom": 0.001460249137850811,
+            "evaluable": true
+          },
+          "Q128:86": {
+            "pair_auc_difference": -0.1221431958274064,
+            "oracle_headroom": 0.0028245555679747847,
+            "evaluable": true
+          },
+          "Q128:30": {
+            "pair_auc_difference": -0.11558441558441557,
+            "oracle_headroom": 0.002595062778405932,
+            "evaluable": true
+          },
+          "Q128:94": {
+            "pair_auc_difference": -0.11663554310613133,
+            "oracle_headroom": 0.0025794281188203927,
+            "evaluable": true
+          },
+          "Q128:OTHER": {
+            "pair_auc_difference": -0.09409340659340659,
+            "oracle_headroom": 0.002626364438227391,
+            "evaluable": true
+          },
+          "Q960:384": {
+            "pair_auc_difference": -0.14212893553223394,
+            "oracle_headroom": 0.0027933958346515464,
+            "evaluable": true
+          },
+          "Q960:192": {
+            "pair_auc_difference": -0.12781044621238336,
+            "oracle_headroom": 0.0027747173776904166,
+            "evaluable": true
+          },
+          "Q960:576": {
+            "pair_auc_difference": -0.12559161595672752,
+            "oracle_headroom": 0.0027023761637424704,
+            "evaluable": true
+          },
+          "Q960:606": {
+            "pair_auc_difference": -0.11340909090909101,
+            "oracle_headroom": 0.002526678930727888,
+            "evaluable": true
+          },
+          "Q960:926": {
+            "pair_auc_difference": -0.11680932703659974,
+            "oracle_headroom": 0.002538990130884322,
+            "evaluable": true
+          },
+          "Q960:OTHER": {
+            "pair_auc_difference": -0.07436619718309856,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          }
+        }
+      },
+      "VB": {
+        "witnessed_rows": [
+          342,
+          457,
+          1012
+        ],
+        "folds_with_witness": [
+          0,
+          1,
+          4
+        ],
+        "independent_components": 3,
+        "oracle_ceiling_only": 0.003707920274798604,
+        "pair_fold_auc_differences": [
+          -0.2190016103059581,
+          -0.05217391304347829,
+          -0.11363636363636365,
+          -0.1403162055335968,
+          -0.05608974358974361
+        ],
+        "source_stratum_deletions": {
+          "dtype:int16": {
+            "pair_auc_difference": -0.33333333333333337,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "dtype:int32": {
+            "pair_auc_difference": -0.09927045336112561,
+            "oracle_headroom": 0.004083431570501728,
+            "evaluable": true
+          },
+          "Q128:0": {
+            "pair_auc_difference": -0.181081081081081,
+            "oracle_headroom": 0.002401136750613597,
+            "evaluable": true
+          },
+          "Q128:43": {
+            "pair_auc_difference": -0.10774101307189543,
+            "oracle_headroom": 0.002971932241711217,
+            "evaluable": true
+          },
+          "Q128:86": {
+            "pair_auc_difference": -0.12299668089141769,
+            "oracle_headroom": 0.004249476524613605,
+            "evaluable": true
+          },
+          "Q128:30": {
+            "pair_auc_difference": -0.10916730328495039,
+            "oracle_headroom": 0.003917996818968317,
+            "evaluable": true
+          },
+          "Q128:94": {
+            "pair_auc_difference": -0.11002178649237482,
+            "oracle_headroom": 0.003970583187045129,
+            "evaluable": true
+          },
+          "Q128:OTHER": {
+            "pair_auc_difference": -0.10946085164835162,
+            "oracle_headroom": 0.003937700201388172,
+            "evaluable": true
+          },
+          "Q960:384": {
+            "pair_auc_difference": -0.1380309845077461,
+            "oracle_headroom": 0.0027118716371643536,
+            "evaluable": true
+          },
+          "Q960:192": {
+            "pair_auc_difference": -0.1305776547907299,
+            "oracle_headroom": 0.004301877425343381,
+            "evaluable": true
+          },
+          "Q960:576": {
+            "pair_auc_difference": -0.12440838404327248,
+            "oracle_headroom": 0.004158619879116476,
+            "evaluable": true
+          },
+          "Q960:606": {
+            "pair_auc_difference": -0.10439393939393948,
+            "oracle_headroom": 0.0039046661489574586,
+            "evaluable": true
+          },
+          "Q960:926": {
+            "pair_auc_difference": -0.11363636363636365,
+            "oracle_headroom": 0.003847167253731909,
+            "evaluable": true
+          },
+          "Q960:OTHER": {
+            "pair_auc_difference": -0.139718309859155,
+            "oracle_headroom": 0.0027973682357473884,
+            "evaluable": true
+          }
+        }
+      },
+      "available_gate_tests": {
+        "full_and_clean_auc_lower_positive": false,
+        "four_positive_clean_fold_aucs": false,
+        "residual_four_fold_and_lower_above_sigma": false,
+        "VA_nonretrieval_compatible": false
+      },
+      "actionable": "FAIL"
+    },
+    "angry|neutral|xls_r_300m|RBF_SVM_CAL": {
+      "VA": {
+        "witnessed_rows": [
+          119,
+          137,
+          152,
+          285,
+          327,
+          413,
+          615
+        ],
+        "folds_with_witness": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "independent_components": 7,
+        "oracle_ceiling_only": 0.008068900163903825,
+        "pair_fold_auc_differences": [
+          -0.04013377926421402,
+          -0.021164021164021163,
+          -0.045634920634920584,
+          -0.15384615384615385,
+          0.08333333333333326
+        ],
+        "source_stratum_deletions": {
+          "dtype:int16": {
+            "pair_auc_difference": -0.2129629629629629,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "dtype:int32": {
+            "pair_auc_difference": -0.02275219298245612,
+            "oracle_headroom": 0.008845342793047273,
+            "evaluable": true
+          },
+          "Q128:0": {
+            "pair_auc_difference": -0.06527281998980117,
+            "oracle_headroom": 0.00425325802648735,
+            "evaluable": true
+          },
+          "Q128:43": {
+            "pair_auc_difference": -0.04430076628352486,
+            "oracle_headroom": 0.008605072160092986,
+            "evaluable": true
+          },
+          "Q128:86": {
+            "pair_auc_difference": -0.033482642777155625,
+            "oracle_headroom": 0.008347364223738718,
+            "evaluable": true
+          },
+          "Q128:30": {
+            "pair_auc_difference": -0.0278464326907234,
+            "oracle_headroom": 0.008448274022917479,
+            "evaluable": true
+          },
+          "Q128:94": {
+            "pair_auc_difference": -0.030431590111772877,
+            "oracle_headroom": 0.008607906732719495,
+            "evaluable": true
+          },
+          "Q128:OTHER": {
+            "pair_auc_difference": -0.022277227722772297,
+            "oracle_headroom": 0.008582782923305499,
+            "evaluable": true
+          },
+          "Q960:384": {
+            "pair_auc_difference": -0.04662349676225719,
+            "oracle_headroom": 0.008873898804140135,
+            "evaluable": true
+          },
+          "Q960:192": {
+            "pair_auc_difference": -0.03205235777815063,
+            "oracle_headroom": 0.008696162148373876,
+            "evaluable": true
+          },
+          "Q960:576": {
+            "pair_auc_difference": -0.037209711470795215,
+            "oracle_headroom": 0.006238458908363942,
+            "evaluable": true
+          },
+          "Q960:606": {
+            "pair_auc_difference": -0.0213141025641026,
+            "oracle_headroom": 0.008472028031519141,
+            "evaluable": true
+          },
+          "Q960:926": {
+            "pair_auc_difference": -0.03581267217630857,
+            "oracle_headroom": 0.008318177838250507,
+            "evaluable": true
+          },
+          "Q960:OTHER": {
+            "pair_auc_difference": -0.047368421052631615,
+            "oracle_headroom": 0.008012742176941479,
+            "evaluable": true
+          }
+        }
+      },
+      "VB": {
+        "witnessed_rows": [
+          152,
+          285,
+          327,
+          413
+        ],
+        "folds_with_witness": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "independent_components": 4,
+        "oracle_ceiling_only": 0.00476201274405319,
+        "pair_fold_auc_differences": [
+          -0.09347442680776019,
+          -0.02285714285714291,
+          0.018939393939393923,
+          -0.045454545454545414,
+          -0.013461538461538414
+        ],
+        "source_stratum_deletions": {
+          "dtype:int16": {
+            "pair_auc_difference": -0.25,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "dtype:int32": {
+            "pair_auc_difference": -0.028143274853801192,
+            "oracle_headroom": 0.005223213981302766,
+            "evaluable": true
+          },
+          "Q128:0": {
+            "pair_auc_difference": -0.0938296787353392,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "Q128:43": {
+            "pair_auc_difference": -0.0390325670498084,
+            "oracle_headroom": 0.005997014979050919,
+            "evaluable": true
+          },
+          "Q128:86": {
+            "pair_auc_difference": -0.036058230683090775,
+            "oracle_headroom": 0.005703607409814793,
+            "evaluable": true
+          },
+          "Q128:30": {
+            "pair_auc_difference": -0.03550832097544909,
+            "oracle_headroom": 0.004993827853215116,
+            "evaluable": true
+          },
+          "Q128:94": {
+            "pair_auc_difference": -0.03385820347556501,
+            "oracle_headroom": 0.005063810421193526,
+            "evaluable": true
+          },
+          "Q128:OTHER": {
+            "pair_auc_difference": -0.024487270155586938,
+            "oracle_headroom": 0.005044529262086428,
+            "evaluable": true
+          },
+          "Q960:384": {
+            "pair_auc_difference": -0.049583718778908326,
+            "oracle_headroom": 0.0052425450048096955,
+            "evaluable": true
+          },
+          "Q960:192": {
+            "pair_auc_difference": -0.03826145326397046,
+            "oracle_headroom": 0.005175068621543932,
+            "evaluable": true
+          },
+          "Q960:576": {
+            "pair_auc_difference": -0.046973961998592606,
+            "oracle_headroom": 0.0027003316651951215,
+            "evaluable": true
+          },
+          "Q960:606": {
+            "pair_auc_difference": -0.03205128205128205,
+            "oracle_headroom": 0.005013318590742277,
+            "evaluable": true
+          },
+          "Q960:926": {
+            "pair_auc_difference": -0.03565525383707202,
+            "oracle_headroom": 0.004890004782400759,
+            "evaluable": true
+          },
+          "Q960:OTHER": {
+            "pair_auc_difference": -0.040000000000000036,
+            "oracle_headroom": 0.007727771701461994,
+            "evaluable": true
+          }
+        }
+      },
+      "available_gate_tests": {
+        "full_and_clean_auc_lower_positive": false,
+        "four_positive_clean_fold_aucs": false,
+        "residual_four_fold_and_lower_above_sigma": false,
+        "VA_nonretrieval_compatible": false
+      },
+      "actionable": "FAIL"
+    },
+    "angry|sad|xls_r_300m|RBF_SVM_CAL": {
+      "VA": {
+        "witnessed_rows": [
+          1032
+        ],
+        "folds_with_witness": [
+          1
+        ],
+        "independent_components": 1,
+        "oracle_ceiling_only": 0.001226040798235295,
+        "pair_fold_auc_differences": [
+          -0.03296703296703296,
+          -0.017006802721088343,
+          -0.03623188405797095,
+          -0.016483516483516536,
+          -0.04013377926421402
+        ],
+        "source_stratum_deletions": {
+          "dtype:int16": {
+            "pair_auc_difference": -0.2666666666666667,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "dtype:int32": {
+            "pair_auc_difference": -0.008531602980052955,
+            "oracle_headroom": 0.0013466614722096315,
+            "evaluable": true
+          },
+          "Q128:0": {
+            "pair_auc_difference": -0.056225868725868766,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "Q128:43": {
+            "pair_auc_difference": -0.03695776255707761,
+            "oracle_headroom": 0.001455945816028259,
+            "evaluable": true
+          },
+          "Q128:86": {
+            "pair_auc_difference": -0.043007518796992494,
+            "oracle_headroom": 0.0015340853732944693,
+            "evaluable": true
+          },
+          "Q128:30": {
+            "pair_auc_difference": -0.015146799460524885,
+            "oracle_headroom": 0.0012963684817538512,
+            "evaluable": true
+          },
+          "Q128:94": {
+            "pair_auc_difference": -0.02857142857142858,
+            "oracle_headroom": 0.0013149044347836591,
+            "evaluable": true
+          },
+          "Q128:OTHER": {
+            "pair_auc_difference": -0.03125,
+            "oracle_headroom": 0.001326665307669228,
+            "evaluable": true
+          },
+          "Q960:384": {
+            "pair_auc_difference": -0.035093167701863326,
+            "oracle_headroom": 0.0013250741594329485,
+            "evaluable": true
+          },
+          "Q960:192": {
+            "pair_auc_difference": -0.03389830508474578,
+            "oracle_headroom": 0.0013009518443951595,
+            "evaluable": true
+          },
+          "Q960:576": {
+            "pair_auc_difference": -0.036398467432950166,
+            "oracle_headroom": 0.0013209847485887716,
+            "evaluable": true
+          },
+          "Q960:606": {
+            "pair_auc_difference": -0.013516260162601657,
+            "oracle_headroom": 0.0012806837262258064,
+            "evaluable": true
+          },
+          "Q960:926": {
+            "pair_auc_difference": -0.037593227171941135,
+            "oracle_headroom": 0.001282045245591612,
+            "evaluable": true
+          },
+          "Q960:OTHER": {
+            "pair_auc_difference": -0.07310344827586213,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          }
+        }
+      },
+      "VB": {
+        "witnessed_rows": [
+          471,
+          615
+        ],
+        "folds_with_witness": [
+          4
+        ],
+        "independent_components": 2,
+        "oracle_ceiling_only": 0.0023509066598893513,
+        "pair_fold_auc_differences": [
+          -0.09259259259259267,
+          -0.020000000000000018,
+          0.015151515151515249,
+          -0.04347826086956519,
+          -0.017094017094017033
+        ],
+        "source_stratum_deletions": {
+          "dtype:int16": {
+            "pair_auc_difference": -0.2592592592592593,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "dtype:int32": {
+            "pair_auc_difference": -0.016222062004325855,
+            "oracle_headroom": 0.0025706940874035134,
+            "evaluable": true
+          },
+          "Q128:0": {
+            "pair_auc_difference": -0.05815637065637069,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "Q128:43": {
+            "pair_auc_difference": -0.033675799086757996,
+            "oracle_headroom": 0.0028339043837458666,
+            "evaluable": true
+          },
+          "Q128:86": {
+            "pair_auc_difference": -0.03609022556390984,
+            "oracle_headroom": 0.002899159663865558,
+            "evaluable": true
+          },
+          "Q128:30": {
+            "pair_auc_difference": -0.022097727980080917,
+            "oracle_headroom": 0.0024783489957619365,
+            "evaluable": true
+          },
+          "Q128:94": {
+            "pair_auc_difference": -0.027415966386554635,
+            "oracle_headroom": 0.0024907565944563004,
+            "evaluable": true
+          },
+          "Q128:OTHER": {
+            "pair_auc_difference": -0.0279017857142857,
+            "oracle_headroom": 0.0025445292620864812,
+            "evaluable": true
+          },
+          "Q960:384": {
+            "pair_auc_difference": -0.03385093167701858,
+            "oracle_headroom": 0.0025649288725492214,
+            "evaluable": true
+          },
+          "Q960:192": {
+            "pair_auc_difference": -0.032864820173625464,
+            "oracle_headroom": 0.00250156347717323,
+            "evaluable": true
+          },
+          "Q960:576": {
+            "pair_auc_difference": -0.03458918688803747,
+            "oracle_headroom": 0.0011978144096421728,
+            "evaluable": true
+          },
+          "Q960:606": {
+            "pair_auc_difference": -0.02103658536585362,
+            "oracle_headroom": 0.0024366645297623224,
+            "evaluable": true
+          },
+          "Q960:926": {
+            "pair_auc_difference": -0.032654706712356374,
+            "oracle_headroom": 0.0024450023912003793,
+            "evaluable": true
+          },
+          "Q960:OTHER": {
+            "pair_auc_difference": -0.06482758620689655,
+            "oracle_headroom": 0.004225815474449779,
+            "evaluable": true
+          }
+        }
+      },
+      "available_gate_tests": {
+        "full_and_clean_auc_lower_positive": false,
+        "four_positive_clean_fold_aucs": false,
+        "residual_four_fold_and_lower_above_sigma": false,
+        "VA_nonretrieval_compatible": false
+      },
+      "actionable": "FAIL"
+    },
+    "happy|neutral|xls_r_300m|RBF_SVM_CAL": {
+      "VA": {
+        "witnessed_rows": [
+          129,
+          232,
+          318,
+          342,
+          563,
+          869
+        ],
+        "folds_with_witness": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "independent_components": 6,
+        "oracle_ceiling_only": 0.007354947698316794,
+        "pair_fold_auc_differences": [
+          -0.16521739130434787,
+          -0.014957264957265015,
+          -0.08380952380952378,
+          -0.2012987012987013,
+          -0.01041666666666663
+        ],
+        "source_stratum_deletions": {
+          "dtype:int16": {
+            "pair_auc_difference": -0.0888888888888889,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "dtype:int32": {
+            "pair_auc_difference": -0.09787541254125409,
+            "oracle_headroom": 0.008194316015058711,
+            "evaluable": true
+          },
+          "Q128:0": {
+            "pair_auc_difference": -0.07589098532494765,
+            "oracle_headroom": 0.0026514440433501596,
+            "evaluable": true
+          },
+          "Q128:43": {
+            "pair_auc_difference": -0.10198332206445793,
+            "oracle_headroom": 0.008766012947207136,
+            "evaluable": true
+          },
+          "Q128:86": {
+            "pair_auc_difference": -0.11347517730496448,
+            "oracle_headroom": 0.006767235092110857,
+            "evaluable": true
+          },
+          "Q128:30": {
+            "pair_auc_difference": -0.10721925133689847,
+            "oracle_headroom": 0.0077966587834930046,
+            "evaluable": true
+          },
+          "Q128:94": {
+            "pair_auc_difference": -0.0971772743617404,
+            "oracle_headroom": 0.007908967207196027,
+            "evaluable": true
+          },
+          "Q128:OTHER": {
+            "pair_auc_difference": -0.07301980198019808,
+            "oracle_headroom": 0.007834203965111919,
+            "evaluable": true
+          },
+          "Q960:384": {
+            "pair_auc_difference": -0.09550012227928595,
+            "oracle_headroom": 0.007162096557035591,
+            "evaluable": true
+          },
+          "Q960:192": {
+            "pair_auc_difference": -0.08092543948272368,
+            "oracle_headroom": 0.008695961480219117,
+            "evaluable": true
+          },
+          "Q960:576": {
+            "pair_auc_difference": -0.09373749499799922,
+            "oracle_headroom": 0.004199089489303143,
+            "evaluable": true
+          },
+          "Q960:606": {
+            "pair_auc_difference": -0.09816433566433558,
+            "oracle_headroom": 0.00777169398527966,
+            "evaluable": true
+          },
+          "Q960:926": {
+            "pair_auc_difference": -0.10008503401360547,
+            "oracle_headroom": 0.007642985982810213,
+            "evaluable": true
+          },
+          "Q960:OTHER": {
+            "pair_auc_difference": -0.14492216456634543,
+            "oracle_headroom": 0.010076670317634262,
+            "evaluable": true
+          }
+        }
+      },
+      "VB": {
+        "witnessed_rows": [
+          7,
+          52,
+          134,
+          232,
+          318,
+          484,
+          563,
+          869
+        ],
+        "folds_with_witness": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "independent_components": 8,
+        "oracle_ceiling_only": 0.01000109551797701,
+        "pair_fold_auc_differences": [
+          -0.10766045548654246,
+          -0.039337474120082816,
+          -0.13368055555555547,
+          -0.15082644628099173,
+          0.03541666666666665
+        ],
+        "source_stratum_deletions": {
+          "dtype:int16": {
+            "pair_auc_difference": -0.033333333333333326,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "dtype:int32": {
+            "pair_auc_difference": -0.08384900990099009,
+            "oracle_headroom": 0.011243311282461255,
+            "evaluable": true
+          },
+          "Q128:0": {
+            "pair_auc_difference": -0.06666666666666665,
+            "oracle_headroom": 0.004970249607855526,
+            "evaluable": true
+          },
+          "Q128:43": {
+            "pair_auc_difference": -0.07809330628803246,
+            "oracle_headroom": 0.01045886613077629,
+            "evaluable": true
+          },
+          "Q128:86": {
+            "pair_auc_difference": -0.09363618938087026,
+            "oracle_headroom": 0.009707747495620311,
+            "evaluable": true
+          },
+          "Q128:30": {
+            "pair_auc_difference": -0.09233511586452758,
+            "oracle_headroom": 0.010645293715529913,
+            "evaluable": true
+          },
+          "Q128:94": {
+            "pair_auc_difference": -0.0725458468176915,
+            "oracle_headroom": 0.010890730815291016,
+            "evaluable": true
+          },
+          "Q128:OTHER": {
+            "pair_auc_difference": -0.07263899466869761,
+            "oracle_headroom": 0.010583393137257646,
+            "evaluable": true
+          },
+          "Q960:384": {
+            "pair_auc_difference": -0.08094888725849847,
+            "oracle_headroom": 0.0101477265775054,
+            "evaluable": true
+          },
+          "Q960:192": {
+            "pair_auc_difference": -0.06728632046878158,
+            "oracle_headroom": 0.010220857329906519,
+            "evaluable": true
+          },
+          "Q960:576": {
+            "pair_auc_difference": -0.07462985194077632,
+            "oracle_headroom": 0.008563134978229248,
+            "evaluable": true
+          },
+          "Q960:606": {
+            "pair_auc_difference": -0.08076923076923082,
+            "oracle_headroom": 0.010710490924711435,
+            "evaluable": true
+          },
+          "Q960:926": {
+            "pair_auc_difference": -0.08010204081632644,
+            "oracle_headroom": 0.010410040241043639,
+            "evaluable": true
+          },
+          "Q960:OTHER": {
+            "pair_auc_difference": -0.12379540400296507,
+            "oracle_headroom": 0.01048851688237884,
+            "evaluable": true
+          }
+        }
+      },
+      "available_gate_tests": {
+        "full_and_clean_auc_lower_positive": false,
+        "four_positive_clean_fold_aucs": false,
+        "residual_four_fold_and_lower_above_sigma": false,
+        "VA_nonretrieval_compatible": false
+      },
+      "actionable": "FAIL"
+    },
+    "happy|sad|xls_r_300m|RBF_SVM_CAL": {
+      "VA": {
+        "witnessed_rows": [
+          15,
+          70,
+          159,
+          862,
+          1009
+        ],
+        "folds_with_witness": [
+          2,
+          3,
+          4
+        ],
+        "independent_components": 5,
+        "oracle_ceiling_only": 0.006318776208747656,
+        "pair_fold_auc_differences": [
+          -0.08214285714285718,
+          -0.013736263736263687,
+          -0.0678260869565217,
+          -0.12925170068027203,
+          -0.012681159420289911
+        ],
+        "source_stratum_deletions": {
+          "dtype:int16": {
+            "pair_auc_difference": -0.1644444444444445,
+            "oracle_headroom": 0.012708852469490717,
+            "evaluable": true
+          },
+          "dtype:int32": {
+            "pair_auc_difference": -0.056693340566933426,
+            "oracle_headroom": 0.005640247535370735,
+            "evaluable": true
+          },
+          "Q128:0": {
+            "pair_auc_difference": -0.09365079365079365,
+            "oracle_headroom": 0.009155506009334458,
+            "evaluable": true
+          },
+          "Q128:43": {
+            "pair_auc_difference": -0.07252215954875096,
+            "oracle_headroom": 0.0057994889725659915,
+            "evaluable": true
+          },
+          "Q128:86": {
+            "pair_auc_difference": -0.08661518661518663,
+            "oracle_headroom": 0.005692701747781359,
+            "evaluable": true
+          },
+          "Q128:30": {
+            "pair_auc_difference": -0.0778900112233446,
+            "oracle_headroom": 0.005423534764931182,
+            "evaluable": true
+          },
+          "Q128:94": {
+            "pair_auc_difference": -0.05659722222222219,
+            "oracle_headroom": 0.0067990629341228015,
+            "evaluable": true
+          },
+          "Q128:OTHER": {
+            "pair_auc_difference": -0.0628605769230769,
+            "oracle_headroom": 0.006790733376452973,
+            "evaluable": true
+          },
+          "Q960:384": {
+            "pair_auc_difference": -0.08771209633278598,
+            "oracle_headroom": 0.00443817166339433,
+            "evaluable": true
+          },
+          "Q960:192": {
+            "pair_auc_difference": -0.06533101045296164,
+            "oracle_headroom": 0.0074742608767088825,
+            "evaluable": true
+          },
+          "Q960:576": {
+            "pair_auc_difference": -0.07371096586782866,
+            "oracle_headroom": 0.007174599298809592,
+            "evaluable": true
+          },
+          "Q960:606": {
+            "pair_auc_difference": -0.06319290465631933,
+            "oracle_headroom": 0.006651562919830822,
+            "evaluable": true
+          },
+          "Q960:926": {
+            "pair_auc_difference": -0.06870644599303133,
+            "oracle_headroom": 0.006637276591266561,
+            "evaluable": true
+          },
+          "Q960:OTHER": {
+            "pair_auc_difference": -0.09810587663914527,
+            "oracle_headroom": 0.005945040002529822,
+            "evaluable": true
+          }
+        }
+      },
+      "VB": {
+        "witnessed_rows": [
+          70,
+          71,
+          159,
+          218,
+          862
+        ],
+        "folds_with_witness": [
+          0,
+          2,
+          3,
+          4
+        ],
+        "independent_components": 5,
+        "oracle_ceiling_only": 0.006203542277146146,
+        "pair_fold_auc_differences": [
+          -0.18913043478260871,
+          -0.04106280193236711,
+          -0.06018518518518523,
+          -0.08441558441558439,
+          -0.01157407407407407
+        ],
+        "source_stratum_deletions": {
+          "dtype:int16": {
+            "pair_auc_difference": -0.15111111111111108,
+            "oracle_headroom": 0.012005436424041172,
+            "evaluable": true
+          },
+          "dtype:int32": {
+            "pair_auc_difference": -0.04977621049776204,
+            "oracle_headroom": 0.005538053137848609,
+            "evaluable": true
+          },
+          "Q128:0": {
+            "pair_auc_difference": -0.09126984126984128,
+            "oracle_headroom": 0.005715238615002005,
+            "evaluable": true
+          },
+          "Q128:43": {
+            "pair_auc_difference": -0.06567284448025779,
+            "oracle_headroom": 0.0070415099408182025,
+            "evaluable": true
+          },
+          "Q128:86": {
+            "pair_auc_difference": -0.07078507078507079,
+            "oracle_headroom": 0.005577388890401047,
+            "evaluable": true
+          },
+          "Q128:30": {
+            "pair_auc_difference": -0.06711560044893383,
+            "oracle_headroom": 0.00529399455953139,
+            "evaluable": true
+          },
+          "Q128:94": {
+            "pair_auc_difference": -0.050115740740740766,
+            "oracle_headroom": 0.006723632642719579,
+            "evaluable": true
+          },
+          "Q128:OTHER": {
+            "pair_auc_difference": -0.059855769230769185,
+            "oracle_headroom": 0.006677278814221088,
+            "evaluable": true
+          },
+          "Q960:384": {
+            "pair_auc_difference": -0.07649151614668859,
+            "oracle_headroom": 0.0028723490696349607,
+            "evaluable": true
+          },
+          "Q960:192": {
+            "pair_auc_difference": -0.06433549029367847,
+            "oracle_headroom": 0.007315123935025758,
+            "evaluable": true
+          },
+          "Q960:576": {
+            "pair_auc_difference": -0.06693294601791333,
+            "oracle_headroom": 0.007085231246890866,
+            "evaluable": true
+          },
+          "Q960:606": {
+            "pair_auc_difference": -0.05798226164079823,
+            "oracle_headroom": 0.006540044450495053,
+            "evaluable": true
+          },
+          "Q960:926": {
+            "pair_auc_difference": -0.062282229965156755,
+            "oracle_headroom": 0.006534419981718664,
+            "evaluable": true
+          },
+          "Q960:OTHER": {
+            "pair_auc_difference": -0.06896551724137923,
+            "oracle_headroom": 0.008372585081385608,
+            "evaluable": true
+          }
+        }
+      },
+      "available_gate_tests": {
+        "full_and_clean_auc_lower_positive": false,
+        "four_positive_clean_fold_aucs": false,
+        "residual_four_fold_and_lower_above_sigma": false,
+        "VA_nonretrieval_compatible": false
+      },
+      "actionable": "FAIL"
+    },
+    "neutral|sad|xls_r_300m|RBF_SVM_CAL": {
+      "VA": {
+        "witnessed_rows": [
+          62,
+          127,
+          260,
+          681,
+          760,
+          906,
+          989
+        ],
+        "folds_with_witness": [
+          0,
+          2,
+          4
+        ],
+        "independent_components": 7,
+        "oracle_ceiling_only": 0.008189313996512015,
+        "pair_fold_auc_differences": [
+          -0.13975155279503104,
+          0.09126984126984128,
+          -0.1821946169772256,
+          -0.2012987012987013,
+          0.007246376811594235
+        ],
+        "source_stratum_deletions": {
+          "dtype:int16": {
+            "pair_auc_difference": -0.19999999999999996,
+            "oracle_headroom": 0.010715583643263082,
+            "evaluable": true
+          },
+          "dtype:int32": {
+            "pair_auc_difference": -0.07919520547945202,
+            "oracle_headroom": 0.00790398735362019,
+            "evaluable": true
+          },
+          "Q128:0": {
+            "pair_auc_difference": -0.0953504043126685,
+            "oracle_headroom": 0.008434762797406292,
+            "evaluable": true
+          },
+          "Q128:43": {
+            "pair_auc_difference": -0.10581010864430795,
+            "oracle_headroom": 0.007146788396788506,
+            "evaluable": true
+          },
+          "Q128:86": {
+            "pair_auc_difference": -0.10577507598784186,
+            "oracle_headroom": 0.008496852130005506,
+            "evaluable": true
+          },
+          "Q128:30": {
+            "pair_auc_difference": -0.09477124183006536,
+            "oracle_headroom": 0.008687159267202316,
+            "evaluable": true
+          },
+          "Q128:94": {
+            "pair_auc_difference": -0.08604368932038842,
+            "oracle_headroom": 0.007640711577719395,
+            "evaluable": true
+          },
+          "Q128:OTHER": {
+            "pair_auc_difference": -0.08292079207920788,
+            "oracle_headroom": 0.008728399258854602,
+            "evaluable": true
+          },
+          "Q960:384": {
+            "pair_auc_difference": -0.11081560283687941,
+            "oracle_headroom": 0.007682723644112932,
+            "evaluable": true
+          },
+          "Q960:192": {
+            "pair_auc_difference": -0.07546486355952675,
+            "oracle_headroom": 0.008804160775203185,
+            "evaluable": true
+          },
+          "Q960:576": {
+            "pair_auc_difference": -0.0825144872763921,
+            "oracle_headroom": 0.008862152449571226,
+            "evaluable": true
+          },
+          "Q960:606": {
+            "pair_auc_difference": -0.09169793621013134,
+            "oracle_headroom": 0.007504690431519689,
+            "evaluable": true
+          },
+          "Q960:926": {
+            "pair_auc_difference": -0.10383275261324043,
+            "oracle_headroom": 0.008552087615094184,
+            "evaluable": true
+          },
+          "Q960:OTHER": {
+            "pair_auc_difference": -0.11796733212341193,
+            "oracle_headroom": 0.006967310904318791,
+            "evaluable": true
+          }
+        }
+      },
+      "VB": {
+        "witnessed_rows": [
+          260,
+          760,
+          774,
+          989
+        ],
+        "folds_with_witness": [
+          0,
+          1
+        ],
+        "independent_components": 4,
+        "oracle_ceiling_only": 0.0046511967715640035,
+        "pair_fold_auc_differences": [
+          -0.10952380952380958,
+          -0.08201058201058198,
+          -0.0439814814814814,
+          -0.03246753246753242,
+          -0.07777777777777783
+        ],
+        "source_stratum_deletions": {
+          "dtype:int16": {
+            "pair_auc_difference": -0.1777777777777777,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          },
+          "dtype:int32": {
+            "pair_auc_difference": -0.05850456621004574,
+            "oracle_headroom": 0.0051838817880083266,
+            "evaluable": true
+          },
+          "Q128:0": {
+            "pair_auc_difference": -0.089622641509434,
+            "oracle_headroom": 0.00637038193143169,
+            "evaluable": true
+          },
+          "Q128:43": {
+            "pair_auc_difference": -0.08250669185954973,
+            "oracle_headroom": 0.0028383998972233426,
+            "evaluable": true
+          },
+          "Q128:86": {
+            "pair_auc_difference": -0.0835866261398176,
+            "oracle_headroom": 0.0042269984303318076,
+            "evaluable": true
+          },
+          "Q128:30": {
+            "pair_auc_difference": -0.07455821834906806,
+            "oracle_headroom": 0.004955909317569174,
+            "evaluable": true
+          },
+          "Q128:94": {
+            "pair_auc_difference": -0.06650485436893205,
+            "oracle_headroom": 0.004997118478137996,
+            "evaluable": true
+          },
+          "Q128:OTHER": {
+            "pair_auc_difference": -0.06138613861386144,
+            "oracle_headroom": 0.00503112783455395,
+            "evaluable": true
+          },
+          "Q960:384": {
+            "pair_auc_difference": -0.08966565349544076,
+            "oracle_headroom": 0.005092689041383047,
+            "evaluable": true
+          },
+          "Q960:192": {
+            "pair_auc_difference": -0.05819850277710703,
+            "oracle_headroom": 0.005003036685019113,
+            "evaluable": true
+          },
+          "Q960:576": {
+            "pair_auc_difference": -0.0716805240614764,
+            "oracle_headroom": 0.005022547894734997,
+            "evaluable": true
+          },
+          "Q960:606": {
+            "pair_auc_difference": -0.07786116322701686,
+            "oracle_headroom": 0.004886244645910254,
+            "evaluable": true
+          },
+          "Q960:926": {
+            "pair_auc_difference": -0.08199767711962835,
+            "oracle_headroom": 0.004868820604254198,
+            "evaluable": true
+          },
+          "Q960:OTHER": {
+            "pair_auc_difference": -0.05989110707803991,
+            "oracle_headroom": 0.0,
+            "evaluable": true
+          }
+        }
+      },
+      "available_gate_tests": {
+        "full_and_clean_auc_lower_positive": false,
+        "four_positive_clean_fold_aucs": false,
+        "residual_four_fold_and_lower_above_sigma": false,
+        "VA_nonretrieval_compatible": false
+      },
+      "actionable": "FAIL"
+    }
+  },
+  "sigma_E": 0.017422136038214735,
+  "supported_layer_control": "UNKNOWN",
+  "protected_validation_queried": false
+}
