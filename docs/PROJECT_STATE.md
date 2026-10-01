@@ -90,7 +90,7 @@ BhavVani versus competition SRCASW-BhavVaani provenance remains:
 
 Do not transfer licensing, speaker metadata, or source lineage between them.
 
-## Current mission
+## Layer-1 system design
 
 Mission:
 
@@ -100,35 +100,77 @@ Worker role:
 
 **Research Scientist**
 
-Purpose:
+Status:
 
-**Layer-1 system/ensemble design and Astra bottleneck isolation**
+**COMPLETE — RETURNED TO STRATEGIC SCIENTIST**
 
 Active mission branch:
 
 `ss/evidence-synthesis-001`
 
-The historical `ss/...` branch name is retained intentionally. Do not create a
-second remote branch merely to rename the clarified worker role.
+The historical `ss/...` branch name is retained intentionally. No replacement
+remote branch was created.
 
-## Current bottleneck
+Authoritative Layer-1 artifacts:
 
-Exploit the frozen DEFHS empirical evidence and acquired scientific evidence to
-reduce the candidate space to a small, coherent end-to-end SER + retrieval
-system, then isolate one high-value architecture decision for Astra 6 Max.
+- `runs/RS-DEFHS-SYSTEM-DESIGN-001/MISSION.md`
+- `runs/RS-DEFHS-SYSTEM-DESIGN-001/SYSTEM_DESIGN.md`
+- `runs/RS-DEFHS-SYSTEM-DESIGN-001/EXPERIMENT_LADDER.md`
+- `runs/RS-DEFHS-SYSTEM-DESIGN-001/ASTRA_BOTTLENECK_PACKET.md`
+- `runs/RS-DEFHS-SYSTEM-DESIGN-001/FINAL_RETURN_TO_SS.md`
 
-This is a design mission. It is not more EDA, validation redesign, literature
-discovery, broad benchmarking, protected-fold optimization, or leaderboard
-iteration.
+## Provisional system selected by Layer 1
+
+The implementation program is frozen-first:
+
+1. keep the certified duplicate-retrieval lane separate as a deterministic hard
+   override;
+2. screen a frozen emotion2vec-family representation as the primary
+   emotion-specialized candidate;
+3. screen frozen Vesper-4 as a second emotion-specialized candidate;
+4. run one bounded WavLM-large versus XLS-R-300m discriminator and keep at most
+   one generic/multilingual SSL lane;
+5. retain the existing FULL_RBF_SVM acoustic system only while it adds genuine
+   ensemble diversity;
+6. treat eGeMAPS and transcript semantics as conditional diversity lanes;
+7. use a simple regularized probability/logit blend and ordinary argmax first;
+8. do not perform full-model fine-tuning.
+
+Every pretrained asset remains subject to execution-time checkpoint revision,
+license, and competition-policy verification.
+
+## Astra bottleneck
+
+Primary unresolved decision:
+
+**Should the system remain a fully frozen representation-diversity core, or,
+after the frozen screen selects one strongest encoder, should one bounded
+upper-layer PEFT experiment become the default next use of GPU compute?**
+
+Astra receives:
+
+`runs/RS-DEFHS-SYSTEM-DESIGN-001/ASTRA_BOTTLENECK_PACKET.md`
+
+Astra must not redo the broad evidence synthesis, validation, EDA, or knowledge
+acquisition.
 
 ## Next handoff
 
-After Layer 1 completes:
+1. Strategic Scientist reviews and integrates Layer-1 system design.
+2. Astra 6 Max answers only the adaptation-versus-diversity bottleneck.
+3. Strategic Scientist integrates the Astra answer.
+4. Layer-3 GPT-5.6 Sol High Research Scientist implements the ordered experiment
+   ladder.
 
-1. Strategic Scientist integrates the Layer-1 design;
-2. Astra 6 Max receives only the narrow bottleneck packet;
-3. a later GPT-5.6 Sol High Research Scientist implements and experimentally
-   evaluates the integrated system.
+No Layer-3 modeling has been authorized or run by this mission.
+
+## Protected information
+
+Protected seed 20261001 remains:
+
+**UNTOUCHED / CONFIRMATION-ONLY**
+
+No protected candidate performance was queried during Layer 1.
 
 ## Do not redo
 
@@ -140,6 +182,8 @@ Unless concrete new evidence reveals a defect:
 - do not redo knowledge discovery/acquisition;
 - do not query protected validation during ordinary model research;
 - do not infer hidden public/private row fractions from 40/60 score weights;
-- do not assume BhavVani and SRCASW-BhavVaani are the same dataset.
+- do not assume BhavVani and SRCASW-BhavVaani are the same dataset;
+- do not launch a broad pretrained-model zoo;
+- do not use unresolved external-data/model licensing as if it were permission.
 
 Historical details remain preserved under `runs/`.
