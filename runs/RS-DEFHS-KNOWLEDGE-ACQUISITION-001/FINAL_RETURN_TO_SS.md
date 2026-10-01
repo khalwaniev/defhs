@@ -20,9 +20,11 @@ Scientific discovery/audit is complete enough for synthesis, and the GitHub cont
 - Normalized source records: **84**.
 - Original Deep Research records explicitly dispositioned: **36 / 36**.
 - Newly added canonical records: **48**.
+- Canonical model/checkpoint/family records: **23** (excluding the noncanonical user bundle and alternate-host duplicate pointer).
+- External dataset/dataset-license records: **14**.
+- `POINTER_ONLY` records: **33**.
 - Records marked `PENDING_BINARY_HANDOFF`: **17**.
 - License-status strings containing `UNRESOLVED`: **24**.
-- External dataset/dataset-license records: **14**.
 - The original discovery manifest is preserved both in GitHub and as raw bytes in the clean Drive packet.
 - BhavVani vs competition SRCASW-BhavVaani provenance remains **UNRESOLVED**; no same-source/derivative claim is made.
 
@@ -30,9 +32,13 @@ Scientific discovery/audit is complete enough for synthesis, and the GitHub cont
 
 Warehouse: `/DEFHS/knowledge/` (folder ID `1asWciARNwNE_OrL-_OmKWBxF3MF8uMeR`).
 
-All 11 required subfolders exist. The `manifests/` folder contains the clean 64,089-byte acquisition packet plus eight individually verified control files listed in `WAREHOUSE_INDEX.md`.
+All 11 required subfolders exist. The `manifests/` folder contains the clean 64,089-byte acquisition packet plus eight individually verified control files listed in `WAREHOUSE_INDEX.md`. Their verified stored size totals **179,456 bytes**. `SOURCE_PROVENANCE.jsonl` remains canonical in GitHub and is also contained in the clean packet ZIP; it is not falsely claimed as a standalone Drive file.
 
 The packet ZIP was sanitized during recovery: no `.pyc` or `__pycache__` entry remains. Packet SHA256: `53956d73ee230e3619234c0f63dcf09c1e0f48affad79524ec3175cc193f382f`.
+
+Artifact/checksum state:
+- clean packet and eight individually uploaded control files have recorded SHA256 values in `CHECKSUMS_SHA256.txt` (where exact uploaded bytes are known);
+- selected external paper/repository binary SHA256 values remain pending because those files are not yet acquired.
 
 External acquired binary state:
 - paper PDFs in Drive: **0**;
