@@ -91,11 +91,14 @@
   "next_decision_required_from_ss": null,
   "stage1_package": {
     "path": "kaggle/rs_system_implementation_001_frozen_screen/",
-    "kernel_id": "khalwaniev/defhs-rs-system-implementation-001-frozen-screen",
+    "kernel_id": "khalwaniev/defhs-rs-system-implementation-frozen-screen",
     "competition_source": "dataverse-detecting-emotions-from-hindi-speech",
     "kernel_source": "khalwaniev/defhs-ds002-closure",
     "actual_gpu_execution": "NOT_RUN_CURRENT_RUNTIME_HAS_NO_CUDA_OR_AUTHENTICATED_KAGGLE_EXECUTION_SURFACE",
     "synthetic_static_smoke": "PASS_NONSCIENTIFIC",
-    "source_commit": "4bc3078758c237fd0be8a634c489bc1258a13c07"
+    "source_commit": "4bc3078758c237fd0be8a634c489bc1258a13c07",
+    "kaggle_version_1_push": "SUCCESS",
+    "kaggle_version_1_url": "https://www.kaggle.com/code/khalwaniev/defhs-rs-system-implementation-frozen-screen",
+    "slug_normalization_note": "Kaggle normalized title to slug without -001-; canonical metadata corrected after v1 push"
   }
 }

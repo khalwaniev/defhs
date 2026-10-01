@@ -52,3 +52,11 @@
 - Protected validation not queried.
 - Kaggle submission not made.
 - Frozen-screen executable package authority commit: `4bc3078758c237fd0be8a634c489bc1258a13c07`.
+
+## Kaggle Stage-1 launch
+
+- Local branch fast-forwarded cleanly to `26a8ba8680e6ea03a6fc919fd94a38065db82568` before launch.
+- Kaggle reported: `Kernel version 1 successfully pushed`.
+- Kaggle canonical notebook URL/slug is `khalwaniev/defhs-rs-system-implementation-frozen-screen`.
+- The original metadata id contained an extra `-001-` segment and therefore failed only the subsequent status lookup; the push itself succeeded.
+- Canonical metadata is corrected to the actual Kaggle slug for future operations. Do not repush solely for this metadata correction while v1 is the active intended execution.
