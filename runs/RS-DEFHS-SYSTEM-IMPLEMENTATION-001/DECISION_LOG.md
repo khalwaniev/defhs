@@ -112,3 +112,13 @@
 - emotion2vec is the one prospective parent, selected before its pooling/residual controls. Stage 6 now runs one CPU attentive-statistics comparison on existing cached frames.
 - No ex-ante scalar-mixture API-unavailability record exists in the Stage-1 scaffold. Only final-frame caches were produced. This is UNKNOWN evidence, not a retrospectively declared unsupported comparison; G2 cannot pass on that omission.
 - Protected validation remains unqueried; Kaggle competition submission remains not made.
+
+## Frozen closure after pooling — final membership lock
+
+- Stage 6 completed one linear-attention weighted-mean/std control on cached emotion2vec frames with training-only cyclic stopping. All cached mean+std features reproduced bit-for-bit; recovered sklearn probabilities match V3 within 1.11e-8 in V-A and 2.82e-10 in V-B. Nine outer fits select epoch zero; one V-B fit selects epoch four. Pooling standalone V-B 0.7394225674 is not stable system value; retain original mean+std.
+- The already scheduled final marginal closure was registered at `1346fd0` before its estimates: reused existing audio cores, their conditional 0/25% eGeMAPS tests, and all member deletions, full/CLEAN V-B and non-retrieval V-A. No new encoder/head or weight search was introduced. The complete comparison family is recorded.
+- The final comparison has q=3.4807950022. Neural pair marginal +0.0384410882 has simultaneous lower -0.0113734546. Conditional eGeMAPS marginal +0.0104495308 has lower -0.0061850652. Its earlier narrow conditional pass is retained historically, but does not survive final marginal closure. All additions are killed. This is not a claim that their point gains are zero.
+- Final frozen SER membership: emotion2vec_base final-frame mean+std + L2 logistic C1. No ensemble weights to tune. Fixed certified retrieval remains a separate hard override.
+- Exact final P/E frozen before offset/residual assessment. G0/G1 pass; G2 UNKNOWN (scalar-mixture evidence absent and no scaffold-time unavailability record); G3 fails (maximum available downstream upper bound 0.0308048448 > sigma_E 0.0174221360); all 12 pair/head witness candidates fail full+CLEAN simultaneous AUC and residual criteria. G6 is not entered. Result = NO_PEFT:DOWNSTREAM_NOT_CLOSED, terminal under current authority. Shared errors are not called representation failure. No adaptation experiment or GPU preparation ran.
+- Required 19-vector offsets on P/E yield V-B 0.7319659648, delta -0.0064086117, with inconsistent fold choices. Final Stage 8 rejects offsets and retains argmax after membership lock.
+- Stage 9 is now running fixed V-D/Q/retrieval/correlated-allocation diagnostics. No protected query or competition submission.

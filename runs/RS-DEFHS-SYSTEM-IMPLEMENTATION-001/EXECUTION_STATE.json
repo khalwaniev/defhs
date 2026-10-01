@@ -1,7 +1,7 @@
 {
   "mission_id": "RS-DEFHS-SYSTEM-IMPLEMENTATION-001",
   "layer": "3_OF_3",
-  "status": "FROZEN_CLOSURE_STAGE6_CPU_RUNNING",
+  "status": "FROZEN_SYSTEM_LOCKED_STAGE9_CPU_RUNNING",
   "repository": "khalwaniev/defhs",
   "branch": "rs/system-implementation-001",
   "mission_start_head": "388ec75e3531c180d4f9cc936fa6eb9f17773e2f",
@@ -15,12 +15,12 @@
     "stage1": "COMPLETE_DUAL_GPU_SCAFFOLD_AND_OOF",
     "stage2": "COMPLETE_EMOTION2VEC_FROZEN_SCREEN",
     "stage3": "COMPLETE_XLSR_FROZEN_SCREEN",
-    "stage4": "COMPLETE_AUDIO_CORE_PLUS_CONDITIONAL_EGEMAPS",
+    "stage4": "COMPLETE_FINAL_SINGLE_SER_MEMBER",
     "stage5": "COMPLETE_TEXT_KILLED",
-    "stage6": "RUNNING_ONE_PARENT_CPU_POOLING_CONTROL",
-    "stage7": "NOT_STARTED",
-    "stage8": "NOT_STARTED",
-    "stage9": "NOT_STARTED"
+    "stage6": "COMPLETE_ATTENTION_KILLED_MEANSTD_RETAINED",
+    "stage7": "CLOSED_NO_PEFT_DOWNSTREAM_NOT_CLOSED",
+    "stage8": "COMPLETE_OFFSETS_KILLED_ARGMAX_RETAINED",
+    "stage9": "RUNNING_FINALIST_STRESS"
   },
   "stage0": {
     "historical_stop": {
@@ -79,7 +79,7 @@
     "retrieval_map_drive_id": "1JsnJCryDsbOV7GWUAkzi4cCS7uZ3WGcx",
     "retrieval_map_sha256": "e08f7d06c13d64a1d365d7ae6fa741d6e831dea8816de6663d4a9c0eb113d2a7"
   },
-  "peft_gate_status": "PENDING_FROZEN_SYSTEM_CLOSURE",
+  "peft_gate_status": "NO_PEFT:DOWNSTREAM_NOT_CLOSED",
   "drive_mission_root": {
     "path": "/DEFHS/rs_system_implementation_001/",
     "id": "1yJIK5_EE_57wO-GmlzIqfs21Sc5JtRDB"
@@ -91,7 +91,7 @@
     "exact_gpu_quota_charge": "UNKNOWN_NOT_QUERIED",
     "continuation_accelerator_hours": 0
   },
-  "next_decision_required_from_ss": null,
+  "next_decision_required_from_ss": "Review frozen pre-protected finalist package; protected confirmation requires new explicit SS authorization",
   "stage1_package": {
     "path": "kaggle/rs_system_implementation_001_frozen_screen/",
     "kernel_id": "khalwaniev/defhs-rs-system-implementation-frozen-screen",
@@ -181,5 +181,9 @@
     "emotion2vec_base_L2_LOGREG",
     "EGEMAPS_L2_LOGREG"
   ],
-  "prospective_parent": "emotion2vec_base_L2_LOGREG"
+  "prospective_parent": "emotion2vec_base_L2_LOGREG",
+  "final_frozen_members": [
+    "emotion2vec_base_L2_LOGREG"
+  ],
+  "final_retrieval_lane": "existing certified unanimous-label hard override, separate"
 }
