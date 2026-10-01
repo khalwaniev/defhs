@@ -27,7 +27,7 @@ The scientific discovery, source audit, normalization, provenance reconciliation
 - Repository archives successfully written to Drive by this runtime: **0**.
 - Model weights copied: **0** (intentional under size/license policy).
 - External datasets copied: **0** (intentional until license + competition compatibility).
-- Total acquired external binary bytes in Drive: **0** at this return.
+- Total acquired external paper/repository binary bytes in Drive: **0** at this return.\n- Generated control-layer archive bytes in Drive: **69,185**.
 - SHA256: exact SHA256 recorded for the two preserved input authorities; all external-binary hashes are pending the WSL handoff and will be computed before upload.
 
 ## Drive warehouse
@@ -35,7 +35,7 @@ The scientific discovery, source audit, normalization, provenance reconciliation
 `/DEFHS/knowledge/`  
 Folder ID: `1asWciARNwNE_OrL-_OmKWBxF3MF8uMeR`
 
-All required subfolders were created and verified by connector read/write. `WAREHOUSE_INDEX.md` contains their exact IDs. No file-level existence is falsely claimed.
+All required subfolders were created and verified by connector read/write. `WAREHOUSE_INDEX.md` contains their exact IDs. A control-layer packet archive is also verified present at `/DEFHS/knowledge/manifests/RS-DEFHS-KNOWLEDGE-ACQUISITION-001_packet.zip` (Drive ID `1a3QzpBCtdZv5G1tz8CBh91fq1rMZPfsf`, 69,185 bytes, SHA256 `eec4948c4653916132a26fb66d7fead4a11f64e332ee88af4d581fdf89f38955`). No external paper/repository binary is falsely claimed.
 
 ## Most important corrections to Deep Research
 
