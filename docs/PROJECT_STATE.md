@@ -51,7 +51,7 @@ Frozen policy:
 - Q128/Q960 = diagnostic quantization stresses only;
 - correlated-allocation envelope = secondary leaderboard-risk sensitivity;
 - retrieval = fixed 77 duplicate groups / 78 test clips;
-- protected seed 20261001 = untouched, confirmation-only.
+- protected seed 20261001 = one SS-authorized A/B confirmation completed; no retuning.
 
 Detailed authority:
 
@@ -213,7 +213,7 @@ The CPU continuation completed Stage 4 frozen complementarity/membership,
 Stage 5 transcript controls, Stage 6 one-parent pooling, the pre-PEFT controls
 and terminal gate, Stage 8 offsets, and Stage 9 pre-protected diagnostics.
 
-Locked RS finalist: `emotion2vec_base_L2_LOGREG`, frozen final-frame mean+std,
+Accepted locked finalist: `emotion2vec_base_L2_LOGREG`, frozen final-frame mean+std,
 ordinary argmax, with the existing certified retrieval hard override separate.
 V-B macro-F1 is `0.7383745765682462`; V-A SER is
 `0.8016519493535111`; retrieval-aware V-A is `0.8052768510049559`.
@@ -230,14 +230,22 @@ preserve the mean advantage over the accepted cheap references across the
 tested scenarios; they do not prove hidden-domain transfer.
 
 The finalist is fitted on all 826 cached training embeddings and its 209 test
-inference rows are archived with the unchanged 78-clip certified map. No Kaggle
-submission has been made. Protected confirmation is not authorized.
+inference rows are archived with the unchanged 78-clip certified map. The next
+user instruction accepted this lock and authorized one protected comparison
+against the exact historical FULL_RBF_SVM, plus submission preparation.
+The aggregate decision rule was committed before protected assignment access.
+Protected macro-F1 is `0.7376693938891288` for the finalist and
+`0.6109463795639095` for FULL_RBF_SVM: **CONFIRM_FINALIST**.
+The prepared `submission.csv` passes exact original sample order/schema/209-ID
+parity, with the unchanged 78-row retrieval override. Status is
+**READY_FOR_SUBMISSION**. No retuning or Kaggle submission occurred.
 
 Implementation results and the SS return are under
 `runs/RS-DEFHS-SYSTEM-IMPLEMENTATION-001/`. GitHub remains canonical for decisions;
 heavy V3 and CPU artifacts are preserved in the existing Drive mission root.
-These are RS execution findings awaiting SS review, not SS acceptance or a main
-branch merge.
+The pre-protected finalist was accepted for this confirmation; no main branch
+merge occurred. Confirmation and preparation details are in the existing mission
+folder's `PROTECTED_CONFIRMATION.md` and `PROTECTED_CONFIRMATION.json`.
 
 The implementation worker must preserve the frozen validation hierarchy, OOF
 alignment, experiment provenance, promote/kill rules, and the precommitted RS2
@@ -247,11 +255,14 @@ At the historical integration point no Layer-3 experiment had been run.
 The current implementation results are recorded above and in its mission ledger.
 ## Protected information
 
-Protected seed 20261001 remains:
+Protected seed 20261001 status:
 
-**UNTOUCHED / CONFIRMATION-ONLY**
+**CONFIRMATION-ONLY — USED ONCE, FINALIST CONFIRMED**
 
 No protected candidate performance was queried during Layer 1 or Layer 2.
+The later explicitly authorized execution compared only the locked finalist and
+historical FULL_RBF_SVM. No result initiated another tuning loop; Kaggle upload
+still requires a separate instruction.
 
 ## Do not redo
 

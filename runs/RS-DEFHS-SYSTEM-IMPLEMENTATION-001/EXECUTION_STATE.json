@@ -1,14 +1,14 @@
 {
   "mission_id": "RS-DEFHS-SYSTEM-IMPLEMENTATION-001",
   "layer": "3_OF_3",
-  "status": "COMPLETE_PRE_PROTECTED_RETURN_TO_SS",
+  "status": "READY_FOR_SUBMISSION",
   "repository": "khalwaniev/defhs",
   "branch": "rs/system-implementation-001",
   "mission_start_head": "388ec75e3531c180d4f9cc936fa6eb9f17773e2f",
   "ledger_initialization_commit": "13ba0b5e7e9ba49a720041d95f9ebf139b9a7b57",
   "stage0_stop_commit": "efd312c3515acddee143a5398c003471ecd4b885",
   "local_worktree_status": "CANONICAL_CHECKOUT_VERIFIED_UNEXPECTED_TMP_PRESERVED",
-  "protected_validation_status": "NOT_QUERIED_SS_CONFIRMATION_AUTHORIZATION_ABSENT",
+  "protected_validation_status": "CONFIRMATION_ONCE_COMPLETE_SS_AUTHORIZED_FINALIST_CONFIRMED",
   "kaggle_submission_status": "NOT_MADE",
   "stages": {
     "stage0": "CLEARED_AFTER_SS_CONTINUATION",
@@ -20,7 +20,9 @@
     "stage6": "COMPLETE_ATTENTION_KILLED_MEANSTD_RETAINED",
     "stage7": "CLOSED_NO_PEFT_DOWNSTREAM_NOT_CLOSED",
     "stage8": "COMPLETE_OFFSETS_KILLED_ARGMAX_RETAINED",
-    "stage9": "COMPLETE_PRE_PROTECTED_DIAGNOSTICS"
+    "stage9": "COMPLETE_PRE_PROTECTED_DIAGNOSTICS",
+    "protected_confirmation": "COMPLETE_ONCE_CONFIRM_FINALIST",
+    "submission_preparation": "COMPLETE_VALIDATED_NOT_SUBMITTED"
   },
   "stage0": {
     "historical_stop": {
@@ -92,7 +94,7 @@
     "continuation_accelerator_hours": 0,
     "historical_initial_ledger_gpu_accelerator_hours": 0
   },
-  "next_decision_required_from_ss": "Review/accept locked pre-protected frozen finalist; explicitly authorize one confirmation-only protected seed 20261001 query if proceeding. No tuning loop or submission is authorized.",
+  "next_decision_required_from_ss": "Prepared submission is ready; Kaggle upload requires a separate explicit instruction. No further research or retuning.",
   "stage1_package": {
     "path": "kaggle/rs_system_implementation_001_frozen_screen/",
     "kernel_id": "khalwaniev/defhs-rs-system-implementation-frozen-screen",
@@ -221,6 +223,132 @@
     "Conditional OOF credibility does not remove historical model-selection bias"
   ],
   "active_execution_blockers": [],
-  "SS_acceptance": "PENDING_REVIEW_NOT_CLAIMED",
-  "final_return_path": "runs/RS-DEFHS-SYSTEM-IMPLEMENTATION-001/FINAL_RETURN_TO_SS.md"
+  "SS_acceptance": "LOCKED_PRE_PROTECTED_FINALIST_ACCEPTED_BY_USER_AUTHORIZATION",
+  "final_return_path": "runs/RS-DEFHS-SYSTEM-IMPLEMENTATION-001/FINAL_RETURN_TO_SS.md",
+  "protected_confirmation": {
+    "starting_sha": "67ae599a89e98ad4c185621bf030db9df9d9b7e8",
+    "decision_rule_precommit_sha": "4bcd9468bb5759ba1ee2813a0ffdd128bd8ca13a",
+    "execution_sha": "aa16f60043152115de92dd446e593286eecf2fe0",
+    "protected_fold_sha256": "b102eec374967672abc987afe857f689eec47fc104d96ce2f487c6caba26f46c",
+    "protected_evaluation_count": 1,
+    "system_A": {
+      "aggregate_macro_f1": 0.7376693938891288,
+      "fold_macro_f1": [
+        0.6984307052372849,
+        0.7080006747862448,
+        0.7488996722806072,
+        0.8175677429160629,
+        0.7135771790362753
+      ],
+      "per_class_f1": {
+        "angry": 0.7920792079207921,
+        "happy": 0.7329842931937173,
+        "neutral": 0.6906474820143885,
+        "sad": 0.734966592427617
+      },
+      "confusion_matrix": [
+        [
+          160,
+          15,
+          19,
+          11
+        ],
+        [
+          13,
+          140,
+          16,
+          23
+        ],
+        [
+          14,
+          21,
+          144,
+          38
+        ],
+        [
+          12,
+          14,
+          21,
+          165
+        ]
+      ],
+      "confusion_order": [
+        "angry",
+        "happy",
+        "neutral",
+        "sad"
+      ]
+    },
+    "system_B": {
+      "aggregate_macro_f1": 0.6109463795639095,
+      "fold_macro_f1": [
+        0.6292271427543514,
+        0.5850888999793314,
+        0.6453234203394664,
+        0.5991601092832283,
+        0.5893320859065688
+      ],
+      "per_class_f1": {
+        "angry": 0.6537530266343826,
+        "happy": 0.5445544554455446,
+        "neutral": 0.6232558139534884,
+        "sad": 0.6222222222222222
+      },
+      "confusion_matrix": [
+        [
+          135,
+          48,
+          12,
+          10
+        ],
+        [
+          34,
+          110,
+          29,
+          19
+        ],
+        [
+          14,
+          31,
+          134,
+          38
+        ],
+        [
+          25,
+          23,
+          38,
+          126
+        ]
+      ],
+      "confusion_order": [
+        "angry",
+        "happy",
+        "neutral",
+        "sad"
+      ]
+    },
+    "decision": "CONFIRM_FINALIST",
+    "selected_system": "emotion2vec_base_L2_LOGREG",
+    "retuning_after_protected": false,
+    "public_lb_used_for_selection": false
+  },
+  "submission_preparation": {
+    "submission_path": "/home/fikar/zingle/defhs/runs/RS-DEFHS-SYSTEM-IMPLEMENTATION-001/submission.csv",
+    "submission_sha256": "523e6327e5ad0791ace145fc8f224bd6686a6d7977fa5501c4757380e54215c8",
+    "submission_rows": 209,
+    "submission_schema": [
+      "Id",
+      "emotion"
+    ],
+    "submission_class_counts": {
+      "angry": 60,
+      "happy": 45,
+      "neutral": 55,
+      "sad": 49
+    },
+    "retrieval_override_count": 78,
+    "sample_submission_parity": "PASS",
+    "kaggle_submission_made": false,
+    "next": "READY_FOR_SUBMISSION"
+  }
 }

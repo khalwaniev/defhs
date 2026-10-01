@@ -134,3 +134,12 @@
 - Initial CPU check ran before archive finalization and correctly found the archive absent; only the completed final 4/4 check is preservation authority. No failed upload/check is called scientific failure or successful preservation.
 - Complete pre-protected finalist work is closed. No new SS protected-confirmation authorization exists in the governing mission/state. Stop before confirmation and return the locked package to SS. Do not merge main or submit Kaggle.
 - Stage-1 historical quota consumption remains UNKNOWN; this continuation consumed zero accelerator-hours. Prior untracked `.tmp/` and all cached data remain preserved.
+
+## SS-authorized protected confirmation and submission preparation
+
+- Starting local/remote SHA: `67ae599a89e98ad4c185621bf030db9df9d9b7e8`; same implementation branch, existing `.tmp/` preserved. User accepted the locked pre-protected finalist and explicitly authorized one protected A/B comparison and submission preparation, without a Kaggle upload.
+- Aggregate rule committed/pushed at `4bcd9468bb5759ba1ee2813a0ffdd128bd8ca13a` before parsing protected assignments; executor preserved at `aa16f60043152115de92dd446e593286eecf2fe0`. All protected/cache/model/inference/retrieval hashes and original sample 209-ID/order checks passed.
+- Exact historical uncalibrated FULL_RBF_SVM refit reproduced all ordinary V-A/V-B hard labels and fold scores; V-A 0.6939938030859938, V-B 0.6310269549043466. A preflight-only diagnostic checked the existing hard OOF because the summary JSON has no confusion field; no protected access occurred before parity passed.
+- One CPU protected evaluation of only A and B: A 0.7376693938891288, B 0.6109463795639095; strict aggregate rule gives **CONFIRM_FINALIST**. Fold/per-class/confusion details are diagnostic only. No retuning, killed candidate, public leaderboard, GPU, extraction or calibration of B.
+- Reused A's verified archived all-826 fit and 209 inference rows. Applied the same frozen certified override to 78 rows; all raw A labels already agree, so zero labels change. Submission SHA256 `523e6327e5ad0791ace145fc8f224bd6686a6d7977fa5501c4757380e54215c8`; class counts 60/45/55/49 in angry/happy/neutral/sad order. Exact sample order/schema/ID/label/retrieval parity PASS.
+- Saved OOF metrics and submission bytes independently checked; training was not repeated for this verification. Status **READY_FOR_SUBMISSION**. Kaggle submission not made; no main merge or new large archive. See PROTECTED_CONFIRMATION.md/JSON and its small OOF/submission CSVs.
