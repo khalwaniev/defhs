@@ -26,3 +26,13 @@ No paper PDF, repository archive, model weight, or external dataset byte is clai
 Records marked `PENDING_BINARY_HANDOFF` in `KNOWLEDGE_MANIFEST.csv` are the legally/reproducibly selected binary acquisition set. The companion script performs the download, SHA256 calculation, and `rclone` upload from the user's canonical WSL environment.
 
 This file must not be interpreted as proof that a listed target file exists until the post-handoff readback confirms it.
+
+## Verified control-layer archive
+
+- `/DEFHS/knowledge/manifests/RS-DEFHS-KNOWLEDGE-ACQUISITION-001_packet.zip`
+- Drive file ID: `1a3QzpBCtdZv5G1tz8CBh91fq1rMZPfsf`
+- Size: 69,185 bytes
+- SHA256: `eec4948c4653916132a26fb66d7fead4a11f64e332ee88af4d581fdf89f38955`
+- State: **EXISTS** (uploaded through connected Drive).
+
+This ZIP is a control-layer snapshot of the generated acquisition packet; it is not a substitute for the selected external paper/repository binaries that remain pending WSL handoff.
