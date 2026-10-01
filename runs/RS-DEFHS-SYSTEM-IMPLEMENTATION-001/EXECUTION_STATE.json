@@ -1,7 +1,7 @@
 {
   "mission_id": "RS-DEFHS-SYSTEM-IMPLEMENTATION-001",
   "layer": "3_OF_3",
-  "status": "STAGE1_SCAFFOLD_IMPLEMENTED_AWAITING_GPU_EXECUTION",
+  "status": "STAGE1_KAGGLE_V1_ERROR_PATCHED_READY_V2",
   "repository": "khalwaniev/defhs",
   "branch": "rs/system-implementation-001",
   "mission_start_head": "388ec75e3531c180d4f9cc936fa6eb9f17773e2f",
@@ -12,9 +12,9 @@
   "kaggle_submission_status": "NOT_MADE",
   "stages": {
     "stage0": "CLEARED_AFTER_SS_CONTINUATION",
-    "stage1": "SCAFFOLD_IMPLEMENTED_STATIC_SMOKE_PASS_GPU_PENDING",
-    "stage2": "EMOTION2VEC_EXECUTION_PACKAGE_READY_NOT_RUN",
-    "stage3": "XLSR_EXECUTION_PACKAGE_READY_NOT_RUN",
+    "stage1": "V1_PRE_EXTRACTION_ERROR_PATCHED_V2_READY",
+    "stage2": "EMOTION2VEC_NOT_REACHED_V1",
+    "stage3": "XLSR_NOT_REACHED_V1",
     "stage4": "NOT_STARTED",
     "stage5": "NOT_STARTED",
     "stage6": "NOT_STARTED",
@@ -86,7 +86,9 @@
   },
   "compute_used": {
     "gpu_accelerator_hours": 0,
-    "model_execution": false
+    "model_execution": false,
+    "kaggle_v1_wall_seconds_to_traceback": 80.081398354,
+    "exact_gpu_quota_charge": "UNKNOWN_NOT_QUERIED"
   },
   "next_decision_required_from_ss": null,
   "stage1_package": {
@@ -99,6 +101,19 @@
     "source_commit": "4bc3078758c237fd0be8a634c489bc1258a13c07",
     "kaggle_version_1_push": "SUCCESS",
     "kaggle_version_1_url": "https://www.kaggle.com/code/khalwaniev/defhs-rs-system-implementation-frozen-screen",
-    "slug_normalization_note": "Kaggle normalized title to slug without -001-; canonical metadata corrected after v1 push"
+    "slug_normalization_note": "Kaggle normalized title to slug without -001-; canonical metadata corrected after v1 push",
+    "kaggle_version_1_status": "ERROR",
+    "kaggle_version_1_failure": {
+      "traceback_time_seconds": 80.081398354,
+      "failing_function": "locate_unique(DATA_MANIFEST.csv)",
+      "cause": "two byte-identical canonical DATA_MANIFEST.csv aliases from the same upstream kernel both matched MANIFEST_SHA; runner incorrectly required exactly one matching path",
+      "matching_paths": [
+        "/kaggle/input/notebooks/khalwaniev/defhs-ds002-closure/ds002_closure/DATA_MANIFEST.csv",
+        "/kaggle/input/notebooks/khalwaniev/defhs-ds002-closure/ds002_authority/runs/DS-DEFHS-VALIDATION-HARDENING-002/DATA_MANIFEST.csv"
+      ],
+      "model_execution_reached": false,
+      "protected_validation_queried": false
+    },
+    "v2_patch": "accept one or more SHA256-identical canonical manifest aliases; deterministically prefer ds002_closure path and record all aliases"
   }
 }

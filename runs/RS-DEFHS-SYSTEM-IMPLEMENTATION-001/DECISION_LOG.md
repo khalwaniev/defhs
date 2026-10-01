@@ -60,3 +60,16 @@
 - Kaggle canonical notebook URL/slug is `khalwaniev/defhs-rs-system-implementation-frozen-screen`.
 - The original metadata id contained an extra `-001-` segment and therefore failed only the subsequent status lookup; the push itself succeeded.
 - Canonical metadata is corrected to the actual Kaggle slug for future operations. Do not repush solely for this metadata correction while v1 is the active intended execution.
+
+## Kaggle v1 failure — exact diagnosis
+
+- Kaggle v1 terminal status: `KernelWorkerStatus.ERROR`.
+- Traceback occurred at 80.081398354 seconds, before any pretrained model construction or representation extraction.
+- Exact failing call: `locate_unique("DATA_MANIFEST.csv")`.
+- The upstream `defhs-ds002-closure` input exposes two copies of `DATA_MANIFEST.csv`:
+  1. `/kaggle/input/notebooks/khalwaniev/defhs-ds002-closure/ds002_closure/DATA_MANIFEST.csv`
+  2. `/kaggle/input/notebooks/khalwaniev/defhs-ds002-closure/ds002_authority/runs/DS-DEFHS-VALIDATION-HARDENING-002/DATA_MANIFEST.csv`
+- Both paths passed the runner's canonical SHA256 filter `1e5552d42aec94efae197e7dac95de41cfc96e40336f3e513b9a87e3ccc72469`; therefore this is duplicate-path aliasing of the same certified authority, not authority ambiguity.
+- Patch: accept one-or-more matching canonical aliases, deterministically prefer the `ds002_closure` copy when present, and record every matching alias in `STAGE1_INPUT_AUTHORITY.json`.
+- No model result exists from v1. emotion2vec and XLS-R were not reached.
+- Protected validation was not queried. Kaggle competition submission was not made.

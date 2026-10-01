@@ -47,11 +47,23 @@ def embedded(name,b64,expected):
     if sha256(p)!=expected: raise RuntimeError(name+" embedded authority hash mismatch")
     return p
 
-def locate_unique(name):
-    hits=[p for p in INPUT.rglob(name) if p.is_file()]
-    good=[p for p in hits if sha256(p)==MANIFEST_SHA] if name=="DATA_MANIFEST.csv" else hits
-    if len(good)!=1: raise RuntimeError(f"Expected one canonical {name}; got {good[:8]}")
-    return good[0]
+def locate_canonical(name, expected_sha):
+    hits=sorted([p for p in INPUT.rglob(name) if p.is_file()], key=lambda p:str(p))
+    good=[p for p in hits if sha256(p)==expected_sha]
+    if not good:
+        raise RuntimeError(
+            f"No canonical {name} matched expected SHA256={expected_sha}; "
+            f"candidates={hits[:8]}"
+        )
+    preferred=[p for p in good if "/ds002_closure/" in str(p)]
+    selected=(preferred or good)[0]
+    print(
+        f"{name}_CANONICAL_MATCHES=",
+        [str(p) for p in good],
+        flush=True,
+    )
+    print(f"{name}_SELECTED={selected}", flush=True)
+    return selected, good
 
 def audio_root():
     roots=[]
@@ -192,10 +204,19 @@ def main():
     if not torch.cuda.is_available(): raise RuntimeError("GPU required")
     device="cuda:0"
     vbp=embedded("VALIDATION_VB_FOLDS.csv",VB_B64,VB_SHA); vap=embedded("VALIDATION_VA_FOLDS.csv",VA_B64,VA_SHA)
-    dmp=locate_unique("DATA_MANIFEST.csv"); vb,va,dm=validate(vbp,vap,dmp); root=audio_root()
+    dmp,dmp_aliases=locate_canonical("DATA_MANIFEST.csv",MANIFEST_SHA)
+    vb,va,dm=validate(vbp,vap,dmp); root=audio_root()
     recs={int(r.Id):{"path":audio_path(root,str(r.split),str(r.filename))} for r in dm.itertuples(index=False)}
-    dump(OUT/"STAGE1_INPUT_AUTHORITY.json",{"mission":MISSION,"VB":sha256(vbp),"VA":sha256(vap),"DATA_MANIFEST":sha256(dmp),
-         "protected_validation_queried":False,"kaggle_submission_made":False})
+    dump(OUT/"STAGE1_INPUT_AUTHORITY.json",{
+         "mission":MISSION,
+         "VB":sha256(vbp),
+         "VA":sha256(vap),
+         "DATA_MANIFEST":sha256(dmp),
+         "DATA_MANIFEST_selected_path":str(dmp),
+         "DATA_MANIFEST_matching_aliases":[str(p) for p in dmp_aliases],
+         "protected_validation_queried":False,
+         "kaggle_submission_made":False
+    })
     (OUT/"ENVIRONMENT_VERSIONS.txt").write_text("\n".join(f"{p}={md.version(p)}" for p in ["torch","numpy","pandas","scikit-learn","transformers","modelscope","funasr","h5py","librosa","soundfile"])+"\n")
     ids=vb.Id.iloc[:3].astype(int).tolist()
     e2v,e2root=make_e2v(device)
