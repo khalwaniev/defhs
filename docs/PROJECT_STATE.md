@@ -1,210 +1,126 @@
-# Project State
+# DEFHS Project State
 
 Status date: 2026-10-01
 
-## Repository authority
+## Objective
 
-Canonical repository: `khalwaniev/defhs`
+Competition:
 
-Canonical local path: `/home/fikar/zingle/defhs`
+`dataverse-detecting-emotions-from-hindi-speech`
+
+Target:
+
+maximize robust final/private-leaderboard macro-F1 over:
+
+`angry / happy / neutral / sad`
+
+## Canonical authority
+
+Repository:
+
+`khalwaniev/defhs`
 
 Canonical branch:
 
 `main`
 
-Consolidation baseline:
+Canonical local repository:
 
-`9185ffd6dbb139ea8bf1c6f9558c71dbf2546033`
+`/home/fikar/zingle/defhs`
 
-Active mission branch:
+Heavy-artifact root:
 
-`rs/knowledge-discovery-001`
+`/DEFHS/`
 
-Active mission starting authority:
+Governing workflow:
 
-`9185ffd6dbb139ea8bf1c6f9558c71dbf2546033`
+`WORKFLOW.md`
 
-Historical scientific authorities are preserved in the consolidated `main`
-history and by archive tags:
-
-- `archive/ds-data-validation-foundation-001`;
-- `archive/ds-validation-hardening-002`;
-- `archive/ar-final-validation-data-redteam-001`;
-- `archive/ds-correlated-allocation-source-stress-patch-001`;
-- `archive/ds002-kaggle-execution-packages`.
-
-Governing workflow: `WORKFLOW.md`
-
-## Current phase
-
-**DS-DEFHS-CORRELATED-ALLOCATION-SOURCE-STRESS-PATCH-001 — COMPLETE.**
-
-Final corrective verdict:
-
-**PATCH_AND_FREEZE**
-
-The adversarial review identified two bounded defects in the DS-002 freeze:
-uncatalogued sample-count quantization structure and incomplete correlated
-hidden-allocation sensitivity. Both are now classified and controlled without
-a primary-validation redesign.
-
-## Preserved validation backbone
-
-### V-B
-
-**Primary representation/model-family selection authority — unchanged.**
-
-Duplicate-family-safe CV remains the main development authority.
-
-### V-A
-
-**Secondary competition-mimic / retrieval-aware view — unchanged role.**
-
-Train/test-shift wording is strengthened to:
-
-> detectable moderate, representation-dependent nonlinear residual shift after
-> cross-split duplicate removal, without evidence identifying a single
-> alternate hidden grouping mechanism.
-
-This does not justify replacing V-A or treating test as a known separate domain.
-
-### V-C
-
-**Authoritative speaker-like view remains rejected.**
-
-ECAPA structure remains diagnostic/sensitivity evidence only.
-
-### V-D
-
-**Verified int16/int32 recording-format/source stress — unchanged.**
-
-## Patch addition 1 — sample-count quantization stress
-
-The red-team's `samples % 128` finding is real but is not uniquely
-exceptional after multiplicity correction.
-
-A bounded family of scientifically plausible quantizations was audited:
-
-`16, 32, 64, 80, 128, 160, 200, 256, 320, 400, 480, 512, 640, 800, 960, 1024`.
-
-Key conclusions:
-
-- modulus 960 is the strongest family member by Cramer's V;
-- modulus 128 bootstrap median rank is 12 / 16 and is never top-five in the
-  2,000-resample exceptionality check;
-- Q128 is extremely associated with dtype;
-- under dependency deduplication plus narrow duration/dtype/ID conditioning,
-  Q128 loses conservative family-wise significance at 0.10-second and
-  0.05-second duration bins;
-- the broader quantization family remains non-random.
-
-Final classification:
-
-**mixed duration/segmentation and source-format quantization structure.**
-
-Frozen diagnostic stress summaries:
-
-- Q128: `0 / 43 / 86 / 30 / 94 / OTHER`;
-- Q960: `384 / 192 / 576 / 606 / 926 / OTHER`.
-
-These are diagnostic strata only. They are not a new primary split and are not
-automatically promoted as model features.
-
-## Patch addition 2 — correlated-allocation envelope
-
-The original class-stratified baseline emulator is retained.
-
-A secondary correlated-allocation sensitivity envelope now covers:
-
-- quantization/source strata;
-- dtype/source;
-- prompt beyond duplicates;
-- speaker-like threshold sensitivities;
-- latent clusters;
-- duration tails;
-- eGeMAPSv02 acoustic outliers;
-- retrieval concentration.
-
-Pseudo-private fractions remain:
-
-`20% / 30% / 40% / 50%`.
-
-Mild/moderate enrichment and depletion preserve a positive mean
-`FULL_RBF_SVM` advantage in high-replication boundary checks.
-
-The worst confirmed plausible mean margin is approximately:
-
-`+0.00528`
-
-A strong non-forced checked boundary remains positive at approximately:
-
-`+0.00331`.
-
-Mean ranking reversals are confirmed only under forced extreme compositions,
-including prompt, Q960, and latent tail scenarios whose pseudo-private
-prevalence is far from observed total-test prevalence.
-
-Final ranking-risk classification:
-
-**ONLY FAILS UNDER EXTREME STRESS**
-
-Extreme scenarios remain tail sensitivities, not estimates of hidden
-public/private membership probability.
-
-## Retrieval
-
-The deterministic 77-group / 78-test-clip retrieval lane is unchanged and
-remains separate from ordinary SER inference.
-
-The adversarial all-pair check found no evidence of transitive false joins.
-
-## Protected promotion gate
-
-`VALIDATION_VP_PROTECTED_FOLDS.csv`
+## Validation
 
 Status:
 
-**UNTOUCHED / CONFIRMATION-ONLY.**
+**FROZEN — PATCH_AND_FREEZE**
 
-No candidate performance from the protected seed was read, joined, or queried
-during this patch.
+Frozen policy:
 
-## Canonical patch artifacts
+- V-B = primary duplicate-family-safe model/representation selection authority;
+- V-A = secondary competition-mimic / retrieval-aware view;
+- V-D = diagnostic recording/source-format stress;
+- V-C = rejected as authoritative;
+- Q128/Q960 = diagnostic quantization stresses only;
+- correlated-allocation envelope = secondary leaderboard-risk sensitivity;
+- retrieval = fixed 77 duplicate groups / 78 test clips;
+- protected seed 20261001 = untouched, confirmation-only.
 
-Under:
+Detailed authority:
 
-`runs/DS-DEFHS-CORRELATED-ALLOCATION-SOURCE-STRESS-PATCH-001/`
+`runs/DS-DEFHS-CORRELATED-ALLOCATION-SOURCE-STRESS-PATCH-001/POST_REDTEAM_VALIDATION_AUTHORITY.md`
 
-- `MISSION.md`;
-- `PATCH_CONFIG.json`;
-- `SAMPLE_COUNT_QUANTIZATION_PATCH_REPORT.md`;
-- `SAMPLE_COUNT_QUANTIZATION_RESULTS.json`;
-- `SAMPLE_COUNT_QUANTIZATION_RANK_STABILITY.csv`;
-- `CORRELATED_ALLOCATION_EMULATOR_SPEC.md`;
-- `CORRELATED_ALLOCATION_EMULATOR_RESULTS.json`;
-- `CORRELATED_ALLOCATION_RANK_STABILITY.csv`;
-- `POST_REDTEAM_DATA_UNKNOWN_REGISTER.md`;
-- `POST_REDTEAM_VALIDATION_AUTHORITY.md`;
-- `FINAL_PATCH_RETURN_TO_SS.md`.
+Do not redesign validation without new material evidence.
 
-Reproducer:
+## Completed foundations
 
-`scripts/run_ds_defhs_correlated_allocation_source_stress_patch_001.py`
+Data/validation work:
 
-The reproducer explicitly rejects any input path containing
-`VP_PROTECTED`.
+**COMPLETE**
 
-## Next action
+Knowledge acquisition:
 
-Validation and data-understanding work are closed under
-`PATCH_AND_FREEZE`.
+`RS-DEFHS-KNOWLEDGE-ACQUISITION-001`
 
-Current active mission:
+Verdict:
 
-`RS-DEFHS-KNOWLEDGE-DISCOVERY-001`
+**PASS_ACQUISITION_COMPLETE**
 
-The next stage is external SER knowledge discovery and evidence acquisition
-without changing the frozen validation architecture or querying the protected
-promotion gate.
+Final acquisition authority:
 
-Do not restart DS-002 and do not create a new primary CV.
+`runs/RS-DEFHS-KNOWLEDGE-ACQUISITION-001/FINAL_RETURN_TO_SS.md`
+
+Knowledge inventory:
+
+- 84 canonical records;
+- 15 acquired paper PDFs;
+- 2 exact-commit repository snapshots;
+- all selected binaries independently verified after Drive readback.
+
+BhavVani versus competition SRCASW-BhavVaani provenance remains:
+
+**UNRESOLVED**
+
+Do not transfer licensing, speaker metadata, or source lineage between them.
+
+## Current bottleneck
+
+Convert the validated project state and acquired evidence into a small,
+decision-relevant modeling program.
+
+The next step is evidence synthesis, not more EDA, validation redesign,
+literature discovery, or broad model experimentation.
+
+## Next mission
+
+`SS-DEFHS-EVIDENCE-SYNTHESIS-001`
+
+Active mission branch after repository consolidation:
+
+`ss/evidence-synthesis-001`
+
+Mission objective:
+
+map evidence -> mechanism -> DEFHS relevance -> hypothesis -> cheapest
+discriminating experiment -> promotion criterion.
+
+## Do not redo
+
+Unless concrete new evidence reveals a defect:
+
+- do not restart EDA;
+- do not redesign V-A/V-B/V-D;
+- do not revive V-C as authority;
+- do not redo knowledge discovery/acquisition;
+- do not query protected validation during ordinary model research;
+- do not infer hidden public/private row fractions from 40/60 score weights;
+- do not assume BhavVani and SRCASW-BhavVaani are the same dataset.
+
+Historical details remain preserved under `runs/`.

@@ -194,7 +194,7 @@ External storage contains the heavy artifacts.
 
 ## Information Management
 
-Keep the repository simple and easy to understand.
+Keep the repository clean, simple, well structured, and easy to understand.
 
 Important information should be easy for humans and different LLMs to locate.
 
