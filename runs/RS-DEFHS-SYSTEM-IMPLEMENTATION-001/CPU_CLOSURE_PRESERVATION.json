@@ -1,0 +1,16 @@
+{
+  "path": "gdrive:DEFHS/rs_system_implementation_001/cpu_frozen_closure",
+  "folder_id": "1vFKnPmUTIR4Nvc0Sn5vSTbfrL6V2HKIf",
+  "archive_file_id": "1Xdf5knDljhGdZwHL6ITrrCZTruwrVSY5",
+  "archive_bytes": 54654350,
+  "archive_sha256": "5ede6c7d863784690e58333dd86f008a97073923a1f2c11a5ca95d26647e9d83",
+  "manifest_sha256": "5590844087459c60bc65d3bbdd20d642e2451f11a2360bd4def22955088eb16c",
+  "payload_manifest_rows": 130,
+  "tar_internal_integrity": "PASS",
+  "byte_check": "rclone check --download: 4/4 matching, zero differences",
+  "status": "PASS",
+  "upload_route": "Connected Google Drive upload_file after shared rclone client quota errors",
+  "readback_folder_and_size_verified": true,
+  "execution_snapshot_commit": "d4c550b65b8b387fa331980d13323b6053748525",
+  "canonical_final_ledgers": "GitHub branch rs/system-implementation-001"
+}

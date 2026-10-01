@@ -1,26 +1,26 @@
 {
   "mission_id": "RS-DEFHS-SYSTEM-IMPLEMENTATION-001",
   "layer": "3_OF_3",
-  "status": "FROZEN_SYSTEM_LOCKED_STAGE9_CPU_RUNNING",
+  "status": "COMPLETE_PRE_PROTECTED_RETURN_TO_SS",
   "repository": "khalwaniev/defhs",
   "branch": "rs/system-implementation-001",
   "mission_start_head": "388ec75e3531c180d4f9cc936fa6eb9f17773e2f",
   "ledger_initialization_commit": "13ba0b5e7e9ba49a720041d95f9ebf139b9a7b57",
   "stage0_stop_commit": "efd312c3515acddee143a5398c003471ecd4b885",
   "local_worktree_status": "CANONICAL_CHECKOUT_VERIFIED_UNEXPECTED_TMP_PRESERVED",
-  "protected_validation_status": "NOT_QUERIED",
+  "protected_validation_status": "NOT_QUERIED_SS_CONFIRMATION_AUTHORIZATION_ABSENT",
   "kaggle_submission_status": "NOT_MADE",
   "stages": {
     "stage0": "CLEARED_AFTER_SS_CONTINUATION",
     "stage1": "COMPLETE_DUAL_GPU_SCAFFOLD_AND_OOF",
     "stage2": "COMPLETE_EMOTION2VEC_FROZEN_SCREEN",
     "stage3": "COMPLETE_XLSR_FROZEN_SCREEN",
-    "stage4": "COMPLETE_FINAL_SINGLE_SER_MEMBER",
+    "stage4": "COMPLETE_FINAL_SINGLE_SER_MEMBER_ALL_ADDITIONS_KILLED",
     "stage5": "COMPLETE_TEXT_KILLED",
     "stage6": "COMPLETE_ATTENTION_KILLED_MEANSTD_RETAINED",
     "stage7": "CLOSED_NO_PEFT_DOWNSTREAM_NOT_CLOSED",
     "stage8": "COMPLETE_OFFSETS_KILLED_ARGMAX_RETAINED",
-    "stage9": "RUNNING_FINALIST_STRESS"
+    "stage9": "COMPLETE_PRE_PROTECTED_DIAGNOSTICS"
   },
   "stage0": {
     "historical_stop": {
@@ -85,19 +85,20 @@
     "id": "1yJIK5_EE_57wO-GmlzIqfs21Sc5JtRDB"
   },
   "compute_used": {
-    "gpu_accelerator_hours": 0,
+    "gpu_accelerator_hours": "UNKNOWN_HISTORICAL_V3_QUOTA_CHARGE",
     "model_execution": true,
     "kaggle_v1_wall_seconds_to_traceback": 80.081398354,
     "exact_gpu_quota_charge": "UNKNOWN_NOT_QUERIED",
-    "continuation_accelerator_hours": 0
+    "continuation_accelerator_hours": 0,
+    "historical_initial_ledger_gpu_accelerator_hours": 0
   },
-  "next_decision_required_from_ss": "Review frozen pre-protected finalist package; protected confirmation requires new explicit SS authorization",
+  "next_decision_required_from_ss": "Review/accept locked pre-protected frozen finalist; explicitly authorize one confirmation-only protected seed 20261001 query if proceeding. No tuning loop or submission is authorized.",
   "stage1_package": {
     "path": "kaggle/rs_system_implementation_001_frozen_screen/",
     "kernel_id": "khalwaniev/defhs-rs-system-implementation-frozen-screen",
     "competition_source": "dataverse-detecting-emotions-from-hindi-speech",
     "kernel_source": "khalwaniev/defhs-ds002-closure",
-    "actual_gpu_execution": "NOT_RUN_CURRENT_RUNTIME_HAS_NO_CUDA_OR_AUTHENTICATED_KAGGLE_EXECUTION_SURFACE",
+    "actual_gpu_execution": "SUCCESS_V3_DUAL_T4_EXISTING_EXTRACTION_REUSED",
     "synthetic_static_smoke": "PASS_NONSCIENTIFIC",
     "source_commit": "4bc3078758c237fd0be8a634c489bc1258a13c07",
     "kaggle_version_1_push": "SUCCESS",
@@ -185,5 +186,41 @@
   "final_frozen_members": [
     "emotion2vec_base_L2_LOGREG"
   ],
-  "final_retrieval_lane": "existing certified unanimous-label hard override, separate"
+  "final_retrieval_lane": "existing certified unanimous-label hard override, separate",
+  "mission_closing_state": 3,
+  "final_system_lock": "runs/RS-DEFHS-SYSTEM-IMPLEMENTATION-001/FINAL_SYSTEM_LOCK.json",
+  "final_results": {
+    "VB_primary_macro_f1": 0.7383745765682462,
+    "VA_secondary_SER_macro_f1": 0.8016519493535111,
+    "VA_retrieval_pipeline_macro_f1": 0.8052768510049559,
+    "VD_cross_format": {
+      "int16_to_int32": 0.6347270615563299,
+      "int32_to_int16": 0.4247820351985138
+    },
+    "correlated_allocation": "ROBUST_UNDER_TESTED_STRESS_VERSUS_ACCEPTED_CHEAP_REFERENCES"
+  },
+  "CPU_preservation": {
+    "path": "gdrive:DEFHS/rs_system_implementation_001/cpu_frozen_closure",
+    "folder_id": "1vFKnPmUTIR4Nvc0Sn5vSTbfrL6V2HKIf",
+    "archive_file_id": "1Xdf5knDljhGdZwHL6ITrrCZTruwrVSY5",
+    "archive_bytes": 54654350,
+    "archive_sha256": "5ede6c7d863784690e58333dd86f008a97073923a1f2c11a5ca95d26647e9d83",
+    "manifest_sha256": "5590844087459c60bc65d3bbdd20d642e2451f11a2360bd4def22955088eb16c",
+    "payload_manifest_rows": 130,
+    "tar_internal_integrity": "PASS",
+    "byte_check": "rclone check --download: 4/4 matching, zero differences",
+    "status": "PASS",
+    "upload_route": "Connected Google Drive upload_file after shared rclone client quota errors",
+    "readback_folder_and_size_verified": true,
+    "execution_snapshot_commit": "d4c550b65b8b387fa331980d13323b6053748525",
+    "canonical_final_ledgers": "GitHub branch rs/system-implementation-001"
+  },
+  "unresolved_scientific_limitations": [
+    "G2 scalar-mixture comparison/API-unavailability evidence UNKNOWN; this closes adaptation under current policy",
+    "V-D cross-format transfer and small Q strata remain uncertain",
+    "Conditional OOF credibility does not remove historical model-selection bias"
+  ],
+  "active_execution_blockers": [],
+  "SS_acceptance": "PENDING_REVIEW_NOT_CLAIMED",
+  "final_return_path": "runs/RS-DEFHS-SYSTEM-IMPLEMENTATION-001/FINAL_RETURN_TO_SS.md"
 }

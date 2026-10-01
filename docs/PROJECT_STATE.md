@@ -1,6 +1,6 @@
 # DEFHS Project State
 
-Status date: 2026-10-01
+Status date: 2026-10-02
 
 ## Objective
 
@@ -146,7 +146,7 @@ Integrated prior:
 
 Current PEFT status:
 
-**PENDING_FROZEN_OOF**
+**NO_PEFT:DOWNSTREAM_NOT_CLOSED — RS IMPLEMENTATION RETURN PENDING SS REVIEW**
 
 PEFT is not an automatic implementation stage. It is permitted only if the
 precommitted RS2 entry gate passes after the frozen OOF program is complete.
@@ -196,7 +196,7 @@ Authority:
 
 `runs/SS-DEFHS-DESIGN-INTEGRATION-001/FINAL_INTEGRATION.md`
 
-## Next mission
+## Implementation mission
 
 `RS-DEFHS-SYSTEM-IMPLEMENTATION-001`
 
@@ -204,13 +204,47 @@ Worker role:
 
 **Research Scientist — GPT-5.6 Sol High**
 
-Implementation begins at Stage 0.
+Execution continuation began from local/remote
+`16f271b50b1f6d4d3605b3ccb580d5667972dd45` on
+`rs/system-implementation-001`. Stage 0 and the successful dual-T4 Kaggle V3
+extraction were reused; no encoder extraction was repeated.
+
+The CPU continuation completed Stage 4 frozen complementarity/membership,
+Stage 5 transcript controls, Stage 6 one-parent pooling, the pre-PEFT controls
+and terminal gate, Stage 8 offsets, and Stage 9 pre-protected diagnostics.
+
+Locked RS finalist: `emotion2vec_base_L2_LOGREG`, frozen final-frame mean+std,
+ordinary argmax, with the existing certified retrieval hard override separate.
+V-B macro-F1 is `0.7383745765682462`; V-A SER is
+`0.8016519493535111`; retrieval-aware V-A is `0.8052768510049559`.
+The neural pair's positive point gain fails the simultaneous marginal criterion;
+the acoustic/eGeMAPS/text additions and pooling/offset changes are not retained.
+
+G2 remains UNKNOWN because scalar-mixture evidence and an ex-ante API
+unavailability record are absent. G3 and G4 also fail. Per the accepted policy,
+adaptation is closed and no PEFT experiment ran. This does not declare the
+representation irreducible or the scalar-mixture architecture unsupported.
+
+V-D cross-format stress remains difficult. Correlated-allocation diagnostics
+preserve the mean advantage over the accepted cheap references across the
+tested scenarios; they do not prove hidden-domain transfer.
+
+The finalist is fitted on all 826 cached training embeddings and its 209 test
+inference rows are archived with the unchanged 78-clip certified map. No Kaggle
+submission has been made. Protected confirmation is not authorized.
+
+Implementation results and the SS return are under
+`runs/RS-DEFHS-SYSTEM-IMPLEMENTATION-001/`. GitHub remains canonical for decisions;
+heavy V3 and CPU artifacts are preserved in the existing Drive mission root.
+These are RS execution findings awaiting SS review, not SS acceptance or a main
+branch merge.
 
 The implementation worker must preserve the frozen validation hierarchy, OOF
 alignment, experiment provenance, promote/kill rules, and the precommitted RS2
 adaptation policy.
 
-No Layer-3 experiment has been run at the moment of this integration.
+At the historical integration point no Layer-3 experiment had been run.
+The current implementation results are recorded above and in its mission ledger.
 ## Protected information
 
 Protected seed 20261001 remains:
