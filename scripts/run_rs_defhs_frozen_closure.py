@@ -184,6 +184,20 @@ def stage4(folds,ev,clean,nonret,legacy):
     ei=ev.intervals({f'{v}:{mname}':ev.contrast(labels(folds[v].emotion),egpred[v],pred[v][core],m) for v,m,mname in [('VB',None,'full'),('VB',clean,'clean'),('VA',nonret,'nonretrieval')]})
     er=robust(labels(folds['VB'].emotion),egpred['VB'],pred['VB'][core],folds['VB'].fold.to_numpy(),ei['VB:full'])
     egpass=er['pass'] and ei['VB:clean']['point']>0 and ei['VA:nonretrieval']['upper']>=0
+    audio_core=core
+    if egpass:
+        selected=tuple(sorted((*selected,'EGEMAPS_L2_LOGREG')))
+        core='+'.join(selected)
+        for v,f in folds.items():
+            d=pd.read_csv(OUT/f'OOF_CORE_PLUS_EGEMAPS_{v}.csv')
+            q=d[P_COLS].to_numpy()
+            probs[v][core]=q;pred[v][core]=q.argmax(1);result[v][core]=egresult[v]
+            lanes[v]['EGEMAPS_L2_LOGREG']=valid_oof(OUT/f'OOF_EGEMAPS_{v}.csv',f)
+            # Single-member ablation is required evidence, not an additional
+            # standalone eGeMAPS model search.
+            probs[v]['EGEMAPS_L2_LOGREG']=lanes[v]['EGEMAPS_L2_LOGREG']
+            pred[v]['EGEMAPS_L2_LOGREG']=lanes[v]['EGEMAPS_L2_LOGREG'].argmax(1)
+            save_oof(OUT/f'OOF_SYSTEM_{core}_{v}.csv',f,q)
     # Parent J_SELECT: both heads, neural reference gains and E0 ablations.
     js={}; parent_predictions={}; eligibility={}
     for v,f in folds.items():
@@ -217,7 +231,7 @@ def stage4(folds,ev,clean,nonret,legacy):
     # No identity change may occur after this saved prospective-parent record.
     out={'phase':'STAGE4','systems':result,'contrast_registry':list(contrasts),'contrasts':checks,
         'pairwise':{v:pair_diagnostics(lanes[v],labels(f.emotion)) for v,f in folds.items()},
-        'selected_E0_members':selected,'selected_E0_id':core,'eligible_systems':eligible,
+        'selected_audio_core_id':audio_core,'selected_E0_members':selected,'selected_E0_id':core,'eligible_systems':eligible,
         'egemaps':{'results':egresult,'intervals':ei,'robust':er,'decision':'PROMOTE' if egpass else 'KILL_PERMANENTLY'},
         'prospective_parent':parent,'parent_J_SELECT':ji,'parent_eligibility':eligibility,
         'historical_selection_limit':'Conditional OOF intervals/meta-folds do not remove earlier adaptive selection or make nested-independent validation.'}
