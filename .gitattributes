@@ -1,0 +1,2 @@
+# Preserve the byte-exact Drive checksum manifest copied into GitHub.
+runs/RS-DEFHS-SYSTEM-IMPLEMENTATION-001/CPU_CLOSURE_PAYLOAD_MANIFEST.csv whitespace=cr-at-eol
