@@ -1,4 +1,12 @@
-# The first two hashes are for the raw uploaded attachment snapshots preserved in the generated packet ZIP. GitHub text equality was independently verified through connector readback; transport newline normalization is not represented as a binary-equivalence claim.\nc8ab0d8276b2c8bd4654244beaaca177ced461c1da6ab0a1bd81002bea8b66cd  runs/RS-DEFHS-KNOWLEDGE-ACQUISITION-001/MISSION.md
+# The first two hashes are for the raw uploaded attachment snapshots preserved in the clean packet ZIP. GitHub text equality was independently verified through connector readback; transport newline normalization is not represented as a binary-equivalence claim.
+c8ab0d8276b2c8bd4654244beaaca177ced461c1da6ab0a1bd81002bea8b66cd  runs/RS-DEFHS-KNOWLEDGE-ACQUISITION-001/MISSION.md
 f19412c79480eae52f1e6196b1d44d7f8f8934fd6fdc369c6e846fc813756dc9  runs/RS-DEFHS-KNOWLEDGE-ACQUISITION-001/DEFHS_KNOWLEDGE_SOURCE_MANIFEST_ORIGINAL.md
-# No external binary artifact was successfully acquired in this runtime; external binary checksums are pending deterministic WSL handoff.
-eec4948c4653916132a26fb66d7fead4a11f64e332ee88af4d581fdf89f38955  /DEFHS/knowledge/manifests/RS-DEFHS-KNOWLEDGE-ACQUISITION-001_packet.zip
+# No selected external paper/repository binary has yet been acquired in Drive; their SHA256 values remain pending deterministic WSL handoff.
+53956d73ee230e3619234c0f63dcf09c1e0f48affad79524ec3175cc193f382f  /DEFHS/knowledge/manifests/RS-DEFHS-KNOWLEDGE-ACQUISITION-001_packet.zip
+a045b2548ffe40a55302b45d21b99d7fd401ddb10adc92e33e05a99bcfc1e36c  /DEFHS/knowledge/manifests/KNOWLEDGE_MANIFEST.csv
+1d27b5c4a5a982cd1f72bd7ab18549f428a281e3e82da2b71804ed7c10cf7e72  /DEFHS/knowledge/manifests/LICENSE_REGISTER.csv
+7466d29795c66467a056431deb30da469b412457e78d90e55fbece5827d5a1de  /DEFHS/knowledge/manifests/DUPLICATE_SOURCE_MAP.csv
+d43c0e59a120cfada78510ab91e49a4f77138a4f2f21ac012ac081e6731c7df3  /DEFHS/knowledge/manifests/BHAVVAANI_PROVENANCE_RECONCILIATION.md
+277b2858c4605f0a4b30cff8efcaca26eb6a46faf6deb033b34880947a1b0b7e  /DEFHS/knowledge/manifests/MISSING_EVIDENCE_REGISTER.md
+59156d3f5e0851561f8a65b0fb747b0cf2d358e3c7739deaadd83d2239f6aa99  /DEFHS/knowledge/manifests/POINTER_ONLY_REGISTER.md
+10d6335cfbe5dc9b02caff982a5a5dfb9983f73a28463dab1a390b29719d1f45  /DEFHS/knowledge/manifests/SOURCE_COVERAGE_REPORT.md
