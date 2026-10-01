@@ -1,0 +1,525 @@
+{
+  "pairwise": {
+    "VA": [
+      {
+        "a": "EGEMAPS_L2_LOGREG",
+        "b": "FULL_RBF_SVM_CAL",
+        "hard_error_correlation": 0.4205939379040086,
+        "probability_correlation": 0.6591095164545957,
+        "centered_log_probability_correlation": 0.583681239203077,
+        "per_class_probability_correlation": {
+          "angry": 0.7250934348266685,
+          "happy": 0.5449362151419589,
+          "neutral": 0.662155370565834,
+          "sad": 0.6636611497510992
+        },
+        "disagreement": 0.3704600484261501,
+        "both_wrong": 186,
+        "per_class_complementarity": {
+          "angry": {
+            "support": 205,
+            "a_wrong_b_correct": 29,
+            "b_wrong_a_correct": 15,
+            "both_wrong": 36
+          },
+          "happy": {
+            "support": 192,
+            "a_wrong_b_correct": 49,
+            "b_wrong_a_correct": 22,
+            "both_wrong": 52
+          },
+          "neutral": {
+            "support": 217,
+            "a_wrong_b_correct": 44,
+            "b_wrong_a_correct": 17,
+            "both_wrong": 53
+          },
+          "sad": {
+            "support": 212,
+            "a_wrong_b_correct": 41,
+            "b_wrong_a_correct": 13,
+            "both_wrong": 45
+          }
+        },
+        "oracle_union_macro_f1": 0.7743641857058922,
+        "oracle_note": "diagnostic ceiling only; never an achievable ensemble score"
+      },
+      {
+        "a": "EGEMAPS_L2_LOGREG",
+        "b": "emotion2vec_base_L2_LOGREG",
+        "hard_error_correlation": 0.1886665564553671,
+        "probability_correlation": 0.5221037533373057,
+        "centered_log_probability_correlation": 0.48050048194753625,
+        "per_class_probability_correlation": {
+          "angry": 0.653751235343123,
+          "happy": 0.44812174845655955,
+          "neutral": 0.46661075570490984,
+          "sad": 0.4947854286915354
+        },
+        "disagreement": 0.4406779661016949,
+        "both_wrong": 100,
+        "per_class_complementarity": {
+          "angry": {
+            "support": 205,
+            "a_wrong_b_correct": 47,
+            "b_wrong_a_correct": 12,
+            "both_wrong": 18
+          },
+          "happy": {
+            "support": 192,
+            "a_wrong_b_correct": 76,
+            "b_wrong_a_correct": 16,
+            "both_wrong": 25
+          },
+          "neutral": {
+            "support": 217,
+            "a_wrong_b_correct": 67,
+            "b_wrong_a_correct": 16,
+            "both_wrong": 30
+          },
+          "sad": {
+            "support": 212,
+            "a_wrong_b_correct": 59,
+            "b_wrong_a_correct": 20,
+            "both_wrong": 27
+          }
+        },
+        "oracle_union_macro_f1": 0.8788751668970799,
+        "oracle_note": "diagnostic ceiling only; never an achievable ensemble score"
+      },
+      {
+        "a": "EGEMAPS_L2_LOGREG",
+        "b": "xls_r_300m_L2_LOGREG",
+        "hard_error_correlation": 0.31564337708093926,
+        "probability_correlation": 0.5980734205256976,
+        "centered_log_probability_correlation": 0.5657378858955936,
+        "per_class_probability_correlation": {
+          "angry": 0.7146370654619898,
+          "happy": 0.5154136705574142,
+          "neutral": 0.5655177431398506,
+          "sad": 0.5695224663074637
+        },
+        "disagreement": 0.3922518159806295,
+        "both_wrong": 135,
+        "per_class_complementarity": {
+          "angry": {
+            "support": 205,
+            "a_wrong_b_correct": 45,
+            "b_wrong_a_correct": 7,
+            "both_wrong": 20
+          },
+          "happy": {
+            "support": 192,
+            "a_wrong_b_correct": 63,
+            "b_wrong_a_correct": 18,
+            "both_wrong": 38
+          },
+          "neutral": {
+            "support": 217,
+            "a_wrong_b_correct": 54,
+            "b_wrong_a_correct": 14,
+            "both_wrong": 43
+          },
+          "sad": {
+            "support": 212,
+            "a_wrong_b_correct": 52,
+            "b_wrong_a_correct": 17,
+            "both_wrong": 34
+          }
+        },
+        "oracle_union_macro_f1": 0.8362128077986147,
+        "oracle_note": "diagnostic ceiling only; never an achievable ensemble score"
+      },
+      {
+        "a": "FULL_RBF_SVM_CAL",
+        "b": "emotion2vec_base_L2_LOGREG",
+        "hard_error_correlation": 0.23549451937974086,
+        "probability_correlation": 0.5958097682214152,
+        "centered_log_probability_correlation": 0.545838959545316,
+        "per_class_probability_correlation": {
+          "angry": 0.6372253789964951,
+          "happy": 0.531244311681901,
+          "neutral": 0.5630649146595159,
+          "sad": 0.6382450359571668
+        },
+        "disagreement": 0.3365617433414044,
+        "both_wrong": 86,
+        "per_class_complementarity": {
+          "angry": {
+            "support": 205,
+            "a_wrong_b_correct": 41,
+            "b_wrong_a_correct": 20,
+            "both_wrong": 10
+          },
+          "happy": {
+            "support": 192,
+            "a_wrong_b_correct": 47,
+            "b_wrong_a_correct": 14,
+            "both_wrong": 27
+          },
+          "neutral": {
+            "support": 217,
+            "a_wrong_b_correct": 43,
+            "b_wrong_a_correct": 19,
+            "both_wrong": 27
+          },
+          "sad": {
+            "support": 212,
+            "a_wrong_b_correct": 36,
+            "b_wrong_a_correct": 25,
+            "both_wrong": 22
+          }
+        },
+        "oracle_union_macro_f1": 0.8956037356079998,
+        "oracle_note": "diagnostic ceiling only; never an achievable ensemble score"
+      },
+      {
+        "a": "FULL_RBF_SVM_CAL",
+        "b": "xls_r_300m_L2_LOGREG",
+        "hard_error_correlation": 0.41423306430055995,
+        "probability_correlation": 0.6758223766473263,
+        "centered_log_probability_correlation": 0.6798628597657745,
+        "per_class_probability_correlation": {
+          "angry": 0.7175437653312439,
+          "happy": 0.5835890439573421,
+          "neutral": 0.6834140197160217,
+          "sad": 0.7010220064344643
+        },
+        "disagreement": 0.29055690072639223,
+        "both_wrong": 125,
+        "per_class_complementarity": {
+          "angry": {
+            "support": 205,
+            "a_wrong_b_correct": 35,
+            "b_wrong_a_correct": 11,
+            "both_wrong": 16
+          },
+          "happy": {
+            "support": 192,
+            "a_wrong_b_correct": 37,
+            "b_wrong_a_correct": 19,
+            "both_wrong": 37
+          },
+          "neutral": {
+            "support": 217,
+            "a_wrong_b_correct": 29,
+            "b_wrong_a_correct": 16,
+            "both_wrong": 41
+          },
+          "sad": {
+            "support": 212,
+            "a_wrong_b_correct": 27,
+            "b_wrong_a_correct": 20,
+            "both_wrong": 31
+          }
+        },
+        "oracle_union_macro_f1": 0.8484207340339416,
+        "oracle_note": "diagnostic ceiling only; never an achievable ensemble score"
+      },
+      {
+        "a": "emotion2vec_base_L2_LOGREG",
+        "b": "xls_r_300m_L2_LOGREG",
+        "hard_error_correlation": 0.4180549402880014,
+        "probability_correlation": 0.7599668265701567,
+        "centered_log_probability_correlation": 0.7223510629793052,
+        "per_class_probability_correlation": {
+          "angry": 0.8092817743931882,
+          "happy": 0.718843751798124,
+          "neutral": 0.7367552026650472,
+          "sad": 0.769720192048589
+        },
+        "disagreement": 0.2324455205811138,
+        "both_wrong": 96,
+        "per_class_complementarity": {
+          "angry": {
+            "support": 205,
+            "a_wrong_b_correct": 16,
+            "b_wrong_a_correct": 13,
+            "both_wrong": 14
+          },
+          "happy": {
+            "support": 192,
+            "a_wrong_b_correct": 15,
+            "b_wrong_a_correct": 30,
+            "both_wrong": 26
+          },
+          "neutral": {
+            "support": 217,
+            "a_wrong_b_correct": 16,
+            "b_wrong_a_correct": 27,
+            "both_wrong": 30
+          },
+          "sad": {
+            "support": 212,
+            "a_wrong_b_correct": 21,
+            "b_wrong_a_correct": 25,
+            "both_wrong": 26
+          }
+        },
+        "oracle_union_macro_f1": 0.8839893356255484,
+        "oracle_note": "diagnostic ceiling only; never an achievable ensemble score"
+      }
+    ],
+    "VB": [
+      {
+        "a": "EGEMAPS_L2_LOGREG",
+        "b": "FULL_RBF_SVM_CAL",
+        "hard_error_correlation": 0.35496161715384644,
+        "probability_correlation": 0.6159549755521465,
+        "centered_log_probability_correlation": 0.5190787009471494,
+        "per_class_probability_correlation": {
+          "angry": 0.7020878637725078,
+          "happy": 0.5077189982137805,
+          "neutral": 0.5822667171176887,
+          "sad": 0.6083836085852746
+        },
+        "disagreement": 0.41646489104116224,
+        "both_wrong": 203,
+        "per_class_complementarity": {
+          "angry": {
+            "support": 205,
+            "a_wrong_b_correct": 19,
+            "b_wrong_a_correct": 20,
+            "both_wrong": 33
+          },
+          "happy": {
+            "support": 192,
+            "a_wrong_b_correct": 35,
+            "b_wrong_a_correct": 28,
+            "both_wrong": 66
+          },
+          "neutral": {
+            "support": 217,
+            "a_wrong_b_correct": 51,
+            "b_wrong_a_correct": 34,
+            "both_wrong": 56
+          },
+          "sad": {
+            "support": 212,
+            "a_wrong_b_correct": 53,
+            "b_wrong_a_correct": 19,
+            "both_wrong": 48
+          }
+        },
+        "oracle_union_macro_f1": 0.7527190887789458,
+        "oracle_note": "diagnostic ceiling only; never an achievable ensemble score"
+      },
+      {
+        "a": "EGEMAPS_L2_LOGREG",
+        "b": "emotion2vec_base_L2_LOGREG",
+        "hard_error_correlation": 0.18105060107319967,
+        "probability_correlation": 0.5037061162703483,
+        "centered_log_probability_correlation": 0.43046123570923844,
+        "per_class_probability_correlation": {
+          "angry": 0.6555449536206848,
+          "happy": 0.4702105785951388,
+          "neutral": 0.4150701088635443,
+          "sad": 0.4415664813852039
+        },
+        "disagreement": 0.46246973365617433,
+        "both_wrong": 127,
+        "per_class_complementarity": {
+          "angry": {
+            "support": 205,
+            "a_wrong_b_correct": 30,
+            "b_wrong_a_correct": 15,
+            "both_wrong": 22
+          },
+          "happy": {
+            "support": 192,
+            "a_wrong_b_correct": 66,
+            "b_wrong_a_correct": 20,
+            "both_wrong": 35
+          },
+          "neutral": {
+            "support": 217,
+            "a_wrong_b_correct": 62,
+            "b_wrong_a_correct": 23,
+            "both_wrong": 45
+          },
+          "sad": {
+            "support": 212,
+            "a_wrong_b_correct": 76,
+            "b_wrong_a_correct": 31,
+            "both_wrong": 25
+          }
+        },
+        "oracle_union_macro_f1": 0.845846829824652,
+        "oracle_note": "diagnostic ceiling only; never an achievable ensemble score"
+      },
+      {
+        "a": "EGEMAPS_L2_LOGREG",
+        "b": "xls_r_300m_L2_LOGREG",
+        "hard_error_correlation": 0.33126979236454707,
+        "probability_correlation": 0.5701735431248215,
+        "centered_log_probability_correlation": 0.4954842355145614,
+        "per_class_probability_correlation": {
+          "angry": 0.7094817123150359,
+          "happy": 0.5031791807442868,
+          "neutral": 0.5072337502590246,
+          "sad": 0.5248611658245852
+        },
+        "disagreement": 0.4116222760290557,
+        "both_wrong": 166,
+        "per_class_complementarity": {
+          "angry": {
+            "support": 205,
+            "a_wrong_b_correct": 28,
+            "b_wrong_a_correct": 14,
+            "both_wrong": 24
+          },
+          "happy": {
+            "support": 192,
+            "a_wrong_b_correct": 58,
+            "b_wrong_a_correct": 19,
+            "both_wrong": 43
+          },
+          "neutral": {
+            "support": 217,
+            "a_wrong_b_correct": 52,
+            "b_wrong_a_correct": 20,
+            "both_wrong": 55
+          },
+          "sad": {
+            "support": 212,
+            "a_wrong_b_correct": 57,
+            "b_wrong_a_correct": 20,
+            "both_wrong": 44
+          }
+        },
+        "oracle_union_macro_f1": 0.7987174379359793,
+        "oracle_note": "diagnostic ceiling only; never an achievable ensemble score"
+      },
+      {
+        "a": "FULL_RBF_SVM_CAL",
+        "b": "emotion2vec_base_L2_LOGREG",
+        "hard_error_correlation": 0.17424798446419587,
+        "probability_correlation": 0.5120862909887832,
+        "centered_log_probability_correlation": 0.48563084847891924,
+        "per_class_probability_correlation": {
+          "angry": 0.5805327782338143,
+          "happy": 0.466237282227715,
+          "neutral": 0.45939774787726195,
+          "sad": 0.5247092689305586
+        },
+        "disagreement": 0.43825665859564167,
+        "both_wrong": 110,
+        "per_class_complementarity": {
+          "angry": {
+            "support": 205,
+            "a_wrong_b_correct": 37,
+            "b_wrong_a_correct": 21,
+            "both_wrong": 16
+          },
+          "happy": {
+            "support": 192,
+            "a_wrong_b_correct": 58,
+            "b_wrong_a_correct": 19,
+            "both_wrong": 36
+          },
+          "neutral": {
+            "support": 217,
+            "a_wrong_b_correct": 54,
+            "b_wrong_a_correct": 32,
+            "both_wrong": 36
+          },
+          "sad": {
+            "support": 212,
+            "a_wrong_b_correct": 45,
+            "b_wrong_a_correct": 34,
+            "both_wrong": 22
+          }
+        },
+        "oracle_union_macro_f1": 0.8660944135721776,
+        "oracle_note": "diagnostic ceiling only; never an achievable ensemble score"
+      },
+      {
+        "a": "FULL_RBF_SVM_CAL",
+        "b": "xls_r_300m_L2_LOGREG",
+        "hard_error_correlation": 0.28808243760670516,
+        "probability_correlation": 0.6149345283536494,
+        "centered_log_probability_correlation": 0.6494887394274814,
+        "per_class_probability_correlation": {
+          "angry": 0.6892578842646603,
+          "happy": 0.5308670980070838,
+          "neutral": 0.6051952119175086,
+          "sad": 0.6121547623085629
+        },
+        "disagreement": 0.3789346246973366,
+        "both_wrong": 140,
+        "per_class_complementarity": {
+          "angry": {
+            "support": 205,
+            "a_wrong_b_correct": 32,
+            "b_wrong_a_correct": 17,
+            "both_wrong": 21
+          },
+          "happy": {
+            "support": 192,
+            "a_wrong_b_correct": 51,
+            "b_wrong_a_correct": 19,
+            "both_wrong": 43
+          },
+          "neutral": {
+            "support": 217,
+            "a_wrong_b_correct": 46,
+            "b_wrong_a_correct": 31,
+            "both_wrong": 44
+          },
+          "sad": {
+            "support": 212,
+            "a_wrong_b_correct": 35,
+            "b_wrong_a_correct": 32,
+            "both_wrong": 32
+          }
+        },
+        "oracle_union_macro_f1": 0.8299180327868853,
+        "oracle_note": "diagnostic ceiling only; never an achievable ensemble score"
+      },
+      {
+        "a": "emotion2vec_base_L2_LOGREG",
+        "b": "xls_r_300m_L2_LOGREG",
+        "hard_error_correlation": 0.2946611180845656,
+        "probability_correlation": 0.6411979965229881,
+        "centered_log_probability_correlation": 0.671581156440384,
+        "per_class_probability_correlation": {
+          "angry": 0.7308940404088957,
+          "happy": 0.6212922295985427,
+          "neutral": 0.6084809284922807,
+          "sad": 0.5976230362981374
+        },
+        "disagreement": 0.34261501210653755,
+        "both_wrong": 111,
+        "per_class_complementarity": {
+          "angry": {
+            "support": 205,
+            "a_wrong_b_correct": 23,
+            "b_wrong_a_correct": 24,
+            "both_wrong": 14
+          },
+          "happy": {
+            "support": 192,
+            "a_wrong_b_correct": 22,
+            "b_wrong_a_correct": 29,
+            "both_wrong": 33
+          },
+          "neutral": {
+            "support": 217,
+            "a_wrong_b_correct": 29,
+            "b_wrong_a_correct": 36,
+            "both_wrong": 39
+          },
+          "sad": {
+            "support": 212,
+            "a_wrong_b_correct": 31,
+            "b_wrong_a_correct": 39,
+            "both_wrong": 25
+          }
+        },
+        "oracle_union_macro_f1": 0.8655670259620392,
+        "oracle_note": "diagnostic ceiling only; never an achievable ensemble score"
+      }
+    ]
+  },
+  "interpretation": "Every correlation and oracle union is diagnostic only; membership is actual held-out marginal/ablation value."
+}

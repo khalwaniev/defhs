@@ -187,13 +187,19 @@ def gate_and_offsets(folds,ev,clean,nonret,legacy,systems,members,deletions,sele
         # dependency/deletion requirements would need PASS too.
         wr['actionable']='FAIL' if not (full_adv and fold_pass and residual_pass and va) else 'UNKNOWN_REQUIRES_COMPLETE_DELETION_INTERVALS'
         if wr['actionable']=='PASS':actionable.append(key)
+    membership_record=json.loads((RUN/'FROZEN_MEMBERSHIP_CLOSURE.json').read_text())
+    pending_additions=[]
+    for k,s in members.items():
+        if k==selected or not set(members[selected])<set(s):continue
+        c=f'VB:full:{k} - {selected}'
+        if c in membership_record['contrasts'] and membership_record['contrasts'][c].get('pass',False):pending_additions.append(k)
     gate={
         'G0':{'status':'PASS','reason':'Existing Stage0 authority; verified exact input hashes; serialized matching logistic recipe'},
         'G1':{'status':'PASS' if rp['pass'] and parent in members[selected] and ci['VA:P-REFERENCE']['upper']>=0 else 'FAIL','reference':rp},
         'G2':{'status':'UNKNOWN','reason':'Logistic/RBF and one pooling comparison completed; no scalar-mixture OOF or scaffold-time architectural/API unavailability record. No encoder re-extraction permitted.'},
         'G3':{'status':'PASS' if max_upper<=sigma and not any(c['pass'] for c in offset_checks.values()) else 'FAIL','maximum_downstream_upper_bound':max_upper,'sigma_E':sigma,'offset_checks':offset_checks},
         'G4':{'status':'FAIL' if not actionable else 'UNKNOWN','reason':'No fully qualifying pair/witness; partial tests and oracle ceilings cannot authorize PEFT'},
-        'G5':{'status':'PASS','reason':'All fixed frozen membership candidates, conditional eGeMAPS, text and pooling decisions closed'},
+        'G5':{'status':'PASS' if not pending_additions else 'FAIL','reason':'All fixed frozen membership candidates, conditional eGeMAPS, text and pooling decisions closed','unpromoted_robust_additions':pending_additions},
         'G6':{'status':'NOT_ENTERED','reason':'G0-G5 conjunction does not pass; no GPU engineering or adaptation training'}}
     first='NO_CREDIBLE_PARENT' if gate['G1']['status']!='PASS' else 'DOWNSTREAM_NOT_CLOSED'
     dump(RUN/'PEFT_GATE_RESULT.json',{'policy_version':'ADAPTATION_POLICY pre-OOF v1','policy_sha256':sha256('runs/RS-DEFHS-ADAPTATION-POLICY-001/ADAPTATION_POLICY.md'),

@@ -1,0 +1,29 @@
+{
+  "python": "3.11.14",
+  "libraries": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.7.2",
+    "h5py": "3.14.0",
+    "torch": "2.10.0+cpu",
+    "joblib": "1.6.0",
+    "threadpoolctl": "3.7.0"
+  },
+  "source_scripts": {
+    "scripts/defhs_frozen_closure_utils.py": "1912427906654a44c070d1d7c05a4616646aa1ffc6b312c33788b914c6166dd5",
+    "scripts/run_rs_defhs_finalist_closure.py": "e13b39e477052a5d0ab6a5f918c67057fda1a90ebab56d5d499b146d66a31b54",
+    "scripts/run_rs_defhs_frozen_closure.py": "a5b19b891acddb5a3e24dcf22bc1ed83ba68e8e5fc84ee30ea68cab5a0fe6ab4"
+  },
+  "accelerator_hours": 0,
+  "encoder_extraction_repeated": false,
+  "tests": [
+    "macro-F1 agrees with sklearn, including weighted counts",
+    "weighted pair AUC agrees with sklearn, including tied ranks",
+    "all 826 training cached meanstd pools bit-identical to frame recomputation",
+    "legacy acoustic hard OOF parity: 0 mismatches in both views",
+    "eGeMAPS standalone score parity",
+    "recovered logistic V3 probability error <=1.11e-8",
+    "all 21 V3 files rclone download byte comparison equal"
+  ]
+}

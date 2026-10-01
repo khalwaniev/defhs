@@ -1,0 +1,32 @@
+{
+  "mission_id": "RS-DEFHS-SYSTEM-IMPLEMENTATION-001",
+  "model": "iic/emotion2vec_base@v2.0.4 ModelScope",
+  "representation": "cached frozen final frames mean+std, 1536 dimensions",
+  "head": "StandardScaler + multinomial L2 logistic C1 max_iter5000",
+  "encoder_cache_sha256": "4b8b6feeedc83ca2712b7fd21d9683465a07f7fcb82ca0c1d625512acf64326f",
+  "decision": "argmax, angry/happy/neutral/sad order",
+  "SER_members": [
+    "emotion2vec_base_L2_LOGREG"
+  ],
+  "weights": [
+    1.0
+  ],
+  "offsets": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "retrieval": "existing fixed certified unanimous-label hard override",
+  "retrieval_map_sha256": "e08f7d06c13d64a1d365d7ae6fa741d6e831dea8816de6663d4a9c0eb113d2a7",
+  "test_rows": 209,
+  "certified_retrieval_test_rows": 78,
+  "serialized_model_sha256": "787d8da0cd2a54ea405ec319f74fb762e0336e6fdb2d9fa972a3ab4a7e774a87",
+  "test_inference_sha256": "4a5c32123f7dd85ccbbbb7b41dcc7990226d821448837402b1710ac435434957",
+  "training_rows": 826,
+  "training_seed_note": "20261001 is inherited logistic RNG only; no protected allocation was read or scored",
+  "protected_validation_queried": false,
+  "kaggle_submission_made": false,
+  "wall_seconds": 0.3915035319996605,
+  "accelerator_hours": 0
+}

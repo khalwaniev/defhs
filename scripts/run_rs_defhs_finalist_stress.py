@@ -58,7 +58,7 @@ def envelope(ids,y,pred,subgroups,man):
             private=partition(rg,ids,CLASSES[y],sm,q,od);public=~private;preval[b]=sm[private].mean()
             for m,p in pred.items():scores[m][b]=.4*f1(y[public],p[public])+.6*f1(y[private],p[private])
         others=[m for m in pred if m!='FINALIST'];gap=scores['FINALIST']-np.max(np.stack([scores[m] for m in others]),axis=0)
-        bucket='baseline' if level=='baseline' else ('plausible' if level.startswith(('mild','moderate')) else ('strong_tail' if level.startswith('strong') else 'extreme_tail'))
+        bucket='baseline' if level=='baseline' else ('development_difficulty_tail' if name=='development_difficulty_tail' else ('plausible' if level.startswith(('mild','moderate')) else ('strong_tail' if level.startswith('strong') else 'extreme_tail')))
         return {'subgroup':name,'private_fraction':q,'level':level,'odds':None if np.isinf(od) else od,'bucket':bucket,'replicates':B,
             'train_prevalence':len(S&train_ids)/len(ids),'test_prevalence':None if name=='development_difficulty_tail' else len(S&test_ids)/209,
             'pseudo_private_prevalence':float(preval.mean()),'mean_scores':{m:float(s.mean()) for m,s in scores.items()},

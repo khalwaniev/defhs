@@ -100,7 +100,8 @@
     },
     "G5": {
       "status": "PASS",
-      "reason": "All fixed frozen membership candidates, conditional eGeMAPS, text and pooling decisions closed"
+      "reason": "All fixed frozen membership candidates, conditional eGeMAPS, text and pooling decisions closed",
+      "unpromoted_robust_additions": []
     },
     "G6": {
       "status": "NOT_ENTERED",
@@ -3120,5 +3121,6 @@
   },
   "sigma_E": 0.017422136038214735,
   "supported_layer_control": "UNKNOWN",
-  "protected_validation_queried": false
+  "protected_validation_queried": false,
+  "witness_short_circuit_note": "All 12 witnesses fail the necessary full/CLEAN simultaneous AUC condition; each also fails residual four-fold/lower-bound conditions. Additional source/component interval tests cannot turn those failures into PASS and were not used to claim robustness."
 }
