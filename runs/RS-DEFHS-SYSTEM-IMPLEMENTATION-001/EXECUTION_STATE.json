@@ -1,17 +1,18 @@
 {
   "mission_id": "RS-DEFHS-SYSTEM-IMPLEMENTATION-001",
   "layer": "3_OF_3",
-  "status": "RETURN_TO_SS_STAGE0_STOP",
+  "status": "ACTIVE_STAGE1_PREPARATION",
   "repository": "khalwaniev/defhs",
   "branch": "rs/system-implementation-001",
   "mission_start_head": "388ec75e3531c180d4f9cc936fa6eb9f17773e2f",
   "ledger_initialization_commit": "13ba0b5e7e9ba49a720041d95f9ebf139b9a7b57",
+  "stage0_stop_commit": "efd312c3515acddee143a5398c003471ecd4b885",
   "local_worktree_status": "UNKNOWN_RUNTIME_HAS_NO_ACCESS_TO_/home/fikar/zingle/defhs",
   "protected_validation_status": "NOT_QUERIED",
   "kaggle_submission_status": "NOT_MADE",
   "stages": {
-    "stage0": "TERMINAL_STOP_CONDITION_REACHED",
-    "stage1": "NOT_STARTED",
+    "stage0": "CLEARED_AFTER_SS_CONTINUATION",
+    "stage1": "AUTHORIZED_NOT_STARTED",
     "stage2": "NOT_STARTED",
     "stage3": "NOT_STARTED",
     "stage4": "NOT_STARTED",
@@ -22,17 +23,61 @@
     "stage9": "NOT_STARTED"
   },
   "stage0": {
-    "competition_policy_compatibility": "UNKNOWN",
-    "candidates": {
-      "emotion2vec_base": "BLOCKED_POLICY_UNKNOWN",
-      "vesper_4": "BLOCKED_NO_RELEASED_CHECKPOINT_AND_POLICY_UNKNOWN",
-      "wavlm_large": "BLOCKED_WEIGHT_TERMS_UNRESOLVED_AND_POLICY_UNKNOWN",
-      "xls_r_300m": "BLOCKED_POLICY_UNKNOWN"
+    "historical_stop": {
+      "status_at_time": "CORRECT_UNDER_THEN_UNKNOWN_AUTHORITY",
+      "competition_policy_compatibility": "UNKNOWN",
+      "stop_reasons": [
+        "competition-policy ambiguity prevents intended execution",
+        "both intended emotion-specialized lanes were then non-executable"
+      ]
     },
-    "stop_reasons": [
-      "competition-policy ambiguity prevents intended execution",
-      "both intended emotion-specialized lanes are currently non-executable"
-    ]
+    "continuation_authority": {
+      "date": "2026-10-01",
+      "source": "Strategic Scientist Stage-0 unblock continuation",
+      "official_rules_capture_command": "kaggle competitions pages dataverse-detecting-emotions-from-hindi-speech --page-name rules --content",
+      "rules_section": "5. EXTERNAL DATA AND TOOLS",
+      "competition_policy_compatibility": "ALLOWED_CONDITIONAL_ON_ASSET_LICENSE_AND_REASONABLE_PUBLIC_ACCESS",
+      "audit_path": "runs/RS-DEFHS-SYSTEM-IMPLEMENTATION-001/STAGE0_CONTINUATION_ADDENDUM.md"
+    },
+    "candidates": {
+      "emotion2vec_base": {
+        "status": "STAGE0_CLEARED",
+        "model_id": "iic/emotion2vec_base",
+        "model_revision": "v2.0.4",
+        "revision_authority": "official ddlBoJack/emotion2vec README at commit a00c9fef630f88c579ed768a6f9409ceaf45c96f",
+        "checkpoint_license": "Apache-2.0 per current ModelScope model authority",
+        "access": "PUBLIC_NO_COST",
+        "acquisition_route": "ModelScope only; FunASR hub=ms; Hugging Face mirror is not the execution source",
+        "extraction_code_repo": "modelscope/FunASR",
+        "extraction_code_revision": "4a84879ae8ca4d2430953b11c49d609217d93988",
+        "extraction_code_license": "MIT",
+        "sample_rate_hz": 16000,
+        "runtime_integrity_guard": "before first representation extraction, record resolved ModelScope cache inventory and SHA256 hashes; abort on revision/license mismatch"
+      },
+      "vesper_4": "DEFERRED_BLOCKED_NO_RELEASED_CHECKPOINT",
+      "wavlm_large": "DEFERRED_BLOCKED_WEIGHT_TERMS_UNRESOLVED",
+      "xls_r_300m": {
+        "status": "STAGE0_CLEARED",
+        "model_id": "facebook/wav2vec2-xls-r-300m",
+        "model_revision": "1a640f32ac3e39899438a2931f9924c02f080a54",
+        "checkpoint_license": "Apache-2.0",
+        "access": "PUBLIC_NO_COST",
+        "sample_rate_hz": 16000,
+        "do_normalize": true,
+        "return_attention_mask": true
+      }
+    },
+    "active_stop_reasons": []
+  },
+  "stage1_authority": {
+    "validation_vb_drive_id": "1AQxmJTSA5SaawTiw0AVJAUk1su7ICoRK",
+    "validation_vb_sha256": "87c6c0b33e5ea5c05b2bd2537d29480e4285cf816d4a921a6f1bcb3ef854139b",
+    "validation_va_drive_id": "1DnSBTewpadR1hzof9Hb_Es9gt16_9N-4",
+    "validation_va_sha256": "dcee356b0a66cb73c506bb71a6c57962227d6d0474efd3e4d6c404168308f3d1",
+    "data_manifest_drive_id": "1K72qAYnm3k1vHLyTQK6hZ-A30sJGFs3A",
+    "data_manifest_sha256": "1e5552d42aec94efae197e7dac95de41cfc96e40336f3e513b9a87e3ccc72469",
+    "retrieval_map_drive_id": "1JsnJCryDsbOV7GWUAkzi4cCS7uZ3WGcx",
+    "retrieval_map_sha256": "e08f7d06c13d64a1d365d7ae6fa741d6e831dea8816de6663d4a9c0eb113d2a7"
   },
   "peft_gate_status": "PENDING_FROZEN_OOF",
   "drive_mission_root": {
@@ -43,5 +88,5 @@
     "gpu_accelerator_hours": 0,
     "model_execution": false
   },
-  "next_decision_required_from_ss": "CAPTURE_COMPETITION_PRETRAINED_MODEL_RULE_THEN_RESOLVE_VESPER_ARCHITECTURE_IF_MODELS_ALLOWED"
+  "next_decision_required_from_ss": null
 }

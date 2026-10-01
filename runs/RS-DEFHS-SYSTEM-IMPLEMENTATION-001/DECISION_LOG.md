@@ -15,9 +15,24 @@
 
 - Competition-policy compatibility for third-party pretrained checkpoints could not be established from captured project authority or the retrievable official Kaggle page. Status = UNKNOWN.
 - Per the frozen mission, public availability is not permission and UNKNOWN cannot be converted into execution authority.
-- emotion2vec base therefore remains blocked from execution despite a current official ModelScope Apache-2.0 listing.
-- Vesper-4 is additionally blocked because the pinned official Apache-2.0 repository contains no released immutable pretrained Vesper-4 checkpoint; silently initializing from WavLM would change the intended candidate.
-- WavLM-large remains blocked on checkpoint-weight terms as well as global competition policy.
-- XLS-R-300m has a pinned Apache-2.0 checkpoint revision and 16 kHz preprocessing authority, but remains blocked by the global competition-policy gate.
-- Both intended emotion-specialized lanes are non-executable, and competition-policy ambiguity independently triggers the mission's explicit return-to-SS condition.
+- emotion2vec base therefore remained blocked from execution despite a current official ModelScope Apache-2.0 listing.
+- Vesper-4 was additionally blocked because the pinned official Apache-2.0 repository contains no released immutable pretrained Vesper-4 checkpoint; silently initializing from WavLM would change the intended candidate.
+- WavLM-large remained blocked on checkpoint-weight terms as well as global competition policy.
+- XLS-R-300m had a pinned Apache-2.0 checkpoint revision and 16 kHz preprocessing authority, but remained blocked by the global competition-policy gate.
+- Both intended emotion-specialized lanes were non-executable, and competition-policy ambiguity independently triggered the mission's explicit return-to-SS condition.
 - Stage 1 was not started.
+
+## Stage 0 continuation — SS unblock
+
+- The prior STOP remains historically correct because the controlling policy authority was UNKNOWN at that execution point.
+- SS supplied an official Kaggle Rules capture from `kaggle competitions pages dataverse-detecting-emotions-from-hindi-speech --page-name rules --content`, section `5. EXTERNAL DATA AND TOOLS`.
+- Captured rule authority permits external data/models unless specifically prohibited by the Host, subject to reasonable/public accessibility and cost conditions. SS resolves `COMPETITION_POLICY_COMPATIBILITY = ALLOWED_CONDITIONAL_ON_ASSET_LICENSE_AND_REASONABLE_PUBLIC_ACCESS`.
+- emotion2vec base: policy block removed. Official `ddlBoJack/emotion2vec` history at commit `a00c9fef630f88c579ed768a6f9409ceaf45c96f` pins ModelScope `iic/emotion2vec_base` at revision `v2.0.4`. Current ModelScope authority labels the model Apache-2.0. Exact FunASR extraction implementation is pinned at `4a84879ae8ca4d2430953b11c49d609217d93988` under MIT. Status = STAGE0_CLEARED.
+- Vesper-4: global policy block removed, but no authoritative released Vesper-4 pretrained checkpoint was established. Status = DEFERRED_BLOCKED_NO_RELEASED_CHECKPOINT. No substitute is authorized.
+- XLS-R-300m: exact checkpoint `facebook/wav2vec2-xls-r-300m@1a640f32ac3e39899438a2931f9924c02f080a54`, Apache-2.0, 16 kHz, normalization enabled, attention mask supported. Status = STAGE0_CLEARED.
+- WavLM-large: global policy block removed, but checkpoint-weight terms remain unresolved. Status = DEFERRED_BLOCKED_WEIGHT_TERMS_UNRESOLVED.
+- The Layer-1 both-emotion-lanes stop condition no longer applies because emotion2vec is executable under the new authority. Stage 1 is authorized with emotion2vec + XLS-R as the bounded available neural program.
+- The first actual ModelScope acquisition must snapshot the resolved `v2.0.4` cache inventory and SHA256 hashes before representation extraction; any revision/license mismatch aborts rather than silently substituting the Hugging Face mirror.
+- Frozen V-B/V-A authorities were read back from Drive and their recorded SHA256 values matched the canonical artifact inventory. Protected validation was not opened.
+- Protected validation not queried.
+- Kaggle submission not made.
