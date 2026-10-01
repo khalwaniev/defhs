@@ -114,6 +114,7 @@
       "model_execution_reached": false,
       "protected_validation_queried": false
     },
-    "v2_patch": "accept one or more SHA256-identical canonical manifest aliases; deterministically prefer ds002_closure path and record all aliases"
+    "v2_patch": "accept one or more SHA256-identical canonical manifest aliases; deterministically prefer ds002_closure path and record all aliases",
+    "v2_patch_commit": "9b8fb5e83d70cd1e63a5ea7de27121c07b2c2c1c"
   }
 }

@@ -11,4 +11,4 @@ STAGE1_RUNNER,1,python,kaggle/rs_system_implementation_001_frozen_screen/run.py,
 STAGE1_KERNEL_METADATA,1,json,kaggle/rs_system_implementation_001_frozen_screen/kernel-metadata.json,GitHub,4bc3078758c237fd0be8a634c489bc1258a13c07,CREATED,Private GPU Kaggle kernel metadata; competition + canonical DS closure source
 STAGE1_REQUIREMENTS,1,text,requirements/rs_system_implementation_001_frozen_screen.txt,GitHub,4bc3078758c237fd0be8a634c489bc1258a13c07,CREATED,Pinned Stage-1 runtime dependencies
 STAGE1_SCAFFOLD_REPORT,1,markdown,runs/RS-DEFHS-SYSTEM-IMPLEMENTATION-001/STAGE1_SCAFFOLD.md,GitHub,4bc3078758c237fd0be8a634c489bc1258a13c07,CREATED,Scaffold contract static-smoke status and execution boundary
-STAGE1_KAGGLE_V1_FAILURE,1,markdown,runs/RS-DEFHS-SYSTEM-IMPLEMENTATION-001/STAGE1_KAGGLE_V1_FAILURE.md,GitHub,v1-failure-patch-commit,CREATED,Exact v1 traceback diagnosis and bounded patch rationale
+STAGE1_KAGGLE_V1_FAILURE,1,markdown,runs/RS-DEFHS-SYSTEM-IMPLEMENTATION-001/STAGE1_KAGGLE_V1_FAILURE.md,GitHub,9b8fb5e83d70cd1e63a5ea7de27121c07b2c2c1c,CREATED,Exact v1 traceback diagnosis and bounded patch rationale
