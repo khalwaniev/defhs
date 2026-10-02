@@ -16,7 +16,7 @@ def sha(p):
     return h.hexdigest()
 def dump(p,x):
     p=Path(p);p.parent.mkdir(parents=True,exist_ok=True)
-    tmp=p.with_suffix(p.suffix+'.tmp');tmp.write_text(json.dumps(x,indent=2,allow_nan=False)+'\n');tmp.replace(p)
+    tmp=p.with_suffix(p.suffix+f'.{os.getpid()}.tmp');tmp.write_text(json.dumps(x,indent=2,allow_nan=False)+'\n');tmp.replace(p)
 def ih(ids):return hashlib.sha256(''.join(f'{int(i)}\n' for i in ids).encode()).hexdigest()
 def seed_all(seed):
     import numpy as np, torch
@@ -33,13 +33,16 @@ def load_parent(lane,device):
         spec=PAYLOAD['e2v_files']
         for n in ['config.yaml','configuration.json','emotion2vec_base.pt']:
             f=root/n
-            if not f.exists():
-                url=f'https://modelscope.cn/api/v1/models/iic/emotion2vec_base/repo?Revision=v2.0.4&FilePath={n}'
-                with urllib.request.urlopen(url,timeout=180) as r,f.open('wb') as w:
-                    while True:
-                        b=r.read(1<<20)
-                        if not b:break
-                        w.write(b)
+            import fcntl
+            with (root/(n+'.lock')).open('w') as lock:
+                fcntl.flock(lock,fcntl.LOCK_EX)
+                if not f.exists():
+                    url=f'https://modelscope.cn/api/v1/models/iic/emotion2vec_base/repo?Revision=v2.0.4&FilePath={n}'
+                    with urllib.request.urlopen(url,timeout=180) as r,f.open('wb') as w:
+                        while True:
+                            b=r.read(1<<20)
+                            if not b:break
+                            w.write(b)
             assert sha(f)==spec[n]['sha256'],n
         model=AutoModel(model=str(root),device=device,disable_update=True).model
         blocks=model.blocks;dim=1536

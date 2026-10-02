@@ -949,5 +949,64 @@
   "promotion_conventions_pass": false,
   "selection": "FIXED_50_50",
   "independence_limit": "Same reused ordinary authority; fitted components are legal train-side nested predictions",
-  "outer_exclusion_audit": "PASS: recomputed exact training/prediction ID hashes for every inner split"
+  "outer_exclusion_audit": "PASS: recomputed exact training/prediction ID hashes for every inner split",
+  "conditional_dependency_uncertainty": {
+    "FIXED_PAIR:VB:all": {
+      "point": 0.038441088167730286,
+      "sd": 0.014311254388130025,
+      "lower": -0.0010859581427050125,
+      "upper": 0.07796813447816558,
+      "q": 2.761955398069064
+    },
+    "FIXED_PAIR:VB:CLEAN": {
+      "point": 0.03819670670181852,
+      "sd": 0.01656744401151697,
+      "lower": -0.007561834717997762,
+      "upper": 0.0839552481216348,
+      "q": 2.761955398069064
+    },
+    "FIXED_PAIR:VA:all": {
+      "point": 0.024987897857230545,
+      "sd": 0.0108575834593742,
+      "lower": -0.005000263388373408,
+      "upper": 0.0549760591028345,
+      "q": 2.761955398069064
+    },
+    "FIXED_PAIR:VA:nonretrieval": {
+      "point": 0.03609848112284142,
+      "sd": 0.014868513408931656,
+      "lower": -0.0049676897482196225,
+      "upper": 0.07716465199390246,
+      "q": 2.761955398069064
+    },
+    "NESTED_FUSION:VB:all": {
+      "point": 0.006546587720312691,
+      "sd": 0.004879958219102577,
+      "lower": -0.006931639225289166,
+      "upper": 0.020024814665914548,
+      "q": 2.761955398069064
+    },
+    "NESTED_FUSION:VB:CLEAN": {
+      "point": 0.007562106322104856,
+      "sd": 0.006198929480501758,
+      "lower": -0.009559060418816434,
+      "upper": 0.024683273063026145,
+      "q": 2.761955398069064
+    },
+    "NESTED_FUSION:VA:all": {
+      "point": -0.0002015214006203525,
+      "sd": 0.0052715547718595775,
+      "lower": -0.014761320558974646,
+      "upper": 0.01435827775773394,
+      "q": 2.761955398069064
+    },
+    "NESTED_FUSION:VA:nonretrieval": {
+      "point": -0.0032893253836955294,
+      "sd": 0.006964866030222076,
+      "lower": -0.022525974712695244,
+      "upper": 0.015947323945304185,
+      "q": 2.761955398069064
+    }
+  },
+  "uncertainty_limit": "Ordinary authority reused; conditional intervals are diagnostic and do not account for prior research selection; no additional promotion veto."
 }
