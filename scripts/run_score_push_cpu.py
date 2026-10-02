@@ -283,6 +283,12 @@ def semantic(a):
         'confusion_columns': list(CLASSES) + ['unclear'],
         'confusion': np.bincount(5*y + np.where(covered, index, 4), minlength=20).reshape(4,5),
         'label_counts': {label: int(np.sum(sem == label)) for label in list(CLASSES) + ['unclear']}}
+    standalone['folds'] = {v: [{
+        'fold': k, 'rows': int(np.sum(f.fold.to_numpy() == k)),
+        'covered': int(np.sum(covered & (f.fold.to_numpy() == k))),
+        'macro_f1_on_covered': f1(y[covered & (f.fold.to_numpy() == k)], index[covered & (f.fold.to_numpy() == k)])
+            if np.any(covered & (f.fold.to_numpy() == k)) else None}
+        for k in range(5)] for v, f in folds.items()}
     for v, f in folds.items():
         audio_pred, fusion_pred = parent[v].argmax(1), fused[v].argmax(1)
         strata = dict(masks[v])
