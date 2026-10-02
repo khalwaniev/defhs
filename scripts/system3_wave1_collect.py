@@ -42,6 +42,20 @@ def load_gpu(folder,lane,view,seed,folds,adapted_only=False):
                 saved=json.loads((root/f'{arm}_fold{outer}_{kind}_DONE.json').read_text())
                 assert saved==rec
                 assert sha256(root/f'{arm}_fold{outer}_{kind}_STATE.pt')==rec['checkpoint_sha256']
+                # Reconstruct the precommitted shuffle, without changing the
+                # completed fit or its checkpoint. Record actually optimized
+                # IDs as well as the full assigned training-set fingerprint.
+                assigned=np.flatnonzero(training);used=(len(assigned)//16)*16
+                schedule=[]
+                for trace in rec['traces']:
+                    epoch=trace['epoch']
+                    order=np.random.default_rng(seed+outer*10000+epoch).permutation(assigned)
+                    assert trace['training_clips']==used
+                    assert trace['dropped_tail_clips']==len(assigned)-used
+                    schedule.append({'epoch':epoch,'optimized_ID_sha256':idhash(f.Id.iloc[order[:used]]),
+                        'dropped_tail_IDs':f.Id.iloc[order[used:]].tolist(),
+                        'dropped_tail_ID_sha256':idhash(f.Id.iloc[order[used:]])})
+                rec['reconstructed_training_schedule']=schedule
                 if kind=='refit':assert rec['selected_epoch']==meta['selected_epoch']
             assert meta['pilot']['selected_epoch']==meta['selected_epoch']
             records.append(meta)
