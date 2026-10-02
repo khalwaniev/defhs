@@ -22,8 +22,8 @@ def delta(p,base,folds,masks):
         assert np.array_equal(confusion_matrix(f.emotion,CLASSES[a],labels=CLASSES),r[v]['confusion'])
     return r
 
-def load_gpu(folder,lane,view,seed,folds):
-    f=folds[view];q={arm:np.zeros((826,4)) for arm in [lane+'0',lane+'1']};records=[]
+def load_gpu(folder,lane,view,seed,folds,adapted_only=False):
+    f=folds[view];q={arm:np.zeros((826,4)) for arm in ([lane+'1'] if adapted_only else [lane+'0',lane+'1'])};records=[]
     root=folder/f'{lane}_{view}_seed{seed}'
     for outer in range(5):
         H=f.fold.to_numpy()==outer;S=~H;g=(outer+1)%5;stop=S&(f.fold.to_numpy()==g);pilot=S&~stop
@@ -52,11 +52,13 @@ def main():
     baseline={args.view:control[args.view]};P={args.view:np.load(WORK/f'FIXED_PAIR_{args.view}.npz')['prob']}
     measurements={};blends={};probs={};inventory=[]
     for lane in args.lanes:
-        qq,records=load_gpu(args.folder,lane,args.view,args.seed,allfolds)
+        qq,records=load_gpu(args.folder,lane,args.view,args.seed,allfolds,adapted_only=args.seed==20260917)
         for arm,p in qq.items():
             probs[arm]={args.view:p}
             path=WORK/f'{arm}_{args.view}_seed{args.seed}.npz';np.savez_compressed(path,Id=folds[args.view].Id.to_numpy(),prob=p)
             inventory.append({'name':path.name,'sha256':sha256(path),'local_path':str(path),'bytes':path.stat().st_size})
+        if args.seed==20260917:
+            qq[lane+'0']=np.load(WORK/f'{lane}0_{args.view}_seed20260930.npz')['prob']
         matched={args.view:qq[lane+'0']};adapted={args.view:qq[lane+'1']}
         measured=delta(adapted,matched,folds,masks);frozen=delta(matched,baseline,folds,masks)
         blend={args.view:(2*P[args.view]+qq[lane+'1'])/3};result=delta(blend,P,folds,masks)
@@ -84,7 +86,20 @@ def main():
         dump(RUN/'W1_SECONDARY_CONFIRMATION.json',{'status':'ENTRY_DECIDED','provisionally_useful_survivors':[lane for lane,r in measurements.items() if r['provisional_useful']],
             'entry':'Only actual adapted survivors under registered VB conventions; VA and leading-seed2 still pending if any'})
     else:
-        dump(RUN/f'W1_CONFIRMATION_{args.view}_seed{args.seed}.json',{'measurements':measurements,'fixed_blends':blends})
+        payload={'measurements':measurements,'fixed_blends':blends}
+        if args.seed==20260917:
+            payload['matched_reference_note']='Frozen arm is seed1; no extra frozen-arm seed2 experiment. Stability measures compare seed1, seed2 and their arithmetic probability average.'
+            means={}
+            for lane in args.lanes:
+                s1=np.load(WORK/f'{lane}1_{args.view}_seed20260930.npz')['prob'];s2=probs[lane+'1'][args.view]
+                mean=(s1+s2)/2;blend=(2*P[args.view]+mean)/3
+                means[lane]={'seed1_vs_pair':delta({args.view:s1},P,folds,masks),'seed2_vs_pair':delta({args.view:s2},P,folds,masks),
+                   'mean_probability_vs_pair':delta({args.view:mean},P,folds,masks),'fixed_blend_mean_vs_pair':delta({args.view:blend},P,folds,masks)}
+                for name,p in [(lane+'1_SEED_MEAN',mean),('Candidate_'+lane+'_SEED_MEAN',blend)]:
+                    path=WORK/f'{name}_{args.view}.npz';np.savez_compressed(path,Id=folds[args.view].Id.to_numpy(),prob=p)
+                    inventory.append({'name':path.name,'sha256':sha256(path),'local_path':str(path),'bytes':path.stat().st_size})
+            payload['seed_stability']=means
+        dump(RUN/f'W1_CONFIRMATION_{args.view}_seed{args.seed}.json',payload)
     existing=json.loads((RUN/'PROBABILITY_ARTIFACT_INVENTORY.json').read_text());existing['artifacts']+=inventory;dump(RUN/'PROBABILITY_ARTIFACT_INVENTORY.json',existing)
     print(json.dumps({'measurements':{k:{'matched':r['matched_frozen'][args.view]['macro_f1'],'adapted':r['adapted_vs_matched_frozen'][args.view]['macro_f1'],
         'useful':r.get('provisional_useful'),'epochs':[m['selected_epoch'] for m in r['fold_records'] if m['arm']==k+'1']} for k,r in measurements.items()},

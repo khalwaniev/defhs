@@ -20,6 +20,18 @@ def main():
             'id':'khalwaniev/defhs-system3-wave1-cache','licenses':[{'name':'other'}]},indent=2)+'\n')
         print(dest);return
     pre=json.loads((RUN/'W1_PREFLIGHT.json').read_text());assert pre['status']=='PASS'
+    if ns.lane is not None or ns.view!='VB' or ns.seed!=20260930:
+        assert ns.lane is not None,'Secondary execution must name only an eligible lane.'
+        confirmation=json.loads((RUN/'W1_SECONDARY_CONFIRMATION.json').read_text())
+        assert json.loads((RUN/'W1_FIXED_BLEND_RESULTS.json').read_text())['status']=='COMPLETE_VB'
+        for n in ['W1_E2V_ADAPTATION_RESULTS.json','W1_AST_RESULTS.json']:
+            assert json.loads((RUN/n).read_text())['status']=='COMPLETE'
+        if ns.seed==20260930:
+            assert ns.view=='VA' and not ns.adapted_only
+            assert ns.lane in confirmation['provisionally_useful_survivors']
+        else:
+            assert ns.seed==20260917 and ns.adapted_only
+            assert ns.lane==confirmation['leading_adapted_for_seed2']
     template=ROOT/'scripts/system3_wave1_gpu.py'
     spec=json.loads((V3/'E2V_MODELSCOPE_RESOLVED_OBJECT.json').read_text())
     payload={'source_sha':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
