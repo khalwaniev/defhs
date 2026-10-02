@@ -4,7 +4,7 @@
   "kernel": "khalwaniev/defhs-system3-wave1-matched-adaptation",
   "version": 1,
   "checkpoint_root": "gdrive:DEFHS/rs_system3_wave1_001",
-  "checkpoint_inventory": "172 SHA256-verified package files; per-fit checkpoints/optimizer/RNG in vb_seed1; Drive copy pending",
+  "checkpoint_inventory": "172 SHA256-verified package files plus master manifest; vb_seed1 uploaded; rclone byte-integrity check running",
   "VB_package_integrity": {
     "status": "PASS",
     "package_root": "/home/fikar/zingle/defhs/.tmp/system3_wave1_vb_seed1/rs_system3_wave1_001",
@@ -15,5 +15,58 @@
     "protected_validation_read": false,
     "kaggle_submission_made": false
   },
-  "VA_entry": "B only: matched standalone gain +.0460415586 and CLEAN +.0273072044; A does not qualify"
+  "VA_entry": "B only: matched standalone gain +.0460415586 and CLEAN +.0273072044; A does not qualify",
+  "VB_base_docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+  "VB_runtime_note": "v1 did not emit individual package versions; immutable server-reported base image and exact installed dependency pins are preserved. No package version is invented.",
+  "VA_job": {
+    "kernel": "khalwaniev/defhs-system3-wave1-b-va-20260930",
+    "version": 1,
+    "source_sha": "0959ca82e53f932d85c274ced0f0407d1f1b4a77",
+    "runner_sha256": "7e3fdd08cb4b108bc6f6570e662e770e118f6d32e39a4a2dd8f05a789d6066f1",
+    "view": "VA",
+    "seed": 20260930,
+    "workers": {
+      "GPU0": [
+        0,
+        2,
+        4
+      ],
+      "GPU1": [
+        1,
+        3
+      ]
+    },
+    "status": "LAUNCHED"
+  },
+  "VB_server_source_parity": {
+    "status": "PASS",
+    "runner_sha256": "7a78ff0434cd4f57f286f76753b36b445a9d7b42708cbec3be98fe4f7e5dee0a"
+  },
+  "AST_segmentation_audit": {
+    "status": "PASS",
+    "clips": 826,
+    "segments": 829,
+    "segments_per_clip_counts": {
+      "1": 823,
+      "2": 3
+    },
+    "window_samples": 164080,
+    "full_coverage": true,
+    "family_identity_parity": true,
+    "weighting": "one clip NLL of arithmetic mean segment probabilities; no extra clip weight for more segments"
+  },
+  "initialization_and_schedule_notes": {
+    "A_pilot": "scaler/C1 head fitted on the three pilot-training blocks, excluding stopping and outer blocks",
+    "A_refit": "scaler/C1 head rebuilt on four non-outer blocks; same initialization rule, with A0/A1 sharing it within each fit; numeric pilot/refit heads differ",
+    "B": "identical seed-derived random 768\u21924 head shared by matched arms and pilot/refit",
+    "seed_namespace": "Torch initialization base optimization seed + outer fold; epoch shuffle base seed + fold*10000 + epoch; SpecAugment hash of base seed, Id, epoch and segment",
+    "schedule": "fixed twenty-epoch warmup/cosine horizon for pilots and refits; training-tail IDs reconstructed in audited per-fit records",
+    "checkpoint_selection": "pilot BEST.pt is selected stopping state; outer inference uses restarted refit STATE.pt at selected epoch. Refit BEST.pt contains the epoch-zero initializer and is not the selected inference checkpoint."
+  },
+  "VB_Drive_preservation": {
+    "root": "gdrive:DEFHS/rs_system3_wave1_001/vb_seed1",
+    "copy_exit_code": 0,
+    "byte_check": "RUNNING",
+    "check_log": "work/system3_wave1/vb_drive_check.log"
+  }
 }
