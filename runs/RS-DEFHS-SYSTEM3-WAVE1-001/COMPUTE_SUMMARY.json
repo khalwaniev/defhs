@@ -1,8 +1,23 @@
 {
-  "status": "PARTIAL",
+  "status": "COMPLETE",
   "CPU_pair_wall_seconds": 43.94492375400296,
-  "GPU_fit_wall_seconds_sum": 21709.297120598,
-  "GPU_peak_memory_bytes": 1474375168,
-  "fit_count": 60,
-  "limits": "Fit wall time includes fit-side I/O; excludes model preparation and outer inference. Account GPU quota is recorded separately; summed fit time is not billed accelerator time."
+  "GPU_fit_wall_seconds_sum": 33500.553783403004,
+  "GPU_peak_memory_bytes": 1718022144,
+  "fit_count": 80,
+  "limits": "Fit wall time includes fit-side I/O; excludes model preparation and outer inference. Account GPU quota is recorded separately; summed fit time is not billed accelerator time.",
+  "account_quota": {
+    "GPU_used_hours": 13.35,
+    "GPU_remaining_hours": 16.65,
+    "GPU_total_hours": 30,
+    "initial_used_hours": 6.51,
+    "account_delta_hours": 6.84,
+    "limit": "Account window delta, not an exclusive measured accelerator-time attribution"
+  },
+  "A_CPU_correction": {
+    "training_repeated": false,
+    "encoder_inference_repeated": false,
+    "optimizer_steps": 0,
+    "wall_seconds": null,
+    "note": "No unmeasured correction duration is invented."
+  }
 }

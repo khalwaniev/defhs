@@ -1,0 +1,2338 @@
+{
+  "status": "SCIENCE_COMPLETE_ARTIFACT_CLOSURE_PENDING",
+  "mission": "RS-DEFHS-SYSTEM3-WAVE1-001",
+  "branch": "rs/system3-wave1-001",
+  "starting_sha": "d78da6037ec1b73bf210f562baa30ebb1b9fa9e6",
+  "report_source_head": "8aaf24ce2610faafd64b47284d8f3758c4baaa50",
+  "preflight": "PASS",
+  "target_090_met": false,
+  "selected_candidate": {
+    "definition": "0.5 original iic/emotion2vec_base@v2.0.4 masked final-frame mean+std / StandardScaler / C1 multinomial logistic probabilities + 0.5 cached facebook/wav2vec2-xls-r-300m@1a640f32ac3e39899438a2931f9924c02f080a54 mean+std / StandardScaler / C1 multinomial logistic probabilities; ordinary argmax. Certified retrieval remains separate and unchanged.",
+    "deployment_status": "Preferred Wave1 candidate for SS review; accepted submitted control not modified",
+    "metrics": {
+      "VA": {
+        "macro_f1": 0.8266398472107417,
+        "fold_macro_f1": [
+          0.8298079057395392,
+          0.7690052065052064,
+          0.839965834818776,
+          0.879479878496973,
+          0.8149008500875274
+        ],
+        "per_class_f1": {
+          "angry": 0.8771084337349397,
+          "happy": 0.8074866310160428,
+          "neutral": 0.8181818181818182,
+          "sad": 0.8037825059101655
+        },
+        "confusion": [
+          [
+            182,
+            5,
+            11,
+            7
+          ],
+          [
+            13,
+            151,
+            12,
+            16
+          ],
+          [
+            6,
+            13,
+            180,
+            18
+          ],
+          [
+            9,
+            13,
+            20,
+            170
+          ]
+        ],
+        "strata": {
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.782575272030398,
+            "control_macro_f1": 0.7589031198750782,
+            "delta_vs_control": 0.023672152155319814,
+            "corrections": 27,
+            "breakages": 16
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.801918639796344,
+            "control_macro_f1": 0.7751106257850862,
+            "delta_vs_control": 0.026808014011257875,
+            "corrections": 35,
+            "breakages": 20
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.8592994251531446,
+            "control_macro_f1": 0.8412409465514344,
+            "delta_vs_control": 0.01805847860171017,
+            "corrections": 13,
+            "breakages": 7
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.8410550158153763,
+            "control_macro_f1": 0.8164392386563843,
+            "delta_vs_control": 0.02461577715899199,
+            "corrections": 42,
+            "breakages": 23
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.6978288833968074,
+            "control_macro_f1": 0.6688957161490177,
+            "delta_vs_control": 0.028933167247789715,
+            "corrections": 6,
+            "breakages": 4
+          },
+          "nonretrieval": {
+            "rows": 594,
+            "macro_f1": 0.767215174621592,
+            "control_macro_f1": 0.7311166934987506,
+            "delta_vs_control": 0.03609848112284142,
+            "corrections": 46,
+            "breakages": 24
+          }
+        }
+      },
+      "VB": {
+        "macro_f1": 0.7768156647359765,
+        "fold_macro_f1": [
+          0.7110354010025063,
+          0.7377822341057636,
+          0.8384120668603426,
+          0.7621760797342192,
+          0.8343086028778265
+        ],
+        "per_class_f1": {
+          "angry": 0.8564593301435407,
+          "happy": 0.7540106951871658,
+          "neutral": 0.7338129496402878,
+          "sad": 0.7629796839729119
+        },
+        "confusion": [
+          [
+            179,
+            9,
+            8,
+            9
+          ],
+          [
+            15,
+            141,
+            18,
+            18
+          ],
+          [
+            11,
+            18,
+            153,
+            35
+          ],
+          [
+            8,
+            14,
+            21,
+            169
+          ]
+        ],
+        "strata": {
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.7806997136721545,
+            "control_macro_f1": 0.742503006970336,
+            "delta_vs_control": 0.03819670670181852,
+            "corrections": 34,
+            "breakages": 17
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.7962935361120625,
+            "control_macro_f1": 0.7490481783683188,
+            "delta_vs_control": 0.04724535774374372,
+            "corrections": 48,
+            "breakages": 23
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.7196482128204817,
+            "control_macro_f1": 0.6998937007527789,
+            "delta_vs_control": 0.019754512067702845,
+            "corrections": 22,
+            "breakages": 15
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.7925272502993278,
+            "control_macro_f1": 0.7487828866546056,
+            "delta_vs_control": 0.04374436364472223,
+            "corrections": 66,
+            "breakages": 33
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.6299944821944661,
+            "control_macro_f1": 0.6410285117181669,
+            "delta_vs_control": -0.011034029523700806,
+            "corrections": 4,
+            "breakages": 5
+          }
+        }
+      }
+    },
+    "retrieval_aware_VA": 0.8314384804867729
+  },
+  "recipes": {
+    "Accepted emotion2vec control": {
+      "VA": {
+        "macro_f1": 0.8016519493535111,
+        "fold_macro_f1": [
+          0.799156044038286,
+          0.7884854504653644,
+          0.8103047595118424,
+          0.848237911032568,
+          0.761519521308678
+        ],
+        "per_class_f1": {
+          "angry": 0.8373205741626795,
+          "happy": 0.7968337730870713,
+          "neutral": 0.7772727272727272,
+          "sad": 0.7951807228915663
+        },
+        "confusion": [
+          [
+            175,
+            8,
+            19,
+            3
+          ],
+          [
+            14,
+            151,
+            12,
+            15
+          ],
+          [
+            9,
+            17,
+            171,
+            20
+          ],
+          [
+            15,
+            11,
+            21,
+            165
+          ]
+        ],
+        "strata": {
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.7589031198750782,
+            "control_macro_f1": 0.7589031198750782,
+            "delta_vs_control": 0.0,
+            "corrections": 0,
+            "breakages": 0
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.7751106257850862,
+            "control_macro_f1": 0.7751106257850862,
+            "delta_vs_control": 0.0,
+            "corrections": 0,
+            "breakages": 0
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.8412409465514344,
+            "control_macro_f1": 0.8412409465514344,
+            "delta_vs_control": 0.0,
+            "corrections": 0,
+            "breakages": 0
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.8164392386563843,
+            "control_macro_f1": 0.8164392386563843,
+            "delta_vs_control": 0.0,
+            "corrections": 0,
+            "breakages": 0
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.6688957161490177,
+            "control_macro_f1": 0.6688957161490177,
+            "delta_vs_control": 0.0,
+            "corrections": 0,
+            "breakages": 0
+          },
+          "nonretrieval": {
+            "rows": 594,
+            "macro_f1": 0.7311166934987506,
+            "control_macro_f1": 0.7311166934987506,
+            "delta_vs_control": 0.0,
+            "corrections": 0,
+            "breakages": 0
+          }
+        }
+      },
+      "VB": {
+        "macro_f1": 0.7383745765682462,
+        "fold_macro_f1": [
+          0.6867589088076955,
+          0.7136980353847824,
+          0.8183360396163956,
+          0.6976395371194078,
+          0.7732278732389842
+        ],
+        "per_class_f1": {
+          "angry": 0.8038277511961722,
+          "happy": 0.7229551451187335,
+          "neutral": 0.7061611374407583,
+          "sad": 0.7205542725173211
+        },
+        "confusion": [
+          [
+            168,
+            12,
+            13,
+            12
+          ],
+          [
+            15,
+            137,
+            21,
+            19
+          ],
+          [
+            15,
+            19,
+            149,
+            34
+          ],
+          [
+            15,
+            19,
+            22,
+            156
+          ]
+        ],
+        "strata": {
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.742503006970336,
+            "control_macro_f1": 0.742503006970336,
+            "delta_vs_control": 0.0,
+            "corrections": 0,
+            "breakages": 0
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.7490481783683188,
+            "control_macro_f1": 0.7490481783683188,
+            "delta_vs_control": 0.0,
+            "corrections": 0,
+            "breakages": 0
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.6998937007527789,
+            "control_macro_f1": 0.6998937007527789,
+            "delta_vs_control": 0.0,
+            "corrections": 0,
+            "breakages": 0
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.7487828866546056,
+            "control_macro_f1": 0.7487828866546056,
+            "delta_vs_control": 0.0,
+            "corrections": 0,
+            "breakages": 0
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.6410285117181669,
+            "control_macro_f1": 0.6410285117181669,
+            "delta_vs_control": 0.0,
+            "corrections": 0,
+            "breakages": 0
+          }
+        }
+      }
+    },
+    "Fixed 50/50 pair P": {
+      "VA": {
+        "macro_f1": 0.8266398472107417,
+        "fold_macro_f1": [
+          0.8298079057395392,
+          0.7690052065052064,
+          0.839965834818776,
+          0.879479878496973,
+          0.8149008500875274
+        ],
+        "per_class_f1": {
+          "angry": 0.8771084337349397,
+          "happy": 0.8074866310160428,
+          "neutral": 0.8181818181818182,
+          "sad": 0.8037825059101655
+        },
+        "confusion": [
+          [
+            182,
+            5,
+            11,
+            7
+          ],
+          [
+            13,
+            151,
+            12,
+            16
+          ],
+          [
+            6,
+            13,
+            180,
+            18
+          ],
+          [
+            9,
+            13,
+            20,
+            170
+          ]
+        ],
+        "strata": {
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.782575272030398,
+            "control_macro_f1": 0.7589031198750782,
+            "delta_vs_control": 0.023672152155319814,
+            "corrections": 27,
+            "breakages": 16
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.801918639796344,
+            "control_macro_f1": 0.7751106257850862,
+            "delta_vs_control": 0.026808014011257875,
+            "corrections": 35,
+            "breakages": 20
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.8592994251531446,
+            "control_macro_f1": 0.8412409465514344,
+            "delta_vs_control": 0.01805847860171017,
+            "corrections": 13,
+            "breakages": 7
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.8410550158153763,
+            "control_macro_f1": 0.8164392386563843,
+            "delta_vs_control": 0.02461577715899199,
+            "corrections": 42,
+            "breakages": 23
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.6978288833968074,
+            "control_macro_f1": 0.6688957161490177,
+            "delta_vs_control": 0.028933167247789715,
+            "corrections": 6,
+            "breakages": 4
+          },
+          "nonretrieval": {
+            "rows": 594,
+            "macro_f1": 0.767215174621592,
+            "control_macro_f1": 0.7311166934987506,
+            "delta_vs_control": 0.03609848112284142,
+            "corrections": 46,
+            "breakages": 24
+          }
+        }
+      },
+      "VB": {
+        "macro_f1": 0.7768156647359765,
+        "fold_macro_f1": [
+          0.7110354010025063,
+          0.7377822341057636,
+          0.8384120668603426,
+          0.7621760797342192,
+          0.8343086028778265
+        ],
+        "per_class_f1": {
+          "angry": 0.8564593301435407,
+          "happy": 0.7540106951871658,
+          "neutral": 0.7338129496402878,
+          "sad": 0.7629796839729119
+        },
+        "confusion": [
+          [
+            179,
+            9,
+            8,
+            9
+          ],
+          [
+            15,
+            141,
+            18,
+            18
+          ],
+          [
+            11,
+            18,
+            153,
+            35
+          ],
+          [
+            8,
+            14,
+            21,
+            169
+          ]
+        ],
+        "strata": {
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.7806997136721545,
+            "control_macro_f1": 0.742503006970336,
+            "delta_vs_control": 0.03819670670181852,
+            "corrections": 34,
+            "breakages": 17
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.7962935361120625,
+            "control_macro_f1": 0.7490481783683188,
+            "delta_vs_control": 0.04724535774374372,
+            "corrections": 48,
+            "breakages": 23
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.7196482128204817,
+            "control_macro_f1": 0.6998937007527789,
+            "delta_vs_control": 0.019754512067702845,
+            "corrections": 22,
+            "breakages": 15
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.7925272502993278,
+            "control_macro_f1": 0.7487828866546056,
+            "delta_vs_control": 0.04374436364472223,
+            "corrections": 66,
+            "breakages": 33
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.6299944821944661,
+            "control_macro_f1": 0.6410285117181669,
+            "delta_vs_control": -0.011034029523700806,
+            "corrections": 4,
+            "breakages": 5
+          }
+        }
+      }
+    },
+    "Nested temperatures/simplex": {
+      "VA": {
+        "macro_f1": 0.8264383258101213,
+        "fold_macro_f1": [
+          0.8298079057395392,
+          0.7939370485036119,
+          0.8456072351421189,
+          0.8915891704946969,
+          0.7708023840398165
+        ],
+        "per_class_f1": {
+          "angry": 0.8755980861244019,
+          "happy": 0.8031914893617021,
+          "neutral": 0.8175519630484989,
+          "sad": 0.8094117647058824
+        },
+        "confusion": [
+          [
+            183,
+            7,
+            10,
+            5
+          ],
+          [
+            14,
+            151,
+            12,
+            15
+          ],
+          [
+            6,
+            13,
+            177,
+            21
+          ],
+          [
+            10,
+            13,
+            17,
+            172
+          ]
+        ],
+        "strata": {
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.7808129454481172,
+            "control_macro_f1": 0.782575272030398,
+            "delta_vs_control": -0.0017623265822808154,
+            "corrections": 6,
+            "breakages": 7
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.804580009458543,
+            "control_macro_f1": 0.801918639796344,
+            "delta_vs_control": 0.002661369662198987,
+            "corrections": 8,
+            "breakages": 7
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.8561334483079462,
+            "control_macro_f1": 0.8592994251531446,
+            "delta_vs_control": -0.0031659768451983705,
+            "corrections": 2,
+            "breakages": 3
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.840928153517493,
+            "control_macro_f1": 0.8410550158153763,
+            "delta_vs_control": -0.00012686229788338999,
+            "corrections": 9,
+            "breakages": 9
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.6987929318068691,
+            "control_macro_f1": 0.6978288833968074,
+            "delta_vs_control": 0.0009640484100617019,
+            "corrections": 1,
+            "breakages": 1
+          },
+          "nonretrieval": {
+            "rows": 594,
+            "macro_f1": 0.7639258492378965,
+            "control_macro_f1": 0.767215174621592,
+            "delta_vs_control": -0.0032893253836955294,
+            "corrections": 8,
+            "breakages": 10
+          }
+        }
+      },
+      "VB": {
+        "macro_f1": 0.7833622524562892,
+        "fold_macro_f1": [
+          0.7238014069264069,
+          0.7442663476832161,
+          0.8448972483455243,
+          0.7631290203545517,
+          0.8406608689987624
+        ],
+        "per_class_f1": {
+          "angry": 0.8626506024096385,
+          "happy": 0.7667560321715817,
+          "neutral": 0.7393364928909952,
+          "sad": 0.7647058823529411
+        },
+        "confusion": [
+          [
+            179,
+            8,
+            9,
+            9
+          ],
+          [
+            12,
+            143,
+            20,
+            17
+          ],
+          [
+            11,
+            15,
+            156,
+            35
+          ],
+          [
+            8,
+            15,
+            20,
+            169
+          ]
+        ],
+        "strata": {
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.7882618199942594,
+            "control_macro_f1": 0.7806997136721545,
+            "delta_vs_control": 0.007562106322104856,
+            "corrections": 5,
+            "breakages": 2
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.8042851863615206,
+            "control_macro_f1": 0.7962935361120625,
+            "delta_vs_control": 0.007991650249458027,
+            "corrections": 6,
+            "breakages": 2
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.7269142615656152,
+            "control_macro_f1": 0.7196482128204817,
+            "delta_vs_control": 0.00726604874513348,
+            "corrections": 4,
+            "breakages": 3
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.7998374726507091,
+            "control_macro_f1": 0.7925272502993278,
+            "delta_vs_control": 0.007310222351381346,
+            "corrections": 10,
+            "breakages": 5
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.6299944821944661,
+            "control_macro_f1": 0.6299944821944661,
+            "delta_vs_control": 0.0,
+            "corrections": 0,
+            "breakages": 0
+          }
+        }
+      }
+    },
+    "A0 matched frozen (strict initialization)": {
+      "VB": {
+        "macro_f1": 0.6947864668354651,
+        "fold_macro_f1": [
+          0.6329855421186915,
+          0.6760899615442568,
+          0.7885347432298905,
+          0.6557697509084078,
+          0.7170615127732393
+        ],
+        "per_class_f1": {
+          "angry": 0.75177304964539,
+          "happy": 0.6866485013623979,
+          "neutral": 0.6666666666666666,
+          "sad": 0.6740576496674058
+        },
+        "confusion": [
+          [
+            159,
+            17,
+            14,
+            15
+          ],
+          [
+            20,
+            126,
+            18,
+            28
+          ],
+          [
+            19,
+            17,
+            137,
+            44
+          ],
+          [
+            20,
+            15,
+            25,
+            152
+          ]
+        ],
+        "strata": {
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.7120822976101638,
+            "control_macro_f1": 0.742503006970336,
+            "delta_vs_control": -0.03042070936017216,
+            "corrections": 14,
+            "breakages": 27
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.7305570274440416,
+            "control_macro_f1": 0.7490481783683188,
+            "delta_vs_control": -0.018491150924277222,
+            "corrections": 23,
+            "breakages": 33
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.6076770766764523,
+            "control_macro_f1": 0.6998937007527789,
+            "delta_vs_control": -0.09221662407632658,
+            "corrections": 3,
+            "breakages": 29
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.7099197382863218,
+            "control_macro_f1": 0.7487828866546056,
+            "delta_vs_control": -0.03886314836828375,
+            "corrections": 23,
+            "breakages": 52
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.5532468705639437,
+            "control_macro_f1": 0.6410285117181669,
+            "delta_vs_control": -0.08778164115422316,
+            "corrections": 3,
+            "breakages": 10
+          }
+        }
+      }
+    },
+    "A1 progressive (strict initialization)": {
+      "VB": {
+        "macro_f1": 0.6947864668354651,
+        "fold_macro_f1": [
+          0.6329855421186915,
+          0.6760899615442568,
+          0.7885347432298905,
+          0.6557697509084078,
+          0.7170615127732393
+        ],
+        "per_class_f1": {
+          "angry": 0.75177304964539,
+          "happy": 0.6866485013623979,
+          "neutral": 0.6666666666666666,
+          "sad": 0.6740576496674058
+        },
+        "confusion": [
+          [
+            159,
+            17,
+            14,
+            15
+          ],
+          [
+            20,
+            126,
+            18,
+            28
+          ],
+          [
+            19,
+            17,
+            137,
+            44
+          ],
+          [
+            20,
+            15,
+            25,
+            152
+          ]
+        ],
+        "strata": {
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.7120822976101638,
+            "control_macro_f1": 0.7120822976101638,
+            "delta_vs_control": 0.0,
+            "corrections": 0,
+            "breakages": 0
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.7305570274440416,
+            "control_macro_f1": 0.7305570274440416,
+            "delta_vs_control": 0.0,
+            "corrections": 0,
+            "breakages": 0
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.6076770766764523,
+            "control_macro_f1": 0.6076770766764523,
+            "delta_vs_control": 0.0,
+            "corrections": 0,
+            "breakages": 0
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.7099197382863218,
+            "control_macro_f1": 0.7099197382863218,
+            "delta_vs_control": 0.0,
+            "corrections": 0,
+            "breakages": 0
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.5532468705639437,
+            "control_macro_f1": 0.5532468705639437,
+            "delta_vs_control": 0.0,
+            "corrections": 0,
+            "breakages": 0
+          }
+        }
+      }
+    },
+    "AST B0": {
+      "VB": {
+        "macro_f1": 0.5468363348281033,
+        "fold_macro_f1": [
+          0.4947694338692367,
+          0.5641940036349975,
+          0.5671717409303025,
+          0.5610391913325024,
+          0.5074490967845782
+        ],
+        "per_class_f1": {
+          "angry": 0.6590389016018307,
+          "happy": 0.5074626865671642,
+          "neutral": 0.5248868778280543,
+          "sad": 0.49595687331536387
+        },
+        "confusion": [
+          [
+            144,
+            35,
+            19,
+            7
+          ],
+          [
+            38,
+            102,
+            27,
+            25
+          ],
+          [
+            34,
+            32,
+            116,
+            35
+          ],
+          [
+            16,
+            41,
+            63,
+            92
+          ]
+        ],
+        "strata": {
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.5556312749295205,
+            "control_macro_f1": 0.742503006970336,
+            "delta_vs_control": -0.18687173204081553,
+            "corrections": 47,
+            "breakages": 125
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.5817166555005733,
+            "control_macro_f1": 0.7490481783683188,
+            "delta_vs_control": -0.16733152286774555,
+            "corrections": 64,
+            "breakages": 152
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.47912689513733153,
+            "control_macro_f1": 0.6998937007527789,
+            "delta_vs_control": -0.22076680561544737,
+            "corrections": 29,
+            "breakages": 97
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.559916923971113,
+            "control_macro_f1": 0.7487828866546056,
+            "delta_vs_control": -0.18886596268349254,
+            "corrections": 83,
+            "breakages": 222
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.4216089466089466,
+            "control_macro_f1": 0.6410285117181669,
+            "delta_vs_control": -0.21941956510922028,
+            "corrections": 10,
+            "breakages": 27
+          }
+        }
+      },
+      "VA": {
+        "macro_f1": 0.6347052686314524,
+        "fold_macro_f1": [
+          0.6451515463563656,
+          0.6584168548842463,
+          0.6594502665931237,
+          0.5997820185086102,
+          0.6038704775510764
+        ],
+        "per_class_f1": {
+          "angry": 0.7242206235011991,
+          "happy": 0.5478723404255319,
+          "neutral": 0.6267281105990783,
+          "sad": 0.64
+        },
+        "confusion": [
+          [
+            151,
+            28,
+            15,
+            11
+          ],
+          [
+            35,
+            103,
+            28,
+            26
+          ],
+          [
+            14,
+            27,
+            136,
+            40
+          ],
+          [
+            12,
+            26,
+            38,
+            136
+          ]
+        ],
+        "strata": {
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.6118081365489316,
+            "control_macro_f1": 0.7589031198750782,
+            "delta_vs_control": -0.14709498332614657,
+            "corrections": 42,
+            "breakages": 104
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.628442207004168,
+            "control_macro_f1": 0.7751106257850862,
+            "delta_vs_control": -0.14666841878091819,
+            "corrections": 53,
+            "breakages": 131
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.6346437764950386,
+            "control_macro_f1": 0.8412409465514344,
+            "delta_vs_control": -0.20659717005639588,
+            "corrections": 18,
+            "breakages": 76
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.6532765975085679,
+            "control_macro_f1": 0.8164392386563843,
+            "delta_vs_control": -0.16316264114781642,
+            "corrections": 61,
+            "breakages": 181
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.4659938309966671,
+            "control_macro_f1": 0.6688957161490177,
+            "delta_vs_control": -0.20290188515235058,
+            "corrections": 10,
+            "breakages": 26
+          },
+          "nonretrieval": {
+            "rows": 594,
+            "macro_f1": 0.5965367193415634,
+            "control_macro_f1": 0.7311166934987506,
+            "delta_vs_control": -0.13457997415718725,
+            "corrections": 69,
+            "breakages": 147
+          }
+        }
+      }
+    },
+    "AST B1 seed1": {
+      "VB": {
+        "macro_f1": 0.5928778934468633,
+        "fold_macro_f1": [
+          0.5686476758472959,
+          0.6079718199843778,
+          0.600078749164115,
+          0.5535204965632794,
+          0.6152597402597403
+        ],
+        "per_class_f1": {
+          "angry": 0.6893203883495146,
+          "happy": 0.532967032967033,
+          "neutral": 0.5459183673469388,
+          "sad": 0.6033057851239669
+        },
+        "confusion": [
+          [
+            142,
+            28,
+            17,
+            18
+          ],
+          [
+            41,
+            97,
+            17,
+            37
+          ],
+          [
+            14,
+            25,
+            107,
+            71
+          ],
+          [
+            10,
+            22,
+            34,
+            146
+          ]
+        ],
+        "strata": {
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.5829384792860433,
+            "control_macro_f1": 0.5556312749295205,
+            "delta_vs_control": 0.027307204356522785,
+            "corrections": 41,
+            "breakages": 31
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.6030815304708179,
+            "control_macro_f1": 0.5817166555005733,
+            "delta_vs_control": 0.02136487497024464,
+            "corrections": 50,
+            "breakages": 41
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.562122308694526,
+            "control_macro_f1": 0.47912689513733153,
+            "delta_vs_control": 0.08299541355719442,
+            "corrections": 46,
+            "breakages": 17
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.6088377013502828,
+            "control_macro_f1": 0.559916923971113,
+            "delta_vs_control": 0.04892077737916978,
+            "corrections": 85,
+            "breakages": 48
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.4306060606060606,
+            "control_macro_f1": 0.4216089466089466,
+            "delta_vs_control": 0.008997113997114004,
+            "corrections": 11,
+            "breakages": 10
+          }
+        }
+      },
+      "VA": {
+        "macro_f1": 0.6842362416688618,
+        "fold_macro_f1": [
+          0.7101201601410781,
+          0.6448218932066293,
+          0.6681845238095239,
+          0.7158272283272283,
+          0.6745589429393961
+        ],
+        "per_class_f1": {
+          "angry": 0.7651331719128329,
+          "happy": 0.6181818181818182,
+          "neutral": 0.6510538641686182,
+          "sad": 0.702576112412178
+        },
+        "confusion": [
+          [
+            158,
+            20,
+            15,
+            12
+          ],
+          [
+            28,
+            119,
+            26,
+            19
+          ],
+          [
+            12,
+            32,
+            139,
+            34
+          ],
+          [
+            10,
+            22,
+            30,
+            150
+          ]
+        ],
+        "strata": {
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.6416042551605932,
+            "control_macro_f1": 0.6118081365489316,
+            "delta_vs_control": 0.029796118611661537,
+            "corrections": 31,
+            "breakages": 19
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.6557513920189043,
+            "control_macro_f1": 0.628442207004168,
+            "delta_vs_control": 0.027309185014736337,
+            "corrections": 40,
+            "breakages": 26
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.7283781670813729,
+            "control_macro_f1": 0.6346437764950386,
+            "delta_vs_control": 0.09373439058633437,
+            "corrections": 32,
+            "breakages": 6
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.7008670828585084,
+            "control_macro_f1": 0.6532765975085679,
+            "delta_vs_control": 0.04759048534994048,
+            "corrections": 62,
+            "breakages": 27
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.5217055670451188,
+            "control_macro_f1": 0.4659938309966671,
+            "delta_vs_control": 0.055711736048451754,
+            "corrections": 10,
+            "breakages": 5
+          },
+          "nonretrieval": {
+            "rows": 594,
+            "macro_f1": 0.6272970910598259,
+            "control_macro_f1": 0.5965367193415634,
+            "delta_vs_control": 0.030760371718262514,
+            "corrections": 41,
+            "breakages": 24
+          }
+        }
+      }
+    },
+    "AST B1 seed2": {
+      "VB": {
+        "macro_f1": 0.5924558844567739,
+        "fold_macro_f1": [
+          0.4646926406926407,
+          0.6267128012253591,
+          0.6551343477510582,
+          0.5992363231939515,
+          0.598568757192175
+        ],
+        "per_class_f1": {
+          "angry": 0.7,
+          "happy": 0.5445783132530121,
+          "neutral": 0.5435897435897435,
+          "sad": 0.5816554809843401
+        },
+        "confusion": [
+          [
+            140,
+            38,
+            13,
+            14
+          ],
+          [
+            30,
+            113,
+            18,
+            31
+          ],
+          [
+            12,
+            39,
+            106,
+            60
+          ],
+          [
+            13,
+            33,
+            36,
+            130
+          ]
+        ],
+        "strata": {
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.5939162433300269,
+            "control_macro_f1": 0.5556312749295205,
+            "delta_vs_control": 0.038284968400506436,
+            "corrections": 45,
+            "breakages": 32
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.6032579087302719,
+            "control_macro_f1": 0.5817166555005733,
+            "delta_vs_control": 0.021541253229698576,
+            "corrections": 51,
+            "breakages": 43
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.5651360116948596,
+            "control_macro_f1": 0.47912689513733153,
+            "delta_vs_control": 0.08600911655752808,
+            "corrections": 42,
+            "breakages": 15
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.608839791377568,
+            "control_macro_f1": 0.559916923971113,
+            "delta_vs_control": 0.04892286740645502,
+            "corrections": 81,
+            "breakages": 46
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.4089170692431562,
+            "control_macro_f1": 0.4216089466089466,
+            "delta_vs_control": -0.012691877365790416,
+            "corrections": 12,
+            "breakages": 12
+          }
+        }
+      },
+      "VA": {
+        "macro_f1": 0.6716462645680088,
+        "fold_macro_f1": [
+          0.6615299611572216,
+          0.6423345843758688,
+          0.704445633045161,
+          0.6824835703512174,
+          0.6494322957052278
+        ],
+        "per_class_f1": {
+          "angry": 0.7339901477832512,
+          "happy": 0.6374695863746959,
+          "neutral": 0.6382022471910113,
+          "sad": 0.676923076923077
+        },
+        "confusion": [
+          [
+            149,
+            32,
+            17,
+            7
+          ],
+          [
+            24,
+            131,
+            24,
+            13
+          ],
+          [
+            18,
+            31,
+            142,
+            26
+          ],
+          [
+            10,
+            25,
+            45,
+            132
+          ]
+        ],
+        "strata": {
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.6514163478752644,
+            "control_macro_f1": 0.6118081365489316,
+            "delta_vs_control": 0.03960821132633274,
+            "corrections": 44,
+            "breakages": 28
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.6654797779289491,
+            "control_macro_f1": 0.628442207004168,
+            "delta_vs_control": 0.037037570924781105,
+            "corrections": 55,
+            "breakages": 36
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.6715624677801835,
+            "control_macro_f1": 0.6346437764950386,
+            "delta_vs_control": 0.03691869128514491,
+            "corrections": 30,
+            "breakages": 21
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.694475735968236,
+            "control_macro_f1": 0.6532765975085679,
+            "delta_vs_control": 0.04119913845966805,
+            "corrections": 75,
+            "breakages": 46
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.4452509652509653,
+            "control_macro_f1": 0.4659938309966671,
+            "delta_vs_control": -0.020742865745701777,
+            "corrections": 10,
+            "breakages": 11
+          },
+          "nonretrieval": {
+            "rows": 594,
+            "macro_f1": 0.625336412255352,
+            "control_macro_f1": 0.5965367193415634,
+            "delta_vs_control": 0.028799692913788588,
+            "corrections": 58,
+            "breakages": 42
+          }
+        }
+      }
+    },
+    "AST arithmetic seed mean": {
+      "VB": {
+        "macro_f1": 0.6030611992172079,
+        "fold_macro_f1": [
+          0.5127272727272727,
+          0.6203119232188999,
+          0.6243377846777748,
+          0.5967115827850904,
+          0.6443710068296982
+        ],
+        "per_class_f1": {
+          "angry": 0.696078431372549,
+          "happy": 0.5426356589147286,
+          "neutral": 0.5506493506493506,
+          "sad": 0.6228813559322034
+        },
+        "confusion": [
+          [
+            142,
+            33,
+            15,
+            15
+          ],
+          [
+            34,
+            105,
+            19,
+            34
+          ],
+          [
+            15,
+            32,
+            106,
+            64
+          ],
+          [
+            12,
+            25,
+            28,
+            147
+          ]
+        ],
+        "strata": {
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.6065044287935701,
+            "control_macro_f1": 0.7806997136721545,
+            "delta_vs_control": -0.17419528487858438,
+            "corrections": 31,
+            "breakages": 107
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.6169740063312278,
+            "control_macro_f1": 0.7962935361120625,
+            "delta_vs_control": -0.17931952978083476,
+            "corrections": 39,
+            "breakages": 136
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.5627214563321719,
+            "control_macro_f1": 0.7196482128204817,
+            "delta_vs_control": -0.1569267564883099,
+            "corrections": 21,
+            "breakages": 66
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.6195606694430291,
+            "control_macro_f1": 0.7925272502993278,
+            "delta_vs_control": -0.17296658085629868,
+            "corrections": 52,
+            "breakages": 179
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.4194430890859463,
+            "control_macro_f1": 0.6299944821944661,
+            "delta_vs_control": -0.21055139310851978,
+            "corrections": 8,
+            "breakages": 23
+          }
+        }
+      },
+      "VA": {
+        "macro_f1": 0.6959389789229389,
+        "fold_macro_f1": [
+          0.7118236647608422,
+          0.6536861066698318,
+          0.6742962888328343,
+          0.7248113059202768,
+          0.7089543524142681
+        ],
+        "per_class_f1": {
+          "angry": 0.7707317073170732,
+          "happy": 0.6331658291457286,
+          "neutral": 0.6774193548387096,
+          "sad": 0.7024390243902439
+        },
+        "confusion": [
+          [
+            158,
+            26,
+            14,
+            7
+          ],
+          [
+            27,
+            126,
+            22,
+            17
+          ],
+          [
+            11,
+            29,
+            147,
+            30
+          ],
+          [
+            9,
+            25,
+            34,
+            144
+          ]
+        ],
+        "strata": {
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.6663994723030351,
+            "control_macro_f1": 0.782575272030398,
+            "delta_vs_control": -0.11617579972736292,
+            "corrections": 34,
+            "breakages": 84
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.6779775567267832,
+            "control_macro_f1": 0.801918639796344,
+            "delta_vs_control": -0.12394108306956086,
+            "corrections": 41,
+            "breakages": 108
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.7172987944877829,
+            "control_macro_f1": 0.8592994251531446,
+            "delta_vs_control": -0.14200063066536173,
+            "corrections": 10,
+            "breakages": 51
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.7134952791269837,
+            "control_macro_f1": 0.8410550158153763,
+            "delta_vs_control": -0.1275597366883926,
+            "corrections": 44,
+            "breakages": 139
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.5283380112269447,
+            "control_macro_f1": 0.6978288833968074,
+            "delta_vs_control": -0.1694908721698627,
+            "corrections": 7,
+            "breakages": 20
+          },
+          "nonretrieval": {
+            "rows": 594,
+            "macro_f1": 0.6453506638289247,
+            "control_macro_f1": 0.767215174621592,
+            "delta_vs_control": -0.12186451079266736,
+            "corrections": 50,
+            "breakages": 122
+          }
+        }
+      }
+    },
+    "Fixed Candidate_A (corrected)": {
+      "VB": {
+        "macro_f1": 0.7605484664104494,
+        "fold_macro_f1": [
+          0.6879650471351539,
+          0.7568287696557504,
+          0.8316440107251979,
+          0.7264427542280527,
+          0.7981189330916252
+        ],
+        "per_class_f1": {
+          "angry": 0.8305489260143198,
+          "happy": 0.7554347826086957,
+          "neutral": 0.7169811320754716,
+          "sad": 0.7392290249433107
+        },
+        "confusion": [
+          [
+            174,
+            9,
+            13,
+            9
+          ],
+          [
+            14,
+            139,
+            19,
+            20
+          ],
+          [
+            14,
+            14,
+            152,
+            37
+          ],
+          [
+            12,
+            14,
+            23,
+            163
+          ]
+        ],
+        "strata": {
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.7579111063108039,
+            "control_macro_f1": 0.7806997136721545,
+            "delta_vs_control": -0.022788607361350577,
+            "corrections": 12,
+            "breakages": 22
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.779707448727285,
+            "control_macro_f1": 0.7962935361120625,
+            "delta_vs_control": -0.016586087384777515,
+            "corrections": 17,
+            "breakages": 26
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.7063094345819131,
+            "control_macro_f1": 0.7196482128204817,
+            "delta_vs_control": -0.01333877823856866,
+            "corrections": 10,
+            "breakages": 15
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.7734306519702014,
+            "control_macro_f1": 0.7925272502993278,
+            "delta_vs_control": -0.019096598329126357,
+            "corrections": 24,
+            "breakages": 39
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.638842306016589,
+            "control_macro_f1": 0.6299944821944661,
+            "delta_vs_control": 0.008847823822122902,
+            "corrections": 3,
+            "breakages": 2
+          }
+        }
+      }
+    },
+    "Fixed Candidate_B seed1": {
+      "VB": {
+        "macro_f1": 0.7761482572759908,
+        "fold_macro_f1": [
+          0.734410512582827,
+          0.754034430404545,
+          0.8141067266067266,
+          0.7417561097439146,
+          0.8334331454978426
+        ],
+        "per_class_f1": {
+          "angry": 0.8619854721549637,
+          "happy": 0.7345844504021448,
+          "neutral": 0.7317073170731707,
+          "sad": 0.7763157894736842
+        },
+        "confusion": [
+          [
+            178,
+            10,
+            10,
+            7
+          ],
+          [
+            19,
+            137,
+            16,
+            20
+          ],
+          [
+            5,
+            22,
+            150,
+            40
+          ],
+          [
+            6,
+            12,
+            17,
+            177
+          ]
+        ],
+        "strata": {
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.7778402748605717,
+            "control_macro_f1": 0.7806997136721545,
+            "delta_vs_control": -0.002859438811582793,
+            "corrections": 16,
+            "breakages": 18
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.7961092578503709,
+            "control_macro_f1": 0.7962935361120625,
+            "delta_vs_control": -0.0001842782616916505,
+            "corrections": 19,
+            "breakages": 20
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.7213152346729278,
+            "control_macro_f1": 0.7196482128204817,
+            "delta_vs_control": 0.001667021852446049,
+            "corrections": 8,
+            "breakages": 7
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.7922505012634586,
+            "control_macro_f1": 0.7925272502993278,
+            "delta_vs_control": -0.00027674903586916155,
+            "corrections": 24,
+            "breakages": 24
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.6263076794935865,
+            "control_macro_f1": 0.6299944821944661,
+            "delta_vs_control": -0.003686802700879621,
+            "corrections": 3,
+            "breakages": 3
+          }
+        }
+      },
+      "VA": {
+        "macro_f1": 0.8266747005603188,
+        "fold_macro_f1": [
+          0.830916257623085,
+          0.7997325680588867,
+          0.8276546250684181,
+          0.8727926521379561,
+          0.8011153470298897
+        ],
+        "per_class_f1": {
+          "angry": 0.8780487804878049,
+          "happy": 0.798941798941799,
+          "neutral": 0.8091954022988506,
+          "sad": 0.8205128205128205
+        },
+        "confusion": [
+          [
+            180,
+            8,
+            11,
+            6
+          ],
+          [
+            12,
+            151,
+            14,
+            15
+          ],
+          [
+            4,
+            17,
+            176,
+            20
+          ],
+          [
+            9,
+            10,
+            17,
+            176
+          ]
+        ],
+        "strata": {
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.7859472785992271,
+            "control_macro_f1": 0.782575272030398,
+            "delta_vs_control": 0.003372006568829078,
+            "corrections": 12,
+            "breakages": 11
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.8134854993647196,
+            "control_macro_f1": 0.801918639796344,
+            "delta_vs_control": 0.011566859568375554,
+            "corrections": 18,
+            "breakages": 13
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.8416314315130369,
+            "control_macro_f1": 0.8592994251531446,
+            "delta_vs_control": -0.017667993640107738,
+            "corrections": 2,
+            "breakages": 7
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.8412806246093859,
+            "control_macro_f1": 0.8410550158153763,
+            "delta_vs_control": 0.00022560879400956857,
+            "corrections": 17,
+            "breakages": 17
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.6930602888049697,
+            "control_macro_f1": 0.6978288833968074,
+            "delta_vs_control": -0.004768594591837649,
+            "corrections": 3,
+            "breakages": 3
+          },
+          "nonretrieval": {
+            "rows": 594,
+            "macro_f1": 0.7666388801191538,
+            "control_macro_f1": 0.767215174621592,
+            "delta_vs_control": -0.0005762945024382349,
+            "corrections": 18,
+            "breakages": 19
+          }
+        }
+      }
+    },
+    "Fixed Candidate_B seed2": {
+      "VB": {
+        "macro_f1": 0.7796283702896615,
+        "fold_macro_f1": [
+          0.7314009489742505,
+          0.7427285360956019,
+          0.8082216791632756,
+          0.7745005337806925,
+          0.8411034597295066
+        ],
+        "per_class_f1": {
+          "angry": 0.8661800486618005,
+          "happy": 0.7611548556430446,
+          "neutral": 0.729064039408867,
+          "sad": 0.762114537444934
+        },
+        "confusion": [
+          [
+            178,
+            9,
+            9,
+            9
+          ],
+          [
+            15,
+            145,
+            13,
+            19
+          ],
+          [
+            6,
+            22,
+            148,
+            41
+          ],
+          [
+            7,
+            13,
+            19,
+            173
+          ]
+        ],
+        "strata": {
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.7813495050264614,
+            "control_macro_f1": 0.7806997136721545,
+            "delta_vs_control": 0.0006497913543068723,
+            "corrections": 13,
+            "breakages": 13
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.7994020432247202,
+            "control_macro_f1": 0.7962935361120625,
+            "delta_vs_control": 0.0031085071126576436,
+            "corrections": 16,
+            "breakages": 15
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.7272821415545265,
+            "control_macro_f1": 0.7196482128204817,
+            "delta_vs_control": 0.0076339287340447815,
+            "corrections": 8,
+            "breakages": 7
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.7959539073471453,
+            "control_macro_f1": 0.7925272502993278,
+            "delta_vs_control": 0.0034266570478175273,
+            "corrections": 22,
+            "breakages": 20
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.6325587206396801,
+            "control_macro_f1": 0.6299944821944661,
+            "delta_vs_control": 0.0025642384452140288,
+            "corrections": 2,
+            "breakages": 2
+          }
+        }
+      },
+      "VA": {
+        "macro_f1": 0.8303121959087107,
+        "fold_macro_f1": [
+          0.8545210911823556,
+          0.7747197673692829,
+          0.8468955849004212,
+          0.8663570618264322,
+          0.8067111849303032
+        ],
+        "per_class_f1": {
+          "angry": 0.8905109489051095,
+          "happy": 0.8021390374331551,
+          "neutral": 0.8146453089244852,
+          "sad": 0.813953488372093
+        },
+        "confusion": [
+          [
+            183,
+            7,
+            7,
+            8
+          ],
+          [
+            12,
+            150,
+            15,
+            15
+          ],
+          [
+            3,
+            16,
+            178,
+            20
+          ],
+          [
+            8,
+            9,
+            20,
+            175
+          ]
+        ],
+        "strata": {
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.7827532112638123,
+            "control_macro_f1": 0.782575272030398,
+            "delta_vs_control": 0.00017793923341424822,
+            "corrections": 12,
+            "breakages": 12
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.8089311861427829,
+            "control_macro_f1": 0.801918639796344,
+            "delta_vs_control": 0.007012546346438886,
+            "corrections": 16,
+            "breakages": 13
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.860383745974879,
+            "control_macro_f1": 0.8592994251531446,
+            "delta_vs_control": 0.0010843208217343747,
+            "corrections": 5,
+            "breakages": 5
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.8477932440314337,
+            "control_macro_f1": 0.8410550158153763,
+            "delta_vs_control": 0.006738228216057407,
+            "corrections": 20,
+            "breakages": 15
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.6705172290278674,
+            "control_macro_f1": 0.6978288833968074,
+            "delta_vs_control": -0.027311654368940008,
+            "corrections": 1,
+            "breakages": 3
+          },
+          "nonretrieval": {
+            "rows": 594,
+            "macro_f1": 0.7726517379101966,
+            "control_macro_f1": 0.767215174621592,
+            "delta_vs_control": 0.0054365632886045345,
+            "corrections": 21,
+            "breakages": 18
+          }
+        }
+      }
+    },
+    "Fixed Candidate_B seed mean": {
+      "VB": {
+        "macro_f1": 0.7732218833184861,
+        "fold_macro_f1": [
+          0.731262247237857,
+          0.7484675544282393,
+          0.8019716791632756,
+          0.7553303226340201,
+          0.8276579921699727
+        ],
+        "per_class_f1": {
+          "angry": 0.8592233009708737,
+          "happy": 0.7427055702917772,
+          "neutral": 0.7321867321867321,
+          "sad": 0.7587719298245614
+        },
+        "confusion": [
+          [
+            177,
+            9,
+            9,
+            10
+          ],
+          [
+            17,
+            140,
+            13,
+            22
+          ],
+          [
+            6,
+            23,
+            149,
+            39
+          ],
+          [
+            7,
+            13,
+            19,
+            173
+          ]
+        ],
+        "strata": {
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.7724353897970919,
+            "control_macro_f1": 0.7806997136721545,
+            "delta_vs_control": -0.008264323875062596,
+            "corrections": 12,
+            "breakages": 16
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.7900504077574582,
+            "control_macro_f1": 0.7962935361120625,
+            "delta_vs_control": -0.006243128354604388,
+            "corrections": 14,
+            "breakages": 18
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.7262686854429974,
+            "control_macro_f1": 0.7196482128204817,
+            "delta_vs_control": 0.0066204726225156385,
+            "corrections": 8,
+            "breakages": 7
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.7900401172457228,
+            "control_macro_f1": 0.7925272502993278,
+            "delta_vs_control": -0.0024871330536050396,
+            "corrections": 21,
+            "breakages": 23
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.6173902030747545,
+            "control_macro_f1": 0.6299944821944661,
+            "delta_vs_control": -0.012604279119711626,
+            "corrections": 1,
+            "breakages": 2
+          }
+        }
+      },
+      "VA": {
+        "macro_f1": 0.8282036425387517,
+        "fold_macro_f1": [
+          0.8545210911823556,
+          0.7811752519069592,
+          0.8407026537490355,
+          0.8665075072837154,
+          0.7952843838959992
+        ],
+        "per_class_f1": {
+          "angry": 0.8829268292682927,
+          "happy": 0.8096514745308311,
+          "neutral": 0.8109339407744874,
+          "sad": 0.8093023255813954
+        },
+        "confusion": [
+          [
+            181,
+            6,
+            10,
+            8
+          ],
+          [
+            12,
+            151,
+            14,
+            15
+          ],
+          [
+            3,
+            15,
+            178,
+            21
+          ],
+          [
+            9,
+            9,
+            20,
+            174
+          ]
+        ],
+        "strata": {
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.7828975975260806,
+            "control_macro_f1": 0.782575272030398,
+            "delta_vs_control": 0.00032232549568256275,
+            "corrections": 11,
+            "breakages": 11
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.8089925047673011,
+            "control_macro_f1": 0.801918639796344,
+            "delta_vs_control": 0.007073864970957078,
+            "corrections": 15,
+            "breakages": 12
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.8537349680914037,
+            "control_macro_f1": 0.8592994251531446,
+            "delta_vs_control": -0.005564457061740913,
+            "corrections": 3,
+            "breakages": 5
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.8455652047958073,
+            "control_macro_f1": 0.8410550158153763,
+            "delta_vs_control": 0.004510188980430985,
+            "corrections": 17,
+            "breakages": 14
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.6705172290278674,
+            "control_macro_f1": 0.6978288833968074,
+            "delta_vs_control": -0.027311654368940008,
+            "corrections": 1,
+            "breakages": 3
+          },
+          "nonretrieval": {
+            "rows": 594,
+            "macro_f1": 0.7696534399587313,
+            "control_macro_f1": 0.767215174621592,
+            "delta_vs_control": 0.0024382653371392005,
+            "corrections": 18,
+            "breakages": 17
+          }
+        }
+      }
+    }
+  },
+  "promotion": {
+    "preferred_deployment_components": [
+      "original frozen emotion2vec C1",
+      "original frozen XLSR C1",
+      "fixed equal-probability blend"
+    ],
+    "not_promoted": [
+      "A1: no retained encoder adaptation",
+      "corrected Candidate_A: negative marginal gain",
+      "AST B0/B1/seed averaging as standalone deployment: much weaker than P",
+      "Candidate_B seed1/seed2/mean: fails registered marginal conventions"
+    ],
+    "inconclusive": [
+      "nested fusion: VB +.0065466 and all5 fold deltas positive, but VA nonretrieval -.0032893 versus P"
+    ],
+    "supported_finding": "AST adaptation improves its weak matched frozen comparator; seed averaging passes the old conservative conditional gate against seed1 B0, but does not earn strong-system membership."
+  },
+  "scientific_robustness": {
+    "fixed_pair_old_conservative_simultaneous_gate": "FAIL: VB simultaneous lower bound crosses zero",
+    "uncertainty": "conditional on reused ordinary-development OOF; VA/CLEAN and optimization seeds are related views, not independent cohorts",
+    "AST_old_gates": {
+      "B1_seed20260930": false,
+      "B1_seed20260917": false,
+      "B1_seed_mean": true,
+      "Candidate_B_seed20260930": false,
+      "Candidate_B_seed20260917": false,
+      "Candidate_B_seed_mean": false
+    },
+    "reference": "W1_ADAPTATION_UNCERTAINTY.json and W1_NESTED_FUSION_RESULTS.json"
+  },
+  "competition_evidence": {
+    "P_VB_gain": 0.038441088167730286,
+    "P_VA_gain": 0.024987897857230545,
+    "P_VA_nonretrieval_gain": 0.03609848112284142,
+    "P_positive_VB_folds": 5,
+    "P_delete_fold_deltas": [
+      0.04197833396711681,
+      0.04212751749743737,
+      0.04341653009297952,
+      0.03217311946431911,
+      0.032646108137283525
+    ],
+    "P_CLEAN_gain": 0.03819670670181852,
+    "P_repairs": 70,
+    "P_breakages": 38,
+    "source_regime_limit": "int32 has small VB regression and positive VA direction; no routing and no automatic small-stratum veto"
+  },
+  "A_protocol_recovery": {
+    "raw_refit_error": "Different numerical C1/scaler initializer in pilot/refit",
+    "repair": "Same verified pilot epoch-zero heads and exact train-only scaler restored for zero-step outer refits; no training/encoder inference repeated; original outputs retained",
+    "strict_matched_A0": 0.6947864668354651,
+    "strict_A1": 0.6947864668354651,
+    "all_selected_epochs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "no_retained_encoder_updates": true,
+    "stop_CE_parity": "PASS",
+    "reference": "W1_E2V_ADAPTATION_RESULTS.json:strict_same_initialization_correction"
+  },
+  "remaining_errors": {
+    "P_VB_errors": 184,
+    "neutral_sad_cross_errors": 56,
+    "interpretation": "Largest measured confusion pair; no demonstrated label ambiguity, representation failure, or oracle ensemble ceiling"
+  },
+  "Wave2_trigger": "Target gaps remain after closure of all registered Wave1 comparisons. SS should supply/authorize the accepted Wave2 execution contract; no Wave2 work performed.",
+  "public_submission_recommendation": "Recommend SS review one controlled public test of uniform P; do not recommend new adaptation/AST members or claim 0.90 architecture success. No submission is authorized/performed here.",
+  "public_evidence": {
+    "System1": 0.79691,
+    "System2": 0.78593,
+    "System2_verdict": "PUBLIC_TRANSFER_NEGATIVE",
+    "interpretation": "Post-diagnostic int32 Qwen gate failed fresh public transfer; old positive internal results preserved; private score unknown.",
+    "Wave1_public_score": null
+  },
+  "compute": {
+    "status": "COMPLETE",
+    "CPU_pair_wall_seconds": 43.94492375400296,
+    "GPU_fit_wall_seconds_sum": 33500.553783403004,
+    "GPU_peak_memory_bytes": 1718022144,
+    "fit_count": 80,
+    "limits": "Fit wall time includes fit-side I/O; excludes model preparation and outer inference. Account GPU quota is recorded separately; summed fit time is not billed accelerator time.",
+    "account_quota": {
+      "GPU_used_hours": 13.35,
+      "GPU_remaining_hours": 16.65,
+      "GPU_total_hours": 30,
+      "initial_used_hours": 6.51,
+      "account_delta_hours": 6.84,
+      "limit": "Account window delta, not an exclusive measured accelerator-time attribution"
+    },
+    "A_CPU_correction": {
+      "training_repeated": false,
+      "encoder_inference_repeated": false,
+      "optimizer_steps": 0,
+      "wall_seconds": null,
+      "note": "No unmeasured correction duration is invented."
+    }
+  },
+  "Drive_root": "gdrive:DEFHS/rs_system3_wave1_001",
+  "preservation_closed": false,
+  "protected_validation_read": false,
+  "public_LB_used_for_selection": false,
+  "Kaggle_competition_submission_made": false,
+  "Wave2_or_Wave3_launched": false
+}

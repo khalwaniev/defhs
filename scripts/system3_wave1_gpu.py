@@ -215,6 +215,8 @@ def worker(lane,gpu,records,view,optimization_seed,resume_root,fold_list=None,ar
         done=lane_dir/f'{name}_DONE.json';ckpt=lane_dir/f'{name}_STATE.pt'
         fingerprint={'recipe_sha256':PAYLOAD['config_sha256'],'lane':lane,'view':view,'seed':optimization_seed,'fold':fold,
             'adapt':adapt,'kind':kind,'training_ID_sha256':ih(ids[training]),'stopping_ID_sha256':ih(ids[stopping]),'epochs':epochs}
+        if lane=='A':
+            fingerprint['initialization_training_ID_sha256']=ih(ids[training if initialization_training is None else initialization_training])
         head,scaler=initialize(training if initialization_training is None else initialization_training,fold)
         groups=schedule_groups(encoder,blocks,head,lane,adapt);opt=torch.optim.AdamW(groups)
         if done.exists():
@@ -312,7 +314,10 @@ def worker(lane,gpu,records,view,optimization_seed,resume_root,fold_list=None,ar
             stem=f'{lane}{int(adapt)}_fold{fold}'
             output=lane_dir/f'{stem}_OOF.npz';decision=lane_dir/f'{stem}_RESULT.json'
             if decision.exists():
-                r=json.loads(decision.read_text());assert sha(output)==r['prediction_sha256'];history.append(r);continue
+                r=json.loads(decision.read_text());assert sha(output)==r['prediction_sha256']
+                if lane=='A':
+                    assert r['refit']['fingerprint'].get('initialization_training_ID_sha256')==ih(ids[pilot]),'Do not reuse a raw A refit with a different initializer; use the audited epoch-zero correction.'
+                history.append(r);continue
             _,_,pilot_rec=train_fit(pilot,stop,fold,adapt,'pilot')
             head,scaler,refit_rec=train_fit(S,np.zeros(len(ids),bool),fold,adapt,'refit',pilot_rec['selected_epoch'],initialization_training=pilot if lane=='A' else None)
             p,_=eval_ids(head,scaler,np.flatnonzero(H),pilot_rec['selected_epoch'],adapt)

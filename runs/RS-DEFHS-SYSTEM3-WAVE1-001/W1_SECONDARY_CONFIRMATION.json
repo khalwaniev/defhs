@@ -1,5 +1,5 @@
 {
-  "status": "SECOND_SEED_RUNNING",
+  "status": "COMPLETE",
   "provisionally_useful_survivors": [
     "B"
   ],
@@ -27,7 +27,7 @@
       "arms": [
         "B1"
       ],
-      "status": "LAUNCHED",
+      "status": "COMPLETE_VERIFIED",
       "launched_UTC": "2026-10-02 14:39:46 UTC",
       "workers": {
         "GPU0": [
@@ -50,7 +50,7 @@
       "arms": [
         "B1"
       ],
-      "status": "LAUNCHED",
+      "status": "COMPLETE_VERIFIED",
       "launched_UTC": "2026-10-02 14:39:46 UTC",
       "workers": {
         "GPU0": [
@@ -71,5 +71,13 @@
     "family": "B1 seed1, seed2 and arithmetic mean versus seed1 B0; their fixed Candidate_B blends versus P; each on VB all/CLEAN and VA all/nonretrieval",
     "registered_before_seed2_aggregate_inspection": true,
     "role": "Diagnostic scientific robustness/old conservative gate only; no fitting, subgroup rule, confidence-bound veto replacing Wave1 promotion conventions"
+  },
+  "entry_closed": "Only B adapted entered VA and seed2; A deferred because epoch0/no gain; all scheduled fits complete. Seed averages measured separately, no recipe rescue.",
+  "A_strict_correction": {
+    "status": "COMPLETE",
+    "reference": "W1_E2V_ADAPTATION_RESULTS.json:strict_same_initialization_correction",
+    "provisional_useful": false,
+    "entry_unchanged": true,
+    "training_repeated": false
   }
 }

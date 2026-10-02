@@ -34,6 +34,12 @@ def main():
     fits = []
     def add_measurement(lane, measurement, seed):
         view = measurement['view']
+        if lane == 'A' and view == 'VB' and 'strict_same_initialization_correction' in measurement:
+            correction = measurement['strict_same_initialization_correction']
+            for arm, key in [('A0', 'matched_frozen'), ('A1', 'adapted_vs_matched_frozen')]:
+                recipes[arm+'_RAW_INIT_DEVIATION'] = measurement[key]
+            measurement = {**measurement, 'matched_frozen': correction['matched_frozen'],
+                'adapted_vs_matched_frozen': correction['adapted_vs_matched_frozen']}
         for arm, key in [(lane+'0', 'matched_frozen'), (lane+'1', 'adapted_vs_matched_frozen')]:
             # Adapted-only seed2 does not create another matched frozen recipe.
             if seed == 20260917 and arm.endswith('0'):

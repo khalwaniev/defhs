@@ -5,114 +5,243 @@
       "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/E2V_CONTROL_VA.npz",
       "sha256": "448353808795fdd925e45799b086d79a1e1e74d17d38dddea7c6bb6a3d90c351",
       "bytes": 26882,
-      "drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/E2V_CONTROL_VA.npz"
+      "drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/E2V_CONTROL_VA.npz",
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/E2V_CONTROL_VA.npz"
     },
     {
       "name": "XLSR_VA.npz",
       "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/XLSR_VA.npz",
       "sha256": "0c64a51b445f9704b5b9e33354bdfcdb55331d1eb9bb13968f94c0b1d7876b89",
       "bytes": 26887,
-      "drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/XLSR_VA.npz"
+      "drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/XLSR_VA.npz",
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/XLSR_VA.npz"
     },
     {
       "name": "FIXED_PAIR_VA.npz",
       "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/FIXED_PAIR_VA.npz",
       "sha256": "26816cf340ada96869439b32005376033d672b3aa695a9684984a126d1ca1c15",
       "bytes": 26798,
-      "drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/FIXED_PAIR_VA.npz"
+      "drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/FIXED_PAIR_VA.npz",
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/FIXED_PAIR_VA.npz"
     },
     {
       "name": "NESTED_FUSION_VA.npz",
       "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/NESTED_FUSION_VA.npz",
       "sha256": "df088c501581a49c2c4ce57b2003d4880fcc2d07a86efcdae07227e247a72569",
       "bytes": 26658,
-      "drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/NESTED_FUSION_VA.npz"
+      "drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/NESTED_FUSION_VA.npz",
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/NESTED_FUSION_VA.npz"
     },
     {
       "name": "E2V_CONTROL_VB.npz",
       "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/E2V_CONTROL_VB.npz",
       "sha256": "14c86f6f61d633a72fd8535bec1070162e8a92f6de9c3f37ee366ff0e3d7a7b7",
       "bytes": 26601,
-      "drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/E2V_CONTROL_VB.npz"
+      "drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/E2V_CONTROL_VB.npz",
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/E2V_CONTROL_VB.npz"
     },
     {
       "name": "XLSR_VB.npz",
       "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/XLSR_VB.npz",
       "sha256": "f8a7cab17c88e98056d45fcad44479f1254acd68dbc7507e585f2197e1c87402",
       "bytes": 26605,
-      "drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/XLSR_VB.npz"
+      "drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/XLSR_VB.npz",
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/XLSR_VB.npz"
     },
     {
       "name": "FIXED_PAIR_VB.npz",
       "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/FIXED_PAIR_VB.npz",
       "sha256": "9f9ac86829230bcfde4be93a980161bf6139eaa38f3372efc822eb8edf79da45",
       "bytes": 26511,
-      "drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/FIXED_PAIR_VB.npz"
+      "drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/FIXED_PAIR_VB.npz",
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/FIXED_PAIR_VB.npz"
     },
     {
       "name": "NESTED_FUSION_VB.npz",
       "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/NESTED_FUSION_VB.npz",
       "sha256": "4bcb312ed36f1fa7125ab9aa9d2133b56bdda64d7e9a10fa2920d17fca98ccb2",
       "bytes": 26374,
-      "drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/NESTED_FUSION_VB.npz"
+      "drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/NESTED_FUSION_VB.npz",
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/NESTED_FUSION_VB.npz"
     },
     {
       "name": "A0_VB_seed20260930.npz",
       "sha256": "91bd4991730c5b48ab5919bbed8a118af0f1bd25086830d0e73944c12b21b724",
       "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/A0_VB_seed20260930.npz",
-      "bytes": 16591
+      "bytes": 16591,
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/probabilities/A0_VB_seed20260930.npz"
     },
     {
       "name": "A1_VB_seed20260930.npz",
       "sha256": "91bd4991730c5b48ab5919bbed8a118af0f1bd25086830d0e73944c12b21b724",
       "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/A1_VB_seed20260930.npz",
-      "bytes": 16591
+      "bytes": 16591,
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/probabilities/A1_VB_seed20260930.npz"
     },
     {
       "name": "Candidate_A_VB_seed20260930.npz",
       "sha256": "d731c5f0ab91be866ae56d4d00fbb2b1e6c1cd0d98fc8398a1303930fb972a58",
       "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/Candidate_A_VB_seed20260930.npz",
-      "bytes": 26520
+      "bytes": 26520,
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/probabilities/Candidate_A_VB_seed20260930.npz"
     },
     {
       "name": "B0_VB_seed20260930.npz",
       "sha256": "aa3682475c3a9085a3ae1cb53acd59beeb33c27be13d608eefaa990382166d47",
       "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/B0_VB_seed20260930.npz",
-      "bytes": 15983
+      "bytes": 15983,
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/probabilities/B0_VB_seed20260930.npz"
     },
     {
       "name": "B1_VB_seed20260930.npz",
       "sha256": "c045d284acc74127fe8e305a2fef096c30a3eb6d1ab78928c62900ca64fe86f2",
       "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/B1_VB_seed20260930.npz",
-      "bytes": 16189
+      "bytes": 16189,
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/probabilities/B1_VB_seed20260930.npz"
     },
     {
       "name": "Candidate_B_VB_seed20260930.npz",
       "sha256": "792f7c1bc1c30c37bc42781b588dbd9226c1b9731004e901c69da81065a5a801",
       "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/Candidate_B_VB_seed20260930.npz",
-      "bytes": 26361
+      "bytes": 26361,
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/probabilities/Candidate_B_VB_seed20260930.npz"
     },
     {
       "name": "B0_VA_seed20260930.npz",
       "sha256": "e6cc4f7e633f80bd1fcada2c8662c097cad0c1b1522fb8bee04cd568e197d94c",
       "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/B0_VA_seed20260930.npz",
-      "bytes": 16205
+      "bytes": 16205,
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/probabilities/B0_VA_seed20260930.npz"
     },
     {
       "name": "B1_VA_seed20260930.npz",
       "sha256": "e1d599355a1a7e52cfa34fa3f0ff94b0ef47a038f97ed49c378b3c620eacbd41",
       "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/B1_VA_seed20260930.npz",
-      "bytes": 16557
+      "bytes": 16557,
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/probabilities/B1_VA_seed20260930.npz"
     },
     {
       "name": "Candidate_B_VA_seed20260930.npz",
       "sha256": "9466287c686a648367c146e9eb99df59d10e827d73cda403cb5860af3592b710",
       "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/Candidate_B_VA_seed20260930.npz",
-      "bytes": 26681
+      "bytes": 26681,
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/probabilities/Candidate_B_VA_seed20260930.npz"
+    },
+    {
+      "name": "B1_VB_seed20260917.npz",
+      "sha256": "d7b41984421ce89fd70f221ba8c460ada568eb16890c82bb938051d014376b77",
+      "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/B1_VB_seed20260917.npz",
+      "bytes": 16176,
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/probabilities/B1_VB_seed20260917.npz"
+    },
+    {
+      "name": "Candidate_B_VB_seed20260917.npz",
+      "sha256": "ca7e39b6b658aa1c4017d488e37387947f207fef7436dbb1e211b981805fa8a6",
+      "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/Candidate_B_VB_seed20260917.npz",
+      "bytes": 26368,
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/probabilities/Candidate_B_VB_seed20260917.npz"
+    },
+    {
+      "name": "B1_SEED_MEAN_VB.npz",
+      "sha256": "23c8397876917c25e51902035f6e27bdd71d52f8909dcdb3052ea3c678156f2d",
+      "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/B1_SEED_MEAN_VB.npz",
+      "bytes": 17125,
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/probabilities/B1_SEED_MEAN_VB.npz"
+    },
+    {
+      "name": "Candidate_B_SEED_MEAN_VB.npz",
+      "sha256": "885882c55d4c14890a24382f35e6c4cfb828bb4a6503b25aa87470ab3b1ad258",
+      "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/Candidate_B_SEED_MEAN_VB.npz",
+      "bytes": 26354,
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/probabilities/Candidate_B_SEED_MEAN_VB.npz"
+    },
+    {
+      "name": "B1_VA_seed20260917.npz",
+      "sha256": "d1344552694552e4902bb908523a17622864f184906cdfec6dfa03c957a46078",
+      "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/B1_VA_seed20260917.npz",
+      "bytes": 16533,
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/probabilities/B1_VA_seed20260917.npz"
+    },
+    {
+      "name": "Candidate_B_VA_seed20260917.npz",
+      "sha256": "b13ca911ea6a331a86b060ae4a70245546fb8815924a1c858d631f536f77e8b0",
+      "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/Candidate_B_VA_seed20260917.npz",
+      "bytes": 26671,
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/probabilities/Candidate_B_VA_seed20260917.npz"
+    },
+    {
+      "name": "B1_SEED_MEAN_VA.npz",
+      "sha256": "50ad5bd4b0b4c8b18fcb889664fe0238c9610224a9edf54de79e75140550104d",
+      "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/B1_SEED_MEAN_VA.npz",
+      "bytes": 17683,
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/probabilities/B1_SEED_MEAN_VA.npz"
+    },
+    {
+      "name": "Candidate_B_SEED_MEAN_VA.npz",
+      "sha256": "0dfa2afeb63a04302b283a19e3c6bf8253edb68a99b1e221adefac4efc7a32f9",
+      "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/Candidate_B_SEED_MEAN_VA.npz",
+      "bytes": 26666,
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/probabilities/Candidate_B_SEED_MEAN_VA.npz"
+    },
+    {
+      "name": "A_SHARED_INITIALIZER_VB_fold0.npz",
+      "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/A_SHARED_INITIALIZER_VB_fold0.npz",
+      "sha256": "2ebb8eae3a6325c268c2bfb2490ad6482e0cad3911e69bab4a3da0ebc2171021",
+      "bytes": 35682,
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/probabilities/A_SHARED_INITIALIZER_VB_fold0.npz"
+    },
+    {
+      "name": "A_SHARED_INITIALIZER_VB_fold1.npz",
+      "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/A_SHARED_INITIALIZER_VB_fold1.npz",
+      "sha256": "8b665c84c1abcf72c76ade0ceb9ecb98e90fa6f474f62a414694439eb9ad82d2",
+      "bytes": 35659,
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/probabilities/A_SHARED_INITIALIZER_VB_fold1.npz"
+    },
+    {
+      "name": "A_SHARED_INITIALIZER_VB_fold2.npz",
+      "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/A_SHARED_INITIALIZER_VB_fold2.npz",
+      "sha256": "f1bd1c32dc7ce8b61b4c33d70703f98df0959af5c1fd70d86e270a68001a2f67",
+      "bytes": 35613,
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/probabilities/A_SHARED_INITIALIZER_VB_fold2.npz"
+    },
+    {
+      "name": "A_SHARED_INITIALIZER_VB_fold3.npz",
+      "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/A_SHARED_INITIALIZER_VB_fold3.npz",
+      "sha256": "e05de64426312a180ab586b5502292c4a4b42ff144d1470d43045275dfb3c1d3",
+      "bytes": 35633,
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/probabilities/A_SHARED_INITIALIZER_VB_fold3.npz"
+    },
+    {
+      "name": "A_SHARED_INITIALIZER_VB_fold4.npz",
+      "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/A_SHARED_INITIALIZER_VB_fold4.npz",
+      "sha256": "aa1d4b6010aaf5cc7745a2baaaddf2fea83b9de38c3324ddfa15645b17f15a8c",
+      "bytes": 35677,
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/probabilities/A_SHARED_INITIALIZER_VB_fold4.npz"
+    },
+    {
+      "name": "A0_VB_SHARED_INIT_CORRECTED.npz",
+      "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/A0_VB_SHARED_INIT_CORRECTED.npz",
+      "sha256": "60958ead70f932699e12d2443b64e8d0073f2940cfba3b7b1ea5bd1947b92a6e",
+      "bytes": 16565,
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/probabilities/A0_VB_SHARED_INIT_CORRECTED.npz"
+    },
+    {
+      "name": "A1_VB_SHARED_INIT_CORRECTED.npz",
+      "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/A1_VB_SHARED_INIT_CORRECTED.npz",
+      "sha256": "60958ead70f932699e12d2443b64e8d0073f2940cfba3b7b1ea5bd1947b92a6e",
+      "bytes": 16565,
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/probabilities/A1_VB_SHARED_INIT_CORRECTED.npz"
+    },
+    {
+      "name": "Candidate_A_VB_SHARED_INIT_CORRECTED.npz",
+      "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/Candidate_A_VB_SHARED_INIT_CORRECTED.npz",
+      "sha256": "203255415e5eb76155932e9410d27f9aff58e345c96a515da736daca86603820",
+      "bytes": 26486,
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/probabilities/Candidate_A_VB_SHARED_INIT_CORRECTED.npz"
     }
   ],
   "heavy_root": "gdrive:DEFHS/rs_system3_wave1_001",
-  "status": "CPU_PRESERVED_GPU_PENDING",
+  "status": "SCIENCE_COMPLETE_PENDING_LAST_DRIVE_CHECKS",
   "CPU_preservation": {
     "status": "BYTE_VERIFIED",
     "matching_files": 28,

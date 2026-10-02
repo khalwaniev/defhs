@@ -1,5 +1,5 @@
 {
-  "status": "SEED1_COMPLETE_VERIFIED_AST_SEED2_RUNNING",
+  "status": "ALL_FITS_COMPLETE_VERIFIED_DRIVE_CLOSURE_PENDING",
   "source_sha": "824ef6b4b93a42a92747e134b4d8b85c342f86ef",
   "kernel": "khalwaniev/defhs-system3-wave1-matched-adaptation",
   "version": 1,
@@ -52,7 +52,7 @@
       "kaggle_submission_made": false
     },
     "output_root": "gdrive:DEFHS/rs_system3_wave1_001/b_va_seed1",
-    "Drive_copy": "RUNNING",
+    "Drive_copy": "COMPLETE",
     "packages": {
       "torch": "2.10.0+cu128",
       "numpy": "2.0.2",
@@ -62,6 +62,13 @@
       "transformers": "4.57.1",
       "soundfile": "0.13.1",
       "modelscope": "1.40.1"
+    },
+    "Drive_byte_check": {
+      "status": "PASS",
+      "matching_files": 93,
+      "differences": 0,
+      "verification": "rclone check --download --one-way",
+      "exit_code": 0
     }
   },
   "VB_server_source_parity": {
@@ -83,11 +90,11 @@
   },
   "initialization_and_schedule_notes": {
     "A_pilot": "scaler/C1 head fitted on the three pilot-training blocks, excluding stopping and outer blocks",
-    "A_refit": "scaler/C1 head rebuilt on four non-outer blocks; same initialization rule, with A0/A1 sharing it within each fit; numeric pilot/refit heads differ",
+    "A_refit": "Strict recovered inference reuses the exact pilot epoch-zero head and its three-block scaler; four-block refit takes zero optimizer steps. Raw four-block re-estimation outputs are preserved separately.",
     "B": "identical seed-derived random 768\u21924 head shared by matched arms and pilot/refit",
     "seed_namespace": "Torch initialization base optimization seed + outer fold; epoch shuffle base seed + fold*10000 + epoch; SpecAugment hash of base seed, Id, epoch and segment",
     "schedule": "fixed twenty-epoch warmup/cosine horizon for pilots and refits; training-tail IDs reconstructed in audited per-fit records",
-    "checkpoint_selection": "pilot BEST.pt is selected stopping state; outer inference uses restarted refit STATE.pt at selected epoch. Refit BEST.pt contains the epoch-zero initializer and is not the selected inference checkpoint."
+    "checkpoint_selection": "B outer inference uses refit STATE.pt at selected epoch. Corrected A outer inference uses verified pilot BEST.pt epoch-zero head and reconstructed train-only scaler, registered shared-initializer NPZ. Raw erroneous A refit outputs remain immutable."
   },
   "VB_Drive_preservation": {
     "root": "gdrive:DEFHS/rs_system3_wave1_001/vb_seed1",
@@ -123,7 +130,7 @@
       "arms": [
         "B1"
       ],
-      "status": "LAUNCHED",
+      "status": "COMPLETE_VERIFIED",
       "launched_UTC": "2026-10-02 14:39:46 UTC",
       "workers": {
         "GPU0": [
@@ -135,7 +142,22 @@
           1,
           3
         ]
-      }
+      },
+      "server_source_parity": "PASS",
+      "server_runner_sha256": "e0eab8c6ab0438b79a70edcdc197e6a23297f1bd2fc4ac6d579245dd2bee6375",
+      "base_docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+      "package_integrity": {
+        "status": "PASS",
+        "package_root": "/home/fikar/zingle/defhs/.tmp/system3_wave1_b_vb_seed2/rs_system3_wave1_001",
+        "files": 52,
+        "bytes": 3639835038,
+        "manifest_sha256": "2b4fa9a82ebf9658e1f42da573665752106b19168369dc7670d50e4c089a59aa",
+        "source_sha": "85fc735b2f96ca551075e845a9a7b73186642a6e",
+        "protected_validation_read": false,
+        "kaggle_submission_made": false
+      },
+      "Drive_root": "gdrive:DEFHS/rs_system3_wave1_001/b_vb_seed2",
+      "Drive_copy": "RUNNING"
     },
     "VA": {
       "kernel": "khalwaniev/defhs-system3-wave1-b-va-20260917",
@@ -146,7 +168,7 @@
       "arms": [
         "B1"
       ],
-      "status": "LAUNCHED",
+      "status": "COMPLETE_VERIFIED",
       "launched_UTC": "2026-10-02 14:39:46 UTC",
       "workers": {
         "GPU0": [
@@ -158,7 +180,47 @@
           1,
           3
         ]
-      }
+      },
+      "server_source_parity": "PASS",
+      "server_runner_sha256": "c3998c25efad4842942a13c7197ff3d279543ca8c05af132d47cbaaac2a30a13",
+      "base_docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+      "package_integrity": {
+        "status": "PASS",
+        "package_root": "/home/fikar/zingle/defhs/.tmp/system3_wave1_b_va_seed2/rs_system3_wave1_001",
+        "files": 52,
+        "bytes": 3980157275,
+        "manifest_sha256": "4b63d89279c58ea7ad38775504ae3f824277357173c7cece0a0bb68006757c91",
+        "source_sha": "85fc735b2f96ca551075e845a9a7b73186642a6e",
+        "protected_validation_read": false,
+        "kaggle_submission_made": false
+      },
+      "Drive_root": "gdrive:DEFHS/rs_system3_wave1_001/b_va_seed2",
+      "Drive_copy": "RUNNING"
     }
+  },
+  "A_same_initializer_correction": {
+    "status": "COMPLETE",
+    "source_sha": "8aaf24ce2610faafd64b47284d8f3758c4baaa50",
+    "code_sha256": "cb1f5a1bb8f79d847b833325f27e0f1fcd02b61bdbb1be1e3a96400956139673",
+    "pilot_refit_numeric_initializer_parity": "PASS",
+    "pilot_stopping_loss_parity": "PASS: less than2e-5",
+    "selection_epochs": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "inference_state": "Verified original pilot epoch-zero BEST head + exact three-block training-only reconstructed scaler; shared initializer NPZ per fold",
+    "raw_refit_outputs_preserved": true,
+    "no_training_or_encoder_extraction_repeated": true
+  },
+  "raw_first_execution_initialization_and_schedule_notes": {
+    "A_pilot": "scaler/C1 head fitted on the three pilot-training blocks, excluding stopping and outer blocks",
+    "A_refit": "scaler/C1 head rebuilt on four non-outer blocks; same initialization rule, with A0/A1 sharing it within each fit; numeric pilot/refit heads differ",
+    "B": "identical seed-derived random 768\u21924 head shared by matched arms and pilot/refit",
+    "seed_namespace": "Torch initialization base optimization seed + outer fold; epoch shuffle base seed + fold*10000 + epoch; SpecAugment hash of base seed, Id, epoch and segment",
+    "schedule": "fixed twenty-epoch warmup/cosine horizon for pilots and refits; training-tail IDs reconstructed in audited per-fit records",
+    "checkpoint_selection": "pilot BEST.pt is selected stopping state; outer inference uses restarted refit STATE.pt at selected epoch. Refit BEST.pt contains the epoch-zero initializer and is not the selected inference checkpoint."
   }
 }
