@@ -135,7 +135,10 @@ def fit_outer(task):
     if key not in _CACHE:
         z = np.load(cache_path); f = pd.read_csv(DS / f'VALIDATION_{view}_FOLDS.csv').sort_values('Id').reset_index(drop=True)
         pos = {int(v): i for i,v in enumerate(z['Id'])}
-        x = z[rep][[pos[int(i)] for i in f.Id]].astype(np.float64)
+        # Retain the stored dtype. The previous utterance authority scales
+        # float32 and used two BLAS threads; changing either can alter a
+        # boundary prediction through finite-tolerance LBFGS numerics.
+        x = z[rep][[pos[int(i)] for i in f.Id]]
         _CACHE[key] = x, f
     x, f = _CACHE[key]; fs = f.fold.to_numpy(); y = f.emotion.to_numpy()
     train, validation = fs != outer, fs == outer
@@ -143,12 +146,13 @@ def fit_outer(task):
     output = SCRATCH / f'{name}_{view}_fold{outer}.npz'
     fingerprint = {'protocol': 'existing_fold_nested_C_v1', 'name': name, 'view': view, 'outer': outer,
         'cache_sha256': cache_sha, 'config_sha256': config_sha, 'fold_sha256': sha256(DS / f'VALIDATION_{view}_FOLDS.csv')}
+    if rep == 'utterance': fingerprint['numeric_policy'] = 'stored_float32_and_legacy_BLAS_2'
     if output.exists():
         saved = np.load(output); meta = json.loads(str(saved['metadata']))
         assert meta['fingerprint'] == fingerprint
         return name, view, outer, saved['prob'], meta
     start = time.monotonic(); scores = {}; inner_audit = []
-    with threadpool_limits(limits=1):
+    with threadpool_limits(limits=2 if rep == 'utterance' else 1):
         if kind == 'fixed': chosen = 1.
         else:
             cfg = json.loads((RUN / 'RECOVERY_CONFIG.json').read_text())['regularization_check']
@@ -211,7 +215,7 @@ def recovery_audio():
             'results': z, 'judgments': judgments(name,z,bci,p,control,folds)}
         for v,f in folds.items(): save_oof(RUN/f'RECOVERY_OOF_{name}_{v}.csv',f,p[v])
     record['cached_audio'] = {'source_sha': measurement_sha, 'wall_seconds':time.monotonic()-started,
-        'compute':'CPU only; four processes, one BLAS thread per process',
+        'compute':'CPU only; four processes; stored dtype; two BLAS threads for utterance to reproduce prior C1 authority, one for score9',
         'realizations':{n:{'results':result[n],'judgments':decision[n],'nested_C_audit':audit[n],
             'OOF_sha256':{v:sha256(RUN/f'RECOVERY_OOF_{n}_{v}.csv') for v in folds}} for n in probs},
         'strongest_recovery':strongest,'optional_blend':blend,
