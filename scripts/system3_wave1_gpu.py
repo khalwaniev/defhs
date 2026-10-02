@@ -159,6 +159,7 @@ def worker(lane,gpu,records,view,optimization_seed,resume_root,fold_list=None,ar
     assert sha(next(INPUT.rglob('emotion2vec_base_meanstd.npz')))==PAYLOAD['e2v_cache_sha256']
     x=cache['X'][[ix[int(i)] for i in ids]]
     history=[];batch=16;micro=2
+    frozen_ast={}
     lane_dir=OUT/f'{lane}_{view}_seed{optimization_seed}';lane_dir.mkdir(exist_ok=True)
     if resume_root:
         import shutil
@@ -190,9 +191,16 @@ def worker(lane,gpu,records,view,optimization_seed,resume_root,fold_list=None,ar
             if training:r=F.dropout(r,p=.2,training=True)
             return torch.softmax(head(r),-1)
         ps=[]
-        for z in clips.get(i,epoch,augment=training):
-            context=torch.enable_grad() if adapt and epoch>=3 else torch.no_grad()
-            with context:r=encoder(z.unsqueeze(0).to(device)).pooler_output[0]
+        use_frozen=not adapt or epoch<=2
+        cache_key=(int(i),int(epoch) if training else 0)
+        if use_frozen and cache_key not in frozen_ast:
+            with torch.no_grad():
+                frozen_ast[cache_key]=[encoder(z.unsqueeze(0).to(device)).pooler_output[0].detach().cpu()
+                                      for z in clips.get(i,epoch,augment=training)]
+        reps=frozen_ast[cache_key] if use_frozen else clips.get(i,epoch,augment=training)
+        for z in reps:
+            if use_frozen:r=z.to(device)
+            else:r=encoder(z.unsqueeze(0).to(device)).pooler_output[0]
             if training:r=F.dropout(r,p=.2,training=True)
             ps.append(torch.softmax(head(r),-1))
         return torch.stack(ps).mean(0)
@@ -313,6 +321,13 @@ def worker(lane,gpu,records,view,optimization_seed,resume_root,fold_list=None,ar
                'pilot':pilot_rec,'refit':refit_rec,'prediction_ID_sha256':ih(ids[H]),'prediction_sha256':sha(output),
                'outer_heldout_used_for_stopping':False,'source_sha':PAYLOAD['source_sha']}
             dump(decision,r);history.append(r);print(f'VALID_OUTER_FOLD_COMPLETE={lane}{int(adapt)} {view} fold{fold}',flush=True)
+    if lane=='B' and frozen_ast:
+        keys=sorted(frozen_ast);flat=[];indptr=[0]
+        for key in keys:
+            flat.extend([z.numpy() for z in frozen_ast[key]]);indptr.append(len(flat))
+        np.savez_compressed(lane_dir/f'FROZEN_AST_FEATURES_GPU{gpu}.npz',Id=np.array([k[0] for k in keys]),
+            epoch=np.array([k[1] for k in keys]),indptr=np.array(indptr),X=np.stack(flat),
+            seed=np.array(optimization_seed),config_sha256=np.array(PAYLOAD['config_sha256']))
     suffix='' if fold_list is None else '_folds'+''.join(map(str,fold_list))
     dump(OUT/f'{lane}_{view}_seed{optimization_seed}{suffix}_RESULTS.json',{'status':'COMPLETE','folds':history,'source_sha':PAYLOAD['source_sha'],
          'protected_validation_read':False,'kaggle_submission_made':False})
@@ -328,7 +343,7 @@ def main():
     subprocess.check_call([sys.executable,'-m','pip','install','--quiet','--no-cache-dir',
         'modelscope==1.40.1','transformers==4.57.1','librosa==0.11.0','soundfile==0.13.1','scikit-learn==1.7.2',
         'git+https://github.com/modelscope/FunASR.git@4a84879ae8ca4d2430953b11c49d609217d93988'])
-    import pandas as pd,torch
+    import pandas as pd,torch,importlib.metadata
     assert torch.cuda.is_available() and torch.cuda.device_count()>=2
     assert PAYLOAD['preflight_verdict']=='PASS'
     for name,spec in PAYLOAD['input_files'].items():
@@ -347,6 +362,7 @@ def main():
     assignments=PAYLOAD.get('workers',[{'lane':'A'},{'lane':'B'}])
     dump(OUT/'GPU_EXECUTION_PROVENANCE.json',{'payload_sha':PAYLOAD['config_sha256'],'source_sha':PAYLOAD['source_sha'],
         'gpu_names':[torch.cuda.get_device_name(i) for i in range(2)],'audio_hashes_verified':len(records),
+        'packages':{n:importlib.metadata.version(n) for n in ['torch','numpy','pandas','scikit-learn','funasr','transformers','soundfile','modelscope']},
         'protected_validation_read':False,'kaggle_submission_made':False,'parallel_assignments':[{**spec,'GPU':k} for k,spec in enumerate(assignments)]})
     ctx=mp.get_context('spawn');workers=[]
     for gpu,assignment in enumerate(assignments):
