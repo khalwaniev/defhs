@@ -22,3 +22,8 @@
 - V-B immutable server source and AST full-window/clip-family segmentation audits passed. Pilot/refit initialization, schedule, and checkpoint-selection details are recorded in CHECKPOINT_PROVENANCE.json. All 173 V-B package objects were copied to Drive; rclone download-based byte verification is running. V-A remains in flight without recipe changes or completed-fold restarts.
 
 - V-B Drive download-based verification completed: exit 0, 173 matching files, zero differences. Package root: gdrive:DEFHS/rs_system3_wave1_001/vb_seed1; master manifest SHA256 2ca3906fcb379ceb24c912719bf24c2cb02287cf2d846da92978a8b7519da6dc.
+
+- AST V-A seed 20260930 completed all five B0/B1 outer predictions successfully. Server source SHA256 matches the committed runner. Quota after seed1: used 11.34h / remaining 18.66h of 30h; outputs are being downloaded and audited before aggregate analysis or second-seed entry.
+
+- Complete V-A output package passes all 92 SHA256 entries, source parity, matched head-phase, train/stopping/prediction-ID, checkpoint, and independent metric audits. AST B1=0.6842362417 vs B0=0.6347052686, gain +0.0495309730; CLEAN +0.0297961186 and nonretrieval +0.0307603717; four positive folds and all four classes positive. Fixed Candidate_B has VA +0.0000348533 and nonretrieval -0.0005762945 vs P, so is not promoted.
+- Leading second optimization seed entry fixed before seed2 results: B1 only, seed 20260917, separately fit VB and VA; report seed1/seed2/arithmetic mean separately. B is sole adapted survivor, with concordant matched improvement, despite much lower absolute F1 than the fixed original E2V/XLSR pair. No A second seed, new recipe, model, routing, or weighting search.

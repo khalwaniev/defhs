@@ -1,0 +1,8 @@
+{
+  "status": "PARTIAL",
+  "CPU_pair_wall_seconds": 43.94492375400296,
+  "GPU_fit_wall_seconds_sum": 21709.297120598,
+  "GPU_peak_memory_bytes": 1474375168,
+  "fit_count": 60,
+  "limits": "Fit wall time includes fit-side I/O; excludes model preparation and outer inference. Account GPU quota is recorded separately; summed fit time is not billed accelerator time."
+}

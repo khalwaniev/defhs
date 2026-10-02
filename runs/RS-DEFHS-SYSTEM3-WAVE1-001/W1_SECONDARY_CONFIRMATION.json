@@ -1,7 +1,20 @@
 {
-  "status": "ENTRY_DECIDED",
+  "status": "LEADING_SECOND_SEED_ENTRY_FIXED",
   "provisionally_useful_survivors": [
     "B"
   ],
-  "entry": "Only actual adapted survivors under registered VB conventions; VA and leading-seed2 still pending if any"
+  "entry": "Only actual adapted survivors under registered VB conventions; VA and leading-seed2 still pending if any",
+  "VA_complete": true,
+  "VA_evidence_file": "W1_CONFIRMATION_VA_seed20260930.json",
+  "leading_adapted_for_seed2": "B",
+  "second_seed": 20260917,
+  "second_seed_views": [
+    "VB",
+    "VA"
+  ],
+  "second_seed_arms": [
+    "B1"
+  ],
+  "entry_reason": "B is the sole adapted survivor: seed1 matched VB +0.0460415586, VA +0.0495309730, positive CLEAN and VA nonretrieval; all class deltas positive. Stability is required despite weaker absolute performance than P. No recipe changes and no second-seed A experiment.",
+  "deployment_status": "AST fixed marginal blend not promoted; seed2 and arithmetic averaging reported separately"
 }

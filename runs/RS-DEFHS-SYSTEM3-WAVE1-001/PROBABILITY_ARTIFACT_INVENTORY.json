@@ -91,6 +91,24 @@
       "sha256": "792f7c1bc1c30c37bc42781b588dbd9226c1b9731004e901c69da81065a5a801",
       "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/Candidate_B_VB_seed20260930.npz",
       "bytes": 26361
+    },
+    {
+      "name": "B0_VA_seed20260930.npz",
+      "sha256": "e6cc4f7e633f80bd1fcada2c8662c097cad0c1b1522fb8bee04cd568e197d94c",
+      "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/B0_VA_seed20260930.npz",
+      "bytes": 16205
+    },
+    {
+      "name": "B1_VA_seed20260930.npz",
+      "sha256": "e1d599355a1a7e52cfa34fa3f0ff94b0ef47a038f97ed49c378b3c620eacbd41",
+      "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/B1_VA_seed20260930.npz",
+      "bytes": 16557
+    },
+    {
+      "name": "Candidate_B_VA_seed20260930.npz",
+      "sha256": "9466287c686a648367c146e9eb99df59d10e827d73cda403cb5860af3592b710",
+      "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/Candidate_B_VA_seed20260930.npz",
+      "bytes": 26681
     }
   ],
   "heavy_root": "gdrive:DEFHS/rs_system3_wave1_001",

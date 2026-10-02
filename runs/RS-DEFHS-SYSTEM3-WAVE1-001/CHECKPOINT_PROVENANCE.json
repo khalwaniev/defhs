@@ -36,7 +36,33 @@
         3
       ]
     },
-    "status": "LAUNCHED"
+    "status": "COMPLETE_VERIFIED",
+    "server_source_parity": "PASS",
+    "server_runner_sha256": "7e3fdd08cb4b108bc6f6570e662e770e118f6d32e39a4a2dd8f05a789d6066f1",
+    "metadata_local_path": "work/system3_wave1/va_kaggle_metadata",
+    "base_docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+    "package_integrity": {
+      "status": "PASS",
+      "package_root": "/home/fikar/zingle/defhs/.tmp/system3_wave1_b_va_seed1/rs_system3_wave1_001",
+      "files": 92,
+      "bytes": 4022524039,
+      "manifest_sha256": "d56ca6b2f010531d762218b24760f0280a49bf1c4054546861dbe528b3b8f42d",
+      "source_sha": "0959ca82e53f932d85c274ced0f0407d1f1b4a77",
+      "protected_validation_read": false,
+      "kaggle_submission_made": false
+    },
+    "output_root": "gdrive:DEFHS/rs_system3_wave1_001/b_va_seed1",
+    "Drive_copy": "RUNNING",
+    "packages": {
+      "torch": "2.10.0+cu128",
+      "numpy": "2.0.2",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "funasr": "1.4.16",
+      "transformers": "4.57.1",
+      "soundfile": "0.13.1",
+      "modelscope": "1.40.1"
+    }
   },
   "VB_server_source_parity": {
     "status": "PASS",
@@ -76,6 +102,13 @@
   "VB_execution_log_preservation": {
     "path": "gdrive:DEFHS/rs_system3_wave1_001/logs/VB_seed20260930_KAGGLE_EXECUTION.log",
     "sha256": "8528615bab8eeeb5e7ef78957c178ea33b65221f2075185da96e0a4b563c13c7",
+    "byte_check": "PASS",
+    "matching_files": 1,
+    "differences": 0
+  },
+  "VA_execution_log_preservation": {
+    "path": "gdrive:DEFHS/rs_system3_wave1_001/logs/VA_seed20260930_KAGGLE_EXECUTION.log",
+    "sha256": "4a9f499a4ae7fb662751fd220c92cb71ec536fd15f2f8d52fd261e856ee653d8",
     "byte_check": "PASS",
     "matching_files": 1,
     "differences": 0
