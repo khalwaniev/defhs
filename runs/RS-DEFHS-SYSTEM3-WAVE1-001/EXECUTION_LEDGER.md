@@ -29,3 +29,5 @@
 - Leading second optimization seed entry fixed before seed2 results: B1 only, seed 20260917, separately fit VB and VA; report seed1/seed2/arithmetic mean separately. B is sole adapted survivor, with concordant matched improvement, despite much lower absolute F1 than the fixed original E2V/XLSR pair. No A second seed, new recipe, model, routing, or weighting search.
 
 - Both sole B1 second-seed kernels were successfully pushed as version1 at 2026-10-02 14:39:46 UTC: VB and VA, seed20260917, each GPU0 folds0/2/4 and GPU1 folds1/3. Source commit 85fc735b2f96ca551075e845a9a7b73186642a6e; exact runner hashes in CHECKPOINT_PROVENANCE.json. Passive SSE capture is active; status/log inspection remains approximately five minutes apart, with updates only on meaningful transitions.
+
+- A local session interruption stopped passive log capture and the in-progress V-A Drive copy around 15:05 UTC. Both remote second-seed kernels remained RUNNING. Preserved the partial logs and restored passive SSE capture; resumed rclone copy against existing remote objects. No remote training process or completed fold was restarted.

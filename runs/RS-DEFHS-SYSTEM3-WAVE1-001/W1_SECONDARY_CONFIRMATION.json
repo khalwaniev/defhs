@@ -64,5 +64,12 @@
         ]
       }
     }
+  },
+  "uncertainty_plan": {
+    "method": "Existing dependency-component paired exponential multipliers; 2000 draws, PCG64 seed20260930; simultaneous absolute standardized maximum, 95% higher quantile",
+    "contrasts": 24,
+    "family": "B1 seed1, seed2 and arithmetic mean versus seed1 B0; their fixed Candidate_B blends versus P; each on VB all/CLEAN and VA all/nonretrieval",
+    "registered_before_seed2_aggregate_inspection": true,
+    "role": "Diagnostic scientific robustness/old conservative gate only; no fitting, subgroup rule, confidence-bound veto replacing Wave1 promotion conventions"
   }
 }
