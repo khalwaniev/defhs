@@ -20,3 +20,5 @@
 - Launched matched AST VA version1 after metadata fix: khalwaniev/defhs-system3-wave1-b-va-20260930; source0959ca82e53f932d85c274ced0f0407d1f1b4a77; runner7e3fdd08cb4b108bc6f6570e662e770e118f6d32e39a4a2dd8f05a789d6066f1. GPU0 folds0/2/4, GPU1 folds1/3; exact deterministic frozen-feature cache, clean validation, identical per-ID/epoch augmentation. No A VA or seed2.
 
 - V-B immutable server source and AST full-window/clip-family segmentation audits passed. Pilot/refit initialization, schedule, and checkpoint-selection details are recorded in CHECKPOINT_PROVENANCE.json. All 173 V-B package objects were copied to Drive; rclone download-based byte verification is running. V-A remains in flight without recipe changes or completed-fold restarts.
+
+- V-B Drive download-based verification completed: exit 0, 173 matching files, zero differences. Package root: gdrive:DEFHS/rs_system3_wave1_001/vb_seed1; master manifest SHA256 2ca3906fcb379ceb24c912719bf24c2cb02287cf2d846da92978a8b7519da6dc.

@@ -4,7 +4,7 @@
   "kernel": "khalwaniev/defhs-system3-wave1-matched-adaptation",
   "version": 1,
   "checkpoint_root": "gdrive:DEFHS/rs_system3_wave1_001",
-  "checkpoint_inventory": "172 SHA256-verified package files plus master manifest; vb_seed1 uploaded; rclone byte-integrity check running",
+  "checkpoint_inventory": "172 SHA256-verified package files plus master manifest; all 173 Drive objects byte-verified",
   "VB_package_integrity": {
     "status": "PASS",
     "package_root": "/home/fikar/zingle/defhs/.tmp/system3_wave1_vb_seed1/rs_system3_wave1_001",
@@ -66,7 +66,18 @@
   "VB_Drive_preservation": {
     "root": "gdrive:DEFHS/rs_system3_wave1_001/vb_seed1",
     "copy_exit_code": 0,
-    "byte_check": "RUNNING",
-    "check_log": "work/system3_wave1/vb_drive_check.log"
+    "byte_check": "PASS",
+    "check_log": "work/system3_wave1/vb_drive_check.log",
+    "matching_files": 173,
+    "differences": 0,
+    "verification": "rclone check --download --one-way",
+    "check_exit_code": 0
+  },
+  "VB_execution_log_preservation": {
+    "path": "gdrive:DEFHS/rs_system3_wave1_001/logs/VB_seed20260930_KAGGLE_EXECUTION.log",
+    "sha256": "8528615bab8eeeb5e7ef78957c178ea33b65221f2075185da96e0a4b563c13c7",
+    "byte_check": "PASS",
+    "matching_files": 1,
+    "differences": 0
   }
 }

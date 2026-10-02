@@ -101,6 +101,7 @@
     "differences": 0,
     "verification": "rclone check --download --one-way",
     "manifest_sha256": "251f7886315611f4270a4aaffe913b7d15b7d5398c925eea5eceadc4831a1be3",
-    "drive_manifest": "gdrive:DEFHS/rs_system3_wave1_001/cpu/CPU_SHA256SUMS.txt"
+    "drive_manifest": "gdrive:DEFHS/rs_system3_wave1_001/cpu/CPU_SHA256SUMS.txt",
+    "manifest_byte_check": "PASS: 1 matching file, zero differences"
   }
 }
