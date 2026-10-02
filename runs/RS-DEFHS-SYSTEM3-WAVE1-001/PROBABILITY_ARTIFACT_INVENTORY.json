@@ -55,6 +55,42 @@
       "sha256": "4bcb312ed36f1fa7125ab9aa9d2133b56bdda64d7e9a10fa2920d17fca98ccb2",
       "bytes": 26374,
       "drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/NESTED_FUSION_VB.npz"
+    },
+    {
+      "name": "A0_VB_seed20260930.npz",
+      "sha256": "91bd4991730c5b48ab5919bbed8a118af0f1bd25086830d0e73944c12b21b724",
+      "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/A0_VB_seed20260930.npz",
+      "bytes": 16591
+    },
+    {
+      "name": "A1_VB_seed20260930.npz",
+      "sha256": "91bd4991730c5b48ab5919bbed8a118af0f1bd25086830d0e73944c12b21b724",
+      "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/A1_VB_seed20260930.npz",
+      "bytes": 16591
+    },
+    {
+      "name": "Candidate_A_VB_seed20260930.npz",
+      "sha256": "d731c5f0ab91be866ae56d4d00fbb2b1e6c1cd0d98fc8398a1303930fb972a58",
+      "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/Candidate_A_VB_seed20260930.npz",
+      "bytes": 26520
+    },
+    {
+      "name": "B0_VB_seed20260930.npz",
+      "sha256": "aa3682475c3a9085a3ae1cb53acd59beeb33c27be13d608eefaa990382166d47",
+      "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/B0_VB_seed20260930.npz",
+      "bytes": 15983
+    },
+    {
+      "name": "B1_VB_seed20260930.npz",
+      "sha256": "c045d284acc74127fe8e305a2fef096c30a3eb6d1ab78928c62900ca64fe86f2",
+      "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/B1_VB_seed20260930.npz",
+      "bytes": 16189
+    },
+    {
+      "name": "Candidate_B_VB_seed20260930.npz",
+      "sha256": "792f7c1bc1c30c37bc42781b588dbd9226c1b9731004e901c69da81065a5a801",
+      "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/Candidate_B_VB_seed20260930.npz",
+      "bytes": 26361
     }
   ],
   "heavy_root": "gdrive:DEFHS/rs_system3_wave1_001",

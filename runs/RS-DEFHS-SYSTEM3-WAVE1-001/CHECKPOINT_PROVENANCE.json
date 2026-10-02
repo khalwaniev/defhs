@@ -1,8 +1,19 @@
 {
-  "status": "RUNNING",
+  "status": "VB_COMPLETE_VERIFIED_VA_B_NEXT",
   "source_sha": "824ef6b4b93a42a92747e134b4d8b85c342f86ef",
   "kernel": "khalwaniev/defhs-system3-wave1-matched-adaptation",
   "version": 1,
   "checkpoint_root": "gdrive:DEFHS/rs_system3_wave1_001",
-  "checkpoint_inventory": "PENDING_GPU_OUTPUT"
+  "checkpoint_inventory": "172 SHA256-verified package files; per-fit checkpoints/optimizer/RNG in vb_seed1; Drive copy pending",
+  "VB_package_integrity": {
+    "status": "PASS",
+    "package_root": "/home/fikar/zingle/defhs/.tmp/system3_wave1_vb_seed1/rs_system3_wave1_001",
+    "files": 172,
+    "bytes": 4427893601,
+    "manifest_sha256": "2ca3906fcb379ceb24c912719bf24c2cb02287cf2d846da92978a8b7519da6dc",
+    "source_sha": "824ef6b4b93a42a92747e134b4d8b85c342f86ef",
+    "protected_validation_read": false,
+    "kaggle_submission_made": false
+  },
+  "VA_entry": "B only: matched standalone gain +.0460415586 and CLEAN +.0273072044; A does not qualify"
 }
