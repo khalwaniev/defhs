@@ -1,0 +1,597 @@
+{
+  "mission_id": "RS-DEFHS-SCORE-PUSH-001",
+  "recovery_starting_sha": "d0c7e7630b1e39e4854a5f6b1e7d123e8602e212",
+  "config_sha256": "0e27df53cbe0712c6d97a5ff6fb3319f1a59b95813ff109937be86bad45b266d",
+  "encoder_extraction_repeated": false,
+  "Qwen_inference_repeated": false,
+  "protected_validation_accessed": false,
+  "public_LB_used_for_selection": false,
+  "kaggle_submission_made": false,
+  "source_gate": {
+    "experiment_id": "SP-RECOVERY-SOURCE-INT32-QWEN",
+    "hypothesis": "Semantics restores documented weak int32 audio transfer without breaking the main int16 source",
+    "source_sha": "bee0683c3b14e539abfa46d73865221143ea6386",
+    "configuration": "dtype=int32 AND cached Qwen label in angry/happy/neutral/sad -> Qwen; all other rows -> accepted control audio; certified retrieval last unchanged",
+    "cached_Qwen_sha256": "a2dad2feeac7cc817716ae4eb0cd8724c2f169c06262d45d8e00e66345e1569b",
+    "results": {
+      "VA": {
+        "macro_f1": 0.8153946488239454,
+        "fold_macro_f1": [
+          0.8169378599552521,
+          0.794622069883114,
+          0.8284519190829729,
+          0.8669402751719825,
+          0.7693628419166285
+        ],
+        "per_class_f1": {
+          "angry": 0.8329297820823245,
+          "happy": 0.8179419525065963,
+          "neutral": 0.7837837837837838,
+          "sad": 0.8269230769230769
+        },
+        "confusion": [
+          [
+            172,
+            8,
+            23,
+            2
+          ],
+          [
+            12,
+            155,
+            14,
+            11
+          ],
+          [
+            9,
+            15,
+            174,
+            19
+          ],
+          [
+            15,
+            9,
+            16,
+            172
+          ]
+        ],
+        "accuracy": 0.8147699757869249,
+        "disagreement_with_control": 0.031476997578692496,
+        "strata": {
+          "all": {
+            "rows": 826,
+            "macro_f1": 0.8153946488239454,
+            "control_macro_f1": 0.8016519493535111,
+            "delta_vs_control": 0.013742699470434272,
+            "corrections": 17,
+            "breakages": 6
+          },
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.7846075850021329,
+            "control_macro_f1": 0.7589031198750782,
+            "delta_vs_control": 0.02570446512705471,
+            "corrections": 13,
+            "breakages": 3
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.7959753490825361,
+            "control_macro_f1": 0.7751106257850862,
+            "delta_vs_control": 0.020864723297449927,
+            "corrections": 14,
+            "breakages": 4
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.8455733093991247,
+            "control_macro_f1": 0.8412409465514344,
+            "delta_vs_control": 0.00433236284769023,
+            "corrections": 3,
+            "breakages": 2
+          },
+          "no_close_training_neighbor": {
+            "rows": 631,
+            "macro_f1": 0.7728632039248878,
+            "control_macro_f1": 0.7547998061718029,
+            "delta_vs_control": 0.018063397753084964,
+            "corrections": 16,
+            "breakages": 6
+          },
+          "excluding_Astra48": {
+            "rows": 778,
+            "macro_f1": 0.8179775254285392,
+            "control_macro_f1": 0.8045833923604745,
+            "delta_vs_control": 0.013394133068064695,
+            "corrections": 15,
+            "breakages": 5
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.8164392386563843,
+            "control_macro_f1": 0.8164392386563843,
+            "delta_vs_control": 0.0,
+            "corrections": 0,
+            "breakages": 0
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.785764305722289,
+            "control_macro_f1": 0.6688957161490177,
+            "delta_vs_control": 0.11686858957327129,
+            "corrections": 17,
+            "breakages": 6
+          },
+          "joint_k4_0": {
+            "rows": 227,
+            "macro_f1": 0.797012099161417,
+            "control_macro_f1": 0.745199721138378,
+            "delta_vs_control": 0.05181237802303906,
+            "corrections": 10,
+            "breakages": 2
+          },
+          "joint_k4_1": {
+            "rows": 231,
+            "macro_f1": 0.7872340719601373,
+            "control_macro_f1": 0.7808917300914796,
+            "delta_vs_control": 0.006342341868657675,
+            "corrections": 1,
+            "breakages": 0
+          },
+          "joint_k4_2": {
+            "rows": 137,
+            "macro_f1": 0.725182585872418,
+            "control_macro_f1": 0.7457264957264956,
+            "delta_vs_control": -0.020543909854077613,
+            "corrections": 1,
+            "breakages": 2
+          },
+          "joint_k4_3": {
+            "rows": 231,
+            "macro_f1": 0.7693066226829881,
+            "control_macro_f1": 0.7627354627354628,
+            "delta_vs_control": 0.006571159947525329,
+            "corrections": 5,
+            "breakages": 2
+          },
+          "nonretrieval": {
+            "rows": 594,
+            "macro_f1": 0.751481177482754,
+            "control_macro_f1": 0.7311166934987506,
+            "delta_vs_control": 0.020364483984003368,
+            "corrections": 16,
+            "breakages": 5
+          }
+        }
+      },
+      "VB": {
+        "macro_f1": 0.7533614234768269,
+        "fold_macro_f1": [
+          0.700810509523535,
+          0.7259707150496878,
+          0.8307232156747506,
+          0.7282054645926039,
+          0.7802507492214844
+        ],
+        "per_class_f1": {
+          "angry": 0.8009708737864077,
+          "happy": 0.7486631016042781,
+          "neutral": 0.7149532710280374,
+          "sad": 0.7488584474885844
+        },
+        "confusion": [
+          [
+            165,
+            12,
+            17,
+            11
+          ],
+          [
+            13,
+            140,
+            22,
+            17
+          ],
+          [
+            14,
+            16,
+            153,
+            34
+          ],
+          [
+            15,
+            14,
+            19,
+            164
+          ]
+        ],
+        "accuracy": 0.7530266343825666,
+        "disagreement_with_control": 0.035108958837772396,
+        "strata": {
+          "all": {
+            "rows": 826,
+            "macro_f1": 0.7533614234768269,
+            "control_macro_f1": 0.7383745765682462,
+            "delta_vs_control": 0.014986846908580653,
+            "corrections": 19,
+            "breakages": 7
+          },
+          "CLEAN": {
+            "rows": 435,
+            "macro_f1": 0.7637376379867914,
+            "control_macro_f1": 0.742503006970336,
+            "delta_vs_control": 0.021234631016455396,
+            "corrections": 12,
+            "breakages": 4
+          },
+          "prompt_singleton": {
+            "rows": 535,
+            "macro_f1": 0.7662046557399302,
+            "control_macro_f1": 0.7490481783683188,
+            "delta_vs_control": 0.01715647737161141,
+            "corrections": 13,
+            "breakages": 5
+          },
+          "repeated_prompt": {
+            "rows": 291,
+            "macro_f1": 0.7157960563148784,
+            "control_macro_f1": 0.6998937007527789,
+            "delta_vs_control": 0.015902355562099513,
+            "corrections": 6,
+            "breakages": 2
+          },
+          "no_close_training_neighbor": {
+            "rows": 794,
+            "macro_f1": 0.7494306807245524,
+            "control_macro_f1": 0.7336055577529276,
+            "delta_vs_control": 0.01582512297162486,
+            "corrections": 19,
+            "breakages": 7
+          },
+          "excluding_Astra48": {
+            "rows": 778,
+            "macro_f1": 0.7523751379360784,
+            "control_macro_f1": 0.7363930930779832,
+            "delta_vs_control": 0.01598204485809518,
+            "corrections": 18,
+            "breakages": 6
+          },
+          "int16": {
+            "rows": 746,
+            "macro_f1": 0.7487828866546056,
+            "control_macro_f1": 0.7487828866546056,
+            "delta_vs_control": 0.0,
+            "corrections": 0,
+            "breakages": 0
+          },
+          "int32": {
+            "rows": 80,
+            "macro_f1": 0.76564092146847,
+            "control_macro_f1": 0.6410285117181669,
+            "delta_vs_control": 0.12461240975030308,
+            "corrections": 19,
+            "breakages": 7
+          },
+          "joint_k4_0": {
+            "rows": 227,
+            "macro_f1": 0.755600358422939,
+            "control_macro_f1": 0.720791161865515,
+            "delta_vs_control": 0.034809196557424094,
+            "corrections": 8,
+            "breakages": 3
+          },
+          "joint_k4_1": {
+            "rows": 231,
+            "macro_f1": 0.6686569289705873,
+            "control_macro_f1": 0.6621007494178842,
+            "delta_vs_control": 0.006556179552703045,
+            "corrections": 1,
+            "breakages": 0
+          },
+          "joint_k4_2": {
+            "rows": 137,
+            "macro_f1": 0.5926031973276068,
+            "control_macro_f1": 0.536144544431946,
+            "delta_vs_control": 0.056458652895660766,
+            "corrections": 4,
+            "breakages": 2
+          },
+          "joint_k4_3": {
+            "rows": 231,
+            "macro_f1": 0.7235413756940008,
+            "control_macro_f1": 0.7104742104742104,
+            "delta_vs_control": 0.013067165219790344,
+            "corrections": 6,
+            "breakages": 2
+          }
+        }
+      }
+    },
+    "corrections_breakages": {
+      "VA": {
+        "active_valid_semantic_rows": 56,
+        "actual_label_changes": 26,
+        "corrections": 17,
+        "breakages": 6,
+        "folds": [
+          {
+            "fold": 0,
+            "int32_rows": 12,
+            "active_valid_semantic": 8,
+            "corrections": 3,
+            "breakages": 0,
+            "delta": 0.01778181591696615
+          },
+          {
+            "fold": 1,
+            "int32_rows": 17,
+            "active_valid_semantic": 13,
+            "corrections": 4,
+            "breakages": 3,
+            "delta": 0.006136619417749567
+          },
+          {
+            "fold": 2,
+            "int32_rows": 15,
+            "active_valid_semantic": 9,
+            "corrections": 3,
+            "breakages": 0,
+            "delta": 0.018147159571130445
+          },
+          {
+            "fold": 3,
+            "int32_rows": 19,
+            "active_valid_semantic": 14,
+            "corrections": 4,
+            "breakages": 1,
+            "delta": 0.018702364139414507
+          },
+          {
+            "fold": 4,
+            "int32_rows": 17,
+            "active_valid_semantic": 12,
+            "corrections": 3,
+            "breakages": 2,
+            "delta": 0.007843320607950566
+          }
+        ],
+        "per_class": {
+          "angry": {
+            "delta_F1": -0.004390792080354977,
+            "corrections": 0,
+            "breakages": 3
+          },
+          "happy": {
+            "delta_F1": 0.02110817941952503,
+            "corrections": 6,
+            "breakages": 2
+          },
+          "neutral": {
+            "delta_F1": 0.0065110565110565455,
+            "corrections": 4,
+            "breakages": 1
+          },
+          "sad": {
+            "delta_F1": 0.0317423540315106,
+            "corrections": 7,
+            "breakages": 0
+          }
+        }
+      },
+      "VB": {
+        "active_valid_semantic_rows": 56,
+        "actual_label_changes": 29,
+        "corrections": 19,
+        "breakages": 7,
+        "folds": [
+          {
+            "fold": 0,
+            "int32_rows": 17,
+            "active_valid_semantic": 12,
+            "corrections": 4,
+            "breakages": 2,
+            "delta": 0.01405160071583944
+          },
+          {
+            "fold": 1,
+            "int32_rows": 18,
+            "active_valid_semantic": 11,
+            "corrections": 4,
+            "breakages": 2,
+            "delta": 0.012272679664905417
+          },
+          {
+            "fold": 2,
+            "int32_rows": 9,
+            "active_valid_semantic": 6,
+            "corrections": 2,
+            "breakages": 0,
+            "delta": 0.012387176058355043
+          },
+          {
+            "fold": 3,
+            "int32_rows": 21,
+            "active_valid_semantic": 17,
+            "corrections": 6,
+            "breakages": 1,
+            "delta": 0.030565927473196086
+          },
+          {
+            "fold": 4,
+            "int32_rows": 15,
+            "active_valid_semantic": 10,
+            "corrections": 3,
+            "breakages": 2,
+            "delta": 0.007022875982500176
+          }
+        ],
+        "per_class": {
+          "angry": {
+            "delta_F1": -0.00285687740976448,
+            "corrections": 1,
+            "breakages": 4
+          },
+          "happy": {
+            "delta_F1": 0.02570795648554458,
+            "corrections": 5,
+            "breakages": 2
+          },
+          "neutral": {
+            "delta_F1": 0.00879213358727915,
+            "corrections": 5,
+            "breakages": 1
+          },
+          "sad": {
+            "delta_F1": 0.028304174971263363,
+            "corrections": 8,
+            "breakages": 0
+          }
+        }
+      }
+    },
+    "int32_previous_result_reproduction": {
+      "VA": {
+        "status": "EXACT_PARITY",
+        "rows": 80,
+        "macro_f1": 0.785764305722289,
+        "control_macro_f1": 0.6688957161490177,
+        "delta_vs_control": 0.11686858957327129,
+        "corrections": 17,
+        "breakages": 6
+      },
+      "VB": {
+        "status": "EXACT_PARITY",
+        "rows": 80,
+        "macro_f1": 0.76564092146847,
+        "control_macro_f1": 0.6410285117181669,
+        "delta_vs_control": 0.12461240975030308,
+        "corrections": 19,
+        "breakages": 7
+      }
+    },
+    "VA_retrieval_aware": {
+      "macro_f1": 0.8189896466613449,
+      "fold_macro_f1": [
+        0.822964221558599,
+        0.8005837986090705,
+        0.8348680773249739,
+        0.8669402751719825,
+        0.7693628419166285
+      ],
+      "per_class_f1": {
+        "angry": 0.8357487922705314,
+        "happy": 0.8232189973614775,
+        "neutral": 0.7900677200902935,
+        "sad": 0.8269230769230769
+      },
+      "confusion": [
+        [
+          173,
+          8,
+          22,
+          2
+        ],
+        [
+          12,
+          156,
+          13,
+          11
+        ],
+        [
+          9,
+          14,
+          175,
+          19
+        ],
+        [
+          15,
+          9,
+          16,
+          172
+        ]
+      ],
+      "covered_rows": 232,
+      "override_unchanged": true
+    },
+    "judgments": {
+      "scientific_robustness": {
+        "old_conservative_gate_pass": true,
+        "primary": {
+          "pass": true,
+          "fold_differences": [
+            0.01405160071583944,
+            0.012272679664905417,
+            0.012387176058355043,
+            0.030565927473196086,
+            0.007022875982500176
+          ],
+          "delete_fold_differences": [
+            0.015301354065404116,
+            0.01573763070756462,
+            0.015904009230294447,
+            0.011063559850500226,
+            0.01701007576980118
+          ],
+          "interval": {
+            "point": 0.014986846908580653,
+            "sd": 0.006074950496373533,
+            "lower": 0.0007875794635748834,
+            "upper": 0.029186114353586423,
+            "q": 2.3373470209316243
+          }
+        },
+        "CLEAN": {
+          "point": 0.021234631016455396,
+          "sd": 0.009523493460859192,
+          "lower": -0.0010250780531456394,
+          "upper": 0.04349434008605643,
+          "q": 2.3373470209316243
+        },
+        "VA": {
+          "point": 0.013742699470434272,
+          "sd": 0.005705813032758505,
+          "lower": 0.0004062343763233441,
+          "upper": 0.027079164564545198,
+          "q": 2.3373470209316243
+        },
+        "VA_nonretrieval": {
+          "point": 0.020364483984003368,
+          "sd": 0.007791062772186563,
+          "lower": 0.002154066623541822,
+          "upper": 0.03857490134446491,
+          "q": 2.3373470209316243
+        },
+        "independent_confirmation": false,
+        "interpretation": "Post-diagnostic source-rule selection; conditional ordinary-OOF interval, not independent scientific confirmation"
+      },
+      "competition_deployment_evidence": {
+        "concordant_observed_gain": true,
+        "VB_delta": 0.014986846908580653,
+        "positive_VB_folds": 5,
+        "VA_delta": 0.013742699470434272,
+        "VA_nonretrieval_delta": 0.020364483984003368,
+        "CLEAN_delta": 0.021234631016455396,
+        "materiality_reference_met": false,
+        "automatic_interval_veto": false,
+        "per_class_and_regime_diagnostics": "reported in results; inspect before final promotion"
+      }
+    },
+    "numeric_candidate_conditions": {
+      "positive_VB": true,
+      "positive_VB_folds": 5,
+      "majority_VB_folds_positive": true,
+      "positive_VA": true,
+      "positive_VA_nonretrieval": true,
+      "all_four_classes_predicted": true
+    },
+    "class_collapse_review": "PASS: four predicted classes in both views; largest class-F1 loss angry -0.00285688 VB and -0.00439079 VA; positive remaining classes. VA joint_k4_2 has a -0.02054 diagnostic regression, retained for SS review.",
+    "adaptive_authorization": true,
+    "independent_scientific_confirmation": false,
+    "OOF_sha256": {
+      "VA": "b42994ff82b4e4d95ecd4ef228eec76ffe752199274d2fa969b5c22968d8fc2a",
+      "VB": "19ebb8d8384924d61b3099bbf0b803f61a6be9a8bc975adbcfd963542cfc3286"
+    },
+    "candidate_preserved": true,
+    "candidate_verdict": "PREPARE_SOURCE_GATE_CANDIDATE"
+  }
+}

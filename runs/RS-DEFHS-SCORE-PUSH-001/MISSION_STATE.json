@@ -1,5 +1,5 @@
 {
-  "status": "SS_AUTHORIZED_RECOVERY_IN_PROGRESS",
+  "status": "SOURCE_GATE_PRESERVED_CACHED_RECOVERY_RUNNING",
   "starting_sha": "a37915427ec01cae5540cbec716a1ffc64d4aff6",
   "branch": "rs/score-push-001",
   "protected_validation_accessed": false,
@@ -8,8 +8,8 @@
     "audio": "COMPLETED_REJECT_NEW_MODELS",
     "cached_XLSR_complementarity": "COMPLETED_REJECT_PAIR",
     "semantic": "COMPLETED_REJECT_FIXED_RULE",
-    "source_gated_semantic_recovery": "AUTHORIZED_PENDING",
-    "cached_audio_recovery": "AUTHORIZED_PENDING"
+    "source_gated_semantic_recovery": "COMPLETED_CANDIDATE",
+    "cached_audio_recovery": "RUNNING_CPU_ONLY"
   },
   "audio_kernel": {
     "id": "khalwaniev/defhs-rs-score-push-audio",
@@ -60,5 +60,7 @@
     "new_submission": "NOT_PREPARED_NO_PROMOTION"
   },
   "recovery_starting_sha": "d0c7e7630b1e39e4854a5f6b1e7d123e8602e212",
-  "previous_closure_accepted_by_SS": false
+  "previous_closure_accepted_by_SS": false,
+  "selected_candidate_system": "CONTROL_PLUS_INT32_QWEN_ABSTENTION",
+  "candidate_scientific_status": "post-diagnostic competition evidence; not independent confirmation"
 }
