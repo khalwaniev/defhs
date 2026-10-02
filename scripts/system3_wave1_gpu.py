@@ -134,7 +134,7 @@ def schedule_groups(encoder,blocks,head,lane,adapt):
                                  'weight_decay':.05 if decay else 0.,'name':name})
     return groups
 
-def worker(lane,gpu,records,view,optimization_seed,resume_root):
+def worker(lane,gpu,records,view,optimization_seed,resume_root,fold_list=None,arms=None):
     import numpy as np,pandas as pd,torch
     import torch.nn.functional as F
     from sklearn.pipeline import make_pipeline
@@ -294,9 +294,9 @@ def worker(lane,gpu,records,view,optimization_seed,resume_root):
         assert max(diffs)<2e-5,diffs
         dump(OUT/'A_DIFFERENTIABLE_API_PARITY.json',{'Ids':ids[:3].tolist(),'max_abs_feature_differences':diffs,'tolerance':2e-5})
     # One complete matched pair for each outer fold; no outer-label decisions.
-    for fold in range(5):
+    for fold in (range(5) if fold_list is None else fold_list):
         H=fs==fold;S=~H;g=(fold+1)%5;stop=S&(fs==g);pilot=S&~stop
-        for adapt in [False,True]:
+        for adapt in ([False,True] if arms is None else [bool(a) for a in arms]):
             stem=f'{lane}{int(adapt)}_fold{fold}'
             output=lane_dir/f'{stem}_OOF.npz';decision=lane_dir/f'{stem}_RESULT.json'
             if decision.exists():
@@ -310,13 +310,14 @@ def worker(lane,gpu,records,view,optimization_seed,resume_root):
                'pilot':pilot_rec,'refit':refit_rec,'prediction_ID_sha256':ih(ids[H]),'prediction_sha256':sha(output),
                'outer_heldout_used_for_stopping':False,'source_sha':PAYLOAD['source_sha']}
             dump(decision,r);history.append(r);print(f'VALID_OUTER_FOLD_COMPLETE={lane}{int(adapt)} {view} fold{fold}',flush=True)
-    dump(OUT/f'{lane}_{view}_seed{optimization_seed}_RESULTS.json',{'status':'COMPLETE','folds':history,'source_sha':PAYLOAD['source_sha'],
+    suffix='' if fold_list is None else '_folds'+''.join(map(str,fold_list))
+    dump(OUT/f'{lane}_{view}_seed{optimization_seed}{suffix}_RESULTS.json',{'status':'COMPLETE','folds':history,'source_sha':PAYLOAD['source_sha'],
          'protected_validation_read':False,'kaggle_submission_made':False})
 
 def safe_worker(*args):
     try:worker(*args)
     except Exception as e:
-        lane=args[0];dump(OUT/f'{lane}_ERROR.json',{'error':str(e),'traceback':traceback.format_exc()});traceback.print_exc();raise
+        lane=args[0];dump(OUT/f'{lane}_GPU{args[1]}_ERROR.json',{'error':str(e),'traceback':traceback.format_exc()});traceback.print_exc();raise
 
 def main():
     OUT.mkdir(parents=True,exist_ok=True)
@@ -340,12 +341,14 @@ def main():
     for r in dm[dm.split=='train'].sort_values('Id').itertuples(index=False):
         p=roots[0]/r.split/r.filename;assert sha(p)==r.file_sha256 and r.sample_rate==16000 and r.channels==1
         records.append({'Id':int(r.Id),'path':str(p),'samples':int(r.samples),'duplicate_group':str(dupmap.get(r.Id,r.Id))})
+    assignments=PAYLOAD.get('workers',[{'lane':'A'},{'lane':'B'}])
     dump(OUT/'GPU_EXECUTION_PROVENANCE.json',{'payload_sha':PAYLOAD['config_sha256'],'source_sha':PAYLOAD['source_sha'],
         'gpu_names':[torch.cuda.get_device_name(i) for i in range(2)],'audio_hashes_verified':len(records),
-        'protected_validation_read':False,'kaggle_submission_made':False,'parallel_assignments':{'A':0,'B':1}})
+        'protected_validation_read':False,'kaggle_submission_made':False,'parallel_assignments':[{**spec,'GPU':k} for k,spec in enumerate(assignments)]})
     ctx=mp.get_context('spawn');workers=[]
-    for gpu,lane in enumerate(PAYLOAD.get('lanes',['A','B'])):
-        w=ctx.Process(target=safe_worker,args=(lane,gpu,records,PAYLOAD.get('view','VB'),PAYLOAD.get('seed',20260930),PAYLOAD.get('resume_root')))
+    for gpu,assignment in enumerate(assignments):
+        lane=assignment['lane']
+        w=ctx.Process(target=safe_worker,args=(lane,gpu,records,PAYLOAD.get('view','VB'),PAYLOAD.get('seed',20260930),PAYLOAD.get('resume_root'),assignment.get('folds'),assignment.get('arms')))
         w.start();workers.append(w)
     for w in workers:w.join()
     dump(OUT/'JOB_EXIT_STATUS.json',{'worker_exitcodes':[w.exitcode for w in workers]})

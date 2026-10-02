@@ -4,51 +4,67 @@
       "name": "E2V_CONTROL_VA.npz",
       "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/E2V_CONTROL_VA.npz",
       "sha256": "448353808795fdd925e45799b086d79a1e1e74d17d38dddea7c6bb6a3d90c351",
-      "bytes": 26882
+      "bytes": 26882,
+      "drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/E2V_CONTROL_VA.npz"
     },
     {
       "name": "XLSR_VA.npz",
       "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/XLSR_VA.npz",
       "sha256": "0c64a51b445f9704b5b9e33354bdfcdb55331d1eb9bb13968f94c0b1d7876b89",
-      "bytes": 26887
+      "bytes": 26887,
+      "drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/XLSR_VA.npz"
     },
     {
       "name": "FIXED_PAIR_VA.npz",
       "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/FIXED_PAIR_VA.npz",
       "sha256": "26816cf340ada96869439b32005376033d672b3aa695a9684984a126d1ca1c15",
-      "bytes": 26798
+      "bytes": 26798,
+      "drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/FIXED_PAIR_VA.npz"
     },
     {
       "name": "NESTED_FUSION_VA.npz",
       "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/NESTED_FUSION_VA.npz",
       "sha256": "df088c501581a49c2c4ce57b2003d4880fcc2d07a86efcdae07227e247a72569",
-      "bytes": 26658
+      "bytes": 26658,
+      "drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/NESTED_FUSION_VA.npz"
     },
     {
       "name": "E2V_CONTROL_VB.npz",
       "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/E2V_CONTROL_VB.npz",
       "sha256": "14c86f6f61d633a72fd8535bec1070162e8a92f6de9c3f37ee366ff0e3d7a7b7",
-      "bytes": 26601
+      "bytes": 26601,
+      "drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/E2V_CONTROL_VB.npz"
     },
     {
       "name": "XLSR_VB.npz",
       "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/XLSR_VB.npz",
       "sha256": "f8a7cab17c88e98056d45fcad44479f1254acd68dbc7507e585f2197e1c87402",
-      "bytes": 26605
+      "bytes": 26605,
+      "drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/XLSR_VB.npz"
     },
     {
       "name": "FIXED_PAIR_VB.npz",
       "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/FIXED_PAIR_VB.npz",
       "sha256": "9f9ac86829230bcfde4be93a980161bf6139eaa38f3372efc822eb8edf79da45",
-      "bytes": 26511
+      "bytes": 26511,
+      "drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/FIXED_PAIR_VB.npz"
     },
     {
       "name": "NESTED_FUSION_VB.npz",
       "local_path": "/home/fikar/zingle/defhs/work/system3_wave1/NESTED_FUSION_VB.npz",
       "sha256": "4bcb312ed36f1fa7125ab9aa9d2133b56bdda64d7e9a10fa2920d17fca98ccb2",
-      "bytes": 26374
+      "bytes": 26374,
+      "drive_path": "gdrive:DEFHS/rs_system3_wave1_001/cpu/NESTED_FUSION_VB.npz"
     }
   ],
   "heavy_root": "gdrive:DEFHS/rs_system3_wave1_001",
-  "status": "LOCAL_PENDING_PRESERVATION"
+  "status": "CPU_PRESERVED_GPU_PENDING",
+  "CPU_preservation": {
+    "status": "BYTE_VERIFIED",
+    "matching_files": 28,
+    "differences": 0,
+    "verification": "rclone check --download --one-way",
+    "manifest_sha256": "251f7886315611f4270a4aaffe913b7d15b7d5398c925eea5eceadc4831a1be3",
+    "drive_manifest": "gdrive:DEFHS/rs_system3_wave1_001/cpu/CPU_SHA256SUMS.txt"
+  }
 }
