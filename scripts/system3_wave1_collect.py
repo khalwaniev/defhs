@@ -62,6 +62,21 @@ def load_gpu(folder,lane,view,seed,folds,adapted_only=False):
     for arm in q:assert np.isfinite(q[arm]).all() and np.allclose(q[arm].sum(1),1,atol=1e-6)
     return q,records
 
+def matched_head_phase_audit(records,lane):
+    by={(r['arm'],r['fold']):r for r in records};out=[]
+    for outer in range(5):
+        for kind in ['pilot','refit']:
+            a=by[(lane+'0',outer)][kind]['traces'];b=by[(lane+'1',outer)][kind]['traces']
+            for left,right in zip(a[:2],b[:2]):
+                assert left['epoch']==right['epoch'] and left['active_top_blocks']==right['active_top_blocks']==0
+                difference=abs(left['train_CE']-right['train_CE'])
+                stop_difference=abs(left['stop_CE']-right['stop_CE']) if left['stop_CE'] is not None else None
+                assert difference<1e-6 and (stop_difference is None or stop_difference<1e-6)
+                out.append({'fold':outer,'kind':kind,'epoch':left['epoch'],
+                    'training_CE_difference':difference,'stopping_CE_difference':stop_difference})
+    return {'status':'PASS','head_only_common_epoch_comparisons':out,'tolerance':1e-6,
+            'note':'No comparison is invented for epoch-zero refits or for the adapted-only second seed.'}
+
 def convention(r,threshold):
     v=r['VB'];return bool(v['aggregate_delta']>=threshold and sum(x>0 for x in v['fold_deltas'])>=4 and min(v['delete_fold_deltas'])>=0 and v['strata']['CLEAN']['delta_vs_control']>=0)
 
@@ -88,6 +103,7 @@ def main():
         encoder_update_retained=any(r['selected_epoch']>=3 for r in records if r['arm']==lane+'1')
         measurements[lane]={'status':'COMPLETE','view':args.view,'seed':args.seed,'matched_frozen':frozen,'adapted_vs_matched_frozen':measured,
            'package_integrity':package_integrity,
+           'matched_head_phase_audit':matched_head_phase_audit(records,lane) if args.seed==20260930 else {'status':'NOT_APPLICABLE_ADAPTED_ONLY_SECOND_SEED'},
            'fold_records':records,'all_adapted_epoch_zero':all_epoch0,'encoder_update_retained':encoder_update_retained,'outer_ID_hash_audit':'PASS','independent_sklearn_metric_audit':'PASS',
            'recipe':json.loads((RUN/'WAVE1_CONFIG.json').read_text())[lane],
            'optimization_seconds':sum(r[k]['wall_seconds'] for r in records for k in ['pilot','refit']),
