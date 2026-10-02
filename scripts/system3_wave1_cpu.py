@@ -163,9 +163,18 @@ def cpu():
             inventory.append({'name':path.name,'local_path':str(path),'sha256':sha256(path),'bytes':path.stat().st_size})
     common={'source_sha':source(),'input_authority':EXPECTED,'compute':'CPU, two BLAS threads','wall_seconds':time.monotonic()-start,
             'protected_validation_read':False,'kaggle_submission_made':False}
+    retrieval_audit=ROOT/'runs/RS-DEFHS-SYSTEM-IMPLEMENTATION-001/FINALIST_VA_RETRIEVAL_AUDIT.csv'
+    ra=read(retrieval_audit).set_index('Id').loc[folds['VA'].Id]
+    covered=ra.retrieval_covered.to_numpy(bool);assert covered.sum()==232
+    retrieval={}
+    for name,prob in [('E2V_CONTROL',heads['VA']['emotion2vec_base']),('FIXED_PAIR',pairs['VA']),('NESTED_FUSION',fusions['VA'])]:
+        prediction=prob.argmax(1).copy();prediction[covered]=labels(ra.pipeline_pred)[covered]
+        retrieval[name]={**report(labels(folds['VA'].emotion),prediction,folds['VA'].fold.to_numpy()),
+            'retrieval_coverage_rows':int(covered.sum()),'frozen_audit_sha256':sha256(retrieval_audit)}
+    assert abs(retrieval['E2V_CONTROL']['macro_f1']-.8052768510049559)<1e-14
     dump(RUN/'W1_CPU_PAIR_RESULTS.json',{**common,'HISTORICAL_REPLAY':views(replay,folds,masks,control),
         'independent_evidence':False,'outer_refit':pair,'hard_prediction_historical_parity':True,'complementarity':comp,
-        'control':views(control,folds,masks,control)})
+        'control':views(control,folds,masks,control),'retrieval_aware_VA':retrieval})
     main=fusion['VB'];promote=main['macro_f1']-pair['VB']['macro_f1']>=.005 and sum(d>0 for d in main['fold_deltas'])>=4 and min(main['delete_fold_deltas'])>=0
     promote=promote and fusion['VB']['strata']['CLEAN']['delta_vs_control']>=0 and fusion['VA']['strata']['nonretrieval']['delta_vs_control']>=0
     dump(RUN/'W1_NESTED_FUSION_RESULTS.json',{**common,'results_vs_fixed_pair':fusion,'outer_meta_audit':audit,

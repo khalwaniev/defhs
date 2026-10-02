@@ -11,3 +11,4 @@
 - CPU fixed pair: VB .7768156647359765; VA .8266398472107417; VA non-retrieval .767215174621592. Historical replay/outer refit hard labels agree.
 - Legal nested fusion: VB .7833622524562892, all5 folds positive; VA .8264383258101213, non-retrieval .7639258492378965. Keep fixed pair under registered concordance. Independent sklearn metrics and all inner ID-hash exclusions pass.
 - CPU heavy outputs: 28/28 files byte-verified on Drive, zero differences; manifest recorded. GPU A stopping observations select epoch0 in all5 folds; final OOF analysis awaits notebook outputs and complete VB Wave1.
+- Reused frozen ordinary V-A retrieval audit (232 held-out rows covered), without refitting models or changing retrieval: control .8052768510049559; fixed pair .8314384804867729; nested .8289228474552494. Control parity passes; audit hash recorded. This is a correlated diagnostic, not independent confirmation.
