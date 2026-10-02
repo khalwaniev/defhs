@@ -48,8 +48,11 @@ def main():
     dest=ROOT/('kaggle/rs_system3_wave1_001'+suffix);dest.mkdir(parents=True,exist_ok=True)
     code=template.read_text().replace('PAYLOAD = {}  # populated by the allowlist-only package builder','PAYLOAD = '+repr(payload))
     (dest/'run.py').write_text(code)
-    slug='defhs-system3-wave1-matched-adaptation'+suffix.replace('_','-')
-    meta={'id':'khalwaniev/'+slug,'title':'DEFHS System3 Wave1 Matched Adaptation'+suffix.replace('_',' '),
+    base_slug='defhs-system3-wave1-matched-adaptation' if ns.lane is None else 'defhs-system3-wave1'
+    base_title='DEFHS System3 Wave1 Matched Adaptation' if ns.lane is None else 'DEFHS System3 Wave1'
+    slug=base_slug+suffix.replace('_','-');title=base_title+suffix.replace('_',' ')
+    assert 5<=len(title)<=50,'Kaggle SaveKernel requires a title of at most50 characters.'
+    meta={'id':'khalwaniev/'+slug,'title':title,
         'code_file':'run.py','language':'python','kernel_type':'script','is_private':True,'enable_gpu':True,'enable_internet':True,
         'machine_shape':'NvidiaTeslaT4','competition_sources':['dataverse-detecting-emotions-from-hindi-speech'],
         'dataset_sources':['khalwaniev/defhs-system3-wave1-cache'],'kernel_sources':[],'model_sources':[]}
