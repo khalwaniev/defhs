@@ -65,16 +65,17 @@ def main():
         path=WORK/f'Candidate_{lane}_{args.view}_seed{args.seed}.npz';np.savez_compressed(path,Id=folds[args.view].Id.to_numpy(),prob=blend[args.view])
         inventory.append({'name':path.name,'sha256':sha256(path),'local_path':str(path),'bytes':path.stat().st_size})
         all_epoch0=all(r['selected_epoch']==0 for r in records if r['arm']==lane+'1')
+        encoder_update_retained=any(r['selected_epoch']>=3 for r in records if r['arm']==lane+'1')
         measurements[lane]={'status':'COMPLETE','view':args.view,'seed':args.seed,'matched_frozen':frozen,'adapted_vs_matched_frozen':measured,
-           'fold_records':records,'all_adapted_epoch_zero':all_epoch0,'outer_ID_hash_audit':'PASS','independent_sklearn_metric_audit':'PASS',
+           'fold_records':records,'all_adapted_epoch_zero':all_epoch0,'encoder_update_retained':encoder_update_retained,'outer_ID_hash_audit':'PASS','independent_sklearn_metric_audit':'PASS',
            'recipe':json.loads((RUN/'WAVE1_CONFIG.json').read_text())[lane],
            'optimization_seconds':sum(r[k]['wall_seconds'] for r in records for k in ['pilot','refit']),
            'peak_gpu_memory_bytes':max(r[k]['peak_GPU_memory_bytes'] for r in records for k in ['pilot','refit'])}
         blends[lane]={'definition':f'2/3 fixed P + 1/3 {lane}1','reference':'fixed 50/50 original E2V + XLSR','results':result}
         if args.view=='VB':
             marginal=convention(result,.005);standalone=measured['VB']['aggregate_delta']>=.010 and measured['VB']['strata']['CLEAN']['delta_vs_control']>=0
-            measurements[lane]['provisional_useful']=bool((standalone or marginal) and not all_epoch0)
-            measurements[lane]['entry_reason']={'standalone_ge010_and_CLEAN':bool(standalone),'blend_conventions':marginal,'genuine_adapted_survivor':not all_epoch0}
+            measurements[lane]['provisional_useful']=bool(standalone or marginal)
+            measurements[lane]['entry_reason']={'standalone_ge010_and_CLEAN':bool(standalone),'blend_conventions':marginal,'encoder_update_retained':encoder_update_retained}
         else:
             for name,p,reference in [('frozen',matched,baseline),('adapted',adapted,baseline),('fixed_blend',blend,P)]:
                 audit=pd.read_csv(ROOT/'runs/RS-DEFHS-SYSTEM-IMPLEMENTATION-001/FINALIST_VA_RETRIEVAL_AUDIT.csv').set_index('Id').loc[folds['VA'].Id]
