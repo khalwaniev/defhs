@@ -1,11 +1,11 @@
 {
   "mission_id": "RS-DEFHS-SCORE-PUSH-001",
-  "status": "SOURCE_GATE_CANDIDATE_RECOVERY_IN_PROGRESS",
+  "status": "READY_FOR_SS_SOURCE_GATE_CANDIDATE_REVIEW",
   "accepted_control_unchanged": true,
   "selected_system": "CONTROL_PLUS_INT32_QWEN_ABSTENTION",
   "semantic_deployment_verdict": "PREPARE_SOURCE_GATE_CANDIDATE",
   "scientific_status": "Post-source-diagnostic SS-authorized candidate; not independent scientific confirmation",
-  "new_submission_prepared": false,
+  "new_submission_prepared": true,
   "protected_validation_accessed": false,
   "public_LB_used_for_selection": false,
   "kaggle_submission_made": false,
@@ -28,6 +28,26 @@
     "next_SS_decision": "Accept mission closure with existing control retained. Any new semantic gating architecture needs a new explicit SS authorization. No submission approval requested for a weaker candidate.",
     "blockers": []
   },
-  "next_SS_decision": "Review source-gated candidate and complete cached recovery evidence; competition submission requires separate authorization",
-  "blockers": []
+  "next_SS_decision": "Review the prepared int32 semantic candidate; approve or reject deployment. A Kaggle competition submission requires explicit separate authorization.",
+  "blockers": [],
+  "candidate_definition": {
+    "audio": "accepted frozen emotion2vec_base meanstd scaler logistic C1 argmax",
+    "semantic": "cached fixed Qwen3-8B outputs only on dtype int32; unclear retains audio; int16 retains audio",
+    "retrieval": "existing certified unanimous-label hard override last, same frozen 78 test rows"
+  },
+  "submission_sha256": "ac64f17239bdac463f0f3687190580885aa97306040ce9b91204b713fffedc5d",
+  "test_labels_changed_vs_current_submission": 7,
+  "cached_recovery_verdict": "All six fixed/nested lanes rejected; no optional blend entered",
+  "best_cached_recovery": "emotion2vec_plus_large_utterance_NESTED_C",
+  "competition_evidence": {
+    "VB_delta": 0.014986846908580653,
+    "VB_positive_folds": 5,
+    "VA_delta": 0.013742699470434272,
+    "VA_positive_folds": 5,
+    "VA_nonretrieval_delta": 0.020364483984003368,
+    "serious_class_collapse": false,
+    "previous_int32_diagnostics_reproduced": "EXACT_PARITY"
+  },
+  "no_prompt_or_semantic_output_retuning": true,
+  "scientific_independent_confirmation": false
 }

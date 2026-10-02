@@ -1,5 +1,5 @@
 {
-  "status": "SOURCE_GATE_PRESERVED_CACHED_RECOVERY_RUNNING",
+  "status": "READY_FOR_SS_SOURCE_GATE_CANDIDATE_REVIEW",
   "starting_sha": "a37915427ec01cae5540cbec716a1ffc64d4aff6",
   "branch": "rs/score-push-001",
   "protected_validation_accessed": false,
@@ -8,8 +8,9 @@
     "audio": "COMPLETED_REJECT_NEW_MODELS",
     "cached_XLSR_complementarity": "COMPLETED_REJECT_PAIR",
     "semantic": "COMPLETED_REJECT_FIXED_RULE",
-    "source_gated_semantic_recovery": "COMPLETED_CANDIDATE",
-    "cached_audio_recovery": "RUNNING_CPU_ONLY"
+    "source_gated_semantic_recovery": "COMPLETED_CANDIDATE_PREPARED",
+    "cached_audio_recovery": "COMPLETED_REJECT_ALL_SIX_LANES",
+    "recovery_optional_blend": "NOT_ENTERED_NO_COMPETITIVE_LANE"
   },
   "audio_kernel": {
     "id": "khalwaniev/defhs-rs-score-push-audio",
@@ -36,11 +37,11 @@
     "package_sha": "ba59317",
     "runner_sha256": "c880024d8ff08c2040b9c81865c80c83981e18d060da161a19eae6f85867c767"
   },
-  "selected_final_system": "CONTROL",
-  "new_submission_prepared": false,
+  "selected_final_system": "CONTROL_IS_CURRENT_ACCEPTED_SYSTEM; SOURCE_GATE_CANDIDATE_AWAITS_SS",
+  "new_submission_prepared": true,
   "public_LB_used_for_selection": false,
   "artifact_integrity": "PASS_FOUR_OBJECTS_BYTE_VERIFIED",
-  "next_SS_decision": "Await source-gated semantic and cached recovery evidence; prepare candidate only under authorized entry conditions",
+  "next_SS_decision": "Review the prepared int32 semantic candidate; approve or reject deployment. A Kaggle competition submission requires explicit separate authorization.",
   "blockers": [],
   "quota_snapshot_after": {
     "used_hours": 6.51,
@@ -62,5 +63,20 @@
   "recovery_starting_sha": "d0c7e7630b1e39e4854a5f6b1e7d123e8602e212",
   "previous_closure_accepted_by_SS": false,
   "selected_candidate_system": "CONTROL_PLUS_INT32_QWEN_ABSTENTION",
-  "candidate_scientific_status": "post-diagnostic competition evidence; not independent confirmation"
+  "candidate_scientific_status": "post-diagnostic competition evidence; not independent confirmation",
+  "submission_sha256": "ac64f17239bdac463f0f3687190580885aa97306040ce9b91204b713fffedc5d",
+  "test_labels_changed_vs_current": 7,
+  "recovery_verification": {
+    "source_gate_rule_and_metrics": "PASS independently checked every development row and fold",
+    "submission_rule_schema_and_parity": "PASS independently reconstructed cached test gate and final 78-row override",
+    "nested_regularization_audit": "PASS 40 nested outer fits; 640 inner fits; outer heldout excluded; training-side winners independently checked",
+    "fixed_score9_mapping": "PASS 20 fixed C1 outer fits",
+    "OOF_macro_F1_and_confusions": "PASS independent sklearn recomputation for all six recovery lanes and both views",
+    "C1_reuse_probability_parity": "PASS all C1-selected folds match corresponding fixed/previous authority within 1e-12",
+    "C1_parity_folds_checked": 11,
+    "encoder_extraction_repeated": false,
+    "Qwen_inference_repeated": false,
+    "protected_validation_accessed": false,
+    "kaggle_submission_made": false
+  }
 }
