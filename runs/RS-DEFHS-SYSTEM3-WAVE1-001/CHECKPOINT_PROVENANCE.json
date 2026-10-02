@@ -1,0 +1,8 @@
+{
+  "status": "RUNNING",
+  "source_sha": "824ef6b4b93a42a92747e134b4d8b85c342f86ef",
+  "kernel": "khalwaniev/defhs-system3-wave1-matched-adaptation",
+  "version": 1,
+  "checkpoint_root": "gdrive:DEFHS/rs_system3_wave1_001",
+  "checkpoint_inventory": "PENDING_GPU_OUTPUT"
+}

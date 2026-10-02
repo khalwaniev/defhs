@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "mission_id": "RS-DEFHS-SYSTEM3-WAVE1-001",
+  "execution_parent": "d78da6037ec1b73bf210f562baa30ebb1b9fa9e6",
+  "source_sha": "824ef6b4b93a42a92747e134b4d8b85c342f86ef",
+  "inputs": {
+    "DATA_MANIFEST.csv": {
+      "path": "/home/fikar/zingle/defhs/runs/DS-DEFHS-VALIDATION-HARDENING-002/DATA_MANIFEST.csv",
+      "sha256": "1e5552d42aec94efae197e7dac95de41cfc96e40336f3e513b9a87e3ccc72469"
+    },
+    "DUPLICATE_GROUPS_FINAL.csv": {
+      "path": "/home/fikar/zingle/defhs/runs/DS-DEFHS-VALIDATION-HARDENING-002/DUPLICATE_GROUPS_FINAL.csv",
+      "sha256": "6aee3374e27efeb1a79397a1256a515b87e3baf4d7a01536191f6e16256e81f7"
+    },
+    "VALIDATION_VB_FOLDS.csv": {
+      "path": "/home/fikar/zingle/defhs/runs/DS-DEFHS-VALIDATION-HARDENING-002/VALIDATION_VB_FOLDS.csv",
+      "sha256": "87c6c0b33e5ea5c05b2bd2537d29480e4285cf816d4a921a6f1bcb3ef854139b"
+    },
+    "VALIDATION_VA_FOLDS.csv": {
+      "path": "/home/fikar/zingle/defhs/runs/DS-DEFHS-VALIDATION-HARDENING-002/VALIDATION_VA_FOLDS.csv",
+      "sha256": "dcee356b0a66cb73c506bb71a6c57962227d6d0474efd3e4d6c404168308f3d1"
+    },
+    "VALIDATION_VD_REGIMES.csv": {
+      "path": "/home/fikar/zingle/defhs/runs/DS-DEFHS-VALIDATION-HARDENING-002/VALIDATION_VD_REGIMES.csv",
+      "sha256": "f310cc024d122f19321e34a826e2793b5a661b1dd01ee4d1d72709a4472f0839"
+    },
+    "RETRIEVAL_MAP_FINAL.csv": {
+      "path": "/home/fikar/zingle/defhs/runs/DS-DEFHS-VALIDATION-HARDENING-002/RETRIEVAL_MAP_FINAL.csv",
+      "sha256": "e08f7d06c13d64a1d365d7ae6fa741d6e831dea8816de6663d4a9c0eb113d2a7"
+    },
+    "emotion2vec_base_meanstd.npz": {
+      "path": "/home/fikar/zingle/defhs/.tmp/rs_system_implementation_001_frozen_screen_v3/rs_defhs_system_implementation_001/emotion2vec_base_meanstd.npz",
+      "sha256": "4b8b6feeedc83ca2712b7fd21d9683465a07f7fcb82ca0c1d625512acf64326f"
+    },
+    "xls_r_300m_meanstd.npz": {
+      "path": "/home/fikar/zingle/defhs/.tmp/rs_system_implementation_001_frozen_screen_v3/rs_defhs_system_implementation_001/xls_r_300m_meanstd.npz",
+      "sha256": "24bd935cc0271d5ae427acfed96a0237161b646e1bdcc1f2cb80c48abdcfa5fc"
+    },
+    "LOCKED_FINALIST_ALL826_LOGISTIC.joblib": {
+      "path": "/home/fikar/zingle/defhs/work/frozen_closure/LOCKED_FINALIST_ALL826_LOGISTIC.joblib",
+      "sha256": "787d8da0cd2a54ea405ec319f74fb762e0336e6fdb2d9fa972a3ab4a7e774a87"
+    },
+    "ASR_TRANSCRIPTS.csv": {
+      "path": "/home/fikar/zingle/defhs/work/mission_inputs/asr_transcripts/ASR_TRANSCRIPTS.csv",
+      "sha256": "a111071c53edd14a6202d9ac7b12360648c9f12e8650fee0aabf2dda0df12d01",
+      "role": "existing diagnostic masks only"
+    },
+    "PROMPT_CLUSTER_ASSIGNMENTS.csv": {
+      "path": "/home/fikar/zingle/defhs/work/mission_inputs/asr_transcripts/PROMPT_CLUSTER_ASSIGNMENTS.csv",
+      "sha256": "458712cfee51e0cf65ef57d1a0deb8f81dcb70e4ecfe6ebfc73220f3aefac005",
+      "role": "existing diagnostic masks only"
+    }
+  },
+  "train_rows": 826,
+  "test_rows": 209,
+  "class_supports": {
+    "angry": 205,
+    "happy": 192,
+    "neutral": 217,
+    "sad": 212
+  },
+  "retrieval_test_rows": 78,
+  "retrieval_groups": 77,
+  "cache_ID_order": "EXACT_MANIFEST_PARITY",
+  "protected_file_read": false,
+  "preprocessing_label_leakage": false,
+  "historical_replay_only": true,
+  "public_evidence": {
+    "system1": 0.79691,
+    "system2": 0.78593,
+    "system2_verdict": "PUBLIC_TRANSFER_NEGATIVE",
+    "private_score": "UNKNOWN"
+  },
+  "GPU_launch_required_next": true
+}
