@@ -8,6 +8,7 @@ from sklearn.metrics import f1_score,confusion_matrix
 from defhs_frozen_closure_utils import CLASSES,labels,f1,report,dump,sha256
 from system3_wave1_cpu import ROOT,RUN,WORK,inputs,idhash
 from run_score_push_cpu import views
+from system3_wave1_verify_outputs import verify
 
 def delta(p,base,folds,masks):
     r=views(p,folds,masks,base)
@@ -34,9 +35,13 @@ def load_gpu(folder,lane,view,seed,folds,adapted_only=False):
             assert meta['prediction_ID_sha256']==idhash(f.Id[H])
             for kind,training,stopping in [('pilot',pilot,stop),('refit',S,np.zeros(826,bool))]:
                 rec=meta[kind];fp=rec['fingerprint']
+                assert fp['recipe_sha256']==sha256(RUN/'WAVE1_CONFIG.json')
                 assert fp['training_ID_sha256']==idhash(f.Id[training]) and fp['stopping_ID_sha256']==idhash(f.Id[stopping])
                 assert fp['view']==view and fp['seed']==seed and fp['fold']==outer
                 assert not np.any(H&training) and not np.any(H&stopping)
+                saved=json.loads((root/f'{arm}_fold{outer}_{kind}_DONE.json').read_text())
+                assert saved==rec
+                assert sha256(root/f'{arm}_fold{outer}_{kind}_STATE.pt')==rec['checkpoint_sha256']
                 if kind=='refit':assert rec['selected_epoch']==meta['selected_epoch']
             assert meta['pilot']['selected_epoch']==meta['selected_epoch']
             records.append(meta)
@@ -48,6 +53,7 @@ def convention(r,threshold):
 
 def main():
     a=argparse.ArgumentParser();a.add_argument('folder',type=Path);a.add_argument('--view',default='VB',choices=['VB','VA']);a.add_argument('--seed',type=int,default=20260930);a.add_argument('--lanes',default='AB');args=a.parse_args()
+    package_integrity=verify(args.folder)
     allfolds,allmasks,control,x=inputs();folds={args.view:allfolds[args.view]};masks={args.view:allmasks[args.view]}
     baseline={args.view:control[args.view]};P={args.view:np.load(WORK/f'FIXED_PAIR_{args.view}.npz')['prob']}
     measurements={};blends={};probs={};inventory=[]
@@ -67,6 +73,7 @@ def main():
         all_epoch0=all(r['selected_epoch']==0 for r in records if r['arm']==lane+'1')
         encoder_update_retained=any(r['selected_epoch']>=3 for r in records if r['arm']==lane+'1')
         measurements[lane]={'status':'COMPLETE','view':args.view,'seed':args.seed,'matched_frozen':frozen,'adapted_vs_matched_frozen':measured,
+           'package_integrity':package_integrity,
            'fold_records':records,'all_adapted_epoch_zero':all_epoch0,'encoder_update_retained':encoder_update_retained,'outer_ID_hash_audit':'PASS','independent_sklearn_metric_audit':'PASS',
            'recipe':json.loads((RUN/'WAVE1_CONFIG.json').read_text())[lane],
            'optimization_seconds':sum(r[k]['wall_seconds'] for r in records for k in ['pilot','refit']),
