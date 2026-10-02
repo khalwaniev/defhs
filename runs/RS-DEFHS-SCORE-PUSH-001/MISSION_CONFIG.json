@@ -1,0 +1,181 @@
+{
+  "mission_id": "RS-DEFHS-SCORE-PUSH-001",
+  "starting_sha": "a37915427ec01cae5540cbec716a1ffc64d4aff6",
+  "branch": "rs/score-push-001",
+  "control": "unchanged locked emotion2vec_base meanstd L2 logistic C1 argmax",
+  "audio_models": {
+    "emotion2vec_plus_base": {
+      "model_id": "iic/emotion2vec_plus_base",
+      "execution_route": "ModelScope immutable per-file revisions and SHA256, local-directory FunASR AutoModel",
+      "license": "Apache License 2.0 per official ModelScope model metadata",
+      "license_metadata_url": "https://modelscope.cn/api/v1/models/iic/emotion2vec_plus_base",
+      "HF_license_tag": "other/model-license linked to FunASR; not substituted for ModelScope download authority",
+      "public_access": true,
+      "cost": "FREE",
+      "files": {
+        "config.yaml": {
+          "Revision": "58354f1e5b6c118cf8b175b5b1955d6b07df42c2",
+          "Sha256": "50674ec187406b4f1208925594ceaf1f28f16a22333b5f2ac5b3d0cbffdd670e",
+          "Size": 3170
+        },
+        "configuration.json": {
+          "Revision": "58354f1e5b6c118cf8b175b5b1955d6b07df42c2",
+          "Sha256": "8b6a745213025c7d4565f9f074cfef1b5cd5ef76e38e2a8f7f8a3db271e735b2",
+          "Size": 343
+        },
+        "model.pt": {
+          "Revision": "58354f1e5b6c118cf8b175b5b1955d6b07df42c2",
+          "Sha256": "60710b5aae1dbe69bdac8920028fb05882d4314fd09031922b4b61ee9e7aadbd",
+          "Size": 1118245678
+        },
+        "tokens.txt": {
+          "Revision": "97b6c3aeb9878641d4721675edd605e1577d0b5d",
+          "Sha256": "654625c18ef0f0583441a3b811c20904f2cf30febb716f32e14810b8e6bb715c",
+          "Size": 120
+        }
+      },
+      "sample_rate_hz": 16000,
+      "normalization": "FunASR cfg.normalize waveform layer_norm; no added peak normalization",
+      "primary_representation": "canonical utterance mean of official final-frame features",
+      "single_cheap_alternative": "established mean+std from the same cached extraction pass",
+      "native_four_class_mapping": [
+        "angry",
+        "happy",
+        "neutral",
+        "sad"
+      ],
+      "native_mapping_rule": "select matching pretrained scores and renormalize their sum; no bias or threshold"
+    },
+    "emotion2vec_plus_large": {
+      "model_id": "iic/emotion2vec_plus_large",
+      "execution_route": "ModelScope immutable per-file revisions and SHA256, local-directory FunASR AutoModel",
+      "license": "Apache License 2.0 per official ModelScope model metadata",
+      "license_metadata_url": "https://modelscope.cn/api/v1/models/iic/emotion2vec_plus_large",
+      "HF_license_tag": "other/model-license linked to FunASR; not substituted for ModelScope download authority",
+      "public_access": true,
+      "cost": "FREE",
+      "files": {
+        "config.yaml": {
+          "Revision": "c43c13eeb3ff303d11265da0074382eab3cdcb4c",
+          "Sha256": "f4fa0eb82cc78bfebb43c56d68791afb01788085a18897d20999af7bc45d51d3",
+          "Size": 5552
+        },
+        "configuration.json": {
+          "Revision": "c43c13eeb3ff303d11265da0074382eab3cdcb4c",
+          "Sha256": "8b6a745213025c7d4565f9f074cfef1b5cd5ef76e38e2a8f7f8a3db271e735b2",
+          "Size": 343
+        },
+        "model.pt": {
+          "Revision": "c43c13eeb3ff303d11265da0074382eab3cdcb4c",
+          "Sha256": "be501a01f26fcdc7663a062dff86af839afbaef7c4de32f5e42d7e1ad2784da4",
+          "Size": 1945790254
+        },
+        "tokens.txt": {
+          "Revision": "767b2e00f04e0b75b5408c73be0d666328808af5",
+          "Sha256": "866121e470057b847d7a50e9923509141fb2924392f53385a186482a1ec0fb7f",
+          "Size": 119
+        }
+      },
+      "sample_rate_hz": 16000,
+      "normalization": "FunASR cfg.normalize waveform layer_norm; no added peak normalization",
+      "primary_representation": "canonical utterance mean of official final-frame features",
+      "single_cheap_alternative": "established mean+std from the same cached extraction pass",
+      "native_four_class_mapping": [
+        "angry",
+        "happy",
+        "neutral",
+        "sad"
+      ],
+      "native_mapping_rule": "select matching pretrained scores and renormalize their sum; no bias or threshold"
+    }
+  },
+  "funasr_revision": "4a84879ae8ca4d2430953b11c49d609217d93988",
+  "code_license": "MIT",
+  "logistic": {
+    "C": 1,
+    "max_iter": 5000,
+    "random_state": 20261001,
+    "scaler": "StandardScaler",
+    "decision": "argmax"
+  },
+  "validation": "existing VA/VB unchanged, no protected access",
+  "audio_complementarity": "new realization standalone then equal average with control; reuse quarter-grid meta-fold one-SD selector only if equal gain is credible and corroborated",
+  "uncertainty": "reuse frozen duplicate/prompt90 union and 2000 PCG64(20260930) multiplier draws; registered audio contrasts simultaneous; fold and delete-fold diagnostics",
+  "audio_parent_selection": "prefer a credible new V-B gain with compatible V-A and positive V-A nonretrieval/CLEAN gains; otherwise retain control; lock before semantic inference",
+  "qwen": {
+    "model_id": "Qwen/Qwen3-8B",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "license": "Apache-2.0",
+    "public_free_ungated": true,
+    "prompt_file": "QWEN_FIXED_PROMPT.txt",
+    "prompt_sha256": "d34712a764dabcd5616e826e8597cbdfba18a8fbca37b16195e2e22fed77324f",
+    "input": "transcript text only; no Id, label, fold, audio or retrieval metadata",
+    "enable_thinking": false,
+    "decoding": "deterministic greedy constrained to exact five-label grammar",
+    "quantization": "bitsandbytes NF4 4bit, double quant, FP16 compute on T4",
+    "fusion": "valid emotion replaces audio; unclear retains audio; no tuned threshold",
+    "inference": "one pass over each exact unique cached transcript; reuse exact duplicate strings; alignment metadata never enters model",
+    "signal": "roughly +0.03 VB with compatible VA and signal outside repeated prompts/retrieval; diagnostic not an absolute cutoff",
+    "failure": "kill fixed mechanism; no prompt/threshold tuning"
+  },
+  "astra_exploratory": {
+    "ids": [
+      10,
+      39,
+      92,
+      119,
+      130,
+      197,
+      206,
+      238,
+      242,
+      245,
+      259,
+      299,
+      323,
+      327,
+      334,
+      385,
+      398,
+      403,
+      422,
+      446,
+      467,
+      471,
+      484,
+      499,
+      525,
+      536,
+      543,
+      609,
+      617,
+      764,
+      779,
+      820,
+      842,
+      848,
+      900,
+      930,
+      948,
+      957,
+      979,
+      991,
+      992,
+      995,
+      996,
+      1005,
+      1012,
+      1017,
+      1018,
+      1028
+    ],
+    "count": 48,
+    "source_thread": "01a0fa50-7639-73e3-8293-2edec98ad097",
+    "source_turn": "01a0fa50-847e-71d8-8af4-2751c8638b97",
+    "recovery": "preserved command/output from blinded diagnostic; exact IDs also reproduced with frozen ASR/duplicate artifacts and random_state20261002",
+    "used_to_tune_prompt_or_rule": false
+  },
+  "protected_validation": "OFF_LIMITS_CONSUMED_DO_NOT_OPEN",
+  "public_LB_used_for_selection": false,
+  "kaggle_submission_allowed": false
+}

@@ -1,0 +1,11 @@
+{
+  "status": "EXECUTING_AUDIO_FIRST",
+  "starting_sha": "a37915427ec01cae5540cbec716a1ffc64d4aff6",
+  "branch": "rs/score-push-001",
+  "protected_validation_accessed": false,
+  "kaggle_submission_made": false,
+  "stages": {
+    "audio": "PENDING_EXTRACTION",
+    "semantic": "WAITING_FOR_AUDIO_PARENT"
+  }
+}
