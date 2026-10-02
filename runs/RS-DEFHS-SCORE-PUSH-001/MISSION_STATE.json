@@ -1,12 +1,12 @@
 {
-  "status": "AUDIO_CLOSED_SEMANTIC_NEXT",
+  "status": "EXECUTING_FIXED_SEMANTIC",
   "starting_sha": "a37915427ec01cae5540cbec716a1ffc64d4aff6",
   "branch": "rs/score-push-001",
   "protected_validation_accessed": false,
   "kaggle_submission_made": false,
   "stages": {
     "audio": "COMPLETED_NO_PROMOTION",
-    "semantic": "PREPARING_FIXED_PASS"
+    "semantic": "KAGGLE_V1_RUNNING"
   },
   "audio_kernel": {
     "id": "khalwaniev/defhs-rs-score-push-audio",
@@ -25,5 +25,12 @@
     "total_hours": 30
   },
   "selected_audio": "CONTROL",
-  "audio_inventory_integrity": "PASS"
+  "audio_inventory_integrity": "PASS",
+  "semantic_kernel": {
+    "id": "khalwaniev/defhs-rs-score-push-semantic",
+    "version": 1,
+    "source_sha": "a4b2b7509703c58f1fef3d0317cd3962235594cb",
+    "package_sha": "ba59317",
+    "runner_sha256": "c880024d8ff08c2040b9c81865c80c83981e18d060da161a19eae6f85867c767"
+  }
 }

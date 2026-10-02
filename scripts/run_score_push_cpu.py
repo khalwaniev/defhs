@@ -114,7 +114,7 @@ def uncertainty(probs, base, folds, masks, ev):
     return ev.intervals(contrasts)
 
 
-def judgments(name, result, ci, prob, base, folds):
+def judgments(name, result, ci, prob, base, folds, materiality=.02):
     main = robust(labels(folds['VB'].emotion), prob['VB'].argmax(1), base['VB'].argmax(1), folds['VB'].fold.to_numpy(), ci[f'{name}:VB:all'])
     strict = main['pass'] and ci[f'{name}:VB:CLEAN']['point'] > 0 and ci[f'{name}:VA:nonretrieval']['upper'] >= 0
     vb, va = result['VB'], result['VA']
@@ -129,7 +129,7 @@ def judgments(name, result, ci, prob, base, folds):
                 'VB_delta': ci[f'{name}:VB:all']['point'], 'positive_VB_folds': positive_folds,
                 'VA_delta': ci[f'{name}:VA:all']['point'], 'VA_nonretrieval_delta': ci[f'{name}:VA:nonretrieval']['point'],
                 'CLEAN_delta': ci[f'{name}:VB:CLEAN']['point'],
-                'materiality_reference_met': bool(ci[f'{name}:VB:all']['point'] >= .02),
+                'materiality_reference_met': bool(ci[f'{name}:VB:all']['point'] >= materiality),
                 'automatic_interval_veto': False, 'per_class_and_regime_diagnostics': 'reported in results; inspect before final promotion'}}
 
 
@@ -243,11 +243,108 @@ def audio(a):
     print(json.dumps({'best_per_model': best_per_model, 'selected_audio': chosen, 'selected_results': results[chosen]}, indent=2, default=lambda x: x.item()), flush=True)
 
 
+def semantic(a):
+    assert not (RUN / 'SEMANTIC_RESULTS.json').exists(), 'Reuse recorded results; no prompt rescue.'
+    folds, ev, masks, control = contract()
+    lock_path = RUN / 'AUDIO_PARENT_LOCK.json'
+    lock = json.loads(lock_path.read_text()); assert lock['locked_before_semantic_inference']
+    provenance = json.loads((a.semantic / 'EXECUTION_PROVENANCE.json').read_text())
+    assert provenance['audio_parent_lock_sha256'] == sha256(lock_path)
+    assert provenance['prompt_sha256'] == CFG['qwen']['prompt_sha256']
+    assert provenance['source_ASR_sha256'] == 'a111071c53edd14a6202d9ac7b12360648c9f12e8650fee0aabf2dda0df12d01'
+    assert provenance['model'] == CFG['qwen']['model_id'] and provenance['revision'] == CFG['qwen']['revision']
+    assert provenance['input_fields_to_model'] == ['transcript'] and not provenance['enable_thinking']
+    for r in json.loads((a.semantic / 'OUTPUT_INVENTORY.json').read_text())['files']:
+        p = a.semantic / r['name']; assert p.stat().st_size == r['bytes'] and sha256(p) == r['sha256']
+    status = json.loads((a.semantic / 'SEMANTIC_INFERENCE_RESULT.json').read_text()); assert status['status'] == 'PASS'
+    table = read(a.semantic / 'QWEN_SEMANTIC_OUTPUTS.csv').set_index('Id')
+    assert len(table) == 1035 and table.index.is_unique
+    assert table.semantic_label.isin(list(CLASSES) + ['unclear']).all()
+    parent = {}
+    for v, f in folds.items():
+        assert sha256(RUN / f'AUDIO_PARENT_OOF_{v}.csv') == lock['OOF_sha256'][v]
+        parent[v] = valid_oof(RUN / f'AUDIO_PARENT_OOF_{v}.csv', f)
+    ids = folds['VB'].Id.to_numpy(); sem = table.loc[ids].semantic_label.to_numpy()
+    covered = sem != 'unclear'
+    index = np.array([list(CLASSES).index(label) if label != 'unclear' else -1 for label in sem])
+    fused = {v: p.copy() for v, p in parent.items()}
+    for v, p in fused.items():
+        p[covered] = np.eye(4)[index[covered]]
+        save_oof(RUN / f'SEMANTIC_FUSION_OOF_{v}.csv', folds[v], p, semantic_label=sem)
+    y = labels(folds['VB'].emotion)
+    result = views(fused, folds, masks, parent)
+    diagnostics = {}
+    standalone = {'coverage': float(covered.mean()), 'abstention_rate': float((~covered).mean()),
+        'covered_rows': int(covered.sum()), 'total_rows': 826,
+        'accuracy_counting_abstention_as_error': float(np.mean(index == y)),
+        'accuracy_on_covered': float(np.mean(index[covered] == y[covered])) if covered.any() else None,
+        'macro_f1_on_covered': f1(y[covered], index[covered]) if covered.any() else None,
+        'per_class_F1_on_covered': dict(zip(CLASSES, f1(y[covered], index[covered], per_class=True))) if covered.any() else None,
+        'confusion_columns': list(CLASSES) + ['unclear'],
+        'confusion': np.bincount(5*y + np.where(covered, index, 4), minlength=20).reshape(4,5),
+        'label_counts': {label: int(np.sum(sem == label)) for label in list(CLASSES) + ['unclear']}}
+    for v, f in folds.items():
+        audio_pred, fusion_pred = parent[v].argmax(1), fused[v].argmax(1)
+        strata = dict(masks[v])
+        for k in range(5): strata[f'fold_{k}'] = f.fold.to_numpy() == k
+        diagnostics[v] = {}
+        for name, mask in strata.items():
+            active = mask & covered; changed = active & (fusion_pred != audio_pred)
+            correction = changed & (audio_pred != y) & (fusion_pred == y)
+            breakage = changed & (audio_pred == y) & (fusion_pred != y)
+            diagnostics[v][name] = {'rows': int(mask.sum()), 'covered': int(active.sum()),
+                'abstention_rate': float(np.mean(~covered[mask])), 'actual_label_changes': int(changed.sum()),
+                'corrections': int(correction.sum()), 'breakages': int(breakage.sum()),
+                'net_correct_rows': int(correction.sum() - breakage.sum()),
+                'changed_both_wrong': int(np.sum(changed & (audio_pred != y) & (fusion_pred != y))),
+                'covered_semantic_accuracy': float(np.mean(index[active] == y[active])) if active.any() else None,
+                'fusion_macro_f1': f1(y[mask], fusion_pred[mask]),
+                'audio_macro_f1': f1(y[mask], audio_pred[mask]),
+                'delta': f1(y[mask], fusion_pred[mask]) - f1(y[mask], audio_pred[mask])}
+        diagnostics[v]['per_class'] = {str(c): {'rows': int(np.sum(y == k)),
+            'abstained': int(np.sum((y == k) & ~covered)),
+            'corrections': int(np.sum((y == k) & (audio_pred != y) & (fusion_pred == y))),
+            'breakages': int(np.sum((y == k) & (audio_pred == y) & (fusion_pred != y)))} for k,c in enumerate(CLASSES)}
+    contrasts = {}
+    for v, stratum in [('VB','all'), ('VB','CLEAN'), ('VA','all'), ('VA','nonretrieval'),
+            ('VB','excluding_Astra48'), ('VA','excluding_Astra48'), ('VB','prompt_singleton'),
+            ('VB','no_close_training_neighbor')]:
+        contrasts[f'QWEN:{v}:{stratum}'] = ev.contrast(y, fused[v].argmax(1), parent[v].argmax(1), masks[v][stratum])
+    ci = ev.intervals(contrasts)
+    judgment = judgments('QWEN', result, ci, fused, parent, folds, materiality=.03)
+    judgment['competition_deployment_evidence'].update({
+        'excluding_Astra48_VB': ci['QWEN:VB:excluding_Astra48'],
+        'excluding_Astra48_VA': ci['QWEN:VA:excluding_Astra48'],
+        'prompt_singleton_VB': ci['QWEN:VB:prompt_singleton'],
+        'no_close_training_neighbor_VB': ci['QWEN:VB:no_close_training_neighbor'],
+        'rough_03_signal_is_not_absolute_cutoff': True,
+        'override_consistency': 'fold/stratum corrections and breakages above; no learned gate'})
+    record = {'experiment_id': 'SP-QWEN-FIXED-ABSTENTION',
+        'hypothesis': 'Pretrained Hindi semantics with abstention corrects missing audio errors outside repeated prompts',
+        'source_sha': source(), 'input_output_path': str(a.semantic), 'provenance': provenance,
+        'audio_parent': lock['selected_audio'], 'prompt_sha256': CFG['qwen']['prompt_sha256'],
+        'fusion_rule': 'valid label replaces audio; unclear retains audio',
+        'standalone': standalone, 'fusion': result, 'override_diagnostics': diagnostics,
+        'judgments': judgment, 'simultaneous_intervals': ci,
+        'Astra48': CFG['astra_exploratory'],
+        'test_semantic_rows_cached_but_not_selected_or_scored': 209,
+        'no_retuning': True, 'protected_validation_accessed': False, 'public_LB_used_for_selection': False,
+        'kaggle_submission_made': False}
+    dump(RUN / 'SEMANTIC_RESULTS.json', record)
+    print(json.dumps({'standalone': standalone, 'VB': result['VB']['macro_f1'],
+        'VA': result['VA']['macro_f1'], 'VA_nonretrieval': result['VA']['strata']['nonretrieval'],
+        'judgments': judgment}, indent=2, default=lambda v: v.tolist() if isinstance(v,np.ndarray) else v.item()), flush=True)
+
+
 def main():
-    p = argparse.ArgumentParser(); p.add_argument('--stage', choices=['audio'], required=True)
-    p.add_argument('--extraction', type=Path, required=True); a = p.parse_args()
+    p = argparse.ArgumentParser(); p.add_argument('--stage', choices=['audio', 'semantic'], required=True)
+    p.add_argument('--extraction', type=Path); p.add_argument('--semantic', type=Path); a = p.parse_args()
     warnings.simplefilter('error', ConvergenceWarning)
-    with threadpool_limits(limits=2): audio(a)
+    with threadpool_limits(limits=2):
+        if a.stage == 'audio':
+            assert a.extraction is not None; audio(a)
+        else:
+            assert a.semantic is not None; semantic(a)
 
 
 if __name__ == '__main__': main()
