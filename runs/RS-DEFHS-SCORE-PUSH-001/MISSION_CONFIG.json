@@ -101,7 +101,7 @@
   "validation": "existing VA/VB unchanged, no protected access",
   "audio_complementarity": "new realization standalone then equal average with control; reuse quarter-grid meta-fold one-SD selector only if equal gain is credible and corroborated",
   "uncertainty": "reuse frozen duplicate/prompt90 union and 2000 PCG64(20260930) multiplier draws; registered audio contrasts simultaneous; fold and delete-fold diagnostics",
-  "audio_parent_selection": "prefer a credible new V-B gain with compatible V-A and positive V-A nonretrieval/CLEAN gains; otherwise retain control; lock before semantic inference",
+  "audio_parent_selection": "Select competition-worthiness using material fold-consistent concordant ordinary-development evidence; strict gate reported separately. Lock final best audio before semantic inference. If no new candidate is deployable, retain control.",
   "qwen": {
     "model_id": "Qwen/Qwen3-8B",
     "revision": "b968826d9c46dd6066d109eabc6255188de91218",
@@ -177,5 +177,13 @@
   },
   "protected_validation": "OFF_LIMITS_CONSUMED_DO_NOT_OPEN",
   "public_LB_used_for_selection": false,
-  "kaggle_submission_allowed": false
+  "kaggle_submission_allowed": false,
+  "SS_competition_promotion_addendum": {
+    "received_before_new_results_observed": true,
+    "scientific_robustness": "Report the prior simultaneous interval/robust operator as a separate strict judgment; do not use its failure as automatic deployment veto",
+    "competition_deployment": "Judge material VB effect, >=4/5 positive folds and delete-fold consistency, concordant VA/VA nonretrieval/CLEAN, per-class and existing format/latent-regime diagnostics; report limits and historical selection bias",
+    "materiality_reference": "approximately +0.02 VB audio or +0.03 semantic is strong point evidence, not an absolute cutoff or a new hyperparameter",
+    "cached_XLSR_check": "After strongest new standalone audio realization is fixed, test exactly equal parent+cached xls_r_300m L2_LOGREG; bounded quarter-grid fold-safe blend only if equal is promising; no new extraction or broader ensembles",
+    "ensemble_scope": "new candidate+control pairs, and strongest new standalone+cached XLSR pair only; no three-member system"
+  }
 }

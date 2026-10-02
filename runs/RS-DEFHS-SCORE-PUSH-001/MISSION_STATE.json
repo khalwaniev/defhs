@@ -5,7 +5,23 @@
   "protected_validation_accessed": false,
   "kaggle_submission_made": false,
   "stages": {
-    "audio": "PENDING_EXTRACTION",
+    "audio": "KAGGLE_V1_RUNNING",
     "semantic": "WAITING_FOR_AUDIO_PARENT"
+  },
+  "audio_kernel": {
+    "id": "khalwaniev/defhs-rs-score-push-audio",
+    "version": 1,
+    "source_template_commit": "70448b588eeccfbbc3e550c81d1f610b38445382",
+    "package_commit": "d2149c1",
+    "runner_sha256": "55110e1cd78a5f742d84f0d902b2325761fae1aff38af650327a7b24791d529a",
+    "assignments": {
+      "emotion2vec_plus_base": "cuda:0",
+      "emotion2vec_plus_large": "cuda:1"
+    }
+  },
+  "quota_before": {
+    "used_hours": 6.32,
+    "remaining_hours": 23.68,
+    "total_hours": 30
   }
 }
