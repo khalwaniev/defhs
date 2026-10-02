@@ -1,0 +1,111 @@
+{
+  "mission": "RS-DEFHS-SYSTEM3-WAVE1-001",
+  "authority": "Complete SS Wave 1 contract in chat; research report is read-only ChatGPT Library; no retrieval dependency",
+  "execution_parent": "d78da6037ec1b73bf210f562baa30ebb1b9fa9e6",
+  "classes": [
+    "angry",
+    "happy",
+    "neutral",
+    "sad"
+  ],
+  "optimization_seed": 20260930,
+  "second_seed": 20260917,
+  "CPU": {
+    "head": "StandardScaler + multinomial L2 LR C1 max_iter5000 RNG20261001; stored float32/two BLAS threads",
+    "fixed_pair": [
+      0.5,
+      0.5
+    ],
+    "nesting": "four legal inner authority blocks inside every outer fold; no outer fold in any fitted component",
+    "temperature_bounds": [
+      0.5,
+      5
+    ],
+    "temperature_objective": "mean NLL",
+    "weights": "nonnegative simplex",
+    "weight_objective": "mean NLL + 0.1 * squared distance from equal"
+  },
+  "A": {
+    "model": "iic/emotion2vec_base",
+    "revision": "v2.0.4",
+    "representation": "masked valid final-frame mean+population std; 1536",
+    "initialization": "train-side scaler and logistic C1 transferred to differentiable head; scaler fixed",
+    "A0": "frozen encoder",
+    "A1": "head epochs1-2; top2 shared transformer blocks epochs3-4; top4 epochs5-20; frontend/lower blocks frozen",
+    "head_lr": 0.001,
+    "encoder_top_lr": 1e-05,
+    "augmentation": "NONE"
+  },
+  "B": {
+    "model": "MIT/ast-finetuned-audioset-10-10-0.4593",
+    "revision": "f826b80d28226b62986cc218e5cec390b1096902",
+    "representation": "average CLS/distillation; 768; clip-level average segment probability",
+    "frontend": {
+      "sampling_rate": 16000,
+      "num_mel_bins": 128,
+      "frames": 1024,
+      "mean": -4.2677393,
+      "std": 4.5689974,
+      "padding": "right; exact pretrained behavior",
+      "attention_mask": false,
+      "time_stride": 10,
+      "frequency_stride": 10,
+      "full_window_samples": 164080
+    },
+    "B0": "head only; encoder frozen",
+    "B1": "head epochs1-2; top2 blocks epochs3-4; top4 epochs5-20; embeddings and lower blocks frozen",
+    "head_lr": 0.001,
+    "encoder_top_lr": 2e-05,
+    "augmentation": "same per-ID/per-epoch seed-derived schedule both arms; P0.5; frequency width uniform 0..8; time uniform 0..min(16,floor(.1 realframes)); normalized real bins zero; padding untouched"
+  },
+  "shared": {
+    "head_dropout": 0.2,
+    "layer_lr_decay": 0.8,
+    "AdamW_weight_decay": 0.05,
+    "bias_norm_decay": 0,
+    "loss": "ordinary four-class CE, clip weighting",
+    "gradient_clip": 1,
+    "effective_batch": 16,
+    "microbatch": 2,
+    "accumulation": 8,
+    "warmup_fraction": 0.1,
+    "schedule": "warmup/cosine on registered 20-epoch horizon, including refits",
+    "local_unfreeze_ramp_epochs": 1,
+    "max_epochs": 20,
+    "stopping": "CE patience4 epoch0 eligible; g=(f+1)%5; pilot on3blocks then same-initialization refit on4blocks for selectedepochs",
+    "encoder_mode": "eval in both arms to keep pretrained stochastic masks/dropout disabled; gradients on active top blocks; explicit shared head dropout only",
+    "precision": "float32, AMP off; TF32 off",
+    "training_tail": "drop final incomplete batch, record IDs/count; every optimizer step exactly16clips",
+    "augmentation_scope": "training only",
+    "refit_no_stopping": true
+  },
+  "W1C": {
+    "P": "0.5 control+0.5 XLSR",
+    "Candidate_A": "2/3 P+1/3 A1",
+    "Candidate_B": "2/3 P+1/3 B1"
+  },
+  "promotion": {
+    "adapted_standalone_gain": 0.01,
+    "ensemble_marginal_gain": 0.005,
+    "positive_folds_at_least": 4,
+    "delete_any_fold_gain_min": 0,
+    "CLEAN_direction": ">= reference",
+    "VA_nonretrieval_direction": ">= reference",
+    "well_supported_class_drop_review": 0.03
+  },
+  "W1D": "complete V-B first; useful survivors separately fit V-A; ONLY leading adapted survivor seed20260917; mean seeds separately reported",
+  "prohibited": [
+    "protected file access",
+    "Kaggle submission",
+    "Wave2/3 execution",
+    "source routing",
+    "globalOOF meta-training",
+    "new hyperparameter sweeps"
+  ],
+  "public_evidence": {
+    "System1": 0.79691,
+    "System2": 0.78593,
+    "verdict": "PUBLIC_TRANSFER_NEGATIVE",
+    "private": "UNKNOWN"
+  }
+}

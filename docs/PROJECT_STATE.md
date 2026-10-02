@@ -287,3 +287,10 @@ The previous closure at `d0c7e7630b1e39e4854a5f6b1e7d123e8602e212` was not accep
 The six cached recovery lanes remain far below control; the best is plus-large utterance nested-C at V-B 0.56174450. No optional blend was entered. A CPU numerical parity repair preserved original utterance dtype/two-thread BLAS; cached nine-score calculations were reused and all C1-selected fold probabilities pass parity. No encoder or Qwen inference was repeated.
 
 A source-gated candidate submission is prepared under `runs/RS-DEFHS-SCORE-PUSH-001/submission.csv`: 209 rows, exact sample order/schema, seven labels changed from the current submission. All int16 rows and the frozen 78 certified test retrieval predictions remain unchanged. Protected validation was not accessed; no Kaggle competition submission occurred. The accepted submitted control remains the reference until SS approves deployment. RECOVERY_RESULTS.json, FINAL_DECISION.json and FINAL_RETURN_TO_SS.md are the current recovery authority. SS should review and approve/reject the candidate; submission requires separate authorization.
+
+
+## System 3 Wave 1 — registered execution
+
+SS authorized RS-DEFHS-SYSTEM3-WAVE1-001 from score-push parent d78da6037ec1b73bf210f562baa30ebb1b9fa9e6, on rs/system3-wave1-001. System 1 fresh public score is 0.79691; System 2 is 0.78593: **PUBLIC_TRANSFER_NEGATIVE**. The failed public result demonstrates that the post-diagnostic source gate did not transfer to the public subset. Internally positive diagnostics are retained; private performance is unknown.
+
+The full chat Wave 1 contract is execution authority. The research report remains read-only in ChatGPT Library; no missing-repository inconsistency exists. Wave 1 tests only original E2V/XLS-R nesting and matched progressive original E2V/AST adaptation. Protected validation is closed, no submission is authorized, and Wave2/3 do not begin automatically. Execution state is under runs/RS-DEFHS-SYSTEM3-WAVE1-001/.
