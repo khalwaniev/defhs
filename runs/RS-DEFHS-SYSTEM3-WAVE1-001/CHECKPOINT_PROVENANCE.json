@@ -1,5 +1,5 @@
 {
-  "status": "VB_COMPLETE_VERIFIED_VA_B_NEXT",
+  "status": "SEED1_COMPLETE_VERIFIED_AST_SEED2_RUNNING",
   "source_sha": "824ef6b4b93a42a92747e134b4d8b85c342f86ef",
   "kernel": "khalwaniev/defhs-system3-wave1-matched-adaptation",
   "version": 1,
@@ -112,5 +112,53 @@
     "byte_check": "PASS",
     "matching_files": 1,
     "differences": 0
+  },
+  "second_seed_jobs": {
+    "VB": {
+      "kernel": "khalwaniev/defhs-system3-wave1-b-vb-20260917",
+      "version": 1,
+      "source_sha": "85fc735b2f96ca551075e845a9a7b73186642a6e",
+      "runner_sha256": "e0eab8c6ab0438b79a70edcdc197e6a23297f1bd2fc4ac6d579245dd2bee6375",
+      "seed": 20260917,
+      "arms": [
+        "B1"
+      ],
+      "status": "LAUNCHED",
+      "launched_UTC": "2026-10-02 14:39:46 UTC",
+      "workers": {
+        "GPU0": [
+          0,
+          2,
+          4
+        ],
+        "GPU1": [
+          1,
+          3
+        ]
+      }
+    },
+    "VA": {
+      "kernel": "khalwaniev/defhs-system3-wave1-b-va-20260917",
+      "version": 1,
+      "source_sha": "85fc735b2f96ca551075e845a9a7b73186642a6e",
+      "runner_sha256": "c3998c25efad4842942a13c7197ff3d279543ca8c05af132d47cbaaac2a30a13",
+      "seed": 20260917,
+      "arms": [
+        "B1"
+      ],
+      "status": "LAUNCHED",
+      "launched_UTC": "2026-10-02 14:39:46 UTC",
+      "workers": {
+        "GPU0": [
+          0,
+          2,
+          4
+        ],
+        "GPU1": [
+          1,
+          3
+        ]
+      }
+    }
   }
 }
