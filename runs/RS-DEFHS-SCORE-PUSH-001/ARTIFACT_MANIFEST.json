@@ -1,0 +1,26 @@
+{
+  "folder": "gdrive:DEFHS/rs_score_push_001",
+  "folder_id": "1mDmg0W_EFFqjdmafja8ApBFDpR6byZZw",
+  "folder_url": "https://drive.google.com/drive/folders/1mDmg0W_EFFqjdmafja8ApBFDpR6byZZw",
+  "integrity": "PASS: rclone check --download, 0 differences, 2 matching files",
+  "artifacts": [
+    {
+      "name": "emotion2vec_plus_base_CACHED.npz",
+      "bytes": 8916894,
+      "sha256": "b124860b74e4b2422ce106eaef30b6c1e1e1f31f177ab8b95d0ebba71e8f3535",
+      "drive_id": "1XNvfeIwwDmVwwSHC52FtoYqfBn087mRt",
+      "url": "https://drive.google.com/file/d/1XNvfeIwwDmVwwSHC52FtoYqfBn087mRt/view",
+      "producing_experiment": "SP-AUDIO-EXTRACT-V1",
+      "byte_integrity": "PASS"
+    },
+    {
+      "name": "emotion2vec_plus_large_CACHED.npz",
+      "bytes": 11964907,
+      "sha256": "b58f2ae68b4f10bc2a6691a79e4bf89971035b6a76a8b6ef58f99e01fc206b33",
+      "drive_id": "1o4SMgGe0Em1d1WHP4TQAtLX5MV_tPDOh",
+      "url": "https://drive.google.com/file/d/1o4SMgGe0Em1d1WHP4TQAtLX5MV_tPDOh/view",
+      "producing_experiment": "SP-AUDIO-EXTRACT-V1",
+      "byte_integrity": "PASS"
+    }
+  ]
+}
