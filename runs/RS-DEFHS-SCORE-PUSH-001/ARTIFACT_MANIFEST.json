@@ -2,7 +2,7 @@
   "folder": "gdrive:DEFHS/rs_score_push_001",
   "folder_id": "1mDmg0W_EFFqjdmafja8ApBFDpR6byZZw",
   "folder_url": "https://drive.google.com/drive/folders/1mDmg0W_EFFqjdmafja8ApBFDpR6byZZw",
-  "integrity": "PASS: rclone check --download, 0 differences, 2 matching files",
+  "integrity": "PASS: both audio caches rclone check --download (zero differences); both semantic outputs connected Drive raw bytes byte-for-byte equal local SHA256",
   "artifacts": [
     {
       "name": "emotion2vec_plus_base_CACHED.npz",
@@ -21,6 +21,24 @@
       "url": "https://drive.google.com/file/d/1o4SMgGe0Em1d1WHP4TQAtLX5MV_tPDOh/view",
       "producing_experiment": "SP-AUDIO-EXTRACT-V1",
       "byte_integrity": "PASS"
+    },
+    {
+      "name": "QWEN_SEMANTIC_OUTPUTS.csv",
+      "bytes": 11392,
+      "sha256": "a2dad2feeac7cc817716ae4eb0cd8724c2f169c06262d45d8e00e66345e1569b",
+      "drive_id": "1_dVu2C35GVXjzRordjPhrFrJB1-FyzS5",
+      "url": "https://drive.google.com/file/d/1_dVu2C35GVXjzRordjPhrFrJB1-FyzS5/view",
+      "producing_experiment": "SP-QWEN-FIXED-ABSTENTION",
+      "byte_integrity": "PASS: connected Drive fetch raw bytes equal local SHA256"
+    },
+    {
+      "name": "UNIQUE_TRANSCRIPT_OUTPUTS.jsonl",
+      "bytes": 105907,
+      "sha256": "734dd1df25f6cc57f34ed534cc88c56748c7cdb5fbd4b9b17c4ebe948fbac56c",
+      "drive_id": "1crP5nDhjuXh6HFz_Qfx2cH-PSv0vyBp3",
+      "url": "https://drive.google.com/file/d/1crP5nDhjuXh6HFz_Qfx2cH-PSv0vyBp3/view",
+      "producing_experiment": "SP-QWEN-FIXED-ABSTENTION",
+      "byte_integrity": "PASS: connected Drive fetch raw bytes equal local SHA256"
     }
   ]
 }

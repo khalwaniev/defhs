@@ -1,0 +1,18 @@
+{
+  "mission_id": "RS-DEFHS-SCORE-PUSH-001",
+  "status": "COMPLETED_AUTHORIZED_MECHANISMS_EXHAUSTED",
+  "selected_system": "CONTROL",
+  "audio_deployment_verdict": "REJECT_NEW_AUDIO_AND_CACHED_XLSR_PAIR",
+  "semantic_deployment_verdict": "REJECT_FIXED_RULE_NO_PROMPT_RESCUE",
+  "scientific_robustness": "Neither new audio nor fixed semantic fusion passes old conservative gate",
+  "competition_deployment": "Audio effects large negative. Semantic gain modest, 3/5 folds positive, one delete-fold negative, VA SER negative, angry regression, and main-source VB flat. Rejection is not an automatic interval or +0.03 cutoff veto. CLEAN/nonretrieval/excluding48 positive evidence is retained.",
+  "new_submission_prepared": false,
+  "test_semantic_outputs": "Cached from single text pass; not used for selection or a new submission",
+  "retrieval_override": "Unchanged frozen certified unanimous-label 78/209 test rows",
+  "no_retuning_after_semantic_results": true,
+  "protected_validation_accessed": false,
+  "public_LB_used_for_selection": false,
+  "kaggle_submission_made": false,
+  "next_SS_decision": "Accept mission closure with existing control retained. Any new semantic gating architecture needs a new explicit SS authorization. No submission approval requested for a weaker candidate.",
+  "blockers": []
+}

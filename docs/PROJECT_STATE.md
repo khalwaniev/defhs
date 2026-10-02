@@ -279,3 +279,9 @@ Unless concrete new evidence reveals a defect:
 - do not use unresolved external-data/model licensing as if it were permission.
 
 Historical details remain preserved under `runs/`.
+
+## Score-push mission closure
+
+RS-DEFHS-SCORE-PUSH-001 on `rs/score-push-001` completed the two authorized mechanisms. Both emotion2vec+ checkpoints ran once; their best V-B scores were 0.54036535 (base) and 0.52066002 (large). The single cached XLS-R pair reached 0.72276314 and was rejected. The locked control was retained before the one fixed Qwen3-8B semantic pass. Its fusion scored V-B 0.75239046 (+0.01401588), V-A 0.77967784 (-0.02197411), non-retrieval 0.74578477 (+0.01466807), and retrieval-aware V-A 0.81370347. Both scientific robustness and competition deployment were evaluated separately. Fusion was rejected for modest, inconsistent primary gain, V-A/source/class regressions, despite positive CLEAN/non-retrieval/Astra-excluded diagnostics; confidence-bound failure was not an automatic deployment veto.
+
+The accepted emotion2vec_base meanstd/logistic C1 system and 78-row certified test retrieval override remain unchanged. No protected access or competition submission occurred in this mission. No new submission was prepared. Heavy audio caches and semantic outputs are byte-verified in `gdrive:DEFHS/rs_score_push_001`. All measurements, decisions, code and pointers are under `runs/RS-DEFHS-SCORE-PUSH-001/`; `FINAL_RETURN_TO_SS.md` and `FINAL_DECISION.json` are its closure record. SS may accept closure with the current control retained; any major new semantic gating mechanism needs new authority.

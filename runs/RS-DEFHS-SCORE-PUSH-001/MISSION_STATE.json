@@ -1,12 +1,13 @@
 {
-  "status": "EXECUTING_FIXED_SEMANTIC",
+  "status": "COMPLETED_AUTHORIZED_MECHANISMS_EXHAUSTED",
   "starting_sha": "a37915427ec01cae5540cbec716a1ffc64d4aff6",
   "branch": "rs/score-push-001",
   "protected_validation_accessed": false,
   "kaggle_submission_made": false,
   "stages": {
-    "audio": "COMPLETED_NO_PROMOTION",
-    "semantic": "KAGGLE_V1_RUNNING"
+    "audio": "COMPLETED_REJECT_NEW_MODELS",
+    "cached_XLSR_complementarity": "COMPLETED_REJECT_PAIR",
+    "semantic": "COMPLETED_REJECT_FIXED_RULE"
   },
   "audio_kernel": {
     "id": "khalwaniev/defhs-rs-score-push-audio",
@@ -32,5 +33,28 @@
     "source_sha": "a4b2b7509703c58f1fef3d0317cd3962235594cb",
     "package_sha": "ba59317",
     "runner_sha256": "c880024d8ff08c2040b9c81865c80c83981e18d060da161a19eae6f85867c767"
+  },
+  "selected_final_system": "CONTROL",
+  "new_submission_prepared": false,
+  "public_LB_used_for_selection": false,
+  "artifact_integrity": "PASS_FOUR_OBJECTS_BYTE_VERIFIED",
+  "next_SS_decision": "Accept mission closure with existing control retained. Any new semantic gating architecture needs a new explicit SS authorization. No submission approval requested for a weaker candidate.",
+  "blockers": [],
+  "quota_snapshot_after": {
+    "used_hours": 6.51,
+    "remaining_hours": 23.49,
+    "total_hours": 30,
+    "note": "Kaggle CLI snapshot; service accounting can lag. Actual extraction/inference wall times are preserved."
+  },
+  "closure_verification": {
+    "ordinary_OOF_metrics_and_confusions": "PASS_independent_sklearn_recompute",
+    "fixed_semantic_fusion_rule": "PASS_every_row",
+    "cached_XLSR_original_inventory_SHA256": "PASS_VA_and_VB",
+    "fixed_prompt_SHA256": "PASS",
+    "Astra48_exclusion": "PASS_778_remaining_rows",
+    "four_Drive_payload_byte_checks": "PASS",
+    "python_compile": "PASS",
+    "git_diff_check": "PASS",
+    "new_submission": "NOT_PREPARED_NO_PROMOTION"
   }
 }
