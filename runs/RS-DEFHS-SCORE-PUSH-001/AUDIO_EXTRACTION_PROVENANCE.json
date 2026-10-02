@@ -1,0 +1,27 @@
+{
+  "mission": "RS-DEFHS-SCORE-PUSH-001",
+  "source_sha": "70448b588eeccfbbc3e550c81d1f610b38445382",
+  "source_template_sha256": "b9eb77c1f59ed2a27f39f658978b7b39eb9aab4b946ff6a2a11be442953c3794",
+  "config_sha256": "47bc8b25457467623bd57084bf04157f88e1cf3b53644af678aea4be3566c19a",
+  "manifest_sha256": "1e5552d42aec94efae197e7dac95de41cfc96e40336f3e513b9a87e3ccc72469",
+  "audio_hashes_verified": 1035,
+  "gpu_names": [
+    "Tesla T4",
+    "Tesla T4"
+  ],
+  "assignments": {
+    "emotion2vec_plus_base": 0,
+    "emotion2vec_plus_large": 1
+  },
+  "packages": {
+    "torch": "2.10.0+cu128",
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "funasr": "1.4.16",
+    "modelscope": "1.40.1",
+    "transformers": "4.57.1",
+    "soundfile": "0.13.1"
+  },
+  "protected_validation_accessed": false,
+  "kaggle_submission_made": false
+}

@@ -1,0 +1,49 @@
+{
+  "files": [
+    {
+      "name": "DATA_MANIFEST.csv",
+      "bytes": 205931,
+      "sha256": "1e5552d42aec94efae197e7dac95de41cfc96e40336f3e513b9a87e3ccc72469"
+    },
+    {
+      "name": "EXECUTION_PROVENANCE.json",
+      "bytes": 829,
+      "sha256": "92a4beaac6b9b4c5a27c23506c2b4c7de6f282c9f56429a9daae1a3094424e2b"
+    },
+    {
+      "name": "EXTRACTION_RESULTS.json",
+      "bytes": 1370,
+      "sha256": "1395c3d799ad492b442949d3d113df20da14319d6bb8f8ca90c632c1577565db"
+    },
+    {
+      "name": "emotion2vec_plus_base_CACHED.npz",
+      "bytes": 8916894,
+      "sha256": "b124860b74e4b2422ce106eaef30b6c1e1e1f31f177ab8b95d0ebba71e8f3535"
+    },
+    {
+      "name": "emotion2vec_plus_base_CHECKPOINT.json",
+      "bytes": 999,
+      "sha256": "167cbf7cd8550b35ddba9bc10e3103c467aa0938c212abab72908fc946e47356"
+    },
+    {
+      "name": "emotion2vec_plus_base_RESULT.json",
+      "bytes": 596,
+      "sha256": "e143d5e6a0a3fee183d8e1b8b2e05be828902ecd2c23071d468431f82c400e4c"
+    },
+    {
+      "name": "emotion2vec_plus_large_CACHED.npz",
+      "bytes": 11964907,
+      "sha256": "b58f2ae68b4f10bc2a6691a79e4bf89971035b6a76a8b6ef58f99e01fc206b33"
+    },
+    {
+      "name": "emotion2vec_plus_large_CHECKPOINT.json",
+      "bytes": 1000,
+      "sha256": "df59f16a34c8ad6305a05e2abd9d1cb78d6a3979561a0650b628c20f3fa9ae6b"
+    },
+    {
+      "name": "emotion2vec_plus_large_RESULT.json",
+      "bytes": 594,
+      "sha256": "34df66032e28a54d2db7415c26ec0ab09ccc4a9f851d42579f0b8e024ef428ec"
+    }
+  ]
+}

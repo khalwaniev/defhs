@@ -1,0 +1,368 @@
+{
+  "selected_audio": "CONTROL",
+  "definition": {
+    "members": [
+      "CONTROL"
+    ],
+    "weights": [
+      1.0
+    ],
+    "method": "standalone"
+  },
+  "realization_definitions": {
+    "emotion2vec_plus_base_native": {
+      "model": "emotion2vec_plus_base",
+      "representation": "native",
+      "head": "native restricted renormalized four-class scores",
+      "hypothesis": "Stronger pretrained emotion recognition/representation improves ordinary held-out emotion classification",
+      "cache_sha256": "b124860b74e4b2422ce106eaef30b6c1e1e1f31f177ab8b95d0ebba71e8f3535",
+      "source_sha": "8f7c7df9488bc1964fbd41d8a3955f7b11ceb674"
+    },
+    "emotion2vec_plus_base_utterance": {
+      "model": "emotion2vec_plus_base",
+      "representation": "utterance",
+      "head": "StandardScaler + L2 logistic C1 max_iter5000",
+      "hypothesis": "Stronger pretrained emotion recognition/representation improves ordinary held-out emotion classification",
+      "cache_sha256": "b124860b74e4b2422ce106eaef30b6c1e1e1f31f177ab8b95d0ebba71e8f3535",
+      "source_sha": "8f7c7df9488bc1964fbd41d8a3955f7b11ceb674"
+    },
+    "emotion2vec_plus_base_meanstd": {
+      "model": "emotion2vec_plus_base",
+      "representation": "meanstd",
+      "head": "StandardScaler + L2 logistic C1 max_iter5000",
+      "hypothesis": "Stronger pretrained emotion recognition/representation improves ordinary held-out emotion classification",
+      "cache_sha256": "b124860b74e4b2422ce106eaef30b6c1e1e1f31f177ab8b95d0ebba71e8f3535",
+      "source_sha": "8f7c7df9488bc1964fbd41d8a3955f7b11ceb674"
+    },
+    "emotion2vec_plus_large_native": {
+      "model": "emotion2vec_plus_large",
+      "representation": "native",
+      "head": "native restricted renormalized four-class scores",
+      "hypothesis": "Stronger pretrained emotion recognition/representation improves ordinary held-out emotion classification",
+      "cache_sha256": "b58f2ae68b4f10bc2a6691a79e4bf89971035b6a76a8b6ef58f99e01fc206b33",
+      "source_sha": "8f7c7df9488bc1964fbd41d8a3955f7b11ceb674"
+    },
+    "emotion2vec_plus_large_utterance": {
+      "model": "emotion2vec_plus_large",
+      "representation": "utterance",
+      "head": "StandardScaler + L2 logistic C1 max_iter5000",
+      "hypothesis": "Stronger pretrained emotion recognition/representation improves ordinary held-out emotion classification",
+      "cache_sha256": "b58f2ae68b4f10bc2a6691a79e4bf89971035b6a76a8b6ef58f99e01fc206b33",
+      "source_sha": "8f7c7df9488bc1964fbd41d8a3955f7b11ceb674"
+    },
+    "emotion2vec_plus_large_meanstd": {
+      "model": "emotion2vec_plus_large",
+      "representation": "meanstd",
+      "head": "StandardScaler + L2 logistic C1 max_iter5000",
+      "hypothesis": "Stronger pretrained emotion recognition/representation improves ordinary held-out emotion classification",
+      "cache_sha256": "b58f2ae68b4f10bc2a6691a79e4bf89971035b6a76a8b6ef58f99e01fc206b33",
+      "source_sha": "8f7c7df9488bc1964fbd41d8a3955f7b11ceb674"
+    }
+  },
+  "cache_files": {
+    "emotion2vec_plus_base": ".tmp/rs_score_push_001_audio_v1/rs_defhs_score_push_001_audio/emotion2vec_plus_base_CACHED.npz",
+    "emotion2vec_plus_large": ".tmp/rs_score_push_001_audio_v1/rs_defhs_score_push_001_audio/emotion2vec_plus_large_CACHED.npz"
+  },
+  "results": {
+    "VA": {
+      "macro_f1": 0.8016519493535111,
+      "fold_macro_f1": [
+        0.799156044038286,
+        0.7884854504653644,
+        0.8103047595118424,
+        0.848237911032568,
+        0.761519521308678
+      ],
+      "per_class_f1": {
+        "angry": 0.8373205741626795,
+        "happy": 0.7968337730870713,
+        "neutral": 0.7772727272727272,
+        "sad": 0.7951807228915663
+      },
+      "confusion": [
+        [
+          175,
+          8,
+          19,
+          3
+        ],
+        [
+          14,
+          151,
+          12,
+          15
+        ],
+        [
+          9,
+          17,
+          171,
+          20
+        ],
+        [
+          15,
+          11,
+          21,
+          165
+        ]
+      ],
+      "accuracy": 0.801452784503632,
+      "disagreement_with_control": 0.0,
+      "strata": {
+        "all": {
+          "rows": 826,
+          "macro_f1": 0.8016519493535111,
+          "control_macro_f1": 0.8016519493535111,
+          "delta_vs_control": 0.0,
+          "corrections": 0,
+          "breakages": 0
+        },
+        "CLEAN": {
+          "rows": 435,
+          "macro_f1": 0.7589031198750782,
+          "control_macro_f1": 0.7589031198750782,
+          "delta_vs_control": 0.0,
+          "corrections": 0,
+          "breakages": 0
+        },
+        "prompt_singleton": {
+          "rows": 535,
+          "macro_f1": 0.7751106257850862,
+          "control_macro_f1": 0.7751106257850862,
+          "delta_vs_control": 0.0,
+          "corrections": 0,
+          "breakages": 0
+        },
+        "repeated_prompt": {
+          "rows": 291,
+          "macro_f1": 0.8412409465514344,
+          "control_macro_f1": 0.8412409465514344,
+          "delta_vs_control": 0.0,
+          "corrections": 0,
+          "breakages": 0
+        },
+        "no_close_training_neighbor": {
+          "rows": 631,
+          "macro_f1": 0.7547998061718029,
+          "control_macro_f1": 0.7547998061718029,
+          "delta_vs_control": 0.0,
+          "corrections": 0,
+          "breakages": 0
+        },
+        "excluding_Astra48": {
+          "rows": 778,
+          "macro_f1": 0.8045833923604745,
+          "control_macro_f1": 0.8045833923604745,
+          "delta_vs_control": 0.0,
+          "corrections": 0,
+          "breakages": 0
+        },
+        "int16": {
+          "rows": 746,
+          "macro_f1": 0.8164392386563843,
+          "control_macro_f1": 0.8164392386563843,
+          "delta_vs_control": 0.0,
+          "corrections": 0,
+          "breakages": 0
+        },
+        "int32": {
+          "rows": 80,
+          "macro_f1": 0.6688957161490177,
+          "control_macro_f1": 0.6688957161490177,
+          "delta_vs_control": 0.0,
+          "corrections": 0,
+          "breakages": 0
+        },
+        "joint_k4_0": {
+          "rows": 227,
+          "macro_f1": 0.745199721138378,
+          "control_macro_f1": 0.745199721138378,
+          "delta_vs_control": 0.0,
+          "corrections": 0,
+          "breakages": 0
+        },
+        "joint_k4_1": {
+          "rows": 231,
+          "macro_f1": 0.7808917300914796,
+          "control_macro_f1": 0.7808917300914796,
+          "delta_vs_control": 0.0,
+          "corrections": 0,
+          "breakages": 0
+        },
+        "joint_k4_2": {
+          "rows": 137,
+          "macro_f1": 0.7457264957264956,
+          "control_macro_f1": 0.7457264957264956,
+          "delta_vs_control": 0.0,
+          "corrections": 0,
+          "breakages": 0
+        },
+        "joint_k4_3": {
+          "rows": 231,
+          "macro_f1": 0.7627354627354628,
+          "control_macro_f1": 0.7627354627354628,
+          "delta_vs_control": 0.0,
+          "corrections": 0,
+          "breakages": 0
+        },
+        "nonretrieval": {
+          "rows": 594,
+          "macro_f1": 0.7311166934987506,
+          "control_macro_f1": 0.7311166934987506,
+          "delta_vs_control": 0.0,
+          "corrections": 0,
+          "breakages": 0
+        }
+      }
+    },
+    "VB": {
+      "macro_f1": 0.7383745765682462,
+      "fold_macro_f1": [
+        0.6867589088076955,
+        0.7136980353847824,
+        0.8183360396163956,
+        0.6976395371194078,
+        0.7732278732389842
+      ],
+      "per_class_f1": {
+        "angry": 0.8038277511961722,
+        "happy": 0.7229551451187335,
+        "neutral": 0.7061611374407583,
+        "sad": 0.7205542725173211
+      },
+      "confusion": [
+        [
+          168,
+          12,
+          13,
+          12
+        ],
+        [
+          15,
+          137,
+          21,
+          19
+        ],
+        [
+          15,
+          19,
+          149,
+          34
+        ],
+        [
+          15,
+          19,
+          22,
+          156
+        ]
+      ],
+      "accuracy": 0.738498789346247,
+      "disagreement_with_control": 0.0,
+      "strata": {
+        "all": {
+          "rows": 826,
+          "macro_f1": 0.7383745765682462,
+          "control_macro_f1": 0.7383745765682462,
+          "delta_vs_control": 0.0,
+          "corrections": 0,
+          "breakages": 0
+        },
+        "CLEAN": {
+          "rows": 435,
+          "macro_f1": 0.742503006970336,
+          "control_macro_f1": 0.742503006970336,
+          "delta_vs_control": 0.0,
+          "corrections": 0,
+          "breakages": 0
+        },
+        "prompt_singleton": {
+          "rows": 535,
+          "macro_f1": 0.7490481783683188,
+          "control_macro_f1": 0.7490481783683188,
+          "delta_vs_control": 0.0,
+          "corrections": 0,
+          "breakages": 0
+        },
+        "repeated_prompt": {
+          "rows": 291,
+          "macro_f1": 0.6998937007527789,
+          "control_macro_f1": 0.6998937007527789,
+          "delta_vs_control": 0.0,
+          "corrections": 0,
+          "breakages": 0
+        },
+        "no_close_training_neighbor": {
+          "rows": 794,
+          "macro_f1": 0.7336055577529276,
+          "control_macro_f1": 0.7336055577529276,
+          "delta_vs_control": 0.0,
+          "corrections": 0,
+          "breakages": 0
+        },
+        "excluding_Astra48": {
+          "rows": 778,
+          "macro_f1": 0.7363930930779832,
+          "control_macro_f1": 0.7363930930779832,
+          "delta_vs_control": 0.0,
+          "corrections": 0,
+          "breakages": 0
+        },
+        "int16": {
+          "rows": 746,
+          "macro_f1": 0.7487828866546056,
+          "control_macro_f1": 0.7487828866546056,
+          "delta_vs_control": 0.0,
+          "corrections": 0,
+          "breakages": 0
+        },
+        "int32": {
+          "rows": 80,
+          "macro_f1": 0.6410285117181669,
+          "control_macro_f1": 0.6410285117181669,
+          "delta_vs_control": 0.0,
+          "corrections": 0,
+          "breakages": 0
+        },
+        "joint_k4_0": {
+          "rows": 227,
+          "macro_f1": 0.720791161865515,
+          "control_macro_f1": 0.720791161865515,
+          "delta_vs_control": 0.0,
+          "corrections": 0,
+          "breakages": 0
+        },
+        "joint_k4_1": {
+          "rows": 231,
+          "macro_f1": 0.6621007494178842,
+          "control_macro_f1": 0.6621007494178842,
+          "delta_vs_control": 0.0,
+          "corrections": 0,
+          "breakages": 0
+        },
+        "joint_k4_2": {
+          "rows": 137,
+          "macro_f1": 0.536144544431946,
+          "control_macro_f1": 0.536144544431946,
+          "delta_vs_control": 0.0,
+          "corrections": 0,
+          "breakages": 0
+        },
+        "joint_k4_3": {
+          "rows": 231,
+          "macro_f1": 0.7104742104742104,
+          "control_macro_f1": 0.7104742104742104,
+          "delta_vs_control": 0.0,
+          "corrections": 0,
+          "breakages": 0
+        }
+      }
+    }
+  },
+  "source_sha": "8f7c7df9488bc1964fbd41d8a3955f7b11ceb674",
+  "locked_before_semantic_inference": true,
+  "OOF_sha256": {
+    "VA": "9ea046b9b3fec8d2d28c4f03e87855bcddd22dc361badfaa2b536eed3d47eab5",
+    "VB": "fe9e17229a844531ee2ab2afe01ac159050aee5026d3aab9a1c2f99f604133c3"
+  },
+  "scientific_robustness": null,
+  "competition_deployment_evidence": null
+}

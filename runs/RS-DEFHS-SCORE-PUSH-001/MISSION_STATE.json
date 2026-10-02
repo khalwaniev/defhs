@@ -1,12 +1,12 @@
 {
-  "status": "EXECUTING_AUDIO_FIRST",
+  "status": "AUDIO_CLOSED_SEMANTIC_NEXT",
   "starting_sha": "a37915427ec01cae5540cbec716a1ffc64d4aff6",
   "branch": "rs/score-push-001",
   "protected_validation_accessed": false,
   "kaggle_submission_made": false,
   "stages": {
-    "audio": "KAGGLE_V1_RUNNING",
-    "semantic": "WAITING_FOR_AUDIO_PARENT"
+    "audio": "COMPLETED_NO_PROMOTION",
+    "semantic": "PREPARING_FIXED_PASS"
   },
   "audio_kernel": {
     "id": "khalwaniev/defhs-rs-score-push-audio",
@@ -23,5 +23,7 @@
     "used_hours": 6.32,
     "remaining_hours": 23.68,
     "total_hours": 30
-  }
+  },
+  "selected_audio": "CONTROL",
+  "audio_inventory_integrity": "PASS"
 }
