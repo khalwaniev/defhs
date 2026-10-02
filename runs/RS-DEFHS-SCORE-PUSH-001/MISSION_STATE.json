@@ -1,5 +1,5 @@
 {
-  "status": "COMPLETED_AUTHORIZED_MECHANISMS_EXHAUSTED",
+  "status": "SS_AUTHORIZED_RECOVERY_IN_PROGRESS",
   "starting_sha": "a37915427ec01cae5540cbec716a1ffc64d4aff6",
   "branch": "rs/score-push-001",
   "protected_validation_accessed": false,
@@ -7,7 +7,9 @@
   "stages": {
     "audio": "COMPLETED_REJECT_NEW_MODELS",
     "cached_XLSR_complementarity": "COMPLETED_REJECT_PAIR",
-    "semantic": "COMPLETED_REJECT_FIXED_RULE"
+    "semantic": "COMPLETED_REJECT_FIXED_RULE",
+    "source_gated_semantic_recovery": "AUTHORIZED_PENDING",
+    "cached_audio_recovery": "AUTHORIZED_PENDING"
   },
   "audio_kernel": {
     "id": "khalwaniev/defhs-rs-score-push-audio",
@@ -38,7 +40,7 @@
   "new_submission_prepared": false,
   "public_LB_used_for_selection": false,
   "artifact_integrity": "PASS_FOUR_OBJECTS_BYTE_VERIFIED",
-  "next_SS_decision": "Accept mission closure with existing control retained. Any new semantic gating architecture needs a new explicit SS authorization. No submission approval requested for a weaker candidate.",
+  "next_SS_decision": "Await source-gated semantic and cached recovery evidence; prepare candidate only under authorized entry conditions",
   "blockers": [],
   "quota_snapshot_after": {
     "used_hours": 6.51,
@@ -56,5 +58,7 @@
     "python_compile": "PASS",
     "git_diff_check": "PASS",
     "new_submission": "NOT_PREPARED_NO_PROMOTION"
-  }
+  },
+  "recovery_starting_sha": "d0c7e7630b1e39e4854a5f6b1e7d123e8602e212",
+  "previous_closure_accepted_by_SS": false
 }

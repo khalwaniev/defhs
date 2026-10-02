@@ -1,0 +1,52 @@
+{
+  "mission_id": "RS-DEFHS-SCORE-PUSH-001",
+  "recovery_starting_sha": "d0c7e7630b1e39e4854a5f6b1e7d123e8602e212",
+  "branch": "rs/score-push-001",
+  "authority": "SS recovery continuation in this conversation; previous closure not accepted",
+  "source_gate": "dtype=int32 AND cached Qwen label in angry/happy/neutral/sad -> Qwen; all other rows -> accepted control audio; certified retrieval last unchanged",
+  "source_gate_count": 1,
+  "source_gate_scientific_status": "Post-diagnostic authorized competition candidate; not independent scientific confirmation",
+  "source_gate_candidate_rule": "Positive V-B, majority/all V-B folds, positive V-A and V-A nonretrieval, no serious class collapse; preserve exactly one authorized gate, do not search source rules",
+  "cached_audio_models": [
+    "emotion2vec_plus_base",
+    "emotion2vec_plus_large"
+  ],
+  "fixed_mapping": {
+    "input": "all nine raw_native_scores in unchanged checkpoint order",
+    "pipeline": "StandardScaler + multinomial L2 LogisticRegression",
+    "C": 1,
+    "max_iter": 5000,
+    "random_state": 20261001
+  },
+  "regularization_check": {
+    "representations": [
+      "utterance",
+      "raw_native_scores"
+    ],
+    "C": [
+      0.01,
+      0.1,
+      1,
+      10
+    ],
+    "outer_folds": "existing five V-B and V-A folds unchanged",
+    "inner_folds": "each of the four remaining original fold IDs held out once; no outer held-out row included",
+    "inner_score": "aggregate four-class macro-F1 over inner OOF training-side rows",
+    "C_tie_break": "smallest C among exactly equal best inner scores",
+    "refit": "fresh scaler and logistic fit on the four outer training folds at selected C",
+    "public_LB_or_protected_used": false
+  },
+  "optional_blend": "Only a recovered lane meaningfully competitive with accepted control; one equal-probability pair, no weight search",
+  "compute": "CPU only, four worker processes with one BLAS thread each",
+  "encoder_extraction_repeat": false,
+  "Qwen_inference_repeat": false,
+  "protected_validation_accessed": false,
+  "kaggle_submission_made": false,
+  "optional_blend_entry_definition": {
+    "VB_within": 0.01,
+    "VA_max_regression": 0.02,
+    "VA_nonretrieval_max_regression": 0.02,
+    "purpose": "Operational pre-result meaningfully-competitive entry for one cheap equal blend; not a promotion gate",
+    "pair_limit": 1
+  }
+}
