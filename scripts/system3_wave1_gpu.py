@@ -234,6 +234,7 @@ def worker(lane,gpu,records,view,optimization_seed,resume_root,fold_list=None,ar
             encoder.load_state_dict(saved['encoder_delta'],strict=False);head.load_state_dict(saved['head']);opt.load_state_dict(saved['optimizer'])
             best=saved['best_epoch'];bestce=saved['best_ce'];bad=saved['bad'];traces=saved['traces'];start_epoch=saved['epoch']+1;runtime=saved['runtime_seconds']
             random.setstate(saved['rng_python']);np.random.set_state(saved['rng_numpy']);torch.set_rng_state(saved['rng_torch'].cpu());torch.cuda.set_rng_state(saved['rng_cuda'].cpu(),gpu)
+            if epochs is None and bad>=4:start_epoch=limit+1
         torch.cuda.reset_peak_memory_stats(gpu)
         selected_names={n for n,_ in head.named_parameters()}
         encoder_names={n for n,_ in encoder.named_parameters() if any(n.startswith(('blocks.' if lane=='A' else 'encoder.layer.')+str(j)+'.') for j in range(len(blocks)-4,len(blocks)))} if adapt else set()

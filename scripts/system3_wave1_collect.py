@@ -100,7 +100,12 @@ def main():
                     path=WORK/f'{name}_{args.view}.npz';np.savez_compressed(path,Id=folds[args.view].Id.to_numpy(),prob=p)
                     inventory.append({'name':path.name,'sha256':sha256(path),'local_path':str(path),'bytes':path.stat().st_size})
             payload['seed_stability']=means
-        dump(RUN/f'W1_CONFIRMATION_{args.view}_seed{args.seed}.json',payload)
+        target=RUN/f'W1_CONFIRMATION_{args.view}_seed{args.seed}.json'
+        if target.exists():
+            previous=json.loads(target.read_text())
+            for key in ['measurements','fixed_blends','seed_stability']:
+                payload[key]={**previous.get(key,{}),**payload.get(key,{})}
+        dump(target,payload)
     existing=json.loads((RUN/'PROBABILITY_ARTIFACT_INVENTORY.json').read_text());existing['artifacts']+=inventory;dump(RUN/'PROBABILITY_ARTIFACT_INVENTORY.json',existing)
     print(json.dumps({'measurements':{k:{'matched':r['matched_frozen'][args.view]['macro_f1'],'adapted':r['adapted_vs_matched_frozen'][args.view]['macro_f1'],
         'useful':r.get('provisional_useful'),'epochs':[m['selected_epoch'] for m in r['fold_records'] if m['arm']==k+'1']} for k,r in measurements.items()},
