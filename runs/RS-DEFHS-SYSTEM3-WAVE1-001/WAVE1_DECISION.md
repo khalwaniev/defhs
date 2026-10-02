@@ -9,3 +9,5 @@ Do not promote nested fitting: V-A nonretrieval direction is negative relative t
 AST's supervised adaptation gain against its weaker frozen control is repeatable, and seed averaging supports that finding conditionally. Its absolute scores remain weak, and none of its registered fixed marginal blends meets promotion conventions. Keep this positive scientific finding separate from deployment membership.
 
 The fixed pair still makes 184 V-B errors; 56 are neutral↔sad confusions. This does not prove label ambiguity, representation failure or an achievable oracle ceiling. Return these target gaps and errors to SS for the accepted Wave2 decision. No Wave2 execution, protected access or competition submission.
+
+Artifact closure recovery: scientific conclusions above are unchanged. Drive remains short of B1_fold4_pilot_STATE.pt for V-A seed20260917. Complete preservation is not claimed; exact transport failures and the unchanged artifact hash are recorded in CHECKPOINT_PROVENANCE.json.

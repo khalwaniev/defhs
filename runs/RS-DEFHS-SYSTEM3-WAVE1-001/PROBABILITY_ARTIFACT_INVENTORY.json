@@ -241,7 +241,7 @@
     }
   ],
   "heavy_root": "gdrive:DEFHS/rs_system3_wave1_001",
-  "status": "SCIENCE_COMPLETE_PENDING_LAST_DRIVE_CHECKS",
+  "status": "ALL_33_PROBABILITY_AND_INITIALIZER_ARTIFACTS_BYTE_VERIFIED",
   "CPU_preservation": {
     "status": "BYTE_VERIFIED",
     "matching_files": 28,
@@ -250,5 +250,7 @@
     "manifest_sha256": "251f7886315611f4270a4aaffe913b7d15b7d5398c925eea5eceadc4831a1be3",
     "drive_manifest": "gdrive:DEFHS/rs_system3_wave1_001/cpu/CPU_SHA256SUMS.txt",
     "manifest_byte_check": "PASS: 1 matching file, zero differences"
-  }
+  },
+  "preservation_reference": "CHECKPOINT_PROVENANCE.json:preservation_audit",
+  "complete_checkpoint_package_preservation": false
 }

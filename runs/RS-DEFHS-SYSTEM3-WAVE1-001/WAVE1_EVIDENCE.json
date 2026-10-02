@@ -2334,5 +2334,52 @@
   "protected_validation_read": false,
   "public_LB_used_for_selection": false,
   "Kaggle_competition_submission_made": false,
-  "Wave2_or_Wave3_launched": false
+  "Wave2_or_Wave3_launched": false,
+  "artifact_closure_status": "BLOCKED_ONE_CHECKPOINT_MISSING",
+  "heavy_manifest_sha256": "adb44e7447fcb92e8586b358e6b0f2ba18725bf07490e7d3ae6e33a5433a5794",
+  "closure_recovery": {
+    "scientific_measurements_changed": false,
+    "GPU_training_launched": false,
+    "encoders_extracted": false,
+    "Qwen_inference_repeated": false,
+    "blocker": {
+      "status": "UNRESOLVED_EXTERNAL_TOOLING_BLOCKER",
+      "observed_at_UTC": "2026-10-02T22:47:14.968678+00:00",
+      "missing_artifact": "b_va_seed2/B_VA_seed20260917/B1_fold4_pilot_STATE.pt",
+      "local_path": "/home/fikar/zingle/defhs/.tmp/system3_wave1_b_va_seed2/rs_system3_wave1_001/B_VA_seed20260917/B1_fold4_pilot_STATE.pt",
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/b_va_seed2/B_VA_seed20260917/B1_fold4_pilot_STATE.pt",
+      "Drive_destination_folder_url": "https://drive.google.com/drive/folders/1SCpDnVZKRrzozmw22ppsHw6DIR_em5Hb",
+      "bytes": 340353723,
+      "sha256": "f365f29a8f9c76b0284470219483846215b4f0686258de1d75f972ea125d1d5c",
+      "rclone_error": {
+        "HTTP_status": 403,
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "quota_metric": "drive.googleapis.com/default",
+        "quota_limit": "defaultPerMinutePerProject",
+        "quota_limit_value": 840000,
+        "consumer_project_number": "202264815644",
+        "scope": "Shared default rclone OAuth API project, not a scientific/validation failure"
+      },
+      "bounded_recovery": {
+        "method": "One multipart upload to the verified exact parent folder; 0.1 requests/sec, burst1, 10s Drive pacing, one high-level attempt, two low-level retries, maximum15minutes",
+        "exit_code": 1,
+        "source_log_SHA256": "9e5b50c4b3275cdbb63deb5c2ccc13be044d952a96b14ab9e71829dbf1a839b2",
+        "source_log_path": "work/system3_wave1/last_checkpoint_closure_recovery.log"
+      },
+      "connector_fallback": {
+        "HTTP_status": 413,
+        "error": "340353723 bytes exceeds the 104857600-byte file-reference transfer limit",
+        "upload_invoked": false
+      },
+      "browser_fallback": {
+        "error": "node_repl rejects sandboxCwd as not a local file URI: file:///mnt/c/users/fikar/documents/codex/2026-10-02/continue-the-existing-mission-rs-defhs",
+        "retry_after_kernel_reset": "SAME_ERROR",
+        "browser_UI_actions_made": false
+      },
+      "desktop_sync_fallback": "No GoogleDriveFS process/configuration or mounted Drive filesystem was available",
+      "quota_guidance": "https://developers.google.com/workspace/drive/api/guides/limits",
+      "next_technical_action": "Restore usable Drive transport or manually upload the existing exact checkpoint to the observed folder; then verify the entire final manifest. Do not refit, extract, rewrite or recreate the checkpoint."
+    },
+    "reference": "CHECKPOINT_PROVENANCE.json:preservation_audit"
+  }
 }

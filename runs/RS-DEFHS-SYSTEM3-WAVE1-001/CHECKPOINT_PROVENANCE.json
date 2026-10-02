@@ -157,7 +157,19 @@
         "kaggle_submission_made": false
       },
       "Drive_root": "gdrive:DEFHS/rs_system3_wave1_001/b_vb_seed2",
-      "Drive_copy": "RUNNING"
+      "Drive_copy": "COMPLETE",
+      "Drive_byte_check": {
+        "status": "PASS",
+        "method": "rclone check --download --one-way",
+        "matching_files": 53,
+        "differences": 0,
+        "log_path": "work/system3_wave1/b_vb_seed2_drive_check.log",
+        "log_SHA256": "4a5c2c63a7985c303651f6ff980397375f0242a031de02df6993b16e3acf6aa8",
+        "retained_notice": [
+          "2026/10/02 23:45:53 NOTICE: Google drive root 'DEFHS/rs_system3_wave1_001/b_vb_seed2': 0 differences found",
+          "2026/10/02 23:45:53 NOTICE: Google drive root 'DEFHS/rs_system3_wave1_001/b_vb_seed2': 53 matching files"
+        ]
+      }
     },
     "VA": {
       "kernel": "khalwaniev/defhs-system3-wave1-b-va-20260917",
@@ -195,7 +207,17 @@
         "kaggle_submission_made": false
       },
       "Drive_root": "gdrive:DEFHS/rs_system3_wave1_001/b_va_seed2",
-      "Drive_copy": "RUNNING"
+      "Drive_copy": "INCOMPLETE_ONE_OBJECT_MISSING",
+      "Drive_byte_check": {
+        "status": "INCOMPLETE",
+        "expected_files": 53,
+        "present_files": 52,
+        "size_mismatches": 0,
+        "missing_files": [
+          "b_va_seed2/B_VA_seed20260917/B1_fold4_pilot_STATE.pt"
+        ],
+        "full_package_byte_check": "NOT_COMPLETE"
+      }
     }
   },
   "A_same_initializer_correction": {
@@ -222,5 +244,188 @@
     "seed_namespace": "Torch initialization base optimization seed + outer fold; epoch shuffle base seed + fold*10000 + epoch; SpecAugment hash of base seed, Id, epoch and segment",
     "schedule": "fixed twenty-epoch warmup/cosine horizon for pilots and refits; training-tail IDs reconstructed in audited per-fit records",
     "checkpoint_selection": "pilot BEST.pt is selected stopping state; outer inference uses restarted refit STATE.pt at selected epoch. Refit BEST.pt contains the epoch-zero initializer and is not the selected inference checkpoint."
+  },
+  "preservation_closed": false,
+  "preservation_audit": {
+    "status": "INCOMPLETE_ONE_CHECKPOINT_MISSING",
+    "Drive_root": "gdrive:DEFHS/rs_system3_wave1_001",
+    "master_manifest_SHA256": "adb44e7447fcb92e8586b358e6b0f2ba18725bf07490e7d3ae6e33a5433a5794",
+    "master_manifest_remote_SHA256_prior_verified": "adb44e7447fcb92e8586b358e6b0f2ba18725bf07490e7d3ae6e33a5433a5794",
+    "master_manifest_remote_verification": "Previous-session rclone cat streamed through SHA256; current listing confirms the same path and byte size",
+    "local_integrity": {
+      "status": "PASS",
+      "registered_objects": 431,
+      "registered_bytes": 16073374154,
+      "all_local_SHA256_match": true,
+      "probability_inventory_entries": 33,
+      "duplicate_paths": 0,
+      "master_manifest_SHA256": "adb44e7447fcb92e8586b358e6b0f2ba18725bf07490e7d3ae6e33a5433a5794",
+      "wall_seconds": 186.87538837600005
+    },
+    "current_remote_metadata_inventory": {
+      "status": "INCOMPLETE",
+      "expected_objects": 432,
+      "present_objects": 431,
+      "folders": 13,
+      "missing": [
+        "b_va_seed2/B_VA_seed20260917/B1_fold4_pilot_STATE.pt"
+      ],
+      "differing": [],
+      "unexpected": [],
+      "hash_verification": "Prior per-package byte proofs remain preserved; remaining VA seed2 package needs complete byte/hash verification after final checkpoint upload."
+    },
+    "remote_inventory_log_SHA256": "efe5d246f4911612416e2cb648a15d200ef57aac8166bb9961c2c92d68ef8aab",
+    "expected_manifest_objects": 431,
+    "expected_objects_including_master_manifest": 432,
+    "present_objects_including_master_manifest": 431,
+    "previous_complete_prefix_byte_verified_objects": 378,
+    "remaining_present_objects_awaiting_complete_package_check": 52,
+    "missing_objects": 1,
+    "prefix_proofs": {
+      "vb_seed1": {
+        "status": "PASS",
+        "method": "rclone check --download --one-way",
+        "matching_files": 173,
+        "differences": 0,
+        "log_path": "work/system3_wave1/vb_drive_check.log",
+        "log_SHA256": "7abafb3d014fcad42b2e511da04bca0a912ae0e27aaff9d428fcb1c5f006744f",
+        "retained_notice": [
+          "2026/10/02 20:50:20 NOTICE: Google drive root 'DEFHS/rs_system3_wave1_001/vb_seed1': 0 differences found",
+          "2026/10/02 20:50:20 NOTICE: Google drive root 'DEFHS/rs_system3_wave1_001/vb_seed1': 173 matching files"
+        ]
+      },
+      "b_va_seed1": {
+        "status": "PASS",
+        "method": "rclone check --download --one-way",
+        "matching_files": 93,
+        "differences": 0,
+        "log_path": "work/system3_wave1/b_va_drive_check.log",
+        "log_SHA256": "2052488304190449695473a178c2422760b4899c03114bf20c1d9ef2b02ad6ca",
+        "retained_notice": [
+          "2026/10/02 22:48:05 NOTICE: Google drive root 'DEFHS/rs_system3_wave1_001/b_va_seed1': 0 differences found",
+          "2026/10/02 22:48:05 NOTICE: Google drive root 'DEFHS/rs_system3_wave1_001/b_va_seed1': 93 matching files"
+        ]
+      },
+      "b_vb_seed2": {
+        "status": "PASS",
+        "method": "rclone check --download --one-way",
+        "matching_files": 53,
+        "differences": 0,
+        "log_path": "work/system3_wave1/b_vb_seed2_drive_check.log",
+        "log_SHA256": "4a5c2c63a7985c303651f6ff980397375f0242a031de02df6993b16e3acf6aa8",
+        "retained_notice": [
+          "2026/10/02 23:45:53 NOTICE: Google drive root 'DEFHS/rs_system3_wave1_001/b_vb_seed2': 0 differences found",
+          "2026/10/02 23:45:53 NOTICE: Google drive root 'DEFHS/rs_system3_wave1_001/b_vb_seed2': 53 matching files"
+        ]
+      },
+      "probabilities": {
+        "status": "PASS",
+        "method": "rclone check --download --one-way",
+        "matching_files": 26,
+        "differences": 0,
+        "log_path": "work/system3_wave1/probability_drive_check.log",
+        "log_SHA256": "771fcc0d57e3309d03c78333d7d7281f6bc5a08b8805994dc50165f5eb303723",
+        "retained_notice": [
+          "2026/10/02 23:35:49 NOTICE: Google drive root 'DEFHS/rs_system3_wave1_001/probabilities': 0 differences found",
+          "2026/10/02 23:35:49 NOTICE: Google drive root 'DEFHS/rs_system3_wave1_001/probabilities': 26 matching files"
+        ]
+      },
+      "logs": {
+        "status": "PASS",
+        "method": "Four individual rclone check --download --one-way operations",
+        "matching_files": 4,
+        "differences": 0,
+        "checks": [
+          {
+            "log_path": "work/system3_wave1/log_drive_check.log",
+            "log_SHA256": "0ac504293fba050deea9b976f35db51bf39f449b8087b6f97694773761a37a6a",
+            "matching_files": 1,
+            "differences": 0
+          },
+          {
+            "log_path": "work/system3_wave1/va_log_check.log",
+            "log_SHA256": "606f80fa6a61923c0ad2b0536237f48c38c4bca5b23a2de5b2159c23d73307bf",
+            "matching_files": 1,
+            "differences": 0
+          },
+          {
+            "log_path": "work/system3_wave1/vb_seed2_log_check.log",
+            "log_SHA256": "e91d77862eb606c6d27db8caea164255a69f68fe7c02bfad258b81596df256f6",
+            "matching_files": 1,
+            "differences": 0
+          },
+          {
+            "log_path": "work/system3_wave1/va_seed2_log_check.log",
+            "log_SHA256": "608a7c930ffa010c656f351e619c0e7eb7ab94e6976e677fbf74fd85da20e0f9",
+            "matching_files": 1,
+            "differences": 0
+          }
+        ]
+      },
+      "cpu": {
+        "status": "PASS",
+        "method": "Existing 28-object byte verification plus separate manifest byte verification",
+        "matching_files": 29,
+        "differences": 0,
+        "original_proof": {
+          "status": "BYTE_VERIFIED",
+          "matching_files": 28,
+          "differences": 0,
+          "verification": "rclone check --download --one-way",
+          "manifest_sha256": "251f7886315611f4270a4aaffe913b7d15b7d5398c925eea5eceadc4831a1be3",
+          "drive_manifest": "gdrive:DEFHS/rs_system3_wave1_001/cpu/CPU_SHA256SUMS.txt",
+          "manifest_byte_check": "PASS: 1 matching file, zero differences"
+        },
+        "manifest_check_log_SHA256": "7241ca8307b77598f9a0ea61c02b5ae8e14884db2ce753ce9bcd7997a1442da6"
+      },
+      "b_va_seed2": {
+        "status": "INCOMPLETE",
+        "expected_files": 53,
+        "present_files": 52,
+        "size_mismatches": 0,
+        "missing_files": [
+          "b_va_seed2/B_VA_seed20260917/B1_fold4_pilot_STATE.pt"
+        ],
+        "full_package_byte_check": "NOT_COMPLETE"
+      }
+    },
+    "blocker": {
+      "status": "UNRESOLVED_EXTERNAL_TOOLING_BLOCKER",
+      "observed_at_UTC": "2026-10-02T22:47:14.968678+00:00",
+      "missing_artifact": "b_va_seed2/B_VA_seed20260917/B1_fold4_pilot_STATE.pt",
+      "local_path": "/home/fikar/zingle/defhs/.tmp/system3_wave1_b_va_seed2/rs_system3_wave1_001/B_VA_seed20260917/B1_fold4_pilot_STATE.pt",
+      "Drive_path": "gdrive:DEFHS/rs_system3_wave1_001/b_va_seed2/B_VA_seed20260917/B1_fold4_pilot_STATE.pt",
+      "Drive_destination_folder_url": "https://drive.google.com/drive/folders/1SCpDnVZKRrzozmw22ppsHw6DIR_em5Hb",
+      "bytes": 340353723,
+      "sha256": "f365f29a8f9c76b0284470219483846215b4f0686258de1d75f972ea125d1d5c",
+      "rclone_error": {
+        "HTTP_status": 403,
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "quota_metric": "drive.googleapis.com/default",
+        "quota_limit": "defaultPerMinutePerProject",
+        "quota_limit_value": 840000,
+        "consumer_project_number": "202264815644",
+        "scope": "Shared default rclone OAuth API project, not a scientific/validation failure"
+      },
+      "bounded_recovery": {
+        "method": "One multipart upload to the verified exact parent folder; 0.1 requests/sec, burst1, 10s Drive pacing, one high-level attempt, two low-level retries, maximum15minutes",
+        "exit_code": 1,
+        "source_log_SHA256": "9e5b50c4b3275cdbb63deb5c2ccc13be044d952a96b14ab9e71829dbf1a839b2",
+        "source_log_path": "work/system3_wave1/last_checkpoint_closure_recovery.log"
+      },
+      "connector_fallback": {
+        "HTTP_status": 413,
+        "error": "340353723 bytes exceeds the 104857600-byte file-reference transfer limit",
+        "upload_invoked": false
+      },
+      "browser_fallback": {
+        "error": "node_repl rejects sandboxCwd as not a local file URI: file:///mnt/c/users/fikar/documents/codex/2026-10-02/continue-the-existing-mission-rs-defhs",
+        "retry_after_kernel_reset": "SAME_ERROR",
+        "browser_UI_actions_made": false
+      },
+      "desktop_sync_fallback": "No GoogleDriveFS process/configuration or mounted Drive filesystem was available",
+      "quota_guidance": "https://developers.google.com/workspace/drive/api/guides/limits",
+      "next_technical_action": "Restore usable Drive transport or manually upload the existing exact checkpoint to the observed folder; then verify the entire final manifest. Do not refit, extract, rewrite or recreate the checkpoint."
+    }
   }
 }

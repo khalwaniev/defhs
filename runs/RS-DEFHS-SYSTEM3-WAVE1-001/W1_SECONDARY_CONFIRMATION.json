@@ -3,7 +3,7 @@
   "provisionally_useful_survivors": [
     "B"
   ],
-  "entry": "Only actual adapted survivors under registered VB conventions; VA and leading-seed2 still pending if any",
+  "entry": "Registered survivor entry used complete V-B evidence; separately trained V-A and leading B1 second seed are complete. Original entry reason and launch provenance remain preserved.",
   "VA_complete": true,
   "VA_evidence_file": "W1_CONFIRMATION_VA_seed20260930.json",
   "leading_adapted_for_seed2": "B",

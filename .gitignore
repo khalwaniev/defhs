@@ -46,6 +46,7 @@ outputs/
 # Local scratch
 scratch/
 tmp/
+/.tmp/
 .cache/
 /work/
 
