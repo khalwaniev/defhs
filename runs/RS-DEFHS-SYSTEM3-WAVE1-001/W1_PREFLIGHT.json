@@ -49,6 +49,31 @@
       "path": "/home/fikar/zingle/defhs/work/mission_inputs/asr_transcripts/PROMPT_CLUSTER_ASSIGNMENTS.csv",
       "sha256": "458712cfee51e0cf65ef57d1a0deb8f81dcb70e4ecfe6ebfc73220f3aefac005",
       "role": "existing diagnostic masks only"
+    },
+    "LATENT_REGIME_ASSIGNMENTS.csv": {
+      "path": "/home/fikar/zingle/defhs/work/mission_inputs/latent_regimes/LATENT_REGIME_ASSIGNMENTS.csv",
+      "sha256": "1a67ab36c67b4d8762ee2fadfd55a77b3f68782a5ae1b56073e2a31887556bab",
+      "role": "frozen ordinary-development predictions/diagnostic masks only"
+    },
+    "STRATA.npz": {
+      "path": "/home/fikar/zingle/defhs/work/score_push/STRATA.npz",
+      "sha256": "25d9ca175e427c9612f04b0b840811be132a965811efd4fd9370e09d82de8f15",
+      "role": "frozen ordinary-development predictions/diagnostic masks only"
+    },
+    "FINAL_FROZEN_OOF_VB.csv": {
+      "path": "/home/fikar/zingle/defhs/runs/RS-DEFHS-SYSTEM-IMPLEMENTATION-001/FINAL_FROZEN_OOF_VB.csv",
+      "sha256": "5a06c280d9ae6cb681088cc1d0edec425bc97eaf1e51c21cada55631a3597cc5",
+      "role": "frozen ordinary-development predictions/diagnostic masks only"
+    },
+    "FINAL_FROZEN_OOF_VA.csv": {
+      "path": "/home/fikar/zingle/defhs/runs/RS-DEFHS-SYSTEM-IMPLEMENTATION-001/FINAL_FROZEN_OOF_VA.csv",
+      "sha256": "632b6c76230b24566ac35e5bf3b30f516577382b5b659fec38c10266afa4266f",
+      "role": "frozen ordinary-development predictions/diagnostic masks only"
+    },
+    "FINALIST_VA_RETRIEVAL_AUDIT.csv": {
+      "path": "/home/fikar/zingle/defhs/runs/RS-DEFHS-SYSTEM-IMPLEMENTATION-001/FINALIST_VA_RETRIEVAL_AUDIT.csv",
+      "sha256": "7703df2fdb05a5559a4d9348e67fe6d39da39110fa502a645c44b94b06a26e0b",
+      "role": "frozen ordinary-development predictions/diagnostic masks only"
     }
   },
   "train_rows": 826,
