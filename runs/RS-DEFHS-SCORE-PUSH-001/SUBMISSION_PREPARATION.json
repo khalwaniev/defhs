@@ -1,0 +1,38 @@
+{
+  "sha256": "ac64f17239bdac463f0f3687190580885aa97306040ce9b91204b713fffedc5d",
+  "local_path": "/home/fikar/zingle/defhs/runs/RS-DEFHS-SCORE-PUSH-001/submission.csv",
+  "rows": 209,
+  "retrieval_override_count": 78,
+  "sample_ID_set_and_order": "PASS",
+  "schema": [
+    "Id",
+    "emotion"
+  ],
+  "class_counts": {
+    "neutral": 57,
+    "angry": 56,
+    "sad": 53,
+    "happy": 43
+  },
+  "cached_all826_audio_inference_reused": true,
+  "test_int32_rows": 22,
+  "valid_semantic_gate_rows": 17,
+  "semantic_changes_before_retrieval": 8,
+  "labels_changed_vs_current_submission": 7,
+  "changed_Ids": [
+    68,
+    102,
+    111,
+    210,
+    235,
+    268,
+    941
+  ],
+  "current_submission_sha256": "523e6327e5ad0791ace145fc8f224bd6686a6d7977fa5501c4757380e54215c8",
+  "test_int16_unchanged_vs_current": true,
+  "certified_78_predictions_unchanged": true,
+  "system": "CONTROL_PLUS_INT32_QWEN_ABSTENTION",
+  "protected_validation_accessed": false,
+  "public_LB_used_for_selection": false,
+  "kaggle_submission_made": false
+}
