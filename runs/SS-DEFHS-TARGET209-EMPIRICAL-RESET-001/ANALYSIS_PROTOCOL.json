@@ -1,0 +1,39 @@
+{
+  "mission": "SS-DEFHS-TARGET209-EMPIRICAL-RESET-001",
+  "start_head": "8ba35644934a7b71cd557be65b9a2ca6b643fbf6",
+  "scope": "Existing verified predictions, fitted heads, cached representations and auxiliary evidence; no fitting, encoder execution, protected query or submission.",
+  "class_order": ["angry", "happy", "neutral", "sad"],
+  "target_identity": "Original competition ZIP test.csv and sample_submission.csv; exactly 209 test IDs",
+  "current_system": "Existing locked all-826 emotion2vec logistic classifier plus unchanged certified retrieval override",
+  "fixed_pair_recipe": {
+    "name": "FIXED_50_50_PRIMARY_CV5_HEADMEAN_V1",
+    "emotion2vec": "Uniform mean of five existing ordinary V-B outer emotion2vec_base heads on verified cached test embeddings",
+    "xlsr": "Uniform mean of five existing ordinary V-B outer xls_r_300m heads on verified cached test embeddings",
+    "probability": "0.5 * emotion2vec_headmean + 0.5 * xlsr_headmean",
+    "decision": "argmax in fixed class order, followed by unchanged certified 78-row retrieval override",
+    "offsets": [0, 0, 0, 0],
+    "routing": "None; all 209 rows receive the same five-head, equal-family probability recipe",
+    "status": "Explicit cached-head candidate implementation; not an all-826 XLS-R refit and not an imported historical test-probability artifact",
+    "training_or_seed_stability": "Fold-head agreement is observable; repeated optimization-seed test stability is unavailable"
+  },
+  "triage": {
+    "scope": "Evidence triage, not ground-truth correctness or calibrated error probability; never used for prediction routing",
+    "HIGH_CONFIDENCE": "Certified unanimous retrieval, or non-retrieval current/pair/E2V/XLSR class agreement with current and pair top probability >= 0.80, margins >= 0.50 and both families' five-head modal vote fractions >= 0.80",
+    "HARD": "Non-retrieval and any: current or pair top probability < 0.60; current or pair margin < 0.20; current/pair class disagreement; E2V/XLSR class disagreement; either family's modal head vote fraction < 0.80",
+    "MEDIUM_CONFIDENCE": "All remaining cases",
+    "priority": ["certified_retrieval", "HARD", "HIGH_CONFIDENCE", "MEDIUM_CONFIDENCE"],
+    "threshold_selection": "Fixed before computing test case summaries; no threshold search or public/protected-score tuning",
+    "semantic_handling": "Qwen hard labels and unclear abstentions are separate evidence; do not invent probabilities or use semantic disagreement as a routing/triage veto"
+  },
+  "neighbors": {
+    "top_k": 5,
+    "metric": "Cosine similarity on each existing raw cached mean+std representation, separately for emotion2vec and XLS-R; deterministic ID tie-break",
+    "reference": "826 supplied labeled training clips only",
+    "meaning": "Descriptive representation neighbors, not certified duplicates, speaker identities or new test labels"
+  },
+  "speaker_evidence": "Existing strict ECAPA agglomerative assignments at distance 0.10/0.15 only; co-clustering is auxiliary evidence, not verified speaker identity",
+  "ASR_quality_flags": "Empty transcript, detected language other than hi, language_probability < 0.80, avg_logprob < -1.0, no_speech_prob > 0.50 or compression_ratio > 2.40; descriptive flags, not validation authority",
+  "scientific_comparison": "Recompute the existing ordinary V-B OOF aggregate/fold/class metrics and paired corrections/breakages without changing folds; no historical validation redesign",
+  "missing_evidence": "Leave unavailable AST test probabilities, semantic probability vectors, seed stability and source/speaker ground truth empty with explicit reasons",
+  "submission_authorization": "Not granted; prepare and audit only"
+}

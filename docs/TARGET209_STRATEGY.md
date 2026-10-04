@@ -1,5 +1,12 @@
 # TARGET209 strategy
 
+Current population: `SS-DEFHS-TARGET209-EMPIRICAL-RESET-001`. Read its compact
+[current TARGET209 state](../runs/SS-DEFHS-TARGET209-EMPIRICAL-RESET-001/CURRENT_TARGET209_STATE.md)
+for the 209-case evidence map, 60 HARD cases and prepared fixed-pair public probe.
+The original identity scaffold is now populated from verified saved evidence
+and explicitly documented cached-head derivations. No training, encoder
+execution, protected query or submission occurred.
+
 Every experiment must answer:
 
 > "How could this make more of the 209 test predictions correct?"
@@ -21,11 +28,12 @@ archived implementation submission, whose original sample-order parity was
 already recorded; future submission preparation must still check the original
 sample submission. This matrix is an analysis artifact, not a submission.
 
-The initialization copies **only recorded identity and source-format metadata**
+The original initialization copied **only recorded identity and source-format metadata**
 from that manifest (SHA-256
 `1e5552d42aec94efae197e7dac95de41cfc96e40336f3e513b9a87e3ccc72469`).
-Prediction/evidence columns remain empty until explicitly imported from
-verified artifacts. Empty means **not populated here**, not zero, negative
+Prediction/evidence columns are populated only from verified artifacts or
+explicit reproducible derivations. Remaining empty fields mean **not populated
+here**, not zero, negative
 evidence or proof that no historical computation exists. No test labels or
 scientific predictions are invented.
 
@@ -49,6 +57,18 @@ scientific predictions are invented.
 | `uncertainty_category`, `difficulty_notes` | Evidence-based category and why this case is difficult |
 | `probability_provenance`, `model_set` | Artifact path/hash, producing run/commit, model revisions, class order, seed and decision recipe |
 | `evidence_status` | `IDENTITY_ONLY` initially; later state which evidence has actually been populated |
+
+The empirical reset adds explicit `wave1_e2v_p_{class}` and
+`wave1_xlsr_p_{class}` vectors from each family's five ordinary PRIMARY_CV heads,
+and `fixed_pair_cv5_p_{class}` from their uniform 50/50 mean. `ensemble_p_{class}`
+identifies that exact candidate. `predicted_class`, `confidence` and `margin`
+continue to describe accepted System1; separate `fixed_pair_*` fields describe
+the candidate and its changes. Nearest-example records identify each
+representation and cosine metric. The
+[evidence registry](../runs/SS-DEFHS-TARGET209-EMPIRICAL-RESET-001/EVIDENCE_PROVENANCE.json)
+records input hashes, recipe, source revisions and missing test artifacts.
+Spectrogram/semantic probability fields remain empty because existing AST
+outputs are training OOF and Qwen supplies hard lexical labels only.
 
 `{class}` expands to the four explicit columns in order
 `angry, happy, neutral, sad`. Each populated probability family must contain

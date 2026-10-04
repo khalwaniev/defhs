@@ -21,10 +21,12 @@ requires them.** Stop at this boundary for initial context; use the
 [historical index](HISTORICAL_VALIDATION_INDEX.md) to select a necessary source.
 [WORKFLOW](../WORKFLOW.md) continues to govern execution.
 
-The accepted submitted control / `FINAL_SYSTEM_LOCK` remain unchanged. Wave 1's
-preferred pair still awaits SS review; its Drive checkpoint preservation blocker
-remains unresolved. Consolidation does not authorize another experiment,
-protected access or Kaggle submission.
+The accepted submitted control / `FINAL_SYSTEM_LOCK` remain unchanged. The
+[empirical reset](../runs/SS-DEFHS-TARGET209-EMPIRICAL-RESET-001/CURRENT_TARGET209_STATE.md)
+populated all 209 cases, identified 60 HARD cases and prepared an explicitly
+specified fixed-pair public probe. Readiness is not submission authorization or
+deployed-model promotion. Wave 1's Drive checkpoint preservation blocker
+remains unresolved; no protected access occurred.
 
 ## Preserved historical project state
 

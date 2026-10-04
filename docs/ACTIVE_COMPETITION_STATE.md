@@ -46,9 +46,14 @@ The existing certified 77-group / 78-test-clip retrieval map and its deployed
 override remain unchanged; uncertain similarity is not a new test label.
 
 The accepted submitted control and `FINAL_SYSTEM_LOCK` remain unchanged.
-Wave 1's preferred pair remains an SS-review candidate, and its recorded Drive
-checkpoint preservation blocker remains open. This consolidation promotes no
-model and reopens no failed or closed experiment.
+The empirical reset assessed an explicit five-head-mean implementation of
+Wave 1's fixed pair as ready for one controlled public probe; the prepared CSV
+has not been submitted and System1 remains the deployed reference. The recorded
+Wave 1 Drive checkpoint preservation blocker remains open. Read the compact
+[current TARGET209 state](../runs/SS-DEFHS-TARGET209-EMPIRICAL-RESET-001/CURRENT_TARGET209_STATE.md)
+for the evidence and [next experiments](../runs/SS-DEFHS-TARGET209-EMPIRICAL-RESET-001/NEXT_EXPERIMENTS.md)
+for the proposed attack. No model promotion or experiment reopening follows
+from consolidation or probe readiness.
 
 Read [ACTIVE_VALIDATION](ACTIVE_VALIDATION.md) and
 [TARGET209_STRATEGY](TARGET209_STRATEGY.md) next. Consult

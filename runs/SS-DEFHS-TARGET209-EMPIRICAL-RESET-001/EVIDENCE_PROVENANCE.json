@@ -1,0 +1,416 @@
+{
+  "mission": "SS-DEFHS-TARGET209-EMPIRICAL-RESET-001",
+  "start_head": "8ba35644934a7b71cd557be65b9a2ca6b643fbf6",
+  "runtime": {
+    "python": "3.11.14",
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.7.2",
+    "joblib": "1.6.0",
+    "BLAS_threads": 2
+  },
+  "artifacts": {
+    "competition_zip": {
+      "path": "/mnt/c/Users/fikar/Downloads/dataverse-detecting-emotions-from-hindi-speech.zip",
+      "sha256": "100b38e6ed69542df88c1d295932a7a4c1914cd931ee64f7c6c848f6053bf214",
+      "bytes": 99298085,
+      "authority": "manifests/DEFHS_COMPETITION_DATA_20260930.json",
+      "role": "Exact raw competition identity; read only"
+    },
+    "DATA_MANIFEST.csv": {
+      "path": "/mnt/c/Users/fikar/Documents/Codex/2026-10-04/role-research-engineer-repository-consolidation-worker/work/defhs/runs/DS-DEFHS-VALIDATION-HARDENING-002/DATA_MANIFEST.csv",
+      "sha256": "1e5552d42aec94efae197e7dac95de41cfc96e40336f3e513b9a87e3ccc72469",
+      "bytes": 205931,
+      "authority": "runs/DS-DEFHS-VALIDATION-HARDENING-002/CANONICAL_ARTIFACT_INVENTORY.json",
+      "role": "Frozen ordinary data/validation authority"
+    },
+    "VALIDATION_VB_FOLDS.csv": {
+      "path": "/mnt/c/Users/fikar/Documents/Codex/2026-10-04/role-research-engineer-repository-consolidation-worker/work/defhs/runs/DS-DEFHS-VALIDATION-HARDENING-002/VALIDATION_VB_FOLDS.csv",
+      "sha256": "87c6c0b33e5ea5c05b2bd2537d29480e4285cf816d4a921a6f1bcb3ef854139b",
+      "bytes": 29728,
+      "authority": "runs/DS-DEFHS-VALIDATION-HARDENING-002/CANONICAL_ARTIFACT_INVENTORY.json",
+      "role": "Frozen ordinary data/validation authority"
+    },
+    "DUPLICATE_GROUPS_FINAL.csv": {
+      "path": "/mnt/c/Users/fikar/Documents/Codex/2026-10-04/role-research-engineer-repository-consolidation-worker/work/defhs/runs/DS-DEFHS-VALIDATION-HARDENING-002/DUPLICATE_GROUPS_FINAL.csv",
+      "sha256": "6aee3374e27efeb1a79397a1256a515b87e3baf4d7a01536191f6e16256e81f7",
+      "bytes": 22949,
+      "authority": "runs/DS-DEFHS-VALIDATION-HARDENING-002/CANONICAL_ARTIFACT_INVENTORY.json",
+      "role": "Frozen ordinary data/validation authority"
+    },
+    "RETRIEVAL_MAP_FINAL.csv": {
+      "path": "/mnt/c/Users/fikar/Documents/Codex/2026-10-04/role-research-engineer-repository-consolidation-worker/work/defhs/runs/DS-DEFHS-VALIDATION-HARDENING-002/RETRIEVAL_MAP_FINAL.csv",
+      "sha256": "e08f7d06c13d64a1d365d7ae6fa741d6e831dea8816de6663d4a9c0eb113d2a7",
+      "bytes": 1921,
+      "authority": "runs/DS-DEFHS-VALIDATION-HARDENING-002/CANONICAL_ARTIFACT_INVENTORY.json",
+      "role": "Frozen ordinary data/validation authority"
+    },
+    "recorded_waveform_pair_evidence": {
+      "path": "/mnt/c/Users/fikar/Documents/Codex/2026-10-04/role-research-engineer-repository-consolidation-worker/work/defhs/runs/DS-DEFHS-DATA-VALIDATION-FOUNDATION-001/DUPLICATE_PAIR_EVIDENCE.csv",
+      "sha256": "7087d0f7b8a36a0bc488f45935c6818816246d17285ad5f472fd2519d657ca9c",
+      "bytes": 97170,
+      "authority": "Git blob at 8ba35644934a7b71cd557be65b9a2ca6b643fbf6:runs/DS-DEFHS-DATA-VALIDATION-FOUNDATION-001/DUPLICATE_PAIR_EVIDENCE.csv",
+      "role": "Existing normalized full-waveform cosine comparisons restricted to equal native sample length; not all pairs are duplicates"
+    },
+    "accepted_TEST_INFERENCE": {
+      "path": "/home/fikar/zingle/defhs/work/frozen_closure/LOCKED_FINALIST_TEST_INFERENCE.csv",
+      "sha256": "4a5c32123f7dd85ccbbbb7b41dcc7990226d821448837402b1710ac435434957",
+      "bytes": 22085,
+      "authority": "runs/RS-DEFHS-SYSTEM-IMPLEMENTATION-001/FINAL_SYSTEM_LOCK.json",
+      "role": "Imported existing 209-row probabilities and raw/final predictions"
+    },
+    "accepted_submission": {
+      "path": "runs/RS-DEFHS-SYSTEM-IMPLEMENTATION-001/submission.csv",
+      "sha256": "523e6327e5ad0791ace145fc8f224bd6686a6d7977fa5501c4757380e54215c8",
+      "role": "Existing current System1 final predictions; no protected confirmation content read"
+    },
+    "CPU_SHA256SUMS": {
+      "path": "/home/fikar/zingle/defhs/work/system3_wave1/CPU_SHA256SUMS.txt",
+      "sha256": "251f7886315611f4270a4aaffe913b7d15b7d5398c925eea5eceadc4831a1be3",
+      "bytes": 2608,
+      "authority": "runs/RS-DEFHS-SYSTEM3-WAVE1-001/PROBABILITY_ARTIFACT_INVENTORY.json",
+      "role": "Existing frozen fitted-head and OOF hash authority"
+    },
+    "emotion2vec_base_meanstd.npz": {
+      "path": "/home/fikar/zingle/defhs/.tmp/rs_system_implementation_001_frozen_screen_v3/rs_defhs_system_implementation_001/emotion2vec_base_meanstd.npz",
+      "sha256": "4b8b6feeedc83ca2712b7fd21d9683465a07f7fcb82ca0c1d625512acf64326f",
+      "bytes": 5838960,
+      "authority": "runs/RS-DEFHS-SYSTEM3-WAVE1-001/W1_PREFLIGHT.json",
+      "role": "Existing all-1035 raw cached mean+std features; no encoder run"
+    },
+    "emotion2vec_base_VB_outer0.joblib": {
+      "path": "/home/fikar/zingle/defhs/work/system3_wave1/emotion2vec_base_VB_outer0.joblib",
+      "sha256": "53cea7ac1b5076e6db4a76173281b2142ef291436844b904694a0c6de7b13146",
+      "bytes": 87577,
+      "authority": "CPU_SHA256SUMS",
+      "role": "Existing ordinary PRIMARY_CV outer fitted head; no fitting"
+    },
+    "emotion2vec_base_VB_outer1.joblib": {
+      "path": "/home/fikar/zingle/defhs/work/system3_wave1/emotion2vec_base_VB_outer1.joblib",
+      "sha256": "b6e82d2d2132e53607f6bfdff7eceed200011a28fe26a6d61cb0a40ec67003fe",
+      "bytes": 87577,
+      "authority": "CPU_SHA256SUMS",
+      "role": "Existing ordinary PRIMARY_CV outer fitted head; no fitting"
+    },
+    "emotion2vec_base_VB_outer2.joblib": {
+      "path": "/home/fikar/zingle/defhs/work/system3_wave1/emotion2vec_base_VB_outer2.joblib",
+      "sha256": "a5184780c6012f09715e012b2649208445ddb42e0d0a29cf13d9bd02037dd3d0",
+      "bytes": 87577,
+      "authority": "CPU_SHA256SUMS",
+      "role": "Existing ordinary PRIMARY_CV outer fitted head; no fitting"
+    },
+    "emotion2vec_base_VB_outer3.joblib": {
+      "path": "/home/fikar/zingle/defhs/work/system3_wave1/emotion2vec_base_VB_outer3.joblib",
+      "sha256": "d13adf927e65909a0fa2298b87df73489ac6fbf904d61b01eeb4f6cb836cc916",
+      "bytes": 87577,
+      "authority": "CPU_SHA256SUMS",
+      "role": "Existing ordinary PRIMARY_CV outer fitted head; no fitting"
+    },
+    "emotion2vec_base_VB_outer4.joblib": {
+      "path": "/home/fikar/zingle/defhs/work/system3_wave1/emotion2vec_base_VB_outer4.joblib",
+      "sha256": "d0fbec8b8a87c1218dd12ad4101e7ac43951bd410b671f777cc07a7589f4b929",
+      "bytes": 87577,
+      "authority": "CPU_SHA256SUMS",
+      "role": "Existing ordinary PRIMARY_CV outer fitted head; no fitting"
+    },
+    "E2V_CONTROL_VB.npz": {
+      "path": "/home/fikar/zingle/defhs/work/system3_wave1/E2V_CONTROL_VB.npz",
+      "sha256": "14c86f6f61d633a72fd8535bec1070162e8a92f6de9c3f37ee366ff0e3d7a7b7",
+      "bytes": 26601,
+      "authority": "runs/RS-DEFHS-SYSTEM3-WAVE1-001/PROBABILITY_ARTIFACT_INVENTORY.json",
+      "role": "Existing ordinary training OOF; never treated as test predictions",
+      "independent_saved_head_probability_parity_max_abs": 0.0
+    },
+    "xls_r_300m_meanstd.npz": {
+      "path": "/home/fikar/zingle/defhs/.tmp/rs_system_implementation_001_frozen_screen_v3/rs_defhs_system_implementation_001/xls_r_300m_meanstd.npz",
+      "sha256": "24bd935cc0271d5ae427acfed96a0237161b646e1bdcc1f2cb80c48abdcfa5fc",
+      "bytes": 7824975,
+      "authority": "runs/RS-DEFHS-SYSTEM3-WAVE1-001/W1_PREFLIGHT.json",
+      "role": "Existing all-1035 raw cached mean+std features; no encoder run"
+    },
+    "xls_r_300m_VB_outer0.joblib": {
+      "path": "/home/fikar/zingle/defhs/work/system3_wave1/xls_r_300m_VB_outer0.joblib",
+      "sha256": "fa1fc66050d463c4ba7e526f8bde20c51c09646af86b2d564b7dff080195af03",
+      "bytes": 116249,
+      "authority": "CPU_SHA256SUMS",
+      "role": "Existing ordinary PRIMARY_CV outer fitted head; no fitting"
+    },
+    "xls_r_300m_VB_outer1.joblib": {
+      "path": "/home/fikar/zingle/defhs/work/system3_wave1/xls_r_300m_VB_outer1.joblib",
+      "sha256": "cc99b5202dd720423d99cf7d2d819e0e32c9f723ed49c10ed28e0e803eaa67aa",
+      "bytes": 116249,
+      "authority": "CPU_SHA256SUMS",
+      "role": "Existing ordinary PRIMARY_CV outer fitted head; no fitting"
+    },
+    "xls_r_300m_VB_outer2.joblib": {
+      "path": "/home/fikar/zingle/defhs/work/system3_wave1/xls_r_300m_VB_outer2.joblib",
+      "sha256": "9ee84bbf8494efe41e36a58e947b6ab5d6e664af4a40268ff75fcaf583ade427",
+      "bytes": 116249,
+      "authority": "CPU_SHA256SUMS",
+      "role": "Existing ordinary PRIMARY_CV outer fitted head; no fitting"
+    },
+    "xls_r_300m_VB_outer3.joblib": {
+      "path": "/home/fikar/zingle/defhs/work/system3_wave1/xls_r_300m_VB_outer3.joblib",
+      "sha256": "2cade8fd0273c656614e6292ff9066053a47b42555098d86edb19047484a495c",
+      "bytes": 116249,
+      "authority": "CPU_SHA256SUMS",
+      "role": "Existing ordinary PRIMARY_CV outer fitted head; no fitting"
+    },
+    "xls_r_300m_VB_outer4.joblib": {
+      "path": "/home/fikar/zingle/defhs/work/system3_wave1/xls_r_300m_VB_outer4.joblib",
+      "sha256": "e1df9ad2302f00ce76d63aec04d4c2b9b91c8c9e96e5d4cabe81c26dfb60f0e8",
+      "bytes": 116249,
+      "authority": "CPU_SHA256SUMS",
+      "role": "Existing ordinary PRIMARY_CV outer fitted head; no fitting"
+    },
+    "XLSR_VB.npz": {
+      "path": "/home/fikar/zingle/defhs/work/system3_wave1/XLSR_VB.npz",
+      "sha256": "f8a7cab17c88e98056d45fcad44479f1254acd68dbc7507e585f2197e1c87402",
+      "bytes": 26605,
+      "authority": "runs/RS-DEFHS-SYSTEM3-WAVE1-001/PROBABILITY_ARTIFACT_INVENTORY.json",
+      "role": "Existing ordinary training OOF; never treated as test predictions",
+      "independent_saved_head_probability_parity_max_abs": 0.0
+    },
+    "FIXED_PAIR_VB.npz": {
+      "path": "/home/fikar/zingle/defhs/work/system3_wave1/FIXED_PAIR_VB.npz",
+      "sha256": "9f9ac86829230bcfde4be93a980161bf6139eaa38f3372efc822eb8edf79da45",
+      "bytes": 26511,
+      "authority": "runs/RS-DEFHS-SYSTEM3-WAVE1-001/PROBABILITY_ARTIFACT_INVENTORY.json",
+      "role": "Original pair PRIMARY_CV probabilities"
+    },
+    "ASR_TRANSCRIPTS.csv": {
+      "path": "/home/fikar/zingle/defhs/work/mission_inputs/asr_transcripts/ASR_TRANSCRIPTS.csv",
+      "sha256": "a111071c53edd14a6202d9ac7b12360648c9f12e8650fee0aabf2dda0df12d01",
+      "bytes": 268870,
+      "authority": "runs/DS-DEFHS-VALIDATION-HARDENING-002/CLOSURE_COMPLETED_ARTIFACT_MANIFEST.tsv",
+      "role": "Existing auxiliary evidence; no model execution",
+      "drive_path": "/DEFHS/ds_validation_002/asr_transcripts/ASR_TRANSCRIPTS.csv",
+      "drive_file_id": "1d-SvtL_PmzTqL5cICf1DfgfXYUjdV1o7",
+      "producer_commit": "5be8dd571ed161dd96266cc117a303df232aa648",
+      "model_revision": "mobiuslabsgmbh/faster-whisper-large-v3-turbo@0a363e9161cbc7ed1431c9597a8ceaf0c4f78fcf"
+    },
+    "SPEAKER_CLUSTER_ASSIGNMENTS.csv": {
+      "path": "/home/fikar/zingle/defhs/work/mission_inputs/speaker_embeddings/SPEAKER_CLUSTER_ASSIGNMENTS.csv",
+      "sha256": "a55d713d89017883f45c4d8d7f859fc4a6274445675fd5f0b962996c2af451d0",
+      "bytes": 87083,
+      "authority": "runs/DS-DEFHS-VALIDATION-HARDENING-002/CLOSURE_COMPLETED_ARTIFACT_MANIFEST.tsv",
+      "role": "Existing auxiliary evidence; no model execution",
+      "drive_path": "/DEFHS/ds_validation_002/speaker_embeddings/SPEAKER_CLUSTER_ASSIGNMENTS.csv",
+      "drive_file_id": "1L0cDgcX4kwvPf9WSteF_uq47gPCFA2iQ",
+      "producer_commit": "5be8dd571ed161dd96266cc117a303df232aa648",
+      "model_revision": "speechbrain/spkrec-ecapa-voxceleb@0f99f2d0ebe89ac095bcc5903c4dd8f72b367286"
+    },
+    "QWEN_SEMANTIC_OUTPUTS.csv": {
+      "path": "/home/fikar/zingle/defhs/.tmp/rs_score_push_001_semantic_v1/rs_defhs_score_push_001_semantic/QWEN_SEMANTIC_OUTPUTS.csv",
+      "sha256": "a2dad2feeac7cc817716ae4eb0cd8724c2f169c06262d45d8e00e66345e1569b",
+      "bytes": 11392,
+      "authority": "runs/RS-DEFHS-SCORE-PUSH-001/SEMANTIC_INFERENCE_MANIFEST.json",
+      "role": "Existing semantic hard-label evidence; no probability vectors"
+    },
+    "EXECUTION_PROVENANCE.json": {
+      "path": "/home/fikar/zingle/defhs/.tmp/rs_score_push_001_semantic_v1/rs_defhs_score_push_001_semantic/EXECUTION_PROVENANCE.json",
+      "sha256": "1d52f3d2ac2b9091aa9434ed17c9269c68dbe54cf354f89caccc2674e36a821f",
+      "bytes": 1308,
+      "authority": "runs/RS-DEFHS-SCORE-PUSH-001/SEMANTIC_INFERENCE_MANIFEST.json",
+      "role": "Existing semantic hard-label evidence; no probability vectors"
+    },
+    "CHECKPOINT.json": {
+      "path": "/home/fikar/zingle/defhs/.tmp/rs_score_push_001_semantic_v1/rs_defhs_score_push_001_semantic/CHECKPOINT.json",
+      "sha256": "e4cffa1c7c00187a57ff6b047eb281150dc8c7543a5226258ed103edb228bc6f",
+      "bytes": 2261,
+      "authority": "runs/RS-DEFHS-SCORE-PUSH-001/SEMANTIC_INFERENCE_MANIFEST.json",
+      "role": "Existing semantic hard-label evidence; no probability vectors"
+    },
+    "QWEN_FIXED_PROMPT.txt": {
+      "path": "/home/fikar/zingle/defhs/.tmp/rs_score_push_001_semantic_v1/rs_defhs_score_push_001_semantic/QWEN_FIXED_PROMPT.txt",
+      "sha256": "d34712a764dabcd5616e826e8597cbdfba18a8fbca37b16195e2e22fed77324f",
+      "bytes": 658,
+      "authority": "runs/RS-DEFHS-SCORE-PUSH-001/SEMANTIC_INFERENCE_MANIFEST.json",
+      "role": "Existing semantic hard-label evidence; no probability vectors"
+    },
+    "UNIQUE_TRANSCRIPT_OUTPUTS.jsonl": {
+      "path": "/home/fikar/zingle/defhs/.tmp/rs_score_push_001_semantic_v1/rs_defhs_score_push_001_semantic/UNIQUE_TRANSCRIPT_OUTPUTS.jsonl",
+      "sha256": "734dd1df25f6cc57f34ed534cc88c56748c7cdb5fbd4b9b17c4ebe948fbac56c",
+      "bytes": 105907,
+      "authority": "runs/RS-DEFHS-SCORE-PUSH-001/SEMANTIC_INFERENCE_MANIFEST.json",
+      "role": "Existing semantic hard-label evidence; no probability vectors"
+    },
+    "B0_VB_seed20260930.npz": {
+      "path": "/home/fikar/zingle/defhs/work/system3_wave1/B0_VB_seed20260930.npz",
+      "sha256": "aa3682475c3a9085a3ae1cb53acd59beeb33c27be13d608eefaa990382166d47",
+      "bytes": 15983,
+      "authority": "runs/RS-DEFHS-SYSTEM3-WAVE1-001/PROBABILITY_ARTIFACT_INVENTORY.json",
+      "role": "AST training OOF only; test probabilities unavailable"
+    },
+    "B1_SEED_MEAN_VB.npz": {
+      "path": "/home/fikar/zingle/defhs/work/system3_wave1/B1_SEED_MEAN_VB.npz",
+      "sha256": "23c8397876917c25e51902035f6e27bdd71d52f8909dcdb3052ea3c678156f2d",
+      "bytes": 17125,
+      "authority": "runs/RS-DEFHS-SYSTEM3-WAVE1-001/PROBABILITY_ARTIFACT_INVENTORY.json",
+      "role": "AST training OOF only; test probabilities unavailable"
+    },
+    "A1_VB_SHARED_INIT_CORRECTED.npz": {
+      "path": "/home/fikar/zingle/defhs/work/system3_wave1/A1_VB_SHARED_INIT_CORRECTED.npz",
+      "sha256": "60958ead70f932699e12d2443b64e8d0073f2940cfba3b7b1ea5bd1947b92a6e",
+      "bytes": 16565,
+      "authority": "runs/RS-DEFHS-SYSTEM3-WAVE1-001/PROBABILITY_ARTIFACT_INVENTORY.json",
+      "role": "Wave1 adaptation OOF only; not a TARGET209 probability artifact"
+    }
+  },
+  "derived_artifacts": {
+    "FIXED_PAIR_TEST_INFERENCE.csv": {
+      "sha256": "bed4632cdf81965971c7dfa9437f1f204651b63ed0d45895fca978c5258b8b4f",
+      "producer": "scripts/build_target209_evidence.py",
+      "protocol": "ANALYSIS_PROTOCOL.json",
+      "source_start": "8ba35644934a7b71cd557be65b9a2ca6b643fbf6"
+    },
+    "submission_fixed_pair_cv5.csv": {
+      "sha256": "1dd6b8db750ec6eee0b0f48d4148eceefcdd4bb5eaeb8454fa278597ae44818e",
+      "producer": "scripts/build_target209_evidence.py",
+      "protocol": "ANALYSIS_PROTOCOL.json",
+      "source_start": "8ba35644934a7b71cd557be65b9a2ca6b643fbf6"
+    },
+    "TARGET209_SUMMARY.json": {
+      "sha256": "6134bc7ebb47ab267cbb880f00d8ef303c7e89e944fb14f9a551a8c341a6551d",
+      "producer": "scripts/build_target209_evidence.py",
+      "protocol": "ANALYSIS_PROTOCOL.json",
+      "source_start": "8ba35644934a7b71cd557be65b9a2ca6b643fbf6"
+    },
+    "PRIMARY_CV_AUDIT.json": {
+      "sha256": "a5d3f0a7bb533d6a30cb02c3f36d77b457c5dd6b781ca96acbcb8f97851940d8",
+      "producer": "scripts/build_target209_evidence.py",
+      "protocol": "ANALYSIS_PROTOCOL.json",
+      "source_start": "8ba35644934a7b71cd557be65b9a2ca6b643fbf6"
+    },
+    "PUBLIC_SUBMISSION_READINESS.json": {
+      "sha256": "eac3f46f25e13a4277d48ffb0efa3239b47f99ff3d039ddb852ea62d9faa1362",
+      "producer": "scripts/build_target209_evidence.py",
+      "protocol": "ANALYSIS_PROTOCOL.json",
+      "source_start": "8ba35644934a7b71cd557be65b9a2ca6b643fbf6"
+    },
+    "MAJOR_MODEL_DISAGREEMENT.json": {
+      "sha256": "9bfca4bce937cc34fff4dc6e3281e351dbe24cbe277ef1a7edea2c888c3c3b7a",
+      "producer": "scripts/build_target209_evidence.py",
+      "protocol": "ANALYSIS_PROTOCOL.json",
+      "source_start": "8ba35644934a7b71cd557be65b9a2ca6b643fbf6"
+    },
+    "SYSTEM1_TO_FIXED_PAIR_CHANGES.csv": {
+      "sha256": "ac042eea1dc137465d3b8e1315b6e4dfaa9065db0b0699fac6ae0b7c01444792",
+      "producer": "scripts/build_target209_evidence.py",
+      "protocol": "ANALYSIS_PROTOCOL.json",
+      "source_start": "8ba35644934a7b71cd557be65b9a2ca6b643fbf6"
+    },
+    "HARD_CASES.csv": {
+      "sha256": "4a618c25395f7e0e0daa2c27b54924494dda66d97cd0dcb95862db157d561fb9",
+      "producer": "scripts/build_target209_evidence.py",
+      "protocol": "ANALYSIS_PROTOCOL.json",
+      "source_start": "8ba35644934a7b71cd557be65b9a2ca6b643fbf6"
+    },
+    "docs/TEST209_PREDICTION_MATRIX.csv": {
+      "sha256": "627079e8f46824ce13d9d14c68947fcd1418894cbf97dfba8ef2c3a7724cc7c7",
+      "rows": 209,
+      "producer": "scripts/build_target209_evidence.py",
+      "protocol": "ANALYSIS_PROTOCOL.json"
+    }
+  },
+  "missing_evidence": [
+    {
+      "family": "AST test probabilities",
+      "reason": "Registered B0/B1 probability artifacts contain 826 training IDs only; inspected frozen AST caches contain zero TARGET209 IDs. No AST encoder inference performed."
+    },
+    {
+      "family": "all-826 XLS-R refit",
+      "reason": "No verified saved all-826 XLS-R head/test artifact located. Candidate explicitly uses existing PRIMARY_CV fold heads rather than pretending an all-826 fit exists."
+    },
+    {
+      "family": "semantic probabilities",
+      "reason": "Verified Qwen artifact contains semantic_label including unclear, with greedy label decoding; no four-class score vector."
+    },
+    {
+      "family": "test optimization-seed stability",
+      "reason": "Available AST seed results are training OOF only. Waveform fold-head variation is reported separately and is not seed replication."
+    },
+    {
+      "family": "speaker/session/source ground truth",
+      "reason": "Metadata and ECAPA co-clusters provide auxiliary hints, not independently verified speaker IDs or hidden domain membership."
+    },
+    {
+      "family": "Wave1 adapted emotion2vec test probabilities",
+      "reason": "The verified A1 corrected probability archive contains training OOF IDs only. wave1_e2v columns identify the original frozen E2V head mean, not adapted encoder inference."
+    }
+  ],
+  "derivation_source": {
+    "script": "scripts/build_target209_evidence.py",
+    "script_sha256": "7475d7330bee9bad76283835e5314c44de975aec0457b5f945882cf032069aca",
+    "protocol_sha256": "4539ff23ea372b84d38e91dfe897ca5da9cddcc4b175bba95d138d86d36daa55"
+  },
+  "original_sample": {
+    "zip_member": "SRCASW-BhavVaani/sample_submission.csv",
+    "sha256": "f31b5e849fda2e1d42b9b551a4383750ce0a57fdaee837455d8e56a14039e9c8",
+    "rows": 209,
+    "schema": [
+      "Id",
+      "emotion"
+    ]
+  },
+  "original_test": {
+    "zip_member": "SRCASW-BhavVaani/test.csv",
+    "sha256": "4f8fc4549ba98b773770ba36aa876f960119533a4f36a9fa876f243f955e6cbd",
+    "all_209_recorded_WAV_hashes_verified_against_zip": true
+  },
+  "Wave1_head_producer": {
+    "script": "scripts/system3_wave1_cpu.py",
+    "producer_git_commit": "824ef6b4b93a42a92747e134b4d8b85c342f86ef",
+    "ordinary_fold_authority": "87c6c0b33e5ea5c05b2bd2537d29480e4285cf816d4a921a6f1bcb3ef854139b"
+  },
+  "semantic_recipe": {
+    "source_sha": "a4b2b7509703c58f1fef3d0317cd3962235594cb",
+    "audio_parent_lock_sha256": "0e34f75de1f885a303a9e1791de73e889ba55947f51052d83cfe5984bae66742",
+    "prompt_sha256": "d34712a764dabcd5616e826e8597cbdfba18a8fbca37b16195e2e22fed77324f",
+    "source_ASR_sha256": "a111071c53edd14a6202d9ac7b12360648c9f12e8650fee0aabf2dda0df12d01",
+    "template_sha256": "9c632d913a1d24b397ee696f22f4e82844187ec7f2836536ceeed944c39c208c",
+    "input_payload_sha256": "7829a73e50a2782f0adc1ec8b22ad399178b609867b2c371185e61c52ab1ce57",
+    "input_fields_to_model": [
+      "transcript"
+    ],
+    "enable_thinking": false,
+    "decoding": "greedy exact label token trie then EOS",
+    "batch_size": 16,
+    "allowed_label_tokens": {
+      "angry": [
+        524,
+        884
+      ],
+      "happy": [
+        56521
+      ],
+      "neutral": [
+        59568
+      ],
+      "sad": [
+        82114
+      ],
+      "unclear": [
+        1347,
+        1547
+      ]
+    },
+    "gpu_name": "Tesla T4",
+    "seed": 20261002,
+    "model": "Qwen/Qwen3-8B",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "packages": {
+      "torch": "2.10.0+cu128",
+      "transformers": "4.57.1",
+      "bitsandbytes": "0.48.1",
+      "accelerate": "1.11.0",
+      "huggingface-hub": "0.36.0",
+      "safetensors": "0.6.2"
+    },
+    "protected_validation_accessed": false,
+    "kaggle_submission_made": false
+  },
+  "Qwen_test_transcript_label_journal_parity": true,
+  "Qwen_original_input_payload_SHA256_parity": true,
+  "no_protected_access_no_fitting_no_encoder_execution_no_submission": true
+}

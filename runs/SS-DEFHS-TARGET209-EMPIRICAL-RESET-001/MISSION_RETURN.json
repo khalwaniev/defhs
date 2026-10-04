@@ -1,0 +1,149 @@
+{
+  "CURRENT_TARGET209_STATE": {
+    "rows": 209,
+    "columns": 64,
+    "categories": {
+      "HIGH_CONFIDENCE": 136,
+      "HARD": 60,
+      "MEDIUM_CONFIDENCE": 13
+    },
+    "certified_retrieval_rows": 78,
+    "report": "CURRENT_TARGET209_STATE.md",
+    "matrix": "docs/TEST209_PREDICTION_MATRIX.csv",
+    "test_error_count_or_macro_F1": "UNKNOWN_WITHOUT_TEST_LABELS",
+    "missing_evidence": "AST/adapted-E2V test probabilities, semantic probability vectors, optimization-seed test replication and speaker/source ground truth"
+  },
+  "CURRENT_CHAMPION": {
+    "best_scientific_challenger": "Original emotion2vec/XLS-R fixed 50/50 pair",
+    "accepted_deployed_reference": "System1 remains unchanged",
+    "explicit_candidate_recipe": "Uniform average of the five ordinary PRIMARY_CV saved heads in each family, then fixed 50/50 family weights, argmax and unchanged certified retrieval",
+    "PRIMARY_CV_pair_macro_F1": 0.7768156647359765,
+    "PRIMARY_CV_System1_macro_F1": 0.7383745765682462,
+    "PRIMARY_CV_gain": 0.038441088167730286,
+    "fold_gains": [
+      0.02427649219481076,
+      0.02408419872098122,
+      0.02007602724394708,
+      0.06453654261481134,
+      0.06108072963884226
+    ],
+    "test_changes_vs_System1": [
+      24,
+      50,
+      136,
+      153,
+      237,
+      244,
+      307,
+      341,
+      361,
+      477,
+      651,
+      667,
+      671,
+      705,
+      819,
+      897,
+      907
+    ],
+    "not_an_all826_XLSR_refit": true
+  },
+  "PUBLIC_SUBMISSION_READINESS": {
+    "status": "READY_FOR_ONE_CONTROLLED_PUBLIC_PROBE_NOT_SUBMITTED",
+    "file": "submission_fixed_pair_cv5.csv",
+    "sha256": "1dd6b8db750ec6eee0b0f48d4148eceefcdd4bb5eaeb8454fa278597ae44818e",
+    "IDs_order_schema_recipe_retrieval_checks": "PASS",
+    "adaptive_routing": false,
+    "protected_data_access": false,
+    "Kaggle_submission_made": false,
+    "explicit_user_authorization_needed_before_upload": true
+  },
+  "HARD_CASE_COUNT": 60,
+  "DOMINANT_ERROR_MECHANISMS": {
+    "meaning": "Observed test uncertainty mechanisms, not known test errors",
+    "HARD_mechanisms": {
+      "WAVEFORM_MODEL_DISAGREEMENT": 39,
+      "NEUTRAL_SAD_ACOUSTIC_BOUNDARY": 12,
+      "LOW_CONFIDENCE_ACOUSTIC_BOUNDARY": 3,
+      "FOLD_HEAD_INSTABILITY": 6
+    },
+    "HARD_top2_ambiguities": {
+      "happy↔sad": 10,
+      "neutral↔sad": 16,
+      "angry↔neutral": 11,
+      "angry↔sad": 5,
+      "angry↔happy": 9,
+      "happy↔neutral": 9
+    },
+    "PRIMARY_CV_known_neutral_sad_errors": {
+      "neutral_to_sad": 35,
+      "sad_to_neutral": 21
+    }
+  },
+  "MISSING_SIGNAL": {
+    "highest_value_first_attack": "Emotion-aligned Hindi semantic fusion against the changed fixed-waveform parent, with a matched text-free nested control",
+    "largest_measurement_gap": "Spectrogram/AST probabilities on all 209 test rows",
+    "HARD_Qwen_nonabstaining_cases": 32,
+    "HARD_Qwen_abstentions": 28,
+    "HARD_top2_neutral_sad_cases": 16,
+    "expected_corrected_test_labels": "UNKNOWN; eligible cohorts and ordinary labeled complementarity are reported instead"
+  },
+  "HIGHEST_VALUE_NEXT_EXPERIMENTS": [
+    {
+      "priority": 1,
+      "name": "Bounded nested waveform-plus-Qwen semantic comparison",
+      "HARD_reach": 32,
+      "missing_lexical_cases": 28,
+      "oracle_PRIMARY_CV_signal": {
+        "covered_rows": 198,
+        "oracle_recoverable_pair_errors": 63,
+        "pair_correct_Qwen_wrong": 34,
+        "interpretation": "Lexical labels from already inspected ordinary data; no test emotion truth and no independent confirmation"
+      },
+      "performed": false
+    },
+    {
+      "priority": 2,
+      "name": "Existing-checkpoint AST TARGET209 inference without retraining",
+      "HARD_reach": 60,
+      "oracle_PRIMARY_CV_signal": {
+        "oracle_recoverable_pair_errors": 41,
+        "pair_correct_AST_wrong": 72,
+        "interpretation": "Oracle complementarity only; no legitimate routing rule is implied"
+      },
+      "performed": false
+    },
+    {
+      "priority": 3,
+      "name": "Blind transcript audit followed conditionally by one Hindi semantic representation",
+      "HARD_reach": 28,
+      "performed": false
+    },
+    {
+      "priority": 4,
+      "name": "Targeted low-arousal emotion-supervision study after internal signal tests and external-data authority checks",
+      "HARD_neutral_sad_top2_cohort": 16,
+      "performed": false
+    },
+    {
+      "priority": 5,
+      "name": "Auxiliary evidence audit only for a concrete new defect",
+      "new_certified_HARD_matches_in_existing_records": 0,
+      "performed": false
+    }
+  ],
+  "PARALLEL_EXECUTION_PLAN": {
+    "launched": false,
+    "RS_SEMANTIC": "CPU, nested semantic/control comparison from encoder caches",
+    "RS_SPECTROGRAM": "One GPU inference lane, existing ordinary AST checkpoint target inference",
+    "DS_EVIDENCE": "Read-only transcript/neighbor/provenance audit",
+    "SS": "Own frozen parent/folds and controlled public probe after explicit authorization; no automatic deployment or protected query"
+  },
+  "START_HEAD": "8ba35644934a7b71cd557be65b9a2ca6b643fbf6",
+  "BRANCH": "ss/target209-empirical-reset-001",
+  "HISTORICAL_SCIENTIFIC_RESULTS_CHANGED": false,
+  "PROTECTED_ACCESSED": false,
+  "KAGGLE_SUBMISSION_MADE": false,
+  "NEW_FITTING_OR_ENCODER_EXECUTION": false,
+  "new_computation": "CPU predictions from already fitted cached heads, descriptive neighbors, joins and ordinary OOF audit; all explicit in EVIDENCE_PROVENANCE.json"
+}

@@ -66,7 +66,7 @@ workers to those documents before historical detail.
 - `docs/ACTIVE_COMPETITION_STATE.md` — current TARGET209 objective and model families
 - `docs/ACTIVE_VALIDATION.md` — PRIMARY_CV alias and active evidence hierarchy
 - `docs/TARGET209_STRATEGY.md` — canonical prediction-matrix specification
-- `docs/TEST209_PREDICTION_MATRIX.csv` — 209-row evidence scaffold; unpopulated predictions stay empty
+- `docs/TEST209_PREDICTION_MATRIX.csv` — populated 209-row evidence matrix; unavailable probability families stay empty
 - `docs/HISTORICAL_VALIDATION_INDEX.md` — on-demand archive/diagnostic map
 - `docs/OBJECTIVE_LOCK.md` — preserved original objective and current-authority mapping
 - `docs/PROJECT_STATE.md` — active entry point followed by preserved state history

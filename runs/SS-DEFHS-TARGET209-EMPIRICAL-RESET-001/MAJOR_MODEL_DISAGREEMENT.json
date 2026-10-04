@@ -1,0 +1,341 @@
+{
+  "meaning": "Prediction disagreement, not test error; Qwen unclear is excluded and AST unavailable has zero comparable rows",
+  "matrix": {
+    "System1_final": {
+      "System1_final": {
+        "disagreement_count": 0,
+        "comparable_rows": 209,
+        "rate": 0.0
+      },
+      "System1_SER": {
+        "disagreement_count": 0,
+        "comparable_rows": 209,
+        "rate": 0.0
+      },
+      "E2V_CV5_SER": {
+        "disagreement_count": 5,
+        "comparable_rows": 209,
+        "rate": 0.023923444976076555
+      },
+      "XLSR_CV5_SER": {
+        "disagreement_count": 53,
+        "comparable_rows": 209,
+        "rate": 0.2535885167464115
+      },
+      "PAIR_CV5_SER": {
+        "disagreement_count": 17,
+        "comparable_rows": 209,
+        "rate": 0.08133971291866028
+      },
+      "PAIR_CV5_final": {
+        "disagreement_count": 17,
+        "comparable_rows": 209,
+        "rate": 0.08133971291866028
+      },
+      "Qwen_lexical": {
+        "disagreement_count": 52,
+        "comparable_rows": 125,
+        "rate": 0.416
+      },
+      "AST_test": {
+        "disagreement_count": null,
+        "comparable_rows": 0,
+        "rate": null
+      }
+    },
+    "System1_SER": {
+      "System1_final": {
+        "disagreement_count": 0,
+        "comparable_rows": 209,
+        "rate": 0.0
+      },
+      "System1_SER": {
+        "disagreement_count": 0,
+        "comparable_rows": 209,
+        "rate": 0.0
+      },
+      "E2V_CV5_SER": {
+        "disagreement_count": 5,
+        "comparable_rows": 209,
+        "rate": 0.023923444976076555
+      },
+      "XLSR_CV5_SER": {
+        "disagreement_count": 53,
+        "comparable_rows": 209,
+        "rate": 0.2535885167464115
+      },
+      "PAIR_CV5_SER": {
+        "disagreement_count": 17,
+        "comparable_rows": 209,
+        "rate": 0.08133971291866028
+      },
+      "PAIR_CV5_final": {
+        "disagreement_count": 17,
+        "comparable_rows": 209,
+        "rate": 0.08133971291866028
+      },
+      "Qwen_lexical": {
+        "disagreement_count": 52,
+        "comparable_rows": 125,
+        "rate": 0.416
+      },
+      "AST_test": {
+        "disagreement_count": null,
+        "comparable_rows": 0,
+        "rate": null
+      }
+    },
+    "E2V_CV5_SER": {
+      "System1_final": {
+        "disagreement_count": 5,
+        "comparable_rows": 209,
+        "rate": 0.023923444976076555
+      },
+      "System1_SER": {
+        "disagreement_count": 5,
+        "comparable_rows": 209,
+        "rate": 0.023923444976076555
+      },
+      "E2V_CV5_SER": {
+        "disagreement_count": 0,
+        "comparable_rows": 209,
+        "rate": 0.0
+      },
+      "XLSR_CV5_SER": {
+        "disagreement_count": 54,
+        "comparable_rows": 209,
+        "rate": 0.2583732057416268
+      },
+      "PAIR_CV5_SER": {
+        "disagreement_count": 19,
+        "comparable_rows": 209,
+        "rate": 0.09090909090909091
+      },
+      "PAIR_CV5_final": {
+        "disagreement_count": 19,
+        "comparable_rows": 209,
+        "rate": 0.09090909090909091
+      },
+      "Qwen_lexical": {
+        "disagreement_count": 53,
+        "comparable_rows": 125,
+        "rate": 0.424
+      },
+      "AST_test": {
+        "disagreement_count": null,
+        "comparable_rows": 0,
+        "rate": null
+      }
+    },
+    "XLSR_CV5_SER": {
+      "System1_final": {
+        "disagreement_count": 53,
+        "comparable_rows": 209,
+        "rate": 0.2535885167464115
+      },
+      "System1_SER": {
+        "disagreement_count": 53,
+        "comparable_rows": 209,
+        "rate": 0.2535885167464115
+      },
+      "E2V_CV5_SER": {
+        "disagreement_count": 54,
+        "comparable_rows": 209,
+        "rate": 0.2583732057416268
+      },
+      "XLSR_CV5_SER": {
+        "disagreement_count": 0,
+        "comparable_rows": 209,
+        "rate": 0.0
+      },
+      "PAIR_CV5_SER": {
+        "disagreement_count": 36,
+        "comparable_rows": 209,
+        "rate": 0.1722488038277512
+      },
+      "PAIR_CV5_final": {
+        "disagreement_count": 36,
+        "comparable_rows": 209,
+        "rate": 0.1722488038277512
+      },
+      "Qwen_lexical": {
+        "disagreement_count": 59,
+        "comparable_rows": 125,
+        "rate": 0.472
+      },
+      "AST_test": {
+        "disagreement_count": null,
+        "comparable_rows": 0,
+        "rate": null
+      }
+    },
+    "PAIR_CV5_SER": {
+      "System1_final": {
+        "disagreement_count": 17,
+        "comparable_rows": 209,
+        "rate": 0.08133971291866028
+      },
+      "System1_SER": {
+        "disagreement_count": 17,
+        "comparable_rows": 209,
+        "rate": 0.08133971291866028
+      },
+      "E2V_CV5_SER": {
+        "disagreement_count": 19,
+        "comparable_rows": 209,
+        "rate": 0.09090909090909091
+      },
+      "XLSR_CV5_SER": {
+        "disagreement_count": 36,
+        "comparable_rows": 209,
+        "rate": 0.1722488038277512
+      },
+      "PAIR_CV5_SER": {
+        "disagreement_count": 0,
+        "comparable_rows": 209,
+        "rate": 0.0
+      },
+      "PAIR_CV5_final": {
+        "disagreement_count": 0,
+        "comparable_rows": 209,
+        "rate": 0.0
+      },
+      "Qwen_lexical": {
+        "disagreement_count": 54,
+        "comparable_rows": 125,
+        "rate": 0.432
+      },
+      "AST_test": {
+        "disagreement_count": null,
+        "comparable_rows": 0,
+        "rate": null
+      }
+    },
+    "PAIR_CV5_final": {
+      "System1_final": {
+        "disagreement_count": 17,
+        "comparable_rows": 209,
+        "rate": 0.08133971291866028
+      },
+      "System1_SER": {
+        "disagreement_count": 17,
+        "comparable_rows": 209,
+        "rate": 0.08133971291866028
+      },
+      "E2V_CV5_SER": {
+        "disagreement_count": 19,
+        "comparable_rows": 209,
+        "rate": 0.09090909090909091
+      },
+      "XLSR_CV5_SER": {
+        "disagreement_count": 36,
+        "comparable_rows": 209,
+        "rate": 0.1722488038277512
+      },
+      "PAIR_CV5_SER": {
+        "disagreement_count": 0,
+        "comparable_rows": 209,
+        "rate": 0.0
+      },
+      "PAIR_CV5_final": {
+        "disagreement_count": 0,
+        "comparable_rows": 209,
+        "rate": 0.0
+      },
+      "Qwen_lexical": {
+        "disagreement_count": 54,
+        "comparable_rows": 125,
+        "rate": 0.432
+      },
+      "AST_test": {
+        "disagreement_count": null,
+        "comparable_rows": 0,
+        "rate": null
+      }
+    },
+    "Qwen_lexical": {
+      "System1_final": {
+        "disagreement_count": 52,
+        "comparable_rows": 125,
+        "rate": 0.416
+      },
+      "System1_SER": {
+        "disagreement_count": 52,
+        "comparable_rows": 125,
+        "rate": 0.416
+      },
+      "E2V_CV5_SER": {
+        "disagreement_count": 53,
+        "comparable_rows": 125,
+        "rate": 0.424
+      },
+      "XLSR_CV5_SER": {
+        "disagreement_count": 59,
+        "comparable_rows": 125,
+        "rate": 0.472
+      },
+      "PAIR_CV5_SER": {
+        "disagreement_count": 54,
+        "comparable_rows": 125,
+        "rate": 0.432
+      },
+      "PAIR_CV5_final": {
+        "disagreement_count": 54,
+        "comparable_rows": 125,
+        "rate": 0.432
+      },
+      "Qwen_lexical": {
+        "disagreement_count": 0,
+        "comparable_rows": 125,
+        "rate": 0.0
+      },
+      "AST_test": {
+        "disagreement_count": null,
+        "comparable_rows": 0,
+        "rate": null
+      }
+    },
+    "AST_test": {
+      "System1_final": {
+        "disagreement_count": null,
+        "comparable_rows": 0,
+        "rate": null
+      },
+      "System1_SER": {
+        "disagreement_count": null,
+        "comparable_rows": 0,
+        "rate": null
+      },
+      "E2V_CV5_SER": {
+        "disagreement_count": null,
+        "comparable_rows": 0,
+        "rate": null
+      },
+      "XLSR_CV5_SER": {
+        "disagreement_count": null,
+        "comparable_rows": 0,
+        "rate": null
+      },
+      "PAIR_CV5_SER": {
+        "disagreement_count": null,
+        "comparable_rows": 0,
+        "rate": null
+      },
+      "PAIR_CV5_final": {
+        "disagreement_count": null,
+        "comparable_rows": 0,
+        "rate": null
+      },
+      "Qwen_lexical": {
+        "disagreement_count": null,
+        "comparable_rows": 0,
+        "rate": null
+      },
+      "AST_test": {
+        "disagreement_count": null,
+        "comparable_rows": 0,
+        "rate": null
+      }
+    }
+  }
+}

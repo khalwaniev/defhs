@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "test_IDs": 209,
+  "columns": 64,
+  "independent_saved_head_test_probability_reconstruction": "PASS",
+  "pair_arithmetic_and_categories": "PASS",
+  "34_input_artifact_hashes": "PASS",
+  "sample_order_and_schema": "PASS",
+  "retrieval_predictions_unchanged": 78,
+  "changed_predictions": 17,
+  "local_links": "PASS",
+  "source_1649_file_metadata_unchanged": true,
+  "original_historical_project_state_verbatim": true,
+  "protected_artifact_contents_read": false,
+  "new_training_encoder_execution_submission": false,
+  "staged_tracked_preservation": {
+    "unchanged_original_blobs_and_modes": 294,
+    "modified_files": [
+      "README.md",
+      "docs/ACTIVE_COMPETITION_STATE.md",
+      "docs/PROJECT_STATE.md",
+      "docs/TARGET209_STRATEGY.md",
+      "docs/TEST209_PREDICTION_MATRIX.csv"
+    ],
+    "deleted_files": [],
+    "new_files": [
+      "runs/SS-DEFHS-TARGET209-EMPIRICAL-RESET-001/ANALYSIS_PROTOCOL.json",
+      "runs/SS-DEFHS-TARGET209-EMPIRICAL-RESET-001/CLASS_PREDICTION_COUNTS.csv",
+      "runs/SS-DEFHS-TARGET209-EMPIRICAL-RESET-001/CURRENT_TARGET209_STATE.md",
+      "runs/SS-DEFHS-TARGET209-EMPIRICAL-RESET-001/EVIDENCE_PROVENANCE.json",
+      "runs/SS-DEFHS-TARGET209-EMPIRICAL-RESET-001/FIXED_PAIR_TEST_INFERENCE.csv",
+      "runs/SS-DEFHS-TARGET209-EMPIRICAL-RESET-001/HARD_CASES.csv",
+      "runs/SS-DEFHS-TARGET209-EMPIRICAL-RESET-001/MAJOR_MODEL_DISAGREEMENT.json",
+      "runs/SS-DEFHS-TARGET209-EMPIRICAL-RESET-001/MISSION_RETURN.json",
+      "runs/SS-DEFHS-TARGET209-EMPIRICAL-RESET-001/MODEL_DISAGREEMENT_COUNTS.csv",
+      "runs/SS-DEFHS-TARGET209-EMPIRICAL-RESET-001/NEXT_EXPERIMENTS.md",
+      "runs/SS-DEFHS-TARGET209-EMPIRICAL-RESET-001/PRIMARY_CV_AUDIT.json",
+      "runs/SS-DEFHS-TARGET209-EMPIRICAL-RESET-001/PUBLIC_SUBMISSION_READINESS.json",
+      "runs/SS-DEFHS-TARGET209-EMPIRICAL-RESET-001/SYSTEM1_TO_FIXED_PAIR_CHANGES.csv",
+      "runs/SS-DEFHS-TARGET209-EMPIRICAL-RESET-001/TARGET209_SUMMARY.json",
+      "runs/SS-DEFHS-TARGET209-EMPIRICAL-RESET-001/VERIFICATION.json",
+      "runs/SS-DEFHS-TARGET209-EMPIRICAL-RESET-001/submission_fixed_pair_cv5.csv",
+      "scripts/build_target209_evidence.py"
+    ],
+    "all_historical_run_fold_model_and_protected_blobs_unchanged": true,
+    "method": "Compare Git tree/index object identities and modes; no protected contents opened"
+  }
+}

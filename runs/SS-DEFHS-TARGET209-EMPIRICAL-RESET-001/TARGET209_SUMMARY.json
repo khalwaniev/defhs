@@ -1,0 +1,274 @@
+{
+  "target_rows": 209,
+  "categories": {
+    "HIGH_CONFIDENCE": 136,
+    "HARD": 60,
+    "MEDIUM_CONFIDENCE": 13
+  },
+  "category_definition": "Precommitted evidence triage only; not calibrated correctness probability",
+  "certified_retrieval_rows": 78,
+  "nonretrieval_rows": 131,
+  "class_counts": {
+    "System1_final": {
+      "happy": 45,
+      "angry": 60,
+      "sad": 49,
+      "neutral": 55
+    },
+    "System1_SER": {
+      "happy": 45,
+      "angry": 60,
+      "sad": 49,
+      "neutral": 55
+    },
+    "E2V_CV5_SER": {
+      "happy": 45,
+      "angry": 60,
+      "sad": 50,
+      "neutral": 54
+    },
+    "XLSR_CV5_SER": {
+      "happy": 37,
+      "sad": 58,
+      "angry": 56,
+      "neutral": 58
+    },
+    "PAIR_CV5_SER": {
+      "happy": 42,
+      "sad": 51,
+      "angry": 62,
+      "neutral": 54
+    },
+    "PAIR_CV5_final": {
+      "happy": 42,
+      "sad": 51,
+      "angry": 62,
+      "neutral": 54
+    }
+  },
+  "model_disagreement_counts": {
+    "System1_final": {
+      "System1_final": 0,
+      "System1_SER": 0,
+      "E2V_CV5_SER": 5,
+      "XLSR_CV5_SER": 53,
+      "PAIR_CV5_SER": 17,
+      "PAIR_CV5_final": 17
+    },
+    "System1_SER": {
+      "System1_final": 0,
+      "System1_SER": 0,
+      "E2V_CV5_SER": 5,
+      "XLSR_CV5_SER": 53,
+      "PAIR_CV5_SER": 17,
+      "PAIR_CV5_final": 17
+    },
+    "E2V_CV5_SER": {
+      "System1_final": 5,
+      "System1_SER": 5,
+      "E2V_CV5_SER": 0,
+      "XLSR_CV5_SER": 54,
+      "PAIR_CV5_SER": 19,
+      "PAIR_CV5_final": 19
+    },
+    "XLSR_CV5_SER": {
+      "System1_final": 53,
+      "System1_SER": 53,
+      "E2V_CV5_SER": 54,
+      "XLSR_CV5_SER": 0,
+      "PAIR_CV5_SER": 36,
+      "PAIR_CV5_final": 36
+    },
+    "PAIR_CV5_SER": {
+      "System1_final": 17,
+      "System1_SER": 17,
+      "E2V_CV5_SER": 19,
+      "XLSR_CV5_SER": 36,
+      "PAIR_CV5_SER": 0,
+      "PAIR_CV5_final": 0
+    },
+    "PAIR_CV5_final": {
+      "System1_final": 17,
+      "System1_SER": 17,
+      "E2V_CV5_SER": 19,
+      "XLSR_CV5_SER": 36,
+      "PAIR_CV5_SER": 0,
+      "PAIR_CV5_final": 0
+    }
+  },
+  "hard_case_Ids": [
+    24,
+    50,
+    51,
+    72,
+    78,
+    102,
+    111,
+    132,
+    136,
+    153,
+    172,
+    207,
+    210,
+    237,
+    244,
+    251,
+    265,
+    268,
+    289,
+    307,
+    312,
+    341,
+    343,
+    361,
+    363,
+    369,
+    371,
+    418,
+    431,
+    432,
+    440,
+    466,
+    477,
+    493,
+    529,
+    542,
+    570,
+    573,
+    581,
+    610,
+    625,
+    651,
+    656,
+    667,
+    671,
+    705,
+    755,
+    785,
+    819,
+    860,
+    873,
+    883,
+    884,
+    897,
+    902,
+    907,
+    950,
+    951,
+    956,
+    1013
+  ],
+  "hard_case_mechanisms": {
+    "WAVEFORM_MODEL_DISAGREEMENT": 39,
+    "NEUTRAL_SAD_ACOUSTIC_BOUNDARY": 12,
+    "LOW_CONFIDENCE_ACOUSTIC_BOUNDARY": 3,
+    "FOLD_HEAD_INSTABILITY": 6
+  },
+  "all_case_mechanisms": {
+    "CERTIFIED_RETRIEVAL_SUPPORT": 78,
+    "WAVEFORM_MODEL_DISAGREEMENT": 39,
+    "MISSING_INDEPENDENT_MODAL_CONFIRMATION": 51,
+    "LEXICAL_VOCAL_DISAGREEMENT": 20,
+    "NEUTRAL_SAD_ACOUSTIC_BOUNDARY": 12,
+    "LOW_CONFIDENCE_ACOUSTIC_BOUNDARY": 3,
+    "FOLD_HEAD_INSTABILITY": 6
+  },
+  "pair_top2_ambiguities_all": {
+    "happy↔neutral": 27,
+    "happy↔sad": 35,
+    "angry↔neutral": 38,
+    "angry↔sad": 20,
+    "neutral↔sad": 54,
+    "angry↔happy": 35
+  },
+  "pair_top2_ambiguities_hard": {
+    "happy↔sad": 10,
+    "neutral↔sad": 16,
+    "angry↔neutral": 11,
+    "angry↔sad": 5,
+    "angry↔happy": 9,
+    "happy↔neutral": 9
+  },
+  "neutral_sad_boundary_hard_Ids": [
+    50,
+    72,
+    153,
+    172,
+    244,
+    440,
+    466,
+    493,
+    625,
+    884,
+    897,
+    951
+  ],
+  "System1_to_pair_final_transition": {
+    "angry": {
+      "angry": 57,
+      "happy": 2,
+      "neutral": 2,
+      "sad": 1
+    },
+    "happy": {
+      "angry": 0,
+      "happy": 40,
+      "neutral": 1,
+      "sad": 1
+    },
+    "neutral": {
+      "angry": 2,
+      "happy": 0,
+      "neutral": 50,
+      "sad": 2
+    },
+    "sad": {
+      "angry": 1,
+      "happy": 3,
+      "neutral": 2,
+      "sad": 45
+    }
+  },
+  "changed_vs_System1_Ids": [
+    24,
+    50,
+    136,
+    153,
+    237,
+    244,
+    307,
+    341,
+    361,
+    477,
+    651,
+    667,
+    671,
+    705,
+    819,
+    897,
+    907
+  ],
+  "changed_vs_System1_count": 17,
+  "changed_retrieval_rows": 0,
+  "Qwen_test_counts": {
+    "neutral": 58,
+    "unclear": 84,
+    "sad": 35,
+    "happy": 21,
+    "angry": 11
+  },
+  "Qwen_hard_case_counts": {
+    "unclear": 28,
+    "sad": 8,
+    "neutral": 15,
+    "happy": 6,
+    "angry": 3
+  },
+  "hard_ASR_flagged_rows": 0,
+  "hard_with_recorded_waveform_comparisons": 45,
+  "hard_with_recorded_waveform_cosine_above_certification_threshold": 0,
+  "missing_AST_test_rows": 209,
+  "missing_semantic_probability_rows": 209,
+  "test_accuracy_macro_f1_or_number_of_errors": "UNKNOWN: no test labels",
+  "expected_hard_case_corrections": "UNKNOWN: report eligible coverage and PRIMARY_CV marginal evidence rather than fabricated expected corrections"
+}

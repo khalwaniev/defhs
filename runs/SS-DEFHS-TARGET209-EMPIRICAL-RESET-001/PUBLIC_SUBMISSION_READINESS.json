@@ -1,0 +1,60 @@
+{
+  "status": "READY_FOR_ONE_CONTROLLED_PUBLIC_PROBE_NOT_SUBMITTED",
+  "candidate": "FIXED_50_50_PRIMARY_CV5_HEADMEAN_V1",
+  "accepted_deployed_champion": "System1 unchanged",
+  "scientific_challenger": "Fixed original emotion2vec/XLS-R 50/50 pair",
+  "checks": {
+    "test_rows": 209,
+    "unique_IDs": 209,
+    "exact_original_ID_set": true,
+    "exact_original_sample_order": true,
+    "all_test_WAV_hashes_match_canonical_zip": true,
+    "sample_schema": [
+      "Id",
+      "emotion"
+    ],
+    "class_order": [
+      "angry",
+      "happy",
+      "neutral",
+      "sad"
+    ],
+    "probabilities_finite_normalized": true,
+    "equal_family_weight": true,
+    "equal_five_head_weights_within_each_family": true,
+    "argmax_without_offsets": true,
+    "retrieval_rows": 78,
+    "retrieval_map_sha256": "e08f7d06c13d64a1d365d7ae6fa741d6e831dea8816de6663d4a9c0eb113d2a7",
+    "retrieval_predictions_unchanged": true,
+    "adaptive_or_source_routing": false,
+    "semantic_or_AST_routing": false,
+    "protected_membership_or_performance_read": false,
+    "all_heads_ordinary_PRIMARY_CV": true,
+    "optimization_seed_is_not_a_protected_split": true,
+    "encoder_execution": false,
+    "new_fitting": false
+  },
+  "PRIMARY_CV_evidence": {
+    "macro_f1_delta": 0.038441088167730286,
+    "fold_deltas": [
+      0.02427649219481076,
+      0.02408419872098122,
+      0.02007602724394708,
+      0.06453654261481134,
+      0.06108072963884226
+    ],
+    "corrections": 70,
+    "breakages": 38,
+    "interpretation": "Ordinary-development evidence, not an independent test or private-score estimate"
+  },
+  "limits": [
+    "Test classifier uses uniform average of saved CV heads rather than unrecorded all-826 XLS-R refit.",
+    "OOF metric evaluates the held-out fold pair, not an in-sample average of all five heads.",
+    "PRIMARY_CV has been reused for model selection; gain is not independent confirmation.",
+    "No AST target probabilities or test optimization-seed replication.",
+    "Public subset is partial evidence; correction versus breakage and private macro-F1 remain unknown."
+  ],
+  "submission_sha256": "1dd6b8db750ec6eee0b0f48d4148eceefcdd4bb5eaeb8454fa278597ae44818e",
+  "authorization": "User authorization required before any competition upload; none performed",
+  "public_probe_rule": "Submit exactly this precommitted CSV once if authorized; compare with recorded System1 0.79691, record returned score, and do not retune against it."
+}

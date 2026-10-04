@@ -1,0 +1,316 @@
+{
+  "fold_authority_sha256": "87c6c0b33e5ea5c05b2bd2537d29480e4285cf816d4a921a6f1bcb3ef854139b",
+  "class_order": [
+    "angry",
+    "happy",
+    "neutral",
+    "sad"
+  ],
+  "scope": "Exact existing labeled OOF predictions; aggregation unchanged; no new training, split or protected access",
+  "models": {
+    "System1": {
+      "macro_f1": 0.7383745765682462,
+      "per_class_f1": {
+        "angry": 0.8038277511961722,
+        "happy": 0.7229551451187335,
+        "neutral": 0.7061611374407583,
+        "sad": 0.7205542725173211
+      },
+      "confusion": [
+        [
+          168,
+          12,
+          13,
+          12
+        ],
+        [
+          15,
+          137,
+          21,
+          19
+        ],
+        [
+          15,
+          19,
+          149,
+          34
+        ],
+        [
+          15,
+          19,
+          22,
+          156
+        ]
+      ],
+      "fold_macro_f1": [
+        0.6867589088076955,
+        0.7136980353847824,
+        0.8183360396163956,
+        0.6976395371194078,
+        0.7732278732389842
+      ]
+    },
+    "XLSR": {
+      "macro_f1": 0.7107962132114378,
+      "per_class_f1": {
+        "angry": 0.8048192771084337,
+        "happy": 0.6896551724137931,
+        "neutral": 0.6698113207547169,
+        "sad": 0.6788990825688074
+      },
+      "confusion": [
+        [
+          167,
+          12,
+          13,
+          13
+        ],
+        [
+          21,
+          130,
+          18,
+          23
+        ],
+        [
+          14,
+          21,
+          142,
+          40
+        ],
+        [
+          8,
+          22,
+          34,
+          148
+        ]
+      ],
+      "fold_macro_f1": [
+        0.6776261504580458,
+        0.6666726376429453,
+        0.7296499577134776,
+        0.7188979255289245,
+        0.7592278219864428
+      ]
+    },
+    "PAIR": {
+      "macro_f1": 0.7768156647359765,
+      "per_class_f1": {
+        "angry": 0.8564593301435407,
+        "happy": 0.7540106951871658,
+        "neutral": 0.7338129496402878,
+        "sad": 0.7629796839729119
+      },
+      "confusion": [
+        [
+          179,
+          9,
+          8,
+          9
+        ],
+        [
+          15,
+          141,
+          18,
+          18
+        ],
+        [
+          11,
+          18,
+          153,
+          35
+        ],
+        [
+          8,
+          14,
+          21,
+          169
+        ]
+      ],
+      "fold_macro_f1": [
+        0.7110354010025063,
+        0.7377822341057636,
+        0.8384120668603426,
+        0.7621760797342192,
+        0.8343086028778265
+      ]
+    },
+    "AST_frozen": {
+      "macro_f1": 0.5468363348281033,
+      "per_class_f1": {
+        "angry": 0.6590389016018307,
+        "happy": 0.5074626865671642,
+        "neutral": 0.5248868778280543,
+        "sad": 0.49595687331536387
+      },
+      "confusion": [
+        [
+          144,
+          35,
+          19,
+          7
+        ],
+        [
+          38,
+          102,
+          27,
+          25
+        ],
+        [
+          34,
+          32,
+          116,
+          35
+        ],
+        [
+          16,
+          41,
+          63,
+          92
+        ]
+      ],
+      "fold_macro_f1": [
+        0.4947694338692367,
+        0.5641940036349975,
+        0.5671717409303025,
+        0.5610391913325024,
+        0.5074490967845782
+      ]
+    },
+    "AST_adapted_seedmean": {
+      "macro_f1": 0.6030611992172079,
+      "per_class_f1": {
+        "angry": 0.696078431372549,
+        "happy": 0.5426356589147286,
+        "neutral": 0.5506493506493506,
+        "sad": 0.6228813559322034
+      },
+      "confusion": [
+        [
+          142,
+          33,
+          15,
+          15
+        ],
+        [
+          34,
+          105,
+          19,
+          34
+        ],
+        [
+          15,
+          32,
+          106,
+          64
+        ],
+        [
+          12,
+          25,
+          28,
+          147
+        ]
+      ],
+      "fold_macro_f1": [
+        0.5127272727272727,
+        0.6203119232188999,
+        0.6243377846777748,
+        0.5967115827850904,
+        0.6443710068296982
+      ]
+    }
+  },
+  "pair_vs_current": {
+    "macro_f1_delta": 0.038441088167730286,
+    "fold_deltas": [
+      0.02427649219481076,
+      0.02408419872098122,
+      0.02007602724394708,
+      0.06453654261481134,
+      0.06108072963884226
+    ],
+    "corrections": 70,
+    "breakages": 38,
+    "interpretation": "Ordinary-development evidence, not an independent test or private-score estimate"
+  },
+  "hard_surrogate": {
+    "rows": 316,
+    "definition": "Same confidence/margin and waveform disagreement rules on single held-out OOF predictions; test-only multi-head vote stability unavailable here"
+  },
+  "AST_complementarity_on_surrogate": {
+    "AST_frozen": {
+      "oracle_recoverable_pair_errors": 36,
+      "pair_correct_AST_wrong": 94,
+      "interpretation": "Oracle complementarity only; no legitimate routing rule is implied"
+    },
+    "AST_adapted_seedmean": {
+      "oracle_recoverable_pair_errors": 41,
+      "pair_correct_AST_wrong": 72,
+      "interpretation": "Oracle complementarity only; no legitimate routing rule is implied"
+    }
+  },
+  "Qwen_on_surrogate": {
+    "covered_rows": 198,
+    "oracle_recoverable_pair_errors": 63,
+    "pair_correct_Qwen_wrong": 34,
+    "interpretation": "Lexical labels from already inspected ordinary data; no test emotion truth and no independent confirmation"
+  },
+  "Qwen_on_neutral_sad_errors": {
+    "pair_errors": 56,
+    "Qwen_correct": 28,
+    "Qwen_unclear": 25,
+    "meaning": "Signal diagnostic only; no oracle routing is deployable"
+  },
+  "Qwen_full_label_evidence": {
+    "covered_rows": 467,
+    "abstained_rows": 359,
+    "correct_covered_rows": 350,
+    "label_cross_tab": {
+      "angry": {
+        "angry": 34,
+        "happy": 0,
+        "neutral": 3,
+        "sad": 2
+      },
+      "happy": {
+        "angry": 0,
+        "happy": 78,
+        "neutral": 2,
+        "sad": 4
+      },
+      "neutral": {
+        "angry": 21,
+        "happy": 41,
+        "neutral": 138,
+        "sad": 13
+      },
+      "sad": {
+        "angry": 19,
+        "happy": 5,
+        "neutral": 7,
+        "sad": 100
+      },
+      "unclear": {
+        "angry": 131,
+        "happy": 68,
+        "neutral": 67,
+        "sad": 93
+      }
+    }
+  },
+  "neutral_sad_pair_confusion": {
+    "neutral_to_sad": 35,
+    "sad_to_neutral": 21
+  },
+  "confidence_reliability": {
+    "System1": {
+      "high_probability_margin_rows": 619,
+      "wrong_rows": 113,
+      "interpretation": "High softmax/logistic confidence is not verified correctness; this is not the full test triage rule"
+    },
+    "PAIR": {
+      "high_probability_margin_rows": 455,
+      "wrong_rows": 35,
+      "interpretation": "High softmax/logistic confidence is not verified correctness; this is not the full test triage rule"
+    }
+  }
+}
