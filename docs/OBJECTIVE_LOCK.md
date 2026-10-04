@@ -1,3 +1,20 @@
+# Current authority mapping
+
+As of `DEFHS-TARGET209-CONTEXT-CLEANUP-001` (2026-10-04), start with
+[ACTIVE_COMPETITION_STATE](ACTIVE_COMPETITION_STATE.md),
+[ACTIVE_VALIDATION](ACTIVE_VALIDATION.md) and
+[TARGET209_STRATEGY](TARGET209_STRATEGY.md). The operational objective is to
+maximize four-class macro-F1 on the exact 209 supplied test WAV files.
+`PRIMARY_CV` aliases the existing V-B; TARGET209_ANALYSIS and Public LB supply
+target-domain and partial real-test evidence.
+
+The original objective lock below is preserved verbatim as historical context.
+Its final/private-leaderboard wording maps to accurate TARGET209 prediction;
+the recorded 40/60 score weights remain score weights. This mapping changes no
+scientific result or competition configuration.
+
+---
+
 # Objective Lock
 
 ## Competition

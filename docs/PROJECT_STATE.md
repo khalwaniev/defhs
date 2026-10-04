@@ -1,3 +1,41 @@
+# DEFHS current authority entry point
+
+Consolidation date: 2026-10-04. Mission: `DEFHS-TARGET209-CONTEXT-CLEANUP-001`.
+
+## Read first
+
+1. [ACTIVE_COMPETITION_STATE](ACTIVE_COMPETITION_STATE.md) — maximize four-class
+   macro-F1 on the exact 209 supplied test WAVs, using 826 labeled train WAVs.
+2. [ACTIVE_VALIDATION](ACTIVE_VALIDATION.md) — **PRIMARY_CV = unchanged historical
+   V-B**, the duplicate/group-safe labeled guardrail.
+3. [TARGET209_STRATEGY](TARGET209_STRATEGY.md) — target analysis and the canonical
+   [TEST209_PREDICTION_MATRIX](TEST209_PREDICTION_MATRIX.csv).
+
+The active evidence order is **PRIMARY_CV → TARGET209_ANALYSIS → PUBLIC_LB**.
+The active model families are **WAVEFORM / SPECTROGRAM / SEMANTIC**. Duplicates,
+provenance and speaker/source structure are **AUXILIARY EVIDENCE**. Historical
+validation views are risk-specific diagnostics, not parallel objectives.
+
+**Do not recursively read historical runs unless a concrete scientific question
+requires them.** Stop at this boundary for initial context; use the
+[historical index](HISTORICAL_VALIDATION_INDEX.md) to select a necessary source.
+[WORKFLOW](../WORKFLOW.md) continues to govern execution.
+
+The accepted submitted control / `FINAL_SYSTEM_LOCK` remain unchanged. Wave 1's
+preferred pair still awaits SS review; its Drive checkpoint preservation blocker
+remains unresolved. Consolidation does not authorize another experiment,
+protected access or Kaggle submission.
+
+## Preserved historical project state
+
+Everything below is the original pre-consolidation record, preserved verbatim.
+Its status date, validation hierarchy, architecture priorities and mission gates
+describe their original authority. For future context, the compact documents
+above supersede its active presentation; no old result, verdict or contract is
+silently reinterpreted.
+
+---
+
 # DEFHS Project State
 
 Status date: 2026-10-02

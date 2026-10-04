@@ -6,8 +6,8 @@ Canonical research repository for the Kaggle competition:
 
 ## Objective
 
-Maximize robust final/private-leaderboard performance under the official
-four-class macro-F1 objective:
+Maximize macro-F1 on the exact **209 supplied unlabeled test WAV files**, using
+the **826 labeled training WAVs** and predicting:
 
 - angry
 - happy
@@ -16,15 +16,25 @@ four-class macro-F1 objective:
 
 ## Start here
 
-A new worker should read, in this order:
+A fresh SS/RS should read these compact files, in this order:
 
-1. `WORKFLOW.md`
-2. `docs/OBJECTIVE_LOCK.md`
-3. `docs/PROJECT_STATE.md`
-4. the current mission / SS handoff
+1. [ACTIVE_COMPETITION_STATE](docs/ACTIVE_COMPETITION_STATE.md)
+2. [ACTIVE_VALIDATION](docs/ACTIVE_VALIDATION.md)
+3. [TARGET209_STRATEGY](docs/TARGET209_STRATEGY.md)
 
-Do not reconstruct the current project state by recursively reading historical
-runs unless the current mission or `PROJECT_STATE.md` points to them.
+The active evidence hierarchy is **PRIMARY_CV → TARGET209_ANALYSIS → PUBLIC_LB**.
+PRIMARY_CV is the unchanged historical V-B under a simpler alias. The three
+active model families are WAVEFORM, SPECTROGRAM and SEMANTIC; dataset structure
+is auxiliary evidence.
+
+[PROJECT_STATE](docs/PROJECT_STATE.md) routes to current authority first and
+retains the full historical state below an explicit boundary. Use
+[HISTORICAL_VALIDATION_INDEX](docs/HISTORICAL_VALIDATION_INDEX.md) only when a
+specific risk question requires old evidence. **Do not recursively read
+historical runs unless a concrete scientific question requires them.**
+Before execution, apply [WORKFLOW](WORKFLOW.md) and the current mission / SS
+handoff. The [original objective lock](docs/OBJECTIVE_LOCK.md) remains preserved
+with an explicit mapping to current authority.
 
 ## Authority model
 
@@ -46,14 +56,20 @@ Detailed historical scientific evidence is preserved under:
 
 `runs/`
 
-`docs/PROJECT_STATE.md` identifies the current scientific authority and next
-bottleneck.
+The compact active documents define the current competition objective and
+evidence roles. `docs/PROJECT_STATE.md` preserves scientific state and routes
+workers to those documents before historical detail.
 
 ## Repository map
 
 - `WORKFLOW.md` — governing workflow
-- `docs/OBJECTIVE_LOCK.md` — stable competition objective
-- `docs/PROJECT_STATE.md` — concise current project state
+- `docs/ACTIVE_COMPETITION_STATE.md` — current TARGET209 objective and model families
+- `docs/ACTIVE_VALIDATION.md` — PRIMARY_CV alias and active evidence hierarchy
+- `docs/TARGET209_STRATEGY.md` — canonical prediction-matrix specification
+- `docs/TEST209_PREDICTION_MATRIX.csv` — 209-row evidence scaffold; unpopulated predictions stay empty
+- `docs/HISTORICAL_VALIDATION_INDEX.md` — on-demand archive/diagnostic map
+- `docs/OBJECTIVE_LOCK.md` — preserved original objective and current-authority mapping
+- `docs/PROJECT_STATE.md` — active entry point followed by preserved state history
 - `docs/EXTERNAL_DATA_POLICY.md` — external-data policy
 - `runs/` — detailed mission history and frozen scientific evidence
 - `experiments/` — experiment registry
