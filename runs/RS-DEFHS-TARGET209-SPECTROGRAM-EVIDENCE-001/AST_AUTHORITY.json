@@ -1,0 +1,158 @@
+{
+  "mission": "RS-DEFHS-TARGET209-SPECTROGRAM-EVIDENCE-001",
+  "source_mission": "RS-DEFHS-SYSTEM3-WAVE1-001",
+  "ast_authority": "FAIL_EXECUTABLE_CLOSURE",
+  "model": "MIT/ast-finetuned-audioset-10-10-0.4593",
+  "revision": "f826b80d28226b62986cc218e5cec390b1096902",
+  "parent_files": {
+    "config.json": "a93d525511d77e8ecc933d09674b85099815bbbb417c228a4edd655e252fb9ff",
+    "preprocessor_config.json": "8d04ba5a9c6fca5d39d0de2b1fd05ecf79deb589fbba279728bbebac39934231",
+    "model.safetensors": "ae0c1e2ad4e1381d851fa9bf298ba13ebc9c5a914cdee2dbe427a6583869924d"
+  },
+  "parent_binary_status": "AUTHORITY_KNOWN_BUT_NOT_PRESERVED_IN_DEFHS_DRIVE_AND_NOT_MATERIALIZABLE_IN_CURRENT_RUNTIME",
+  "processor": {
+    "feature_extractor": "ASTFeatureExtractor",
+    "sampling_rate": 16000,
+    "mono": true,
+    "num_mel_bins": 128,
+    "max_length_frames": 1024,
+    "mean": -4.2677393,
+    "std": 4.5689974,
+    "padding_side": "right",
+    "attention_mask": false,
+    "time_stride": 10,
+    "frequency_stride": 10,
+    "full_window_samples": 164080
+  },
+  "representation": "AST pooler output (average classification/distillation token representation); clip probabilities are averaged across full-coverage segments",
+  "class_order": [
+    "angry",
+    "happy",
+    "neutral",
+    "sad"
+  ],
+  "frozen_ast": {
+    "name": "B0",
+    "seed": 20260930,
+    "recipe": "AST encoder frozen; four-class linear head; identical outer PRIMARY_CV folds"
+  },
+  "adapted_ast": {
+    "name": "B1",
+    "seeds": [
+      20260930,
+      20260917
+    ],
+    "canonical_aggregation": "arithmetic mean of the two seed probability vectors",
+    "recipe": {
+      "head": "Linear(768,4)",
+      "head_dropout": 0.2,
+      "head_lr": 0.001,
+      "encoder_top_lr": 0.00002,
+      "layer_lr_decay": 0.8,
+      "optimizer": "AdamW",
+      "weight_decay": 0.05,
+      "bias_norm_weight_decay": 0,
+      "loss": "ordinary four-class cross entropy",
+      "effective_batch": 16,
+      "microbatch": 2,
+      "accumulation": 8,
+      "warmup_fraction": 0.1,
+      "schedule": "warmup/cosine over 20-epoch registered horizon",
+      "progression": "head epochs 1-2; top2 transformer blocks epochs 3-4; top4 epochs 5-20; lower blocks/embeddings frozen",
+      "stopping": "CE patience 4; g=(outer_fold+1)%5 pilot stopping; same-initialization outer refit",
+      "training_augmentation": "registered deterministic mild SpecAugment",
+      "inference_augmentation": "none",
+      "precision": "float32; AMP off; TF32 off"
+    },
+    "outer_refit_states": [
+      {
+        "seed": 20260930,
+        "fold": 0,
+        "selected_epoch": 4,
+        "bytes": 226918427,
+        "sha256": "1852e8dc0766378c92231cf5d6d9c55f0ea4cacc091567fc99104abdf5dd0f18"
+      },
+      {
+        "seed": 20260930,
+        "fold": 1,
+        "selected_epoch": 6,
+        "bytes": 340352571,
+        "sha256": "283d97e237a9aaba8d5ecf31bed185afb01f897af4ce1c4ecc451e480ed5620f"
+      },
+      {
+        "seed": 20260930,
+        "fold": 2,
+        "selected_epoch": 6,
+        "bytes": 340352635,
+        "sha256": "301e047797ca4d09b70130115d52ab26913d0b2b97cc2b0db3c44a4e7d10bc00"
+      },
+      {
+        "seed": 20260930,
+        "fold": 3,
+        "selected_epoch": 5,
+        "bytes": 340352507,
+        "sha256": "66ddfd75a7086ce6d5aad6eeb548cf67d0b0f0d28a0bc0bec7e28a8f16b26fcc"
+      },
+      {
+        "seed": 20260930,
+        "fold": 4,
+        "selected_epoch": 5,
+        "bytes": 340352507,
+        "sha256": "2a7167ec729ec00ffcfb6d941361b525d565b0512cde059bff3c524f08d11e24"
+      },
+      {
+        "seed": 20260917,
+        "fold": 0,
+        "selected_epoch": 3,
+        "bytes": 226918299,
+        "sha256": "6a8d39be33053bef47381346d688f590b57a91935426f1531846b12443f55659"
+      },
+      {
+        "seed": 20260917,
+        "fold": 1,
+        "selected_epoch": 6,
+        "bytes": 340352571,
+        "sha256": "c3c95a0465af3f4510de2a83576dd9db56d72cd354f9186438e026643b8bfdd1"
+      },
+      {
+        "seed": 20260917,
+        "fold": 2,
+        "selected_epoch": 7,
+        "bytes": 340352763,
+        "sha256": "37755c2af063af0c6a01a8b60bbeaadb62a643c478f323d5f577dd501567768a"
+      },
+      {
+        "seed": 20260917,
+        "fold": 3,
+        "selected_epoch": 4,
+        "bytes": 226918427,
+        "sha256": "1cb29222ff51b9a9f305ff18264b709c822c60cc2abee58055cf4c32494a6335"
+      },
+      {
+        "seed": 20260917,
+        "fold": 4,
+        "selected_epoch": 4,
+        "bytes": 226918363,
+        "sha256": "a529b14754c3a236307550df898c3b6b3955b34524b448f972d27086e7f7d61c"
+      }
+    ]
+  },
+  "input_hashes": {
+    "VALIDATION_VB_FOLDS.csv": "87c6c0b33e5ea5c05b2bd2537d29480e4285cf816d4a921a6f1bcb3ef854139b",
+    "B1_SEED_MEAN_VB.npz": "23c8397876917c25e51902035f6e27bdd71d52f8909dcdb3052ea3c678156f2d",
+    "B0_VB_seed20260930.npz": "aa3682475c3a9085a3ae1cb53acd59beeb33c27be13d608eefaa990382166d47",
+    "FIXED_PAIR_VB.npz": "9f9ac86829230bcfde4be93a980161bf6139eaa38f3372efc822eb8edf79da45"
+  },
+  "target209_audio_status": "Exact 209 test WAV package is preserved in Drive; not a blocker.",
+  "blocker": {
+    "precise_missing_execution_artifact": "Upstream AST parent model.safetensors",
+    "expected_sha256": "ae0c1e2ad4e1381d851fa9bf298ba13ebc9c5a914cdee2dbe427a6583869924d",
+    "reason": "Adapted refit STATE files store only head plus changed top-block encoder delta and require the exact upstream parent. The public official checkpoint URL/revision is known, but the parent binary is not preserved in DEFHS Drive and could not be materialized through this runtime's external download path.",
+    "prohibited_rescue_obeyed": [
+      "no substitute AST",
+      "no newer AST",
+      "no retraining",
+      "no checkpoint reverse engineering"
+    ]
+  }
+}
