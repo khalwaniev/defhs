@@ -1,7 +1,7 @@
 {
   "id": "khalwaniev/defhs-target209-ast-recovery-001",
   "title": "DEFHS TARGET209 AST Recovery 001",
-  "code_file": "bundle.py",
+  "code_file": "run.py",
   "language": "python",
   "kernel_type": "script",
   "is_private": true,
