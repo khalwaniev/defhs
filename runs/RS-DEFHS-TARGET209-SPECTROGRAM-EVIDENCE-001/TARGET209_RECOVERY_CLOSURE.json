@@ -1,0 +1,24 @@
+{
+  "mission": "RS-DEFHS-TARGET209-SPECTROGRAM-EVIDENCE-001",
+  "status": "RESOLVED",
+  "historical_blocker": "Exact upstream AST parent binary was not materializable in the earlier worker runtime.",
+  "resolution": "Exact pinned parent was acquired on Kaggle and hash verified; historical OOF parity was exact before TARGET209 inference.",
+  "parent_sha256": "ae0c1e2ad4e1381d851fa9bf298ba13ebc9c5a914cdee2dbe427a6583869924d",
+  "parity": {
+    "model_row_comparisons": 30,
+    "hard_label_mismatches": 0,
+    "max_abs_diff": 0,
+    "mean_abs_diff": 0
+  },
+  "target209": {
+    "rows": 209,
+    "evidence_sha256": "f74b8c7b2990f0b927cdf6e9683a5d2ecb0518b97245de9df26da19aa9c54dfe",
+    "fold_seed_probs_sha256": "c4f1c151c5c18cb028c7053d5ed126c05a9ae29aacb76da683c20bf76904d417"
+  },
+  "governance": {
+    "training": false,
+    "kaggle_submission": false,
+    "protected_validation": false,
+    "retrieval_map_modified": false
+  }
+}
