@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "fold_membership_sha256": "87c6c0b33e5ea5c05b2bd2537d29480e4285cf816d4a921a6f1bcb3ef854139b",
+  "protocol": "Each frozen PRIMARY_CV fold was outer-heldout. Within outer-training, the four remaining original fold blocks were used as inner heldouts; E2V/XLS-R base heads were trained on the other three blocks and predicted only the inner-heldout block. B/C were fit only to those cross-fitted features. Base heads trained on complete outer-training then scored outer-heldout once.",
+  "leakage_checks": {
+    "outer_heldout_in_inner_base_fit": false,
+    "outer_heldout_in_meta_fit": false,
+    "outer_overlap_rows": 0,
+    "qwen_emotion_label_consumption": false
+  },
+  "outer_fold_rows": [
+    {
+      "fold": 0,
+      "train": 660,
+      "heldout": 166
+    },
+    {
+      "fold": 1,
+      "train": 661,
+      "heldout": 165
+    },
+    {
+      "fold": 2,
+      "train": 661,
+      "heldout": 165
+    },
+    {
+      "fold": 3,
+      "train": 661,
+      "heldout": 165
+    },
+    {
+      "fold": 4,
+      "train": 661,
+      "heldout": 165
+    }
+  ],
+  "meta_features": {
+    "B": 8,
+    "C": 13
+  },
+  "runtime_caveat": "Historical Wave1 environment was scikit-learn 1.7.2; current execution is 1.8.0. Inner cross-fitting used unchanged recipe under current runtime because 1.7.2 could not be installed offline. Authoritative outer scoring uses preserved historical outer probabilities; preserved-head replay had 0 outer hard-label mismatches, and C's hard decisions were unchanged after parity substitution."
+}
