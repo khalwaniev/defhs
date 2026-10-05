@@ -1,98 +1,87 @@
-# RS-DEFHS-TARGET209-SPECTROGRAM-EVIDENCE-001 — Return to SS
+# RS-DEFHS-TARGET209-SPECTROGRAM-EVIDENCE-001 — Final Return to SS
 
 ## Governance
 
-Start authority: `a29e1e3ea1aee657edc314719d82821c25cc29e9`.
+This is the final continuation of the existing mission. No protected validation, Public-LB tuning, Kaggle competition submission, retrieval-map mutation, new encoder training, pseudo-labeling, or three-modality fusion occurred.
 
-No protected validation, Public-LB tuning, Kaggle submission, retrieval-map mutation, new encoder training, pseudo-labeling, or three-modality fusion occurred.
+## Historical AST authority and recovery
 
-## Stage 0 — historical AST authority
+The canonical AST expert remains B1 seed-mean from `MIT/ast-finetuned-audioset-10-10-0.4593` at revision `f826b80d28226b62986cc218e5cec390b1096902`.
 
-The historical AST family is `RS-DEFHS-SYSTEM3-WAVE1-001`, upstream `MIT/ast-finetuned-audioset-10-10-0.4593` at revision `f826b80d28226b62986cc218e5cec390b1096902`.
+The previously missing parent was recovered exactly on Kaggle:
+- `model.safetensors` SHA256: `ae0c1e2ad4e1381d851fa9bf298ba13ebc9c5a914cdee2dbe427a6583869924d`
+- historical parity: **30/30 model-row comparisons exact**
+- hard-label mismatches: **0**
+- max absolute difference: **0.0**
+- mean absolute difference: **0.0**
 
-Exact preprocessing and model recipe were recovered. The canonical adapted expert is **B1 seed-mean**: arithmetic mean of two independently trained adapted AST seeds (20260930 and 20260917), each with five frozen V-B outer models. Class order is `angry, happy, neutral, sad`.
+TARGET209 inference then completed for all **209** rows. The AST evidence SHA256 is `f74b8c7b2990f0b927cdf6e9683a5d2ecb0518b97245de9df26da19aa9c54dfe`.
 
-All ten adapted outer refit STATE checkpoints are present in Drive with hashes recorded in `AST_AUTHORITY.json`.
+## Preserved labeled evidence
 
-Executable closure nevertheless fails because the adapted STATE files store only the learned four-class head plus changed encoder top-block state and require the exact upstream parent. Historical provenance fixes that parent binary as `model.safetensors` SHA256 `ae0c1e2ad4e1381d851fa9bf298ba13ebc9c5a914cdee2dbe427a6583869924d`. It is not preserved in DEFHS Drive, and the public official binary could not be materialized in this execution runtime. No substitute was used.
+Adapted AST remains weak standalone (PRIMARY_CV macro-F1 **0.6030611992**) relative to A (**0.7768156647**) and C (**0.8135577912**), but it contains structured conditional information: it correctly covered 68 C errors in labeled OOF, including 50 HARD rows. This does not make AST a safe replacement.
 
-## Stage 1 — labeled parity
+## Stage 5 — TARGET209 descriptive evidence
 
-Saved probability replay exactly reproduces historical authority.
+Because TARGET209 labels are unknown, every result below is a **disagreement/concordance statement**, never a claimed correction.
 
-Adapted AST seed-mean:
-- Macro-F1: **0.6030611992**
-- folds: **[0.5127272727, 0.6203119232, 0.6243377847, 0.5967115828, 0.6443710068]**
-- per class: angry **0.6960784314**, happy **0.5426356589**, neutral **0.5506493506**, sad **0.6228813559**
+Across 209 rows:
+- AST vs A disagreement: **68**
+- AST vs C disagreement: **73**
+- A vs C disagreement: **17**
 
-Frozen AST B0:
-- Macro-F1: **0.5468363348**
+By frozen uncertainty stratum, AST vs C disagrees on:
+- HARD: **33/60 = 55.0%**
+- MEDIUM_CONFIDENCE: **6/13 = 46.2%**
+- HIGH_CONFIDENCE: **34/136 = 25.0%**
 
-Versus A:
-- AST correct / A wrong: **60**
-- AST wrong / A correct: **202**
+Thus disagreement is enriched in the pre-existing uncertain region (39/73 HARD+MEDIUM rows vs 34/136 HIGH; descriptive odds ratio **3.44**), which supports real conditional information. However, **34 HIGH-confidence disagreements are too many for an unfitted hard gate**.
 
-Versus C:
-- AST correct / C wrong: **68**
-- AST wrong / C correct: **239**
+### The existing 17 C-vs-A changes
 
-Thus AST is not a safe standalone replacement, but it contains nontrivial marginal information.
+On the exact 17 nested-semantic target changes:
+- AST agrees with **A on 10**
+- AST agrees with **C on 5**
+- AST predicts a **third class on 2**
 
-## Stage 2 — mechanism evidence
+AST corroborates C on IDs: **265, 625, 651, 657, 860**.
+AST sides with A on IDs: **136, 153, 268, 343, 360, 819, 884, 897, 898, 927**.
+AST gives a third class on IDs: **210, 570**.
 
-On the exact 316-row HARD surrogate:
-- A: **0.5822591878**
-- C: **0.6578392458**
-- adapted AST: **0.4820009965**
-- AST correct / A wrong: **41**
-- AST wrong / A correct: **72**
-- AST correct / C wrong: **50**
-- AST wrong / C correct: **107**
+Therefore AST does **not** broadly validate the semantic C changes. The five C-aligned rows are hypotheses for later SS-authorized fusion research, not target-label evidence.
 
-The 68 C-error recoveries are broad rather than one-fold noise:
-- by true class: angry 14, happy 17, neutral 18, sad 19
-- by fold: 16, 15, 10, 14, 13
-- HARD: 50; non-HARD: 18
+### Qwen concordance
 
-Largest C-error mechanisms recovered by AST include:
-- sad -> neutral: 13
-- neutral -> sad: 10
-- happy -> neutral: 9
-- happy -> angry: 6
-- neutral -> happy: 6
-- angry -> happy: 5
-- angry -> neutral: 5
+Qwen is non-abstaining on **125** target rows:
+- C = Qwen: **88**
+- A = Qwen: **71**
+- AST = Qwen: **49**
+- C = AST = Qwen: **48**
+- C = Qwen while AST differs: **40**
+- AST = Qwen while C differs: **1**
+- all three different: **10**
 
-Exact grouped evidence is in `AST_UNIQUE_CORRECTIONS_AGG.csv`; full prediction-transition correction/breakage counts are in `AST_TRANSITIONS_VS_A_C.csv`.
+This shows AST is genuinely less coupled to the semantic modality, but independence alone is not evidence of higher correctness.
 
-## Stage 3 — neutral/sad audit
+### Certified retrieval rows
 
-A had 56 neutral<->sad cross-errors. C leaves **32** unresolved.
+The immutable certified-retrieval set contains **78** rows. A and C disagree on **0** of them. AST disagrees with their shared label on **19/78** rows. No retrieval evidence was modified.
 
-On those 32:
-- AST correct: **14**
-- AST wrong: **18**
-- AST predictions: angry 1, happy 2, neutral 8, sad 21
+That conflict rate prevents using AST to override certified retrieval without a separately validated rule.
 
-However, of the 24 original neutral/sad cross-errors that C already corrected:
-- AST correct: 9
-- AST wrong: 15
-- AST would make a neutral/sad cross-reversal on 14
+### Neutral/sad mechanism
 
-Therefore AST has genuine neutral/sad conditional information, but no descriptive evidence supports naive replacement or an unfitted hard gate.
+C predicts neutral/sad on **106** target rows; AST disagrees on **36**. Of these:
+- neutral↔sad cross-disagreements: **19**
+- C neutral → AST sad: **16**
+- C sad → AST neutral: **3**
 
-## Stage 4/5 — TARGET209
+AST's overall target distribution is angry 59, happy 38, neutral 43, sad 69, compared with C's angry 56, happy 47, neutral 55, sad 51. The strong target shift toward sad is directionally consistent with the known labeled AST neutral→sad weakness. This is a specific reason **not** to use AST as a direct neutral/sad adjudicator.
 
-Not executed. Exact TARGET209 audio exists, and all ten adapted outer delta checkpoints exist, but the exact upstream parent binary required to instantiate those deltas is unavailable to this execution environment.
+## Final scientific conclusion
 
-No `TARGET209_AST_EVIDENCE.csv` was fabricated. No TARGET209 disagreements or three-way counts are reported.
+AST has **real but weak conditional information** beyond the waveform+semantic system. The target disagreements are preferentially concentrated in existing uncertainty strata, consistent with the labeled correction evidence. But AST remains substantially discordant in HIGH-confidence cases, conflicts with 19 certified-retrieval rows, supports only 5 of the 17 C-vs-A target changes, and shows a pronounced sad-class shift.
 
-## Scientific conclusion
+**FINAL_VERDICT: `AST_WEAK_BUT_USEFUL_CONDITIONAL_SIGNAL`**
 
-The labeled evidence supports **weak-but-real conditional spectrogram information** beyond C, especially in HARD and residual neutral/sad errors. It is also highly destructive when used indiscriminately.
-
-Because exact historical TARGET209 AST inference could not be instantiated, the mission cannot establish whether AST disagreements on the 209 are concentrated in HARD/MEDIUM rather than HIGH_CONFIDENCE cases. Therefore AST is **not promoted** into three-modality fusion here.
-
-**FINAL_VERDICT: `AST_INFERENCE_BLOCKED_MISSING_AUTHORITY`**
-
-Return to SS; do not automatically begin fusion, pseudo-labeling, retraining, or submission.
+Return to SS. Do not automatically train a three-modality fusion, construct a hard AST gate, modify retrieval evidence, or submit to Kaggle. The cheapest next step, if SS authorizes further work, is a strictly labeled, nested cross-fitted conditional-fusion test that asks whether AST adds value only inside predeclared uncertainty strata while leaving HIGH-confidence and certified-retrieval rows protected.
