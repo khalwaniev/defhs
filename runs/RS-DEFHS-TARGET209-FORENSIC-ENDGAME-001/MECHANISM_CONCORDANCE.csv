@@ -1,0 +1,11 @@
+Id,fold,transition,true_label,e2v_label,xlsr_label,fixed_pair_margin,fixed_pair_top2,e2v_xlsr_disagree,e2v_xlsr_span_angry_neutral,e2v_xlsr_span_neutral_sad,top2_angry_neutral,top2_neutral_sad,margin_lt_0_2
+14,0,sad -> neutral,neutral,neutral,sad,0.025012815457040538,sad|neutral,True,False,True,False,True,True
+33,1,sad -> neutral,neutral,neutral,sad,0.06219117877159169,sad|neutral,True,False,True,False,True,True
+66,0,sad -> neutral,sad,neutral,sad,0.016033666206658193,sad|neutral,True,False,True,False,True,True
+143,2,sad -> neutral,neutral,neutral,sad,0.101795241856034,sad|neutral,True,False,True,False,True,True
+280,1,angry -> neutral,neutral,angry,neutral,0.09107938193320808,angry|neutral,True,True,False,True,False,True
+413,3,angry -> neutral,angry,neutral,angry,0.012490520323487908,angry|neutral,True,True,False,True,False,True
+439,4,sad -> neutral,happy,sad,neutral,0.049686454638752986,sad|neutral,True,False,True,False,True,True
+722,0,sad -> neutral,sad,neutral,sad,0.016033666206658193,sad|neutral,True,False,True,False,True,True
+908,0,sad -> neutral,angry,angry,sad,0.070810202396766,sad|neutral,True,False,False,False,True,True
+988,0,angry -> neutral,neutral,neutral,angry,0.006593144187584499,angry|neutral,True,True,False,True,False,True
