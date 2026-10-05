@@ -1,0 +1,21 @@
+{
+  "mission": "RS-DEFHS-TARGET209-SPECTROGRAM-EVIDENCE-001",
+  "addendum": "SPECTROGRAM_EXECUTION_RECOVERY",
+  "incident": "KAGGLE_PACKAGING_001",
+  "observed_status": "KernelWorkerStatus.RUNNING then script failure",
+  "error": "RuntimeError: Missing executor copied by push helper: /kaggle/src/run_rs_defhs_target209_ast_recovery_001.py",
+  "classification": "ENGINEERING_PACKAGING_FAILURE",
+  "scientific_effect": "NONE",
+  "parent_acquisition_started": false,
+  "checkpoint_reconstruction_started": false,
+  "parity_started": false,
+  "target209_inference_started": false,
+  "kaggle_submission": false,
+  "dependency_resolver_messages": "Warnings only; not causal.",
+  "root_cause": "Kaggle kernel code_file execution did not preserve the helper-added sidecar source file next to /kaggle/src/script.py.",
+  "remediation": {
+    "wrapper_commit": "d30d8fce80c8669e2ef66b524353c559c5365ead",
+    "method": "Fetch executor from immutable Git commit aec22601ff5995455627af4b5a233415c507e43f at runtime and verify Git blob SHA1 9591a2517689e7ef05da85af1ae9adbb4f9a051f before execution."
+  },
+  "rerun_authorized": true
+}
