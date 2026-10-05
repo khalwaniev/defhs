@@ -1,0 +1,359 @@
+{
+  "mission": "RS-DEFHS-TARGET209-SPECTROGRAM-EVIDENCE-001",
+  "stage": "TARGET209_STAGE5",
+  "authority_head_before_stage5": "2d38d6c178033dda14ed9bec1926d9d2a941d0f6",
+  "row_integrity": {
+    "AST": 209,
+    "A": 209,
+    "C": 209,
+    "forensic": 209,
+    "id_sets_equal": true
+  },
+  "recovery": {
+    "status": "PASS",
+    "parent_sha256": "ae0c1e2ad4e1381d851fa9bf298ba13ebc9c5a914cdee2dbe427a6583869924d",
+    "parity_model_row_comparisons": 30,
+    "parity_hard_label_mismatches": 0,
+    "parity_max_abs_diff": 0,
+    "parity_mean_abs_diff": 0,
+    "target209_ast_evidence_sha256": "f74b8c7b2990f0b927cdf6e9683a5d2ecb0518b97245de9df26da19aa9c54dfe",
+    "target209_fold_seed_probs_sha256": "c4f1c151c5c18cb028c7053d5ed126c05a9ae29aacb76da683c20bf76904d417"
+  },
+  "distributions": {
+    "A": {
+      "angry": 62,
+      "happy": 42,
+      "neutral": 54,
+      "sad": 51
+    },
+    "C": {
+      "angry": 56,
+      "happy": 47,
+      "neutral": 55,
+      "sad": 51
+    },
+    "AST": {
+      "angry": 59,
+      "happy": 38,
+      "neutral": 43,
+      "sad": 69
+    }
+  },
+  "target_disagreement": {
+    "AST_vs_A": 68,
+    "AST_vs_C": 73,
+    "A_vs_C": 17,
+    "by_uncertainty": {
+      "HARD": {
+        "rows": 60,
+        "ast_vs_A_disagree": 30,
+        "ast_vs_C_disagree": 33,
+        "A_vs_C_disagree": 13,
+        "ast_vs_A_rate": 0.5,
+        "ast_vs_C_rate": 0.55
+      },
+      "MEDIUM_CONFIDENCE": {
+        "rows": 13,
+        "ast_vs_A_disagree": 4,
+        "ast_vs_C_disagree": 6,
+        "A_vs_C_disagree": 4,
+        "ast_vs_A_rate": 0.3076923076923077,
+        "ast_vs_C_rate": 0.46153846153846156
+      },
+      "HIGH_CONFIDENCE": {
+        "rows": 136,
+        "ast_vs_A_disagree": 34,
+        "ast_vs_C_disagree": 34,
+        "A_vs_C_disagree": 0,
+        "ast_vs_A_rate": 0.25,
+        "ast_vs_C_rate": 0.25
+      }
+    }
+  },
+  "uncertainty_concentration": {
+    "uncertain_rows": 73,
+    "uncertain_AST_C_disagree": 39,
+    "uncertain_AST_C_rate": 0.5342465753424658,
+    "high_rows": 136,
+    "high_AST_C_disagree": 34,
+    "high_AST_C_rate": 0.25,
+    "descriptive_odds_ratio_uncertain_vs_high": 3.4411764705882355
+  },
+  "existing_17_C_vs_A_changes": {
+    "rows": 17,
+    "relation_counts": {
+      "AST_EQ_A": 10,
+      "AST_EQ_C": 5,
+      "AST_THIRD": 2
+    },
+    "AST_EQ_C_ids": [
+      265,
+      625,
+      651,
+      657,
+      860
+    ],
+    "AST_EQ_A_ids": [
+      136,
+      153,
+      268,
+      343,
+      360,
+      819,
+      884,
+      897,
+      898,
+      927
+    ],
+    "AST_THIRD_ids": [
+      210,
+      570
+    ],
+    "rows_detail": [
+      {
+        "Id": 136,
+        "category": "HARD",
+        "A": "angry",
+        "C": "happy",
+        "AST": "angry",
+        "relation": "AST_EQ_A",
+        "ast_confidence": 0.7350513637065887,
+        "ast_margin": 0.5587403468787671,
+        "qwen": "happy"
+      },
+      {
+        "Id": 153,
+        "category": "HARD",
+        "A": "sad",
+        "C": "neutral",
+        "AST": "sad",
+        "relation": "AST_EQ_A",
+        "ast_confidence": 0.3807410478591919,
+        "ast_margin": 0.08635473474860189,
+        "qwen": "neutral"
+      },
+      {
+        "Id": 210,
+        "category": "HARD",
+        "A": "happy",
+        "C": "sad",
+        "AST": "angry",
+        "relation": "AST_THIRD",
+        "ast_confidence": 0.75427086353302,
+        "ast_margin": 0.6020972705446184,
+        "qwen": "sad"
+      },
+      {
+        "Id": 265,
+        "category": "HARD",
+        "A": "angry",
+        "C": "neutral",
+        "AST": "neutral",
+        "relation": "AST_EQ_C",
+        "ast_confidence": 0.5176043659448624,
+        "ast_margin": 0.2176092531532049,
+        "qwen": "neutral"
+      },
+      {
+        "Id": 268,
+        "category": "HARD",
+        "A": "neutral",
+        "C": "sad",
+        "AST": "neutral",
+        "relation": "AST_EQ_A",
+        "ast_confidence": 0.7039149641990662,
+        "ast_margin": 0.5832349613308907,
+        "qwen": "sad"
+      },
+      {
+        "Id": 343,
+        "category": "HARD",
+        "A": "sad",
+        "C": "neutral",
+        "AST": "sad",
+        "relation": "AST_EQ_A",
+        "ast_confidence": 0.9122212767601012,
+        "ast_margin": 0.8570477559231221,
+        "qwen": "neutral"
+      },
+      {
+        "Id": 360,
+        "category": "MEDIUM_CONFIDENCE",
+        "A": "angry",
+        "C": "happy",
+        "AST": "angry",
+        "relation": "AST_EQ_A",
+        "ast_confidence": 0.7557857215404511,
+        "ast_margin": 0.6212572042830289,
+        "qwen": "happy"
+      },
+      {
+        "Id": 570,
+        "category": "HARD",
+        "A": "angry",
+        "C": "happy",
+        "AST": "neutral",
+        "relation": "AST_THIRD",
+        "ast_confidence": 0.4863667324185371,
+        "ast_margin": 0.22454409673810005,
+        "qwen": "happy"
+      },
+      {
+        "Id": 625,
+        "category": "HARD",
+        "A": "sad",
+        "C": "happy",
+        "AST": "happy",
+        "relation": "AST_EQ_C",
+        "ast_confidence": 0.4027688130736351,
+        "ast_margin": 0.06560959517955778,
+        "qwen": "happy"
+      },
+      {
+        "Id": 651,
+        "category": "HARD",
+        "A": "angry",
+        "C": "happy",
+        "AST": "happy",
+        "relation": "AST_EQ_C",
+        "ast_confidence": 0.6058378279209137,
+        "ast_margin": 0.3231325514614582,
+        "qwen": "happy"
+      },
+      {
+        "Id": 657,
+        "category": "MEDIUM_CONFIDENCE",
+        "A": "neutral",
+        "C": "sad",
+        "AST": "sad",
+        "relation": "AST_EQ_C",
+        "ast_confidence": 0.6697954386472702,
+        "ast_margin": 0.3930568240582943,
+        "qwen": "sad"
+      },
+      {
+        "Id": 819,
+        "category": "HARD",
+        "A": "sad",
+        "C": "neutral",
+        "AST": "sad",
+        "relation": "AST_EQ_A",
+        "ast_confidence": 0.4193706810474396,
+        "ast_margin": 0.013425696641206741,
+        "qwen": "neutral"
+      },
+      {
+        "Id": 860,
+        "category": "HARD",
+        "A": "angry",
+        "C": "neutral",
+        "AST": "neutral",
+        "relation": "AST_EQ_C",
+        "ast_confidence": 0.41350927799940107,
+        "ast_margin": 0.14796574264764784,
+        "qwen": "neutral"
+      },
+      {
+        "Id": 884,
+        "category": "HARD",
+        "A": "sad",
+        "C": "neutral",
+        "AST": "sad",
+        "relation": "AST_EQ_A",
+        "ast_confidence": 0.4813026458024979,
+        "ast_margin": 0.08065317273139955,
+        "qwen": "neutral"
+      },
+      {
+        "Id": 897,
+        "category": "HARD",
+        "A": "neutral",
+        "C": "sad",
+        "AST": "neutral",
+        "relation": "AST_EQ_A",
+        "ast_confidence": 0.5102565854787826,
+        "ast_margin": 0.044313121587037985,
+        "qwen": "sad"
+      },
+      {
+        "Id": 898,
+        "category": "MEDIUM_CONFIDENCE",
+        "A": "neutral",
+        "C": "happy",
+        "AST": "neutral",
+        "relation": "AST_EQ_A",
+        "ast_confidence": 0.6376144707202911,
+        "ast_margin": 0.46965282466262576,
+        "qwen": "happy"
+      },
+      {
+        "Id": 927,
+        "category": "MEDIUM_CONFIDENCE",
+        "A": "neutral",
+        "C": "sad",
+        "AST": "neutral",
+        "relation": "AST_EQ_A",
+        "ast_confidence": 0.6431145250797272,
+        "ast_margin": 0.4440300740301609,
+        "qwen": "sad"
+      }
+    ]
+  },
+  "qwen": {
+    "non_abstained_rows": 125,
+    "abstained_rows": 84,
+    "AST_eq_Qwen": 49,
+    "C_eq_Qwen": 88,
+    "A_eq_Qwen": 71,
+    "triple_C_AST_Qwen_agree": 48,
+    "C_AST_agree_Qwen_disagree": 26,
+    "C_Qwen_agree_AST_disagree": 40,
+    "AST_Qwen_agree_C_disagree": 1,
+    "all_three_different": 10
+  },
+  "certified_retrieval": {
+    "rows": 78,
+    "A_vs_C_disagree": 0,
+    "AST_vs_A_disagree": 19,
+    "AST_vs_C_disagree": 19,
+    "AST_disagreement_ids": [
+      2,
+      31,
+      184,
+      227,
+      425,
+      454,
+      564,
+      637,
+      666,
+      698,
+      704,
+      742,
+      890,
+      911,
+      933,
+      940,
+      968,
+      975,
+      986
+    ],
+    "nonretrieval_rows": 131,
+    "nonretrieval_AST_C_disagree": 54,
+    "nonretrieval_AST_C_rate": 0.4122137404580153
+  },
+  "neutral_sad": {
+    "C_neutral_or_sad_rows": 106,
+    "AST_C_disagree": 36,
+    "AST_C_cross_neutral_sad": 19,
+    "AST_to_other_class": 17,
+    "C_neutral_to_AST_sad": 16,
+    "C_sad_to_AST_neutral": 3
+  },
+  "interpretation": {
+    "target_labels_unknown": true,
+    "no_target_disagreement_is_called_a_correction": true,
+    "statement": "AST disagreements are enriched in HARD/MEDIUM rows, supporting non-random conditional information, but 34 HIGH-confidence disagreements, only 5/17 support for C changes, 19/78 certified-retrieval conflicts, and a strong neutral-to-sad shift make direct replacement or an unfitted hard gate unsafe."
+  },
+  "final_verdict": "AST_WEAK_BUT_USEFUL_CONDITIONAL_SIGNAL",
+  "promotion": "RETURN_TO_SS_BEFORE_ANY_FUSION"
+}
