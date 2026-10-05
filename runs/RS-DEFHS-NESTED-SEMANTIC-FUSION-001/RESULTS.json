@@ -1,0 +1,243 @@
+{
+  "mission": "RS-DEFHS-NESTED-SEMANTIC-FUSION-001",
+  "start_head": "2772fc61bfb01931335a35c8d45dc02569ab50e7",
+  "nesting_audit": "PASS",
+  "input_hashes": {
+    "VALIDATION_VB_FOLDS": "87c6c0b33e5ea5c05b2bd2537d29480e4285cf816d4a921a6f1bcb3ef854139b",
+    "QWEN_SEMANTIC_OUTPUTS": "a2dad2feeac7cc817716ae4eb0cd8724c2f169c06262d45d8e00e66345e1569b",
+    "emotion2vec_base_meanstd": "4b8b6feeedc83ca2712b7fd21d9683465a07f7fcb82ca0c1d625512acf64326f",
+    "xls_r_300m_meanstd": "24bd935cc0271d5ae427acfed96a0237161b646e1bdcc1f2cb80c48abdcfa5fc"
+  },
+  "config": {
+    "base_heads": "StandardScaler + LogisticRegression(L2,C=1.0,solver=lbfgs,max_iter=5000,random_state=20261001)",
+    "B": "8 E2V/XLS-R probabilities; LogisticRegression L2 C=1.0 lbfgs fit_intercept=true class_weight=null max_iter=5000",
+    "C": "B + one-hot Qwen states angry/happy/neutral/sad/unclear = 13 features; identical logistic configuration"
+  },
+  "environment_note": {
+    "historical_sklearn": "1.7.2",
+    "execution_sklearn": "1.8.0",
+    "inner_crossfit": "same frozen recipe refit in current runtime; historical runtime unavailable offline",
+    "authoritative_outer_scoring": "preserved historical Wave1 outer probabilities / heads",
+    "heldout_hard_label_mismatches_saved_head_replay": 0,
+    "C_hard_decisions_changed_after_outer_parity_replacement": 0
+  },
+  "PRIMARY_CV_A": 0.7768156647359765,
+  "PRIMARY_CV_B": 0.7581556185862871,
+  "PRIMARY_CV_C": 0.8135577912484513,
+  "DELTA_C_MINUS_A": 0.03674212651247477,
+  "DELTA_C_MINUS_B": 0.055402172662164184,
+  "DELTA_B_MINUS_A": -0.018660046149689413,
+  "FOLD_F1_A": [
+    0.7110354010025063,
+    0.7377822341057636,
+    0.8384120668603426,
+    0.7621760797342192,
+    0.8343086028778265
+  ],
+  "FOLD_F1_B": [
+    0.6937151970476759,
+    0.7383133662203429,
+    0.8370706028752006,
+    0.7207530612668016,
+    0.7982938651156349
+  ],
+  "FOLD_F1_C": [
+    0.7548722211207533,
+    0.812367374005305,
+    0.8494805998899284,
+    0.8250607090820787,
+    0.8255294348949557
+  ],
+  "FOLD_DELTAS_C_MINUS_A": [
+    0.043836820118246966,
+    0.07458513989954141,
+    0.01106853302958577,
+    0.06288462934785954,
+    -0.008779167982870817
+  ],
+  "FOLD_DELTAS_C_MINUS_B": [
+    0.061157024073077326,
+    0.07405400778496207,
+    0.01240999701472778,
+    0.10430764781527713,
+    0.027235569779320734
+  ],
+  "PER_CLASS_F1_A": {
+    "angry": 0.8564593301435407,
+    "happy": 0.7540106951871658,
+    "neutral": 0.7338129496402878,
+    "sad": 0.7629796839729119
+  },
+  "PER_CLASS_F1_B": {
+    "angry": 0.8398058252427184,
+    "happy": 0.7387862796833773,
+    "neutral": 0.7213114754098361,
+    "sad": 0.7327188940092166
+  },
+  "PER_CLASS_F1_C": {
+    "angry": 0.848780487804878,
+    "happy": 0.8351063829787234,
+    "neutral": 0.7749419953596288,
+    "sad": 0.7954022988505747
+  },
+  "CONFUSION_A": [
+    [
+      179,
+      9,
+      8,
+      9
+    ],
+    [
+      15,
+      141,
+      18,
+      18
+    ],
+    [
+      11,
+      18,
+      153,
+      35
+    ],
+    [
+      8,
+      14,
+      21,
+      169
+    ]
+  ],
+  "CONFUSION_B": [
+    [
+      173,
+      14,
+      11,
+      7
+    ],
+    [
+      14,
+      140,
+      20,
+      18
+    ],
+    [
+      12,
+      13,
+      154,
+      38
+    ],
+    [
+      8,
+      20,
+      25,
+      159
+    ]
+  ],
+  "CONFUSION_C": [
+    [
+      174,
+      8,
+      8,
+      15
+    ],
+    [
+      10,
+      157,
+      19,
+      6
+    ],
+    [
+      11,
+      10,
+      167,
+      29
+    ],
+    [
+      10,
+      9,
+      20,
+      173
+    ]
+  ],
+  "C_VS_A": {
+    "wrong_to_correct": 70,
+    "correct_to_wrong": 41,
+    "wrong_to_other_wrong": 15,
+    "changed": 126
+  },
+  "C_VS_B": {
+    "wrong_to_correct": 76,
+    "correct_to_wrong": 31,
+    "wrong_to_other_wrong": 18,
+    "changed": 125
+  },
+  "HARD_SURROGATE": {
+    "rows": 316,
+    "A": 0.5822591877846055,
+    "B": 0.5335857999440287,
+    "C": 0.657839245785073,
+    "C_vs_A": {
+      "wrong_to_correct": 60,
+      "correct_to_wrong": 34,
+      "wrong_to_other_wrong": 13
+    },
+    "C_vs_B": {
+      "wrong_to_correct": 66,
+      "correct_to_wrong": 24,
+      "wrong_to_other_wrong": 16
+    }
+  },
+  "NEUTRAL_SAD_ERROR_COHORT": {
+    "rows": 56,
+    "A_corrected": 0,
+    "B_corrected": 5,
+    "C_corrected": 24,
+    "C_remaining_wrong": 32,
+    "C_macro_f1": 0.41666666666666663
+  },
+  "ALPHA010_REFERENCE": 0.7896581648,
+  "C_MINUS_ALPHA010": 0.02389962644845134,
+  "PROMOTION_SCREEN": {
+    "pass": true,
+    "C_minus_A": true,
+    "C_minus_B": true,
+    "joint_positive_folds": 4,
+    "no_severe_class_collapse": true,
+    "correction_structure": true
+  },
+  "TARGET209": {
+    "constructed": true,
+    "changes_vs_fixed_pair": 17,
+    "changes_vs_alpha010": 15,
+    "hard_changes": 13,
+    "medium_confidence_changes": 4,
+    "high_confidence_changes": 0,
+    "retrieval_rows_changed": 0,
+    "changed_ids_vs_fixed_pair": [
+      136,
+      153,
+      210,
+      265,
+      268,
+      343,
+      360,
+      570,
+      625,
+      651,
+      657,
+      819,
+      860,
+      884,
+      897,
+      898,
+      927
+    ],
+    "candidate_sha256": "8ab7c5dc291cd9d1223283245fb62130b03bf728f764c5eeedf9d2915153e2a8",
+    "fixed_pair_parity_sha256": "1dd6b8db750ec6eee0b0f48d4148eceefcdd4bb5eaeb8454fa278597ae44818e",
+    "alpha010_parity_sha256": "c4600396b719821eb33711585b7782346e679fe06fc6f77413e66e5bccb71114"
+  },
+  "compute": "CPU only; cached encoders reused; no encoder rerun; no GPU",
+  "protected_validation_queried": false,
+  "kaggle_submission": false,
+  "retrieval_map_modified": false,
+  "final_verdict": "NESTED_SEMANTIC_FUSION_PROMISING"
+}
