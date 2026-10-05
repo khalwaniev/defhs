@@ -1,0 +1,177 @@
+{
+  "mission": "RS-DEFHS-TARGET209-SPECTROGRAM-EVIDENCE-001",
+  "start_head": "a29e1e3ea1aee657edc314719d82821c25cc29e9",
+  "governance": {
+    "protected_validation_queried": false,
+    "public_lb_used_for_tuning": false,
+    "kaggle_submission": false,
+    "retrieval_map_modified": false,
+    "new_encoder_training": false,
+    "ensemble_training": false
+  },
+  "ast_authority": "FAIL",
+  "oof_parity": "PASS",
+  "adapted_ast": {
+    "macro_f1": 0.6030611992172079,
+    "accuracy": 0.6053268765133172,
+    "fold_f1": [
+      0.5127272727272727,
+      0.6203119232188999,
+      0.6243377846777748,
+      0.5967115827850904,
+      0.6443710068296982
+    ],
+    "per_class_f1": {
+      "angry": 0.696078431372549,
+      "happy": 0.5426356589147286,
+      "neutral": 0.5506493506493506,
+      "sad": 0.6228813559322034
+    },
+    "confusion": [
+      [
+        142,
+        33,
+        15,
+        15
+      ],
+      [
+        34,
+        105,
+        19,
+        34
+      ],
+      [
+        15,
+        32,
+        106,
+        64
+      ],
+      [
+        12,
+        25,
+        28,
+        147
+      ]
+    ]
+  },
+  "frozen_ast": {
+    "macro_f1": 0.5468363348281033,
+    "accuracy": 0.549636803874092,
+    "fold_f1": [
+      0.4947694338692367,
+      0.5641940036349975,
+      0.5671717409303025,
+      0.5610391913325024,
+      0.5074490967845782
+    ],
+    "per_class_f1": {
+      "angry": 0.6590389016018307,
+      "happy": 0.5074626865671642,
+      "neutral": 0.5248868778280543,
+      "sad": 0.49595687331536387
+    }
+  },
+  "fixed_parent_A_macro_f1": 0.7768156647359765,
+  "semantic_C_macro_f1": 0.8135577912484513,
+  "adapted_vs_A": {
+    "ast_correct_A_wrong": 60,
+    "ast_wrong_A_correct": 202,
+    "both_wrong": 124,
+    "both_correct": 440
+  },
+  "adapted_vs_C": {
+    "ast_correct_C_wrong": 68,
+    "ast_wrong_C_correct": 239,
+    "both_wrong": 87,
+    "both_correct": 432
+  },
+  "hard_surrogate": {
+    "rows": 316,
+    "A": 0.5822591877846055,
+    "C": 0.657839245785073,
+    "AST": 0.4820009964981449,
+    "AST_correct_A_wrong": 41,
+    "AST_wrong_A_correct": 72,
+    "AST_correct_C_wrong": 50,
+    "AST_wrong_C_correct": 107
+  },
+  "neutral_sad": {
+    "original_A_cross_errors": 56,
+    "remaining_after_C": 32,
+    "AST_correct_on_remaining": 14,
+    "AST_wrong_on_remaining": 18,
+    "AST_prediction_distribution_remaining": {
+      "angry": 1,
+      "happy": 2,
+      "neutral": 8,
+      "sad": 21
+    },
+    "C_corrected_original_cross_errors": 24,
+    "among_C_corrected_AST_wrong": 15,
+    "among_C_corrected_AST_correct": 9,
+    "among_C_corrected_AST_cross_reversal": 14
+  },
+  "C_remaining_errors": {
+    "count": 155,
+    "AST_correct": 68,
+    "AST_correct_by_true_class": {
+      "angry": 14,
+      "happy": 17,
+      "neutral": 18,
+      "sad": 19
+    },
+    "AST_correct_hard": 50,
+    "AST_correct_nonhard": 18,
+    "AST_correct_fold_counts": {
+      "0": 16,
+      "1": 15,
+      "2": 10,
+      "3": 14,
+      "4": 13
+    },
+    "leading_error_transitions": [
+      {
+        "transition": "sad -> neutral",
+        "N": 13
+      },
+      {
+        "transition": "neutral -> sad",
+        "N": 10
+      },
+      {
+        "transition": "happy -> neutral",
+        "N": 9
+      },
+      {
+        "transition": "happy -> angry",
+        "N": 6
+      },
+      {
+        "transition": "neutral -> happy",
+        "N": 6
+      },
+      {
+        "transition": "angry -> happy",
+        "N": 5
+      },
+      {
+        "transition": "angry -> neutral",
+        "N": 5
+      }
+    ]
+  },
+  "target209": {
+    "inference": false,
+    "rows": 0,
+    "disagree_A": null,
+    "disagree_C": null,
+    "disagree_C_hard": null,
+    "disagree_C_medium": null,
+    "disagree_C_high": null,
+    "three_way_C_AST_Qwen_agree": null,
+    "three_way_C_AST_Qwen_disagree": null,
+    "reason": "Exact upstream AST parent model binary could not be materialized; no substituted inference was allowed."
+  },
+  "scientific_interpretation": "Adapted AST is weak standalone and harmful as a naive replacement, but supplies broad structured conditional corrections over C (68 total, 50 HARD, 14/32 remaining neutral-sad cross-errors). Because exact TARGET209 inference could not be executed, no final three-modality promotion is authorized.",
+  "final_verdict": "AST_INFERENCE_BLOCKED_MISSING_AUTHORITY"
+}
