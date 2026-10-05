@@ -1,0 +1,26 @@
+{
+  "stage": 4,
+  "status": "BLOCKED",
+  "exact_missing_execution_artifact": {
+    "model": "MIT/ast-finetuned-audioset-10-10-0.4593",
+    "revision": "f826b80d28226b62986cc218e5cec390b1096902",
+    "file": "model.safetensors",
+    "sha256": "ae0c1e2ad4e1381d851fa9bf298ba13ebc9c5a914cdee2dbe427a6583869924d"
+  },
+  "evidence": [
+    "All ten historical adapted B1 V-B refit STATE checkpoints are present in Drive with recorded hashes.",
+    "Exact 209 TARGET209 WAV package is present in Drive.",
+    "The adapted checkpoint STATE files contain the four-class head and changed top-block encoder state, not the untouched upstream parent encoder parameters.",
+    "The upstream parent model revision and hash are known from historical B_PARENT_PROVENANCE.json.",
+    "No copy of the upstream model.safetensors was found in the DEFHS Drive hierarchy by exact filename/model/hash search.",
+    "The official public upstream binary URL was recovered, but this execution runtime could not materialize the redirected binary."
+  ],
+  "action_taken": "STOPPED_WITHOUT_SUBSTITUTE",
+  "prohibited_rescues_not_used": [
+    "newer AST checkpoint",
+    "different AST model",
+    "retraining",
+    "reverse-engineering an approximate parent",
+    "TARGET209 confidence-based model selection"
+  ]
+}
