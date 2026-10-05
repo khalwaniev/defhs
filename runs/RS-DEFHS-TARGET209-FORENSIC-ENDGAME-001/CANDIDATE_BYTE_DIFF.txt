@@ -1,0 +1,40 @@
+SOURCE_PATH=runs/SS-DEFHS-TARGET209-EMPIRICAL-RESET-001/submission_fixed_pair_cv5.csv
+SOURCE_SHA256=1dd6b8db750ec6eee0b0f48d4148eceefcdd4bb5eaeb8454fa278597ae44818e
+SOURCE_BYTES=2094
+CANDIDATE_PATH=runs/RS-DEFHS-TARGET209-FORENSIC-ENDGAME-001/submission_semantic_alpha010.csv
+CANDIDATE_SHA256=c4600396b719821eb33711585b7782346e679fe06fc6f77413e66e5bccb71114
+CANDIDATE_BYTES=2100
+ROWS_DIFFERENT=2
+ID_ORDER_IDENTICAL=YES
+SCHEMA_IDENTICAL=YES
+
+BYTE_EDIT_1:
+source byte offsets [462,472): 265,angry\n
+candidate byte offsets [462,474): 265,neutral\n
+
+BYTE_EDIT_2:
+source byte offsets [1738,1746): 884,sad\n
+candidate byte offsets [1740,1752): 884,neutral\n
+(candidate offset is +2 after edit 1)
+
+UNIFIED_DIFF:
+--- submission_fixed_pair_cv5.csv
++++ submission_semantic_alpha010.csv
+@@ -46,7 +46,7 @@
+ 251,happy
+ 256,neutral
+ 261,angry
+-265,angry
++265,neutral
+ 268,neutral
+ 272,sad
+ 284,sad
+@@ -173,7 +173,7 @@
+ 872,sad
+ 873,sad
+ 883,angry
+-884,sad
++884,neutral
+ 890,angry
+ 893,angry
+ 896,sad
