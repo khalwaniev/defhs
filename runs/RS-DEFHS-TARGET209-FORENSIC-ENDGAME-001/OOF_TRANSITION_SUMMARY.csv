@@ -1,0 +1,10 @@
+transition,N,WRONG_TO_CORRECT,CORRECT_TO_WRONG,WRONG_TO_OTHER_WRONG,NET_CORRECTIONS
+angry -> happy,2,2,0,0,2
+angry -> neutral,3,2,1,0,1
+angry -> sad,3,0,3,0,-3
+happy -> neutral,4,2,2,0,0
+happy -> sad,4,3,0,1,3
+neutral -> happy,1,1,0,0,1
+neutral -> sad,3,3,0,0,3
+sad -> happy,2,2,0,0,2
+sad -> neutral,7,3,2,2,1
