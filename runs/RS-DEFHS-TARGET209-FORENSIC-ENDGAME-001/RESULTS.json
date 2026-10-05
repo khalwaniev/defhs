@@ -1,0 +1,79 @@
+{
+  "mission": "RS-DEFHS-TARGET209-FORENSIC-ENDGAME-001",
+  "start_head": "3de7ff16471d8ab581055d37c1bc8c4b81ff4469",
+  "governance": {
+    "protected_validation_queried": false,
+    "kaggle_submission_made": false,
+    "certified_retrieval_map_modified": false,
+    "manual_test_audio_labeling": false
+  },
+  "phase_a_source": {
+    "candidate": "public BhavVani / CAMuLeNet Interspeech-2024 corpus",
+    "relationship": "NO_REPRODUCIBLE_RELATION_FOUND",
+    "competition_manifest_rows": 1035,
+    "public_metadata_rows_current_hf_mirror": 7991,
+    "character_source_marker_hits_in_1035_automated_competition_asr": 0,
+    "simple_four_class_order_tests": [
+      {"public_split_start":"train","known_competition_rows_checked":65,"label_matches":21,"false_matches":44,"label_agreement":0.3230769230769231},
+      {"public_split_start":"test","known_competition_rows_checked":60,"label_matches":15,"false_matches":45,"label_agreement":0.25},
+      {"public_split_start":"validation","known_competition_rows_checked":46,"label_matches":13,"false_matches":33,"label_agreement":0.2826086956521739}
+    ],
+    "exact_reproduction_rule": null,
+    "accepted_source_matches": 0,
+    "target209_coverage": 0,
+    "audio_identity_test": "NOT_AVAILABLE_FROM_PUBLIC_METADATA_ONLY; public BhavVani audio requires access request/form"
+  },
+  "phase_b_semantic_adjudication": {
+    "signal": "Qwen transcript semantic hard-label perturbation of frozen fixed E2V/XLS-R pair",
+    "alpha": 0.1,
+    "alpha_status": "PRE-FIXED_BEFORE_SCORING; NOT RETUNED AFTER SENSITIVITY",
+    "baseline_macro_f1": 0.7768156647359765,
+    "fused_macro_f1": 0.7896581648052758,
+    "delta": 0.012842500069299323,
+    "fold_deltas": [0.006723041655534723,0.03712791552395389,0.012166514235243064,0.006930885296907219,0.0013906371527844241],
+    "per_class_deltas": {
+      "angry": -0.0028007935581748633,
+      "happy": 0.022269628262968966,
+      "neutral": 0.01560157026603548,
+      "sad": 0.016299595306367376
+    },
+    "oof_prediction_changes": 29,
+    "wrong_to_correct": 18,
+    "correct_to_wrong": 8,
+    "wrong_to_other_wrong": 3,
+    "exact_existing_hard_surrogate_rows": 316,
+    "hard_surrogate_baseline_macro_f1": 0.5822591877846055,
+    "hard_surrogate_fused_macro_f1": 0.6109866729426786,
+    "hard_surrogate_delta": 0.028727485158073107,
+    "hard_surrogate_change_count": 29,
+    "non_hard_change_count": 0,
+    "permutation_controls": {
+      "n": 2000,
+      "seed": 20261005,
+      "preserved": "clear-label positions and Qwen class histogram",
+      "delta_mean": -0.004244114414205721,
+      "delta_max": 0.011097904093246624,
+      "permutations_ge_observed": 0
+    },
+    "target209_change_count": 2,
+    "target209_changed_ids": [265,884],
+    "certified_retrieval_rows_changed": 0
+  },
+  "phase_c_transductive": {
+    "method": "diagonal pseudo-test moment transfer on 395 numeric acoustic/domain features; confidence>=0.70 and teacher prediction stability required for synthetic copy",
+    "baseline_macro_f1": 0.5953630854151601,
+    "transductive_macro_f1": 0.5968060240237659,
+    "delta": 0.0014429386086057816,
+    "fold_deltas": [-0.009827388706395324,0.00544274582777271,-0.01906440987714797,0.013536240144557565,0.018524059834989504],
+    "per_class_deltas": {
+      "angry": 0.0021347495574299824,
+      "happy": 0.01358641358641366,
+      "neutral": -0.01708754208754204,
+      "sad": 0.007138133378121525
+    },
+    "positive_folds": 3,
+    "promotion_screen_pass": false,
+    "development_status": "TERMINATED_PER_PREDECLARED_SCREEN"
+  },
+  "final_verdict": "MULTIMODAL_ADJUDICATION_PROMISING"
+}
