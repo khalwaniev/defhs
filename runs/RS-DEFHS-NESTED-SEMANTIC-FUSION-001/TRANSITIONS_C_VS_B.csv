@@ -1,0 +1,13 @@
+transition,N,wrong_to_correct,correct_to_wrong,wrong_to_other_wrong,net_corrections
+angry -> happy,5,5,0,0,5
+angry -> neutral,9,4,4,1,0
+angry -> sad,3,0,3,0,-3
+happy -> angry,7,3,2,2,1
+happy -> neutral,6,3,3,0,0
+happy -> sad,18,12,1,5,11
+neutral -> angry,6,3,3,0,0
+neutral -> happy,11,9,2,0,7
+neutral -> sad,20,10,5,5,5
+sad -> angry,2,2,0,0,2
+sad -> happy,12,9,3,0,6
+sad -> neutral,26,16,5,5,11
