@@ -1,0 +1,76 @@
+{
+  "mission": "RS-DEFHS-TARGET209-FORENSIC-ENDGAME-001",
+  "addendum": "BOUNDED_SS_REVIEW_ADDENDUM",
+  "start_head": "d913cd27c56cfe26b5f0d4c6d0c437a7b333b730",
+  "frozen_alpha": 0.10,
+  "governance": {
+    "source_recovery_redone": false,
+    "phase_c_redone": false,
+    "alpha_tuned": false,
+    "larger_semantic_weights_tested": false,
+    "protected_validation_queried": false,
+    "kaggle_submission_made": false,
+    "certified_retrieval_map_changed": false
+  },
+  "angry_to_neutral_oof_audit": {
+    "N": 3,
+    "WRONG_TO_CORRECT": 2,
+    "CORRECT_TO_WRONG": 1,
+    "WRONG_TO_OTHER_WRONG": 0,
+    "NET_CORRECTIONS": 1,
+    "mechanism_concordance": {
+      "e2v_xlsr_disagreement": "3/3",
+      "e2v_xlsr_exact_angry_neutral_span": "3/3",
+      "fixed_pair_top2_angry_neutral": "3/3",
+      "fixed_pair_margin_lt_0_2": "3/3",
+      "target209_analogue": "Id 265 WAVEFORM_MODEL_DISAGREEMENT angry<->neutral"
+    }
+  },
+  "sad_to_neutral_oof_audit": {
+    "N": 7,
+    "WRONG_TO_CORRECT": 3,
+    "CORRECT_TO_WRONG": 2,
+    "WRONG_TO_OTHER_WRONG": 2,
+    "NET_CORRECTIONS": 1,
+    "mechanism_concordance": {
+      "e2v_xlsr_disagreement": "7/7",
+      "e2v_xlsr_exact_neutral_sad_span": "6/7",
+      "fixed_pair_top2_neutral_sad": "7/7",
+      "fixed_pair_margin_lt_0_2": "7/7",
+      "target209_analogue": "Id 884 NEUTRAL_SAD_ACOUSTIC_BOUNDARY neutral<->sad"
+    }
+  },
+  "v_a_diagnostic_only": {
+    "baseline_macro_f1": 0.8266398472107417,
+    "fused_macro_f1": 0.8390360540622483,
+    "delta": 0.012396206851506664,
+    "changed_decisions": 15,
+    "fold_deltas": [
+      0.02335258635662807,
+      0.025332811575863978,
+      0.0,
+      0.0063979460626821805,
+      0.005963151168630665
+    ],
+    "authority": "DIAGNOSTIC_ONLY",
+    "retraining": false,
+    "alpha_retuned": false
+  },
+  "candidate": {
+    "created": true,
+    "path": "runs/RS-DEFHS-TARGET209-FORENSIC-ENDGAME-001/submission_semantic_alpha010.csv",
+    "sha256": "c4600396b719821eb33711585b7782346e679fe06fc6f77413e66e5bccb71114",
+    "bytes": 2100,
+    "source_path": "runs/SS-DEFHS-TARGET209-EMPIRICAL-RESET-001/submission_fixed_pair_cv5.csv",
+    "source_sha256": "1dd6b8db750ec6eee0b0f48d4148eceefcdd4bb5eaeb8454fa278597ae44818e",
+    "source_bytes": 2094,
+    "rows": 209,
+    "schema_identical": true,
+    "id_order_identical": true,
+    "rows_different_from_fixed_pair": 2,
+    "changed_ids": [265, 884],
+    "retrieval_rows_changed": 0,
+    "submitted": false
+  },
+  "final_recommendation": "PROMOTE_SEMANTIC_ALPHA010_FOR_PUBLIC_PROBE"
+}
