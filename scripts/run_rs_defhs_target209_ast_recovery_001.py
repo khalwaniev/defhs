@@ -109,6 +109,7 @@ def run(args):
  import numpy as np, pandas as pd, torch
  from transformers import ASTFeatureExtractor, ASTModel
  out=Path(args.out); out.mkdir(parents=True,exist_ok=True); pi=parent(args.parent)
+ dump(Path(args.parent)/"PARENT_ACQUISITION.json",pi)
  search=Path("/kaggle/input") if args.auto_kaggle else Path(args.search)
  if args.auto_kaggle:
   s1=find(search,"B_VB_seed20260930",[f"B1_fold{k}_refit_STATE.pt" for k in FOLDS]+[f"B1_fold{k}_OOF.npz" for k in FOLDS])
