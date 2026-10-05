@@ -1,0 +1,3 @@
+Id,old_prediction,new_prediction,semantic_label,fixed_pair_margin,uncertainty_category,dominant_uncertainty_mechanism,certified_retrieval_covered
+265,angry,neutral,neutral,0.015937771853412053,HARD,WAVEFORM_MODEL_DISAGREEMENT,False
+884,sad,neutral,neutral,0.03987985947210182,HARD,NEUTRAL_SAD_ACOUSTIC_BOUNDARY,False
