@@ -1,0 +1,58 @@
+{
+  "mission": "RS-DEFHS-FAIRHINDISER-SCREEN-001",
+  "start_head": "d66d813859efa86589cd88cac0fc7f76ed600336",
+  "branch": "rs/fairhindiser-screen-001",
+  "preflight": "FAIL",
+  "final_verdict": "PREFLIGHT_FAIL_UNREPRODUCIBLE",
+  "model": {
+    "repo": "Saumya3007/spee_project_fairhindiser-clues",
+    "revision": "b01ef46f4e6c97f59b40de6c13459536858a945a",
+    "license": "MIT",
+    "checkpoint": "checkpoints/full_best.pt",
+    "checkpoint_commit": "437a90393dd725ee5c79e0a4c3c0577ff2a42e1b",
+    "checkpoint_size_bytes": 380480570,
+    "checkpoint_sha256": "aaf6c3eeb55b50934cdda47a09115e25cf4ae568e0c18c21086b2e1be3b184ae",
+    "checkpoint_public_download": true,
+    "base": "facebook/wav2vec2-base",
+    "declared_labels": [
+      "angry",
+      "happy",
+      "neutral",
+      "sad"
+    ],
+    "class_order_status": "UNVERIFIED_LOGIT_INDEX_MAPPING_NOT_PUBLISHED",
+    "documented_preprocessing": {
+      "sample_rate_hz": 16000,
+      "channels": "mono",
+      "normalization": "stated normalized; exact formula unspecified",
+      "truncation_padding": "unspecified",
+      "pooling": "pooled wav2vec2 features; exact operation unspecified"
+    },
+    "architecture_reproducible": false,
+    "missing_public_requirements": [
+      "FairSERModel implementation",
+      "complete inference script",
+      "exact MLP architecture",
+      "exact pooling/masking",
+      "exact LoRA configuration/placement",
+      "exact normalization procedure",
+      "truncation/padding/windowing",
+      "logit-index class mapping"
+    ]
+  },
+  "external_policy_status": "NOT_INDEPENDENTLY_VERIFIED_BEFORE_STOP",
+  "external_policy_note": "Live official Kaggle rules URL was checked, but detailed dynamic rule text was not retrievable in the current execution environment. This was non-decisive because the candidate already failed reproducibility.",
+  "execution": {
+    "checkpoint_downloaded": false,
+    "checkpoint_executed": false,
+    "gpu_used": false,
+    "stage1_executed": false,
+    "stage2_executed": false,
+    "stage3_blend_executed": false,
+    "target209_inferred": false,
+    "protected_validation_queried": false,
+    "kaggle_submission": false,
+    "retrieval_map_modified": false
+  },
+  "fixed_pair_macro_f1": 0.7768156647
+}
