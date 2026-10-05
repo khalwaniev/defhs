@@ -1,0 +1,25 @@
+reference,transition,N,wrong_to_correct,correct_to_wrong,wrong_to_other_wrong,net_corrections
+A,angry -> happy,35,5,26,4,-21
+A,angry -> neutral,15,1,12,2,-11
+A,angry -> sad,20,3,8,9,-5
+A,happy -> angry,26,2,20,4,-18
+A,happy -> neutral,15,4,11,0,-7
+A,happy -> sad,32,5,20,7,-15
+A,neutral -> angry,18,4,9,5,-5
+A,neutral -> happy,29,6,22,1,-16
+A,neutral -> sad,48,13,31,4,-18
+A,sad -> angry,16,3,7,6,-4
+A,sad -> happy,22,4,15,3,-11
+A,sad -> neutral,33,10,21,2,-11
+C,angry -> happy,40,6,27,7,-21
+C,angry -> neutral,12,2,10,0,-8
+C,angry -> sad,19,3,9,7,-6
+C,happy -> angry,32,5,26,1,-21
+C,happy -> neutral,23,6,15,2,-9
+C,happy -> sad,33,3,28,2,-25
+C,neutral -> angry,22,5,13,4,-8
+C,neutral -> happy,37,9,24,4,-15
+C,neutral -> sad,58,13,42,3,-29
+C,sad -> angry,15,4,9,2,-5
+C,sad -> happy,22,2,13,7,-11
+C,sad -> neutral,36,10,23,3,-13
