@@ -21,7 +21,8 @@
     "kernel_id": "khalwaniev/defhs-target209-ast-recovery-001",
     "wrapper": {
       "path": "kaggle/rs_defhs_target209_ast_recovery_001/run.py",
-      "git_blob_sha": "5476aa746036297e2325c560ccb93816afd71c17"
+      "git_blob_sha": "5b40311f00ce7065494ab7f1d32098219b923144",
+      "packaging": "Executor is fetched at runtime from immutable Git commit aec22601ff5995455627af4b5a233415c507e43f and verified against Git blob SHA1 9591a2517689e7ef05da85af1ae9adbb4f9a051f."
     },
     "metadata": {
       "path": "kaggle/rs_defhs_target209_ast_recovery_001/kernel-metadata.json",
@@ -89,5 +90,16 @@
     "perform previously blocked Stage-5 disagreement analysis versus A, C, Qwen, uncertainty category and certified retrieval",
     "produce descriptive conditional-value summary",
     "return to SS before any three-modality fusion or submission"
+  ],
+  "recovery_incidents": [
+    {
+      "version": 1,
+      "status": "ENGINEERING_FAILURE_NO_SCIENTIFIC_EXECUTION",
+      "failure": "Kaggle code_file ran but helper-copied executor sidecar was not present at /kaggle/src.",
+      "parent_acquisition": false,
+      "parity_started": false,
+      "target209_inference_started": false,
+      "fix_commit": "d30d8fce80c8669e2ef66b524353c559c5365ead"
+    }
   ]
 }
