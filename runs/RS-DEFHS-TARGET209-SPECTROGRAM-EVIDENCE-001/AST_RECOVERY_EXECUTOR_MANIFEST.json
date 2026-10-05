@@ -1,0 +1,93 @@
+{
+  "mission": "RS-DEFHS-TARGET209-SPECTROGRAM-EVIDENCE-001",
+  "addendum": "SPECTROGRAM_EXECUTION_RECOVERY",
+  "continuation_start_head": "dff057a43c667b60fb5ac6d25157ba14f4b8eece",
+  "status": "USER_EXECUTION_REQUIRED",
+  "execution_environment": "KAGGLE_RECOMMENDED_ONE_GPU",
+  "executor": {
+    "path": "scripts/run_rs_defhs_target209_ast_recovery_001.py",
+    "git_blob_sha": "9591a2517689e7ef05da85af1ae9adbb4f9a051f",
+    "role": "Pinned parent acquisition, checkpoint/OOF hash verification, parity gate, TARGET209 AST inference, compact output verification",
+    "prohibited": [
+      "training",
+      "checkpoint selection on TARGET209",
+      "weight modification",
+      "preprocessing change",
+      "protected validation",
+      "Kaggle competition submission"
+    ]
+  },
+  "kaggle": {
+    "kernel_id": "khalwaniev/defhs-target209-ast-recovery-001",
+    "wrapper": {
+      "path": "kaggle/rs_defhs_target209_ast_recovery_001/run.py",
+      "git_blob_sha": "5476aa746036297e2325c560ccb93816afd71c17"
+    },
+    "metadata": {
+      "path": "kaggle/rs_defhs_target209_ast_recovery_001/kernel-metadata.json",
+      "git_blob_sha": "08e0f12b22a0acb2f84b2c5ffcbcfd5c79b5bc66"
+    },
+    "push_helper": {
+      "path": "scripts/push_rs_defhs_target209_ast_recovery_001.sh",
+      "git_blob_sha": "a897bad62ff0fc89f825e7d94f4f711734d2537f"
+    },
+    "accelerator": "one GPU; executor explicitly uses cuda:0",
+    "internet": true,
+    "competition_source": "dataverse-detecting-emotions-from-hindi-speech",
+    "kernel_sources": [
+      "khalwaniev/defhs-system3-wave1-matched-adaptation",
+      "khalwaniev/defhs-system3-wave1-b-vb-20260917"
+    ]
+  },
+  "documentation": {
+    "instructions": {
+      "path": "runs/RS-DEFHS-TARGET209-SPECTROGRAM-EVIDENCE-001/RECOVERY_EXECUTION_INSTRUCTIONS.md",
+      "git_blob_sha": "3ca7ff2a171076a84ba8c2185d33c88ce87d599c"
+    },
+    "knowledge_note": {
+      "path": "runs/RS-DEFHS-TARGET209-SPECTROGRAM-EVIDENCE-001/KNOWLEDGE_NOTE.md",
+      "git_blob_sha": "203793f43405a0df4a6dce69fb71791f3af98fcf"
+    }
+  },
+  "parent": {
+    "model": "MIT/ast-finetuned-audioset-10-10-0.4593",
+    "revision": "f826b80d28226b62986cc218e5cec390b1096902",
+    "file": "model.safetensors",
+    "required_sha256": "ae0c1e2ad4e1381d851fa9bf298ba13ebc9c5a914cdee2dbe427a6583869924d",
+    "config_sha256": "a93d525511d77e8ecc933d09674b85099815bbbb417c228a4edd655e252fb9ff",
+    "preprocessor_config_sha256": "8d04ba5a9c6fca5d39d0de2b1fd05ecf79deb589fbba279728bbebac39934231"
+  },
+  "canonical_aggregation": {
+    "segment": "mean of per-segment softmax probability vectors",
+    "outer_models": "uniform mean of five ordinary PRIMARY_CV outer models within each seed",
+    "seeds": "arithmetic mean of seeds 20260930 and 20260917",
+    "class_order": [
+      "angry",
+      "happy",
+      "neutral",
+      "sad"
+    ]
+  },
+  "parity_gate": {
+    "deterministic_rows_per_model": 3,
+    "model_row_comparisons": 30,
+    "hard_label_mismatches_required": 0,
+    "max_abs_diff_max": 0.0001,
+    "mean_abs_diff_max": 0.00002,
+    "action_on_failure": "hard stop before TARGET209 inference"
+  },
+  "expected_outputs": {
+    "parent_record": "/kaggle/working/ast_parent_f826b80/PARENT_ACQUISITION.json",
+    "parity": "/kaggle/working/rs_defhs_target209_ast_recovery_001/PARITY_PREFLIGHT.json",
+    "evidence": "/kaggle/working/rs_defhs_target209_ast_recovery_001/TARGET209_AST_EVIDENCE.csv",
+    "large_probabilities": "/kaggle/working/rs_defhs_target209_ast_recovery_001/TARGET209_AST_FOLD_SEED_PROBS.npz",
+    "summary": "/kaggle/working/rs_defhs_target209_ast_recovery_001/TARGET209_AST_RECOVERY_SUMMARY.json"
+  },
+  "after_user_return": [
+    "verify parent hash and parity report",
+    "verify TARGET209_AST_EVIDENCE.csv has exact 209 IDs and normalized finite probabilities",
+    "perform previously blocked Stage-5 disagreement analysis versus A, C, Qwen, uncertainty category and certified retrieval",
+    "produce descriptive conditional-value summary",
+    "return to SS before any three-modality fusion or submission"
+  ]
+}
