@@ -1,0 +1,20 @@
+{
+  "mission": "RS-DEFHS-POCKET-MIMI-REPRESENTATION-001",
+  "mission_status": "BLOCKED",
+  "phase_reached": "PHASE_0",
+  "model_architecture_status": "PASS",
+  "model_reproducibility_status": "PASS_WITH_BINARY_HASH_PENDING_FIRST_DOWNLOAD",
+  "software_license_status": "PASS_MIT",
+  "weights_license_status": "PASS_CC_BY_4_0",
+  "technical_representation_status": "PASS_PREDECLARED",
+  "competition_policy_status": "UNVERIFIED_EXTERNAL_MODEL_PERMISSION",
+  "cpu_preflight": "NOT_RUN_POLICY_BLOCKER",
+  "primary_cv": "NOT_RUN_POLICY_BLOCKER",
+  "target209_extraction_run": false,
+  "gpu_used": false,
+  "gpu_hours": 0,
+  "kaggle_submission": false,
+  "final_verdict": "BLOCKED_EXTERNAL_MODEL_POLICY_UNVERIFIED",
+  "fusion_followup_justified": false,
+  "next_scientific_bottleneck": "SS must verify/preserve the exact official DEFHS competition clause governing external pretrained models. If allowed, resume this same mission at Phase 1 with the already frozen single 64-D Mimi mean+std representation; do not redesign the probe."
+}
