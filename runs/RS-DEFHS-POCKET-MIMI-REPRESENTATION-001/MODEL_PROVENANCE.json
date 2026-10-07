@@ -27,11 +27,34 @@
       "access": "gated; acceptance required"
     },
     "encoder_capability": {
-      "status": "FAIL",
-      "frozen_checkpoint_encoder": "all-zero by no-voice-cloning release design",
-      "official_source_check": "training/scripts/precompute_latents.py at 3dbee45d343d7dddd0d105468d17f8dcba14db3e explicitly rejects encoder_max==0",
-      "intended_representation_executable": false,
-      "alternate_full_checkpoint_requires_ss_reauthorization": true
+      "status": "PENDING_VALIDATION_ON_AUTHORIZED_FULL_CHECKPOINT",
+      "intended_representation_executable": null,
+      "required_checks": [
+        "resolved revision exact",
+        "binary SHA256 recorded",
+        "strict Mimi state load",
+        "encoder_max > 0",
+        "encoder tensor non-degeneracy",
+        "encode_to_latent executes"
+      ]
+    },
+    "rejected_checkpoint": {
+      "repo": "kyutai/pocket-tts-without-voice-cloning",
+      "path": "languages/english_2026-09/model.safetensors",
+      "revision": "e7205b6ee50e654a5ea19f0e9df2b0813b05e921",
+      "status": "REJECTED_FOR_ENCODER_EXTRACTION",
+      "reason": "all-zero Mimi encoder by no-voice-cloning release design"
+    },
+    "authorized_checkpoint": {
+      "repo": "kyutai/pocket-tts",
+      "path": "languages/english_2026-09/model.safetensors",
+      "revision": "983151f13aaeab1b13c1e5e3c2c383d49a9edf3f",
+      "license": "CC-BY-4.0",
+      "access": "gated; acceptance required; no purchase/subscription cost",
+      "accessibility_status": "PASS_REASONABLY_ACCESSIBLE",
+      "use_authorized": true,
+      "binary_sha256": null,
+      "binary_sha256_status": "PENDING_EXACT_GATED_DOWNLOAD"
     }
   },
   "encoder": {
