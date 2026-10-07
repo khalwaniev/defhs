@@ -1,0 +1,28 @@
+{
+  "mission": "RS-DEFHS-POCKET-MIMI-REPRESENTATION-001",
+  "status": "BLOCKER_RESOLVED",
+  "previous_blocker": "UNVERIFIED_EXTERNAL_MODEL_PERMISSION",
+  "resolved_status": "PASS_EXTERNAL_MODEL_ALLOWED",
+  "authority_type": "official Kaggle Competition-Specific Rules",
+  "retrieval_command": "kaggle competitions pages dataverse-detecting-emotions-from-hindi-speech --page-name rules --content",
+  "section": "5. EXTERNAL DATA AND TOOLS",
+  "exact_clauses": [
+    "Participants may use data other than the Competition Data to develop and test submissions when that External Data is publicly available and equally accessible to all participants at no cost, or otherwise satisfies the Reasonableness criteria.",
+    "The use of external data and models is acceptable unless specifically prohibited by the Host."
+  ],
+  "accessibility_requirement": "External data/models/tools must be reasonably accessible to all and of minimal/reasonable cost.",
+  "automated_ml_clause": "Automated machine-learning tools may be used provided the participant has an appropriate license.",
+  "pocket_tts_assessment": {
+    "code_repo": "kyutai-labs/pocket-tts",
+    "version": "v3.3.0",
+    "release_commit": "3dbee45d343d7dddd0d105468d17f8dcba14db3e",
+    "code_license": "MIT",
+    "checkpoint_repo": "kyutai/pocket-tts-without-voice-cloning",
+    "checkpoint_revision": "e7205b6ee50e654a5ea19f0e9df2b0813b05e921",
+    "checkpoint_path": "languages/english_2026-09/model.safetensors",
+    "checkpoint_access": "public / ungated / no purchase required",
+    "weights_license": "CC-BY-4.0",
+    "conclusion": "satisfies current external-model permission gate unless a contradictory host-specific restriction is later established"
+  },
+  "provenance_note": "Rule text supplied by SS from the official Kaggle CLI page retrieval; not inferred from prior model use."
+}
