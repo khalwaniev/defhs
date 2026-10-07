@@ -68,6 +68,15 @@ def find_competition_root():
     return roots[0]
 
 print("INSTALLING_PINNED_POCKET_TTS", flush=True)
+# Kaggle images may already contain a same-version pocket-tts distribution.
+# Remove it first so the subsequent import must resolve to the exact VCS commit.
+subprocess.run(
+    [sys.executable, "-m", "pip", "uninstall", "-y", "pocket-tts"],
+    check=False,
+    stdout=subprocess.PIPE,
+    stderr=subprocess.STDOUT,
+    text=True,
+)
 subprocess.check_call([
     sys.executable, "-m", "pip", "install", "--quiet", "--no-cache-dir",
     f"git+https://github.com/{POCKET_REPO}.git@{POCKET_COMMIT}",
@@ -97,13 +106,36 @@ pkg_version = importlib.metadata.version("pocket-tts")
 if pkg_version != POCKET_VERSION:
     raise RuntimeError(f"pocket-tts version mismatch: {pkg_version} != {POCKET_VERSION}")
 
+dist = importlib.metadata.distribution("pocket-tts")
+direct_url_raw = dist.read_text("direct_url.json")
+if not direct_url_raw:
+    raise RuntimeError("Installed pocket-tts has no PEP-610 direct_url.json; exact VCS provenance not established")
+direct_url = json.loads(direct_url_raw)
+installed_commit = ((direct_url.get("vcs_info") or {}).get("commit_id"))
+if installed_commit != POCKET_COMMIT:
+    raise RuntimeError(
+        f"Installed pocket-tts commit mismatch: got {installed_commit}, expected {POCKET_COMMIT}; "
+        f"direct_url={direct_url}"
+    )
+
 pkg_dir = Path(pocket_tts.__file__).resolve().parent
 config_path = pkg_dir / "config" / "english_2026-09.yaml"
 mimi_source_path = pkg_dir / "models" / "mimi.py"
-if git_blob_sha1(config_path) != CONFIG_GIT_BLOB:
-    raise RuntimeError("Pinned config Git blob mismatch")
-if git_blob_sha1(mimi_source_path) != MIMI_GIT_BLOB:
-    raise RuntimeError("Pinned Mimi source Git blob mismatch")
+actual_config_blob = git_blob_sha1(config_path)
+actual_mimi_blob = git_blob_sha1(mimi_source_path)
+print(
+    f"PINNED_SOURCE_CHECK commit={installed_commit} "
+    f"config_blob={actual_config_blob} mimi_blob={actual_mimi_blob}",
+    flush=True,
+)
+if actual_config_blob != CONFIG_GIT_BLOB:
+    raise RuntimeError(
+        f"Pinned config Git blob mismatch: got {actual_config_blob}, expected {CONFIG_GIT_BLOB}"
+    )
+if actual_mimi_blob != MIMI_GIT_BLOB:
+    raise RuntimeError(
+        f"Pinned Mimi source Git blob mismatch: got {actual_mimi_blob}, expected {MIMI_GIT_BLOB}"
+    )
 
 print("DOWNLOADING_EXACT_PUBLIC_CHECKPOINT", flush=True)
 ckpt = Path(hf_hub_download(
@@ -242,8 +274,9 @@ summary = {
         "repo": POCKET_REPO,
         "version": pkg_version,
         "commit": POCKET_COMMIT,
-        "config_git_blob_sha1": git_blob_sha1(config_path),
-        "mimi_source_git_blob_sha1": git_blob_sha1(mimi_source_path),
+        "pep610_direct_url": direct_url,
+        "config_git_blob_sha1": actual_config_blob,
+        "mimi_source_git_blob_sha1": actual_mimi_blob,
     },
     "checkpoint": {
         "repo": HF_REPO,
