@@ -1,0 +1,27 @@
+{
+  "mission": "RS-DEFHS-POCKET-MIMI-REPRESENTATION-001",
+  "incident": "PREFLIGHT_INCIDENT_001",
+  "kernel": "khalwaniev/defhs-pocket-mimi-preflight-001",
+  "kernel_version": 1,
+  "source_head": "2f6b6e57d35ea7c8c03b8c55ae369864d92512ca",
+  "status": "INFRASTRUCTURE_SOURCE_PROVENANCE_FAILURE_BEFORE_MODEL_EXECUTION",
+  "observed_error": "RuntimeError: Pinned config Git blob mismatch",
+  "observed_stage": "after pip install, before checkpoint download, Mimi build, audio preprocessing, or representation extraction",
+  "scientific_result": false,
+  "root_cause_assessment": "Most likely Kaggle resolved an already-present same-version pocket-tts installation rather than guaranteeing import from the exact VCS commit. The failure is therefore provenance/install closure, not model or representation failure.",
+  "remediation": {
+    "strategy": "remove any pre-existing pocket-tts distribution, reinstall from exact VCS commit, verify PEP-610 direct_url commit_id, then preserve the original Git-blob checks",
+    "loosened_integrity_check": false,
+    "representation_changed": false,
+    "model_changed": false,
+    "checkpoint_changed": false
+  },
+  "no_execution": {
+    "checkpoint_downloaded": false,
+    "mimi_inference_run": false,
+    "primary_cv_run": false,
+    "target209_run": false,
+    "gpu_used": false,
+    "kaggle_submission": false
+  }
+}
