@@ -1,12 +1,13 @@
 {
   "mission": "RS-DEFHS-POCKET-MIMI-REPRESENTATION-001",
-  "status": "PENDING_PHASE1_PREFLIGHT",
+  "status": "NOT_RUN_INVALID_FROZEN_CHECKPOINT",
   "primary_cv": "historical V-B",
   "membership_sha256": "87c6c0b33e5ea5c05b2bd2537d29480e4285cf816d4a921a6f1bcb3ef854139b",
   "representation": "POCKET_MIMI_CONTINUOUS_MEANSTD",
-  "reason": "External-model policy blocker resolved; exact frozen representation awaiting CPU Kaggle technical preflight.",
+  "reason": "The authorized no-voice-cloning checkpoint intentionally has an all-zero Mimi encoder, so encode_to_latent cannot provide the intended representation. No PRIMARY_CV score was consumed.",
   "protected_validation_queried": false,
   "public_lb_tuned": false,
   "kaggle_submission": false,
-  "policy_status": "PASS_EXTERNAL_MODEL_ALLOWED"
+  "policy_status": "PASS_EXTERNAL_MODEL_ALLOWED",
+  "checkpoint_encoder_status": "ALL_ZERO_BY_RELEASE_DESIGN"
 }
