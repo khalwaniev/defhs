@@ -1,0 +1,36 @@
+{
+  "mission": "RS-DEFHS-POCKET-MIMI-REPRESENTATION-001",
+  "incident": "PREFLIGHT_INCIDENT_002",
+  "kernel": "khalwaniev/defhs-pocket-mimi-preflight-001",
+  "kernel_version": 2,
+  "source_head": "f856aebb004e5affc4d8487e108f7240dd90cab8",
+  "status": "INFRASTRUCTURE_PACKAGING_PROVENANCE_FAILURE_BEFORE_MODEL_EXECUTION",
+  "observed_stdout": "PINNED_SOURCE_CHECK commit=3dbee45d343d7dddd0d105468d17f8dcba14db3e config_blob=8ee2041a8888ed3d41249c0f39bdd4f7d7bfd28b mimi_blob=9102e35baf85f7c25653f0cf3b2d3e2edd0c8982",
+  "observed_error": "RuntimeError: Pinned config Git blob mismatch: got 8ee2041a8888ed3d41249c0f39bdd4f7d7bfd28b, expected fd7205053ffac3e60cb08423f760707b67de5679",
+  "observed_stage": "after exact VCS commit installation/provenance verification; before checkpoint download, Mimi construction/inference, audio preprocessing, or representation extraction",
+  "scientific_result": false,
+  "evidence": {
+    "exact_vcs_commit_verified": true,
+    "verified_commit": "3dbee45d343d7dddd0d105468d17f8dcba14db3e",
+    "packaged_config_blob": "8ee2041a8888ed3d41249c0f39bdd4f7d7bfd28b",
+    "packaged_mimi_blob": "9102e35baf85f7c25653f0cf3b2d3e2edd0c8982",
+    "repository_config_blob": "fd7205053ffac3e60cb08423f760707b67de5679",
+    "repository_mimi_blob": "2656cd57f5516ad54cbe56abdd93a42482ed2388"
+  },
+  "root_cause_assessment": "The exact VCS commit was installed, but build/install packaging transformed packaged source bytes, so Git-object blob hashes of installed wheel/editable-distribution files are not a valid repository provenance invariant.",
+  "remediation": {
+    "strategy": "clone the exact Pocket-TTS commit into a detached Git checkout, install that checkout editable, verify checkout HEAD/cleanliness/import path, and compute Git blob identities directly from the checkout files",
+    "loosened_integrity_check": false,
+    "representation_changed": false,
+    "model_changed": false,
+    "checkpoint_changed": false
+  },
+  "no_execution": {
+    "checkpoint_downloaded": false,
+    "mimi_inference_run": false,
+    "primary_cv_run": false,
+    "target209_run": false,
+    "gpu_used": false,
+    "kaggle_submission": false
+  }
+}
