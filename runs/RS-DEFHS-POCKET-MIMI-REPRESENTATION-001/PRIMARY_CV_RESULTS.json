@@ -1,11 +1,12 @@
 {
   "mission": "RS-DEFHS-POCKET-MIMI-REPRESENTATION-001",
-  "status": "NOT_RUN_POLICY_BLOCKER",
+  "status": "PENDING_PHASE1_PREFLIGHT",
   "primary_cv": "historical V-B",
   "membership_sha256": "87c6c0b33e5ea5c05b2bd2537d29480e4285cf816d4a921a6f1bcb3ef854139b",
   "representation": "POCKET_MIMI_CONTINUOUS_MEANSTD",
-  "reason": "Phase-0 external-model competition-policy compatibility could not be established from an authoritative DEFHS rule source.",
+  "reason": "External-model policy blocker resolved; exact frozen representation awaiting CPU Kaggle technical preflight.",
   "protected_validation_queried": false,
   "public_lb_tuned": false,
-  "kaggle_submission": false
+  "kaggle_submission": false,
+  "policy_status": "PASS_EXTERNAL_MODEL_ALLOWED"
 }
