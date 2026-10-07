@@ -91,3 +91,24 @@ Therefore:
 `POLICY_STATUS = UNVERIFIED_EXTERNAL_MODEL_PERMISSION`.
 
 Per this mission's Phase-0 instruction, this is a mandatory STOP condition. No extraction or PRIMARY_CV probe is run until SS supplies or independently verifies the exact official external-model rule.
+
+
+## Policy blocker resolution — 2026-10-07
+
+Historical Phase-0 blocker preserved: `UNVERIFIED_EXTERNAL_MODEL_PERMISSION`.
+
+Resolved by official Kaggle Competition-Specific Rules retrieved with:
+
+`kaggle competitions pages dataverse-detecting-emotions-from-hindi-speech --page-name rules --content`
+
+Section **5. EXTERNAL DATA AND TOOLS** states:
+- “Participants may use data other than the Competition Data to develop and test submissions when that External Data is publicly available and equally accessible to all participants at no cost, or otherwise satisfies the Reasonableness criteria.”
+- “The use of external data and models is acceptable unless specifically prohibited by the Host.”
+
+The same section requires reasonable accessibility/minimal or reasonable cost and permits automated ML tools with appropriate licensing.
+
+For the frozen study, Pocket-TTS v3.3.0 code is MIT; the preferred no-voice-cloning checkpoint is public/ungated/no-cost and CC-BY-4.0. No contradictory host-specific restriction has been identified in the preserved authority.
+
+**POLICY_STATUS = PASS_EXTERNAL_MODEL_ALLOWED**
+
+The representation remains unchanged: `POCKET_MIMI_CONTINUOUS_MEANSTD`, one representation only.
