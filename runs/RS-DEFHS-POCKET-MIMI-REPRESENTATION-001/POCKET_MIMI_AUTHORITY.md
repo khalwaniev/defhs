@@ -112,3 +112,12 @@ For the frozen study, Pocket-TTS v3.3.0 code is MIT; the preferred no-voice-clon
 **POLICY_STATUS = PASS_EXTERNAL_MODEL_ALLOWED**
 
 The representation remains unchanged: `POCKET_MIMI_CONTINUOUS_MEANSTD`, one representation only.
+
+
+## Decisive checkpoint encoder audit — 2026-10-07
+
+The frozen public/ungated checkpoint is **not valid for representation extraction**. At Pocket-TTS v3.3.0 commit `3dbee45d343d7dddd0d105468d17f8dcba14db3e`, `training/scripts/precompute_latents.py` loads the Mimi weights, computes the maximum absolute value across `encoder.*` tensors, and aborts when that value is zero with an explicit message that the checkpoint is a release without voice cloning and that weights with a real encoder are required.
+
+Kyutai's no-voice-cloning release construction zeroes `mimi.encoder*` tensors. Therefore the frozen `kyutai/pocket-tts-without-voice-cloning` checkpoint cannot support the mission's `MimiModel.encode_to_latent` representation.
+
+This is **not** evidence that Mimi is scientifically weak; it invalidates the frozen checkpoint authority for encoder extraction. The continuation prohibits silently testing another Pocket-TTS checkpoint, so execution stops and returns to SS.
