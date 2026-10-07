@@ -1,0 +1,38 @@
+{
+  "mission": "RS-DEFHS-POCKET-MIMI-REPRESENTATION-001",
+  "audit": "CHECKPOINT_ENCODER_AUDIT",
+  "status": "FAIL_FROZEN_CHECKPOINT_ENCODER_DISABLED",
+  "frozen_checkpoint": {
+    "repo": "kyutai/pocket-tts-without-voice-cloning",
+    "revision": "e7205b6ee50e654a5ea19f0e9df2b0813b05e921",
+    "path": "languages/english_2026-09/model.safetensors"
+  },
+  "official_source_authority": {
+    "repo": "kyutai-labs/pocket-tts",
+    "release_commit": "3dbee45d343d7dddd0d105468d17f8dcba14db3e",
+    "file": "training/scripts/precompute_latents.py",
+    "behavior": [
+      "loads config.weights_path into Mimi",
+      "computes max absolute value over encoder.* tensors",
+      "if encoder_max == 0, aborts and states the checkpoint ships an all-zero Mimi encoder (a release without voice cloning)",
+      "instructs caller to use weights with a real encoder"
+    ]
+  },
+  "supporting_public_checkpoint_construction": "Kyutai's no-voice-cloning conversion zeroes tensors whose keys start with mimi.encoder.",
+  "consequence": "The frozen ungated checkpoint cannot be used to test POCKET_MIMI_CONTINUOUS_MEANSTD, because encode_to_latent depends on the Mimi encoder and encoder_transformer.",
+  "permitted_action_under_current_mission": "STOP_AND_RETURN_TO_SS",
+  "prohibited_silent_action": "Switching to config.weights_path / gated kyutai/pocket-tts full checkpoint would violate the continuation's no-other-Pocket-TTS-checkpoints constraint unless SS explicitly reauthorizes it.",
+  "scientific_result": "No representation score was produced. This is an invalid checkpoint authority for the intended encoder experiment, not evidence that the Mimi representation itself is weak.",
+  "preflight_history": {
+    "kernel_versions_attempted": [
+      1,
+      2,
+      3
+    ],
+    "v1": "packaged config Git-blob provenance assertion failed before checkpoint download",
+    "v2": "exact VCS commit verified; packaged-byte Git-blob assertion failed before checkpoint download",
+    "v3": "editable install not importable in current interpreter; failed before checkpoint download",
+    "none_reached_mimi_inference": true
+  },
+  "recommended_ss_decision": "Either explicitly authorize the exact encoder-capable gated full checkpoint already referenced by the same v3.3.0 config, or close the Pocket-Mimi direction. Do not continue with the no-voice-cloning checkpoint."
+}
