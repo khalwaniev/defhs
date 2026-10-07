@@ -1,13 +1,15 @@
 {
   "mission": "RS-DEFHS-POCKET-MIMI-REPRESENTATION-001",
-  "status": "NOT_RUN_INVALID_FROZEN_CHECKPOINT",
+  "status": "PENDING_AUTHORIZED_FULL_CHECKPOINT_PREFLIGHT",
   "primary_cv": "historical V-B",
   "membership_sha256": "87c6c0b33e5ea5c05b2bd2537d29480e4285cf816d4a921a6f1bcb3ef854139b",
   "representation": "POCKET_MIMI_CONTINUOUS_MEANSTD",
-  "reason": "The authorized no-voice-cloning checkpoint intentionally has an all-zero Mimi encoder, so encode_to_latent cannot provide the intended representation. No PRIMARY_CV score was consumed.",
+  "reason": "SS authorized exact encoder-capable full checkpoint; PRIMARY_CV remains untouched until checkpoint validation and CPU preflight pass.",
   "protected_validation_queried": false,
   "public_lb_tuned": false,
   "kaggle_submission": false,
   "policy_status": "PASS_EXTERNAL_MODEL_ALLOWED",
-  "checkpoint_encoder_status": "ALL_ZERO_BY_RELEASE_DESIGN"
+  "checkpoint_encoder_status": "ALL_ZERO_BY_RELEASE_DESIGN",
+  "checkpoint_repo": "kyutai/pocket-tts",
+  "checkpoint_revision": "983151f13aaeab1b13c1e5e3c2c383d49a9edf3f"
 }
