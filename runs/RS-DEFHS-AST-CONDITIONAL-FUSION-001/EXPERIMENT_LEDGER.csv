@@ -1,0 +1,2 @@
+experiment_id,hypothesis,baseline,change,validation,configuration,compute,result,verdict,artifact
+P1-001,Inference-time C/AST/semantic relations can identify AST_WIN without target labels,C unchanged,Within-heldout-fold cross-fitted L2 logistic gate,PRIMARY_CV historical V-B mechanism test,PHASE1_PROTOCOL.md,CPU only,PENDING,PENDING,PHASE1_RESULTS.json
