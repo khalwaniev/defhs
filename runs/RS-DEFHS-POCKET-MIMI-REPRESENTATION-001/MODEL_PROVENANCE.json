@@ -25,6 +25,13 @@
       "path": "languages/english_2026-09/model.safetensors",
       "revision": "983151f13aaeab1b13c1e5e3c2c383d49a9edf3f",
       "access": "gated; acceptance required"
+    },
+    "encoder_capability": {
+      "status": "FAIL",
+      "frozen_checkpoint_encoder": "all-zero by no-voice-cloning release design",
+      "official_source_check": "training/scripts/precompute_latents.py at 3dbee45d343d7dddd0d105468d17f8dcba14db3e explicitly rejects encoder_max==0",
+      "intended_representation_executable": false,
+      "alternate_full_checkpoint_requires_ss_reauthorization": true
     }
   },
   "encoder": {
