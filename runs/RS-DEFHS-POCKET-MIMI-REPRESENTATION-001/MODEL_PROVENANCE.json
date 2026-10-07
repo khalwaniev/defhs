@@ -1,0 +1,61 @@
+{
+  "mission": "RS-DEFHS-POCKET-MIMI-REPRESENTATION-001",
+  "source_type": "external_pretrained_model",
+  "software": {
+    "name": "kyutai-labs/pocket-tts",
+    "version": "3.3.0",
+    "release_commit": "3dbee45d343d7dddd0d105468d17f8dcba14db3e",
+    "current_main_observed": "41cbc84af539ea78a804ffca5f9c6edc1a22ce44",
+    "license": "MIT",
+    "config_path": "pocket_tts/config/english_2026-09.yaml",
+    "config_git_blob": "fd7205053ffac3e60cb08423f760707b67de5679",
+    "mimi_source_path": "pocket_tts/models/mimi.py",
+    "mimi_git_blob": "2656cd57f5516ad54cbe56abdd93a42482ed2388"
+  },
+  "weights": {
+    "preferred_for_codec_only": "kyutai/pocket-tts-without-voice-cloning",
+    "path": "languages/english_2026-09/model.safetensors",
+    "revision": "e7205b6ee50e654a5ea19f0e9df2b0813b05e921",
+    "license": "CC-BY-4.0",
+    "access": "public/ungated",
+    "binary_sha256": null,
+    "binary_sha256_status": "NOT_MATERIALIZED_IN_WORKER_RUNTIME; do not invent",
+    "voice_cloning_alternative": {
+      "repo": "kyutai/pocket-tts",
+      "path": "languages/english_2026-09/model.safetensors",
+      "revision": "983151f13aaeab1b13c1e5e3c2c383d49a9edf3f",
+      "access": "gated; acceptance required"
+    }
+  },
+  "encoder": {
+    "component": "Pocket-TTS continuous Mimi-derived codec encoder",
+    "method": "MimiModel.encode_to_latent",
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "frame_rate_hz": 12.5,
+    "latent_dim": 32,
+    "output_shape": "[B,T,32]",
+    "quantized": false,
+    "text_required": false,
+    "generation_required": false
+  },
+  "training_context": {
+    "released_model_training_language": "English",
+    "technical_report_training_data_hours_approx": 88000,
+    "semantic_distillation": "WavLM cosine-similarity distillation into continuous codec latent"
+  },
+  "package_requirements": {
+    "python": ">=3.10,<3.15",
+    "torch": ">=2.5.0",
+    "pocket_tts": "3.3.0"
+  },
+  "policy": {
+    "project_external_data_policy": "conditional on competition rules and accessibility/reproducibility",
+    "exact_DEFHS_external_model_rule_verified": false,
+    "status": "UNVERIFIED_EXTERNAL_MODEL_PERMISSION"
+  },
+  "network_access": {
+    "needed_for_first_checkpoint_download": true,
+    "final_reproducibility": "possible with exact revision once competition policy is cleared"
+  }
+}
