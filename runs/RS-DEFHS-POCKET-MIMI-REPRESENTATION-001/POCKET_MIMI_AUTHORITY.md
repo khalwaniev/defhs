@@ -121,3 +121,24 @@ The frozen public/ungated checkpoint is **not valid for representation extractio
 Kyutai's no-voice-cloning release construction zeroes `mimi.encoder*` tensors. Therefore the frozen `kyutai/pocket-tts-without-voice-cloning` checkpoint cannot support the mission's `MimiModel.encode_to_latent` representation.
 
 This is **not** evidence that Mimi is scientifically weak; it invalidates the frozen checkpoint authority for encoder extraction. The continuation prohibits silently testing another Pocket-TTS checkpoint, so execution stops and returns to SS.
+
+
+## SS checkpoint-authority patch — 2026-10-07
+
+The no-voice-cloning checkpoint remains preserved as **REJECTED FOR THIS EXPERIMENT** because its Mimi encoder is intentionally zeroed. This is not a scientific rejection of Mimi.
+
+SS explicitly authorizes ONLY the encoder-capable full checkpoint already referenced by the same v3.3.0 config:
+
+- repository: `kyutai/pocket-tts`
+- path: `languages/english_2026-09/model.safetensors`
+- revision: `983151f13aaeab1b13c1e5e3c2c383d49a9edf3f`
+- license: CC-BY-4.0
+- access: gated Hugging Face repository; ordinary account + acceptance of Kyutai conditions + authorized token; no purchase/subscription cost
+
+SS status:
+- `FULL_CHECKPOINT_ACCESSIBILITY_STATUS=PASS_REASONABLY_ACCESSIBLE`
+- `FULL_CHECKPOINT_USE_AUTHORIZED=YES`
+
+If the runtime lacks accepted gated access or an authorized token, execution must stop as `ACCESS_SETUP`; the gate must not be bypassed.
+
+Every scientific choice remains frozen: Pocket-TTS v3.3.0 at `3dbee45d343d7dddd0d105468d17f8dcba14db3e`, `MimiModel.encode_to_latent`, mono 24 kHz, continuous unquantized [T,32], temporal population mean + population std, 64 dimensions, no second representation.
