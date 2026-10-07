@@ -1,0 +1,69 @@
+{
+  "mission": "RS-DEFHS-AST-CONDITIONAL-FUSION-001",
+  "start_commit": "22c2995aefa959c6f1e0712b4e574083e45b1671",
+  "start_tree": "7c6d63d7ce56b716b3943f09e036d84c837169dd",
+  "primary_cv": {
+    "name": "historical V-B",
+    "membership_sha256": "87c6c0b33e5ea5c05b2bd2537d29480e4285cf816d4a921a6f1bcb3ef854139b",
+    "seed": 20260930,
+    "metric": "four-class macro-F1"
+  },
+  "authorities": {
+    "A_FIXED_PAIR_VB": {
+      "sha256": "9f9ac86829230bcfde4be93a980161bf6139eaa38f3372efc822eb8edf79da45",
+      "drive_id": "1tXj5f8CBKczNTcSLC9UFLbwqRMAtB67K"
+    },
+    "AST_B1_SEED_MEAN_VB": {
+      "sha256": "23c8397876917c25e51902035f6e27bdd71d52f8909dcdb3052ea3c678156f2d",
+      "drive_id": "1pcYa59cNh4y02xz1oJzfBAhU34a_o-8k"
+    },
+    "E2V_FEATURES": {
+      "sha256": "4b8b6feeedc83ca2712b7fd21d9683465a07f7fcb82ca0c1d625512acf64326f",
+      "drive_id": "1R3_zf46opUk5XDbZm7FocKz2j1qWqVmQ"
+    },
+    "XLSR_FEATURES": {
+      "sha256": "24bd935cc0271d5ae427acfed96a0237161b646e1bdcc1f2cb80c48abdcfa5fc",
+      "drive_id": "1VLdnjTHyQXZ6RGYjLtqZEygN9fFCOOP9"
+    },
+    "QWEN_SEMANTIC_OUTPUTS": {
+      "sha256": "a2dad2feeac7cc817716ae4eb0cd8724c2f169c06262d45d8e00e66345e1569b",
+      "drive_id": "1_dVu2C35GVXjzRordjPhrFrJB1-FyzS5"
+    },
+    "VALIDATION_VB_FOLDS": {
+      "sha256": "87c6c0b33e5ea5c05b2bd2537d29480e4285cf816d4a921a6f1bcb3ef854139b",
+      "drive_id": "1SkJiF22Cq6QTBm_DpYytveNnTxL4-pmm"
+    },
+    "E2V_OUTER_HEADS_SHA256": [
+      "53cea7ac1b5076e6db4a76173281b2142ef291436844b904694a0c6de7b13146",
+      "b6e82d2d2132e53607f6bfdff7eceed200011a28fe26a6d61cb0a40ec67003fe",
+      "a5184780c6012f09715e012b2649208445ddb42e0d0a29cf13d9bd02037dd3d0",
+      "d13adf927e65909a0fa2298b87df73489ac6fbf904d61b01eeb4f6cb836cc916",
+      "d0fbec8b8a87c1218dd12ad4101e7ac43951bd410b671f777cc07a7589f4b929"
+    ],
+    "XLSR_OUTER_HEADS_SHA256": [
+      "fa1fc66050d463c4ba7e526f8bde20c51c09646af86b2d564b7dff080195af03",
+      "cc99b5202dd720423d99cf7d2d819e0e32c9f723ed49c10ed28e0e803eaa67aa",
+      "9ee84bbf8494efe41e36a58e947b6ab5d6e664af4a40268ff75fcaf583ade427",
+      "2cade8fd0273c656614e6292ff9066053a47b42555098d86edb19047484a495c",
+      "e1df9ad2302f00ce76d63aec04d4c2b9b91c8c9e96e5d4cabe81c26dfb60f0e8"
+    ]
+  },
+  "C_authority": {
+    "macro_f1": 0.8135577912484513,
+    "folds": [
+      0.7548722211207533,
+      0.812367374005305,
+      0.8494805998899284,
+      0.8250607090820787,
+      0.8255294348949557
+    ],
+    "recipe": "accepted strictly nested semantic C; exact replay required before Phase-1 use",
+    "source": "runs/RS-DEFHS-NESTED-SEMANTIC-FUSION-001/{RESULTS.json,NESTING_AUDIT.json}"
+  },
+  "governance": {
+    "protected_validation": false,
+    "public_lb_tuning": false,
+    "kaggle_submission": false,
+    "certified_retrieval_mutation": false
+  }
+}
