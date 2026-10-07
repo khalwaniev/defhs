@@ -1,0 +1,17 @@
+{
+  "mission": "RS-DEFHS-AST-CONDITIONAL-FUSION-001",
+  "phase1_status": "FAIL",
+  "phase2_run": false,
+  "final_verdict": "AST_CONDITIONAL_FUSION_CLOSED",
+  "promotion_recommendation": "RETAIN_C_UNCHANGED",
+  "decisive_failed_criterion": "positive net corrections at fixed 0.5 in at least 4/5 original folds",
+  "observed_positive_net_folds": 2,
+  "important_positive_evidence": "Inference-time features rank AST_WIN vs C_WIN well: pooled AUC 0.8115, bootstrap 95% CI [0.7585,0.8615], AUC>0.5 in 5/5 folds.",
+  "important_negative_evidence": "Routing utility is not fold-stable: net corrections [+7,-1,-2,+2,0]. The pooled +6 corrections / descriptive +0.00664 macro-F1 cannot override the predeclared 4/5-fold requirement.",
+  "gpu_used": false,
+  "gpu_hours": 0,
+  "kaggle_submission": false,
+  "protected_validation": false,
+  "retrieval_changed": 0,
+  "high_confidence_changed": 0
+}
