@@ -68,8 +68,9 @@ def find_competition_root():
     return roots[0]
 
 print("INSTALLING_PINNED_POCKET_TTS", flush=True)
-# Kaggle images may already contain a same-version pocket-tts distribution.
-# Remove it first so the subsequent import must resolve to the exact VCS commit.
+# Wheel/sdist builds can normalize packaged source bytes. For source-provenance
+# checks we therefore use an exact detached Git checkout and install it editable,
+# so imports resolve directly to the immutable repository files.
 subprocess.run(
     [sys.executable, "-m", "pip", "uninstall", "-y", "pocket-tts"],
     check=False,
@@ -77,9 +78,29 @@ subprocess.run(
     stderr=subprocess.STDOUT,
     text=True,
 )
+source_root = Path("/kaggle/working/pocket_tts_src")
+if source_root.exists():
+    subprocess.check_call(["rm", "-rf", str(source_root)])
+subprocess.check_call([
+    "git", "clone", "--quiet",
+    f"https://github.com/{POCKET_REPO}.git",
+    str(source_root),
+])
+subprocess.check_call(["git", "-C", str(source_root), "checkout", "--quiet", "--detach", POCKET_COMMIT])
+source_commit = subprocess.check_output(
+    ["git", "-C", str(source_root), "rev-parse", "HEAD"], text=True
+).strip()
+source_dirty = subprocess.check_output(
+    ["git", "-C", str(source_root), "status", "--porcelain"], text=True
+).strip()
+if source_commit != POCKET_COMMIT:
+    raise RuntimeError(f"Detached source commit mismatch: got {source_commit}, expected {POCKET_COMMIT}")
+if source_dirty:
+    raise RuntimeError(f"Detached source checkout is unexpectedly dirty: {source_dirty}")
+
 subprocess.check_call([
     sys.executable, "-m", "pip", "install", "--quiet", "--no-cache-dir",
-    f"git+https://github.com/{POCKET_REPO}.git@{POCKET_COMMIT}",
+    "-e", str(source_root),
     "soundfile>=0.12.0"
 ])
 
@@ -106,25 +127,21 @@ pkg_version = importlib.metadata.version("pocket-tts")
 if pkg_version != POCKET_VERSION:
     raise RuntimeError(f"pocket-tts version mismatch: {pkg_version} != {POCKET_VERSION}")
 
-dist = importlib.metadata.distribution("pocket-tts")
-direct_url_raw = dist.read_text("direct_url.json")
-if not direct_url_raw:
-    raise RuntimeError("Installed pocket-tts has no PEP-610 direct_url.json; exact VCS provenance not established")
-direct_url = json.loads(direct_url_raw)
-installed_commit = ((direct_url.get("vcs_info") or {}).get("commit_id"))
-if installed_commit != POCKET_COMMIT:
-    raise RuntimeError(
-        f"Installed pocket-tts commit mismatch: got {installed_commit}, expected {POCKET_COMMIT}; "
-        f"direct_url={direct_url}"
-    )
-
 pkg_dir = Path(pocket_tts.__file__).resolve().parent
+expected_pkg_dir = (source_root / "pocket_tts").resolve()
+if pkg_dir != expected_pkg_dir:
+    raise RuntimeError(f"Import did not resolve to pinned checkout: got {pkg_dir}, expected {expected_pkg_dir}")
+
 config_path = pkg_dir / "config" / "english_2026-09.yaml"
 mimi_source_path = pkg_dir / "models" / "mimi.py"
-actual_config_blob = git_blob_sha1(config_path)
-actual_mimi_blob = git_blob_sha1(mimi_source_path)
+actual_config_blob = subprocess.check_output(
+    ["git", "-C", str(source_root), "hash-object", str(config_path)], text=True
+).strip()
+actual_mimi_blob = subprocess.check_output(
+    ["git", "-C", str(source_root), "hash-object", str(mimi_source_path)], text=True
+).strip()
 print(
-    f"PINNED_SOURCE_CHECK commit={installed_commit} "
+    f"PINNED_SOURCE_CHECK commit={source_commit} "
     f"config_blob={actual_config_blob} mimi_blob={actual_mimi_blob}",
     flush=True,
 )
@@ -274,7 +291,10 @@ summary = {
         "repo": POCKET_REPO,
         "version": pkg_version,
         "commit": POCKET_COMMIT,
-        "pep610_direct_url": direct_url,
+        "source_checkout": str(source_root),
+        "source_checkout_commit": source_commit,
+        "source_checkout_dirty": bool(source_dirty),
+        "import_path": str(pkg_dir),
         "config_git_blob_sha1": actual_config_blob,
         "mimi_source_git_blob_sha1": actual_mimi_blob,
     },
