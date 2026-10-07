@@ -1,0 +1,33 @@
+{
+  "mission": "RS-DEFHS-POCKET-MIMI-REPRESENTATION-001",
+  "patch": "SS_CHECKPOINT_AUTHORITY_PATCH_001",
+  "recovered_head": "1ed0a857b892758aba9d1b922089c5f17e9fb460",
+  "decision": "Replace only the rejected no-voice-cloning checkpoint with the encoder-capable full checkpoint already referenced by Pocket-TTS v3.3.0.",
+  "rejected_checkpoint": {
+    "repo": "kyutai/pocket-tts-without-voice-cloning",
+    "path": "languages/english_2026-09/model.safetensors",
+    "revision": "e7205b6ee50e654a5ea19f0e9df2b0813b05e921",
+    "reason": "Mimi encoder intentionally zeroed; invalid for encode_to_latent representation extraction."
+  },
+  "authorized_checkpoint": {
+    "repo": "kyutai/pocket-tts",
+    "path": "languages/english_2026-09/model.safetensors",
+    "revision": "983151f13aaeab1b13c1e5e3c2c383d49a9edf3f",
+    "access": "gated Hugging Face repository; ordinary account + acceptance of Kyutai conditions + authorized token; no purchase/subscription cost",
+    "license": "CC-BY-4.0",
+    "accessibility_status": "PASS_REASONABLY_ACCESSIBLE",
+    "use_authorized": true
+  },
+  "frozen_science": {
+    "software": "Pocket-TTS v3.3.0",
+    "release_commit": "3dbee45d343d7dddd0d105468d17f8dcba14db3e",
+    "encoder": "MimiModel.encode_to_latent",
+    "sample_rate_hz": 24000,
+    "latent": "continuous unquantized [T,32]",
+    "pooling": "temporal population mean + temporal population std (correction=0)",
+    "feature_dim": 64,
+    "representation_2": null
+  },
+  "access_failure_policy": "If gated access is unavailable because terms are not accepted or no authorized HF token is available, STOP and return ACCESS_SETUP blocker. Do not bypass the gate.",
+  "first_action": "Materialize exact checkpoint; verify resolved HF revision, binary SHA256, source revision, strict Mimi load, encoder_max > 0, non-degeneracy, and encode_to_latent execution before any competition audio."
+}
