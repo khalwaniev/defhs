@@ -1,0 +1,15 @@
+{
+  "id": "khalwaniev/defhs-pocket-mimi-preflight-001",
+  "title": "DEFHS Pocket Mimi Preflight 001",
+  "code_file": "run.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": [
+    "dataverse-detecting-emotions-from-hindi-speech"
+  ],
+  "kernel_sources": []
+}
