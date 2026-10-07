@@ -1,2 +1,2 @@
 experiment_id,hypothesis,baseline,change,validation,configuration,compute,result,verdict,artifact
-P1-001,Inference-time C/AST/semantic relations can identify AST_WIN without target labels,C unchanged,Within-heldout-fold cross-fitted L2 logistic gate,PRIMARY_CV historical V-B mechanism test,PHASE1_PROTOCOL.md,CPU only,PENDING,PENDING,PHASE1_RESULTS.json
+P1-001,Inference-time C/AST/semantic relations can identify AST_WIN without target labels,C unchanged,Within-heldout-fold cross-fitted L2 logistic gate,PRIMARY_CV historical V-B mechanism test,PHASE1_PROTOCOL.md,CPU only,pooled AUC 0.8115308885; net corrections +6 but only 2/5 folds positive,FAIL — AST_CONDITIONAL_FUSION_CLOSED,PHASE1_RESULTS.json
