@@ -50,9 +50,18 @@
     "pocket_tts": "3.3.0"
   },
   "policy": {
-    "project_external_data_policy": "conditional on competition rules and accessibility/reproducibility",
-    "exact_DEFHS_external_model_rule_verified": false,
-    "status": "UNVERIFIED_EXTERNAL_MODEL_PERMISSION"
+    "previous_status": "UNVERIFIED_EXTERNAL_MODEL_PERMISSION",
+    "blocker_resolved": true,
+    "status": "PASS_EXTERNAL_MODEL_ALLOWED",
+    "authority": "official Kaggle Competition-Specific Rules",
+    "retrieval_command": "kaggle competitions pages dataverse-detecting-emotions-from-hindi-speech --page-name rules --content",
+    "section": "5. EXTERNAL DATA AND TOOLS",
+    "exact_clauses": [
+      "Participants may use data other than the Competition Data to develop and test submissions when that External Data is publicly available and equally accessible to all participants at no cost, or otherwise satisfies the Reasonableness criteria.",
+      "The use of external data and models is acceptable unless specifically prohibited by the Host."
+    ],
+    "accessibility_requirement": "External data/models/tools must be reasonably accessible to all and of minimal/reasonable cost.",
+    "source_provenance": "supplied by SS from official Kaggle CLI rules-page retrieval"
   },
   "network_access": {
     "needed_for_first_checkpoint_download": true,
