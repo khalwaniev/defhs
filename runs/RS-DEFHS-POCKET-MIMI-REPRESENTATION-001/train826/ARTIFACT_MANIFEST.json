@@ -1,0 +1,45 @@
+{
+  "mission": "RS-DEFHS-POCKET-MIMI-REPRESENTATION-001",
+  "files": {
+    "CHECKPOINT_SHA256.txt": {
+      "bytes": 110,
+      "sha256": "6f509b4a424546eeba4500c1e1d3b295c21ffa4c548300663adf5cf1438c27af"
+    },
+    "EXECUTION_STATUS.json": {
+      "bytes": 422,
+      "sha256": "39888f4b12239ad5118f1b021c7dc05208d295665bf2f6d4f5a928ae575ce7d8"
+    },
+    "FEATURE_VALIDATION.json": {
+      "bytes": 2319,
+      "sha256": "fc028e7b0d12610f8a1273e1d0625e36d91fcb9b7da9fbea488faf2038710eaf"
+    },
+    "POCKET_MIMI_OOF_PRIMARY_CV.csv": {
+      "bytes": 103195,
+      "sha256": "26a97719488f125be53577e96416ccc9998c24988a302a95fba7fadcc09de6d8"
+    },
+    "PRIMARY_CV_RESULTS.json": {
+      "bytes": 7504,
+      "sha256": "957bf78d8a002b787f7b19b891ef493a05ce756d27c5eb71399bffaead419a16"
+    },
+    "SCRIPT_SHA256.txt": {
+      "bytes": 76,
+      "sha256": "75f0623e288ade8add2b3d4fcc62757f9a7feda2bb0bcf0daee8535164774985"
+    },
+    "TRAIN826_FEATURES.csv": {
+      "bytes": 1091136,
+      "sha256": "6a4d2af0e414a3c3cb7c3bfa14dbe528e214594bd2219a3d022df2cd8f62b579"
+    },
+    "TRAIN826_FEATURES.npz": {
+      "bytes": 231049,
+      "sha256": "89dfa4847b9e8dd138f59c86b0ce80b9f37cf81287d854ad89db89ae8912dbf9"
+    },
+    "TRAIN826_PROVENANCE.json": {
+      "bytes": 3019,
+      "sha256": "433e5eeaec0e3f1bbc7411fe0ac68596465f332e8e5b5d627a856b63fe2fe356"
+    },
+    "TRAIN826_WAV_PROVENANCE.csv": {
+      "bytes": 116372,
+      "sha256": "432f8b417ebfc88b9d9420614c65e18d9e4d2cdd1f910aff2791cb6d74af8ede"
+    }
+  }
+}

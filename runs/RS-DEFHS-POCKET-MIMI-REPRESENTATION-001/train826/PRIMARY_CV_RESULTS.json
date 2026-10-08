@@ -1,0 +1,346 @@
+{
+  "mission": "RS-DEFHS-POCKET-MIMI-REPRESENTATION-001",
+  "status": "COMPLETE",
+  "primary_cv": "historical V-B",
+  "membership_sha256": "87c6c0b33e5ea5c05b2bd2537d29480e4285cf816d4a921a6f1bcb3ef854139b",
+  "split_seed": 20260930,
+  "representation": "POCKET_MIMI_CONTINUOUS_MEANSTD",
+  "feature_dim": 64,
+  "classifier": {
+    "scaler": "StandardScaler fitted on training fold only",
+    "type": "multinomial L2 LogisticRegression",
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 5000,
+    "random_state": 20261007,
+    "class_weight": null,
+    "fit_intercept": true
+  },
+  "macro_f1": 0.5906598823845646,
+  "per_class_f1": {
+    "angry": 0.6733167082294265,
+    "happy": 0.570694087403599,
+    "neutral": 0.55125284738041,
+    "sad": 0.5673758865248227
+  },
+  "confusion_matrix": [
+    [
+      135,
+      31,
+      20,
+      19
+    ],
+    [
+      29,
+      111,
+      36,
+      16
+    ],
+    [
+      11,
+      29,
+      121,
+      56
+    ],
+    [
+      21,
+      26,
+      45,
+      120
+    ]
+  ],
+  "confusion_matrix_class_order": [
+    "angry",
+    "happy",
+    "neutral",
+    "sad"
+  ],
+  "fold_macro_f1": [
+    0.5666588925015892,
+    0.5817338905312042,
+    0.6439565001579352,
+    0.6068141145347028,
+    0.5487964817923127
+  ],
+  "fold_records": [
+    {
+      "fold": 0,
+      "train_rows": 660,
+      "validation_rows": 166,
+      "train_ids_sha256": "194d115369f18d77db580cce3de13735fd7544989a904b413214a55126dab2ac",
+      "validation_ids_sha256": "2443759ec2a4a7fdcd10cb0deea73a07f60378d80d6f5cdc02d187e7fc20a632",
+      "train_validation_ids_disjoint": true,
+      "duplicate_families_disjoint": true,
+      "fit_seconds": 0.17381115699993188,
+      "iterations": [
+        53
+      ],
+      "macro_f1": 0.5666588925015892,
+      "per_class_f1": {
+        "angry": 0.6190476190476191,
+        "happy": 0.5185185185185185,
+        "neutral": 0.5393258426966292,
+        "sad": 0.5897435897435898
+      },
+      "confusion_matrix": [
+        [
+          26,
+          9,
+          4,
+          2
+        ],
+        [
+          6,
+          21,
+          9,
+          3
+        ],
+        [
+          6,
+          6,
+          24,
+          7
+        ],
+        [
+          5,
+          6,
+          9,
+          23
+        ]
+      ],
+      "confusion_matrix_class_order": [
+        "angry",
+        "happy",
+        "neutral",
+        "sad"
+      ]
+    },
+    {
+      "fold": 1,
+      "train_rows": 661,
+      "validation_rows": 165,
+      "train_ids_sha256": "5b680a7b782d5daf3afe8b26e7b5a92ce100188ac8d229c0b6e4186660764d51",
+      "validation_ids_sha256": "90310031dc143bcb6523f38ea55bc091e747a64bbbb97878a173bcc5ca39e4e9",
+      "train_validation_ids_disjoint": true,
+      "duplicate_families_disjoint": true,
+      "fit_seconds": 0.030979661000060332,
+      "iterations": [
+        58
+      ],
+      "macro_f1": 0.5817338905312042,
+      "per_class_f1": {
+        "angry": 0.7191011235955056,
+        "happy": 0.4722222222222222,
+        "neutral": 0.5542168674698795,
+        "sad": 0.5813953488372093
+      },
+      "confusion_matrix": [
+        [
+          32,
+          6,
+          3,
+          0
+        ],
+        [
+          10,
+          17,
+          7,
+          4
+        ],
+        [
+          2,
+          4,
+          23,
+          15
+        ],
+        [
+          4,
+          7,
+          6,
+          25
+        ]
+      ],
+      "confusion_matrix_class_order": [
+        "angry",
+        "happy",
+        "neutral",
+        "sad"
+      ]
+    },
+    {
+      "fold": 2,
+      "train_rows": 661,
+      "validation_rows": 165,
+      "train_ids_sha256": "dd37d75a4dc75335034e4410ba78f85da34cf6bf24ba528c76a8ccc09502b6ed",
+      "validation_ids_sha256": "b6c4511e70fa7f1067a5167f8864a97ce1d76ce37209aa6abd3c9c70e0073ab0",
+      "train_validation_ids_disjoint": true,
+      "duplicate_families_disjoint": true,
+      "fit_seconds": 0.031053494000047976,
+      "iterations": [
+        57
+      ],
+      "macro_f1": 0.6439565001579352,
+      "per_class_f1": {
+        "angry": 0.7466666666666667,
+        "happy": 0.6966292134831461,
+        "neutral": 0.5542168674698795,
+        "sad": 0.5783132530120482
+      },
+      "confusion_matrix": [
+        [
+          28,
+          8,
+          2,
+          3
+        ],
+        [
+          1,
+          31,
+          5,
+          1
+        ],
+        [
+          1,
+          7,
+          23,
+          12
+        ],
+        [
+          4,
+          5,
+          10,
+          24
+        ]
+      ],
+      "confusion_matrix_class_order": [
+        "angry",
+        "happy",
+        "neutral",
+        "sad"
+      ]
+    },
+    {
+      "fold": 3,
+      "train_rows": 661,
+      "validation_rows": 165,
+      "train_ids_sha256": "827021ce662dcdb40fbdf656c45b873087650b9e7113b274cf49a4b07a1f9a17",
+      "validation_ids_sha256": "151fd5a10a17a9b3d618a2373709519e203208d038581d2792064b44822ced08",
+      "train_validation_ids_disjoint": true,
+      "duplicate_families_disjoint": true,
+      "fit_seconds": 0.029132505999996283,
+      "iterations": [
+        56
+      ],
+      "macro_f1": 0.6068141145347028,
+      "per_class_f1": {
+        "angry": 0.675,
+        "happy": 0.5925925925925926,
+        "neutral": 0.5882352941176471,
+        "sad": 0.5714285714285714
+      },
+      "confusion_matrix": [
+        [
+          27,
+          6,
+          4,
+          4
+        ],
+        [
+          5,
+          24,
+          6,
+          3
+        ],
+        [
+          1,
+          7,
+          25,
+          11
+        ],
+        [
+          6,
+          6,
+          6,
+          24
+        ]
+      ],
+      "confusion_matrix_class_order": [
+        "angry",
+        "happy",
+        "neutral",
+        "sad"
+      ]
+    },
+    {
+      "fold": 4,
+      "train_rows": 661,
+      "validation_rows": 165,
+      "train_ids_sha256": "169cad1fa515bb477d46747c45d8e7cd258248d2e4bfbd4403e2f6cce040f143",
+      "validation_ids_sha256": "27e070e95c0094e0c7c16dbe55a20bc48dd4638f78a59087622d39cf71c017f8",
+      "train_validation_ids_disjoint": true,
+      "duplicate_families_disjoint": true,
+      "fit_seconds": 0.027907301000027473,
+      "iterations": [
+        56
+      ],
+      "macro_f1": 0.5487964817923127,
+      "per_class_f1": {
+        "angry": 0.6027397260273972,
+        "happy": 0.5454545454545454,
+        "neutral": 0.5252525252525253,
+        "sad": 0.5217391304347826
+      },
+      "confusion_matrix": [
+        [
+          22,
+          2,
+          7,
+          10
+        ],
+        [
+          7,
+          18,
+          9,
+          5
+        ],
+        [
+          1,
+          5,
+          26,
+          11
+        ],
+        [
+          2,
+          2,
+          14,
+          24
+        ]
+      ],
+      "confusion_matrix_class_order": [
+        "angry",
+        "happy",
+        "neutral",
+        "sad"
+      ]
+    }
+  ],
+  "oof_rows": 826,
+  "oof_sha256": "26a97719488f125be53577e96416ccc9998c24988a302a95fba7fadcc09de6d8",
+  "incumbent_reference_macro_f1": {
+    "System C": 0.8135577912484513,
+    "Fixed waveform pair": 0.7768156647359765,
+    "System1 emotion2vec": 0.7383745765682462
+  },
+  "delta_vs_incumbent_references": {
+    "System C": -0.22289790886388672,
+    "Fixed waveform pair": -0.18615578235141195,
+    "System1 emotion2vec": -0.14771469418368166
+  },
+  "sklearn_version": "1.7.2",
+  "uncertainty": "NOT_PRESCRIBED_FOR_THIS_MISSION",
+  "hyperparameter_search": false,
+  "fusion_run": false,
+  "protected_validation_queried": false,
+  "target209_run": false,
+  "submission": false
+}

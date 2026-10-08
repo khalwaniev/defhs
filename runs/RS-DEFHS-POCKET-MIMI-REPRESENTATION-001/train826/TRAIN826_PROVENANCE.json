@@ -1,0 +1,68 @@
+{
+  "mission": "RS-DEFHS-POCKET-MIMI-REPRESENTATION-001",
+  "status": "COMPLETE",
+  "source_commit": "3dbee45d343d7dddd0d105468d17f8dcba14db3e",
+  "pocket_tts_version": "3.3.0",
+  "source_clean": true,
+  "config_git_blob": "fd7205053ffac3e60cb08423f760707b67de5679",
+  "mimi_git_blob": "2656cd57f5516ad54cbe56abdd93a42482ed2388",
+  "checkpoint_repo": "kyutai/pocket-tts",
+  "checkpoint_revision": "983151f13aaeab1b13c1e5e3c2c383d49a9edf3f",
+  "checkpoint_path": "languages/english_2026-09/model.safetensors",
+  "checkpoint_sha256": "fb0dc01b0d4d2e1c905b7a3e0676e3d9c96d5ae460e24e3ab94981805babf997",
+  "checkpoint_bytes": 219029196,
+  "strict_state_load": true,
+  "encoder_max": 3.5625,
+  "encoder_std": 0.028256732209851556,
+  "encoder_valid": true,
+  "latent_dim": 32,
+  "feature_dim": 64,
+  "sample_rate_hz": 24000,
+  "channels": 1,
+  "frame_rate_hz": 12.5,
+  "pooling": "temporal mean + population std (correction=0)",
+  "device": "cpu",
+  "torch_threads": 1,
+  "torch": "2.11.0+cpu",
+  "numpy": "2.1.3",
+  "pandas": "2.3.3",
+  "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+  "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+  "model_load_seconds": 0.39462429200000315,
+  "extraction_seconds": 421.893930276,
+  "mean_encode_seconds_per_wav": 0.5041700920883777,
+  "peak_memory_mb": 1241.9453125,
+  "script_sha256": "e3ad95d9166377a95115a6dc724ded29a9d6d723fa5f99ccb6d0678c76228dcf",
+  "feature_csv_sha256": "6a4d2af0e414a3c3cb7c3bfa14dbe528e214594bd2219a3d022df2cd8f62b579",
+  "feature_npz_sha256": "89dfa4847b9e8dd138f59c86b0ce80b9f37cf81287d854ad89db89ae8912dbf9",
+  "authority": {
+    "VALIDATION_VB_FOLDS.csv": {
+      "source_path": "runs/DS-DEFHS-VALIDATION-HARDENING-002/VALIDATION_VB_FOLDS.csv",
+      "sha256": "87c6c0b33e5ea5c05b2bd2537d29480e4285cf816d4a921a6f1bcb3ef854139b"
+    },
+    "PREFLIGHT.json": {
+      "source_path": "runs/RS-DEFHS-POCKET-MIMI-REPRESENTATION-001/preflight/PREFLIGHT.json",
+      "sha256": "015b5bce419307b05200f914b79bf2033d27b3edf9d7b239540acc2956e3661a"
+    },
+    "PREFLIGHT_ROWS.csv": {
+      "source_path": "runs/RS-DEFHS-POCKET-MIMI-REPRESENTATION-001/preflight/PREFLIGHT_ROWS.csv",
+      "sha256": "c5264e49b525c409beb3c68bc8c09762ffe747cfa7de3f7a582e515d054f346e"
+    },
+    "SCRIPT_SHA256.txt": {
+      "source_path": "runs/RS-DEFHS-POCKET-MIMI-REPRESENTATION-001/preflight/SCRIPT_SHA256.txt",
+      "sha256": "3e65604333754e06c023b280a6d9494bae2f635f6411063a3139f890e20b52eb"
+    },
+    "TRAIN_WAV_MANIFEST.csv": {
+      "source_path": "runs/DS-DEFHS-VALIDATION-HARDENING-002/DATA_MANIFEST.csv",
+      "source_file_sha256": "1e5552d42aec94efae197e7dac95de41cfc96e40336f3e513b9a87e3ccc72469",
+      "selection": "split == train; all 826 rows; original columns",
+      "sha256": "794563400b9854982f976e7d8834bcc2d922d36b43a0a92e299e0ef937b76728"
+    }
+  },
+  "text_invoked": false,
+  "tts_generation_invoked": false,
+  "voice_conditioning_invoked": false,
+  "protected_validation_queried": false,
+  "target209_run": false,
+  "submission": false
+}

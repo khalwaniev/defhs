@@ -1,0 +1,12 @@
+{
+  "mission": "RS-DEFHS-POCKET-MIMI-REPRESENTATION-001",
+  "status": "COMPLETE_TRAIN826_AND_PRIMARY_CV",
+  "train826_extraction_status": "COMPLETE",
+  "primary_cv_status": "COMPLETE",
+  "complementarity_status": "PENDING_BOUNDED_ANALYSIS_OF_VALID_OOF",
+  "target209_authorization_status": "NOT_AUTHORIZED",
+  "target209_run": false,
+  "fusion_run": false,
+  "protected_validation_queried": false,
+  "submission": false
+}
