@@ -1,0 +1,17 @@
+{
+  "mission": "RS-DEFHS-POCKET-MIMI-REPRESENTATION-001",
+  "date": "2026-10-08",
+  "test_metadata_exposure": {
+    "occurred": true,
+    "source": "runs/DS-DEFHS-VALIDATION-HARDENING-002/DUPLICATE_GROUPS_FINAL.csv",
+    "description": "One mixed-split schema preview printed the first pre-existing test duplicate-table row. It was not used in the package, modeling, cohort design, or scientific decisions.",
+    "target_audio_accessed": false,
+    "target_model_predictions_accessed": false,
+    "target209_extraction_run": false,
+    "test_rows_in_execution_package": 0
+  },
+  "protected_validation_queried": false,
+  "ast_experiment_reopened": false,
+  "fusion_run": false,
+  "kaggle_submission": false
+}

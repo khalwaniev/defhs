@@ -1,11 +1,23 @@
 {
   "mission": "RS-DEFHS-POCKET-MIMI-REPRESENTATION-001",
-  "status": "NOT_RUN_POLICY_BLOCKER",
+  "status": "NOT_RUN_PENDING_VALID_STANDALONE_OOF",
   "C_primary_cv": 0.8135577912484513,
   "pocket_mimi_oof_available": false,
   "complementarity_vs_C": null,
   "complementarity_vs_A": null,
   "complementarity_vs_AST": null,
   "target209_extraction_run": false,
-  "reason": "No labeled representation probe was run after mandatory Phase-0 policy stop."
+  "reason": "Standalone train826 extraction and PRIMARY_CV must complete first; no fusion is authorized.",
+  "historical_status": "NOT_RUN_POLICY_BLOCKER",
+  "reference_scores": {
+    "System C": 0.8135577912484513,
+    "Fixed waveform pair": 0.7768156647359765,
+    "System1 emotion2vec": 0.7383745765682462
+  },
+  "system_c_row_level_authority_status": "NOT_LOCATED_IN_AVAILABLE_LOCAL_ARTIFACTS",
+  "existing_verdict_gate_status": "AWAITING_EXISTING_MISSION_CRITERIA; no numerical threshold invented",
+  "hard_mechanism_definition_status": "AWAITING_EXISTING_TRAIN_SIDE_DEFINITION",
+  "fusion_run": false,
+  "target209_authorization_status": "NOT_AUTHORIZED",
+  "complementarity_verdict": null
 }

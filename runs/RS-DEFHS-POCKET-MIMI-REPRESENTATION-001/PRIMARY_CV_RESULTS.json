@@ -1,15 +1,30 @@
 {
   "mission": "RS-DEFHS-POCKET-MIMI-REPRESENTATION-001",
-  "status": "PENDING_AUTHORIZED_FULL_CHECKPOINT_PREFLIGHT",
+  "status": "NOT_RUN_PENDING_TRAIN826_EXTRACTION",
   "primary_cv": "historical V-B",
   "membership_sha256": "87c6c0b33e5ea5c05b2bd2537d29480e4285cf816d4a921a6f1bcb3ef854139b",
   "representation": "POCKET_MIMI_CONTINUOUS_MEANSTD",
-  "reason": "SS authorized exact encoder-capable full checkpoint; PRIMARY_CV remains untouched until checkpoint validation and CPU preflight pass.",
+  "reason": "Canonical CPU preflight passed; exact train-only extraction and frozen classifier package is prepared but requires manual secret-enabled Kaggle execution.",
   "protected_validation_queried": false,
   "public_lb_tuned": false,
   "kaggle_submission": false,
   "policy_status": "PASS_EXTERNAL_MODEL_ALLOWED",
-  "checkpoint_encoder_status": "ALL_ZERO_BY_RELEASE_DESIGN",
+  "checkpoint_encoder_status": "VALIDATED_AUTHORIZED_FULL_CHECKPOINT",
   "checkpoint_repo": "kyutai/pocket-tts",
-  "checkpoint_revision": "983151f13aaeab1b13c1e5e3c2c383d49a9edf3f"
+  "checkpoint_revision": "983151f13aaeab1b13c1e5e3c2c383d49a9edf3f",
+  "historical_preflight_pending_state": {
+    "status": "PENDING_AUTHORIZED_FULL_CHECKPOINT_PREFLIGHT",
+    "reason": "SS authorized exact encoder-capable full checkpoint; PRIMARY_CV remains untouched until checkpoint validation and CPU preflight pass.",
+    "checkpoint_encoder_status": "ALL_ZERO_BY_RELEASE_DESIGN"
+  },
+  "classifier": {
+    "scaler": "StandardScaler fit on train fold only",
+    "classifier": "multinomial L2 LogisticRegression",
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 5000,
+    "random_state": 20261007
+  },
+  "target209_run": false,
+  "final_verdict": null
 }

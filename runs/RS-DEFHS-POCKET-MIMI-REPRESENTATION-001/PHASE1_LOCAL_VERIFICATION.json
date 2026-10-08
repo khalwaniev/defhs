@@ -1,0 +1,28 @@
+{
+  "mission": "RS-DEFHS-POCKET-MIMI-REPRESENTATION-001",
+  "date": "2026-10-08",
+  "status": "PASS_LOCAL_PREPARATION_CHECKS_ONLY",
+  "test_command": "python -m unittest discover -s tests -p test_pocket_mimi_train826.py -v",
+  "tests_passed": 5,
+  "checks": [
+    "packaged inputs contain exactly the original frozen membership and train-only WAV manifest",
+    "corrupt membership hash rejected",
+    "duplicate, nonfinite, wrong-dimension, reordered and wrong-WAV features rejected",
+    "synthetic held-out feature/label perturbations do not affect fitted training-fold scaler or classifier",
+    "corrections, breakages and same/different common errors counted distinctly",
+    "syntax parses and no HF/GitHub credential literal pattern in new source",
+    "canonical accepted preflight script byte identity unchanged"
+  ],
+  "reference_replays": {
+    "FIXED_PAIR_VB.npz": 0.7768156647359765,
+    "E2V_CONTROL_VB.npz": 0.7383745765682462
+  },
+  "train826_extraction_executed": false,
+  "pocket_mimi_primary_cv_executed": false,
+  "complementarity_executed": false,
+  "checkpoint_downloaded_by_this_operator": false,
+  "target209_audio_or_predictions_accessed": false,
+  "protected_validation_queried": false,
+  "submission": false,
+  "limits": "These checks validate package integrity and fitting/analysis guards. Actual full extraction and numerical parity require the pending secret-enabled Kaggle run."
+}

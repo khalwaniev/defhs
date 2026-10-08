@@ -1,0 +1,43 @@
+{
+  "status": "PREPARED_NOT_EXECUTED",
+  "kernel": "khalwaniev/defhs-pocket-mimi-preflight-001",
+  "execution_method": "existing secret-enabled Kaggle notebook; manual Save Version / Run All",
+  "script": "kaggle/rs_defhs_pocket_mimi_train826_001/run.py",
+  "script_sha256": "e3ad95d9166377a95115a6dc724ded29a9d6d723fa5f99ccb6d0678c76228dcf",
+  "template_sha256": "c3e60fdc0fe80999e2ee5842d2aadb1187dc77ddf78c763d51b5c54aff7f5548",
+  "inputs": {
+    "VALIDATION_VB_FOLDS.csv": {
+      "source_path": "runs/DS-DEFHS-VALIDATION-HARDENING-002/VALIDATION_VB_FOLDS.csv",
+      "sha256": "87c6c0b33e5ea5c05b2bd2537d29480e4285cf816d4a921a6f1bcb3ef854139b"
+    },
+    "PREFLIGHT.json": {
+      "source_path": "runs/RS-DEFHS-POCKET-MIMI-REPRESENTATION-001/preflight/PREFLIGHT.json",
+      "sha256": "015b5bce419307b05200f914b79bf2033d27b3edf9d7b239540acc2956e3661a"
+    },
+    "PREFLIGHT_ROWS.csv": {
+      "source_path": "runs/RS-DEFHS-POCKET-MIMI-REPRESENTATION-001/preflight/PREFLIGHT_ROWS.csv",
+      "sha256": "c5264e49b525c409beb3c68bc8c09762ffe747cfa7de3f7a582e515d054f346e"
+    },
+    "SCRIPT_SHA256.txt": {
+      "source_path": "runs/RS-DEFHS-POCKET-MIMI-REPRESENTATION-001/preflight/SCRIPT_SHA256.txt",
+      "sha256": "3e65604333754e06c023b280a6d9494bae2f635f6411063a3139f890e20b52eb"
+    },
+    "TRAIN_WAV_MANIFEST.csv": {
+      "source_path": "runs/DS-DEFHS-VALIDATION-HARDENING-002/DATA_MANIFEST.csv",
+      "source_file_sha256": "1e5552d42aec94efae197e7dac95de41cfc96e40336f3e513b9a87e3ccc72469",
+      "selection": "split == train; all 826 rows; original columns",
+      "sha256": "794563400b9854982f976e7d8834bcc2d922d36b43a0a92e299e0ef937b76728"
+    }
+  },
+  "cpu_only": true,
+  "secret_value_embedded": false,
+  "automatic_run_attempted": false,
+  "stages": [
+    "TRAIN826_EXTRACTION",
+    "FROZEN_PRIMARY_CV"
+  ],
+  "target209_authorization_status": "NOT_AUTHORIZED",
+  "target209_run": false,
+  "fusion_run": false,
+  "submission": false
+}

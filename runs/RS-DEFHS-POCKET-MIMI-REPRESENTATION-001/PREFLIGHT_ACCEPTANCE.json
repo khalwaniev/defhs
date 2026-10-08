@@ -1,0 +1,29 @@
+{
+  "mission": "RS-DEFHS-POCKET-MIMI-REPRESENTATION-001",
+  "status": "PASS_BYTE_VERIFIED",
+  "kernel": "khalwaniev/defhs-pocket-mimi-preflight-001",
+  "kernel_status": "COMPLETE",
+  "original_source_head": "914276fd4ac9f2fc911f82819774825318f40b71",
+  "verified_source_script_sha256": "de06571b0e206db519c25be1b8a550c6d1391c29cd381cf582e1788936ee6d81",
+  "checkpoint_sha256": "fb0dc01b0d4d2e1c905b7a3e0676e3d9c96d5ae460e24e3ab94981805babf997",
+  "files": {
+    "CHECKPOINT_SHA256.txt": {
+      "bytes": 110,
+      "sha256": "6f509b4a424546eeba4500c1e1d3b295c21ffa4c548300663adf5cf1438c27af"
+    },
+    "PREFLIGHT.json": {
+      "bytes": 3197,
+      "sha256": "015b5bce419307b05200f914b79bf2033d27b3edf9d7b239540acc2956e3661a"
+    },
+    "PREFLIGHT_ROWS.csv": {
+      "bytes": 11659,
+      "sha256": "c5264e49b525c409beb3c68bc8c09762ffe747cfa7de3f7a582e515d054f346e"
+    },
+    "SCRIPT_SHA256.txt": {
+      "bytes": 76,
+      "sha256": "3e65604333754e06c023b280a6d9494bae2f635f6411063a3139f890e20b52eb"
+    }
+  },
+  "retrieved_local_date": "2026-10-08",
+  "prior_failed_runs_remain_infrastructure_incidents": true
+}

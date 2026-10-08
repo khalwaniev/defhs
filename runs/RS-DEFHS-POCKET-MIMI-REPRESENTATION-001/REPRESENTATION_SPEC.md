@@ -55,3 +55,20 @@ Per fold:
 Metric: macro-F1.
 
 This specification is frozen before any labeled representation scoring.
+
+## Active authority after SS checkpoint patch and successful preflight
+
+The initial checkpoint entry above is historical and rejected because its encoder
+is intentionally zeroed. The active checkpoint is ONLY
+`kyutai/pocket-tts/languages/english_2026-09/model.safetensors` at revision
+`983151f13aaeab1b13c1e5e3c2c383d49a9edf3f`, SHA256
+`fb0dc01b0d4d2e1c905b7a3e0676e3d9c96d5ae460e24e3ab94981805babf997`.
+The canonical preflight passed with a real, non-degenerate encoder. Its script
+SHA256 is `de06571b0e206db519c25be1b8a550c6d1391c29cd381cf582e1788936ee6d81`.
+
+Representation 2 remains NONE. All representation and downstream classifier
+choices above remain frozen. Existing train WAVs are mono (826/826), and the new
+runner checks that fact and uses the identical upstream deterministic resampling
+and pooling calls; it introduces no alternative channel-mixing rule. The eight
+accepted real-audio preflight vectors provide an additional numerical parity gate
+before full features can enter modeling.

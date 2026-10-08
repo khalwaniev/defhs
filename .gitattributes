@@ -1,3 +1,7 @@
 # Preserve the byte-exact scientific CSVs copied into the Drive package.
 runs/RS-DEFHS-SYSTEM-IMPLEMENTATION-001/CPU_CLOSURE_PAYLOAD_MANIFEST.csv whitespace=cr-at-eol
 runs/RS-DEFHS-SYSTEM-IMPLEMENTATION-001/FROZEN_MARGINAL_ABLATION_SUMMARY.csv whitespace=cr-at-eol
+
+# Preserve downloaded preflight artifacts and the published execution script bytes.
+runs/RS-DEFHS-POCKET-MIMI-REPRESENTATION-001/preflight/* -text whitespace=cr-at-eol
+kaggle/rs_defhs_pocket_mimi_train826_001/run.py -text

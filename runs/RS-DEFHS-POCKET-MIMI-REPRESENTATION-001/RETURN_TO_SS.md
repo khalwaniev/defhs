@@ -1,42 +1,34 @@
-# RS-DEFHS-POCKET-MIMI-REPRESENTATION-001 — execution continuation
+# RS-DEFHS-POCKET-MIMI-REPRESENTATION-001 — Phase-1 handoff
 
-Historical evidence is preserved:
-- policy blocker was resolved;
-- the no-voice-cloning checkpoint was correctly rejected because its Mimi encoder is intentionally zeroed;
-- kernel v1/v2/v3 remain infrastructure incidents, not scientific evidence.
+The accepted canonical CPU preflight is now recorded in `preflight/` and
+`PREFLIGHT_ACCEPTANCE.json`. Source v3.3.0, the exact full gated checkpoint, its
+SHA256, the non-degenerate encoder, finite latents, and repeat extraction passed.
+Median encode runtime was 0.5299770254999885 seconds/WAV; projected train826
+encode runtime was 437.7610230629905 seconds; peak RSS was 934.1328125 MB.
 
-## SS checkpoint authority
+The original zero-encoder rejection and packaging/runtime incidents are preserved.
+The preflight script remains unchanged and matches the successful run byte for
+byte. The prepared phase-1 CPU script is separate and retains the existing
+secret-enabled Kaggle kernel identity. See `PHASE1_EXECUTION.md`.
 
-SS now explicitly authorizes ONLY:
+Current return fields:
 
-`kyutai/pocket-tts/languages/english_2026-09/model.safetensors@983151f13aaeab1b13c1e5e3c2c383d49a9edf3f`
+- FINAL_HEAD / FINAL_TREE / WORKTREE_CLEAN: report actual post-push Git state.
+- TRAIN826_EXTRACTION_STATUS: NOT_RUN_PENDING_WEB_SECRET_EXECUTION.
+- FEATURE_ARTIFACT_SHA256: not available until execution.
+- POCKET_MIMI_OOF_MACRO_F1 / FOLD_MACRO_F1 / PER_CLASS_F1: NOT RUN.
+- CORRECTIONS / BREAKAGES / ERROR_OVERLAP: NOT RUN; valid standalone OOF required.
+- COMPLEMENTARITY_VERDICT: pending existing verdict criteria and row-level System C artifact.
+- TARGET209_AUTHORIZATION_STATUS: NOT_AUTHORIZED.
+- FINAL_VERDICT: pending scientific evidence; no verdict category is fabricated.
 
-`FULL_CHECKPOINT_ACCESSIBILITY_STATUS=PASS_REASONABLY_ACCESSIBLE`
-`FULL_CHECKPOINT_USE_AUTHORIZED=YES`
+`WEB_SECRET_EXECUTION_REQUIRED`: the installed CLI exposes no secret attachment
+parameter, so no push or run was attempted. The user can run the prepared exact
+script in the existing notebook while retaining its enabled `HF_TOKEN`. No
+credential value is embedded in the package.
 
-The Hugging Face gate must be respected. If the user's account has not accepted Kyutai's conditions or Kaggle cannot obtain an authorized token, stop with `ACCESS_SETUP`.
-
-## Frozen science
-
-Unchanged:
-- Pocket-TTS v3.3.0
-- source commit `3dbee45d343d7dddd0d105468d17f8dcba14db3e`
-- `MimiModel.encode_to_latent`
-- mono deterministic 24 kHz
-- continuous unquantized [T,32]
-- temporal population mean + population std (correction=0)
-- 64 dimensions
-- no second representation
-- frozen PRIMARY_CV
-- fixed linear probe
-- no fusion
-- no TARGET209 unless verdict gate passes
-- no submission
-
-## Current state
-
-Checkpoint validation / CPU preflight: PENDING.
-PRIMARY_CV: NOT RUN.
-TARGET209: NOT RUN.
-GPU: NOT USED.
-Submission: NONE.
+A mixed-split metadata preview inadvertently displayed one existing test
+duplicate-table row while locating input schemas. No target WAV or target model
+predictions were accessed, and no target row is used or packaged in phase 1.
+This exposure is recorded in `SCOPE_AUDIT.json`; no claim of zero metadata
+exposure is made. No protected validation was inspected or used.

@@ -13,13 +13,13 @@
     "mimi_git_blob": "2656cd57f5516ad54cbe56abdd93a42482ed2388"
   },
   "weights": {
-    "preferred_for_codec_only": "kyutai/pocket-tts-without-voice-cloning",
+    "preferred_for_codec_only": "kyutai/pocket-tts",
     "path": "languages/english_2026-09/model.safetensors",
-    "revision": "e7205b6ee50e654a5ea19f0e9df2b0813b05e921",
+    "revision": "983151f13aaeab1b13c1e5e3c2c383d49a9edf3f",
     "license": "CC-BY-4.0",
-    "access": "public/ungated",
-    "binary_sha256": null,
-    "binary_sha256_status": "NOT_MATERIALIZED_IN_WORKER_RUNTIME; do not invent",
+    "access": "gated; accepted conditions; authorized Kaggle HF_TOKEN",
+    "binary_sha256": "fb0dc01b0d4d2e1c905b7a3e0676e3d9c96d5ae460e24e3ab94981805babf997",
+    "binary_sha256_status": "VERIFIED_BY_ACCEPTED_CANONICAL_PREFLIGHT",
     "voice_cloning_alternative": {
       "repo": "kyutai/pocket-tts",
       "path": "languages/english_2026-09/model.safetensors",
@@ -27,8 +27,8 @@
       "access": "gated; acceptance required"
     },
     "encoder_capability": {
-      "status": "PENDING_VALIDATION_ON_AUTHORIZED_FULL_CHECKPOINT",
-      "intended_representation_executable": null,
+      "status": "PASS_CANONICAL_PREFLIGHT",
+      "intended_representation_executable": true,
       "required_checks": [
         "resolved revision exact",
         "binary SHA256 recorded",
@@ -36,7 +36,23 @@
         "encoder_max > 0",
         "encoder tensor non-degeneracy",
         "encode_to_latent executes"
-      ]
+      ],
+      "strict_state_loading": true,
+      "tensor_count": 22,
+      "nonzero_tensor_count": 22,
+      "numel": 2927136,
+      "nonzero_numel": 2927136,
+      "nonzero_fraction": 1.0,
+      "encoder_max": 3.5625,
+      "encoder_mean": -0.0005857900309885911,
+      "encoder_std": 0.028256732209851556,
+      "valid": true,
+      "synthetic_latent_shape": [
+        1,
+        25,
+        32
+      ],
+      "synthetic_latent_std": 1.2580606937408447
     },
     "rejected_checkpoint": {
       "repo": "kyutai/pocket-tts-without-voice-cloning",
@@ -53,9 +69,19 @@
       "access": "gated; acceptance required; no purchase/subscription cost",
       "accessibility_status": "PASS_REASONABLY_ACCESSIBLE",
       "use_authorized": true,
+      "binary_sha256": "fb0dc01b0d4d2e1c905b7a3e0676e3d9c96d5ae460e24e3ab94981805babf997",
+      "binary_sha256_status": "VERIFIED_BY_ACCEPTED_CANONICAL_PREFLIGHT",
+      "bytes": 219029196
+    },
+    "historical_initial_checkpoint": {
+      "preferred_for_codec_only": "kyutai/pocket-tts-without-voice-cloning",
+      "path": "languages/english_2026-09/model.safetensors",
+      "revision": "e7205b6ee50e654a5ea19f0e9df2b0813b05e921",
+      "access": "public/ungated",
       "binary_sha256": null,
-      "binary_sha256_status": "PENDING_EXACT_GATED_DOWNLOAD"
-    }
+      "binary_sha256_status": "NOT_MATERIALIZED_IN_WORKER_RUNTIME; do not invent"
+    },
+    "repo": "kyutai/pocket-tts"
   },
   "encoder": {
     "component": "Pocket-TTS continuous Mimi-derived codec encoder",
@@ -96,5 +122,7 @@
   "network_access": {
     "needed_for_first_checkpoint_download": true,
     "final_reproducibility": "possible with exact revision once competition policy is cleared"
-  }
+  },
+  "accepted_preflight": "preflight/PREFLIGHT.json",
+  "preflight_script_sha256": "de06571b0e206db519c25be1b8a550c6d1391c29cd381cf582e1788936ee6d81"
 }

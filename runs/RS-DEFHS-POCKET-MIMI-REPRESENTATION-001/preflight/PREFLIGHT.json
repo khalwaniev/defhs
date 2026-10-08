@@ -1,0 +1,111 @@
+{
+  "mission": "RS-DEFHS-POCKET-MIMI-REPRESENTATION-001",
+  "status": "PASS",
+  "full_checkpoint_accessibility_status": "PASS_REASONABLY_ACCESSIBLE",
+  "full_checkpoint_use_authorized": true,
+  "source": {
+    "repo": "kyutai-labs/pocket-tts",
+    "version": "3.3.0",
+    "commit": "3dbee45d343d7dddd0d105468d17f8dcba14db3e",
+    "clean": true,
+    "config_git_blob_sha1": "fd7205053ffac3e60cb08423f760707b67de5679",
+    "mimi_git_blob_sha1": "2656cd57f5516ad54cbe56abdd93a42482ed2388"
+  },
+  "checkpoint": {
+    "repo": "kyutai/pocket-tts",
+    "revision_requested": "983151f13aaeab1b13c1e5e3c2c383d49a9edf3f",
+    "revision_resolved": "983151f13aaeab1b13c1e5e3c2c383d49a9edf3f",
+    "filename": "languages/english_2026-09/model.safetensors",
+    "sha256": "fb0dc01b0d4d2e1c905b7a3e0676e3d9c96d5ae460e24e3ab94981805babf997",
+    "bytes": 219029196,
+    "token_source": "kaggle_secret:HF_TOKEN"
+  },
+  "encoder": {
+    "tensor_count": 22,
+    "nonzero_tensor_count": 22,
+    "numel": 2927136,
+    "nonzero_numel": 2927136,
+    "nonzero_fraction": 1.0,
+    "encoder_max": 3.5625,
+    "encoder_mean": -0.0005857900309885911,
+    "encoder_std": 0.028256732209851556,
+    "valid": true,
+    "synthetic_latent_shape": [
+      1,
+      25,
+      32
+    ],
+    "synthetic_latent_std": 1.2580606937408447
+  },
+  "representation": {
+    "name": "POCKET_MIMI_CONTINUOUS_MEANSTD",
+    "call": "MimiModel.encode_to_latent",
+    "sample_rate_hz": 24000,
+    "latent_dim": 32,
+    "frame_rate_hz": 12.5,
+    "pooling": "temporal mean + population std (correction=0)",
+    "feature_dim": 64,
+    "text_invoked": false,
+    "tts_generation_invoked": false,
+    "voice_cloning_invoked": false
+  },
+  "preflight": {
+    "rows": 8,
+    "ids": [
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10
+    ],
+    "classes": [
+      "neutral",
+      "neutral",
+      "happy",
+      "sad",
+      "sad",
+      "happy",
+      "angry",
+      "angry"
+    ],
+    "all_finite": true,
+    "repeat_id": 1,
+    "repeat_max_abs_feature_diff": 0.0,
+    "repeat_tolerance": 1e-07,
+    "runtime_seconds_per_wav": [
+      0.601314694999985,
+      0.6589605550000215,
+      0.33553254999998217,
+      0.32300101499998846,
+      1.317788931999985,
+      0.4701430210000126,
+      0.2823794920000182,
+      0.5898110299999644
+    ],
+    "mean_runtime_seconds_per_wav": 0.5723664112499947,
+    "median_runtime_seconds_per_wav": 0.5299770254999885,
+    "projected_826_seconds_from_median": 437.7610230629905,
+    "projected_1035_seconds_from_median": 548.5262213924881,
+    "model_build_and_weight_load_seconds": 0.40701399400001037,
+    "memory_after_model_mb": 660.296875,
+    "peak_memory_mb": 934.1328125
+  },
+  "environment": {
+    "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+    "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+    "torch": "2.11.0+cpu",
+    "numpy": "2.1.3",
+    "pandas": "2.3.3",
+    "device": "cpu",
+    "torch_threads": 1
+  },
+  "competition_root": "/kaggle/input/competitions/dataverse-detecting-emotions-from-hindi-speech/SRCASW-BhavVaani",
+  "train_rows_verified": 826,
+  "gpu_used": false,
+  "primary_cv_run": false,
+  "target209_run": false,
+  "submission": false
+}
