@@ -1,0 +1,66 @@
+{
+  "files": [
+    {
+      "path": "runs/RS-DEFHS-STRONG-LLM-SEMANTIC-001/CONFIG.json",
+      "bytes": 1228,
+      "sha256": "8692d9bdcd097e58c3e30ffb1f9c4d2f8856cd6f66bda2d58b349907003c4c6b"
+    },
+    {
+      "path": "runs/RS-DEFHS-STRONG-LLM-SEMANTIC-001/EVIDENCE.json",
+      "bytes": 1340,
+      "sha256": "3e19eb3ad394a7eeff409e79ae471c04260679623ee323ce19024bfbfebb6970"
+    },
+    {
+      "path": "runs/RS-DEFHS-STRONG-LLM-SEMANTIC-001/EXECUTION_FAILURE.json",
+      "bytes": 233,
+      "sha256": "069f408c5c5c802a73a883f1b78e94b8ee09063e562e16fdf486fe15d8106e82"
+    },
+    {
+      "path": "runs/RS-DEFHS-STRONG-LLM-SEMANTIC-001/PROMPT.txt",
+      "bytes": 996,
+      "sha256": "b7c05f0f30dd64c600d62a222bbac6ea6df80a601db3a68ed51b424ca54065e3"
+    },
+    {
+      "path": "runs/RS-DEFHS-STRONG-LLM-SEMANTIC-001/PROTOCOL.md",
+      "bytes": 5952,
+      "sha256": "72122937fcca67a1e4d2c2739705669e2511fe7279d306881de4f6607c312960"
+    },
+    {
+      "path": "runs/RS-DEFHS-STRONG-LLM-SEMANTIC-001/QWEN_BASELINE_REPLAY.json",
+      "bytes": 2760,
+      "sha256": "5323bc6b9b8d3895a5458cd2dcff27fdc6df07eae91214a7fc166fd9d1b1c914"
+    },
+    {
+      "path": "runs/RS-DEFHS-STRONG-LLM-SEMANTIC-001/RETURN_TO_SS.md",
+      "bytes": 9346,
+      "sha256": "ce8ecc5cf06c94a8060645c944bb0cb04c9e6e73d85e0c07f2f35b513574bc45"
+    },
+    {
+      "path": "runs/RS-DEFHS-STRONG-LLM-SEMANTIC-001/TRAIN826_INPUTS.json",
+      "bytes": 22311,
+      "sha256": "7cd73ff03b3608b47d26cb257c6df56da07525c67ae3a819e697da673482e145"
+    },
+    {
+      "path": "runs/RS-DEFHS-STRONG-LLM-SEMANTIC-001/TRANSCRIPT_AUDIT.json",
+      "bytes": 892,
+      "sha256": "01f5543489c714d6337536858b68e9bc4346ec62c2ecc2aa0dbce4220d663033"
+    },
+    {
+      "path": "scripts/defhs_strong_llm.py",
+      "bytes": 18082,
+      "sha256": "912dd075b99e5bbc6ae277fcfd7e527a49374fd36d470b8f77c969fbbeb1e344"
+    },
+    {
+      "path": "scripts/defhs_strong_llm_status.sh",
+      "bytes": 1109,
+      "sha256": "69eef4c37b3ccfb4f2fcf6f58f123a6db7b15b293eb9a6d14a96ac67866bb28e"
+    },
+    {
+      "path": "tests/test_strong_llm_semantic.py",
+      "bytes": 2314,
+      "sha256": "beec6ab6581a84d6eda1325acf96af47f107a31a48487052c610a5a941f91dbe"
+    }
+  ],
+  "verification_replay_cpu_seconds": 0.020199731,
+  "note": "CPU time is this verification replay only, not total assistant wall time; zero model inference."
+}

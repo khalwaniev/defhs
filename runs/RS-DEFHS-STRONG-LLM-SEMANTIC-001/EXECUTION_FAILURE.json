@@ -1,0 +1,6 @@
+{
+  "command": "infer",
+  "status": "BLOCKED_OR_FAILED_NOT_A_SCIENTIFIC_NEGATIVE",
+  "error": "MODEL_ACCESS_BLOCKED: ANTHROPIC_API_KEY is not set. Never paste keys into chat.",
+  "timestamp_utc": "2026-10-10T15:59:19.417536+00:00"
+}

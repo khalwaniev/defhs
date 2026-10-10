@@ -1,0 +1,23 @@
+{
+  "asr_sha256": "a111071c53edd14a6202d9ac7b12360648c9f12e8650fee0aabf2dda0df12d01",
+  "source_equals_embedded_id_text_payload": true,
+  "rows": 1035,
+  "train": 826,
+  "test": 209,
+  "unique_exact_text_all": 856,
+  "unique_exact_text_train": 711,
+  "empty_raw_text": 0,
+  "median_characters": 27,
+  "max_characters": 182,
+  "avg_logprob_below_minus1": 3,
+  "no_speech_prob_above_0_6": 0,
+  "hindi_forced_in_asr": true,
+  "language_probability_is_not_wer": true,
+  "human_reference_transcripts_available": false,
+  "wer": null,
+  "word_perfect_transcription_verified": false,
+  "train_exact_text_conflicting_label_groups": 1,
+  "train_rows_in_conflicting_groups": 3,
+  "minimum_train_errors_for_deterministic_exact_text_classifier": 1,
+  "collision_statistic_scope": "In-sample identifiability diagnostic only; not generalization estimate or macro-F1 bound; never a test-label inference."
+}

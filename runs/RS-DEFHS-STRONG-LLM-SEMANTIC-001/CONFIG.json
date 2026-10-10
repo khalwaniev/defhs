@@ -1,0 +1,27 @@
+{
+  "mission": "RS-DEFHS-STRONG-LLM-SEMANTIC-001",
+  "parent_commit": "c4206ae99ba5ee19eb06f7b72bcbbebac6cd7458",
+  "model_id": "claude-opus-4-6",
+  "endpoint": "https://api.anthropic.com/v1/messages",
+  "api_version": "2023-06-01",
+  "effort": "high",
+  "thinking": "adaptive",
+  "max_tokens": 2048,
+  "usd_per_million_input": 5,
+  "usd_per_million_output": 25,
+  "default_max_cost_usd": 10,
+  "execution_cutoff_utc": "2026-10-12T16:30:00+00:00",
+  "prompt_sha256": "b7c05f0f30dd64c600d62a222bbac6ea6df80a601db3a68ed51b424ca54065e3",
+  "input_payload_sha256": "7540ed5ed343dd0f012e290593237f7699b5d71572411226f66de3559914250e",
+  "source_asr_sha256": "a111071c53edd14a6202d9ac7b12360648c9f12e8650fee0aabf2dda0df12d01",
+  "source_packaged_transcripts_sha256": "7829a73e50a2782f0adc1ec8b22ad399178b609867b2c371185e61c52ab1ce57",
+  "source_kaggle_script_sha256": "c880024d8ff08c2040b9c81865c80c83981e18d060da161a19eae6f85867c767",
+  "fold_membership_sha256": "87c6c0b33e5ea5c05b2bd2537d29480e4285cf816d4a921a6f1bcb3ef854139b",
+  "input_fields_to_model": [
+    "transcript"
+  ],
+  "unique_train_transcripts": 711,
+  "labels_in_model_prompts": false,
+  "target209_inference_authorized_now": false,
+  "protected_validation": false
+}
