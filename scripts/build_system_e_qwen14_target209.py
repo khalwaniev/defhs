@@ -117,7 +117,7 @@ def build(asr_dir,out):
          "assert len(rows) == 209 and len({r['Id'] for r in rows}) == 209"),
         ("assert len(unique) == 711",f"assert len(unique) == {count}"),
         ("'rows': 826,","'rows': 209,"),
-        ("'rows':826, 'unique':711",f"'rows':209, 'unique':{count}"),
+        ("'rows':826,'unique':711",f"'rows':209,'unique':{count}"),
         ("'labels_or_test_inputs_present': False","'labels_or_test_inputs_present': True"),
         ("'target209_inferred':False","'target209_inferred':True"),
         ("'QWEN14B_TRAIN826.csv'","'QWEN14B_TARGET209.csv'"),
@@ -128,14 +128,12 @@ def build(asr_dir,out):
     # The original reference file has unique 711. Replace dynamically if needed only as exact frozen code.
     for before,after in changes:
         n=code.count(before)
-        if before=="'rows': 826,":
-            assert n==1,(before,n)
-        else:
-            assert n==1,(before,n)
+        assert n==(2 if before=="'QWEN14B_TRAIN826.csv'" else 1),(before,n)
         code=code.replace(before,after)
     # Keep the frozen model/inference code identical outside the declared swaps.
     expected=frozen
-    for before,after in changes:expected=replace1(expected,before,after)
+    for before,after in changes:
+        expected=expected.replace(before,after)
     a=expected.splitlines(keepends=True);b=code.splitlines(keepends=True)
     assert len(a)==len(b) and all(a[j]==b[j] for j in range(len(a)) if j!=i)
     assert ast.parse(code)
