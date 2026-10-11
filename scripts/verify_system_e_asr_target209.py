@@ -34,6 +34,8 @@ def main():
     assert vals['MODEL_ID']=='Qwen/Qwen3-ASR-1.7B'
     assert vals['MODEL_REVISION']==REV
     assert vals['LANGUAGE']=='Hindi'
+    assert "print('TARGET209_ASR_COMPLETE',json.dumps({'status':'PASS','rows':209" in code, 'Incorrect target completion count'
+    assert "print('TRAIN826_ASR_COMPLETE'" not in code
     embedded=gzip.decompress(base64.b64decode(vals['MANIFEST_B64']))
     assert sha(embedded)==vals['MANIFEST_SHA256']==result['embedded_test_manifest_sha256']
     assert sha(DATA.read_bytes())==DATA_SHA
