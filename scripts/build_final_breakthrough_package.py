@@ -32,7 +32,7 @@ def main():
  {'cell_type':'markdown','id':'defhs-asr-intro','metadata':{},'source':['# DEFHS Qwen3-ASR train826 — recovery from interrupted Astra package\n','**Scope:** 826 WAVs, no test, no protected labels; exact frozen hashes.\n']},
  {'cell_type':'code','id':'defhs-asr-runner','execution_count':None,'metadata':{},'outputs':[],'source':code.splitlines(keepends=True)}]}
  (out/'train826.ipynb').write_text(json.dumps(notebook,ensure_ascii=False,indent=1)+'\n',encoding='utf-8')
- metadata={'id':'khalwaniev/rs-defhs-final-breakthrough-asr-train826-001','title':'DEFHS final breakthrough ASR train826','code_file':'train826.ipynb','language':'python','kernel_type':'notebook','is_private':True,'enable_gpu':True,'enable_internet':True,'dataset_sources':[],'competition_sources':['dataverse-detecting-emotions-from-hindi-speech'],'kernel_sources':[],'machine_shape':'NvidiaTeslaT4'}
+ metadata={'id':'khalwaniev/rs-defhs-final-breakthrough-asr-train826-001','title':'RS DEFHS final breakthrough ASR train826 001','code_file':'train826.ipynb','language':'python','kernel_type':'notebook','is_private':True,'enable_gpu':True,'enable_internet':True,'dataset_sources':[],'competition_sources':['dataverse-detecting-emotions-from-hindi-speech'],'kernel_sources':[],'machine_shape':'NvidiaTeslaT4'}
  (out/'kernel-metadata.json').write_text(json.dumps(metadata,indent=2)+'\n',encoding='utf-8')
  readme='''# Emergency ASR train826 inference — reconstructed from empty Astra files
 
