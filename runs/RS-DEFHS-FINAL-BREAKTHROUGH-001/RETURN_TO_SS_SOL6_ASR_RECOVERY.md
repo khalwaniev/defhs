@@ -14,3 +14,21 @@
 - No new semantic outputs, no System E evaluation, no target209 inference, no protected validation, no Kaggle competition submission.
 - SS next: run `python3 scripts/verify_final_breakthrough_asr_package.py` then `kaggle kernels push -p kaggle/rs_final_breakthrough_asr_train826_001 --accelerator NvidiaTeslaT4 --timeout 14400`. Return full Kaggle `QWEN3_ASR_TRAIN826.csv`, `ASR_TRAIN826_RESULT.json`, `OUTPUT_INVENTORY.json`, progress JSONL and logs. The new-information experiment resumes only on byte-verified 826 outputs.
 - Before results, System E test is predeclared in `ASR_PROTOCOL.md`: only 23 features (exact System D 18 + five new QwenASR→frozen Qwen14B semantic-state one-hots), strict five-fold nested fit and all original six primary plus seven robustness gates. Reject if any required gate fails.
+
+## Post-launch engineering incident — Kaggle kernel v1, 2026-10-11
+SS's WSL terminal proved Kaggle accepted the original self-contained notebook and entered Papermill execution, then produced `RuntimeError: MOUNT: 826 training WAV directory missing`. The failed implementation incorrectly searched `/kaggle/input/competitions/train` rather than the documented `/kaggle/input/competitions/dataverse-detecting-emotions-from-hindi-speech/train`. The failure occurred before audio SHA checks, GPU model loading and transcription: **NO NEW ASR SCIENTIFIC RESULT**.
+
+SOL6 patched ONLY `locate_audio(rows)` in the identical `run.py`, notebook code cell, and worker template; their model settings, prompt/ASR declaration, frozen IDs/hashes and labels-excluded payload are unchanged. Direct GitHub blob comparison shows the mount function is the sole modified production source region from the first launch. Added `scripts/test_final_breakthrough_mount.py` to exercise the standard competition mount, one further organizer nesting level, and fail-closed test-only folder exclusion. An independent synthetic equivalent produced `MOUNT_DISCOVERY_REGRESSION_PASS`; WSL should execute the exact committed test before notebook push.
+
+**Required WSL continuation:**
+```bash
+cd /home/fikar/zingle/defhs-sol6-asr
+git fetch origin rs/final-breakthrough-001-sol6-asr-recovery
+git switch --detach origin/rs/final-breakthrough-001-sol6-asr-recovery
+python3 scripts/verify_final_breakthrough_asr_package.py
+python3 scripts/test_final_breakthrough_mount.py
+kaggle kernels push -p kaggle/rs_final_breakthrough_asr_train826_001 --accelerator NvidiaTeslaT4 --timeout 14400
+kaggle kernels status khalwaniev/rs-defhs-final-breakthrough-asr-train826-001
+kaggle kernels logs khalwaniev/rs-defhs-final-breakthrough-asr-train826-001 --follow
+```
+Expected status `AUDIO_MOUNT_RESOLVED` and 826 `PREFLIGHT_VERIFIED` waveform hashes before loading model. The actual Kaggle v2 result remains unknown until its logs and output files are returned. Version 1 is strictly a technical failure, never a rejection of the ASR information hypothesis.
