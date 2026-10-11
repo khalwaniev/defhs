@@ -131,7 +131,7 @@ def go(override):
         {'cell_type':'code','id':'defhs-e-target-code','execution_count':None,
          'metadata':{},'outputs':[],'source':code.splitlines(keepends=True)}]}
     nb=out/'target209.ipynb';nb.write_text(json.dumps(notebook,ensure_ascii=False,indent=1)+'\n')
-    meta={'id':KERNEL,'title':'RS DEFHS System E ASR target209',
+    meta={'id':KERNEL,'title':'rs-defhs-system-e-asr-target209-001',
           'code_file':'target209.ipynb','language':'python','kernel_type':'notebook',
           'is_private':True,'enable_gpu':True,'enable_internet':True,
           'dataset_sources':[],'competition_sources':['dataverse-detecting-emotions-from-hindi-speech'],
