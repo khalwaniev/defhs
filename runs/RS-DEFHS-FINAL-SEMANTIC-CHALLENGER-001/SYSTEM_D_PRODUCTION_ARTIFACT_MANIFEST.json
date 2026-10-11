@@ -1,0 +1,64 @@
+{
+  "mission": "RS-DEFHS-FINAL-SEMANTIC-CHALLENGER-001",
+  "artifact_type": "SYSTEM_D_PRODUCTION_SINGLE_CANDIDATE",
+  "scientific_status": "ELIGIBLE_FOR_SS_SUBMISSION_REVIEW",
+  "submission_authorized": false,
+  "kaggle_submitted": false,
+  "frozen_authority_commit": "771e6dea2ac14eca37274155c4e514d16f2e2118",
+  "incumbent_system_C": {
+    "primary_cv": 0.8135577912484513,
+    "public_lb_reported": 0.86997,
+    "submission_sha256": "8ab7c5dc291cd9d1223283245fb62130b03bf728f764c5eeedf9d2915153e2a8",
+    "production_replay_sha_match": true
+  },
+  "challenger_system_D": {
+    "primary_cv": 0.8396460575108101,
+    "submission": "runs/RS-DEFHS-FINAL-SEMANTIC-CHALLENGER-001/submission_system_d.csv",
+    "submission_sha256": "182bfbcd5fb10b351504da6d24f3d0d33f6d05cf2786e1e1a19e80afe0e57ec9",
+    "schema": ["Id","emotion"],
+    "test_rows": 209,
+    "id_unique": true,
+    "changed_ids": [24,125,153,236,289,606,667,819],
+    "changed_hard": 5,
+    "changed_medium": 0,
+    "changed_high": 3,
+    "certified_retrieval_unchanged": 78
+  },
+  "frozen_original_saved_heads": {
+    "number": 10,
+    "source": "Google Drive DEFHS/rs_system3_wave1_001/cpu",
+    "sha_registry": "runs/RS-DEFHS-FINAL-SEMANTIC-CHALLENGER-001/PRESERVED_HEAD_PARITY.json",
+    "checksum_all_pass": true,
+    "original_OOF_probability_max_abs_diff_below": 0.0000005
+  },
+  "target_qwen14b": {
+    "source_kernel": "khalwaniev/defhs-frozen-qwen3-14b-target209",
+    "model": "Qwen/Qwen3-14B",
+    "revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+    "prompt_sha256": "d34712a764dabcd5616e826e8597cbdfba18a8fbca37b16195e2e22fed77324f",
+    "target_inference_csv_sha256": "bf5c6b3c6ee77cfad80d680cb4e6ce5db773f7c5b857b9aaa8011d3c128a1f8f",
+    "target_unique_transcripts": 201,
+    "input_source_asr_sha256": "a111071c53edd14a6202d9ac7b12360648c9f12e8650fee0aabf2dda0df12d01"
+  },
+  "canonical_scientific_reconciliation": {
+    "original_Astra_CLI_executed_here": false,
+    "frozen_recipe_replayed_independently": true,
+    "system_C_826_row_parity": true,
+    "system_D_826_row_parity": true,
+    "system_D_826_probability_max_abs_diff": 2.220446049250313e-16,
+    "system_C_209_SHA_match": true,
+    "local_replay_test_from_self_contained_archive": true
+  },
+  "external_replay_package": {
+    "name": "DEFHS_SYSTEM_D_FINAL_DELIVERY.zip",
+    "sha256": "fb76b00dcc145c3ea7df6046ed7da594ff3b1ebd4cb52848184902876af61839",
+    "bytes": 14861070,
+    "contents": "CPU-only finalization script, frozen metadata, old and new Qwen inference outputs, original 10 joblib acoustic heads, source features, final CSV, full 209-row audit, SHA manifests and README",
+    "contained_finalizer_source_sha256": "b77914ef4a358e6acc19497e242ca83b769f13b3dfdacde5d8522fc4a55bf525",
+    "location": "ChatGPT mission handoff downloadable conversation artifact; archive source inputs originated from exact canonical Drive SHA entries",
+    "verification": "ZIP CRC PASS, clean-directory CPU independent replay yields same System D SHA256"
+  },
+  "no_target_labels_used": true,
+  "no_protected_validation_access": true,
+  "risk_notes": "Cases 236 and 606 are near-tie System D decisions (margins 0.005515 and 0.000254 respectively); no test truth or leaderboard tuning used to override them."
+}
