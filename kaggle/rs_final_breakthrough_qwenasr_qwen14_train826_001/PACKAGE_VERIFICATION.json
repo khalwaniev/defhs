@@ -1,0 +1,18 @@
+{
+  "status": "STATIC_SEMANTIC_PACKAGE_PASS_GPU_NOT_RUN",
+  "source_parent_commit": "69ebbe3ca3c65f82e546fdf1d42e90fa885c8634",
+  "frozen_semantic_runner_blob": "cd0b35bc68c13aca928a2ca8591b7be32ff2db19",
+  "ASR_archive_sha256": "2e35d61564d68f1577e70111a4fa47a4be096dea729b75252c9bea101e7206f5",
+  "ASR_csv_sha256": "8ff77d69e8c39f6a4c4a508d9d0c7d00cfa728b8bfc650a6304c71d6974da86f",
+  "ASR_model_revision": "b188e100bd85038c06d2812d24a39776eba774ca",
+  "Qwen14_checkpoint_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "prompt_sha256": "d34712a764dabcd5616e826e8597cbdfba18a8fbca37b16195e2e22fed77324f",
+  "records_sha256": "4772c629b75f695d00a03ebf1801c980867ca9f5abffd5a777c6a6c3c6e6a9a3",
+  "rows": 826,
+  "unique_transcripts": 664,
+  "test_rows_embedded": 0,
+  "emotion_labels_or_folds_embedded": false,
+  "unchanged_semantic_decoder": true,
+  "run_sha256": "27f1c4bab13fb3ba09b999df8951ab09b36d06edad1fec543079b22dfc72aed9",
+  "metadata_sha256": "a1dff9a2074aa7413235cf46e1f01949c440c1bb4a7f3f48dce7b11efe90bfb0"
+}
