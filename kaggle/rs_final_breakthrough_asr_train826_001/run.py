@@ -38,13 +38,32 @@ def read_manifest():
  assert sha_bytes(','.join(map(str,ids)).encode())==REQUIRED_IDS_SHA256
  return rows
 def locate_audio(rows):
- roots=[p for p in Path('/kaggle/input').iterdir() if p.is_dir()] if Path('/kaggle/input').exists() else []
+ # Kaggle competition_sources mount at /kaggle/input/competitions/<slug>/,
+ # never directly at /kaggle/input/competitions/train.
+ first,last=rows[0]['filename'],rows[-1]['filename']
+ competition='dataverse-detecting-emotions-from-hindi-speech'
+ roots=[Path('/kaggle/input/competitions')/competition,
+        Path('/kaggle/input')/competition]
  checked=[]
  for root in roots:
-  for p in (root/'train',root/'dataset'/'train',root/'data'/'train',root/'Train'):
+  candidates=[root/'train',root/'dataset'/'train',root/'data'/'train',
+              root/'Train',root]
+  for p in candidates:
    checked.append(str(p))
-   if p.is_dir() and (p/rows[0]['filename']).is_file() and (p/rows[-1]['filename']).is_file(): return p
- fail('MOUNT','826 training WAV directory missing; checked='+repr(checked))
+   if p.is_dir() and (p/first).is_file() and (p/last).is_file():
+    print('AUDIO_MOUNT_RESOLVED',str(p),flush=True)
+    return p
+  # Fail-closed bounded recursive recovery for an extra organizer-created
+  # subdirectory. Never search a /test tree or arbitrary unrelated datasets.
+  if root.is_dir():
+   matches=sorted(p.parent for p in root.rglob(first)
+                  if 'test' not in [part.lower() for part in p.parts]
+                  and (p.parent/last).is_file())
+   for p in matches:
+    if p not in candidates:
+     print('AUDIO_MOUNT_RESOLVED',str(p),flush=True)
+     return p
+ fail('MOUNT','Frozen 826 training WAVs not mounted under official competition root; checked='+repr(checked))
 def main():
  start=time.time();rows=read_manifest();audio_dir=locate_audio(rows)
  print('PREFLIGHT: hash verifying 826 training WAVs',flush=True)
