@@ -43,7 +43,6 @@ def main():
     rows=list(csv.DictReader(io.StringIO(embedded.decode())))
     assert len(test)==len(rows)==209 and len(train)==826
     assert list(rows[0])==['Id','filename','file_bytes','file_sha256','sample_rate','channels','samples','sample_width_bits']
-    assert all({k:t[k] for k in rows[0]} is not None for t in test[:1])
     assert rows==[{k:r[k] for k in rows[0]} for r in test]
     ids=[int(q['Id']) for q in rows]
     assert len(set(ids))==209 and set(ids).isdisjoint(train)
