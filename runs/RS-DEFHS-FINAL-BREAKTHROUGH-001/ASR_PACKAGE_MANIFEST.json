@@ -1,0 +1,22 @@
+{
+  "mission": "RS-DEFHS-FINAL-BREAKTHROUGH-001-SOL6-CONTINUATION",
+  "status": "STATIC_PACKAGE_RECOVERED_GPU_EXECUTION_PENDING",
+  "as_of_date": "2026-10-11",
+  "parent_astra_commit": "ab2147c7be342a71e67003e2314c7cf104cf6031",
+  "parent_system_d_commit": "69ebbe3ca3c65f82e546fdf1d42e90fa885c8634",
+  "protected_system_d_public_lb": 0.88227,
+  "model_id": "Qwen/Qwen3-ASR-1.7B",
+  "model_revision": "b188e100bd85038c06d2812d24a39776eba774ca",
+  "model_loader": "qwen_asr.Qwen3ASRModel.from_pretrained",
+  "qwen_asr_package": "0.0.6",
+  "language": "Hindi",
+  "audio_manifest_sha256": "1e5552d42aec94efae197e7dac95de41cfc96e40336f3e513b9a87e3ccc72469",
+  "train_count": 826,
+  "test_count_excluded": 209,
+  "notebook": "kaggle/rs_final_breakthrough_asr_train826_001/train826.ipynb",
+  "kernel_id": "khalwaniev/rs-defhs-final-breakthrough-asr-train826-001",
+  "kaggle_gpu_submitted": false,
+  "protected_validation_accessed": false,
+  "scientific_ASR_result_exists": false,
+  "reconstruction_note": "Implemented after interrupted Astra session; ASR not yet run on frozen 826 WAVs."
+}
