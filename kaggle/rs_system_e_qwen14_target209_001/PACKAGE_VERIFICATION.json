@@ -1,0 +1,20 @@
+{
+  "status": "SYSTEM_E_QWEN14_TARGET209_STATIC_PASS_GPU_NOT_EXECUTED",
+  "mission": "SS-DEFHS-SYSTEM-E-EXPLORATORY-DEPLOYMENT-001",
+  "original_frozen_runner_commit": "69ebbe3ca3c65f82e546fdf1d42e90fa885c8634",
+  "original_frozen_runner_blob": "cd0b35bc68c13aca928a2ca8591b7be32ff2db19",
+  "asr_output_sha256": "4c32a0431bff86e8e9c5153acd7225138f5790a63ff06fa001267a42ad583771",
+  "asr_model_revision": "b188e100bd85038c06d2812d24a39776eba774ca",
+  "qwen14_model_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "prompt_sha256": "d34712a764dabcd5616e826e8597cbdfba18a8fbca37b16195e2e22fed77324f",
+  "input_sha256": "d2f253be8c2c06c431f869f02e1d8203f5fb1d291adc1251fc7fa4bdb07baa73",
+  "rows": 209,
+  "unique_transcripts": 200,
+  "no_emotion_labels_or_folds": true,
+  "no_train_rows": true,
+  "no_submission": true,
+  "scientific_gate_Q960_passed": false,
+  "frozen_inference_identical_outside_input_and_scope": true,
+  "run_sha256": "1a5f2461128e4e85fe630948c6ab88fbcef55c24d12620503f2f2077e2488ced",
+  "metadata_sha256": "4b4e44ae89f67601e5425b4170bbd80c8d5e04ab44cfdc6cd45d9259f8be2e69"
+}
