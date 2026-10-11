@@ -29,8 +29,8 @@ def main():
  out.mkdir(parents=True,exist_ok=True)
  (out/'run.py').write_text(code,encoding='utf-8')
  notebook={'nbformat':4,'nbformat_minor':5,'metadata':{'kernelspec':{'display_name':'Python 3','language':'python','name':'python3'},'language_info':{'name':'python'}},'cells':[
- {'cell_type':'markdown','metadata':{},'source':['# DEFHS Qwen3-ASR train826 — recovery from interrupted Astra package\n','**Scope:** 826 WAVs, no test, no protected labels; exact frozen hashes.\n']},
- {'cell_type':'code','execution_count':None,'metadata':{},'outputs':[],'source':code.splitlines(keepends=True)}]}
+ {'cell_type':'markdown','id':'defhs-asr-intro','metadata':{},'source':['# DEFHS Qwen3-ASR train826 — recovery from interrupted Astra package\n','**Scope:** 826 WAVs, no test, no protected labels; exact frozen hashes.\n']},
+ {'cell_type':'code','id':'defhs-asr-runner','execution_count':None,'metadata':{},'outputs':[],'source':code.splitlines(keepends=True)}]}
  (out/'train826.ipynb').write_text(json.dumps(notebook,ensure_ascii=False,indent=1)+'\n',encoding='utf-8')
  metadata={'id':'khalwaniev/rs-defhs-final-breakthrough-asr-train826-001','title':'DEFHS final breakthrough ASR train826','code_file':'train826.ipynb','language':'python','kernel_type':'notebook','is_private':True,'enable_gpu':True,'enable_internet':True,'dataset_sources':[],'competition_sources':['dataverse-detecting-emotions-from-hindi-speech'],'kernel_sources':[],'machine_shape':'NvidiaTeslaT4'}
  (out/'kernel-metadata.json').write_text(json.dumps(metadata,indent=2)+'\n',encoding='utf-8')
