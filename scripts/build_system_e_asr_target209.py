@@ -61,7 +61,8 @@ def go(override):
         ("'train_ids_sha256':REQUIRED_IDS_SHA256","'target_ids_sha256':REQUIRED_IDS_SHA256"),
         ("'source_audio_verified':826","'source_audio_verified':209"),
         ("'test_audio_access':False","'test_audio_access':True"),
-        ("'TRAIN826_ASR_COMPLETE'","'TARGET209_ASR_COMPLETE'"),
+        ("print('TRAIN826_ASR_COMPLETE',json.dumps({'status':'PASS','rows':826",
+         "print('TARGET209_ASR_COMPLETE',json.dumps({'status':'PASS','rows':209"),
     ]: code=exactly(code,a,b)
 
     # Strictly target-only mount discovery. Train folders cannot pass.
