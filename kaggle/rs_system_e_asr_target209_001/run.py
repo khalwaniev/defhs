@@ -1,0 +1,121 @@
+#!/usr/bin/env python3
+"""Post-Astra recovery of Qwen3-ASR-1.7B, TARGET209 only. This file was previously empty."""
+import base64,csv,gzip,hashlib,importlib.metadata,io,json,os,subprocess,sys,time,traceback,wave
+from pathlib import Path
+MODEL_ID='Qwen/Qwen3-ASR-1.7B'
+MODEL_REVISION='b188e100bd85038c06d2812d24a39776eba774ca'
+BACKEND='qwen-asr==0.0.6 / Qwen3ASRModel.from_pretrained / Transformers'
+LANGUAGE='Hindi'
+MANIFEST_B64='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'
+MANIFEST_SHA256='daf7bb1b869af2f872b0ed8f3f51f5386071256f2abcd17e19b2bdfd1be5edec'
+REQUIRED_IDS_SHA256='d71971079edf16597973364358b94b3d0e69556bffe25e3db137a86b643365f2'
+RUN_DIR=Path('/kaggle/working') if Path('/kaggle').exists() else Path.cwd()
+OUT=RUN_DIR/'QWEN3_ASR_TARGET209.csv'
+PROGRESS=RUN_DIR/'QWEN3_ASR_TARGET209_PROGRESS.jsonl'
+REPORT=RUN_DIR/'ASR_TARGET209_RESULT.json'
+INVENTORY=RUN_DIR/'OUTPUT_INVENTORY.json'
+def sha_bytes(b): return hashlib.sha256(b).hexdigest()
+def sha_file(path):
+ h=hashlib.sha256()
+ with open(path,'rb') as f:
+  for b in iter(lambda:f.read(8<<20),b''): h.update(b)
+ return h.hexdigest()
+def dump(path,obj):
+ tmp=path.with_suffix(path.suffix+'.tmp')
+ tmp.write_text(json.dumps(obj,sort_keys=True,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+ os.replace(tmp,path)
+def fail(phase,message):
+ dump(REPORT,{'status':'TECHNICAL_BLOCKER','phase':phase,'error':str(message),'checkpoint':MODEL_ID,'revision':MODEL_REVISION,'protected_access':False,'submitted':False})
+ raise RuntimeError(f'{phase}: {message}')
+def read_manifest():
+ raw=gzip.decompress(base64.b64decode(MANIFEST_B64))
+ assert sha_bytes(raw)==MANIFEST_SHA256,'Embedded manifest SHA mismatch'
+ rows=list(csv.DictReader(io.StringIO(raw.decode('utf-8'))))
+ ids=[int(r['Id']) for r in rows]
+ assert len(rows)==209 and len(set(ids))==209 and ids==sorted(ids)
+ assert all(set(r)=={'Id','filename','file_bytes','file_sha256','sample_rate','channels','samples','sample_width_bits'} for r in rows)
+ assert all(r['filename']==f'audio_{int(r["Id"]):06d}.wav' and len(r['file_sha256'])==64 for r in rows)
+ assert sha_bytes(','.join(map(str,ids)).encode())==REQUIRED_IDS_SHA256
+ return rows
+def locate_audio(rows):
+ # Only official competition test WAV folder(s); never fall back to train.
+ first,last=rows[0]['filename'],rows[-1]['filename']
+ competition='dataverse-detecting-emotions-from-hindi-speech'
+ roots=[Path('/kaggle/input/competitions')/competition,
+        Path('/kaggle/input')/competition]
+ checked=[]
+ for root in roots:
+  candidates=[root/'test',root/'Test',root/'dataset'/'test',
+              root/'data'/'test',root/'SRCASW-BhavVaani'/'test']
+  for p in candidates:
+   checked.append(str(p))
+   if p.is_dir() and (p/first).is_file() and (p/last).is_file():
+    print('TARGET_AUDIO_MOUNT_RESOLVED',str(p),flush=True)
+    return p
+  if root.is_dir():
+   matches=sorted({p.parent for p in root.rglob(first)
+                   if 'test' in [part.lower() for part in p.relative_to(root).parts[:-1]]
+                   and (p.parent/last).is_file()})
+   for p in matches:
+    if p not in candidates:
+     print('TARGET_AUDIO_MOUNT_RESOLVED',str(p),flush=True)
+     return p
+ fail('MOUNT','209 target WAVs not found in official test tree; checked='+repr(checked))
+def main():
+ start=time.time();rows=read_manifest();audio_dir=locate_audio(rows)
+ print('PREFLIGHT: hash verifying 209 official TARGET WAVs',flush=True)
+ for i,r in enumerate(rows):
+  p=audio_dir/r['filename']
+  if not p.is_file() or p.stat().st_size!=int(r['file_bytes']) or sha_file(p)!=r['file_sha256']: fail('WAV_HASH',f'WAV mismatch at {r["Id"]}')
+  with wave.open(str(p),'rb') as w:
+   if (w.getframerate(),w.getnchannels(),w.getnframes(),w.getsampwidth()*8)!=(int(r['sample_rate']),int(r['channels']),int(r['samples']),int(r['sample_width_bits'])): fail('WAV_METADATA',f'Header mismatch at {r["Id"]}')
+  if i%100==0:print('PREFLIGHT_VERIFIED',i+1,flush=True)
+ import torch
+ if not torch.cuda.is_available():fail('CUDA','No GPU present, check Kaggle quota and NvidiaTeslaT4')
+ free,total=torch.cuda.mem_get_info(0)
+ if free<9*(1024**3):fail('VRAM',f'Insufficient free VRAM: {free/(1024**3):.1f}GiB')
+ print('GPU',torch.cuda.get_device_name(0),'free_GiB',round(free/(1024**3),2),flush=True)
+ subprocess.run([sys.executable,'-m','pip','install','-q','--disable-pip-version-check','--no-cache-dir','qwen-asr==0.0.6'],check=True)
+ from huggingface_hub import model_info,snapshot_download
+ info=model_info(MODEL_ID,revision=MODEL_REVISION)
+ if info.sha!=MODEL_REVISION:fail('MODEL_REVISION',info.sha)
+ local=Path(snapshot_download(repo_id=MODEL_ID,revision=MODEL_REVISION))
+ must=['config.json','preprocessor_config.json','tokenizer_config.json','model-00001-of-00002.safetensors','model-00002-of-00002.safetensors']
+ if not all((local/x).is_file() and (local/x).stat().st_size>0 for x in must):fail('MODEL_FILES','Weights/processor missing')
+ hashes={n:{'bytes':(local/n).stat().st_size,'sha256':sha_file(local/n)} for n in must}
+ from qwen_asr import Qwen3ASRModel
+ model=Qwen3ASRModel.from_pretrained(str(local),dtype=torch.float16,device_map='cuda:0',max_inference_batch_size=1,max_new_tokens=512)
+ version=importlib.metadata.version('qwen-asr')
+ if version!='0.0.6':fail('ASR_PACKAGE_VERSION',version)
+ completed={};expected={int(r['Id']):r for r in rows}
+ if PROGRESS.is_file():
+  for line in PROGRESS.read_text(encoding='utf-8').splitlines():
+   if not line.strip():continue
+   v=json.loads(line);key=int(v['Id'])
+   if key not in expected or v['file_sha256']!=expected[key]['file_sha256'] or v['checkpoint_revision']!=MODEL_REVISION:fail('RESUME','Provenance mismatch')
+   if key in completed and v!=completed[key]:fail('RESUME','Conflicting progress rows')
+   completed[key]=v
+ with PROGRESS.open('a',encoding='utf-8') as f:
+  for index,r in enumerate(rows):
+   key=int(r['Id'])
+   if key in completed:continue
+   result=model.transcribe(audio=str(audio_dir/r['filename']),language=LANGUAGE)
+   if not isinstance(result,list) or len(result)!=1 or not isinstance(result[0].text,str):fail('ASR_RESULT',f'Invalid result for {key}')
+   transcript=result[0].text.strip();detected=str(result[0].language)
+   record={'Id':key,'filename':r['filename'],'file_sha256':r['file_sha256'],'checkpoint_revision':MODEL_REVISION,'requested_language':LANGUAGE,'detected_language':detected,'transcript':transcript}
+   if any(c in transcript for c in '\x00\r\n'):fail('ASR_RESULT',f'Control character in transcript {key}')
+   f.write(json.dumps(record,ensure_ascii=False,sort_keys=True)+'\n');f.flush();os.fsync(f.fileno());completed[key]=record
+   if (index+1)%20==0:print('ASR_PROGRESS',len(completed),'/209',flush=True)
+ if len(completed)!=209:fail('ROW_COUNT',len(completed))
+ with OUT.open('w',encoding='utf-8',newline='') as f:
+  writer=csv.writer(f);writer.writerow(['Id','filename','file_sha256','language','transcript'])
+  for r in rows:
+   o=completed[int(r['Id'])];writer.writerow([r['Id'],o['filename'],o['file_sha256'],o['detected_language'],o['transcript']])
+ dump(REPORT,{'status':'PASS','scope':'target209_only','rows':209,'unique_Ids':209,'model_id':MODEL_ID,'model_revision':MODEL_REVISION,'qwen_asr_version':version,'backend':BACKEND,'language_requested':LANGUAGE,'manifest_sha256':MANIFEST_SHA256,'target_ids_sha256':REQUIRED_IDS_SHA256,'weights_and_processor':hashes,'source_audio_verified':209,'gpu':torch.cuda.get_device_name(0),'elapsed_seconds':round(time.time()-start,2),'protected_access':False,'test_audio_access':True,'kaggle_submitted':False,'output_sha256':sha_file(OUT)})
+ dump(INVENTORY,{'status':'PASS','files':[{'name':p.name,'bytes':p.stat().st_size,'sha256':sha_file(p)} for p in (OUT,PROGRESS,REPORT)],'model_id':MODEL_ID,'revision':MODEL_REVISION})
+ print('TARGET209_ASR_COMPLETE',json.dumps({'status':'PASS','rows':209,'csv_sha256':sha_file(OUT),'inventory_sha256':sha_file(INVENTORY)}),flush=True)
+if __name__=='__main__':
+ try:main()
+ except Exception as e:
+  if not REPORT.exists():dump(REPORT,{'status':'TECHNICAL_BLOCKER','error':str(e),'traceback':traceback.format_exc(),'protected_access':False,'kaggle_submitted':False})
+  raise

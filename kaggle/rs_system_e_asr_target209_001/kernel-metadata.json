@@ -1,0 +1,16 @@
+{
+  "id": "khalwaniev/rs-defhs-system-e-asr-target209-001",
+  "title": "rs-defhs-system-e-asr-target209-001",
+  "code_file": "target209.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": [
+    "dataverse-detecting-emotions-from-hindi-speech"
+  ],
+  "kernel_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}
