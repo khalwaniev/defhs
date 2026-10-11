@@ -106,8 +106,10 @@ def build(archive,out):
     # input/contract, expected de-duplication count and output directory.
     frozen=orig
     for before,after in substitutions.items(): frozen=frozen.replace(before,after)
-    assert code.split('\n',indices[0])[0]==frozen.split('\n',indices[0])[0]
-    assert code.split('\n',indices[0]+1)[1]==frozen.split('\n',indices[0]+1)[1]
+    expected_lines=frozen.splitlines(keepends=True)
+    generated_lines=code.splitlines(keepends=True)
+    assert len(expected_lines)==len(generated_lines)
+    assert all(generated_lines[j]==expected_lines[j] for j in range(len(expected_lines)) if j!=indices[0]), 'Non-input frozen inference code changed'
     out.mkdir(parents=True,exist_ok=True)
     runner=out/'run.py';runner.write_text(code,encoding='utf-8')
     meta={'id':KERNEL,'title':'RS DEFHS QwenASR Qwen14 Semantic826 001',
