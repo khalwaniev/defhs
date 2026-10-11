@@ -1,0 +1,16 @@
+{
+  "id": "khalwaniev/rs-defhs-final-breakthrough-asr-train826-001",
+  "title": "DEFHS final breakthrough ASR train826",
+  "code_file": "train826.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": [
+    "dataverse-detecting-emotions-from-hindi-speech"
+  ],
+  "kernel_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}
