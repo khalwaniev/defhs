@@ -1,0 +1,56 @@
+{
+  "model": "Qwen/Qwen3-14B",
+  "revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "gated": false,
+  "weights_downloaded": false,
+  "checks": [
+    {
+      "file": "model-00001-of-00008.safetensors",
+      "status": 200,
+      "content_length": "3841788544",
+      "seconds": 15.41915139899993
+    },
+    {
+      "file": "model-00002-of-00008.safetensors",
+      "status": 200,
+      "content_length": "3963750816",
+      "seconds": 15.348966812000072
+    },
+    {
+      "file": "model-00003-of-00008.safetensors",
+      "status": 200,
+      "content_length": "3963750880",
+      "seconds": 15.34270320099995
+    },
+    {
+      "file": "model-00004-of-00008.safetensors",
+      "status": 200,
+      "content_length": "3963750880",
+      "seconds": 15.342814695000015
+    },
+    {
+      "file": "model-00005-of-00008.safetensors",
+      "status": 200,
+      "content_length": "3963750880",
+      "seconds": 16.1307215920001
+    },
+    {
+      "file": "model-00006-of-00008.safetensors",
+      "status": 200,
+      "content_length": "3963750880",
+      "seconds": 16.09698025600005
+    },
+    {
+      "file": "model-00007-of-00008.safetensors",
+      "status": 200,
+      "content_length": "3963750880",
+      "seconds": 16.14766333700004
+    },
+    {
+      "file": "model-00008-of-00008.safetensors",
+      "status": 200,
+      "content_length": "1912371880",
+      "seconds": 16.049895631000027
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+experiment,status,model,train_rows,test_rows,gpu_hours,macro_f1,notes
+C_AUTHORITY_REPLAY,PASS,System_C,826,0,0,0.8135577912484513,Exact published score fold confusion hard-cohort parity
+QWEN8B_REPLAY,PASS,Qwen3-8B,826,0,0,0.5172141900048843,Full four-class score with abstention FN
+QWEN14B_TRAIN826,AWAITING_EXTERNAL_EXECUTION,Qwen3-14B,0,0,0,,Source access verified GPU feasibility unmeasured
+NESTED_CHALLENGER,NOT_OPENED,18-feature L2 logistic,0,0,0,,No new semantic outputs received
+TARGET209,NOT_OPENED,Qwen3-14B,0,0,0,,Scientific gate not passed

@@ -1,0 +1,96 @@
+{
+  "source_commit": "021d060bc9288f4d2c2d14c37022e2898aed1d01",
+  "external_inputs": {
+    "QWEN_SEMANTIC_OUTPUTS.csv": {
+      "drive_id": "1_dVu2C35GVXjzRordjPhrFrJB1-FyzS5",
+      "drive_url": "https://drive.google.com/file/d/1_dVu2C35GVXjzRordjPhrFrJB1-FyzS5/view",
+      "bytes": 11392,
+      "sha256": "a2dad2feeac7cc817716ae4eb0cd8724c2f169c06262d45d8e00e66345e1569b",
+      "required_for_evaluation": true
+    },
+    "emotion2vec_base_meanstd.npz": {
+      "drive_id": "1R3_zf46opUk5XDbZm7FocKz2j1qWqVmQ",
+      "drive_url": "https://drive.google.com/file/d/1R3_zf46opUk5XDbZm7FocKz2j1qWqVmQ/view",
+      "bytes": 5838960,
+      "sha256": "4b8b6feeedc83ca2712b7fd21d9683465a07f7fcb82ca0c1d625512acf64326f",
+      "required_for_evaluation": true
+    },
+    "xls_r_300m_meanstd.npz": {
+      "drive_id": "1VLdnjTHyQXZ6RGYjLtqZEygN9fFCOOP9",
+      "drive_url": "https://drive.google.com/file/d/1VLdnjTHyQXZ6RGYjLtqZEygN9fFCOOP9/view",
+      "bytes": 7824975,
+      "sha256": "24bd935cc0271d5ae427acfed96a0237161b646e1bdcc1f2cb80c48abdcfa5fc",
+      "required_for_evaluation": true
+    },
+    "FIXED_PAIR_VB.npz": {
+      "drive_id": "1tXj5f8CBKczNTcSLC9UFLbwqRMAtB67K",
+      "drive_url": "https://drive.google.com/file/d/1tXj5f8CBKczNTcSLC9UFLbwqRMAtB67K/view",
+      "bytes": 26511,
+      "sha256": "9f9ac86829230bcfde4be93a980161bf6139eaa38f3372efc822eb8edf79da45",
+      "required_for_evaluation": true
+    },
+    "E2V_CONTROL_VB.npz": {
+      "drive_id": "1GEFQ7sdJb9SJg_dsyTV1ev4VRcOh9tAk",
+      "drive_url": "https://drive.google.com/file/d/1GEFQ7sdJb9SJg_dsyTV1ev4VRcOh9tAk/view",
+      "bytes": 26601,
+      "sha256": "14c86f6f61d633a72fd8535bec1070162e8a92f6de9c3f37ee366ff0e3d7a7b7",
+      "required_for_evaluation": true
+    },
+    "XLSR_VB.npz": {
+      "drive_id": "1EbexgFaqhwrONFw82LLESOpNKItDHC1n",
+      "drive_url": "https://drive.google.com/file/d/1EbexgFaqhwrONFw82LLESOpNKItDHC1n/view",
+      "bytes": 26605,
+      "sha256": "f8a7cab17c88e98056d45fcad44479f1254acd68dbc7507e585f2197e1c87402",
+      "required_for_evaluation": true
+    },
+    "ASR_TRANSCRIPTS.csv": {
+      "drive_id": "1d-SvtL_PmzTqL5cICf1DfgfXYUjdV1o7",
+      "drive_url": "https://drive.google.com/file/d/1d-SvtL_PmzTqL5cICf1DfgfXYUjdV1o7/view",
+      "bytes": 268870,
+      "sha256": "a111071c53edd14a6202d9ac7b12360648c9f12e8650fee0aabf2dda0df12d01",
+      "required_for_evaluation": false
+    },
+    "PROMPT_CLUSTER_ASSIGNMENTS.csv": {
+      "drive_id": "1_NW5UbomzXy-XsC91LNlvwTf_hZB5UzQ",
+      "drive_url": "https://drive.google.com/file/d/1_NW5UbomzXy-XsC91LNlvwTf_hZB5UzQ/view",
+      "bytes": 288475,
+      "sha256": "458712cfee51e0cf65ef57d1a0deb8f81dcb70e4ecfe6ebfc73220f3aefac005",
+      "required_for_evaluation": true
+    }
+  },
+  "repository_inputs": {
+    "WORKFLOW.md": {
+      "bytes": 9242,
+      "sha256": "c82714464a5f11e69cc164e0cebfe7d7d89132b78dfd3ad51ab3562f6c197043"
+    },
+    "runs/DS-DEFHS-VALIDATION-HARDENING-002/DATA_MANIFEST.csv": {
+      "bytes": 205931,
+      "sha256": "1e5552d42aec94efae197e7dac95de41cfc96e40336f3e513b9a87e3ccc72469"
+    },
+    "runs/DS-DEFHS-VALIDATION-HARDENING-002/DUPLICATE_GROUPS_FINAL.csv": {
+      "bytes": 22949,
+      "sha256": "6aee3374e27efeb1a79397a1256a515b87e3baf4d7a01536191f6e16256e81f7"
+    },
+    "runs/DS-DEFHS-VALIDATION-HARDENING-002/RETRIEVAL_MAP_FINAL.csv": {
+      "bytes": 1921,
+      "sha256": "e08f7d06c13d64a1d365d7ae6fa741d6e831dea8816de6663d4a9c0eb113d2a7"
+    },
+    "runs/DS-DEFHS-VALIDATION-HARDENING-002/VALIDATION_VA_FOLDS.csv": {
+      "bytes": 23930,
+      "sha256": "dcee356b0a66cb73c506bb71a6c57962227d6d0474efd3e4d6c404168308f3d1"
+    },
+    "runs/DS-DEFHS-VALIDATION-HARDENING-002/VALIDATION_VB_FOLDS.csv": {
+      "bytes": 29728,
+      "sha256": "87c6c0b33e5ea5c05b2bd2537d29480e4285cf816d4a921a6f1bcb3ef854139b"
+    },
+    "runs/DS-DEFHS-VALIDATION-HARDENING-002/VALIDATION_VD_REGIMES.csv": {
+      "bytes": 48424,
+      "sha256": "f310cc024d122f19321e34a826e2793b5a661b1dd01ee4d1d72709a4472f0839"
+    },
+    "runs/RS-DEFHS-NESTED-SEMANTIC-FUSION-001/submission_nested_semantic_fusion.csv": {
+      "bytes": 2096,
+      "sha256": "8ab7c5dc291cd9d1223283245fb62130b03bf728f764c5eeedf9d2915153e2a8"
+    }
+  },
+  "protected_validation_not_fetched": true
+}

@@ -1,0 +1,153 @@
+{
+  "mission": "RS-DEFHS-FINAL-SEMANTIC-CHALLENGER-001",
+  "parent_commit": "021d060bc9288f4d2c2d14c37022e2898aed1d01",
+  "files": [
+    {
+      "path": "runs/RS-DEFHS-FINAL-SEMANTIC-CHALLENGER-001/COMPUTE.json",
+      "bytes": 877,
+      "sha256": "d11427ada785d66663aab5b023fc32fb5f221c3dd1bb61a11f50a8d1b9528408",
+      "git_blob_sha": "6c397b4d20effd24fc345b32a921ebe0f6d95b1e"
+    },
+    {
+      "path": "runs/RS-DEFHS-FINAL-SEMANTIC-CHALLENGER-001/CONFIG.json",
+      "bytes": 3534,
+      "sha256": "e85bfdb9d702b4da10903b3c1e640c641a3450a186be2c49007fd068cc3c99e1",
+      "git_blob_sha": "6b13614139f98df3e9f07b294197331a3d4bdbd6"
+    },
+    {
+      "path": "runs/RS-DEFHS-FINAL-SEMANTIC-CHALLENGER-001/EXECUTION_HANDOFF.md",
+      "bytes": 4154,
+      "sha256": "ae274c50dd099334d7a4f462b61f1103e0d891923b068a40dee795170d0e341f",
+      "git_blob_sha": "1de452d8ed36219102aafecb579c7bf1c67d12a0"
+    },
+    {
+      "path": "runs/RS-DEFHS-FINAL-SEMANTIC-CHALLENGER-001/EXPERIMENT_LEDGER.csv",
+      "bytes": 551,
+      "sha256": "0fdc313eff97146ca2aec433733644760ba61f1773763beb9d1ad45e49d5967b",
+      "git_blob_sha": "bcd3c966cb3576f79f7f04656164510b32f46563"
+    },
+    {
+      "path": "runs/RS-DEFHS-FINAL-SEMANTIC-CHALLENGER-001/INPUT_MANIFEST.json",
+      "bytes": 4249,
+      "sha256": "eb01ee2294418463c66ebec35c8cdf05a04eb35abc8ff0ac81c99f3f96fe9eef",
+      "git_blob_sha": "b10ef88c9520fd3e0478e503ca0f1fed77583377"
+    },
+    {
+      "path": "runs/RS-DEFHS-FINAL-SEMANTIC-CHALLENGER-001/MODEL_ACCESS.json",
+      "bytes": 1415,
+      "sha256": "90dc577feda721f02707bf0652ff1da27188431e48f0a1614c7874876f5ea705",
+      "git_blob_sha": "2041a88142201e2bc7dd349b560a36e47a9a9b12"
+    },
+    {
+      "path": "runs/RS-DEFHS-FINAL-SEMANTIC-CHALLENGER-001/MODEL_SELECTION.md",
+      "bytes": 3243,
+      "sha256": "6f61b6cf64e6572b23798c3f77a8f786117c6184ec6d1e4bc94354cda4c644dc",
+      "git_blob_sha": "2eae6030650151f0da79aae96f91890dfc3d1968"
+    },
+    {
+      "path": "runs/RS-DEFHS-FINAL-SEMANTIC-CHALLENGER-001/NESTING_REPLAY_AUDIT.json",
+      "bytes": 10026,
+      "sha256": "0655e1cda03b32f9dbb728c0505e6b118bb4175e36f8e631184d8960d3db02fe",
+      "git_blob_sha": "b604fe49b1b680f817a80937a304af226b0b3564"
+    },
+    {
+      "path": "runs/RS-DEFHS-FINAL-SEMANTIC-CHALLENGER-001/PRESERVED_HEAD_PARITY.json",
+      "bytes": 2446,
+      "sha256": "6310ca7b1932ccabc22b51222392039e00dd00dfc878fb13b8b5d9c2e9e36167",
+      "git_blob_sha": "7b4b4058ad5a80f1e8df9ae777dde3c2df57dc7d"
+    },
+    {
+      "path": "runs/RS-DEFHS-FINAL-SEMANTIC-CHALLENGER-001/PROTOCOL.md",
+      "bytes": 7227,
+      "sha256": "b8995f845d068ccb20f5e0db6e49bdf94d3e8eb12531374f04f74a19491b0547",
+      "git_blob_sha": "54109bef0f8ff4eefcc5fb1c20edd6711377eb9e"
+    },
+    {
+      "path": "runs/RS-DEFHS-FINAL-SEMANTIC-CHALLENGER-001/RETURN_TO_SS.md",
+      "bytes": 6972,
+      "sha256": "36fef78fd5233381b90646d5607cc95d0a15d7651177d364a53f308fa1060ee7",
+      "git_blob_sha": "3ee35530bd7a78912579765e5e913c32cff78314"
+    },
+    {
+      "path": "runs/RS-DEFHS-FINAL-SEMANTIC-CHALLENGER-001/STATUS.json",
+      "bytes": 995,
+      "sha256": "2c5d317f6eb199b7633c35937ee5be6320d4dce81ba2f75af8cab0426cc4b73e",
+      "git_blob_sha": "98136cb9a016bfeb92d2cfafaec236d43579ec30"
+    },
+    {
+      "path": "runs/RS-DEFHS-FINAL-SEMANTIC-CHALLENGER-001/SYSTEM_C_AUTHORITY_OOF.csv",
+      "bytes": 243045,
+      "sha256": "8bcbf846dfbfdc037df35cc134862e1f3f25d6d069298af9b2897a57acec97ff",
+      "git_blob_sha": "18cc8e98d9cf4d9f862a5608fd654f868cece7c5"
+    },
+    {
+      "path": "runs/RS-DEFHS-FINAL-SEMANTIC-CHALLENGER-001/SYSTEM_C_REPLAY.json",
+      "bytes": 5677,
+      "sha256": "343e7d6d77eebfeeee380e23f7efbf7ec43124946ef08b85289dbe5aed555d7c",
+      "git_blob_sha": "db6a3f41a981ac4d908e27b9885b7f164f6a3922"
+    },
+    {
+      "path": "runs/RS-DEFHS-FINAL-SEMANTIC-CHALLENGER-001/TRANSCRIPT_AUDIT.json",
+      "bytes": 644,
+      "sha256": "f5f4cc4c9f564d4c77e241fd400eda594b10dab93eea9348e6e668eb484707fc",
+      "git_blob_sha": "07fff1278c527a9619ddb42b7053f5bcc2e6d8c5"
+    },
+    {
+      "path": "runs/RS-DEFHS-FINAL-SEMANTIC-CHALLENGER-001/VALIDATION.json",
+      "bytes": 836,
+      "sha256": "b871707d14b7cc6506328d98ad2d378df564ebbab6ae71e337c4c1e5e77d45d1",
+      "git_blob_sha": "35b973a7881ce6268e06d78046607696e7b336a4"
+    },
+    {
+      "path": "scripts/final_semantic_challenger.py",
+      "bytes": 25102,
+      "sha256": "da2f31e8e40770ac4c5b9d6c2242312660180e4996ff67206caa4a506569ae4d",
+      "git_blob_sha": "ea42903ea87debe672642a2fec21e1081c076be8"
+    },
+    {
+      "path": "scripts/final_semantic_infer_template.py",
+      "bytes": 11268,
+      "sha256": "0927d38548bc6d854c40587490e30b7b2597a146862ec16cde1065baff74da25",
+      "git_blob_sha": "5b84d291d67dcca898579c08d225803b56153861"
+    },
+    {
+      "path": "scripts/prepare_final_semantic_inputs.py",
+      "bytes": 1676,
+      "sha256": "4566475ed6c1726238bf0249854212eef1eb5e7f251af29743438d6b167c2ca0",
+      "git_blob_sha": "d5e286b8acbe499441e7cb6b3c2b198e24bed395"
+    },
+    {
+      "path": "tests/test_final_semantic_challenger.py",
+      "bytes": 3783,
+      "sha256": "344933fc96fdbc8d2cf6e1211b5822d3d4416322ef9562ea3559b090e35fcdc2",
+      "git_blob_sha": "21b604e5b054c60052536179b8c88c60c9b9ec1e"
+    },
+    {
+      "path": "kaggle/rs_final_semantic_train826_001/README.md",
+      "bytes": 2316,
+      "sha256": "ea29ce0565e752f926e63ebbb46afd705e51dd50dbc87183a7723639909229c8",
+      "git_blob_sha": "c525dc09d8cc30c65c942c64eb8d858b6b4b1506"
+    },
+    {
+      "path": "kaggle/rs_final_semantic_train826_001/kernel-metadata.json",
+      "bytes": 368,
+      "sha256": "f97bd8bf86b7af6f984a80c3cc705e690e77e4b304c191045f28b18fef73c892",
+      "git_blob_sha": "d37ba5c20dc7a8aa88b0888471245bc4c46bda53"
+    },
+    {
+      "path": "kaggle/rs_final_semantic_train826_001/run.py",
+      "bytes": 36179,
+      "sha256": "84cf6b644b2f4c1c996a6b2e539be70bab566a81aca67631e42059ff61eb81b8",
+      "git_blob_sha": "cd0b35bc68c13aca928a2ca8591b7be32ff2db19"
+    },
+    {
+      "path": "kaggle/rs_final_semantic_train826_001/train826.ipynb",
+      "bytes": 38228,
+      "sha256": "ec7044c464e85aac87f1ad813eeea0ccdfc645028a001a4077b4db297422962f",
+      "git_blob_sha": "6a693f3435fb8c815d63b92b3b297dc1e222e48a"
+    }
+  ],
+  "incumbent_schema_rows_ids_labels_and_78_retrieval_checks": "PASS",
+  "heavy_features_and_models_not_in_git": true,
+  "new_model_outputs_not_fabricated": true
+}

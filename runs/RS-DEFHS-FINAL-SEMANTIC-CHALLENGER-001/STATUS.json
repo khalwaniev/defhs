@@ -1,0 +1,26 @@
+{
+  "mission": "RS-DEFHS-FINAL-SEMANTIC-CHALLENGER-001",
+  "status": "AWAITING_EXTERNAL_DUAL_T4_FEASIBILITY_AND_TRAIN826_INFERENCE",
+  "scientific_negative": false,
+  "system_c_incumbent": {
+    "public_macro_f1": 0.86997,
+    "public_score_authority": "user/SS verified evidence",
+    "primary_cv": 0.8135577912484513,
+    "CSV_sha256": "8ab7c5dc291cd9d1223283245fb62130b03bf728f764c5eeedf9d2915153e2a8"
+  },
+  "selected_model": "Qwen/Qwen3-14B",
+  "revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "GPU_memory_measured": false,
+  "GPU_runtime_measured": false,
+  "new_semantic_metrics": null,
+  "new_fusion_metrics": null,
+  "new_VA_VD_Q_private_stress": null,
+  "target209_new_model_inferences": 0,
+  "target209_candidate_created": false,
+  "incumbent_labels_changed": 0,
+  "certified_retrieval_decisions_changed": 0,
+  "protected_validation_queried": false,
+  "kaggle_submission": false,
+  "deadline_WIB": "2026-10-13T01:30:00+07:00",
+  "deadline_UTC": "2026-10-12T18:30:00+00:00"
+}

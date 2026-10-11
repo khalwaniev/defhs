@@ -1,0 +1,23 @@
+{
+  "unit_tests": 6,
+  "unit_test_status": "PASS",
+  "nested_outer_label_perturbation": "PASS",
+  "input_collector": "READY",
+  "GPU_execution": "NOT_RUN",
+  "candidate_stress_execution": "NOT_RUN",
+  "incumbent_CSV_and_retrieval_bytes": "EXACT",
+  "temporary_failures": [
+    {
+      "stage": "fresh base-head refit parity",
+      "reason": "Historical sklearn 1.7.2 versus current 1.8.0; preserved heads and authoritative outer probabilities verified and retained."
+    },
+    {
+      "stage": "local canonical-file materialization",
+      "reason": "Patch added trailing blank line to fetched CSV; exact repository bytes restored and original hash test passes."
+    },
+    {
+      "stage": "missing inference negative control",
+      "reason": "Missing CONTRACT.json raises before metrics; no substitute output created."
+    }
+  ]
+}

@@ -1,0 +1,287 @@
+{
+  "status": "EXACT_PUBLISHED_AUTHORITY_REPLAY_PASS",
+  "system_c": {
+    "n": 826,
+    "macro_f1": 0.8135577912484513,
+    "accuracy": 0.8123486682808717,
+    "per_class": {
+      "angry": {
+        "precision": 0.848780487804878,
+        "recall": 0.848780487804878,
+        "f1": 0.848780487804878,
+        "support": 205
+      },
+      "happy": {
+        "precision": 0.8532608695652174,
+        "recall": 0.8177083333333334,
+        "f1": 0.8351063829787234,
+        "support": 192
+      },
+      "neutral": {
+        "precision": 0.780373831775701,
+        "recall": 0.7695852534562212,
+        "f1": 0.7749419953596288,
+        "support": 217
+      },
+      "sad": {
+        "precision": 0.7757847533632287,
+        "recall": 0.8160377358490566,
+        "f1": 0.7954022988505747,
+        "support": 212
+      }
+    },
+    "confusion_columns": [
+      "angry",
+      "happy",
+      "neutral",
+      "sad"
+    ],
+    "confusion": [
+      [
+        174,
+        8,
+        8,
+        15
+      ],
+      [
+        10,
+        157,
+        19,
+        6
+      ],
+      [
+        11,
+        10,
+        167,
+        29
+      ],
+      [
+        10,
+        9,
+        20,
+        173
+      ]
+    ],
+    "fold_f1": [
+      0.7548722211207533,
+      0.812367374005305,
+      0.8494805998899284,
+      0.8250607090820787,
+      0.8255294348949557
+    ]
+  },
+  "qwen8b": {
+    "n": 826,
+    "macro_f1": 0.5172141900048843,
+    "accuracy": 0.423728813559322,
+    "per_class": {
+      "angry": {
+        "precision": 0.8717948717948718,
+        "recall": 0.16585365853658537,
+        "f1": 0.2786885245901639,
+        "support": 205
+      },
+      "happy": {
+        "precision": 0.9285714285714286,
+        "recall": 0.40625,
+        "f1": 0.5652173913043478,
+        "support": 192
+      },
+      "neutral": {
+        "precision": 0.647887323943662,
+        "recall": 0.6359447004608295,
+        "f1": 0.641860465116279,
+        "support": 217
+      },
+      "sad": {
+        "precision": 0.7633587786259542,
+        "recall": 0.4716981132075472,
+        "f1": 0.5830903790087464,
+        "support": 212
+      }
+    },
+    "confusion_columns": [
+      "angry",
+      "happy",
+      "neutral",
+      "sad",
+      "unclear"
+    ],
+    "confusion": [
+      [
+        34,
+        0,
+        21,
+        19,
+        131
+      ],
+      [
+        0,
+        78,
+        41,
+        5,
+        68
+      ],
+      [
+        3,
+        2,
+        138,
+        7,
+        67
+      ],
+      [
+        2,
+        4,
+        13,
+        100,
+        93
+      ]
+    ],
+    "fold_f1": [
+      0.4899370133412686,
+      0.5347153588830246,
+      0.538129063906737,
+      0.5684858698470313,
+      0.4396759953973698
+    ]
+  },
+  "qwen8b_coverage": 0.5653753026634383,
+  "qwen8b_covered_only": {
+    "n": 467,
+    "macro_f1": 0.7280251225042054,
+    "accuracy": 0.7494646680942184,
+    "per_class": {
+      "angry": {
+        "precision": 0.8717948717948718,
+        "recall": 0.4594594594594595,
+        "f1": 0.6017699115044248,
+        "support": 74
+      },
+      "happy": {
+        "precision": 0.9285714285714286,
+        "recall": 0.6290322580645161,
+        "f1": 0.75,
+        "support": 124
+      },
+      "neutral": {
+        "precision": 0.647887323943662,
+        "recall": 0.92,
+        "f1": 0.7603305785123967,
+        "support": 150
+      },
+      "sad": {
+        "precision": 0.7633587786259542,
+        "recall": 0.8403361344537815,
+        "f1": 0.8,
+        "support": 119
+      }
+    },
+    "confusion_columns": [
+      "angry",
+      "happy",
+      "neutral",
+      "sad"
+    ],
+    "confusion": [
+      [
+        34,
+        0,
+        21,
+        19
+      ],
+      [
+        0,
+        78,
+        41,
+        5
+      ],
+      [
+        3,
+        2,
+        138,
+        7
+      ],
+      [
+        2,
+        4,
+        13,
+        100
+      ]
+    ]
+  },
+  "c_vs_fixed_waveform_pair": {
+    "changed": 126,
+    "corrections": 70,
+    "breakages": 41,
+    "wrong_to_other_wrong": 15,
+    "neutral_sad_cross_breakages": 13
+  },
+  "hard_surrogate": {
+    "n": 316,
+    "macro_f1": 0.657839245785073,
+    "accuracy": 0.6645569620253164,
+    "per_class": {
+      "angry": {
+        "precision": 0.6206896551724138,
+        "recall": 0.5901639344262295,
+        "f1": 0.6050420168067226,
+        "support": 61
+      },
+      "happy": {
+        "precision": 0.6428571428571429,
+        "recall": 0.6521739130434783,
+        "f1": 0.6474820143884892,
+        "support": 69
+      },
+      "neutral": {
+        "precision": 0.6630434782608695,
+        "recall": 0.6630434782608695,
+        "f1": 0.6630434782608695,
+        "support": 92
+      },
+      "sad": {
+        "precision": 0.7083333333333334,
+        "recall": 0.723404255319149,
+        "f1": 0.7157894736842105,
+        "support": 94
+      }
+    },
+    "confusion_columns": [
+      "angry",
+      "happy",
+      "neutral",
+      "sad"
+    ],
+    "confusion": [
+      [
+        36,
+        7,
+        5,
+        13
+      ],
+      [
+        7,
+        45,
+        15,
+        2
+      ],
+      [
+        8,
+        10,
+        61,
+        13
+      ],
+      [
+        7,
+        8,
+        11,
+        68
+      ]
+    ]
+  },
+  "rowlevel_sha256": "8bcbf846dfbfdc037df35cc134862e1f3f25d6d069298af9b2897a57acec97ff",
+  "wall_seconds": 5.2846994099999165,
+  "gpu_hours": 0,
+  "provenance": "Reconstruction from checksum-verified AST INPUT_AUTHORITY artifacts; all published C score, fold, confusion, hard-cohort and correction checks pass. No archived original C row-file checksum exists in the accepted report; this is an authenticated recipe replay, not a byte-identical archive claim.",
+  "protected_validation_read": false
+}

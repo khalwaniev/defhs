@@ -1,0 +1,16 @@
+{
+  "source_sha256": "a111071c53edd14a6202d9ac7b12360648c9f12e8650fee0aabf2dda0df12d01",
+  "rows": 1035,
+  "train": 826,
+  "test": 209,
+  "raw_text_unique_all": 856,
+  "raw_text_unique_train": 711,
+  "raw_text_empty": 0,
+  "exact_historical_payload_parity": true,
+  "train_conflicting_exact_text_groups": 1,
+  "median_chars": 27.0,
+  "max_chars": 182,
+  "avg_logprob_below_minus1": 3,
+  "reference_transcripts_or_WER_available": false,
+  "accuracy_claim": "Existing ASR provenance verified; transcription accuracy is not established by an independent reference. Language is forced Hindi; language probability is not an accuracy certificate."
+}

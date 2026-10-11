@@ -1,0 +1,253 @@
+{
+  "view": "VB",
+  "outer": [
+    {
+      "outer_fold": 0,
+      "train_n": 660,
+      "heldout_n": 166,
+      "train_ids_sha256": "5db2789ca07638b2a27ebcf0e4c2573048992f9ee377064d8e6761238a38f329",
+      "heldout_ids_sha256": "ee9957dfe7bcfe3b21f9c5e2e51ae75ce3a5c264942585334758c92b941f4443",
+      "inner_splits": [
+        {
+          "inner_block": 1,
+          "base_fit_n": 495,
+          "base_predict_n": 165,
+          "fit_ids_sha256": "558017a297b18cf5da1d85e9e31f5459e099e0ed5e802b989238adf2a0db6063",
+          "predict_ids_sha256": "baa751d569d533f28dbe7e8297ac1d7f55c387eb9cccb5b0850ba3a6818fae9d",
+          "outer_overlap": 0
+        },
+        {
+          "inner_block": 2,
+          "base_fit_n": 495,
+          "base_predict_n": 165,
+          "fit_ids_sha256": "d7f02df7a206c5de13179aca42b91438e4049385aa697dbde8630aee68cfb87f",
+          "predict_ids_sha256": "172c39a42a0906e07eca8e64205a675b4c9157f4472c11f83e321c7aca8a7366",
+          "outer_overlap": 0
+        },
+        {
+          "inner_block": 3,
+          "base_fit_n": 495,
+          "base_predict_n": 165,
+          "fit_ids_sha256": "93850d958fbed8bdd34fe5424a831849642d9c05d5ec94bdc5234a505c3f06a3",
+          "predict_ids_sha256": "a95f907f3199b9a2980b563254ec7afe2288c868a8dddd8ba104522b57751a89",
+          "outer_overlap": 0
+        },
+        {
+          "inner_block": 4,
+          "base_fit_n": 495,
+          "base_predict_n": 165,
+          "fit_ids_sha256": "eed7534a42549d83a099625d55ab6363000901392f253015984741173039bad1",
+          "predict_ids_sha256": "3ddf3121063fd7b912470fb6f0e03e1ea2df84f7b4f06243d9bad7f14bc29e8f",
+          "outer_overlap": 0
+        }
+      ],
+      "fresh_refit_hard_mismatches": [
+        0,
+        1
+      ],
+      "outer_probability_max_abs_replay_diff": 0.02750270647868941
+    },
+    {
+      "outer_fold": 1,
+      "train_n": 661,
+      "heldout_n": 165,
+      "train_ids_sha256": "1781f18f6f10e7c25c6950dea2591855b48f65a4303b11b34d426a8d3b2e65ca",
+      "heldout_ids_sha256": "baa751d569d533f28dbe7e8297ac1d7f55c387eb9cccb5b0850ba3a6818fae9d",
+      "inner_splits": [
+        {
+          "inner_block": 0,
+          "base_fit_n": 495,
+          "base_predict_n": 166,
+          "fit_ids_sha256": "558017a297b18cf5da1d85e9e31f5459e099e0ed5e802b989238adf2a0db6063",
+          "predict_ids_sha256": "ee9957dfe7bcfe3b21f9c5e2e51ae75ce3a5c264942585334758c92b941f4443",
+          "outer_overlap": 0
+        },
+        {
+          "inner_block": 2,
+          "base_fit_n": 496,
+          "base_predict_n": 165,
+          "fit_ids_sha256": "a8c1130898bc2d10ed823e86280399aa23cb2311e95e38ffc13187ce82ec300c",
+          "predict_ids_sha256": "172c39a42a0906e07eca8e64205a675b4c9157f4472c11f83e321c7aca8a7366",
+          "outer_overlap": 0
+        },
+        {
+          "inner_block": 3,
+          "base_fit_n": 496,
+          "base_predict_n": 165,
+          "fit_ids_sha256": "3b17bcb9e7439b082cdbacf577b3cb35a99ace7cf8043593a98c557ffdcf95e3",
+          "predict_ids_sha256": "a95f907f3199b9a2980b563254ec7afe2288c868a8dddd8ba104522b57751a89",
+          "outer_overlap": 0
+        },
+        {
+          "inner_block": 4,
+          "base_fit_n": 496,
+          "base_predict_n": 165,
+          "fit_ids_sha256": "622e96deaa77df338f7b2217317beedd5bde21ed428dc3700099eb1b1272a48e",
+          "predict_ids_sha256": "3ddf3121063fd7b912470fb6f0e03e1ea2df84f7b4f06243d9bad7f14bc29e8f",
+          "outer_overlap": 0
+        }
+      ],
+      "fresh_refit_hard_mismatches": [
+        0,
+        1
+      ],
+      "outer_probability_max_abs_replay_diff": 0.03480418463101975
+    },
+    {
+      "outer_fold": 2,
+      "train_n": 661,
+      "heldout_n": 165,
+      "train_ids_sha256": "989bf93fdf6d181c1cf98bdf1c94d21e6328a10e74de5ae8dfa3150fa089f682",
+      "heldout_ids_sha256": "172c39a42a0906e07eca8e64205a675b4c9157f4472c11f83e321c7aca8a7366",
+      "inner_splits": [
+        {
+          "inner_block": 0,
+          "base_fit_n": 495,
+          "base_predict_n": 166,
+          "fit_ids_sha256": "d7f02df7a206c5de13179aca42b91438e4049385aa697dbde8630aee68cfb87f",
+          "predict_ids_sha256": "ee9957dfe7bcfe3b21f9c5e2e51ae75ce3a5c264942585334758c92b941f4443",
+          "outer_overlap": 0
+        },
+        {
+          "inner_block": 1,
+          "base_fit_n": 496,
+          "base_predict_n": 165,
+          "fit_ids_sha256": "a8c1130898bc2d10ed823e86280399aa23cb2311e95e38ffc13187ce82ec300c",
+          "predict_ids_sha256": "baa751d569d533f28dbe7e8297ac1d7f55c387eb9cccb5b0850ba3a6818fae9d",
+          "outer_overlap": 0
+        },
+        {
+          "inner_block": 3,
+          "base_fit_n": 496,
+          "base_predict_n": 165,
+          "fit_ids_sha256": "4047c1c2f9de04bcf959e69674b31f3cf9aed7ba859d590da05a7b724ca14c55",
+          "predict_ids_sha256": "a95f907f3199b9a2980b563254ec7afe2288c868a8dddd8ba104522b57751a89",
+          "outer_overlap": 0
+        },
+        {
+          "inner_block": 4,
+          "base_fit_n": 496,
+          "base_predict_n": 165,
+          "fit_ids_sha256": "957b3b0345f99d206ed1c997aec3b678741f6759376f1503744181d972a452a6",
+          "predict_ids_sha256": "3ddf3121063fd7b912470fb6f0e03e1ea2df84f7b4f06243d9bad7f14bc29e8f",
+          "outer_overlap": 0
+        }
+      ],
+      "fresh_refit_hard_mismatches": [
+        0,
+        0
+      ],
+      "outer_probability_max_abs_replay_diff": 0.0037858156092133166
+    },
+    {
+      "outer_fold": 3,
+      "train_n": 661,
+      "heldout_n": 165,
+      "train_ids_sha256": "0fae38d0a8f1624d133c6e1a3873989360ea7ebf618c8bb581f17a473ba59b0a",
+      "heldout_ids_sha256": "a95f907f3199b9a2980b563254ec7afe2288c868a8dddd8ba104522b57751a89",
+      "inner_splits": [
+        {
+          "inner_block": 0,
+          "base_fit_n": 495,
+          "base_predict_n": 166,
+          "fit_ids_sha256": "93850d958fbed8bdd34fe5424a831849642d9c05d5ec94bdc5234a505c3f06a3",
+          "predict_ids_sha256": "ee9957dfe7bcfe3b21f9c5e2e51ae75ce3a5c264942585334758c92b941f4443",
+          "outer_overlap": 0
+        },
+        {
+          "inner_block": 1,
+          "base_fit_n": 496,
+          "base_predict_n": 165,
+          "fit_ids_sha256": "3b17bcb9e7439b082cdbacf577b3cb35a99ace7cf8043593a98c557ffdcf95e3",
+          "predict_ids_sha256": "baa751d569d533f28dbe7e8297ac1d7f55c387eb9cccb5b0850ba3a6818fae9d",
+          "outer_overlap": 0
+        },
+        {
+          "inner_block": 2,
+          "base_fit_n": 496,
+          "base_predict_n": 165,
+          "fit_ids_sha256": "4047c1c2f9de04bcf959e69674b31f3cf9aed7ba859d590da05a7b724ca14c55",
+          "predict_ids_sha256": "172c39a42a0906e07eca8e64205a675b4c9157f4472c11f83e321c7aca8a7366",
+          "outer_overlap": 0
+        },
+        {
+          "inner_block": 4,
+          "base_fit_n": 496,
+          "base_predict_n": 165,
+          "fit_ids_sha256": "1cbc730fd2a5b2ec7d822b6331a0be8990b4b657a7b01b233f9f9ef691b29a16",
+          "predict_ids_sha256": "3ddf3121063fd7b912470fb6f0e03e1ea2df84f7b4f06243d9bad7f14bc29e8f",
+          "outer_overlap": 0
+        }
+      ],
+      "fresh_refit_hard_mismatches": [
+        0,
+        3
+      ],
+      "outer_probability_max_abs_replay_diff": 0.06382830496078451
+    },
+    {
+      "outer_fold": 4,
+      "train_n": 661,
+      "heldout_n": 165,
+      "train_ids_sha256": "591816e93303a1fb9d1eeae798d4dcc6a1f6de242ec9fe8e6b93698117fadc62",
+      "heldout_ids_sha256": "3ddf3121063fd7b912470fb6f0e03e1ea2df84f7b4f06243d9bad7f14bc29e8f",
+      "inner_splits": [
+        {
+          "inner_block": 0,
+          "base_fit_n": 495,
+          "base_predict_n": 166,
+          "fit_ids_sha256": "eed7534a42549d83a099625d55ab6363000901392f253015984741173039bad1",
+          "predict_ids_sha256": "ee9957dfe7bcfe3b21f9c5e2e51ae75ce3a5c264942585334758c92b941f4443",
+          "outer_overlap": 0
+        },
+        {
+          "inner_block": 1,
+          "base_fit_n": 496,
+          "base_predict_n": 165,
+          "fit_ids_sha256": "622e96deaa77df338f7b2217317beedd5bde21ed428dc3700099eb1b1272a48e",
+          "predict_ids_sha256": "baa751d569d533f28dbe7e8297ac1d7f55c387eb9cccb5b0850ba3a6818fae9d",
+          "outer_overlap": 0
+        },
+        {
+          "inner_block": 2,
+          "base_fit_n": 496,
+          "base_predict_n": 165,
+          "fit_ids_sha256": "957b3b0345f99d206ed1c997aec3b678741f6759376f1503744181d972a452a6",
+          "predict_ids_sha256": "172c39a42a0906e07eca8e64205a675b4c9157f4472c11f83e321c7aca8a7366",
+          "outer_overlap": 0
+        },
+        {
+          "inner_block": 3,
+          "base_fit_n": 496,
+          "base_predict_n": 165,
+          "fit_ids_sha256": "1cbc730fd2a5b2ec7d822b6331a0be8990b4b657a7b01b233f9f9ef691b29a16",
+          "predict_ids_sha256": "a95f907f3199b9a2980b563254ec7afe2288c868a8dddd8ba104522b57751a89",
+          "outer_overlap": 0
+        }
+      ],
+      "fresh_refit_hard_mismatches": [
+        0,
+        0
+      ],
+      "outer_probability_max_abs_replay_diff": 0.01650101535278725
+    }
+  ],
+  "wall_seconds": 5.139414994999925,
+  "base_fits": 50,
+  "scaler_fit_on_base_training_only": true,
+  "heldout_labels_in_meta_fit": false,
+  "cache_contract": {
+    "VB_inner_sha256": "62d4d98c8358ffe2a58851514c0e83f26c3d66e8e0bbff1a847bd07b866d2c01",
+    "oof_sha256": "8bcbf846dfbfdc037df35cc134862e1f3f25d6d069298af9b2897a57acec97ff",
+    "input_hashes": {
+      "QWEN_SEMANTIC_OUTPUTS.csv": "a2dad2feeac7cc817716ae4eb0cd8724c2f169c06262d45d8e00e66345e1569b",
+      "emotion2vec_base_meanstd.npz": "4b8b6feeedc83ca2712b7fd21d9683465a07f7fcb82ca0c1d625512acf64326f",
+      "xls_r_300m_meanstd.npz": "24bd935cc0271d5ae427acfed96a0237161b646e1bdcc1f2cb80c48abdcfa5fc",
+      "FIXED_PAIR_VB.npz": "9f9ac86829230bcfde4be93a980161bf6139eaa38f3372efc822eb8edf79da45",
+      "E2V_CONTROL_VB.npz": "14c86f6f61d633a72fd8535bec1070162e8a92f6de9c3f37ee366ff0e3d7a7b7",
+      "XLSR_VB.npz": "f8a7cab17c88e98056d45fcad44479f1254acd68dbc7507e585f2197e1c87402"
+    }
+  },
+  "historical_outer_source": "Saved E2V_CONTROL_VB.npz and XLSR_VB.npz",
+  "new_llm_fusion_executed": false
+}
