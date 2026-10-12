@@ -1,0 +1,55 @@
+{
+  "mission": "SS-DEFHS-SYSTEM-E-EXPLORATORY-DEPLOYMENT-001",
+  "status": "EXPLORATORY_CANDIDATE_PRODUCED_SS_REVIEW_REQUIRED",
+  "scientific_system_E_promoted": false,
+  "failure": "Q960_606 -0.03367393 < -0.02 frozen tolerance",
+  "original_System_D_SHA256": "182bfbcd5fb10b351504da6d24f3d0d33f6d05cf2786e1e1a19e80afe0e57ec9",
+  "System_D_bit_for_bit_reproduced": true,
+  "System_D_826_max_abs_probability_difference": 2.220446049250313e-16,
+  "System_E_826_max_abs_probability_difference": 2.220446049250313e-16,
+  "System_E_primary_cv": 0.8774091527555827,
+  "target_new_ASR_SHA256": "4c32a0431bff86e8e9c5153acd7225138f5790a63ff06fa001267a42ad583771",
+  "target_new_semantic_SHA256": "41ea167a669fe87084f49d5c650ef4ec949af03b2cea9f7416563dc388ae6a2a",
+  "target_semantic_unique_transcripts": 200,
+  "E_candidate_SHA256": "e47676192cbd02393a49889214238f34cb8b49df2f9772b30cb19d766589df90",
+  "candidate_rows": 209,
+  "certified_retrieval_unchanged": 78,
+  "target_labels_used": false,
+  "protected_validation_accessed": false,
+  "kaggle_competition_submission": false,
+  "changed_count": 11,
+  "changed_ids": [
+    102,
+    111,
+    132,
+    153,
+    210,
+    236,
+    244,
+    268,
+    307,
+    883,
+    956
+  ],
+  "changed_by_cohort": {
+    "HARD": 10,
+    "HIGH_CONFIDENCE": 1
+  },
+  "q960_target_n": 11,
+  "q960_target_changed_ids": [
+    102,
+    210
+  ],
+  "class_D": {
+    "angry": 56,
+    "happy": 49,
+    "neutral": 53,
+    "sad": 51
+  },
+  "class_E": {
+    "angry": 52,
+    "happy": 52,
+    "neutral": 54,
+    "sad": 51
+  }
+}

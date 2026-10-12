@@ -1,0 +1,10 @@
+{
+  "baseline_zip": "fb76b00dcc145c3ea7df6046ed7da594ff3b1ebd4cb52848184902876af61839",
+  "E_evidence_zip": "dc0393a55644448fa85ddc142d7cf5a3c8877d90125d0a0ad9e5dff0734574bf",
+  "train_new_Qwen14_zip": "cd1481baea48c73fff0fe99c1da027f6b65d84e271b401d02dfec285fd4f8789",
+  "target_asr_csv": "4c32a0431bff86e8e9c5153acd7225138f5790a63ff06fa001267a42ad583771",
+  "target_Qwen14_csv": "41ea167a669fe87084f49d5c650ef4ec949af03b2cea9f7416563dc388ae6a2a",
+  "submission_D": "182bfbcd5fb10b351504da6d24f3d0d33f6d05cf2786e1e1a19e80afe0e57ec9",
+  "submission_E": "e47676192cbd02393a49889214238f34cb8b49df2f9772b30cb19d766589df90",
+  "audit": "28716e70d0e9e7dfd77fe49a0c7474fa64fa253bc5431fb0bf116536ed9a6c47"
+}
