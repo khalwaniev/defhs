@@ -13,6 +13,12 @@
 - Optional authentic prompt assignments SHA256: `458712cfee51e0cf65ef57d1a0deb8f81dcb70e4ecfe6ebfc73220f3aefac005`.
 - Original E PRIMARY_CV = `0.8774091527555827`. Original Q960-606 failure versus D = `-0.03367392841077055`; the failure is NOT overturned.
 
+## SHA-locked likelihood forensic check (2026-10-12)
+
+The original 826-row CSV SHA256 `66d01f825c9be4142452e6f04fb921dd8ece6c8f82aac5e0768a9941c0e4e788` was inspected with the read-only `scripts/inspect_authentic_semantic_likelihood.py`. Five authentic feature columns: `trie_p_angry,trie_p_happy,trie_p_neutral,trie_p_sad,trie_p_unclear`. All 826 rows have finite values in [0,1], no negative/NaN/Inf, and five-column sums in [0.9999980620926165, 1.0000019943909346]; **248 rows** exceeded the evaluator's original absolute sum error tolerance 1e-6, while none exceeded 1e-4. Maximum original discrepancy **1.994390934623169e-6**.
+
+The evaluator's input-only check now permits error <=3e-6 and separately guards original observed maximum <=2.01e-6. It **does not renormalize, transform, modify, or replace any features**. SHA256/ID/class order checks are unchanged, and it now requires 826/826 CSV `reference_hard` and `greedy` label parity with original Qwen14 hard outputs. This is a narrow fix for an empirically falsified input-validation assumption, **not a change to fitting, validation, or promotion gates**. Source of rounding discrepancy has not been proven. No 23F/28F fitting has happened as part of this forensic check.
+
 ## Exact WSL launch
 
 ```bash
