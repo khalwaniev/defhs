@@ -35,4 +35,9 @@ A fold deltas: `[-0.00597210,0,-0.00005273,+0.01800815,0]`; **only one improved 
 
 **Implementation:** ~CPU seconds for two decision rules plus 2,000 dependency bootstraps; no GPU; read-only original evidence. Reproduction is in `scripts/decision_audit_system_e.py` and `runs/RS-DEFHS-SYSTEM-E-DECISION-OPTIMIZATION-001/DECISION_TESTS.json` with 826-row prediction audit. Keep original E deployment and production package; **no challenger candidate SHA or submission**.
 
+
+**Per-class F1 changes versus E (angry, happy, neutral, sad):** A `[+0.00181308,0,-0.00117952,+0.00945626]`; B `[+0.00017893,-0.01110733,-0.02983758,-0.00076225]`. A leave-one-fold-out pooled deltas `[+0.00459017,+0.00316930,+0.00307467,-0.00142072,+0.00315835]`; the negative fourth leave-one-out reflects dependence on its only positive fold. B leave-one-out deltas are all negative.
+
+**Preserved external fully reproducible package:** `DEFHS_SYSTEM_E_DECISION_OPTIMIZATION_001_EVIDENCE.zip`, SHA256 `091c64d95f6c4e8e34e89dc1bcb5b7924a4aecaac24547a0263f06c04186ad65` (15,220,596 bytes). This includes the exact executed source and its inputs, complete JSON and OOF data, and the original evidence archives. The ZIP is a downloadable ChatGPT artifact, **not** stored on GitHub. GitHub independently stores the small tested source, full foldwise machine-readable report, OOF audit and this SS ledger.
+
 **Final disposition:** Both families CLOSED_NOT_PROMOTED. Do not try unpredeclared threshold tweaks, resurrect rejected transforms, or probe public LB. Await SS's new independent complementary expert if Astra provides one, under exact original nested procedure. No Kaggle competition submission performed.
