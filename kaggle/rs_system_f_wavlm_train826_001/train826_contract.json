@@ -1,0 +1,4958 @@
+[
+  {
+    "Id": 1,
+    "filename": "audio_000001.wav",
+    "file_sha256": "31459d8e4085640666fa243b3d567b856726f2d91a89910a52dd2c4df2f54c39",
+    "samples": 56320
+  },
+  {
+    "Id": 3,
+    "filename": "audio_000003.wav",
+    "file_sha256": "2778d994e5970bbfe0a10c9d1d351ab0fc2355945e5ec8a9d9412e1488b8aa7d",
+    "samples": 60758
+  },
+  {
+    "Id": 4,
+    "filename": "audio_000004.wav",
+    "file_sha256": "aa4c6b9f8df8000cd520aea1a7caf2d1ddeef711f34e2d036ce4c87ee9af007e",
+    "samples": 33566
+  },
+  {
+    "Id": 5,
+    "filename": "audio_000005.wav",
+    "file_sha256": "92d1b29e7c79b88eaca3d9fb3d02da8628ec3415007ae16c5136f5430ba2eb7b",
+    "samples": 34176
+  },
+  {
+    "Id": 6,
+    "filename": "audio_000006.wav",
+    "file_sha256": "226ef6b4653ef3dbd7265b5c6000554c576232a259b8ea96d7575cc841f1c699",
+    "samples": 105984
+  },
+  {
+    "Id": 7,
+    "filename": "audio_000007.wav",
+    "file_sha256": "af9c1e97ceb592cb18241f1537aee117021389c51e4a63538f8683cc3da18f49",
+    "samples": 46080
+  },
+  {
+    "Id": 8,
+    "filename": "audio_000008.wav",
+    "file_sha256": "8fd254c4e18467c498c68253dba814f2a75373b109f990377d7e4a5854a1ba8d",
+    "samples": 29406
+  },
+  {
+    "Id": 9,
+    "filename": "audio_000009.wav",
+    "file_sha256": "7d0cc24971ec1628de0bb5fcc405f59aa1b899ef6128e1b74d2eb9b2d3d1bc8c",
+    "samples": 33792
+  },
+  {
+    "Id": 10,
+    "filename": "audio_000010.wav",
+    "file_sha256": "7c0db15fb03b2ab3bd9a8aa7b872888f248be869bb0f6476bd65e7aa653018c4",
+    "samples": 54272
+  },
+  {
+    "Id": 11,
+    "filename": "audio_000011.wav",
+    "file_sha256": "09d8f13b00f607e0eb57a18088e7ddf2ce4d22c208d5f943102794ac394393eb",
+    "samples": 36864
+  },
+  {
+    "Id": 12,
+    "filename": "audio_000012.wav",
+    "file_sha256": "550dc069bfd85071c3b3780bf13f623e556778de053aed2db615d6ed525b87a1",
+    "samples": 46080
+  },
+  {
+    "Id": 13,
+    "filename": "audio_000013.wav",
+    "file_sha256": "af4ccc70807c669d5f12c892980577803a529a646580f5dfc1930461b363b247",
+    "samples": 53590
+  },
+  {
+    "Id": 14,
+    "filename": "audio_000014.wav",
+    "file_sha256": "ca882ab5300113661abf634cb94f3fdfd2d42923ba2ade17c84a896f8d264e31",
+    "samples": 47256
+  },
+  {
+    "Id": 15,
+    "filename": "audio_000015.wav",
+    "file_sha256": "00c5c68bbb573a9a0ab3218f3745fc9760b68d4342a4da69e489ae1c3b1ca0a3",
+    "samples": 77184
+  },
+  {
+    "Id": 16,
+    "filename": "audio_000016.wav",
+    "file_sha256": "4e60f86028b30246d9afd78f74dbfedd595e4c731dce206360adcf8dfd799f18",
+    "samples": 82262
+  },
+  {
+    "Id": 17,
+    "filename": "audio_000017.wav",
+    "file_sha256": "d7c27d925d5d1014e07552f4c96ca745f0b68a9ec3f9a7d89c40057031196e35",
+    "samples": 53248
+  },
+  {
+    "Id": 18,
+    "filename": "audio_000018.wav",
+    "file_sha256": "39b2bac2b6ca4268c4c8d0b29e1a01b56d722f6af36d4b9e0c9a0fdca5494892",
+    "samples": 34134
+  },
+  {
+    "Id": 19,
+    "filename": "audio_000019.wav",
+    "file_sha256": "618b56a81d5ddecdcafd665613f170e68cc298728b4626276428199afc3d8e16",
+    "samples": 79872
+  },
+  {
+    "Id": 20,
+    "filename": "audio_000020.wav",
+    "file_sha256": "0052761128325c7f7dbf47e4b460af472b71f056627eb094b2396ff6d48383e7",
+    "samples": 63488
+  },
+  {
+    "Id": 21,
+    "filename": "audio_000021.wav",
+    "file_sha256": "51b321b5576fac21ed7ae35da635ab03a0627e2099e0530c5f48a51376e99035",
+    "samples": 45056
+  },
+  {
+    "Id": 22,
+    "filename": "audio_000022.wav",
+    "file_sha256": "7170635acbea136a86f59d3018ea99affbe3000d178796b374a7a12a8aefa221",
+    "samples": 33451
+  },
+  {
+    "Id": 23,
+    "filename": "audio_000023.wav",
+    "file_sha256": "eb79d70085db3c5b69e42631d2f45414a937ecdd7b9607926fe254458f10431f",
+    "samples": 40926
+  },
+  {
+    "Id": 25,
+    "filename": "audio_000025.wav",
+    "file_sha256": "faf3608a6b1cfe6b21855bc6873a2bf34f7a4892059e552a0abe16a677d9727e",
+    "samples": 86784
+  },
+  {
+    "Id": 26,
+    "filename": "audio_000026.wav",
+    "file_sha256": "265431bccdcafca46b4635a827910d0838774aa4b106eee2ba3e1bd3cb8e51ed",
+    "samples": 77952
+  },
+  {
+    "Id": 27,
+    "filename": "audio_000027.wav",
+    "file_sha256": "1f17e44528f6d51252e362b9a17d1a3f8d050ef22d95df8c883ac257bc161a13",
+    "samples": 36864
+  },
+  {
+    "Id": 28,
+    "filename": "audio_000028.wav",
+    "file_sha256": "35e51f9035987a7538ad3922c733b4cda835b43424bc4fc1dde0d65338beb510",
+    "samples": 75264
+  },
+  {
+    "Id": 29,
+    "filename": "audio_000029.wav",
+    "file_sha256": "eff053bff4e8ca5d9cc6cbd2458a083cd34305fe58f6bb946a5f496cf6de2665",
+    "samples": 39936
+  },
+  {
+    "Id": 30,
+    "filename": "audio_000030.wav",
+    "file_sha256": "08beb014de87f20193dcca66a1a3612789cb9a0ee1b53a3e2dfece260ba6f153",
+    "samples": 62976
+  },
+  {
+    "Id": 32,
+    "filename": "audio_000032.wav",
+    "file_sha256": "34eb0b79bc64d2c43d050cd010aebd686a46628a63095c0ffad45ba97f07ac0b",
+    "samples": 58752
+  },
+  {
+    "Id": 33,
+    "filename": "audio_000033.wav",
+    "file_sha256": "b1274732c136bfeecd7adf7c8f8a756d00c54ff18282c28f0aaecd52bd70d17e",
+    "samples": 98304
+  },
+  {
+    "Id": 34,
+    "filename": "audio_000034.wav",
+    "file_sha256": "0ca40f3243a600fb4d19dd1662c8ea784498d44a8b33cee05158ecb2fe832a4d",
+    "samples": 41472
+  },
+  {
+    "Id": 35,
+    "filename": "audio_000035.wav",
+    "file_sha256": "4b74c17f9d6493e2248101ce057ec1440eb82552ff380f37d01ea332470c688e",
+    "samples": 38784
+  },
+  {
+    "Id": 36,
+    "filename": "audio_000036.wav",
+    "file_sha256": "17352367256a04fa7865bd482a7fe581e1b98547eba5cd84ba02edf66ce2d0ca",
+    "samples": 39595
+  },
+  {
+    "Id": 37,
+    "filename": "audio_000037.wav",
+    "file_sha256": "25c39bbcea4bd335f1fd23fec9580b2bb650bb47a7393651230e018fd248e379",
+    "samples": 28032
+  },
+  {
+    "Id": 38,
+    "filename": "audio_000038.wav",
+    "file_sha256": "6f4385048ad43cdf87715d4dea72dfe5c2df992afd7823b11748d51065a0e06b",
+    "samples": 41472
+  },
+  {
+    "Id": 39,
+    "filename": "audio_000039.wav",
+    "file_sha256": "dd88808ad6d469fe9b090479f654b1f60b42e27936cd99c6e54b7949561e9ceb",
+    "samples": 41302
+  },
+  {
+    "Id": 40,
+    "filename": "audio_000040.wav",
+    "file_sha256": "cc3ea0e3e99d685a10970d8ef5d6411193941a42f36d7fd3b0274cce0696d64e",
+    "samples": 59051
+  },
+  {
+    "Id": 43,
+    "filename": "audio_000043.wav",
+    "file_sha256": "037b89aafe4945152bc2386b6e4383aa3d019e9418f1803a9e2ee2b148e6ce43",
+    "samples": 36182
+  },
+  {
+    "Id": 44,
+    "filename": "audio_000044.wav",
+    "file_sha256": "3d05fc941d2228c2aced79300b7810f962d4655f3a4de2703343452ae114f2a2",
+    "samples": 39936
+  },
+  {
+    "Id": 46,
+    "filename": "audio_000046.wav",
+    "file_sha256": "af92361606fd7920ebeb109ffa51140f4c73245d302cffe572bebdd06ebb2054",
+    "samples": 45312
+  },
+  {
+    "Id": 47,
+    "filename": "audio_000047.wav",
+    "file_sha256": "02e985b7740f18dcf9facbdbd27bef9b6cf0fbe5a1c5b7eadf0ddf49e69909b9",
+    "samples": 60416
+  },
+  {
+    "Id": 49,
+    "filename": "audio_000049.wav",
+    "file_sha256": "1add25d170491601b37184cff508dcf08ea20267ca0fe0a227f3cbd475766af9",
+    "samples": 41302
+  },
+  {
+    "Id": 52,
+    "filename": "audio_000052.wav",
+    "file_sha256": "60d92aa93dd99cabace2bf394c3d9046fdfc25325d0f14b2fddcf51c4da2ead3",
+    "samples": 41643
+  },
+  {
+    "Id": 53,
+    "filename": "audio_000053.wav",
+    "file_sha256": "b12f68cc80cb8226bfbb58b5f2e9e6fc80487b45635ed0ff3a8561598867c6eb",
+    "samples": 39552
+  },
+  {
+    "Id": 54,
+    "filename": "audio_000054.wav",
+    "file_sha256": "debc25fc217049b2a9409c33341ed519bc9bef5e0a26e869c56d19c24ad60d74",
+    "samples": 55296
+  },
+  {
+    "Id": 55,
+    "filename": "audio_000055.wav",
+    "file_sha256": "999ceccea6775394ac5105e664396233aa37c297ab35edc8d1739c2dedaf8a2b",
+    "samples": 31403
+  },
+  {
+    "Id": 56,
+    "filename": "audio_000056.wav",
+    "file_sha256": "42038a2f7dae446437f9a60c4826d624989c5ca50fa1693346e34952f4f2c9b5",
+    "samples": 68928
+  },
+  {
+    "Id": 57,
+    "filename": "audio_000057.wav",
+    "file_sha256": "89b38affaa13752c106fba1701bfeecb3412ecb22d4bf80f5710a2640cb947f3",
+    "samples": 43008
+  },
+  {
+    "Id": 58,
+    "filename": "audio_000058.wav",
+    "file_sha256": "0ece46e8b38f91dad8b0d526f95c407291ce4f3e8bd4ea3fff491fb4d172404f",
+    "samples": 34944
+  },
+  {
+    "Id": 59,
+    "filename": "audio_000059.wav",
+    "file_sha256": "95164cfc29b21baecc822e0f1a3233dd77be7f522c48c07f198f5b23394e8e04",
+    "samples": 22366
+  },
+  {
+    "Id": 60,
+    "filename": "audio_000060.wav",
+    "file_sha256": "196eebef4eaaf523fdd515a4786557ac8ac8eda7d26603a1ff886d1f76fdea9c",
+    "samples": 26966
+  },
+  {
+    "Id": 61,
+    "filename": "audio_000061.wav",
+    "file_sha256": "879e16d44b7756d2f6a4d888e8d4e73db078f62ab290b63c5398041969200c5f",
+    "samples": 87723
+  },
+  {
+    "Id": 62,
+    "filename": "audio_000062.wav",
+    "file_sha256": "de93d3a5511fdf66e5d1e14ac26cd2bb27c8ddeebe50ff558653b15766deeda6",
+    "samples": 34816
+  },
+  {
+    "Id": 63,
+    "filename": "audio_000063.wav",
+    "file_sha256": "d6cd3bc5e314de61ccb1f1a911cffe023f6a0046041a257cdd604a9e0dc2038b",
+    "samples": 73046
+  },
+  {
+    "Id": 64,
+    "filename": "audio_000064.wav",
+    "file_sha256": "0dd1fce4a74662b6489a78a0ea0589ba1f52b49190a2fc9596b8d44e9f643e99",
+    "samples": 102912
+  },
+  {
+    "Id": 65,
+    "filename": "audio_000065.wav",
+    "file_sha256": "4996b17915aac07de94d5208bcad408c3b291fe38be183211587151d28a796b0",
+    "samples": 57686
+  },
+  {
+    "Id": 66,
+    "filename": "audio_000066.wav",
+    "file_sha256": "7520077b7732f0a7744693525f9f131c139c32b5611b11c333b9259a4ade25e4",
+    "samples": 50176
+  },
+  {
+    "Id": 67,
+    "filename": "audio_000067.wav",
+    "file_sha256": "2f6aa245bb89eb92ea2d6885a4e582632f136926ef737ed28f7199ff63963045",
+    "samples": 35499
+  },
+  {
+    "Id": 69,
+    "filename": "audio_000069.wav",
+    "file_sha256": "05d22369b65479b8695c004b23f6a344293e83aec40796a778f689e4f3ae54a1",
+    "samples": 45056
+  },
+  {
+    "Id": 70,
+    "filename": "audio_000070.wav",
+    "file_sha256": "86f8aaa231d92ecd7bb00c0206f6c602d65ffc4e75ba0ce63b4785c5c0351538",
+    "samples": 42624
+  },
+  {
+    "Id": 71,
+    "filename": "audio_000071.wav",
+    "file_sha256": "be0ead4cf8c1659a13b12b543d1323b212d9fe252baaeee09587e369c1a9eeed",
+    "samples": 50304
+  },
+  {
+    "Id": 73,
+    "filename": "audio_000073.wav",
+    "file_sha256": "4abcfef7e2a75e79b14ce0636af50cdd073725fbc302f54fc8a1c98c698f2ba7",
+    "samples": 41984
+  },
+  {
+    "Id": 74,
+    "filename": "audio_000074.wav",
+    "file_sha256": "95c5941d761e0615c2e2409356d7399f2a557933cfdd408a3964645d7784c720",
+    "samples": 35712
+  },
+  {
+    "Id": 75,
+    "filename": "audio_000075.wav",
+    "file_sha256": "08cba4a808e5a36aee8f9e39f6035024a28cc38c0566778c4164a29239552602",
+    "samples": 39006
+  },
+  {
+    "Id": 76,
+    "filename": "audio_000076.wav",
+    "file_sha256": "6bd1752968295e05f8f06a34ebb6f143008966b53a4d1ff52e24a48a25748e24",
+    "samples": 92544
+  },
+  {
+    "Id": 77,
+    "filename": "audio_000077.wav",
+    "file_sha256": "e18226da4cdacd549ef231050b4b63fcedc1e6ccdb6adc93ca2bec76560c3a85",
+    "samples": 34134
+  },
+  {
+    "Id": 79,
+    "filename": "audio_000079.wav",
+    "file_sha256": "8de365f51bf4e77ac86a52ac5659f40b42369a93d6e88f580105495555c878ea",
+    "samples": 34944
+  },
+  {
+    "Id": 80,
+    "filename": "audio_000080.wav",
+    "file_sha256": "780c90cb820cd9790e2e9b42cf7d4cb265e81a59622487c79706bf78a910b977",
+    "samples": 57003
+  },
+  {
+    "Id": 81,
+    "filename": "audio_000081.wav",
+    "file_sha256": "d826a8c62a90974cc1ab769423dc45b3b6c8ddac673e9a760342804ddeb8c7f8",
+    "samples": 28032
+  },
+  {
+    "Id": 82,
+    "filename": "audio_000082.wav",
+    "file_sha256": "279228e6f8a69cd143df2d9fab05ea9bc71f2ddfd6799eab911bd28ce4ff2786",
+    "samples": 50859
+  },
+  {
+    "Id": 85,
+    "filename": "audio_000085.wav",
+    "file_sha256": "09f5d4b0cb4d31bd084cfc20810a2bf2b6f96f1608aa7387701deab7062ae686",
+    "samples": 76800
+  },
+  {
+    "Id": 86,
+    "filename": "audio_000086.wav",
+    "file_sha256": "62e46ad5122773d43b127606a7d15c8626eb95e91f490849323180a18e88662d",
+    "samples": 24235
+  },
+  {
+    "Id": 87,
+    "filename": "audio_000087.wav",
+    "file_sha256": "a7167c03f8bcd719d95dcf297dac8486ba5e2413b93310ff55c625525590c535",
+    "samples": 48470
+  },
+  {
+    "Id": 88,
+    "filename": "audio_000088.wav",
+    "file_sha256": "68869f31d9000aa1696c4e6d182ac87b0f899706e421ca7f47ea0679481d75f9",
+    "samples": 51200
+  },
+  {
+    "Id": 89,
+    "filename": "audio_000089.wav",
+    "file_sha256": "c2167de14b641bc1543e3e7d9e70f08d5d78f9a005e618aa04843f760a98d2ce",
+    "samples": 57216
+  },
+  {
+    "Id": 90,
+    "filename": "audio_000090.wav",
+    "file_sha256": "d58592a3191b463670a9581a628d2e1a50f1229b92aec69d26d802d1ec50f6d6",
+    "samples": 36864
+  },
+  {
+    "Id": 92,
+    "filename": "audio_000092.wav",
+    "file_sha256": "d9ef9084335062f7b8f271e325f08612eaa2d024edc31c414e2e5c85bf1c21eb",
+    "samples": 63966
+  },
+  {
+    "Id": 93,
+    "filename": "audio_000093.wav",
+    "file_sha256": "baf57ba2243d1e7cd9df2d8894b2e6f37f7de674407ff4b8066c0beffd4ce8a3",
+    "samples": 61301
+  },
+  {
+    "Id": 95,
+    "filename": "audio_000095.wav",
+    "file_sha256": "dd133bbf42b9b74553b7694fc7267d4c1572d90299ac136169d3d2e038816783",
+    "samples": 36182
+  },
+  {
+    "Id": 96,
+    "filename": "audio_000096.wav",
+    "file_sha256": "6279cc4c1bf62ac3f2997e99702268030761b5fc2105b7ccfb343a2134c0ce5c",
+    "samples": 59734
+  },
+  {
+    "Id": 97,
+    "filename": "audio_000097.wav",
+    "file_sha256": "854298f57a9bab01be9df975c58830a904ecd700c5515e6d50a35ea61b469a0b",
+    "samples": 103424
+  },
+  {
+    "Id": 98,
+    "filename": "audio_000098.wav",
+    "file_sha256": "4c28d97d21a03974d02a717f7f55304ec2f16026316ece857020bc1d4f251b3e",
+    "samples": 47787
+  },
+  {
+    "Id": 99,
+    "filename": "audio_000099.wav",
+    "file_sha256": "258a6094822c6321f593f0e272f50e5f3a9e038e8c4fa78553cb88be23b2b34b",
+    "samples": 64896
+  },
+  {
+    "Id": 100,
+    "filename": "audio_000100.wav",
+    "file_sha256": "b5c70cd7816b044a88331a1baa5de174924fe2efdec62c204c155bd000aa17d6",
+    "samples": 35712
+  },
+  {
+    "Id": 101,
+    "filename": "audio_000101.wav",
+    "file_sha256": "3a2de5baf801db05c476e1f34e0c06ea838fae48d25def3bc70037420b76f598",
+    "samples": 97280
+  },
+  {
+    "Id": 103,
+    "filename": "audio_000103.wav",
+    "file_sha256": "50fe373315775f62df5f04037b73a7d27ee3386df6e051af2db9a112320039a1",
+    "samples": 36096
+  },
+  {
+    "Id": 104,
+    "filename": "audio_000104.wav",
+    "file_sha256": "223f832fad1c86f6d257fc04aab015a51604ff1212ac7736342248e7912220ee",
+    "samples": 61056
+  },
+  {
+    "Id": 105,
+    "filename": "audio_000105.wav",
+    "file_sha256": "2c97117e5d9b3a97fc4b806ba13072c056ce9fb015ac8f5937773b442c2b3dea",
+    "samples": 28416
+  },
+  {
+    "Id": 106,
+    "filename": "audio_000106.wav",
+    "file_sha256": "db6173a0897c7cfd50a23b57743c2acf3fffb5aa9e3b3d9257422cfbaaf8251b",
+    "samples": 56064
+  },
+  {
+    "Id": 107,
+    "filename": "audio_000107.wav",
+    "file_sha256": "b2d806930621f5512ea225a0bb7360372f64d300d6c8686dfc56e735416dcc9d",
+    "samples": 23424
+  },
+  {
+    "Id": 108,
+    "filename": "audio_000108.wav",
+    "file_sha256": "110ecc30cd4600da4c392d018f171d53ec625f124239d8d06498ec1ec9141f78",
+    "samples": 45312
+  },
+  {
+    "Id": 109,
+    "filename": "audio_000109.wav",
+    "file_sha256": "b29c3e8710dc701c86cd96c5d1cc357a605dc16760ce016da24d5995a7d7f866",
+    "samples": 33110
+  },
+  {
+    "Id": 110,
+    "filename": "audio_000110.wav",
+    "file_sha256": "71befe2809dee3c044e1a2dbd9f6378505d69ab2a4e02159f58d862a62019d5f",
+    "samples": 33792
+  },
+  {
+    "Id": 112,
+    "filename": "audio_000112.wav",
+    "file_sha256": "906f56f2a20b1b41a1c5bbb98220d4e143b6dbcc6d72449c6cc67ebd25d2d302",
+    "samples": 38230
+  },
+  {
+    "Id": 113,
+    "filename": "audio_000113.wav",
+    "file_sha256": "9f0e96f5d79bf5c6d8d2cc0b65384fe1063c61537201f8a6b6c3b3ea31d7d8d6",
+    "samples": 68608
+  },
+  {
+    "Id": 114,
+    "filename": "audio_000114.wav",
+    "file_sha256": "c707d40fd737f6d83b8041bf7c56c7286a0ae96bede6adf44eba624d9daebf0d",
+    "samples": 61099
+  },
+  {
+    "Id": 115,
+    "filename": "audio_000115.wav",
+    "file_sha256": "91cb3f490423f967058436929781b19e25e64b66e0e669c52f3c810a66436a5a",
+    "samples": 27648
+  },
+  {
+    "Id": 116,
+    "filename": "audio_000116.wav",
+    "file_sha256": "76a7fe1a4af0da5953e7ac0942247770be9be7398ccc5f995f9826afb81041f9",
+    "samples": 42206
+  },
+  {
+    "Id": 117,
+    "filename": "audio_000117.wav",
+    "file_sha256": "6b2ff4ad6e3f24fe0781d5cf70395fa0ae56fad843396d51e010e81875e9b1fc",
+    "samples": 45312
+  },
+  {
+    "Id": 118,
+    "filename": "audio_000118.wav",
+    "file_sha256": "f0a3a73be60f7c542691837a6567c675537730f42a2a71879d7db1ad1a45cf08",
+    "samples": 41856
+  },
+  {
+    "Id": 119,
+    "filename": "audio_000119.wav",
+    "file_sha256": "aaf9c046e46d4cc0959da0f6147e4cb4f55c726d799e837c41f26211f1f572e8",
+    "samples": 30379
+  },
+  {
+    "Id": 120,
+    "filename": "audio_000120.wav",
+    "file_sha256": "2e518519f351c63d1a403aabd4292432d14b8058f245bdf60d5d174320711d7f",
+    "samples": 77952
+  },
+  {
+    "Id": 121,
+    "filename": "audio_000121.wav",
+    "file_sha256": "447de8e3dd0cad1ff6c944b8742fa5c1c5fde1e7eea66974d4bb70d3dd46aa7a",
+    "samples": 34475
+  },
+  {
+    "Id": 122,
+    "filename": "audio_000122.wav",
+    "file_sha256": "20515738ea2a3b2361620aa509740dd9909fde5fc9a4c5261c0ea1836cac274d",
+    "samples": 88406
+  },
+  {
+    "Id": 123,
+    "filename": "audio_000123.wav",
+    "file_sha256": "6fb225d561be5d5147bff65d6563101c355e9fd58f3af200b10870b083dffe55",
+    "samples": 119467
+  },
+  {
+    "Id": 124,
+    "filename": "audio_000124.wav",
+    "file_sha256": "3270306bbc31437e8a73fe425fe66aceb40188c303f0cce2a7d5228e963ed108",
+    "samples": 71966
+  },
+  {
+    "Id": 126,
+    "filename": "audio_000126.wav",
+    "file_sha256": "7f8ddc5da674a3faba4e3014e89c98fbcc2638cb9168d4ded0e65e6eee8c51a0",
+    "samples": 49784
+  },
+  {
+    "Id": 127,
+    "filename": "audio_000127.wav",
+    "file_sha256": "f61e802b12ce04a57ec5e57069f10cdc5aee62c713a4570f3bb4231c0c43ae35",
+    "samples": 58206
+  },
+  {
+    "Id": 128,
+    "filename": "audio_000128.wav",
+    "file_sha256": "717592ba98f72befcb65222cf531cdd7d430774e96f42c7150ac23c1675095ab",
+    "samples": 84707
+  },
+  {
+    "Id": 129,
+    "filename": "audio_000129.wav",
+    "file_sha256": "41e6924949ca9a762208b636342423f6277a63528ba41fb4f048c27c843f9628",
+    "samples": 36096
+  },
+  {
+    "Id": 130,
+    "filename": "audio_000130.wav",
+    "file_sha256": "7390ed6585116222014f06807ff4bcabe5bf634a063c9f96b91f88458291803d",
+    "samples": 32768
+  },
+  {
+    "Id": 131,
+    "filename": "audio_000131.wav",
+    "file_sha256": "9f3f24130ad537746c77467139e3c23a920defe4797f99ce7052c9bd612e79a7",
+    "samples": 26496
+  },
+  {
+    "Id": 133,
+    "filename": "audio_000133.wav",
+    "file_sha256": "fc0b31d144584c543e074c3b1c08664ae1ddcbaf84dfb7a8da2398fab964db46",
+    "samples": 90454
+  },
+  {
+    "Id": 134,
+    "filename": "audio_000134.wav",
+    "file_sha256": "33a25ae0c943e55e81e3ab20c52d71a74956aa4c1cf6e827ace062602bb435d3",
+    "samples": 45312
+  },
+  {
+    "Id": 137,
+    "filename": "audio_000137.wav",
+    "file_sha256": "5487b1b1a6c694bb65cbe4e9176b91c35b3e78a1656fbdb500b7d689c828aee2",
+    "samples": 43350
+  },
+  {
+    "Id": 138,
+    "filename": "audio_000138.wav",
+    "file_sha256": "6797f3c75f7c4be31ceec1a1c5f87ab28b75579c172913dd4cba1de7b09f31f7",
+    "samples": 48470
+  },
+  {
+    "Id": 139,
+    "filename": "audio_000139.wav",
+    "file_sha256": "3c748b1f343adb44b08a03327c5ddcb58c13bd73df7703cf43de9e74a5f59413",
+    "samples": 47787
+  },
+  {
+    "Id": 140,
+    "filename": "audio_000140.wav",
+    "file_sha256": "97bd2b7119c4233925d9872f49cc363455d974523a458d236e73e742be3b45ee",
+    "samples": 56320
+  },
+  {
+    "Id": 141,
+    "filename": "audio_000141.wav",
+    "file_sha256": "240e3106aea2d591113560b4295ffa10ef2e96423b8b174d879953de7a919fa4",
+    "samples": 49566
+  },
+  {
+    "Id": 142,
+    "filename": "audio_000142.wav",
+    "file_sha256": "1cb5ce3c9f90a72d5a66e3b09f5671a35c4205e7b926d6131c5745f1325b8aef",
+    "samples": 26206
+  },
+  {
+    "Id": 143,
+    "filename": "audio_000143.wav",
+    "file_sha256": "35ba4ddb26449c9faaabce5e05ecdf33390a49f14d4024de04e4ad18985b643d",
+    "samples": 28126
+  },
+  {
+    "Id": 144,
+    "filename": "audio_000144.wav",
+    "file_sha256": "473c1ea95a73363f2158a6d64504283549f70e5682ea7f41f288ae53410d2990",
+    "samples": 57003
+  },
+  {
+    "Id": 145,
+    "filename": "audio_000145.wav",
+    "file_sha256": "469b7a83545e7352df13a79cf08066d475fc89e156ed1883527a2c1029dde1f5",
+    "samples": 54955
+  },
+  {
+    "Id": 146,
+    "filename": "audio_000146.wav",
+    "file_sha256": "d9eef7541ac26c32ebc57c3df9f65dc6eed30ff07b384c366538f22fa9afae74",
+    "samples": 38230
+  },
+  {
+    "Id": 147,
+    "filename": "audio_000147.wav",
+    "file_sha256": "c00496b6732f4aa7e28d83310662b82b12acc27b5b5a259c568219f7bb9f20c3",
+    "samples": 70272
+  },
+  {
+    "Id": 148,
+    "filename": "audio_000148.wav",
+    "file_sha256": "e3782c8b4294f10128353a3aca0213578e5e24ebddcc6b950fabe51e0d8a58ae",
+    "samples": 39936
+  },
+  {
+    "Id": 149,
+    "filename": "audio_000149.wav",
+    "file_sha256": "c9ea90fd00a9644fe63d8ba470dcca4d488cae10002fb5f1931886ec182265ef",
+    "samples": 56064
+  },
+  {
+    "Id": 150,
+    "filename": "audio_000150.wav",
+    "file_sha256": "6641d01e686cd017dc9e7644fff538a450cb6cbcccaadbfe68f899cbe0c1b540",
+    "samples": 34134
+  },
+  {
+    "Id": 152,
+    "filename": "audio_000152.wav",
+    "file_sha256": "4a666151041275045ab8e9cb88e686d20319880e57ee758db589d258b2c4d643",
+    "samples": 30336
+  },
+  {
+    "Id": 154,
+    "filename": "audio_000154.wav",
+    "file_sha256": "e064cb228a2222ec62b2cb62356265782d144046741524437bba4a21a7bf2d35",
+    "samples": 39936
+  },
+  {
+    "Id": 155,
+    "filename": "audio_000155.wav",
+    "file_sha256": "cf635c4e6eb25ddf2878fa4e6e0949ad5268169a24320767a8f52d82a8ed1a63",
+    "samples": 31872
+  },
+  {
+    "Id": 156,
+    "filename": "audio_000156.wav",
+    "file_sha256": "dc107c7ab05f9a4dd6d21bf56f12c0a0cf8e0d18a97d69346586d104b6474cb2",
+    "samples": 62806
+  },
+  {
+    "Id": 157,
+    "filename": "audio_000157.wav",
+    "file_sha256": "9f310b19a52cdf9ffd2bc7851a3e4b87f001bf70f4d3bccfdd88a95ce14fac86",
+    "samples": 33246
+  },
+  {
+    "Id": 158,
+    "filename": "audio_000158.wav",
+    "file_sha256": "8c5f7dc8fed5c0c0ddcaac36a164ff247caa088530742ebf05636b8ff588034a",
+    "samples": 52224
+  },
+  {
+    "Id": 159,
+    "filename": "audio_000159.wav",
+    "file_sha256": "ad92132a1c94f7a3e2066e54b8887c99e1cac9c17c0d19a846bd7528b87c103d",
+    "samples": 34846
+  },
+  {
+    "Id": 160,
+    "filename": "audio_000160.wav",
+    "file_sha256": "6ecc28a9f122876270bb9113d788e13f8de4d7549d3099d98dd02d01b04bf804",
+    "samples": 36182
+  },
+  {
+    "Id": 161,
+    "filename": "audio_000161.wav",
+    "file_sha256": "72f39309584d62eb763ebe42bea54143532ccab881db95557a6714243ba11d10",
+    "samples": 74752
+  },
+  {
+    "Id": 162,
+    "filename": "audio_000162.wav",
+    "file_sha256": "42ef214cf1cead0358845add021cf9bdb4ec3095f7edbd15328bf367ab4041e5",
+    "samples": 55638
+  },
+  {
+    "Id": 163,
+    "filename": "audio_000163.wav",
+    "file_sha256": "325eb26e1013d702b1b762c775163dfd859b9e7d6b6eebd7603af31f6b7da91f",
+    "samples": 43691
+  },
+  {
+    "Id": 164,
+    "filename": "audio_000164.wav",
+    "file_sha256": "826ce79363fc7f15d5e721e47adf9beca10216b5a780b4061987828e8b502c6e",
+    "samples": 31326
+  },
+  {
+    "Id": 166,
+    "filename": "audio_000166.wav",
+    "file_sha256": "f1a5a63b1af67dbcdd56eccf4cbb46c578d427752215b467043758a0be04c096",
+    "samples": 36864
+  },
+  {
+    "Id": 167,
+    "filename": "audio_000167.wav",
+    "file_sha256": "cd5b49871e935236a4b0bcc6a0fa77a9d4ec97f2d790d2c3b7de260a48ef4437",
+    "samples": 67926
+  },
+  {
+    "Id": 168,
+    "filename": "audio_000168.wav",
+    "file_sha256": "82a5df664c6cb71d8c2fecb5ff6764353d66986134b384a8aa8b6f8ca85b5a43",
+    "samples": 61440
+  },
+  {
+    "Id": 169,
+    "filename": "audio_000169.wav",
+    "file_sha256": "a3e82a8de8921aa88a42738ce898fc53359565e3a69fe0678adbb3140455a253",
+    "samples": 27648
+  },
+  {
+    "Id": 170,
+    "filename": "audio_000170.wav",
+    "file_sha256": "bbed993fc6e0457e66d390ecbdb6634f553caf7cfbcb6f70ea3ecc972ce0fa55",
+    "samples": 45312
+  },
+  {
+    "Id": 171,
+    "filename": "audio_000171.wav",
+    "file_sha256": "d6943710f897f6175931099c1c897f02eb38e4d82c7f4d359dac36c6cca35041",
+    "samples": 25942
+  },
+  {
+    "Id": 173,
+    "filename": "audio_000173.wav",
+    "file_sha256": "5b1fff87a08cc0590a9aa826af8fd72b989d62fdb1e3526d84c157c3a622d162",
+    "samples": 40619
+  },
+  {
+    "Id": 174,
+    "filename": "audio_000174.wav",
+    "file_sha256": "f4f5cdff0e847ae17b7c4e004d45bb8987b4e0bac6d700b1c30050e6fb1dcf83",
+    "samples": 40960
+  },
+  {
+    "Id": 175,
+    "filename": "audio_000175.wav",
+    "file_sha256": "59bf2e8ec4a0dfcd0cb24d357aefe83cec350a1f258a8de612f1b50c96c68e0b",
+    "samples": 34846
+  },
+  {
+    "Id": 176,
+    "filename": "audio_000176.wav",
+    "file_sha256": "7da6cc64470366ceddedaa607a7c790f71082b620bb30bf901c30a8e7d8e28bf",
+    "samples": 45056
+  },
+  {
+    "Id": 177,
+    "filename": "audio_000177.wav",
+    "file_sha256": "0b4765061bc83447a2f1964d7dde8a4c9ad1ac69feff1ebaab5a513c3bd9aa25",
+    "samples": 53931
+  },
+  {
+    "Id": 178,
+    "filename": "audio_000178.wav",
+    "file_sha256": "f1535c6c20d9173f3511b942f25fa6872ab7c71d21f45471aa181adfa6d7c3a2",
+    "samples": 72363
+  },
+  {
+    "Id": 179,
+    "filename": "audio_000179.wav",
+    "file_sha256": "0f1ba803f959a385b3fb367fd230639b5a11176853a937e55d221ee290a6bf27",
+    "samples": 45312
+  },
+  {
+    "Id": 180,
+    "filename": "audio_000180.wav",
+    "file_sha256": "e3866239e3c73da552bb600ba75b99be149616eee0c9330da9459d7ca21727fa",
+    "samples": 40704
+  },
+  {
+    "Id": 181,
+    "filename": "audio_000181.wav",
+    "file_sha256": "3c9638971b4e14cf5b0e10b7044c8e303869aa7993640f84b3afd5e0bc2b22b0",
+    "samples": 56471
+  },
+  {
+    "Id": 182,
+    "filename": "audio_000182.wav",
+    "file_sha256": "3d5569113c5fa95ceba9c855568b219f9d5b57998a1288e6ff35e5a5196e9e6d",
+    "samples": 66560
+  },
+  {
+    "Id": 185,
+    "filename": "audio_000185.wav",
+    "file_sha256": "4e92e5aa1b5cae4e71434c80435897f08e85d21a6978319e0853ea110da78620",
+    "samples": 30720
+  },
+  {
+    "Id": 187,
+    "filename": "audio_000187.wav",
+    "file_sha256": "76ed174949736c5fd5752ea6ec643714c81da77a19a7918f562bce85208d09dd",
+    "samples": 42624
+  },
+  {
+    "Id": 188,
+    "filename": "audio_000188.wav",
+    "file_sha256": "f127f09d1308dc044f1e6b1c0fc0079751585e58dc75c90ad42a3c664c25c34b",
+    "samples": 66560
+  },
+  {
+    "Id": 190,
+    "filename": "audio_000190.wav",
+    "file_sha256": "498a65c2298bec42f698c83a92556b500693aab7c5595ace67e8be3f6cc89c1e",
+    "samples": 44032
+  },
+  {
+    "Id": 192,
+    "filename": "audio_000192.wav",
+    "file_sha256": "0bf297758a5498c576611a596c9069faeeb797b54dce3d1d08f7ffe94f4f7bae",
+    "samples": 46080
+  },
+  {
+    "Id": 193,
+    "filename": "audio_000193.wav",
+    "file_sha256": "48133f22337594b81baffba6a939b1c6f2f49dd1720185a961a617073f8db11e",
+    "samples": 54955
+  },
+  {
+    "Id": 194,
+    "filename": "audio_000194.wav",
+    "file_sha256": "640222df4f3d1eaef770e33f39b508e6dc22f29a00af57abf388bfb9acad5441",
+    "samples": 38686
+  },
+  {
+    "Id": 195,
+    "filename": "audio_000195.wav",
+    "file_sha256": "38177ad6fd3d6705b822b2eab54b8b47a7015d84bb28a37b00d8679ba2135ceb",
+    "samples": 53590
+  },
+  {
+    "Id": 196,
+    "filename": "audio_000196.wav",
+    "file_sha256": "02956d174dbb7cbfd1dc9d011510323778fd13f347f5c82186db0bbd8bb9d089",
+    "samples": 89771
+  },
+  {
+    "Id": 197,
+    "filename": "audio_000197.wav",
+    "file_sha256": "7db82144bceb9ab2f357c72d42edb70c60aa0e312dfe37d14c7663a22c4f015b",
+    "samples": 59392
+  },
+  {
+    "Id": 198,
+    "filename": "audio_000198.wav",
+    "file_sha256": "9cd86925850806910afe4bf7864f7ba3981eca149cd0a71b9a976fab21cbc420",
+    "samples": 52566
+  },
+  {
+    "Id": 199,
+    "filename": "audio_000199.wav",
+    "file_sha256": "6d8e4bde5b177fd09b91980c1be2d7fe47fe28d62ba830246445877e465e1b98",
+    "samples": 49152
+  },
+  {
+    "Id": 200,
+    "filename": "audio_000200.wav",
+    "file_sha256": "468cb5aa6debd2d9aed6e71005a58b96b34c3ff378540dc2eb6618d7e9f478ee",
+    "samples": 59734
+  },
+  {
+    "Id": 201,
+    "filename": "audio_000201.wav",
+    "file_sha256": "3fe87c3fa95f2a543663488119e017312bdba35f2e5abdd062090eadc6aa2e52",
+    "samples": 41472
+  },
+  {
+    "Id": 202,
+    "filename": "audio_000202.wav",
+    "file_sha256": "9dc5a3568771fd74e179382cd95a8ec40a714d77d8c073613b4a838244f89096",
+    "samples": 68950
+  },
+  {
+    "Id": 203,
+    "filename": "audio_000203.wav",
+    "file_sha256": "af07807ef99b39526c10f10c1ff91b7659addf27eeb6c396a8c7fd253d98e414",
+    "samples": 107904
+  },
+  {
+    "Id": 204,
+    "filename": "audio_000204.wav",
+    "file_sha256": "63aaf4d635b3f360135daa32d621af379ca239cded9c2b5773f79308ece13d95",
+    "samples": 49835
+  },
+  {
+    "Id": 206,
+    "filename": "audio_000206.wav",
+    "file_sha256": "484efd388422032b9e81aed0218a8c3ec4f57e9a021ba35b2629aa365c6bb6c1",
+    "samples": 55979
+  },
+  {
+    "Id": 208,
+    "filename": "audio_000208.wav",
+    "file_sha256": "5672701f6fb393c73c5f1c01af9cff366f438354176fb0316028ecb425fd7ddd",
+    "samples": 31104
+  },
+  {
+    "Id": 209,
+    "filename": "audio_000209.wav",
+    "file_sha256": "d0523ff8b06414aed61192cfa26a4e966fc125ff7836ade6a27201cb0cb5c651",
+    "samples": 38571
+  },
+  {
+    "Id": 211,
+    "filename": "audio_000211.wav",
+    "file_sha256": "814e8ff4d7a6a5691e9e8a207d6884886429134552856ebc725dde673c935bf6",
+    "samples": 46763
+  },
+  {
+    "Id": 212,
+    "filename": "audio_000212.wav",
+    "file_sha256": "00483fee8117f3ef0d57a7294924ff68fd410931e8073d22e62534abd557e387",
+    "samples": 39936
+  },
+  {
+    "Id": 213,
+    "filename": "audio_000213.wav",
+    "file_sha256": "d936b21f1e38dd303fa01b3a55ad85902b60bf76c36f8c701d5fa559b3a5cfc5",
+    "samples": 29184
+  },
+  {
+    "Id": 214,
+    "filename": "audio_000214.wav",
+    "file_sha256": "f20412e5b9ea50f002077bee9823987b721e94a7ae0ea763204a3682b19a730e",
+    "samples": 44374
+  },
+  {
+    "Id": 215,
+    "filename": "audio_000215.wav",
+    "file_sha256": "382a5a6f888d081384e50b5b269936dd50fea6d221d7c6d899e44e288c853271",
+    "samples": 44715
+  },
+  {
+    "Id": 216,
+    "filename": "audio_000216.wav",
+    "file_sha256": "6c2d07fb12baca108e9fa03bcc959fe272112739ede12552187e5bdf16b7126c",
+    "samples": 47787
+  },
+  {
+    "Id": 217,
+    "filename": "audio_000217.wav",
+    "file_sha256": "b2e9f43fa204162b220742a08488aa612e44dce53fd48a2800fb96c204f57a1a",
+    "samples": 44374
+  },
+  {
+    "Id": 218,
+    "filename": "audio_000218.wav",
+    "file_sha256": "b9d6e9acbe8bb3381e6395d490797470731b4439dc0c0c797df834400eb80108",
+    "samples": 40704
+  },
+  {
+    "Id": 219,
+    "filename": "audio_000219.wav",
+    "file_sha256": "57f2db1bfd2943239e22cafff4ffcda74a0bde60eb5bb0364d9465446e36e9e3",
+    "samples": 34944
+  },
+  {
+    "Id": 221,
+    "filename": "audio_000221.wav",
+    "file_sha256": "89432f2fc25cb73f5466ae2c7aeae53edb805a39d187969e3f7849ab49fc905f",
+    "samples": 55979
+  },
+  {
+    "Id": 223,
+    "filename": "audio_000223.wav",
+    "file_sha256": "1850356d78ac548122911bf3a84ac86a0cfc70ca5c85854f027606ad6ba29ef1",
+    "samples": 57344
+  },
+  {
+    "Id": 224,
+    "filename": "audio_000224.wav",
+    "file_sha256": "603febd9c46fd75dddbd57b899461860238934404515099954faa948a83cd5ea",
+    "samples": 87552
+  },
+  {
+    "Id": 226,
+    "filename": "audio_000226.wav",
+    "file_sha256": "7c9f47f501ae3a7466bfccc87f94f6e263b537bec52899589485dfb6d46536f3",
+    "samples": 51542
+  },
+  {
+    "Id": 228,
+    "filename": "audio_000228.wav",
+    "file_sha256": "d221519a5077b68d390d1a9b21c287de7cdcf7a0a4a1c8bf9ecced2ee107e309",
+    "samples": 51883
+  },
+  {
+    "Id": 229,
+    "filename": "audio_000229.wav",
+    "file_sha256": "7c6621061789da4d0946118375c53d76ea719d85f7d46a6c0bc3f3c5954637e2",
+    "samples": 83968
+  },
+  {
+    "Id": 230,
+    "filename": "audio_000230.wav",
+    "file_sha256": "76aea7375d2c43df78966e4217a42541af94088f48c56447abd5031e7801c6e0",
+    "samples": 26112
+  },
+  {
+    "Id": 231,
+    "filename": "audio_000231.wav",
+    "file_sha256": "1d9607884768b52efc5422a547f8572aeb5d7b69ea44e83fbb7e188ad322da52",
+    "samples": 51200
+  },
+  {
+    "Id": 232,
+    "filename": "audio_000232.wav",
+    "file_sha256": "3f162e7ce49279f14d6b728db0e64fa24cb938606a676eafd3f4805fe43d3d16",
+    "samples": 24918
+  },
+  {
+    "Id": 233,
+    "filename": "audio_000233.wav",
+    "file_sha256": "79600de78d8a36c43ea4580a2b2032d6179f5f86a8a301b78f249a8dc26785c0",
+    "samples": 39936
+  },
+  {
+    "Id": 234,
+    "filename": "audio_000234.wav",
+    "file_sha256": "d999ba84533bab5dfbf94d720d3a7027585a97ff01015f1891802fd88f4026b2",
+    "samples": 63830
+  },
+  {
+    "Id": 238,
+    "filename": "audio_000238.wav",
+    "file_sha256": "9f61d2b0c36149e32e57833958017f9b4f5d7dac3087e2fce141e455229d1647",
+    "samples": 35806
+  },
+  {
+    "Id": 239,
+    "filename": "audio_000239.wav",
+    "file_sha256": "5eb08523df8342a6dd6f84ec81f35d651f631e4b1b9439194150ec5d32adf778",
+    "samples": 37888
+  },
+  {
+    "Id": 240,
+    "filename": "audio_000240.wav",
+    "file_sha256": "2b4709c30db4b8727937f7fabe09ae60e7668d46866dbca3fd1c8f7b44dcaec3",
+    "samples": 46080
+  },
+  {
+    "Id": 241,
+    "filename": "audio_000241.wav",
+    "file_sha256": "9141c5709634f4d3a23809c3009ae0dc1722559a1bc9edfc1611adc2b3bd96b6",
+    "samples": 81920
+  },
+  {
+    "Id": 242,
+    "filename": "audio_000242.wav",
+    "file_sha256": "87e405ed7565f0701093f27d756eed9f184869a1920a1cd0cbb19bcc0f50e9ba",
+    "samples": 73344
+  },
+  {
+    "Id": 243,
+    "filename": "audio_000243.wav",
+    "file_sha256": "00caa7cac6d67e8044fc4afad166766766014ad78c78ef3f607e1a0e318b3a0b",
+    "samples": 34944
+  },
+  {
+    "Id": 245,
+    "filename": "audio_000245.wav",
+    "file_sha256": "e02e06b625e0f339415d38b6ae9eb70ea76af76c7a5e9daff7c54fbd428acbee",
+    "samples": 40286
+  },
+  {
+    "Id": 246,
+    "filename": "audio_000246.wav",
+    "file_sha256": "b6ea4dce09e37443ffa182aa3b18613798a8478018de3ab54b26c9bc3e852953",
+    "samples": 33024
+  },
+  {
+    "Id": 249,
+    "filename": "audio_000249.wav",
+    "file_sha256": "ade5372c9037750233300dfdc01198b5d4abffc58b63e1b028f172fb61ce5dfd",
+    "samples": 31744
+  },
+  {
+    "Id": 250,
+    "filename": "audio_000250.wav",
+    "file_sha256": "9bffeb72a61b0c14e2cdc6cad0db06cf90883e8c6bf79813c73d564aea095da8",
+    "samples": 38267
+  },
+  {
+    "Id": 252,
+    "filename": "audio_000252.wav",
+    "file_sha256": "b061ae3a9b4d98bbc4ccdf6b8cd9d1f3c22bb2f19dae88e83ed3c5ac1990b8b5",
+    "samples": 85632
+  },
+  {
+    "Id": 253,
+    "filename": "audio_000253.wav",
+    "file_sha256": "bb5510675f879935c00b60061c61f4bebe390cd986e77a1edb77f19c1cf429cc",
+    "samples": 86016
+  },
+  {
+    "Id": 254,
+    "filename": "audio_000254.wav",
+    "file_sha256": "b8ee90029fe0609627b484db873f5fa2e7e5692f35c9954b4c3da5fad398d737",
+    "samples": 30720
+  },
+  {
+    "Id": 255,
+    "filename": "audio_000255.wav",
+    "file_sha256": "6e6721aa7daa0d72b10f5f36a574391198e4b4a056b0ea1e99b85dc5cf94b4b9",
+    "samples": 53376
+  },
+  {
+    "Id": 257,
+    "filename": "audio_000257.wav",
+    "file_sha256": "9a7640be600ec55c2823a297da000226d9d4e8bd7362d1a3c04404513c58449d",
+    "samples": 40926
+  },
+  {
+    "Id": 258,
+    "filename": "audio_000258.wav",
+    "file_sha256": "658960def1b8663bda1f48731c2f6c9889f5a0e6680d0428bf22802be7dcc4c9",
+    "samples": 51200
+  },
+  {
+    "Id": 259,
+    "filename": "audio_000259.wav",
+    "file_sha256": "55888829617e8a34cf7d20f8f4ad098599a4492ec0d28ca2088cddf22ab9eeb5",
+    "samples": 47787
+  },
+  {
+    "Id": 260,
+    "filename": "audio_000260.wav",
+    "file_sha256": "ae2b65d269a51d0e24fb37a8df3a38965e286c5ac6fc56e17c728adf42c7ab6c",
+    "samples": 53590
+  },
+  {
+    "Id": 262,
+    "filename": "audio_000262.wav",
+    "file_sha256": "b94a23109616379f95e20608b20518f69d99e2d11b90717b43d7b745b519c437",
+    "samples": 38230
+  },
+  {
+    "Id": 263,
+    "filename": "audio_000263.wav",
+    "file_sha256": "ae16a869287cde4f2395f44235dcb98a40c8f2a2a51b2e5ecd623aefa955d281",
+    "samples": 40960
+  },
+  {
+    "Id": 264,
+    "filename": "audio_000264.wav",
+    "file_sha256": "1062c927cfb8ca2ba144b7ae11a0ac32bf0bb1f8a7e2bd34d5343755f556381f",
+    "samples": 87936
+  },
+  {
+    "Id": 266,
+    "filename": "audio_000266.wav",
+    "file_sha256": "b734a45b4bce761c516da9e7881ee362d32edf95cbcb1e4714c73d0dc137e334",
+    "samples": 45056
+  },
+  {
+    "Id": 267,
+    "filename": "audio_000267.wav",
+    "file_sha256": "4e93d78f87dee343a48a8d37eaff4b00fca54566269b4df9998395c9dfb4c0a8",
+    "samples": 49412
+  },
+  {
+    "Id": 269,
+    "filename": "audio_000269.wav",
+    "file_sha256": "182df05bee9cb8dfbf2949c3e340712807968e762e7a533c9ff8f12d067d33c7",
+    "samples": 46080
+  },
+  {
+    "Id": 270,
+    "filename": "audio_000270.wav",
+    "file_sha256": "d8eeb49174503a6dc12c2b5a9790a5f74e88a38b230e69510d5ff0fb6e36c787",
+    "samples": 50176
+  },
+  {
+    "Id": 271,
+    "filename": "audio_000271.wav",
+    "file_sha256": "7ead74be41f3447292d901cf4952739b3d3d77a67317c48ef90fdde5f442ce0f",
+    "samples": 47787
+  },
+  {
+    "Id": 273,
+    "filename": "audio_000273.wav",
+    "file_sha256": "93bd22367ae0904c075d296daa86c9a07c6ac0c487528310d26b7cf074f66288",
+    "samples": 43776
+  },
+  {
+    "Id": 274,
+    "filename": "audio_000274.wav",
+    "file_sha256": "04e3dc04414a5a392c0259e96d000f86994d1b278c89907f0f4fafa2581c18cb",
+    "samples": 30720
+  },
+  {
+    "Id": 275,
+    "filename": "audio_000275.wav",
+    "file_sha256": "67ee543a46851b54f72acd57cb56116333534b7bd2494d918a85535218f8ab65",
+    "samples": 57003
+  },
+  {
+    "Id": 276,
+    "filename": "audio_000276.wav",
+    "file_sha256": "3b88213300569cc038da7e97058c402a58c147b265ed12afaf6bee50dcc3117a",
+    "samples": 77824
+  },
+  {
+    "Id": 277,
+    "filename": "audio_000277.wav",
+    "file_sha256": "77b9300b8a934af29de532e2a8aeddfa9f9787a52f4621e7165558ce75e00ea1",
+    "samples": 29406
+  },
+  {
+    "Id": 278,
+    "filename": "audio_000278.wav",
+    "file_sha256": "fc5a42c58f488ee1892d9ef45e0516fad09db44f1ffde29b5c456e14b19ea054",
+    "samples": 48384
+  },
+  {
+    "Id": 279,
+    "filename": "audio_000279.wav",
+    "file_sha256": "6fd4c1a74ba2544d43034a23c5bab3070295d527be98a2fc84442e55142d2f9f",
+    "samples": 53376
+  },
+  {
+    "Id": 280,
+    "filename": "audio_000280.wav",
+    "file_sha256": "4e5e8c4543178faff2c759bac0ad1845b193fa3cc253c0077a4af34bb78240e0",
+    "samples": 37206
+  },
+  {
+    "Id": 281,
+    "filename": "audio_000281.wav",
+    "file_sha256": "d15c041e06450acc7bb055ec019b800f6286f2a919b0b3b7059fc0574b49c892",
+    "samples": 106496
+  },
+  {
+    "Id": 282,
+    "filename": "audio_000282.wav",
+    "file_sha256": "1d702c3a6725ae2061ded15971197546c6be5a2f877b2e4629267f74c33e5bbd",
+    "samples": 39936
+  },
+  {
+    "Id": 283,
+    "filename": "audio_000283.wav",
+    "file_sha256": "69d48ca1ef4be53b6af3b68ba202525dcf4ca6a9409c68cf954c8676dc10868a",
+    "samples": 46080
+  },
+  {
+    "Id": 285,
+    "filename": "audio_000285.wav",
+    "file_sha256": "755a44cd31c6f16d9dc3ebc0370366df2ebd5eb6a335bdbcf96dcdc9412e9d8e",
+    "samples": 16128
+  },
+  {
+    "Id": 286,
+    "filename": "audio_000286.wav",
+    "file_sha256": "4edd69fd2b582714b391137a66dfd8dbe6e267d8defc608124ca4fb20579f504",
+    "samples": 39595
+  },
+  {
+    "Id": 287,
+    "filename": "audio_000287.wav",
+    "file_sha256": "a61ebf39d0f2bcfb34d59e9738e793d86c34b09391f505c9ea7ba1c52f4fe422",
+    "samples": 42667
+  },
+  {
+    "Id": 288,
+    "filename": "audio_000288.wav",
+    "file_sha256": "f8fcc565d77a5ffd0e3132e5d89f706ec44beb73607b41a8139beb7e05a01c4c",
+    "samples": 61099
+  },
+  {
+    "Id": 290,
+    "filename": "audio_000290.wav",
+    "file_sha256": "386b9e1b52420f594672d1e1c5704650f334f0578609cfb42b2e56189aa17af6",
+    "samples": 37632
+  },
+  {
+    "Id": 291,
+    "filename": "audio_000291.wav",
+    "file_sha256": "50547cda70e3a8c408a28955af61e20cfc5e8ea12236ddc8fa727e453b58511c",
+    "samples": 66902
+  },
+  {
+    "Id": 292,
+    "filename": "audio_000292.wav",
+    "file_sha256": "ad23c5f4e01d487db0b6c0e7d40d2278ac3d1e6a0e6e0728fa27f69932a22f70",
+    "samples": 63147
+  },
+  {
+    "Id": 293,
+    "filename": "audio_000293.wav",
+    "file_sha256": "d352c43366f4921e22f05b94e45d9a1053494a09a84baadb6701a6dfb319485c",
+    "samples": 49835
+  },
+  {
+    "Id": 294,
+    "filename": "audio_000294.wav",
+    "file_sha256": "a2c55f940803bee0dd52a8b8b517c7b19d6492b63becb279c32c57055ab940a8",
+    "samples": 84310
+  },
+  {
+    "Id": 297,
+    "filename": "audio_000297.wav",
+    "file_sha256": "e9420df26f747ca30324eeb3a2a92d0015ec3d6926c1890023a6b8c7f564a3ba",
+    "samples": 45056
+  },
+  {
+    "Id": 298,
+    "filename": "audio_000298.wav",
+    "file_sha256": "8dfd3e641a6b11dc8f7a3ef298ac7ade8b77f66eef6e7a743f4e174e899c21b5",
+    "samples": 86784
+  },
+  {
+    "Id": 299,
+    "filename": "audio_000299.wav",
+    "file_sha256": "96798c23cb7aeccb8a8e1a086da1663f4034d659a537f3acd583f32b3387cde3",
+    "samples": 38016
+  },
+  {
+    "Id": 300,
+    "filename": "audio_000300.wav",
+    "file_sha256": "9cd609fdbca8a31f0023ef7d0a48687b2af1cba1a4b9eda772de3986d9e79d80",
+    "samples": 51883
+  },
+  {
+    "Id": 301,
+    "filename": "audio_000301.wav",
+    "file_sha256": "3b600c076777e9b33888946ae659f072145869e8b5665eba503ac7b18f2becaa",
+    "samples": 31872
+  },
+  {
+    "Id": 303,
+    "filename": "audio_000303.wav",
+    "file_sha256": "f423792e8825b1a38a6e63412db9e51fd1c2420e60fe80829c131a57d1c213f0",
+    "samples": 44374
+  },
+  {
+    "Id": 304,
+    "filename": "audio_000304.wav",
+    "file_sha256": "9b760584be68586148066504aa4d1ee1cfc684cc868ebbd5917aea13f484976e",
+    "samples": 39254
+  },
+  {
+    "Id": 305,
+    "filename": "audio_000305.wav",
+    "file_sha256": "bce23b2bbbfe96b0d209f0413a8ce571f20917ceff0a420b430ae3048a6415d0",
+    "samples": 94208
+  },
+  {
+    "Id": 306,
+    "filename": "audio_000306.wav",
+    "file_sha256": "a71e8da21c2bbb664591c801cf86648406168130aa7342d52288a87bfe610519",
+    "samples": 79877
+  },
+  {
+    "Id": 308,
+    "filename": "audio_000308.wav",
+    "file_sha256": "527b762304bd8aa9e4b1c37c68d59ad472ae95a96f76c827fddc5648b05379c2",
+    "samples": 61440
+  },
+  {
+    "Id": 309,
+    "filename": "audio_000309.wav",
+    "file_sha256": "9a210be40ed88be964ca378507bd6f7d744602d2fbecd45a1e5b8f298b634d02",
+    "samples": 49835
+  },
+  {
+    "Id": 310,
+    "filename": "audio_000310.wav",
+    "file_sha256": "ebfc24e279ef971fe9da5d7b95c0669630e2c9ee8224a2c13fc805abe3f88a06",
+    "samples": 23006
+  },
+  {
+    "Id": 313,
+    "filename": "audio_000313.wav",
+    "file_sha256": "c08216b5a6f2d1118f27de7232a6a68a6804a975dba0ead8587dc89c7ea5486f",
+    "samples": 46464
+  },
+  {
+    "Id": 314,
+    "filename": "audio_000314.wav",
+    "file_sha256": "8e86fc9519eebe48fdec03f1ae1096230d4c74afb19a334be80b35ebd7905b80",
+    "samples": 31872
+  },
+  {
+    "Id": 315,
+    "filename": "audio_000315.wav",
+    "file_sha256": "e485f4d6e1fb9bef290f422c361d47424a96356c8c9a43f5d20fea50203a0ddc",
+    "samples": 30046
+  },
+  {
+    "Id": 318,
+    "filename": "audio_000318.wav",
+    "file_sha256": "39e9e1d82ba333c2ebd6470ae8e14363559b9c1e6fbe1ec0748e200db70c923f",
+    "samples": 39936
+  },
+  {
+    "Id": 319,
+    "filename": "audio_000319.wav",
+    "file_sha256": "cd13a39eda177874d0a1b6802665cff0bc44db9ae2608f3c614efdcb9e4be3c9",
+    "samples": 41610
+  },
+  {
+    "Id": 320,
+    "filename": "audio_000320.wav",
+    "file_sha256": "0b8ad36013d950b275b9690d84ee40164ef642b71cc3430644456ba421e30cf1",
+    "samples": 52566
+  },
+  {
+    "Id": 321,
+    "filename": "audio_000321.wav",
+    "file_sha256": "481e8ca05b5d1abe718f15dd9415ae3a7b09ac7dacaf74eeb6e3954e930d9dac",
+    "samples": 54955
+  },
+  {
+    "Id": 322,
+    "filename": "audio_000322.wav",
+    "file_sha256": "4de1f8075ee147d03192805aa331c7327efe5f8c4ab484610900a9b0f847b30f",
+    "samples": 54955
+  },
+  {
+    "Id": 323,
+    "filename": "audio_000323.wav",
+    "file_sha256": "6b8a086810433fda193cea158ca09d46453e5cfa0f999460109cbc9ce9a2b8b4",
+    "samples": 49152
+  },
+  {
+    "Id": 324,
+    "filename": "audio_000324.wav",
+    "file_sha256": "7756a1324a746cc892ddfc4f34355b7313b34f1fea35f6dd501dfc42b668eace",
+    "samples": 40606
+  },
+  {
+    "Id": 325,
+    "filename": "audio_000325.wav",
+    "file_sha256": "073e83606619635dfe31c047111a6521013875b50b454acfe758a42be885a0fd",
+    "samples": 27648
+  },
+  {
+    "Id": 326,
+    "filename": "audio_000326.wav",
+    "file_sha256": "02956d174dbb7cbfd1dc9d011510323778fd13f347f5c82186db0bbd8bb9d089",
+    "samples": 89771
+  },
+  {
+    "Id": 327,
+    "filename": "audio_000327.wav",
+    "file_sha256": "2d3d7be18555910deab4a06a806b0f994d4a0cf7e08a2a6a4ae8e4d252f17044",
+    "samples": 38912
+  },
+  {
+    "Id": 328,
+    "filename": "audio_000328.wav",
+    "file_sha256": "b341839d225c78d65282ed11a01e0ff7a72c361b2a60f4adae5460a416f76720",
+    "samples": 41643
+  },
+  {
+    "Id": 330,
+    "filename": "audio_000330.wav",
+    "file_sha256": "c998bed3277d49cd554d835cf8451d2cb5ca44be53eaa18e99a4c3e14b313e06",
+    "samples": 43806
+  },
+  {
+    "Id": 332,
+    "filename": "audio_000332.wav",
+    "file_sha256": "0b8ad36013d950b275b9690d84ee40164ef642b71cc3430644456ba421e30cf1",
+    "samples": 52566
+  },
+  {
+    "Id": 333,
+    "filename": "audio_000333.wav",
+    "file_sha256": "3294a77aa16a07d93335d586c2521e3898e11df2d0fec7ea1a291803c216efed",
+    "samples": 47926
+  },
+  {
+    "Id": 334,
+    "filename": "audio_000334.wav",
+    "file_sha256": "8a66432898794dc53f61e1ab79defd9823e743986977493382f58665c3366ded",
+    "samples": 53248
+  },
+  {
+    "Id": 335,
+    "filename": "audio_000335.wav",
+    "file_sha256": "cffef71bf406c29dc76910ff5c5f9a73d3ea40fbe40bc444a44dfacaea0c2269",
+    "samples": 34944
+  },
+  {
+    "Id": 336,
+    "filename": "audio_000336.wav",
+    "file_sha256": "b2229fbf2bef861d8342df9cc05fc9b18bc77139ebbb9f39904fd41166d35dae",
+    "samples": 37406
+  },
+  {
+    "Id": 337,
+    "filename": "audio_000337.wav",
+    "file_sha256": "1629a4ed1fed535db6e688bd9af5ae680d223f57acdfb57743ef85bb6cb798f3",
+    "samples": 63488
+  },
+  {
+    "Id": 338,
+    "filename": "audio_000338.wav",
+    "file_sha256": "f19f09b44cb37642a91e7f490f0169262acfe164b088cd7f331a1e6df7e4adb4",
+    "samples": 89771
+  },
+  {
+    "Id": 339,
+    "filename": "audio_000339.wav",
+    "file_sha256": "c68c93581a6e4680eddfe36a50ccd05872b4b11c0edcdf51d0f4da4fbf390da2",
+    "samples": 67926
+  },
+  {
+    "Id": 340,
+    "filename": "audio_000340.wav",
+    "file_sha256": "100369817e131e3bbbdb3a0e1c6922fa05a759090a602a0cef0447d93b021065",
+    "samples": 78848
+  },
+  {
+    "Id": 342,
+    "filename": "audio_000342.wav",
+    "file_sha256": "cc2801f788075e3056eec2e6f623b0c73f60575cd84fd62daf395221b8b28e51",
+    "samples": 50304
+  },
+  {
+    "Id": 344,
+    "filename": "audio_000344.wav",
+    "file_sha256": "58d516c1958d61f9b37118b407b58c3996e8c1be7ef13cc009f1041d0ae75080",
+    "samples": 47787
+  },
+  {
+    "Id": 346,
+    "filename": "audio_000346.wav",
+    "file_sha256": "3ba33149ebd0f87a2ef54d80ad3b030dcfaadc2ffb666587c7ec0b59243e93d3",
+    "samples": 36182
+  },
+  {
+    "Id": 347,
+    "filename": "audio_000347.wav",
+    "file_sha256": "1002d04d2ad8c43d254c4b8480dcacaf97ad0ae95959578e45fc645388552c39",
+    "samples": 39936
+  },
+  {
+    "Id": 348,
+    "filename": "audio_000348.wav",
+    "file_sha256": "973535fbbdee1200a2da9ee86fc611bf3f5836487738d3b8c55e6a40bbf13402",
+    "samples": 90795
+  },
+  {
+    "Id": 349,
+    "filename": "audio_000349.wav",
+    "file_sha256": "15efb69fe6af3c685a088cf35d80ba94f55872841b9e3cc781fb099be86225a6",
+    "samples": 75435
+  },
+  {
+    "Id": 350,
+    "filename": "audio_000350.wav",
+    "file_sha256": "c462de899816ded063548f7b9a00cf8afdff2415591b041ff89c4db1ac6f88e2",
+    "samples": 46046
+  },
+  {
+    "Id": 351,
+    "filename": "audio_000351.wav",
+    "file_sha256": "cc8d8fca33fb0e766092e68800a9b210248fd2067137e3405259daee9301ea68",
+    "samples": 23006
+  },
+  {
+    "Id": 352,
+    "filename": "audio_000352.wav",
+    "file_sha256": "453ac86d5d0c1adf4c32fd2419b2c2a320d1e9e6781a9b6ba5d83fe9375532c7",
+    "samples": 31006
+  },
+  {
+    "Id": 353,
+    "filename": "audio_000353.wav",
+    "file_sha256": "ca51004f4dec6e52d266a4ecfb754f75982fdb485e4299f62b3ef2d314592727",
+    "samples": 56100
+  },
+  {
+    "Id": 354,
+    "filename": "audio_000354.wav",
+    "file_sha256": "592fb081b2dcc82764162963319ee100db800de600f29144e8e67cdc53acfdfc",
+    "samples": 45398
+  },
+  {
+    "Id": 355,
+    "filename": "audio_000355.wav",
+    "file_sha256": "88429f8e28ec3b1774cdf268128c7543839fcbd3fdee2800027ed14117c26f1b",
+    "samples": 35840
+  },
+  {
+    "Id": 356,
+    "filename": "audio_000356.wav",
+    "file_sha256": "3e0aa5dbec14756bed09e0ff4a46e07ace500c75ab490b95f54f0ec223b0e716",
+    "samples": 55646
+  },
+  {
+    "Id": 357,
+    "filename": "audio_000357.wav",
+    "file_sha256": "a7a7f3cf65783b8b360991f60fb18dddbb0b1b39aa4c015b498cbba11f2940d4",
+    "samples": 106496
+  },
+  {
+    "Id": 359,
+    "filename": "audio_000359.wav",
+    "file_sha256": "9643bf7cc83592ce9730632928f9364e75b7fc77c5caa0a5c4340576557499e4",
+    "samples": 44715
+  },
+  {
+    "Id": 362,
+    "filename": "audio_000362.wav",
+    "file_sha256": "b1a7e30cd6d8161bdf4bf3243c32f3fbaa9444e4a6c2113e5ef3f9887e6a42dd",
+    "samples": 42624
+  },
+  {
+    "Id": 366,
+    "filename": "audio_000366.wav",
+    "file_sha256": "f29ad8220a9b878dfbf4a7634421378dff16fa6c7cc47bb56087eaf7f29d6315",
+    "samples": 36523
+  },
+  {
+    "Id": 367,
+    "filename": "audio_000367.wav",
+    "file_sha256": "cda8bd9cb00ad1726440ca8a6b86c9dff0b64427b95d7d60ca0ca3a8fa284fdf",
+    "samples": 57344
+  },
+  {
+    "Id": 368,
+    "filename": "audio_000368.wav",
+    "file_sha256": "29c3606ace1743aeb43667a533e76cf4b60a3e6e4dc43489a4379b9191c66498",
+    "samples": 23326
+  },
+  {
+    "Id": 370,
+    "filename": "audio_000370.wav",
+    "file_sha256": "8c84658dcecf608ef19e01bc47f7940ef2142a0661cdf2fe181a52489a738bea",
+    "samples": 32768
+  },
+  {
+    "Id": 372,
+    "filename": "audio_000372.wav",
+    "file_sha256": "b03d98fd69e2b6495847a4e50a3163ca357bbc8406bd8b11bb353e7ba84a6c34",
+    "samples": 63830
+  },
+  {
+    "Id": 373,
+    "filename": "audio_000373.wav",
+    "file_sha256": "d2dc54c445ec247f06b53a3c208be88deac30635aa243f3040546ccaac0e7adb",
+    "samples": 45086
+  },
+  {
+    "Id": 374,
+    "filename": "audio_000374.wav",
+    "file_sha256": "4ea0bd98b0367e55b70c18c9b80b58338894ae73e2ede4551ed5c562b5e88fda",
+    "samples": 46080
+  },
+  {
+    "Id": 375,
+    "filename": "audio_000375.wav",
+    "file_sha256": "6c915ddaa19a3d51dbfe8bfc9167c8b53e212ce6e542e0c76db11d20e3c5695d",
+    "samples": 97280
+  },
+  {
+    "Id": 376,
+    "filename": "audio_000376.wav",
+    "file_sha256": "f2737b38a441d262c90571598ff38f5ab6bf8e63f50018b9c70a348d56d0acb4",
+    "samples": 53499
+  },
+  {
+    "Id": 377,
+    "filename": "audio_000377.wav",
+    "file_sha256": "5d51583998b5d3d76b87730da1c4468d7939c21a4c755aa38ad27bd3e9347436",
+    "samples": 37406
+  },
+  {
+    "Id": 378,
+    "filename": "audio_000378.wav",
+    "file_sha256": "80d0dbef41b7442e06097722c929bfe470d4e6bf3ed0675bc0ad14421ac12b2d",
+    "samples": 46080
+  },
+  {
+    "Id": 379,
+    "filename": "audio_000379.wav",
+    "file_sha256": "f518755017fd7c8f8098c43a3c051dfd89bee7afa1ba0e0be5a6b9058a8beefe",
+    "samples": 35840
+  },
+  {
+    "Id": 380,
+    "filename": "audio_000380.wav",
+    "file_sha256": "215518927a39c7314207872d234e40c9c1c038e5372f0b14cfefc27b1ff105d4",
+    "samples": 55728
+  },
+  {
+    "Id": 381,
+    "filename": "audio_000381.wav",
+    "file_sha256": "51685db7686e070f1bdac91edb8382b224afb77e24531b719358639685cedd30",
+    "samples": 25886
+  },
+  {
+    "Id": 382,
+    "filename": "audio_000382.wav",
+    "file_sha256": "9ea7cc3288f5e781520e5331f175a621ad88c06711484524927b91e104412bea",
+    "samples": 51883
+  },
+  {
+    "Id": 383,
+    "filename": "audio_000383.wav",
+    "file_sha256": "2195a3377760254d5ff8f10534ae6c22e49f790563d8fde5edddf90f5c5f01a6",
+    "samples": 59734
+  },
+  {
+    "Id": 384,
+    "filename": "audio_000384.wav",
+    "file_sha256": "14318c6d6af0fc058d752a80fa7b2b61ff29403c241d3c8f9356f7c8113149c6",
+    "samples": 40960
+  },
+  {
+    "Id": 385,
+    "filename": "audio_000385.wav",
+    "file_sha256": "b0651eee4ac593cca1949b83c5f87ee2351f39e72f5bca5176bf665d5edd79e2",
+    "samples": 37206
+  },
+  {
+    "Id": 388,
+    "filename": "audio_000388.wav",
+    "file_sha256": "14879bd60cd5609b5b4e1402cd8e8cae8ffea55489fef9982cffdd9dee7d6114",
+    "samples": 31872
+  },
+  {
+    "Id": 389,
+    "filename": "audio_000389.wav",
+    "file_sha256": "e0cde66baddc2287ba817c849412199feb11ccc404a5eacefceea42c0fd26f5d",
+    "samples": 36864
+  },
+  {
+    "Id": 390,
+    "filename": "audio_000390.wav",
+    "file_sha256": "e34769e52c8480c386bcb422e9d4c49dcba5cc3d5fec146f45aee1ac36ec7015",
+    "samples": 48470
+  },
+  {
+    "Id": 391,
+    "filename": "audio_000391.wav",
+    "file_sha256": "f727160f1f8fa665d7a889dd6372256397f5d43ec7a6eadc841a63deb7a8f4ac",
+    "samples": 47787
+  },
+  {
+    "Id": 392,
+    "filename": "audio_000392.wav",
+    "file_sha256": "31b97d8a240dc19b79634b21922225d1ea2d051551ad5512b3effa0d19bd10cc",
+    "samples": 36182
+  },
+  {
+    "Id": 393,
+    "filename": "audio_000393.wav",
+    "file_sha256": "ca660470b5230bb002d234c6921de5a6159b6bef2a0b16d146957a31c31c1135",
+    "samples": 51200
+  },
+  {
+    "Id": 394,
+    "filename": "audio_000394.wav",
+    "file_sha256": "0858abb5eba00ccdc41366c23fce5051ee7f04c6beccb4f6d3b7a25ea4c08eae",
+    "samples": 36096
+  },
+  {
+    "Id": 396,
+    "filename": "audio_000396.wav",
+    "file_sha256": "bac87a7b1269e197c1755baace7a30dac78e704ff1b29e4dd537cb31f27c207d",
+    "samples": 47104
+  },
+  {
+    "Id": 397,
+    "filename": "audio_000397.wav",
+    "file_sha256": "69449148ff6421f260cbe69338bd4431b88d4af1aacb9c38e87e6f285db9e1e9",
+    "samples": 23894
+  },
+  {
+    "Id": 398,
+    "filename": "audio_000398.wav",
+    "file_sha256": "bfbc7b7a184126121de5c6876819c6a758824c9bc28240c8a38527d290b4c5ca",
+    "samples": 54912
+  },
+  {
+    "Id": 399,
+    "filename": "audio_000399.wav",
+    "file_sha256": "81099fd501a897a4c9dd2aeaed25f7fa945391066bdd1850c829dd0454256b00",
+    "samples": 43776
+  },
+  {
+    "Id": 400,
+    "filename": "audio_000400.wav",
+    "file_sha256": "4bcf5ac8067b66afdd1bcfefa8bdbf32367222ef56c3b1dc9f21eda8a5d8d6de",
+    "samples": 76459
+  },
+  {
+    "Id": 401,
+    "filename": "audio_000401.wav",
+    "file_sha256": "85a08ac33dd8748ac5365383172abb6ba11e0b8441b308bc9d20f15c7ad10faa",
+    "samples": 30720
+  },
+  {
+    "Id": 402,
+    "filename": "audio_000402.wav",
+    "file_sha256": "7ad64f597bd09563259c95e1669cac98ebed7dc543d28a6c33c1dc82a417f139",
+    "samples": 52907
+  },
+  {
+    "Id": 403,
+    "filename": "audio_000403.wav",
+    "file_sha256": "7ebe47469d0e1bee78372cdddd7ccf2a88746e37504fd415393fc729ad10d398",
+    "samples": 39936
+  },
+  {
+    "Id": 404,
+    "filename": "audio_000404.wav",
+    "file_sha256": "880dd0aeeea9167de6033e8a7751d8d684e7fdb5ebdacf060c0c621ada214649",
+    "samples": 98646
+  },
+  {
+    "Id": 405,
+    "filename": "audio_000405.wav",
+    "file_sha256": "3d1ed661159600f04514949357002733a4c284e923e9933ac1444f92ff0bfcb0",
+    "samples": 45398
+  },
+  {
+    "Id": 406,
+    "filename": "audio_000406.wav",
+    "file_sha256": "cb5c2caeb42d156b52a0715091e6973baced3fac83199710683714c512404bb3",
+    "samples": 41643
+  },
+  {
+    "Id": 407,
+    "filename": "audio_000407.wav",
+    "file_sha256": "723abc72a531b4f19e8f3693d431700bb247774e8969d768366e83623cd5bdb6",
+    "samples": 41302
+  },
+  {
+    "Id": 408,
+    "filename": "audio_000408.wav",
+    "file_sha256": "9f69e350b76eac169a8e0d52d3feab6ab39b27139a961af58c72ed4ae0d2ed1b",
+    "samples": 26624
+  },
+  {
+    "Id": 409,
+    "filename": "audio_000409.wav",
+    "file_sha256": "a1746a94f38ce1b609d6742e2ce2b2db462d74e438b67a0a648d96fa808dfa36",
+    "samples": 31326
+  },
+  {
+    "Id": 411,
+    "filename": "audio_000411.wav",
+    "file_sha256": "87c6ad685315d473100215634198fdca178736fbd21d9aacbdb47386b8e95b14",
+    "samples": 93312
+  },
+  {
+    "Id": 412,
+    "filename": "audio_000412.wav",
+    "file_sha256": "de6d9c318a5afd82d24636b76b03bcd62a65eb6558f57bcd1e0933acd3692e95",
+    "samples": 39595
+  },
+  {
+    "Id": 413,
+    "filename": "audio_000413.wav",
+    "file_sha256": "a504ed814d6a9f10f401f4c43a3ee4f2ffe03452ff9f69e2fdfd914918d1a327",
+    "samples": 38016
+  },
+  {
+    "Id": 414,
+    "filename": "audio_000414.wav",
+    "file_sha256": "53846e0335d9fbcdc45f517a508d4d05c96976481c882c59d3c506de6221837b",
+    "samples": 58700
+  },
+  {
+    "Id": 415,
+    "filename": "audio_000415.wav",
+    "file_sha256": "6c132acceb3f79aec9ab5e3200efecd1a51bec8bbc6145725ecd81dfc38e7271",
+    "samples": 72022
+  },
+  {
+    "Id": 416,
+    "filename": "audio_000416.wav",
+    "file_sha256": "8a72dce815635283f99e375eeb01be78cfecccdfd0c97b1fcd159cdea6c97240",
+    "samples": 32286
+  },
+  {
+    "Id": 417,
+    "filename": "audio_000417.wav",
+    "file_sha256": "19218edd9e2cdfb23abf75d7ee69377605ec2267e4bc7c989e4410ac476ae4b3",
+    "samples": 172032
+  },
+  {
+    "Id": 420,
+    "filename": "audio_000420.wav",
+    "file_sha256": "f2a25b503297701589581d269ebd9202b5df897f86ed48479dcf5d83890d9d74",
+    "samples": 34134
+  },
+  {
+    "Id": 421,
+    "filename": "audio_000421.wav",
+    "file_sha256": "314b5ce9eea2c1a8e469a99746ba62d3bd9f71dd30deb56784a3e918e47cf9ab",
+    "samples": 57216
+  },
+  {
+    "Id": 422,
+    "filename": "audio_000422.wav",
+    "file_sha256": "15689c688bcd71fec595ddc8f7627038beb5cd7bdcca35e1757a99a22ab4ce9d",
+    "samples": 34944
+  },
+  {
+    "Id": 423,
+    "filename": "audio_000423.wav",
+    "file_sha256": "7c6cecc18b973ced1875ba6e2b4e0208d0404d4148709ea1b964fbf36430ecee",
+    "samples": 31872
+  },
+  {
+    "Id": 426,
+    "filename": "audio_000426.wav",
+    "file_sha256": "77f52507291f50abb8bd3b4b017530eed52dad5658682e503a76ebb045c0047c",
+    "samples": 50304
+  },
+  {
+    "Id": 427,
+    "filename": "audio_000427.wav",
+    "file_sha256": "2d0964c3d0e8348728c7eb48b6b8fec27c3ba89a5d2369e372fb1fdcb4f4a09f",
+    "samples": 50176
+  },
+  {
+    "Id": 428,
+    "filename": "audio_000428.wav",
+    "file_sha256": "83d41d5effe5b4b74739b31c17c672f6a210f7ed82a7db5341232b5666f7b7c5",
+    "samples": 30720
+  },
+  {
+    "Id": 429,
+    "filename": "audio_000429.wav",
+    "file_sha256": "ecb2eb46155a0d14284247a4d8e59125de1b5c17b8c4a2a22d394271a6ea16be",
+    "samples": 40704
+  },
+  {
+    "Id": 430,
+    "filename": "audio_000430.wav",
+    "file_sha256": "3b59c87105d6d4d49dd3ef190254f12a3fd02e7f8923bfc8c1858dc7cca4cbca",
+    "samples": 47787
+  },
+  {
+    "Id": 433,
+    "filename": "audio_000433.wav",
+    "file_sha256": "d3e7c4611f63ee7125dc28c791f7837b1cc63257e6a66ce39acd32dc14e3e2b9",
+    "samples": 52126
+  },
+  {
+    "Id": 434,
+    "filename": "audio_000434.wav",
+    "file_sha256": "78bee866e05c243a573603af87e93d37e1aa88b91b2a35145ee7248981008d56",
+    "samples": 53590
+  },
+  {
+    "Id": 435,
+    "filename": "audio_000435.wav",
+    "file_sha256": "87b4ad43e20fd0c693fc2d37a49f666a3934426d2a89c6c90fd9be9331e16c0e",
+    "samples": 29014
+  },
+  {
+    "Id": 436,
+    "filename": "audio_000436.wav",
+    "file_sha256": "180f0d3ab40ecd8c86198ea6da82d8324ffca89ba9b0abd114a65813c7b41a07",
+    "samples": 41984
+  },
+  {
+    "Id": 437,
+    "filename": "audio_000437.wav",
+    "file_sha256": "1edb470de58bf22dff4dc5a84a6ff4524c71f5510e51d7afb9f1a88f60ec7467",
+    "samples": 105814
+  },
+  {
+    "Id": 438,
+    "filename": "audio_000438.wav",
+    "file_sha256": "9b87172765f3d3534189566c8dbfd3e4e5cee74cb02deb811a1e1a7e86ad3f73",
+    "samples": 70315
+  },
+  {
+    "Id": 439,
+    "filename": "audio_000439.wav",
+    "file_sha256": "1366afdf3af85443cbe885feda53f8e8be50a9ef4edb872dcdd0962e452c6d10",
+    "samples": 57003
+  },
+  {
+    "Id": 441,
+    "filename": "audio_000441.wav",
+    "file_sha256": "920101386b4f7e5f9a130baf08df90d66e094f34a06aeee93bdf19139e268ef4",
+    "samples": 40606
+  },
+  {
+    "Id": 442,
+    "filename": "audio_000442.wav",
+    "file_sha256": "5632ccd9d6cccc13b80ccde452ff6a46f44580cb40301a7998028deb8c4cc83b",
+    "samples": 42206
+  },
+  {
+    "Id": 443,
+    "filename": "audio_000443.wav",
+    "file_sha256": "710d7f1f43f21cc7cfb6f48ea666bb4000c1824731ac0490a9b409dc8163243f",
+    "samples": 88747
+  },
+  {
+    "Id": 444,
+    "filename": "audio_000444.wav",
+    "file_sha256": "2aa63cde58a5e6ed9c1c382785e4b902c58403a9f95e5931f96ce98d37f1d45b",
+    "samples": 43691
+  },
+  {
+    "Id": 445,
+    "filename": "audio_000445.wav",
+    "file_sha256": "6bd23f32dd944ae4e8c8d08a7262a202345c8bb541572e02d31f00bfaaee4b4e",
+    "samples": 49536
+  },
+  {
+    "Id": 446,
+    "filename": "audio_000446.wav",
+    "file_sha256": "15b7350709f5258543d176ac6c33173b5e78bd49f96fad6baa41e4c577bdfdff",
+    "samples": 50155
+  },
+  {
+    "Id": 447,
+    "filename": "audio_000447.wav",
+    "file_sha256": "2ed1cb430d7eeb55987005bf05df051b1c2b11bb2c8bb28057a319b469159edc",
+    "samples": 144150
+  },
+  {
+    "Id": 451,
+    "filename": "audio_000451.wav",
+    "file_sha256": "36c7337ce03bf9537d90a6dacab72a0bd8963b331c5c7e35bd3a22d18a9ec83c",
+    "samples": 49412
+  },
+  {
+    "Id": 452,
+    "filename": "audio_000452.wav",
+    "file_sha256": "4efdef0f78560f54387147d952cb58d5818ef7008bd64d0d015d80537a6614ea",
+    "samples": 45696
+  },
+  {
+    "Id": 453,
+    "filename": "audio_000453.wav",
+    "file_sha256": "8cb9aeb99c56feb5c6f821b523a42a386e036a56131fa1e5a94edaf98cc906fb",
+    "samples": 36864
+  },
+  {
+    "Id": 455,
+    "filename": "audio_000455.wav",
+    "file_sha256": "aa17aaa44048433f365030bd0097dffd1ee5671ce2e5114b52310f4ee49d8150",
+    "samples": 64512
+  },
+  {
+    "Id": 457,
+    "filename": "audio_000457.wav",
+    "file_sha256": "2e9c99e8e0b5b4b750177f10ff3693d985b6da0910e3c968cb438ed6cce54644",
+    "samples": 38912
+  },
+  {
+    "Id": 458,
+    "filename": "audio_000458.wav",
+    "file_sha256": "07ed30c16bc5a192ed22fa740e3ce8e167977e6e1032e97ffcfcf71107ea0391",
+    "samples": 34526
+  },
+  {
+    "Id": 459,
+    "filename": "audio_000459.wav",
+    "file_sha256": "8036d8caef770ecc10c6001d25584ad700562a03ab384844613ca610a29af7ab",
+    "samples": 29696
+  },
+  {
+    "Id": 460,
+    "filename": "audio_000460.wav",
+    "file_sha256": "b1e6c5cb8658de96d86b3230e0b5eeff21f6aff6a4c86e9d4cf86f35134cae22",
+    "samples": 83712
+  },
+  {
+    "Id": 461,
+    "filename": "audio_000461.wav",
+    "file_sha256": "4280bc502718a197b8463905e56bea4fb580ecdc3e7783aeced49d07dd9e7cfe",
+    "samples": 47446
+  },
+  {
+    "Id": 462,
+    "filename": "audio_000462.wav",
+    "file_sha256": "60fd0047a8be1f9c4870740be945cf1c12bcba79514f97f9e074436d4fe2ecf3",
+    "samples": 33110
+  },
+  {
+    "Id": 463,
+    "filename": "audio_000463.wav",
+    "file_sha256": "0bff418eae9b88aa486f58bc1f475d136c04fc68124008a5b21dcc2b425d8e93",
+    "samples": 53248
+  },
+  {
+    "Id": 465,
+    "filename": "audio_000465.wav",
+    "file_sha256": "f17125d4f6cb5f177ee5002c2fc63c4f75df218c1c2b61a66745092f13784c5d",
+    "samples": 20822
+  },
+  {
+    "Id": 467,
+    "filename": "audio_000467.wav",
+    "file_sha256": "b33cd1515d1e6f6e473f858ea6530f5f720ced4634038e55aca025e33b908aaf",
+    "samples": 41302
+  },
+  {
+    "Id": 468,
+    "filename": "audio_000468.wav",
+    "file_sha256": "41ba26900b8f6764cc8237d211f911f3c456f64de9b1477955806c09e865f0e2",
+    "samples": 78848
+  },
+  {
+    "Id": 469,
+    "filename": "audio_000469.wav",
+    "file_sha256": "630b84198386a5d54ec5157b7d3e6675d261f8af1fa3b1c2c0fd605a443b9e65",
+    "samples": 24606
+  },
+  {
+    "Id": 470,
+    "filename": "audio_000470.wav",
+    "file_sha256": "d73cfbef657d04514c1c750ffc63498fc55cd76ec02fda0167dddb8be705bb22",
+    "samples": 78019
+  },
+  {
+    "Id": 471,
+    "filename": "audio_000471.wav",
+    "file_sha256": "d4743527973181e9e918e23dcf5dce3a3238580768494bc2a3ab11b8d496f59f",
+    "samples": 36096
+  },
+  {
+    "Id": 472,
+    "filename": "audio_000472.wav",
+    "file_sha256": "e27ff03203687735aac0f7e246826cf14e2ce9868244364f86bb9a8659378690",
+    "samples": 54614
+  },
+  {
+    "Id": 473,
+    "filename": "audio_000473.wav",
+    "file_sha256": "e9dc1d6957eba5e9fa43c9267418f8c5f621250aee06a9d32ef529de91507bb1",
+    "samples": 63830
+  },
+  {
+    "Id": 474,
+    "filename": "audio_000474.wav",
+    "file_sha256": "5c8551894b9ee570cb7989773f2079ef445b0d12b23ac400cbd9f9c6d8ee3bbb",
+    "samples": 92544
+  },
+  {
+    "Id": 475,
+    "filename": "audio_000475.wav",
+    "file_sha256": "d72846540cd45833f43384a3a98ec67cad1ac7e36e632c2ddfcee25af8c43427",
+    "samples": 40704
+  },
+  {
+    "Id": 476,
+    "filename": "audio_000476.wav",
+    "file_sha256": "6233c9ceb4df54e2338561bcea4959b291d3e1256e3d8ee00c0c553008fac211",
+    "samples": 41643
+  },
+  {
+    "Id": 478,
+    "filename": "audio_000478.wav",
+    "file_sha256": "01417408190aca78c25f23605fca7f7953d9b87c46ca35a153c55937c2c4659a",
+    "samples": 40619
+  },
+  {
+    "Id": 479,
+    "filename": "audio_000479.wav",
+    "file_sha256": "892e378e03f96a5cf15230d3b1284158c6adc3e4ccbf27d8afea4f0dd687dd8b",
+    "samples": 31872
+  },
+  {
+    "Id": 480,
+    "filename": "audio_000480.wav",
+    "file_sha256": "222ce38f751d864634310f7aeb34c9d075118ee259c8fe86221e8c9ebff7c459",
+    "samples": 28446
+  },
+  {
+    "Id": 481,
+    "filename": "audio_000481.wav",
+    "file_sha256": "d17b4d135347946af76ddf6b1dcd0e1c3687e51d0ea56b0f8ab0b32734e83926",
+    "samples": 38686
+  },
+  {
+    "Id": 482,
+    "filename": "audio_000482.wav",
+    "file_sha256": "3a9a4c2a7ed77108867d741a21c3edaf32549455c9807ce9d01d0f0704ece44c",
+    "samples": 33246
+  },
+  {
+    "Id": 483,
+    "filename": "audio_000483.wav",
+    "file_sha256": "1e3bf37afba4b719673272a77f5a811e0946a4e8dedbebd585a9225bdf782238",
+    "samples": 31104
+  },
+  {
+    "Id": 484,
+    "filename": "audio_000484.wav",
+    "file_sha256": "3f53da9616045ae42dbd0ab0646ae558b6be6a3e6f1d9d4b5d008d675563a243",
+    "samples": 34944
+  },
+  {
+    "Id": 485,
+    "filename": "audio_000485.wav",
+    "file_sha256": "387a010154e37eb9a3d4aa2b93f00245f242f5b767c083c6de929411cd893243",
+    "samples": 54955
+  },
+  {
+    "Id": 486,
+    "filename": "audio_000486.wav",
+    "file_sha256": "3ed0ce3b0855cd86334a06e2196f1e8bd59f439afcc6333426f3616b26611c2e",
+    "samples": 179200
+  },
+  {
+    "Id": 487,
+    "filename": "audio_000487.wav",
+    "file_sha256": "98e2996736a767ca7a177ba19580dbd9a3915c27f2b88466a7f5cc859990ce29",
+    "samples": 66560
+  },
+  {
+    "Id": 488,
+    "filename": "audio_000488.wav",
+    "file_sha256": "0ad08bf918e7d28be6b1311855f37ff073bb8a13b542b2214b852ad8a89192ef",
+    "samples": 35712
+  },
+  {
+    "Id": 489,
+    "filename": "audio_000489.wav",
+    "file_sha256": "e3d12795d9cf9ac0775b78107adaaf9c59fd36843ff442082ae2f0b6f4b61cd1",
+    "samples": 32256
+  },
+  {
+    "Id": 492,
+    "filename": "audio_000492.wav",
+    "file_sha256": "0aa669574e017c4d20f1f5609340b848377862112e6208e702c4005a00540335",
+    "samples": 29406
+  },
+  {
+    "Id": 494,
+    "filename": "audio_000494.wav",
+    "file_sha256": "0f788a0dd3559e962ac2fe57aaaa3f8052c397b28bfea44e3f20178dedabc7e8",
+    "samples": 34475
+  },
+  {
+    "Id": 495,
+    "filename": "audio_000495.wav",
+    "file_sha256": "ffbbac979d7d9176bf2e4d4341fd1ae4f3c6202bfd7ff044f3c2fcd23dfca2b2",
+    "samples": 46464
+  },
+  {
+    "Id": 496,
+    "filename": "audio_000496.wav",
+    "file_sha256": "263bdcaabe224646124bb89d39b4fa18acd8fb78145723fd522360793f274894",
+    "samples": 29406
+  },
+  {
+    "Id": 497,
+    "filename": "audio_000497.wav",
+    "file_sha256": "f14e5ca8b66c54110525d67040c830071e5b2f3db7cb95bf5dd8c6bb7a922250",
+    "samples": 48811
+  },
+  {
+    "Id": 498,
+    "filename": "audio_000498.wav",
+    "file_sha256": "85245b1b8408cd195c3f3e9ffeb897e34ae311d9926a0a60c775d5cd4ef98af4",
+    "samples": 46812
+  },
+  {
+    "Id": 499,
+    "filename": "audio_000499.wav",
+    "file_sha256": "5a6eaa2484e85bbf9c215c78aa2642f2e57f3e714ee370e05095a38ff3e8e299",
+    "samples": 97600
+  },
+  {
+    "Id": 500,
+    "filename": "audio_000500.wav",
+    "file_sha256": "a5b5133a1364fc83b555e2542b454f5c634d7064f8de9ff4a9153e87fedf0d67",
+    "samples": 88747
+  },
+  {
+    "Id": 502,
+    "filename": "audio_000502.wav",
+    "file_sha256": "f5ddb08ad0aca02775f75cd835d52296f195cc646a5c5c6e20b03508105b2e57",
+    "samples": 53590
+  },
+  {
+    "Id": 503,
+    "filename": "audio_000503.wav",
+    "file_sha256": "64a99c36329562fc25a26f2c1e7582b36513909b403295b3f3d0345d6819c2ea",
+    "samples": 32606
+  },
+  {
+    "Id": 504,
+    "filename": "audio_000504.wav",
+    "file_sha256": "00d20085ccd8af28d388d2418d45359d33f618f3285d50b0ca20a462cdb178d0",
+    "samples": 92508
+  },
+  {
+    "Id": 505,
+    "filename": "audio_000505.wav",
+    "file_sha256": "9f321eefb3b0616c4b35d89707737dfb15d5044d8247ed8484eaae3ae572f64a",
+    "samples": 29355
+  },
+  {
+    "Id": 506,
+    "filename": "audio_000506.wav",
+    "file_sha256": "5f98d0baa390c48fbb765d41758fc13cb173a199cb855a2b9c524cbbdd70f996",
+    "samples": 63744
+  },
+  {
+    "Id": 507,
+    "filename": "audio_000507.wav",
+    "file_sha256": "f2909485e19afc42f828f3f0992bd24fb8d669c3f0777d0657f70ee5feeb15db",
+    "samples": 29696
+  },
+  {
+    "Id": 508,
+    "filename": "audio_000508.wav",
+    "file_sha256": "5d3445caaa4e0264300029cb34bd6d866f5c89afc8e429dc1d2a107a39bb0b83",
+    "samples": 52907
+  },
+  {
+    "Id": 510,
+    "filename": "audio_000510.wav",
+    "file_sha256": "d52ba2af4a79bc3ea5ec04f9efbb291c7853259e505b9a4f9dfd65a1159fa9fa",
+    "samples": 47787
+  },
+  {
+    "Id": 511,
+    "filename": "audio_000511.wav",
+    "file_sha256": "348a97bedbcedd292a0909020683f42c00234342dc1b62fca0c4b0f99431e9ee",
+    "samples": 37888
+  },
+  {
+    "Id": 512,
+    "filename": "audio_000512.wav",
+    "file_sha256": "8a40b6bb8f0e853cdb136ea8d1e2b4b1e208e973125b31b1f4650e2c6bc3da9a",
+    "samples": 53931
+  },
+  {
+    "Id": 513,
+    "filename": "audio_000513.wav",
+    "file_sha256": "a9dfe01bb25c67e62222544d8404f2640a2a95c83758bead531bbf5cb67247e4",
+    "samples": 179200
+  },
+  {
+    "Id": 515,
+    "filename": "audio_000515.wav",
+    "file_sha256": "89e2c080f40a3da7ed6c9130653091fa79ec2293fbe34a7bf139eec51d73f48e",
+    "samples": 51270
+  },
+  {
+    "Id": 516,
+    "filename": "audio_000516.wav",
+    "file_sha256": "a7fb2012ffd9ad3ebfb189b833286584d2c12bb9f614ce10d792901bbdb6f891",
+    "samples": 56320
+  },
+  {
+    "Id": 517,
+    "filename": "audio_000517.wav",
+    "file_sha256": "7e7a1922a37b3a9489abfad038a351a41b42df54a94cbbc841f46fafbf500fee",
+    "samples": 51883
+  },
+  {
+    "Id": 518,
+    "filename": "audio_000518.wav",
+    "file_sha256": "28cf068b584eed330dad6e0a84b70f749855c716be9f2facd69fcddd2c605120",
+    "samples": 64512
+  },
+  {
+    "Id": 519,
+    "filename": "audio_000519.wav",
+    "file_sha256": "4d72146932cbf59a9f798b3ddd6de73a29f4fc50982e31882805435363eebf10",
+    "samples": 109910
+  },
+  {
+    "Id": 520,
+    "filename": "audio_000520.wav",
+    "file_sha256": "77f5fed22684439237772ef024c2735df5312504991b59814686db6d71969de1",
+    "samples": 94550
+  },
+  {
+    "Id": 521,
+    "filename": "audio_000521.wav",
+    "file_sha256": "d715b8a31b130ff05022afebbb216d0cc68aeef74f575fbf2647e8a593c04c90",
+    "samples": 38784
+  },
+  {
+    "Id": 522,
+    "filename": "audio_000522.wav",
+    "file_sha256": "1381c766d5d06effe9f32e0d07e5ab60626bdafd7897ff55cbb4b3ea8d5ed323",
+    "samples": 21504
+  },
+  {
+    "Id": 523,
+    "filename": "audio_000523.wav",
+    "file_sha256": "b1ac7a14203734f73d0f728d39b56f8571bffe9bbc4a99fa6977399e984c9b94",
+    "samples": 35499
+  },
+  {
+    "Id": 524,
+    "filename": "audio_000524.wav",
+    "file_sha256": "583140660d7ffde6623130933c6303cf1a932a6ad5f7bee16d1f14c230e82709",
+    "samples": 29952
+  },
+  {
+    "Id": 525,
+    "filename": "audio_000525.wav",
+    "file_sha256": "839c3f549585cae086af29e7b2d7de231980be63bdae13ec3d45759aae57e84d",
+    "samples": 52907
+  },
+  {
+    "Id": 526,
+    "filename": "audio_000526.wav",
+    "file_sha256": "6fd99b547ea3c5522c576c49556cade69373d8d081d069e0957cb51692a08e32",
+    "samples": 96598
+  },
+  {
+    "Id": 528,
+    "filename": "audio_000528.wav",
+    "file_sha256": "c60a58288e378f52532ced19fe20fcc3174ded2fd6bf0133a8f327ec7ef51bd5",
+    "samples": 61672
+  },
+  {
+    "Id": 530,
+    "filename": "audio_000530.wav",
+    "file_sha256": "0c4716c3c7e67422a1a5b6454aea0e920f29e9b966a1a723e6385f63dd83df7b",
+    "samples": 20822
+  },
+  {
+    "Id": 531,
+    "filename": "audio_000531.wav",
+    "file_sha256": "5a066ee7198fd9b4b2423eb384f3963a272166a870f0085b079cb718c4472a10",
+    "samples": 45086
+  },
+  {
+    "Id": 532,
+    "filename": "audio_000532.wav",
+    "file_sha256": "29b07e99ac14717cc4138f6d974f59547ec1e0fc440b9a992bfd034d1ff58894",
+    "samples": 28672
+  },
+  {
+    "Id": 533,
+    "filename": "audio_000533.wav",
+    "file_sha256": "2b49e7f292e35c97e9383a704bf411ed2738494b6463e7dc96adba49e4396cc9",
+    "samples": 33566
+  },
+  {
+    "Id": 534,
+    "filename": "audio_000534.wav",
+    "file_sha256": "c96aa8e785f13522d5abcce37ad80b2cb35e797b0699e6776bd598bbf7e2ee0e",
+    "samples": 30046
+  },
+  {
+    "Id": 535,
+    "filename": "audio_000535.wav",
+    "file_sha256": "0061a295b8d82c916675a58efbf159e6728536fa47ac21dc2991fedc768abb68",
+    "samples": 55296
+  },
+  {
+    "Id": 536,
+    "filename": "audio_000536.wav",
+    "file_sha256": "8e91c188a91e1a784324bdc4841e06f84f1426f55a9dd3029d181df1d0ad91d0",
+    "samples": 50859
+  },
+  {
+    "Id": 537,
+    "filename": "audio_000537.wav",
+    "file_sha256": "80d0dbef41b7442e06097722c929bfe470d4e6bf3ed0675bc0ad14421ac12b2d",
+    "samples": 46080
+  },
+  {
+    "Id": 538,
+    "filename": "audio_000538.wav",
+    "file_sha256": "bb43851592048d89ca65e12fece23f738be827d4c77097729a9aac0bb943f34a",
+    "samples": 66432
+  },
+  {
+    "Id": 539,
+    "filename": "audio_000539.wav",
+    "file_sha256": "6d07dd2bd3cd85813247a977f389b56198bc373832976770657f49d1051cb4fd",
+    "samples": 38571
+  },
+  {
+    "Id": 540,
+    "filename": "audio_000540.wav",
+    "file_sha256": "6b4795d14e7a5a7e5c271caf763bb139bbd9e1ffcadebdba26e6c456024750ec",
+    "samples": 35712
+  },
+  {
+    "Id": 543,
+    "filename": "audio_000543.wav",
+    "file_sha256": "0307aad737ad2ca5fad6c92bdc97b38a69f7bf8d25991f1d4509d67bfb096a43",
+    "samples": 36126
+  },
+  {
+    "Id": 544,
+    "filename": "audio_000544.wav",
+    "file_sha256": "babef644eae4765859b8bfe042b4b6e75595b2d33819d6a45670b331c0109168",
+    "samples": 38230
+  },
+  {
+    "Id": 546,
+    "filename": "audio_000546.wav",
+    "file_sha256": "d7624b994c6035cdc35061176656dab68ad6226d31c80e8763f3fd607fdff5db",
+    "samples": 43806
+  },
+  {
+    "Id": 547,
+    "filename": "audio_000547.wav",
+    "file_sha256": "6927ddf52985f2485f3a7300c44655ad20f26be68b31123347fbf1b790eaf78e",
+    "samples": 35806
+  },
+  {
+    "Id": 548,
+    "filename": "audio_000548.wav",
+    "file_sha256": "ba00d3655f0e1f48c6845e2cf39ea6779d5a73b7d85fd43028c2ce55a5037fa5",
+    "samples": 33792
+  },
+  {
+    "Id": 549,
+    "filename": "audio_000549.wav",
+    "file_sha256": "8a17e4186efaae05849379189f52e159efd669ce1fd203c887af9f54ceb134a7",
+    "samples": 47787
+  },
+  {
+    "Id": 550,
+    "filename": "audio_000550.wav",
+    "file_sha256": "c31c1fdc9bfc3c88889c8efc2c8cccca901c2a19133f2468bfa53c8e91a671d0",
+    "samples": 61301
+  },
+  {
+    "Id": 551,
+    "filename": "audio_000551.wav",
+    "file_sha256": "63c9724587e768f7558438600e5b1daad5951a3645d257311e6cc4086ee68fda",
+    "samples": 73344
+  },
+  {
+    "Id": 552,
+    "filename": "audio_000552.wav",
+    "file_sha256": "ec5e455adac29693f2ff4a981eb14cd8603692943147e490827ed1bc1fb3ce69",
+    "samples": 44715
+  },
+  {
+    "Id": 553,
+    "filename": "audio_000553.wav",
+    "file_sha256": "5f788dcada9aefa87e9e75bdbf0bf7b521e1e9a9d5b00a0301c4a39b0ee01073",
+    "samples": 46422
+  },
+  {
+    "Id": 554,
+    "filename": "audio_000554.wav",
+    "file_sha256": "66d8e229cf40fb8de7aa460867c3af15ed59fbe151a44d9dcb3320a87f9b9d07",
+    "samples": 53406
+  },
+  {
+    "Id": 557,
+    "filename": "audio_000557.wav",
+    "file_sha256": "02b7ff2b3c75cdfc92cced633d23960ae6b34879491b3cb0b35f700bf8136f4b",
+    "samples": 84310
+  },
+  {
+    "Id": 558,
+    "filename": "audio_000558.wav",
+    "file_sha256": "cb9ad05641da0cb7a679f80165c52c0187e81fbab916df092820629d8fd4beeb",
+    "samples": 38366
+  },
+  {
+    "Id": 559,
+    "filename": "audio_000559.wav",
+    "file_sha256": "9a62c4babe2f800de54d5df52b91ec7e58d31c8c883f309c4a6efe5e89282d5a",
+    "samples": 74070
+  },
+  {
+    "Id": 560,
+    "filename": "audio_000560.wav",
+    "file_sha256": "baeae8a1baed284313d52116e1c368c4de173b187e3bf05815cd14b35f368a85",
+    "samples": 76416
+  },
+  {
+    "Id": 561,
+    "filename": "audio_000561.wav",
+    "file_sha256": "11e1985f783d79f9601ff484d3acaf5065aa36b328ea0486b8868cf65045bdc7",
+    "samples": 47787
+  },
+  {
+    "Id": 562,
+    "filename": "audio_000562.wav",
+    "file_sha256": "209889b257339bf68e633c6e0032568a30e4378801c3b0a4934245c3d6c8cef2",
+    "samples": 34176
+  },
+  {
+    "Id": 563,
+    "filename": "audio_000563.wav",
+    "file_sha256": "27e7271c69f012e346cd3b49da6e2512a8bb5b773cb14ffaf3f87a5a2225cde8",
+    "samples": 41984
+  },
+  {
+    "Id": 565,
+    "filename": "audio_000565.wav",
+    "file_sha256": "3c5a4beccbd5fb1bcfc34ab8bf80932e90816a9bb86f944b7a1fc63310532d2e",
+    "samples": 38016
+  },
+  {
+    "Id": 566,
+    "filename": "audio_000566.wav",
+    "file_sha256": "ba39cd144b43569c068d69db9a952a4ad7fb10695b68d3db442c89ffd1974414",
+    "samples": 75790
+  },
+  {
+    "Id": 568,
+    "filename": "audio_000568.wav",
+    "file_sha256": "050931398d3d2e35133a5c4acd636893c75f6a811e36539e7c1a14f67440a37e",
+    "samples": 74112
+  },
+  {
+    "Id": 569,
+    "filename": "audio_000569.wav",
+    "file_sha256": "edc327c4edd937e83600c5205fc25e2b5e860e79aba97948844c214cbd545c5c",
+    "samples": 46464
+  },
+  {
+    "Id": 571,
+    "filename": "audio_000571.wav",
+    "file_sha256": "4552adebacb503097f1c83e93f7eccd8cbd38653537deaa32d88b648bf021a01",
+    "samples": 50155
+  },
+  {
+    "Id": 572,
+    "filename": "audio_000572.wav",
+    "file_sha256": "e24841c707d72e8cc5180b2f8f59e010bc9b0bd73518a25456f49ed0b778a425",
+    "samples": 44544
+  },
+  {
+    "Id": 574,
+    "filename": "audio_000574.wav",
+    "file_sha256": "3e539ea5c338818eba5c68d71aeb9d03435a95e6b4ba2290309f06106f1222c3",
+    "samples": 80896
+  },
+  {
+    "Id": 575,
+    "filename": "audio_000575.wav",
+    "file_sha256": "95005fa0d4b6cfd3babb22db444242420e4d2cbea67cc130278f635de703d547",
+    "samples": 26624
+  },
+  {
+    "Id": 577,
+    "filename": "audio_000577.wav",
+    "file_sha256": "a3ce9c49df5e2c34abfee6556b1825bbdded9c1f69137fe93103d2c684a0e3fe",
+    "samples": 56320
+  },
+  {
+    "Id": 578,
+    "filename": "audio_000578.wav",
+    "file_sha256": "d89cea89f0245e89d7426c706dd81f7bb566c37c833ffc8801f1bc8db870bbe9",
+    "samples": 33792
+  },
+  {
+    "Id": 582,
+    "filename": "audio_000582.wav",
+    "file_sha256": "cd0938de7f1997e1582ad8601b553697d3ceef4312378a73ac6306fb71dcb819",
+    "samples": 34176
+  },
+  {
+    "Id": 583,
+    "filename": "audio_000583.wav",
+    "file_sha256": "937c6f01950c7ee4e6b94e9e72f7cf845fc99540b2e2a7b7350566899233ea9e",
+    "samples": 52992
+  },
+  {
+    "Id": 584,
+    "filename": "audio_000584.wav",
+    "file_sha256": "e2564449d87c05801a229b4f6746e4d30126ed2e89b906461f1827fed1fc6a96",
+    "samples": 76416
+  },
+  {
+    "Id": 585,
+    "filename": "audio_000585.wav",
+    "file_sha256": "432bc01f3121eb4439513330362c92eb22613eb3bc7c2e70c614b851c9c6af33",
+    "samples": 50456
+  },
+  {
+    "Id": 586,
+    "filename": "audio_000586.wav",
+    "file_sha256": "3b318f4b50379092f04c4569491e8566fac8235619bf45dfb57dab58b676a9e1",
+    "samples": 58368
+  },
+  {
+    "Id": 587,
+    "filename": "audio_000587.wav",
+    "file_sha256": "2dfcf2a9649508902f963687ff277c53beb3248e47c3b42c2884e92fbbe32fb9",
+    "samples": 58710
+  },
+  {
+    "Id": 588,
+    "filename": "audio_000588.wav",
+    "file_sha256": "f52847843b1b6b1553894523f4e42fc0fd86f9fdaa8840df330985fdc486c447",
+    "samples": 58329
+  },
+  {
+    "Id": 589,
+    "filename": "audio_000589.wav",
+    "file_sha256": "3270306bbc31437e8a73fe425fe66aceb40188c303f0cce2a7d5228e963ed108",
+    "samples": 71966
+  },
+  {
+    "Id": 590,
+    "filename": "audio_000590.wav",
+    "file_sha256": "c850e6b7db932e81ca9e8c4554e33e859f5cdc815ea6ef181ca7bbff5d2d0e5d",
+    "samples": 30720
+  },
+  {
+    "Id": 593,
+    "filename": "audio_000593.wav",
+    "file_sha256": "df1b0285fcb03033d8ce2b69bd8fc40a628fff51defb4bc351a1bb7b72d254b4",
+    "samples": 26112
+  },
+  {
+    "Id": 594,
+    "filename": "audio_000594.wav",
+    "file_sha256": "70722281d07aa9345444e8fe098e821749fee9efe8eda71bf4abcd92e1a288e1",
+    "samples": 46080
+  },
+  {
+    "Id": 596,
+    "filename": "audio_000596.wav",
+    "file_sha256": "eb22a40942dabe17a4c904d5da151c868c3d0c4fc7dc203a1f2c5f9136f23933",
+    "samples": 79872
+  },
+  {
+    "Id": 597,
+    "filename": "audio_000597.wav",
+    "file_sha256": "25eb83dbb73a58ca129f1e848ac5388b8b9dc4ed54d6cea0cec9002a6bf74ce7",
+    "samples": 43350
+  },
+  {
+    "Id": 598,
+    "filename": "audio_000598.wav",
+    "file_sha256": "7ba712fc5ab9f2bcd9f26524af9d47bcfcc2ed57e3629ad9f3d7aa4e4ad205d0",
+    "samples": 46080
+  },
+  {
+    "Id": 600,
+    "filename": "audio_000600.wav",
+    "file_sha256": "5d3b2fd75f0ae9da062741725e0fc6912a98a62aa1cd7e91f20e147b13974834",
+    "samples": 46763
+  },
+  {
+    "Id": 601,
+    "filename": "audio_000601.wav",
+    "file_sha256": "001217ab29ec16a7974dc31a1e84afa39931f31ef6b2bad6d6166cce4fbe73bc",
+    "samples": 26283
+  },
+  {
+    "Id": 602,
+    "filename": "audio_000602.wav",
+    "file_sha256": "ab530493e1ea0424220e47f7269f5c5ebdde7e2407b41d94a4c46a7760274f2a",
+    "samples": 51542
+  },
+  {
+    "Id": 603,
+    "filename": "audio_000603.wav",
+    "file_sha256": "6277f0e98262a055872606690f73159bee0dd5f1b45a90c9c1e24dcc1795d15f",
+    "samples": 50526
+  },
+  {
+    "Id": 604,
+    "filename": "audio_000604.wav",
+    "file_sha256": "ae134087c855930c09538b7aabc8ffdf54f64c5f074b1a9f61591baa4c5d81d0",
+    "samples": 88747
+  },
+  {
+    "Id": 605,
+    "filename": "audio_000605.wav",
+    "file_sha256": "0b231b6743feb6eea1ea586f13a8478e138b29e2c5014fb7971e5c8f90b86153",
+    "samples": 48470
+  },
+  {
+    "Id": 609,
+    "filename": "audio_000609.wav",
+    "file_sha256": "ea6ebb3b1e7c6b1bf5aacb0dffc174bd8e3af17a8bc06c4fd62426de8ab860a8",
+    "samples": 55728
+  },
+  {
+    "Id": 611,
+    "filename": "audio_000611.wav",
+    "file_sha256": "17ddad848ec070a004eb4ae47b34b8521134854416e3cff859ef193d6a96eccd",
+    "samples": 24235
+  },
+  {
+    "Id": 612,
+    "filename": "audio_000612.wav",
+    "file_sha256": "1ca1aec066cac8cbe16734027b36494611251f282c1dbae85dd415d3e7208cfb",
+    "samples": 105984
+  },
+  {
+    "Id": 614,
+    "filename": "audio_000614.wav",
+    "file_sha256": "b34066544bc4436af555dfc4e819940390205be1bcf1a9e22156bb4b753e8144",
+    "samples": 112896
+  },
+  {
+    "Id": 615,
+    "filename": "audio_000615.wav",
+    "file_sha256": "2ff0181ada1eeeed2ac0bea5b0e2682817208b26eec547ad8d41498c3a30f419",
+    "samples": 56320
+  },
+  {
+    "Id": 616,
+    "filename": "audio_000616.wav",
+    "file_sha256": "d12225f7da85d068d146b51521a815f82c23b43daef9073d530509c3e6f49173",
+    "samples": 51542
+  },
+  {
+    "Id": 617,
+    "filename": "audio_000617.wav",
+    "file_sha256": "338b7b3063fa56bd7a1e9b17c2f5b7cb09516ab51f8342395bd5b02315e0c247",
+    "samples": 44715
+  },
+  {
+    "Id": 618,
+    "filename": "audio_000618.wav",
+    "file_sha256": "af310a874483da0ce9bbc27237cb91fb86361491ec0bab00618ead0b3ec98a96",
+    "samples": 37888
+  },
+  {
+    "Id": 619,
+    "filename": "audio_000619.wav",
+    "file_sha256": "baad62e0e87bf997ce94739119fe3e663738ddc58cfb65f90d6030941d11ce10",
+    "samples": 29350
+  },
+  {
+    "Id": 620,
+    "filename": "audio_000620.wav",
+    "file_sha256": "d0049ffbdbd56d6bbf89ec9a07736804ec5f0bea9c56ca2f641b87d261a6649e",
+    "samples": 50176
+  },
+  {
+    "Id": 622,
+    "filename": "audio_000622.wav",
+    "file_sha256": "65d75120304b6155300f43810aa9363594697995ae1f4f080d4eab25242d04ef",
+    "samples": 37632
+  },
+  {
+    "Id": 623,
+    "filename": "audio_000623.wav",
+    "file_sha256": "c0f7e6ed590100585622a2ab8e42373362839cb60d824ffeaa42ad696dab076a",
+    "samples": 34944
+  },
+  {
+    "Id": 624,
+    "filename": "audio_000624.wav",
+    "file_sha256": "f8d945c1e0f88ac7cda5f060c1acf69505339c15a9ca249c84c002c270055218",
+    "samples": 48470
+  },
+  {
+    "Id": 626,
+    "filename": "audio_000626.wav",
+    "file_sha256": "0efe6726979c5be9b09f5224d4bcdaa1879306d4ae1125c46eb1da351e887461",
+    "samples": 58329
+  },
+  {
+    "Id": 627,
+    "filename": "audio_000627.wav",
+    "file_sha256": "0b8ad36013d950b275b9690d84ee40164ef642b71cc3430644456ba421e30cf1",
+    "samples": 52566
+  },
+  {
+    "Id": 628,
+    "filename": "audio_000628.wav",
+    "file_sha256": "542c437b7667e3d1f58e27b29132cc80c969f90b1071e9653846aced74652fe0",
+    "samples": 40278
+  },
+  {
+    "Id": 630,
+    "filename": "audio_000630.wav",
+    "file_sha256": "443be0e267193d016aae024b5a5dadb7e63d01e6cadb55bba12b6a7c8cc957d3",
+    "samples": 29696
+  },
+  {
+    "Id": 631,
+    "filename": "audio_000631.wav",
+    "file_sha256": "235d9d2bd2f0542a0865496ca8d94cda3f4991f135e411926e2425e281504a9a",
+    "samples": 50304
+  },
+  {
+    "Id": 633,
+    "filename": "audio_000633.wav",
+    "file_sha256": "cd104fa411a5ce9c299ce6faab96f6fd3532870fc5e17aaeef3c693c54aed07e",
+    "samples": 30336
+  },
+  {
+    "Id": 636,
+    "filename": "audio_000636.wav",
+    "file_sha256": "08cba4a808e5a36aee8f9e39f6035024a28cc38c0566778c4164a29239552602",
+    "samples": 39006
+  },
+  {
+    "Id": 638,
+    "filename": "audio_000638.wav",
+    "file_sha256": "e92ae6fbece53720f07dfbf96042df57365311bebf900bde79b678fcb6f26315",
+    "samples": 52224
+  },
+  {
+    "Id": 639,
+    "filename": "audio_000639.wav",
+    "file_sha256": "2532b10ffde983afec0cc6e896091588bbf7b9b2f8713cff87b4799317dee66e",
+    "samples": 51200
+  },
+  {
+    "Id": 640,
+    "filename": "audio_000640.wav",
+    "file_sha256": "4d04691b3d6f79b47056a06324cb66ed8229662b1837e24ffd5c695c7717d63b",
+    "samples": 35806
+  },
+  {
+    "Id": 641,
+    "filename": "audio_000641.wav",
+    "file_sha256": "1e65c523342d57f3339c1392c268ccf6dae55eeb09aaa8c491c4fc2dfa000bd3",
+    "samples": 46422
+  },
+  {
+    "Id": 642,
+    "filename": "audio_000642.wav",
+    "file_sha256": "64ef71a44dcf5073d413253c3ab840c664da93a1f277663c2c9bf53557ca07e8",
+    "samples": 36864
+  },
+  {
+    "Id": 643,
+    "filename": "audio_000643.wav",
+    "file_sha256": "0e18e3d331fd5341156db7ff117fe4fc82b934f982f7f852512918fc908109d8",
+    "samples": 46046
+  },
+  {
+    "Id": 644,
+    "filename": "audio_000644.wav",
+    "file_sha256": "c3055cc89c8a7ff1598c0427809537bf2685a65b4441c7a3a28cf274ba7b544c",
+    "samples": 30366
+  },
+  {
+    "Id": 645,
+    "filename": "audio_000645.wav",
+    "file_sha256": "a69cb764f86a6a45321763ae545f931b66af9f7edfb17a1833f950a1b787b1e5",
+    "samples": 41886
+  },
+  {
+    "Id": 646,
+    "filename": "audio_000646.wav",
+    "file_sha256": "fb53cdec2c390c7e4a594eec2093f81052fb7f6b02cc9725b879ccf33744e8aa",
+    "samples": 44544
+  },
+  {
+    "Id": 647,
+    "filename": "audio_000647.wav",
+    "file_sha256": "bedf51e1595a27e02f816307464fc68803e97f01562652ce1ca37832bb6aebb2",
+    "samples": 52224
+  },
+  {
+    "Id": 648,
+    "filename": "audio_000648.wav",
+    "file_sha256": "46b39ead4c9250621b351a4758c65cc72c8765764218068392a3862eee2f0c7a",
+    "samples": 37632
+  },
+  {
+    "Id": 649,
+    "filename": "audio_000649.wav",
+    "file_sha256": "c2c57d3abc12b0503dd9fad3ea42963502427c28dcc63af7832f75f2ccd7ca44",
+    "samples": 32694
+  },
+  {
+    "Id": 650,
+    "filename": "audio_000650.wav",
+    "file_sha256": "3f06ae78d063db0d41eb19131b4c72c456e2babaf5d53b7ef2b9db8bcd3b09aa",
+    "samples": 26112
+  },
+  {
+    "Id": 652,
+    "filename": "audio_000652.wav",
+    "file_sha256": "cbe1ce04a483a37b3da31940983aec6cfc850cbab4972c9bcc5ea3b42fdf76db",
+    "samples": 44544
+  },
+  {
+    "Id": 653,
+    "filename": "audio_000653.wav",
+    "file_sha256": "7a0a74661e7425dd13ef434e3114f54405bcff0fbb67b7a8dcd5f98024dfa603",
+    "samples": 51200
+  },
+  {
+    "Id": 654,
+    "filename": "audio_000654.wav",
+    "file_sha256": "aa7b4b95e3d74c77cfbc17d12cd9e18e27cb868a12d0fddeddbb06cbc730152d",
+    "samples": 29350
+  },
+  {
+    "Id": 655,
+    "filename": "audio_000655.wav",
+    "file_sha256": "6c156390adf23bab1d3ed55f76d4884fe88fe5818f27e93338055a4d2b3203ed",
+    "samples": 91456
+  },
+  {
+    "Id": 658,
+    "filename": "audio_000658.wav",
+    "file_sha256": "d2d9b5fdb7a635f3fe6ecbd5c38f19a9e76fdb149baab2400155f92b33f189b2",
+    "samples": 39254
+  },
+  {
+    "Id": 659,
+    "filename": "audio_000659.wav",
+    "file_sha256": "8b544e93dbf7bfb227616f337fd057c2d39755942f525a0e780a365907ae1da2",
+    "samples": 29184
+  },
+  {
+    "Id": 660,
+    "filename": "audio_000660.wav",
+    "file_sha256": "4e43af166e4b0a29f4b3deb260adccef5be7478b5e94ddccb09270d3a2d0d977",
+    "samples": 45325
+  },
+  {
+    "Id": 661,
+    "filename": "audio_000661.wav",
+    "file_sha256": "d46a526d2b6ef76066ab1d562710839c5a04fcbcc51519f9fb4d817ba01108cf",
+    "samples": 24892
+  },
+  {
+    "Id": 662,
+    "filename": "audio_000662.wav",
+    "file_sha256": "c28103fed370d2eea509f4745ca1765bbe0f10b48c1f92ffd2ff34567c245966",
+    "samples": 70998
+  },
+  {
+    "Id": 663,
+    "filename": "audio_000663.wav",
+    "file_sha256": "806e63b9038d51dab7d4f0a9ae3d23bcd4878cbba9588bcaf51f8b4960950a25",
+    "samples": 50518
+  },
+  {
+    "Id": 664,
+    "filename": "audio_000664.wav",
+    "file_sha256": "ea4c7a85f8e9654035c6ef449eb8271cefecc89445074a9042b190ee290dd0aa",
+    "samples": 49152
+  },
+  {
+    "Id": 665,
+    "filename": "audio_000665.wav",
+    "file_sha256": "1e433b3b8c1bf6f411d9a3789b9a1b295e382b6c26f323c881d2637010f8302f",
+    "samples": 97152
+  },
+  {
+    "Id": 668,
+    "filename": "audio_000668.wav",
+    "file_sha256": "711403a1382650e284c9ce780eaaae42fe3a27e000b460beb03618dbbd1adbdc",
+    "samples": 44544
+  },
+  {
+    "Id": 669,
+    "filename": "audio_000669.wav",
+    "file_sha256": "63cfb9fa113eb8e0ab1b5e510582ec8e705418c66823108194e2677a3952eba2",
+    "samples": 35499
+  },
+  {
+    "Id": 670,
+    "filename": "audio_000670.wav",
+    "file_sha256": "a9875fafda6e6d7d54711d83ee777b4c09391073c5c2fb839d52563f6a69c0bc",
+    "samples": 86016
+  },
+  {
+    "Id": 672,
+    "filename": "audio_000672.wav",
+    "file_sha256": "442d3989306a0c1473bf7cce6926706e044cf4184a48adf0047a01f713e02efd",
+    "samples": 50304
+  },
+  {
+    "Id": 673,
+    "filename": "audio_000673.wav",
+    "file_sha256": "5795d5ddfcdff09ba26ae62e90cb02de0874732d9677794ed7fd886cf5ed16b9",
+    "samples": 41472
+  },
+  {
+    "Id": 674,
+    "filename": "audio_000674.wav",
+    "file_sha256": "53e2dafc0d407ba3b5a2191e0a6ce0f120f3a9443dcd8d15a13fb47e6ac4a85f",
+    "samples": 28416
+  },
+  {
+    "Id": 675,
+    "filename": "audio_000675.wav",
+    "file_sha256": "ab69cac21ea1f9d0a08d9f903fd09db99354bc712a2d0f54ba3ffe12dc7f2162",
+    "samples": 60416
+  },
+  {
+    "Id": 676,
+    "filename": "audio_000676.wav",
+    "file_sha256": "a8b1c4278e20136669bc0d2ff7408b7bf579948c16273187123e9d89815ac52c",
+    "samples": 46763
+  },
+  {
+    "Id": 678,
+    "filename": "audio_000678.wav",
+    "file_sha256": "bb60b0f8ba4c936a7b059f5ad64652801147040c6b4a040f3a42b46e7883636c",
+    "samples": 42846
+  },
+  {
+    "Id": 679,
+    "filename": "audio_000679.wav",
+    "file_sha256": "fb83a14bfd3d3611d2b0f77724e4ba723b0b739e0f83a5980cf5ca465f2b5fed",
+    "samples": 70656
+  },
+  {
+    "Id": 680,
+    "filename": "audio_000680.wav",
+    "file_sha256": "139e022dfa8228b7d0067309f1cf105e94effbf8b9c61d316b7997f12d334351",
+    "samples": 80256
+  },
+  {
+    "Id": 681,
+    "filename": "audio_000681.wav",
+    "file_sha256": "356ae27f4567fa841a94c9cf8cfed1373a9597ecaa28a88d222f9a2b7b684231",
+    "samples": 40619
+  },
+  {
+    "Id": 683,
+    "filename": "audio_000683.wav",
+    "file_sha256": "1fdea0b38e499510a19d8d83081bd4493b09b4fcb87650a2a20cbd4319e0d5ca",
+    "samples": 86016
+  },
+  {
+    "Id": 684,
+    "filename": "audio_000684.wav",
+    "file_sha256": "e6d6ea2aabd93f99260cf92356037c3be319750e2af3bc7a29f0797a7069fcdf",
+    "samples": 93696
+  },
+  {
+    "Id": 685,
+    "filename": "audio_000685.wav",
+    "file_sha256": "99e6e8df195d5a5228b5d6d541f6409167ef13a4cad336550d90a522ea6f0545",
+    "samples": 51883
+  },
+  {
+    "Id": 687,
+    "filename": "audio_000687.wav",
+    "file_sha256": "d54fffcd10a4c5d081e0296e14ef860868f6181d40b9bfd7ee705cebdf987f85",
+    "samples": 43392
+  },
+  {
+    "Id": 688,
+    "filename": "audio_000688.wav",
+    "file_sha256": "eca723c1ed59a935b9a0eed04b18a3ba0e7cdf72e48fe2a23a9179dea7ee3498",
+    "samples": 49412
+  },
+  {
+    "Id": 689,
+    "filename": "audio_000689.wav",
+    "file_sha256": "c6921658715fb70139646e457fc564c6d2bce1fcbe50eae3525e587856de5c0c",
+    "samples": 100224
+  },
+  {
+    "Id": 690,
+    "filename": "audio_000690.wav",
+    "file_sha256": "1d9607884768b52efc5422a547f8572aeb5d7b69ea44e83fbb7e188ad322da52",
+    "samples": 51200
+  },
+  {
+    "Id": 691,
+    "filename": "audio_000691.wav",
+    "file_sha256": "9ee5fd275ed0c60f893b032b3faa89b58d5fcbe2fd2db8b8751e77cb52c583aa",
+    "samples": 40606
+  },
+  {
+    "Id": 693,
+    "filename": "audio_000693.wav",
+    "file_sha256": "a044b4c3b9db7dc316282ad1ac1bad77e27bc1280c62e8d3be79e5f68bbe6264",
+    "samples": 45739
+  },
+  {
+    "Id": 694,
+    "filename": "audio_000694.wav",
+    "file_sha256": "ab5d8240789f8e382bf9ca3c49b2d428e0665e2068215b1d243abdc38ce04800",
+    "samples": 27486
+  },
+  {
+    "Id": 695,
+    "filename": "audio_000695.wav",
+    "file_sha256": "fac30252854ae99bb9496a7531d2fe1ace0612fab8c3b53da2f89e96bf77c5da",
+    "samples": 36096
+  },
+  {
+    "Id": 697,
+    "filename": "audio_000697.wav",
+    "file_sha256": "56b6a48827fea926aa9172bf2c004147834951fea19bc5de43128342d3b2d42c",
+    "samples": 46080
+  },
+  {
+    "Id": 699,
+    "filename": "audio_000699.wav",
+    "file_sha256": "9a7ffc366d6e5c2234e4ed675ff5b52c051243ec597a4c66795b8c94d53e396f",
+    "samples": 29726
+  },
+  {
+    "Id": 700,
+    "filename": "audio_000700.wav",
+    "file_sha256": "8efcf1299e4b993d94c69d2c9832c6887b95cf31c40f6ffcee51a6782909b698",
+    "samples": 44715
+  },
+  {
+    "Id": 702,
+    "filename": "audio_000702.wav",
+    "file_sha256": "4ef672055f0186952bba89421685301a706bc342d220bdbdbf787aebbaa22ec5",
+    "samples": 45398
+  },
+  {
+    "Id": 703,
+    "filename": "audio_000703.wav",
+    "file_sha256": "fffc12f803df59fd9b18cea4c81e5feb4ba3004b818f5fb54b1562f860028854",
+    "samples": 30046
+  },
+  {
+    "Id": 706,
+    "filename": "audio_000706.wav",
+    "file_sha256": "1bbccd5bc27ec8e3cf00dd48582c5b5086f5ba381983b2a2b699845e616acd9e",
+    "samples": 47616
+  },
+  {
+    "Id": 707,
+    "filename": "audio_000707.wav",
+    "file_sha256": "2a47663b6c4107b35e7f17b119e8801bdb310d40fa6144b43672000df2f62fbb",
+    "samples": 36864
+  },
+  {
+    "Id": 708,
+    "filename": "audio_000708.wav",
+    "file_sha256": "5b3385f2cd5677db01d417d092dc6ee0ab90e2e8cc8c665cdb0892f8de623717",
+    "samples": 55296
+  },
+  {
+    "Id": 709,
+    "filename": "audio_000709.wav",
+    "file_sha256": "6571ff1e2ec52eea95f3936e1e7730308d79ef08aa06ed4ac8a468ed1162498b",
+    "samples": 29355
+  },
+  {
+    "Id": 710,
+    "filename": "audio_000710.wav",
+    "file_sha256": "2597f1e898116ffccda7faa18254497c1c898a368fd263abb27a7c26bae9b336",
+    "samples": 84992
+  },
+  {
+    "Id": 711,
+    "filename": "audio_000711.wav",
+    "file_sha256": "cf6c38c11a7852b9e58861ec702f27a808ce8b8f4298d4e2fdc09803a6dc23f2",
+    "samples": 39936
+  },
+  {
+    "Id": 712,
+    "filename": "audio_000712.wav",
+    "file_sha256": "46b9538cff54f1c22c91aba07a40eb46ddecba9e081bf7e6775ceafd3161f242",
+    "samples": 52907
+  },
+  {
+    "Id": 713,
+    "filename": "audio_000713.wav",
+    "file_sha256": "1bd2e4b51553abad4a06aef513da49466d2418120c85bf6d763023d9da4b9003",
+    "samples": 39936
+  },
+  {
+    "Id": 715,
+    "filename": "audio_000715.wav",
+    "file_sha256": "bdbae6a425a666b171472a162ee523619a6bf1fee9702e970cb5c47fa0ca9e1d",
+    "samples": 37086
+  },
+  {
+    "Id": 716,
+    "filename": "audio_000716.wav",
+    "file_sha256": "0f0344dcdb9c7bd39cb400204609e258fc239b37235342ca9e01f5f24ab8baf1",
+    "samples": 37632
+  },
+  {
+    "Id": 717,
+    "filename": "audio_000717.wav",
+    "file_sha256": "1066c74d7b42ca432d4362f611a977d99b347df3bb331306c8b6de6d1114a438",
+    "samples": 57984
+  },
+  {
+    "Id": 719,
+    "filename": "audio_000719.wav",
+    "file_sha256": "d4f124dcd83326b29fdef1836718b8a14859c0e961556d9cd8a07b50041b49fa",
+    "samples": 64854
+  },
+  {
+    "Id": 720,
+    "filename": "audio_000720.wav",
+    "file_sha256": "ee21faad0e669f860d2dcc34761fdf5cd3494184c3781a35852771e7adba0080",
+    "samples": 60416
+  },
+  {
+    "Id": 721,
+    "filename": "audio_000721.wav",
+    "file_sha256": "4292cf351d6f7787467de54f5090759b97145321955a149764fee96d2aad4fb9",
+    "samples": 34846
+  },
+  {
+    "Id": 722,
+    "filename": "audio_000722.wav",
+    "file_sha256": "7520077b7732f0a7744693525f9f131c139c32b5611b11c333b9259a4ade25e4",
+    "samples": 50176
+  },
+  {
+    "Id": 723,
+    "filename": "audio_000723.wav",
+    "file_sha256": "0f788a0dd3559e962ac2fe57aaaa3f8052c397b28bfea44e3f20178dedabc7e8",
+    "samples": 34475
+  },
+  {
+    "Id": 725,
+    "filename": "audio_000725.wav",
+    "file_sha256": "a352f45f14268ed95a9102cc1e3f2a57ede21af54baa810993df0271236346c3",
+    "samples": 31872
+  },
+  {
+    "Id": 726,
+    "filename": "audio_000726.wav",
+    "file_sha256": "a57987f002892d31f276aaee6000d7835cfb2422a733a7af74a3947c94398c17",
+    "samples": 33024
+  },
+  {
+    "Id": 727,
+    "filename": "audio_000727.wav",
+    "file_sha256": "9967ff7fbbc9b09e3637d88cb1519173b86fed2c5572fa9c9b07418088633fb2",
+    "samples": 37726
+  },
+  {
+    "Id": 728,
+    "filename": "audio_000728.wav",
+    "file_sha256": "224461e50fa200f3bae94b39d581595713709c4b2766f567754d12043c1e758b",
+    "samples": 85675
+  },
+  {
+    "Id": 729,
+    "filename": "audio_000729.wav",
+    "file_sha256": "042e247a237dd42c69513f360a31457d9a1408de8051f89811848b7b178dcc22",
+    "samples": 35840
+  },
+  {
+    "Id": 730,
+    "filename": "audio_000730.wav",
+    "file_sha256": "cedf81b2db5668ea6b97245ed895e939d967f0b13e90cda2b28608482165dbd7",
+    "samples": 30686
+  },
+  {
+    "Id": 731,
+    "filename": "audio_000731.wav",
+    "file_sha256": "9b44f0eca39be3ff9b8f71dcecdfa6d92c3154dc60fd67a57b7d0399765d8881",
+    "samples": 44715
+  },
+  {
+    "Id": 732,
+    "filename": "audio_000732.wav",
+    "file_sha256": "d8f3952921933cb9d781821c211ae27742dddd08081467fa34630fd53cfccc72",
+    "samples": 44544
+  },
+  {
+    "Id": 733,
+    "filename": "audio_000733.wav",
+    "file_sha256": "a7167c03f8bcd719d95dcf297dac8486ba5e2413b93310ff55c625525590c535",
+    "samples": 48470
+  },
+  {
+    "Id": 734,
+    "filename": "audio_000734.wav",
+    "file_sha256": "0e7eedc60514d9d61b3bf85e7bbec33bc1a539eb6fe31d5f7ec3ac08535df973",
+    "samples": 29184
+  },
+  {
+    "Id": 736,
+    "filename": "audio_000736.wav",
+    "file_sha256": "cec7c689ebfbbba9899acbceb89cdbf7422bff2b8ba6ecc7b8776d3bb3b1d71a",
+    "samples": 35806
+  },
+  {
+    "Id": 737,
+    "filename": "audio_000737.wav",
+    "file_sha256": "e0a5ccdf6677691ee6094ff2751bf9de3e004e91710f2d938c61e8ed2290653c",
+    "samples": 68950
+  },
+  {
+    "Id": 738,
+    "filename": "audio_000738.wav",
+    "file_sha256": "ed1334e6e768232780a592a6d9cbed4a36dd5d89c13caa9627a9e5cf2842057d",
+    "samples": 60075
+  },
+  {
+    "Id": 740,
+    "filename": "audio_000740.wav",
+    "file_sha256": "11a7cde0f09c72b24838d30685dc752a893599edaa1ddc15bf06306de176bad5",
+    "samples": 41886
+  },
+  {
+    "Id": 741,
+    "filename": "audio_000741.wav",
+    "file_sha256": "cc50e166bc39abc7c699ba7ac13a36304fe7c515a4542b4f177ba072eba28b63",
+    "samples": 49835
+  },
+  {
+    "Id": 743,
+    "filename": "audio_000743.wav",
+    "file_sha256": "ff288e366b641275485dc20e54286739641c8093581a8e61c2adf4100309facd",
+    "samples": 26526
+  },
+  {
+    "Id": 744,
+    "filename": "audio_000744.wav",
+    "file_sha256": "02d0da8a8d9a0afbfaab9878721916af3d4f2fe9425eecb9108535e58b7226ba",
+    "samples": 36523
+  },
+  {
+    "Id": 745,
+    "filename": "audio_000745.wav",
+    "file_sha256": "eadb9db9ce8bd80cabb6ac402cbe1ccbffdbf056a0d0e9a254c52056143ff36c",
+    "samples": 23424
+  },
+  {
+    "Id": 746,
+    "filename": "audio_000746.wav",
+    "file_sha256": "5dfeb73f6020091584be3232c8aee6349adf45112f432aaa3b4993b4ac960861",
+    "samples": 46080
+  },
+  {
+    "Id": 747,
+    "filename": "audio_000747.wav",
+    "file_sha256": "82c259d50f0784b21a6e952a84f4415ebb8177425d5b479ae4c7e1d8b0eb48d2",
+    "samples": 63147
+  },
+  {
+    "Id": 748,
+    "filename": "audio_000748.wav",
+    "file_sha256": "da5128e7001b4c7ea42489de731f74299c3c05b57c668375d945efa2c0b8399c",
+    "samples": 84992
+  },
+  {
+    "Id": 749,
+    "filename": "audio_000749.wav",
+    "file_sha256": "1598dc7c5d9768e8e43a3dfc1e4281cbe9c396218feebe1bb400c94cbd0a08bb",
+    "samples": 96256
+  },
+  {
+    "Id": 750,
+    "filename": "audio_000750.wav",
+    "file_sha256": "dcc59d837eae0422cc94c196fc1f064a7c6f9449490f6134f536a448799c2ea6",
+    "samples": 34944
+  },
+  {
+    "Id": 751,
+    "filename": "audio_000751.wav",
+    "file_sha256": "13439e6c02eabda6f87492df17257e22ad5f4c26e8f7e56b7ef5cf1ab35e8461",
+    "samples": 85632
+  },
+  {
+    "Id": 752,
+    "filename": "audio_000752.wav",
+    "file_sha256": "0daa1f5a71256528253461fcc9d118b8bc1561c241a78a831435f989964018b3",
+    "samples": 40960
+  },
+  {
+    "Id": 753,
+    "filename": "audio_000753.wav",
+    "file_sha256": "34a317803dcb83b0ccd03815d88f7478603ad4aaa3601eb743e3e93fefb6c303",
+    "samples": 64512
+  },
+  {
+    "Id": 756,
+    "filename": "audio_000756.wav",
+    "file_sha256": "ba7255fc177207ab8ad2814da0c9a52a4d17751f4d43d6cc3d531b3f975c84fb",
+    "samples": 53726
+  },
+  {
+    "Id": 757,
+    "filename": "audio_000757.wav",
+    "file_sha256": "7da96adaf4246eed54718043475e769e1cd40afd1a8912609ae9a0e296389d72",
+    "samples": 45312
+  },
+  {
+    "Id": 758,
+    "filename": "audio_000758.wav",
+    "file_sha256": "bd93fc25837de07dc1fee163d58253c62013d38fe1c39e8e59e95017bc7bd80e",
+    "samples": 59734
+  },
+  {
+    "Id": 759,
+    "filename": "audio_000759.wav",
+    "file_sha256": "44c449efdffe9f05268a919d4904af407d4ff6fcd1584dcb154d7f132a294f73",
+    "samples": 46080
+  },
+  {
+    "Id": 760,
+    "filename": "audio_000760.wav",
+    "file_sha256": "19056318030d5f431445856e6d442f3bc2c630edfeb963b4023cee7483b81b0c",
+    "samples": 50859
+  },
+  {
+    "Id": 762,
+    "filename": "audio_000762.wav",
+    "file_sha256": "b10404f5e72283d76327e08d6155f8c1970eb3c0bde3c5ae5e964e86d36f0bf8",
+    "samples": 34944
+  },
+  {
+    "Id": 763,
+    "filename": "audio_000763.wav",
+    "file_sha256": "79ba8560dd8753ac0699cb34becb1c0715fa35f744b502c281060c7947147840",
+    "samples": 133632
+  },
+  {
+    "Id": 764,
+    "filename": "audio_000764.wav",
+    "file_sha256": "428b175abfe8ef5462994de5d089e1e4435f8b69fcd56787bf4221d140c5320d",
+    "samples": 33246
+  },
+  {
+    "Id": 765,
+    "filename": "audio_000765.wav",
+    "file_sha256": "29fce2a6109c4294a54c82b024d9d401bfbf08b14c1a93d5e1c9c91f574d07ae",
+    "samples": 49152
+  },
+  {
+    "Id": 766,
+    "filename": "audio_000766.wav",
+    "file_sha256": "c84bf716823406b726caaa9fa1febe1abf104351c667f3059dadb390ca9e80b2",
+    "samples": 53248
+  },
+  {
+    "Id": 767,
+    "filename": "audio_000767.wav",
+    "file_sha256": "9cd5ba7742bc95d187354127a4a02c1e440c9a1ad8b7c190f9c53cc5f1e8fa6c",
+    "samples": 60416
+  },
+  {
+    "Id": 769,
+    "filename": "audio_000769.wav",
+    "file_sha256": "aa435d15c1db6c2a99cfae5fd5f4dd523113309e87fedd3a3b3ef20ceb3c1e44",
+    "samples": 41643
+  },
+  {
+    "Id": 770,
+    "filename": "audio_000770.wav",
+    "file_sha256": "d2d34b4062067c3f20baebd33b273169123a3f3a66abff6569199c431cff7f00",
+    "samples": 35712
+  },
+  {
+    "Id": 771,
+    "filename": "audio_000771.wav",
+    "file_sha256": "ae6e861eb90c0cd2b0386b06171b36c232d43d0b85f41c056edae6838dc05bc2",
+    "samples": 60416
+  },
+  {
+    "Id": 772,
+    "filename": "audio_000772.wav",
+    "file_sha256": "ae16a869287cde4f2395f44235dcb98a40c8f2a2a51b2e5ecd623aefa955d281",
+    "samples": 40960
+  },
+  {
+    "Id": 773,
+    "filename": "audio_000773.wav",
+    "file_sha256": "2675eb32156ff353635f6a7c31ebe163504cb34f856e5e352f40efc4387383f3",
+    "samples": 71966
+  },
+  {
+    "Id": 774,
+    "filename": "audio_000774.wav",
+    "file_sha256": "5f337eecf8a61e0e84437c48e04ae1301737e0563a464221bb2bdde66b289a40",
+    "samples": 46763
+  },
+  {
+    "Id": 776,
+    "filename": "audio_000776.wav",
+    "file_sha256": "adaf134577dbd82071a11e14d7cc7038e881e7aab2399fc30dd875660906546c",
+    "samples": 55979
+  },
+  {
+    "Id": 777,
+    "filename": "audio_000777.wav",
+    "file_sha256": "28beb4878f11796baa11c9d676f9b03f9895b4cb9f4744c84a35b459117f5c93",
+    "samples": 63488
+  },
+  {
+    "Id": 778,
+    "filename": "audio_000778.wav",
+    "file_sha256": "7bf240a7da60484c69676211badc7d3c2139340fb76ad7a54ee845e5699f4aa0",
+    "samples": 34475
+  },
+  {
+    "Id": 779,
+    "filename": "audio_000779.wav",
+    "file_sha256": "bd27171809a14748d016b7afeccdd4469b2966ec985520a8b16942e79ec884f9",
+    "samples": 32926
+  },
+  {
+    "Id": 780,
+    "filename": "audio_000780.wav",
+    "file_sha256": "f815db9d8b648896d78de668d2160cd7cea396630b19c8f24394286d0240672e",
+    "samples": 57686
+  },
+  {
+    "Id": 782,
+    "filename": "audio_000782.wav",
+    "file_sha256": "7849a26b4b4128da9a005c94a2ad97216f689f1e0578f671f5cd9165c4c74a52",
+    "samples": 39595
+  },
+  {
+    "Id": 784,
+    "filename": "audio_000784.wav",
+    "file_sha256": "2c22e3ae9ae3825065741c90bb95fae44812f8294fdf1573cd7167ff0fc1a7ad",
+    "samples": 40960
+  },
+  {
+    "Id": 786,
+    "filename": "audio_000786.wav",
+    "file_sha256": "aa75b94d2f60f9be47a94c53bf09d7bf4e6fa48e8884c9966978c4de5e282019",
+    "samples": 44766
+  },
+  {
+    "Id": 787,
+    "filename": "audio_000787.wav",
+    "file_sha256": "3b4abad0944420e2e1dd71a019d211104296320dae480bbb24d74933c01e22c4",
+    "samples": 59904
+  },
+  {
+    "Id": 788,
+    "filename": "audio_000788.wav",
+    "file_sha256": "7d8f891b58c71a45793892292ff9be9e1098dcfad0b67f0600009a2705b0a8e9",
+    "samples": 51200
+  },
+  {
+    "Id": 790,
+    "filename": "audio_000790.wav",
+    "file_sha256": "1d41815477a0109e44d80b76dfb0943b503ee40d32834b044c18685f1fdfafc1",
+    "samples": 40704
+  },
+  {
+    "Id": 791,
+    "filename": "audio_000791.wav",
+    "file_sha256": "00067bad269f2cf5d95dd2d3c24a5313d3576c20eadd8e8d0ae45c5366a2b2e1",
+    "samples": 29355
+  },
+  {
+    "Id": 792,
+    "filename": "audio_000792.wav",
+    "file_sha256": "1dc1619aa0bc957bbc0c5e21522c945f3ebbfe2c85adcda4f530a49386a12c92",
+    "samples": 52224
+  },
+  {
+    "Id": 794,
+    "filename": "audio_000794.wav",
+    "file_sha256": "0813b59ad3219494c04f8c448b7cfa91c8e5de007f4b9ac9dfaf081911c94566",
+    "samples": 27486
+  },
+  {
+    "Id": 795,
+    "filename": "audio_000795.wav",
+    "file_sha256": "33a05f51863526faa9baad43222b20b42523a8e44d415f00a035ead975acef5b",
+    "samples": 30720
+  },
+  {
+    "Id": 796,
+    "filename": "audio_000796.wav",
+    "file_sha256": "949ab8e3ee74f6ff9ad71c3f96447d2943fdfffabf2e9faedba4835142e05f75",
+    "samples": 28032
+  },
+  {
+    "Id": 797,
+    "filename": "audio_000797.wav",
+    "file_sha256": "99d84ddb4bcd3d9d044943836f4471d618d972a0c579c5f517c0c6576993a847",
+    "samples": 29014
+  },
+  {
+    "Id": 798,
+    "filename": "audio_000798.wav",
+    "file_sha256": "ea158443b8831eec7c71e8a7d02bc8bfbbe2a7eef87e353892d37615e6e6a5f3",
+    "samples": 64171
+  },
+  {
+    "Id": 799,
+    "filename": "audio_000799.wav",
+    "file_sha256": "9a1c9246682abbbe73fa8793c7025d67cacae2e4c4a5f5ba9ffb61edc1e4085f",
+    "samples": 33024
+  },
+  {
+    "Id": 800,
+    "filename": "audio_000800.wav",
+    "file_sha256": "8b792e96aca380cf52f4b4c07275149561d8ed84492451f13c2a3bb794804b0f",
+    "samples": 37888
+  },
+  {
+    "Id": 801,
+    "filename": "audio_000801.wav",
+    "file_sha256": "2aa464c93a33c96ee02c5586e815e09056cefaaf8ec3706f058a3eeb108845d8",
+    "samples": 64512
+  },
+  {
+    "Id": 802,
+    "filename": "audio_000802.wav",
+    "file_sha256": "0ba2f80177214565b8c8bc898fddddea2e8e40b87ed00630ddade0e7d5d0e530",
+    "samples": 22528
+  },
+  {
+    "Id": 803,
+    "filename": "audio_000803.wav",
+    "file_sha256": "3eb409f6bf53c212a8127479f114df2cee2a24f6aaf7e5af60bbc328b718a64a",
+    "samples": 54955
+  },
+  {
+    "Id": 804,
+    "filename": "audio_000804.wav",
+    "file_sha256": "befbb240355dc61f2399a470ac3ddf24b7bdfc38ae72c2db69e32f837a0c961f",
+    "samples": 34846
+  },
+  {
+    "Id": 805,
+    "filename": "audio_000805.wav",
+    "file_sha256": "dd33360b30f56a60b1abca48a79a7ba828827f241eec8638108d6dc76e6aaa67",
+    "samples": 45312
+  },
+  {
+    "Id": 807,
+    "filename": "audio_000807.wav",
+    "file_sha256": "3f62ef24ea1956eabc42684ca5dafd8bf339eaba3ec36f3ff2fb78c238a80393",
+    "samples": 50898
+  },
+  {
+    "Id": 808,
+    "filename": "audio_000808.wav",
+    "file_sha256": "c97959d99a974e59cea729128fc6b68f4132235a1f2acfdeac1393a4d217dd91",
+    "samples": 90112
+  },
+  {
+    "Id": 809,
+    "filename": "audio_000809.wav",
+    "file_sha256": "d26ac08886a2407f3b481fa8631cdf18390c369591be0c834219605c49d608ba",
+    "samples": 46686
+  },
+  {
+    "Id": 810,
+    "filename": "audio_000810.wav",
+    "file_sha256": "ae45c5ec4b8d06aa98bb5e960a6bca922bf321a0fce2a8aea0c1385cbeb5ddf8",
+    "samples": 51072
+  },
+  {
+    "Id": 811,
+    "filename": "audio_000811.wav",
+    "file_sha256": "9ae680422924d1b7da15273348f813f0bd0f65132deb0435a55c587397f15510",
+    "samples": 73344
+  },
+  {
+    "Id": 812,
+    "filename": "audio_000812.wav",
+    "file_sha256": "3e48ceb8ebde09c703cfa31706f2c239708798186826deba2f62155321a3b61f",
+    "samples": 87936
+  },
+  {
+    "Id": 813,
+    "filename": "audio_000813.wav",
+    "file_sha256": "bb0bd880ec1dcc269488b4d4fef38157fb2893408fbf2925badc332f1882be44",
+    "samples": 39552
+  },
+  {
+    "Id": 814,
+    "filename": "audio_000814.wav",
+    "file_sha256": "193a93b27ec75916bf8b04bcad2ec60df1bfb01008dca1985dd093a49939aa90",
+    "samples": 36864
+  },
+  {
+    "Id": 815,
+    "filename": "audio_000815.wav",
+    "file_sha256": "99e982ffbd3497f0bf1565d414234f8a4f1b59360aaca4f1718677ba77b73b94",
+    "samples": 36864
+  },
+  {
+    "Id": 816,
+    "filename": "audio_000816.wav",
+    "file_sha256": "7b1e201fbb96f1d54bf62e2fff8a2beec988441d3bdf34eadb4c9442ae593653",
+    "samples": 47616
+  },
+  {
+    "Id": 818,
+    "filename": "audio_000818.wav",
+    "file_sha256": "296b6881449e6370ba530575f413d7ba013a38cc82aae242436600e61aa1e550",
+    "samples": 59392
+  },
+  {
+    "Id": 820,
+    "filename": "audio_000820.wav",
+    "file_sha256": "7fea9fa0adab8429dd3780921e0d23eadeb91bbd98837556ceee5f8eb8db04e4",
+    "samples": 41246
+  },
+  {
+    "Id": 822,
+    "filename": "audio_000822.wav",
+    "file_sha256": "06b2259c8f744ba1042deb272d1ff01458455ce3701d62a60b7aa96c72537ef4",
+    "samples": 43392
+  },
+  {
+    "Id": 824,
+    "filename": "audio_000824.wav",
+    "file_sha256": "46c42b76510a38d52955fbf362bf7c81e9ccd516e1c56ee6ada2ba532e5e8d74",
+    "samples": 44715
+  },
+  {
+    "Id": 825,
+    "filename": "audio_000825.wav",
+    "file_sha256": "d97e5219aa68c8a9a582a37fe9d1f84c7a78cf002c12ecfb2cc2d0ebdef5d19f",
+    "samples": 45312
+  },
+  {
+    "Id": 826,
+    "filename": "audio_000826.wav",
+    "file_sha256": "814f3fc18c27d35c8d73dee8a716b73a53bde7d04199b22019b85dae172238db",
+    "samples": 56832
+  },
+  {
+    "Id": 827,
+    "filename": "audio_000827.wav",
+    "file_sha256": "a2eea02e37c3113fa4a58db9bb98121a93dff28797203acbc18d00e25369eb5b",
+    "samples": 73728
+  },
+  {
+    "Id": 829,
+    "filename": "audio_000829.wav",
+    "file_sha256": "dd18381e1fff33bad4b1a88e161cbe334d923d1ad8f4177a3bd853bcd82ff2fa",
+    "samples": 49152
+  },
+  {
+    "Id": 830,
+    "filename": "audio_000830.wav",
+    "file_sha256": "9dc2f2258c649a100f809c7ccfcc4033a87edc384a2ffa917b0e17ec7f9faf08",
+    "samples": 53590
+  },
+  {
+    "Id": 831,
+    "filename": "audio_000831.wav",
+    "file_sha256": "36408e0379f55171bf19a4d164982fd91f47c34a7473268d58e246c6250451a6",
+    "samples": 21504
+  },
+  {
+    "Id": 833,
+    "filename": "audio_000833.wav",
+    "file_sha256": "fe8e9c1fc6edd1dfa0578e18e55fdc33c442a9b9c9beb48c2527fcb3656e1836",
+    "samples": 74752
+  },
+  {
+    "Id": 834,
+    "filename": "audio_000834.wav",
+    "file_sha256": "1751e2bbf5c1aee317096005fb2e1da211b7d94875a18e4bb88165a0c27f690a",
+    "samples": 39254
+  },
+  {
+    "Id": 835,
+    "filename": "audio_000835.wav",
+    "file_sha256": "a547dc9d9397631a38b191a98205f9e9990908f5ed7e8fa099e8104decb1af17",
+    "samples": 76459
+  },
+  {
+    "Id": 836,
+    "filename": "audio_000836.wav",
+    "file_sha256": "b8f3ce72439f720a605b1862a431bbbe6f05e98ebc96999c710aaa3a608d410e",
+    "samples": 59392
+  },
+  {
+    "Id": 837,
+    "filename": "audio_000837.wav",
+    "file_sha256": "a77c2c928af0b42204825751589d3616bf74cfe53cde8687ac69cabb5a719fa6",
+    "samples": 36864
+  },
+  {
+    "Id": 838,
+    "filename": "audio_000838.wav",
+    "file_sha256": "b725466d5b405d660a459c895f47550f513824c2a17dfac07bf1d56e76a3f6b9",
+    "samples": 91478
+  },
+  {
+    "Id": 840,
+    "filename": "audio_000840.wav",
+    "file_sha256": "aab7740e7cf72e1ef4ae543b76fc3bd8008ee59d0a7a38942ab8bf126949601d",
+    "samples": 41302
+  },
+  {
+    "Id": 841,
+    "filename": "audio_000841.wav",
+    "file_sha256": "f7921e8b402db84417f5632b5a62b6dd58c9dc8fae792327ca701d9b0f49f01c",
+    "samples": 34846
+  },
+  {
+    "Id": 842,
+    "filename": "audio_000842.wav",
+    "file_sha256": "73da5a40b0a38b868c707203c574b59e35199c01733c5f18c288b1180de33f2f",
+    "samples": 50859
+  },
+  {
+    "Id": 843,
+    "filename": "audio_000843.wav",
+    "file_sha256": "dd39e2644abff3a8bed290c2d727a6282065d9841dd8062af01f04e28ec12057",
+    "samples": 34475
+  },
+  {
+    "Id": 844,
+    "filename": "audio_000844.wav",
+    "file_sha256": "b67b2957bff44cb801986252a87efe51138cec2061a9c9d84ed38189d4b0cebe",
+    "samples": 33566
+  },
+  {
+    "Id": 845,
+    "filename": "audio_000845.wav",
+    "file_sha256": "8b90dcd4b61b5c832e1cf42a147b0458c05b39356d4d2aaa8df98e3ded21c141",
+    "samples": 45696
+  },
+  {
+    "Id": 846,
+    "filename": "audio_000846.wav",
+    "file_sha256": "9282b158c28b74e924025c9dd14b3c3881f58cbfa60143be5799217c86418472",
+    "samples": 29014
+  },
+  {
+    "Id": 847,
+    "filename": "audio_000847.wav",
+    "file_sha256": "574e3bc987da4c28a034aad1342ddad5b0f9b2570591d9ff75e61037978b3287",
+    "samples": 35840
+  },
+  {
+    "Id": 848,
+    "filename": "audio_000848.wav",
+    "file_sha256": "3a6617f4ce41f9929e6df0d653c5237884f67c2af98f6325209c326846774e3f",
+    "samples": 43776
+  },
+  {
+    "Id": 849,
+    "filename": "audio_000849.wav",
+    "file_sha256": "bf9a518fa41dd4b3307c5ccf3b031d933c0c0b6390c354d9dfb43366ba746c91",
+    "samples": 47104
+  },
+  {
+    "Id": 850,
+    "filename": "audio_000850.wav",
+    "file_sha256": "ddbd0ef9f20e76171addde6bbfd8e9941883b95cbd65aa1a9ec23a2958042d09",
+    "samples": 40619
+  },
+  {
+    "Id": 851,
+    "filename": "audio_000851.wav",
+    "file_sha256": "a3b485aa0b4657527ee99c90079593b1f829edfd317826f3ca61baa8c4bfa43b",
+    "samples": 42624
+  },
+  {
+    "Id": 852,
+    "filename": "audio_000852.wav",
+    "file_sha256": "dedd666ffefe302493848aeac555fe38d1f6039f3b30f091eb607153b191d009",
+    "samples": 58710
+  },
+  {
+    "Id": 853,
+    "filename": "audio_000853.wav",
+    "file_sha256": "9ed4b82b6203ebe3e378437630eb28c1f597be86d0e99fbfa6d29651ea74ef30",
+    "samples": 46080
+  },
+  {
+    "Id": 855,
+    "filename": "audio_000855.wav",
+    "file_sha256": "2a8afc1a8471cedc0473bce78ccf316fb115975707a440dd86846597e902dac8",
+    "samples": 51200
+  },
+  {
+    "Id": 856,
+    "filename": "audio_000856.wav",
+    "file_sha256": "60620cf647cf60d554af38d4d8f6b1a68efb373782ac5f700c8427cb59e95c3f",
+    "samples": 51200
+  },
+  {
+    "Id": 857,
+    "filename": "audio_000857.wav",
+    "file_sha256": "8116404a339a89d8106ccca0984166e84b6e621e931a54fafa95cb3171cf9f09",
+    "samples": 26526
+  },
+  {
+    "Id": 858,
+    "filename": "audio_000858.wav",
+    "file_sha256": "95124e19d2160620319b439e274b68026660ed10b5710e9d7577204baf22eeb3",
+    "samples": 61440
+  },
+  {
+    "Id": 859,
+    "filename": "audio_000859.wav",
+    "file_sha256": "7b4c4e2b460200fcd578433e58214dac8db99b394ffda116e377af6a16396d95",
+    "samples": 46812
+  },
+  {
+    "Id": 861,
+    "filename": "audio_000861.wav",
+    "file_sha256": "1eca2e41d2ad2f222011f59bceda5c298f85256a09fc0cf0db8716b208e777cc",
+    "samples": 48470
+  },
+  {
+    "Id": 862,
+    "filename": "audio_000862.wav",
+    "file_sha256": "e7b5e68d1c9656ac79529caa75baac14e97d04a48164908304e9d8b5cbb429f3",
+    "samples": 64854
+  },
+  {
+    "Id": 863,
+    "filename": "audio_000863.wav",
+    "file_sha256": "fc73cab75d2751b73f293691fc9bc1008d1f498da24cbdf650d4b904a5a18018",
+    "samples": 85821
+  },
+  {
+    "Id": 864,
+    "filename": "audio_000864.wav",
+    "file_sha256": "30515a38ea70c772beeb651259b1aa0001e975819df10a8c0c6c1d38bdb85519",
+    "samples": 50518
+  },
+  {
+    "Id": 866,
+    "filename": "audio_000866.wav",
+    "file_sha256": "2883586cb579df2d5b71f8a75f6b86785936c02e0e98c1b008e777856c066c28",
+    "samples": 53248
+  },
+  {
+    "Id": 867,
+    "filename": "audio_000867.wav",
+    "file_sha256": "4687df3c60fb79e88e7fa8a42252a453dfc937ecf35435ab4acae3d533505918",
+    "samples": 77824
+  },
+  {
+    "Id": 868,
+    "filename": "audio_000868.wav",
+    "file_sha256": "884e1eaccb793cfb5564052a5d585eb342864909d7feb61b76e6c85f49a5b644",
+    "samples": 32256
+  },
+  {
+    "Id": 869,
+    "filename": "audio_000869.wav",
+    "file_sha256": "6aa76877c742e08e071630f48997bc43b47778b99c525f532b8a55142c96c2b5",
+    "samples": 41856
+  },
+  {
+    "Id": 870,
+    "filename": "audio_000870.wav",
+    "file_sha256": "db7b5fcaeaf07173d06baabd552cbfa3b4708ae4d3a60bbcac9e0cc2b0b05904",
+    "samples": 47446
+  },
+  {
+    "Id": 871,
+    "filename": "audio_000871.wav",
+    "file_sha256": "88eba0c87725d3920110f7973c984207bad9bcc2378e9b7d11684c6eb12d7c06",
+    "samples": 30720
+  },
+  {
+    "Id": 874,
+    "filename": "audio_000874.wav",
+    "file_sha256": "0d82a9f47dab22361612d70c24246ee753205d7854fedb8d692e2f6e19f35615",
+    "samples": 127431
+  },
+  {
+    "Id": 875,
+    "filename": "audio_000875.wav",
+    "file_sha256": "9a2df036f6b369a61544c0e40460d84d2d42974aebd581d4b9f06997e092a7e0",
+    "samples": 93312
+  },
+  {
+    "Id": 876,
+    "filename": "audio_000876.wav",
+    "file_sha256": "f423792e8825b1a38a6e63412db9e51fd1c2420e60fe80829c131a57d1c213f0",
+    "samples": 44374
+  },
+  {
+    "Id": 877,
+    "filename": "audio_000877.wav",
+    "file_sha256": "791e66e50e5f66d4b8ef93ff548ceb0ffc6a497e97ebc64a4cb282bb015a8c26",
+    "samples": 37152
+  },
+  {
+    "Id": 878,
+    "filename": "audio_000878.wav",
+    "file_sha256": "6437edcfddf69ef9c7259591dea4560165c47b9bbfb47028afd95a7bb969be91",
+    "samples": 39006
+  },
+  {
+    "Id": 879,
+    "filename": "audio_000879.wav",
+    "file_sha256": "025eba41d0342b45bd57c6327dc790b880304e374f2ff7e7db8e94bc9ca79b73",
+    "samples": 54955
+  },
+  {
+    "Id": 880,
+    "filename": "audio_000880.wav",
+    "file_sha256": "34b2d639e3cceb9fe937e0f4ec8e599935d289f50525cfa0ee8916b24bbfb4cd",
+    "samples": 70217
+  },
+  {
+    "Id": 881,
+    "filename": "audio_000881.wav",
+    "file_sha256": "72b4fe4a14d28497e37d8c6d06efe42b81e4c0b6d9005285650c183aadb1cd9c",
+    "samples": 31966
+  },
+  {
+    "Id": 882,
+    "filename": "audio_000882.wav",
+    "file_sha256": "753180292d1ca51118854c589245fc4472239c966e9af7a55efdb2866a9ff9ba",
+    "samples": 55728
+  },
+  {
+    "Id": 885,
+    "filename": "audio_000885.wav",
+    "file_sha256": "d58291f203afe8b0f1792ebbca885b5b64b04ef78c9d0f571861f547713c75d0",
+    "samples": 39936
+  },
+  {
+    "Id": 886,
+    "filename": "audio_000886.wav",
+    "file_sha256": "d0d0c3aaecc9f7f026e72c62ac46669283363b93f74d37d159811cfa23fcb313",
+    "samples": 23326
+  },
+  {
+    "Id": 887,
+    "filename": "audio_000887.wav",
+    "file_sha256": "c8674d826c195e463771ff6c6b37646e9631c5c61fe061038f11ac582054ee27",
+    "samples": 39936
+  },
+  {
+    "Id": 888,
+    "filename": "audio_000888.wav",
+    "file_sha256": "39435fddb6962997303e7ac9304fd363016acc9768acc02eafcb735411de75e6",
+    "samples": 92508
+  },
+  {
+    "Id": 889,
+    "filename": "audio_000889.wav",
+    "file_sha256": "d5e7f8ac0efe219aac3c5e3f8ba95230f454ae4a9dc7fef9a77b398fb8f9dd6d",
+    "samples": 58710
+  },
+  {
+    "Id": 891,
+    "filename": "audio_000891.wav",
+    "file_sha256": "666e4d4598b0b0ebc182af6c51ed3ef8142b2bd7c06124bec35ca972b6dce98e",
+    "samples": 60416
+  },
+  {
+    "Id": 892,
+    "filename": "audio_000892.wav",
+    "file_sha256": "cb35042135e693b53cbb0148b46a9c4fa860a4b72e39c48c455226458ed2d3e5",
+    "samples": 38016
+  },
+  {
+    "Id": 894,
+    "filename": "audio_000894.wav",
+    "file_sha256": "e0b7beeed544256c08bc6e747cb0c0985d17d560390452fc6de20a6deb1b9820",
+    "samples": 60075
+  },
+  {
+    "Id": 895,
+    "filename": "audio_000895.wav",
+    "file_sha256": "8621973eedc7ce587dfa641fb1cd4a4cf7cdd4661b3ac7818c48263b2badadac",
+    "samples": 35096
+  },
+  {
+    "Id": 899,
+    "filename": "audio_000899.wav",
+    "file_sha256": "2bcf3a2099b75fe0879fb50f37fe6a2e4ec2b91f9500f01b9184ff43e6e6c424",
+    "samples": 57216
+  },
+  {
+    "Id": 900,
+    "filename": "audio_000900.wav",
+    "file_sha256": "de276faab17d916efc7047ad7a1ef9a312acfa2f092d7846c6cbf4798da6178d",
+    "samples": 63147
+  },
+  {
+    "Id": 901,
+    "filename": "audio_000901.wav",
+    "file_sha256": "a0dc76e200bc025602c3fa8635301bd6d26b9b5a70209acd47b57722964fb4eb",
+    "samples": 67245
+  },
+  {
+    "Id": 903,
+    "filename": "audio_000903.wav",
+    "file_sha256": "154621e51e7f076e7cda33e1ccf3c5fa5866d6c541d6c834dcc1084e3fd757b0",
+    "samples": 57344
+  },
+  {
+    "Id": 904,
+    "filename": "audio_000904.wav",
+    "file_sha256": "4b560a7ba096a84efec0f34579cf9a52fd64ef862436843f41b8a57977342487",
+    "samples": 38016
+  },
+  {
+    "Id": 906,
+    "filename": "audio_000906.wav",
+    "file_sha256": "eab178853dcc004ad2de5c17270bcfa8d3da3c6076eec3526b8e549a198acee9",
+    "samples": 56064
+  },
+  {
+    "Id": 908,
+    "filename": "audio_000908.wav",
+    "file_sha256": "4e87d86fa7c0ea3b8451b1417be9817430ab6576f0955b7347861e7d826e97fa",
+    "samples": 39966
+  },
+  {
+    "Id": 909,
+    "filename": "audio_000909.wav",
+    "file_sha256": "59b5a5e165564389ec37d3e4e2853a939b8b9285fbbbe9e21bc03bb3dc2bd2bd",
+    "samples": 60186
+  },
+  {
+    "Id": 910,
+    "filename": "audio_000910.wav",
+    "file_sha256": "7790ebceaebe621ac679efb29f5e9eb00631ab958de2f6376783ff8c2f945c60",
+    "samples": 30720
+  },
+  {
+    "Id": 912,
+    "filename": "audio_000912.wav",
+    "file_sha256": "fafb5c1155ffe28bfd74a975df4993f427e9030b2ee8173d03b0d46224bcd2db",
+    "samples": 36096
+  },
+  {
+    "Id": 913,
+    "filename": "audio_000913.wav",
+    "file_sha256": "f0afed2ace506218b070d8d6bc2782e2c46423349e33d7dde171d7a707c4b0b8",
+    "samples": 50518
+  },
+  {
+    "Id": 914,
+    "filename": "audio_000914.wav",
+    "file_sha256": "c50984b9a78aae427fd4bf925c647d80b7424a4071906cc563455d7de65c4b13",
+    "samples": 60446
+  },
+  {
+    "Id": 915,
+    "filename": "audio_000915.wav",
+    "file_sha256": "9c9fbd7635f35773de0bb9f6f6d931535ab5b5ca611560300e2b190a16fdb201",
+    "samples": 38784
+  },
+  {
+    "Id": 917,
+    "filename": "audio_000917.wav",
+    "file_sha256": "14c221c763de8e759e8faa7f338700eee99b5cc6d08e15e07474fd5a7dce7ad6",
+    "samples": 68267
+  },
+  {
+    "Id": 918,
+    "filename": "audio_000918.wav",
+    "file_sha256": "aeba4186fbcb04e1996205851ca2bc28e6df22174b153ff4b5daf9de18376419",
+    "samples": 39936
+  },
+  {
+    "Id": 919,
+    "filename": "audio_000919.wav",
+    "file_sha256": "cfaff022b80dc703b6b25350931537eb61b4f52518d6b0cc50a6d9bb3801dc4f",
+    "samples": 86784
+  },
+  {
+    "Id": 921,
+    "filename": "audio_000921.wav",
+    "file_sha256": "e0e072e5b065f0f499b020f8ca4e9faa069fa859f3dbff083ffaf6a7f3609cc7",
+    "samples": 30720
+  },
+  {
+    "Id": 922,
+    "filename": "audio_000922.wav",
+    "file_sha256": "a88885ad293f21d067031f38feafe99d58407ce45a357cd675565cf25d673239",
+    "samples": 55728
+  },
+  {
+    "Id": 923,
+    "filename": "audio_000923.wav",
+    "file_sha256": "073eb392faac233c55b1ebc3ba305d1d67d74714464561ea91a169abda9b989a",
+    "samples": 41472
+  },
+  {
+    "Id": 924,
+    "filename": "audio_000924.wav",
+    "file_sha256": "b9078c9fe1198442b93be92b9a83d403acdfadeaff00966e0991cc07e081be25",
+    "samples": 51072
+  },
+  {
+    "Id": 925,
+    "filename": "audio_000925.wav",
+    "file_sha256": "18096b37e4417a08c303e615a0e89e6217c9ca7b2370cbf8169a70b78a5db62f",
+    "samples": 49886
+  },
+  {
+    "Id": 926,
+    "filename": "audio_000926.wav",
+    "file_sha256": "6fa3eb15eea99db5a1ec05751a1a4c004cf7e6f619e983902e2383653b2ebf33",
+    "samples": 46080
+  },
+  {
+    "Id": 928,
+    "filename": "audio_000928.wav",
+    "file_sha256": "8d9d154ab84f07a3fd22fd14647092910600cf00718f03974cc15441a33714d0",
+    "samples": 36096
+  },
+  {
+    "Id": 929,
+    "filename": "audio_000929.wav",
+    "file_sha256": "854298f57a9bab01be9df975c58830a904ecd700c5515e6d50a35ea61b469a0b",
+    "samples": 103424
+  },
+  {
+    "Id": 930,
+    "filename": "audio_000930.wav",
+    "file_sha256": "7b9c86615cf1bc9c4a298d6950ad3bcc5b29ccad3a654da1624de0ec8a72a469",
+    "samples": 75776
+  },
+  {
+    "Id": 931,
+    "filename": "audio_000931.wav",
+    "file_sha256": "f3117623e5b98c96705259400fa53506f97b1146f7fdc36e1e9d969fcd939e77",
+    "samples": 45056
+  },
+  {
+    "Id": 932,
+    "filename": "audio_000932.wav",
+    "file_sha256": "ac48e8854fb704642024569b6fd1ea41b27a663d92e22c54c7db9d0ef33b834d",
+    "samples": 129792
+  },
+  {
+    "Id": 934,
+    "filename": "audio_000934.wav",
+    "file_sha256": "b84a4053919f465935b2485fd7390cb6722da9c50098ce1e9bcadbd25994f556",
+    "samples": 40960
+  },
+  {
+    "Id": 935,
+    "filename": "audio_000935.wav",
+    "file_sha256": "13b37f65bb641bbae7b7ad9838b7b0f6a22863bc09a9fc0f48c2c792f9e6ec2c",
+    "samples": 74070
+  },
+  {
+    "Id": 936,
+    "filename": "audio_000936.wav",
+    "file_sha256": "c21f0763059e1db687524a597c3c8d2d0a48505165d40f151f00cb6d6002cba2",
+    "samples": 40960
+  },
+  {
+    "Id": 937,
+    "filename": "audio_000937.wav",
+    "file_sha256": "bbdf31d80ed4f8f610b7ef4f98f60f6f0ad0ca00e3aff8180b77613ccb3438f6",
+    "samples": 43350
+  },
+  {
+    "Id": 938,
+    "filename": "audio_000938.wav",
+    "file_sha256": "b0e06675376ed13ad3d4f6ae23fecfd566e87e549cfcf655a296dfb50c213ad0",
+    "samples": 45312
+  },
+  {
+    "Id": 939,
+    "filename": "audio_000939.wav",
+    "file_sha256": "a6cba96bf91c7992c6408ddf58ed643c509cc485201af498e2b30784499a86d6",
+    "samples": 97280
+  },
+  {
+    "Id": 944,
+    "filename": "audio_000944.wav",
+    "file_sha256": "3b147bdfa8db2e3d9c9d31d60a5f8370cd48fe5c5c9f8af12cf3fb4a2d5ca9ab",
+    "samples": 49152
+  },
+  {
+    "Id": 945,
+    "filename": "audio_000945.wav",
+    "file_sha256": "0c6ddf2c43068f03b5c8a02ecb7b1912941a7fcb351a0091edec548c93c8d67f",
+    "samples": 38784
+  },
+  {
+    "Id": 946,
+    "filename": "audio_000946.wav",
+    "file_sha256": "08b04a0ec714028f3a7103fdb79c11c5a437ede886d508a9a93256bb846cb554",
+    "samples": 90624
+  },
+  {
+    "Id": 948,
+    "filename": "audio_000948.wav",
+    "file_sha256": "10381c4307d54715961fc6f1053174f23468f320623c8295ce44bce119629d1d",
+    "samples": 45056
+  },
+  {
+    "Id": 949,
+    "filename": "audio_000949.wav",
+    "file_sha256": "7998c40699eb764bc9f72b3c9d8a36f691dffd6722444bea9faa6bdb0ceb0107",
+    "samples": 54955
+  },
+  {
+    "Id": 952,
+    "filename": "audio_000952.wav",
+    "file_sha256": "38455362d81742c7405d6d2c9bd2cff694bf194df1597c191b788aa479ffe267",
+    "samples": 38016
+  },
+  {
+    "Id": 953,
+    "filename": "audio_000953.wav",
+    "file_sha256": "27f568a0904e2e087c146cf1f7f4c0945b6b046a48a24eea20827ba8174a4ed1",
+    "samples": 40960
+  },
+  {
+    "Id": 954,
+    "filename": "audio_000954.wav",
+    "file_sha256": "3792d65e964aa2c8a3331a611206d81de672d065f0d0934b3034629ed682429b",
+    "samples": 38230
+  },
+  {
+    "Id": 955,
+    "filename": "audio_000955.wav",
+    "file_sha256": "97a4e4baa587684932b2c261cbee04613f7033c8008f19ecc4d6fa14bcf23b6b",
+    "samples": 34526
+  },
+  {
+    "Id": 957,
+    "filename": "audio_000957.wav",
+    "file_sha256": "3c0655b8a73e6557928f82c422f6c78135a4138bde8029b38a567a7bc51e70fe",
+    "samples": 32606
+  },
+  {
+    "Id": 958,
+    "filename": "audio_000958.wav",
+    "file_sha256": "0813e8a242830a70e411b91b606a073ce8f03cbaec0057d5f572568214db6fb7",
+    "samples": 41886
+  },
+  {
+    "Id": 959,
+    "filename": "audio_000959.wav",
+    "file_sha256": "f8d41b337dbf071efc6d30174e8e0382f41dccf8a90642bf84e638a02c64d0a4",
+    "samples": 63830
+  },
+  {
+    "Id": 961,
+    "filename": "audio_000961.wav",
+    "file_sha256": "828c6513c9f5e4632964eb31b0deae0caec3d5a5c827aa1cfb0c0adb2dbc6a1c",
+    "samples": 49784
+  },
+  {
+    "Id": 962,
+    "filename": "audio_000962.wav",
+    "file_sha256": "e70d2868afa76d0e60c25cfc237ec67d9ab5341b4dd0a63221a072a105ae3f4e",
+    "samples": 47787
+  },
+  {
+    "Id": 963,
+    "filename": "audio_000963.wav",
+    "file_sha256": "f95b7e197cad18fe33b0ec4f2cd524410aba64ceff9b2761b9717fe920504946",
+    "samples": 39936
+  },
+  {
+    "Id": 964,
+    "filename": "audio_000964.wav",
+    "file_sha256": "6c7cb39442f473a06f908fdb8f608c933ea91e01be2e5036d35caaa418a3c7fc",
+    "samples": 51200
+  },
+  {
+    "Id": 965,
+    "filename": "audio_000965.wav",
+    "file_sha256": "e23832c795e38e81d90db6c9eeb905b8cb13742560832e5e81e7f4777cd55a01",
+    "samples": 37547
+  },
+  {
+    "Id": 966,
+    "filename": "audio_000966.wav",
+    "file_sha256": "b1147f4a11b3bb3d0ef0134937cfc7065f27f76383ea3f892ae9824bd9aa3132",
+    "samples": 57984
+  },
+  {
+    "Id": 967,
+    "filename": "audio_000967.wav",
+    "file_sha256": "2a31ac59741a7c8471f972593945a0adcdc71961da178e988bfa98d45da85baa",
+    "samples": 43008
+  },
+  {
+    "Id": 970,
+    "filename": "audio_000970.wav",
+    "file_sha256": "5f66e09f13e30441f4d17388908f54134c630707c01ddfa90ba5907db42514dc",
+    "samples": 63147
+  },
+  {
+    "Id": 971,
+    "filename": "audio_000971.wav",
+    "file_sha256": "70e8fb6ac663d45a5690b7222db2924bbe74241827cc230cffa7e32fe7b96703",
+    "samples": 24606
+  },
+  {
+    "Id": 972,
+    "filename": "audio_000972.wav",
+    "file_sha256": "8e4008eed31b564145b542ff87c30acbb2b87b33a33ca82497867a65f9fcb678",
+    "samples": 37206
+  },
+  {
+    "Id": 973,
+    "filename": "audio_000973.wav",
+    "file_sha256": "671d9a597778da2b839a099b07adf9847ac68ba0acc4f3eea96c0bf023d2b571",
+    "samples": 80214
+  },
+  {
+    "Id": 974,
+    "filename": "audio_000974.wav",
+    "file_sha256": "4f95ef74d8760d7cfc0a1861c345fa5e732ef699d1d8c28e6f80d7f1c041e6dc",
+    "samples": 50155
+  },
+  {
+    "Id": 977,
+    "filename": "audio_000977.wav",
+    "file_sha256": "2883586cb579df2d5b71f8a75f6b86785936c02e0e98c1b008e777856c066c28",
+    "samples": 53248
+  },
+  {
+    "Id": 978,
+    "filename": "audio_000978.wav",
+    "file_sha256": "78b922e7d16db55a6613d49438f5c27be24684224a643fd867f95cf983df849a",
+    "samples": 74752
+  },
+  {
+    "Id": 979,
+    "filename": "audio_000979.wav",
+    "file_sha256": "d966c71fe68fda6599af7cc252e409e163c92e0a4612970f9ac2a20b7e9018b3",
+    "samples": 23424
+  },
+  {
+    "Id": 980,
+    "filename": "audio_000980.wav",
+    "file_sha256": "b5f6fd5c66592a911e2811487b6f261b27d6447c264204ba98bd2f62d1a0993d",
+    "samples": 129792
+  },
+  {
+    "Id": 981,
+    "filename": "audio_000981.wav",
+    "file_sha256": "99cf69865c7f71b77af345b674bef995e4d56763e0f50c1f9b73d38c820e7aef",
+    "samples": 36766
+  },
+  {
+    "Id": 982,
+    "filename": "audio_000982.wav",
+    "file_sha256": "95e48cd6247ed89c978b06268f06acc943825a6818b1f6a0fbe91744919323b7",
+    "samples": 25344
+  },
+  {
+    "Id": 983,
+    "filename": "audio_000983.wav",
+    "file_sha256": "a104339b6e27852e570cde6c31ce78cb31c02641ea3def1b60fba22dbc516fb9",
+    "samples": 80256
+  },
+  {
+    "Id": 985,
+    "filename": "audio_000985.wav",
+    "file_sha256": "0f4e052c44aa44a29361aba139db6b2b1dc1504c400db62d2ec002575479f24f",
+    "samples": 91819
+  },
+  {
+    "Id": 988,
+    "filename": "audio_000988.wav",
+    "file_sha256": "0f31d0b1a05b877639fefc2b07864a05cf16cec715dc46443ed200cc7c8e2b01",
+    "samples": 53127
+  },
+  {
+    "Id": 989,
+    "filename": "audio_000989.wav",
+    "file_sha256": "e173e2f21fba20020aa148f8633a658df7b6488c48c27787cf7e30c204b02f43",
+    "samples": 41984
+  },
+  {
+    "Id": 990,
+    "filename": "audio_000990.wav",
+    "file_sha256": "535e57cf8109790795c3a04f0e2a87479663c36f811dfa8716781a9f74f076d1",
+    "samples": 93867
+  },
+  {
+    "Id": 991,
+    "filename": "audio_000991.wav",
+    "file_sha256": "e992b22db6542a0eb3e0db0c9085552d522fce75331337f9831bc0108c539c06",
+    "samples": 58368
+  },
+  {
+    "Id": 992,
+    "filename": "audio_000992.wav",
+    "file_sha256": "1ff676c27ef6e9caee3381d51fd7984bd4e286d5a29b63f586b938b68d8a1e15",
+    "samples": 41472
+  },
+  {
+    "Id": 993,
+    "filename": "audio_000993.wav",
+    "file_sha256": "8d4fbec5dbb7caa286edcd176444ae4085902689f38980d3a55740511651f8cc",
+    "samples": 34526
+  },
+  {
+    "Id": 994,
+    "filename": "audio_000994.wav",
+    "file_sha256": "75c23dcfd8c76005ef2cb3308cb15f77a981dcc7467a234ff997d0a344f8a9d3",
+    "samples": 45739
+  },
+  {
+    "Id": 995,
+    "filename": "audio_000995.wav",
+    "file_sha256": "aaaee5d2883213cd8f10ae9e5179d55057d03f98829840ebaefc09c9b6e3f4c3",
+    "samples": 47446
+  },
+  {
+    "Id": 996,
+    "filename": "audio_000996.wav",
+    "file_sha256": "5f90f877412de0087bf8b181d5ea9884ca07091952e5a28a1c5194b8fb5f0881",
+    "samples": 33024
+  },
+  {
+    "Id": 998,
+    "filename": "audio_000998.wav",
+    "file_sha256": "405f8d1625288d6c1ec9cc6e9130c4e76cde9eeeeede6ea23bc882d7e131f00f",
+    "samples": 29406
+  },
+  {
+    "Id": 999,
+    "filename": "audio_000999.wav",
+    "file_sha256": "c1db137e3e8d3449133ac20a080e185fdf97097508bb537d6e9875d03b3dacd3",
+    "samples": 45398
+  },
+  {
+    "Id": 1000,
+    "filename": "audio_001000.wav",
+    "file_sha256": "c00ddeecafd3995a8d02a98551b0b37b120ae15333d680fbec4b77e1ec0885c0",
+    "samples": 36446
+  },
+  {
+    "Id": 1001,
+    "filename": "audio_001001.wav",
+    "file_sha256": "d1824a1136950a5dddd765c13fb3f5623d1df836c25721ce6611301b45275f48",
+    "samples": 61099
+  },
+  {
+    "Id": 1002,
+    "filename": "audio_001002.wav",
+    "file_sha256": "2c4e9f70ff8f34f8191a7412c530bbf797d2309876db4c6460b473e60f1888d3",
+    "samples": 55296
+  },
+  {
+    "Id": 1003,
+    "filename": "audio_001003.wav",
+    "file_sha256": "1dcefaab0c30969a04cc695b4defe6047447d58058dd4fce9bbdb921141ca76c",
+    "samples": 37632
+  },
+  {
+    "Id": 1004,
+    "filename": "audio_001004.wav",
+    "file_sha256": "f4e55d9e6e0da2a041fef279c4249f52b325f5bf5c886275abe012c2eb8a01b9",
+    "samples": 58710
+  },
+  {
+    "Id": 1005,
+    "filename": "audio_001005.wav",
+    "file_sha256": "3b2e46491fe3516ae1ad2f130911366878ede24679778f944fd0989f2c2918be",
+    "samples": 43776
+  },
+  {
+    "Id": 1006,
+    "filename": "audio_001006.wav",
+    "file_sha256": "832311870e3f438b9139b632da28698a3b02fedf8070704d6c426f9319086047",
+    "samples": 52566
+  },
+  {
+    "Id": 1008,
+    "filename": "audio_001008.wav",
+    "file_sha256": "909e6a80b66df6e8064645555845b688aaddc3deecad38993268da4705d5b0e5",
+    "samples": 45739
+  },
+  {
+    "Id": 1009,
+    "filename": "audio_001009.wav",
+    "file_sha256": "6738531e2e56ad4e805868539f77e5f4166ed1b598849a71f611e59885287a34",
+    "samples": 61099
+  },
+  {
+    "Id": 1010,
+    "filename": "audio_001010.wav",
+    "file_sha256": "33aa51ab620e1d64e73e979d2bf9d242e44017ea55fc187b96afc2825ca03436",
+    "samples": 44766
+  },
+  {
+    "Id": 1011,
+    "filename": "audio_001011.wav",
+    "file_sha256": "caf96eebccbb6de5ff04ed8a8b462c91262995d8712c654283c63faccd8d180d",
+    "samples": 62123
+  },
+  {
+    "Id": 1012,
+    "filename": "audio_001012.wav",
+    "file_sha256": "4a4e2919f585a8599737f5255e3be06905d0cbd0d40d7809766159005daa5a25",
+    "samples": 52907
+  },
+  {
+    "Id": 1014,
+    "filename": "audio_001014.wav",
+    "file_sha256": "c8623e9cf21b3ca81b6ffe588e9e3b63e53492624cb4ec9cd56cff1c24e48a6a",
+    "samples": 25600
+  },
+  {
+    "Id": 1015,
+    "filename": "audio_001015.wav",
+    "file_sha256": "6cc7ffba89dd553f14346cad3bb1fd2a1008243cfd4e6f3b9e0ab8251567c84d",
+    "samples": 40619
+  },
+  {
+    "Id": 1016,
+    "filename": "audio_001016.wav",
+    "file_sha256": "63ad992e22791a44bad5eadf192debd78a6e79ada27a618d3d55e8727208fdb7",
+    "samples": 81238
+  },
+  {
+    "Id": 1017,
+    "filename": "audio_001017.wav",
+    "file_sha256": "cd3e19b38bc471ec43337800e7a4c612752e64947a3c38fa2f21e65f54492d7e",
+    "samples": 68608
+  },
+  {
+    "Id": 1018,
+    "filename": "audio_001018.wav",
+    "file_sha256": "4a74a38e96996f36d8a8709950b374421dd715af9636e8c61cdf52a67df1a9d1",
+    "samples": 47104
+  },
+  {
+    "Id": 1019,
+    "filename": "audio_001019.wav",
+    "file_sha256": "e9f5ca95771be4de0be2f6eea7a4ba2a5edd187dbba0d0196af30aa372765e6d",
+    "samples": 54272
+  },
+  {
+    "Id": 1020,
+    "filename": "audio_001020.wav",
+    "file_sha256": "0e4a29f0903c6bacdede53f75ae78d2d418f577b58eba3da9227b3ab93d80ce3",
+    "samples": 40960
+  },
+  {
+    "Id": 1021,
+    "filename": "audio_001021.wav",
+    "file_sha256": "6d5d27da692ca1cc9e0687c18fd30e3fe00b9110486e369a577c378e6a0ce8db",
+    "samples": 47616
+  },
+  {
+    "Id": 1022,
+    "filename": "audio_001022.wav",
+    "file_sha256": "e68c6610dd5cf73c00733dbba7b5bd87959c656386ad58cd9d8b0b097b46ac78",
+    "samples": 63488
+  },
+  {
+    "Id": 1023,
+    "filename": "audio_001023.wav",
+    "file_sha256": "21aec9a65a4d8ed534574c04afb3dfdff1d07d82ca4e18099287b836b9789f0a",
+    "samples": 58700
+  },
+  {
+    "Id": 1024,
+    "filename": "audio_001024.wav",
+    "file_sha256": "32f93c67469aee6ec519c420062afe7353072a9d3677c2bffef6ebb4d58d4ba2",
+    "samples": 51072
+  },
+  {
+    "Id": 1025,
+    "filename": "audio_001025.wav",
+    "file_sha256": "748a12cd671199e901a78a719ebe9def8f1c764a38fbf4b868c1d9dee71a8485",
+    "samples": 56320
+  },
+  {
+    "Id": 1026,
+    "filename": "audio_001026.wav",
+    "file_sha256": "668db78ba1312a811745f160936a041b45d3f4bed0c7323869d9e6c10524cbb7",
+    "samples": 40704
+  },
+  {
+    "Id": 1028,
+    "filename": "audio_001028.wav",
+    "file_sha256": "9786c7fda5441ff82b19399b4368b2a26b61ce676dd12d3dc05f95f5c03fb2b9",
+    "samples": 37632
+  },
+  {
+    "Id": 1029,
+    "filename": "audio_001029.wav",
+    "file_sha256": "cabda3507d2070055221dc3d5a35febbfacc3b2c324dda2f5705d5487b394238",
+    "samples": 48811
+  },
+  {
+    "Id": 1030,
+    "filename": "audio_001030.wav",
+    "file_sha256": "68151269741ab27bb5f16338ae9b5bd0158f8038053490684fd3ada1a6f6f4bb",
+    "samples": 31966
+  },
+  {
+    "Id": 1031,
+    "filename": "audio_001031.wav",
+    "file_sha256": "1c7675d8054bc083c02fdada9637aaf3766e40318f8b97ab145a6a80bed0fc3d",
+    "samples": 47787
+  },
+  {
+    "Id": 1032,
+    "filename": "audio_001032.wav",
+    "file_sha256": "62a3aebcb9e5cc2b843e6e91ff8883664ef1f5bd94a9300f6d1f7c8d8308db94",
+    "samples": 76800
+  },
+  {
+    "Id": 1033,
+    "filename": "audio_001033.wav",
+    "file_sha256": "8f5133b39886ab3281ee71ebef109fc17f7ea817010895176833ef19d60ceb6b",
+    "samples": 97963
+  },
+  {
+    "Id": 1035,
+    "filename": "audio_001035.wav",
+    "file_sha256": "c66ffe9bbf4ab3f98696ca1c8901da6c777d9efc9188fd077d439b8745518291",
+    "samples": 81579
+  }
+]
