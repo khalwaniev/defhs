@@ -1,0 +1,34 @@
+{
+  "model": "3loi/SER-Odyssey-Baseline-WavLM-Categorical",
+  "revision": "50632bbc8b89cbaa45077f1404601d9776cfe387",
+  "weights_sha256": "fb52f3f472b6a5a824ac238537fa60bf39a73d74b3fa5f4a4473c012cb3d18f4",
+  "rows": 826,
+  "dimension": 1024,
+  "dtype": "float32",
+  "native_class_order": [
+    "Angry",
+    "Sad",
+    "Happy",
+    "Surprise",
+    "Fear",
+    "Disgust",
+    "Contempt",
+    "Neutral"
+  ],
+  "transformers": "4.57.1",
+  "torch": "2.8.0+cpu",
+  "python": "3.12.14",
+  "device": "cpu",
+  "threads": 4,
+  "input_contract_sha256": "40bd961dbd6817a4d1dc9c3ae6e3515e1c461d1468cce835044478399adf8e13",
+  "source_files": {
+    "extract.py": "aeb01d8ac242e4cb4af82aaf9e8e0652e5b52cbc56f44d786780cb4ac391a9ce",
+    "pipeline_utils.py": "7a1033b5af29e5607a9213697be04d649464bd05dfa4b669ea6133a3900334e3",
+    "config.json": "2ba2fc9d21be1788889f7e9f5295cd0af8463f24faebfe2935ae3f1897761b09",
+    "wavlm_config.json": "a3d8fe831aaf63d725b54a8ac36f3549cd4365c5086774b2c89cabbc6f9e129d"
+  },
+  "label_blind": true,
+  "protected_validation_accessed": false,
+  "test209_inferred": false,
+  "sha256": "cbd8c55640f8fd6e52f7d1003a25f96c21298c7e55d70f512a770fba3d883764"
+}

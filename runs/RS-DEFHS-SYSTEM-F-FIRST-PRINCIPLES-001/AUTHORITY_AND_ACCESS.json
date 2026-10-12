@@ -1,0 +1,28 @@
+{
+  "mission": "RS-DEFHS-SYSTEM-F-FIRST-PRINCIPLES-001",
+  "parent_commit": "a6676d9777ace9e9746802b3256cd3eb52dd7339",
+  "protocol_commit": "5b638dbdffa65ced57e85a894446c53ee78b2463",
+  "utc_checkpoint": "2026-10-12T02:42:00Z",
+  "deadline_utc": "2026-10-12T18:30:00Z",
+  "deadline_source": "user authority; public Kaggle overview/rules fetch returned no readable text",
+  "live_quota": "UNVERIFIED: no authenticated Kaggle capability",
+  "submissions_and_final_selection": "UNVERIFIED: latest supplied E public score .89505; D .88227; C .86997; not freshly observed in account",
+  "executed_gpu_hours": 0,
+  "system_e_scientifically_promoted": false,
+  "E_failed_gate": "Q960_606 E-D=-0.03367392841077055, frozen floor -0.02",
+  "E_csv_sha256": "e47676192cbd02393a49889214238f34cb8b49df2f9772b30cb19d766589df90",
+  "E_evidence_zip_sha256": "dc0393a55644448fa85ddc142d7cf5a3c8877d90125d0a0ad9e5dff0734574bf",
+  "E_oof_sha256": "a7a1e456883119c60a2d5e77dd8cad93ba384cd707d66e3e5918cab974903aff",
+  "original_competition_zip_drive_id": "1D0DcnbK0vrJGTsvtb7-l7vnpdfNxc-nH",
+  "original_competition_zip_sha256": "100b38e6ed69542df88c1d295932a7a4c1914cd931ee64f7c6c848f6053bf214",
+  "wav_policy": "Only 826 train WAVs decoded/inferred; archive CRC checks are not target inference. All 826 file hashes matched original DATA_MANIFEST.",
+  "cpu_environment": "8 CPU core quota, 8 GiB RAM; torch 2.8.0+cpu installed successfully; no CUDA",
+  "selected_checkpoint_download_seconds": 26.88094227099998,
+  "boundary_tests": {
+    "run": 2,
+    "passed": 2,
+    "seconds": 0.134
+  },
+  "protected_validation_accessed": false,
+  "Kaggle_submission": false
+}

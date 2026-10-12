@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "gates": {
+    "repeat_features_le_1e5": true,
+    "repeat_native_argmax": true,
+    "memory_headroom": true,
+    "forecast_le_60min": true
+  },
+  "pilot_ids": [
+    486,
+    513,
+    417,
+    447
+  ],
+  "seconds": 8.001803633999998,
+  "conservative_forecast_seconds": 999.6434634860918,
+  "repeat_max_abs": 0.0,
+  "peak_rss_bytes": 2976407552,
+  "gpu_peak_reserved_bytes": 0,
+  "gpu_total_bytes": 0,
+  "state_key_conversions": [
+    [
+      "ssl_model.encoder.pos_conv_embed.conv.weight_g",
+      "ssl_model.encoder.pos_conv_embed.conv.parametrizations.weight.original0"
+    ],
+    [
+      "ssl_model.encoder.pos_conv_embed.conv.weight_v",
+      "ssl_model.encoder.pos_conv_embed.conv.parametrizations.weight.original1"
+    ]
+  ],
+  "strict_all_tensor_load": true
+}
