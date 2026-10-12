@@ -234,7 +234,6 @@ def main():
         assert sem23.shape==(826,15)
         local23=np.empty((826,4))
         local28=np.empty((826,4))
-        locald=np.empty((826,4))
         warnings.simplefilter("error",ConvergenceWarning)
         with threadpool_limits(limits=2):
             for f in range(5):
@@ -257,11 +256,9 @@ def main():
                 x23=np.column_stack([inner[tr],sem23[tr]])
                 x28=np.column_stack([x23,pq[tr]])
                 assert x23.shape[1]==23 and x28.shape[1]==28
-                d=mod["meta_lr"]().fit(x23[:,:18],y[tr])
                 m23=mod["meta_lr"]().fit(x23,y[tr])
                 m28=mod["meta_lr"]().fit(x28,y[tr])
                 v23=np.column_stack([pw[vl],sem23[vl]])
-                locald[vl]=d.predict_proba(v23[:,:18])
                 local23[vl]=m23.predict_proba(v23)
                 local28[vl]=m28.predict_proba(np.column_stack([v23,pq[vl]]))
                 print("COMPLETED OUTER FOLD",f,flush=True)
@@ -272,7 +269,6 @@ def main():
     assert np.array_equal(pr,olde.system_E_pred.to_numpy())
     hard=hard316(pw)
     driftE=float(np.max(np.abs(local23-pref)))
-    driftD=float(np.max(np.abs(locald-pdref)))
     margins23=np.sort(local23,axis=1)[:,-1]-np.sort(local23,axis=1)[:,-2]
     margins28=np.sort(local28,axis=1)[:,-1]-np.sort(local28,axis=1)[:,-2]
     drift_threshold=2*driftE
@@ -294,7 +290,6 @@ def main():
         "archivedE_vs_local23":compare(y,pref,local23,fold),
         "local23_vs_local28":compare(y,local23,local28,fold),
         "archivedE_vs_local28":compare(y,pref,local28,fold),
-        "archive_D_replay_max_probability_drift":driftD,
         "archive_E_replay_max_probability_drift":driftE,
         "archive_E_class_mismatches":int(np.sum(pr!=p23)),
         "HARD316":{
