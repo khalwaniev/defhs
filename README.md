@@ -22,6 +22,7 @@ Recorded public leaderboard scores were **0.88227 (D)** and **0.89505 (E)**, bas
 ### Start here
 
 - **[Research case study](docs/RESEARCH_PORTFOLIO.md):** objectives, data, architecture, results, ablations, robustness limits and evidence links.
+- **[Final experiment archive](archive/2026-10-13/README.md):** authenticated 28F result, paired OOF, exploratory System F notebooks and Qwen recovery scripts.
 - **[Post-competition archive checklist](docs/POST_COMPETITION_ARCHIVE_CHECKLIST.md):** preserved branches, external SHA256 manifests, pending local files and public-release requirements.
 - [Validation authority](docs/ACTIVE_VALIDATION.md) — 5-fold duplicate-family-safe frozen V-B / PRIMARY_CV.
 - [System E scientific report](runs/RS-DEFHS-FINAL-BREAKTHROUGH-001/SYSTEM_E_FINAL_SS_REPORT.md) — rigorous gains and explicit stress-gate failure.
