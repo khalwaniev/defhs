@@ -73,6 +73,8 @@ def compare(y, a, b, fold):
     return {
         "baseline": metrics(y, pa), "challenger": metrics(y, pb),
         "pooled_delta": mf(y, pb)-mf(y, pa),
+        "baseline_fold_f1": [mf(y[fold==i],pa[fold==i]) for i in range(5)],
+        "challenger_fold_f1": [mf(y[fold==i],pb[fold==i]) for i in range(5)],
         "fold_deltas": [mf(y[fold==i],pb[fold==i])-mf(y[fold==i],pa[fold==i]) for i in range(5)],
         "delete_one_fold_deltas": [mf(y[fold!=i],pb[fold!=i])-mf(y[fold!=i],pa[fold!=i]) for i in range(5)],
         "changed": int(np.sum(pa!=pb)),
@@ -320,6 +322,10 @@ def main():
     v=report["local23_vs_local28"]
     classdelta={c: v["challenger"]["per_class"][c]["f1"]-v["baseline"]["per_class"][c]["f1"] for c in LAB}
     report["per_class_f1_delta_local28_minus23"]=classdelta
+    report["local_23F_to_28F_corrected_ids"]=list(map(int,ids[(p23!=y)&(p28==y)]))
+    report["local_23F_to_28F_broken_ids"]=list(map(int,ids[(p23==y)&(p28!=y)]))
+    report["local_23F_to_28F_changed_ids"]=list(map(int,ids[p23!=p28]))
+    report["changed_candidate_near_numeric_drift_ids"]=list(map(int,ids[near28 & changed]))
     probe=(v["pooled_delta"]>=.005 and sum(t>0 for t in v["fold_deltas"])>=4
            and min(classdelta.values())>=-.02 and report["HARD316"]["local28_minus_local23"]>=0
            and min(v["delete_one_fold_deltas"])>0)
