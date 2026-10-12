@@ -1,0 +1,588 @@
+{
+  "mission": "RS-DEFHS-FINAL-SEMANTIC-INFORMATION-001-CONTINUATION",
+  "status": "EXPLORATORY_PAIRED_COMPARISON_COMPLETE_NOT_CERTIFIED",
+  "git_input_authority": "e82f6fe63f12ca99af2e128f72415e0dac0a31a9",
+  "system_e_prod_authority": "a6676d9777ace9e9746802b3256cd3eb52dd7339",
+  "no_test_inference": true,
+  "protected_access": false,
+  "kaggle_submission": false,
+  "input_sha256": {
+    "d_zip": "fb76b00dcc145c3ea7df6046ed7da594ff3b1ebd4cb52848184902876af61839",
+    "e_zip": "dc0393a55644448fa85ddc142d7cf5a3c8877d90125d0a0ad9e5dff0734574bf",
+    "new_q14_zip": "cd1481baea48c73fff0fe99c1da027f6b65d84e271b401d02dfec285fd4f8789",
+    "likelihood_csv": "66d01f825c9be4142452e6f04fb921dd8ece6c8f82aac5e0768a9941c0e4e788",
+    "folds": "87c6c0b33e5ea5c05b2bd2537d29480e4285cf816d4a921a6f1bcb3ef854139b",
+    "manifest": "1e5552d42aec94efae197e7dac95de41cfc96e40336f3e513b9a87e3ccc72469",
+    "d_source": "b77914ef4a358e6acc19497e242ca83b769f13b3dfdacde5d8522fc4a55bf525"
+  },
+  "feature_columns": [
+    "trie_p_angry",
+    "trie_p_happy",
+    "trie_p_neutral",
+    "trie_p_sad",
+    "trie_p_unclear"
+  ],
+  "likelihood_csv_unchanged": true,
+  "trie_row_sum_max_abs_error": 1.994390934623169e-06,
+  "trie_row_sum_rows_above_original_tolerance_1e_6": 248,
+  "trie_row_sum_accepted_integrity_tolerance": 3e-06,
+  "trie_probabilities_renormalized_or_modified": false,
+  "native_hard_state_parity_826": true,
+  "runtime": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "sklearn": "1.8.0",
+    "pandas": "2.2.3",
+    "joblib": "1.5.3",
+    "threadpoolctl": "3.6.0",
+    "machine": "x86_64",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "threads": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 2,
+        "prefix": "libscipy_openblas",
+        "filepath": "/home/fikar/zingle/defhs-semantic-information/work/ss_d_replay_exact_py3135/lib/python3.13/site-packages/numpy.libs/libscipy_openblas64_-fdde5778.so",
+        "version": "0.3.30",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 2,
+        "prefix": "libscipy_openblas",
+        "filepath": "/home/fikar/zingle/defhs-semantic-information/work/ss_d_replay_exact_py3135/lib/python3.13/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+        "version": "0.3.30",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 2,
+        "prefix": "libgomp",
+        "filepath": "/home/fikar/zingle/defhs-semantic-information/work/ss_d_replay_exact_py3135/lib/python3.13/site-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
+        "version": null
+      }
+    ],
+    "thread_env": {
+      "OPENBLAS_NUM_THREADS": "2",
+      "OMP_NUM_THREADS": "2",
+      "MKL_NUM_THREADS": "2",
+      "PYTHONNOUSERSITE": "1"
+    }
+  },
+  "archivedE_vs_local23": {
+    "baseline": {
+      "n": 826,
+      "macro_f1": 0.8774091527555827,
+      "per_class": {
+        "angry": {
+          "precision": 0.9047619047619048,
+          "recall": 0.926829268292683,
+          "f1": 0.9156626506024096,
+          "support": 205
+        },
+        "happy": {
+          "precision": 0.9166666666666666,
+          "recall": 0.859375,
+          "f1": 0.8870967741935484,
+          "support": 192
+        },
+        "neutral": {
+          "precision": 0.8266666666666667,
+          "recall": 0.8571428571428571,
+          "f1": 0.8416289592760181,
+          "support": 217
+        },
+        "sad": {
+          "precision": 0.8672985781990521,
+          "recall": 0.8632075471698113,
+          "f1": 0.8652482269503546,
+          "support": 212
+        }
+      },
+      "confusion": [
+        [
+          190,
+          3,
+          3,
+          9
+        ],
+        [
+          6,
+          165,
+          19,
+          2
+        ],
+        [
+          4,
+          10,
+          186,
+          17
+        ],
+        [
+          10,
+          2,
+          17,
+          183
+        ]
+      ]
+    },
+    "challenger": {
+      "n": 826,
+      "macro_f1": 0.8774091527555827,
+      "per_class": {
+        "angry": {
+          "precision": 0.9047619047619048,
+          "recall": 0.926829268292683,
+          "f1": 0.9156626506024096,
+          "support": 205
+        },
+        "happy": {
+          "precision": 0.9166666666666666,
+          "recall": 0.859375,
+          "f1": 0.8870967741935484,
+          "support": 192
+        },
+        "neutral": {
+          "precision": 0.8266666666666667,
+          "recall": 0.8571428571428571,
+          "f1": 0.8416289592760181,
+          "support": 217
+        },
+        "sad": {
+          "precision": 0.8672985781990521,
+          "recall": 0.8632075471698113,
+          "f1": 0.8652482269503546,
+          "support": 212
+        }
+      },
+      "confusion": [
+        [
+          190,
+          3,
+          3,
+          9
+        ],
+        [
+          6,
+          165,
+          19,
+          2
+        ],
+        [
+          4,
+          10,
+          186,
+          17
+        ],
+        [
+          10,
+          2,
+          17,
+          183
+        ]
+      ]
+    },
+    "pooled_delta": 0.0,
+    "baseline_fold_f1": [
+      0.856185237672039,
+      0.8854792266556972,
+      0.8851699770817418,
+      0.8730704050471493,
+      0.8838781307649449
+    ],
+    "challenger_fold_f1": [
+      0.856185237672039,
+      0.8854792266556972,
+      0.8851699770817418,
+      0.8730704050471493,
+      0.8838781307649449
+    ],
+    "fold_deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "delete_one_fold_deltas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "changed": 0,
+    "corrections": 0,
+    "breakages": 0,
+    "wrong_to_other_wrong": 0
+  },
+  "local23_vs_local28": {
+    "baseline": {
+      "n": 826,
+      "macro_f1": 0.8774091527555827,
+      "per_class": {
+        "angry": {
+          "precision": 0.9047619047619048,
+          "recall": 0.926829268292683,
+          "f1": 0.9156626506024096,
+          "support": 205
+        },
+        "happy": {
+          "precision": 0.9166666666666666,
+          "recall": 0.859375,
+          "f1": 0.8870967741935484,
+          "support": 192
+        },
+        "neutral": {
+          "precision": 0.8266666666666667,
+          "recall": 0.8571428571428571,
+          "f1": 0.8416289592760181,
+          "support": 217
+        },
+        "sad": {
+          "precision": 0.8672985781990521,
+          "recall": 0.8632075471698113,
+          "f1": 0.8652482269503546,
+          "support": 212
+        }
+      },
+      "confusion": [
+        [
+          190,
+          3,
+          3,
+          9
+        ],
+        [
+          6,
+          165,
+          19,
+          2
+        ],
+        [
+          4,
+          10,
+          186,
+          17
+        ],
+        [
+          10,
+          2,
+          17,
+          183
+        ]
+      ]
+    },
+    "challenger": {
+      "n": 826,
+      "macro_f1": 0.8809653562615154,
+      "per_class": {
+        "angry": {
+          "precision": 0.9134615384615384,
+          "recall": 0.926829268292683,
+          "f1": 0.9200968523002422,
+          "support": 205
+        },
+        "happy": {
+          "precision": 0.9120879120879121,
+          "recall": 0.8645833333333334,
+          "f1": 0.8877005347593583,
+          "support": 192
+        },
+        "neutral": {
+          "precision": 0.8333333333333334,
+          "recall": 0.8525345622119815,
+          "f1": 0.8428246013667426,
+          "support": 217
+        },
+        "sad": {
+          "precision": 0.8691588785046729,
+          "recall": 0.8773584905660378,
+          "f1": 0.8732394366197183,
+          "support": 212
+        }
+      },
+      "confusion": [
+        [
+          190,
+          3,
+          2,
+          10
+        ],
+        [
+          6,
+          166,
+          19,
+          1
+        ],
+        [
+          4,
+          11,
+          185,
+          17
+        ],
+        [
+          8,
+          2,
+          16,
+          186
+        ]
+      ]
+    },
+    "pooled_delta": 0.0035562035059326647,
+    "baseline_fold_f1": [
+      0.856185237672039,
+      0.8854792266556972,
+      0.8851699770817418,
+      0.8730704050471493,
+      0.8838781307649449
+    ],
+    "challenger_fold_f1": [
+      0.856185237672039,
+      0.8971977852301867,
+      0.8728417415917415,
+      0.884557839199937,
+      0.890673608539754
+    ],
+    "fold_deltas": [
+      0.0,
+      0.011718558574489446,
+      -0.012328235490000283,
+      0.011487434152787745,
+      0.0067954777748090445
+    ],
+    "delete_one_fold_deltas": [
+      0.004418109081262833,
+      0.0015855059856236808,
+      0.0074377276438089,
+      0.0015147919248352792,
+      0.0028198640539092157
+    ],
+    "changed": 10,
+    "corrections": 6,
+    "breakages": 3,
+    "wrong_to_other_wrong": 1
+  },
+  "archivedE_vs_local28": {
+    "baseline": {
+      "n": 826,
+      "macro_f1": 0.8774091527555827,
+      "per_class": {
+        "angry": {
+          "precision": 0.9047619047619048,
+          "recall": 0.926829268292683,
+          "f1": 0.9156626506024096,
+          "support": 205
+        },
+        "happy": {
+          "precision": 0.9166666666666666,
+          "recall": 0.859375,
+          "f1": 0.8870967741935484,
+          "support": 192
+        },
+        "neutral": {
+          "precision": 0.8266666666666667,
+          "recall": 0.8571428571428571,
+          "f1": 0.8416289592760181,
+          "support": 217
+        },
+        "sad": {
+          "precision": 0.8672985781990521,
+          "recall": 0.8632075471698113,
+          "f1": 0.8652482269503546,
+          "support": 212
+        }
+      },
+      "confusion": [
+        [
+          190,
+          3,
+          3,
+          9
+        ],
+        [
+          6,
+          165,
+          19,
+          2
+        ],
+        [
+          4,
+          10,
+          186,
+          17
+        ],
+        [
+          10,
+          2,
+          17,
+          183
+        ]
+      ]
+    },
+    "challenger": {
+      "n": 826,
+      "macro_f1": 0.8809653562615154,
+      "per_class": {
+        "angry": {
+          "precision": 0.9134615384615384,
+          "recall": 0.926829268292683,
+          "f1": 0.9200968523002422,
+          "support": 205
+        },
+        "happy": {
+          "precision": 0.9120879120879121,
+          "recall": 0.8645833333333334,
+          "f1": 0.8877005347593583,
+          "support": 192
+        },
+        "neutral": {
+          "precision": 0.8333333333333334,
+          "recall": 0.8525345622119815,
+          "f1": 0.8428246013667426,
+          "support": 217
+        },
+        "sad": {
+          "precision": 0.8691588785046729,
+          "recall": 0.8773584905660378,
+          "f1": 0.8732394366197183,
+          "support": 212
+        }
+      },
+      "confusion": [
+        [
+          190,
+          3,
+          2,
+          10
+        ],
+        [
+          6,
+          166,
+          19,
+          1
+        ],
+        [
+          4,
+          11,
+          185,
+          17
+        ],
+        [
+          8,
+          2,
+          16,
+          186
+        ]
+      ]
+    },
+    "pooled_delta": 0.0035562035059326647,
+    "baseline_fold_f1": [
+      0.856185237672039,
+      0.8854792266556972,
+      0.8851699770817418,
+      0.8730704050471493,
+      0.8838781307649449
+    ],
+    "challenger_fold_f1": [
+      0.856185237672039,
+      0.8971977852301867,
+      0.8728417415917415,
+      0.884557839199937,
+      0.890673608539754
+    ],
+    "fold_deltas": [
+      0.0,
+      0.011718558574489446,
+      -0.012328235490000283,
+      0.011487434152787745,
+      0.0067954777748090445
+    ],
+    "delete_one_fold_deltas": [
+      0.004418109081262833,
+      0.0015855059856236808,
+      0.0074377276438089,
+      0.0015147919248352792,
+      0.0028198640539092157
+    ],
+    "changed": 10,
+    "corrections": 6,
+    "breakages": 3,
+    "wrong_to_other_wrong": 1
+  },
+  "archive_E_replay_max_probability_drift": 4.484461542941798e-07,
+  "archive_E_class_mismatches": 0,
+  "HARD316": {
+    "n": 316,
+    "archiveE": 0.7781428026296813,
+    "local23": 0.7781428026296813,
+    "local28": 0.7865398689561369,
+    "local28_minus_local23": 0.008397066326455649
+  },
+  "Q960_606": {
+    "n": 41,
+    "class_supports": [
+      6,
+      10,
+      13,
+      12
+    ],
+    "archiveE": 0.8028340080971659,
+    "local23": 0.8028340080971659,
+    "local28": 0.8028340080971659,
+    "local28_minus_local23": 0.0,
+    "local28_minus_archivedD": -0.03367392841077055,
+    "historical_E_minus_D_failure": -0.03367392841077055
+  },
+  "candidate_margins": {
+    "min": 0.005483076602802894,
+    "q01": 0.01871843169061571,
+    "q05": 0.12887962246077125,
+    "n_weak_relative_to_measured_E_drift": 0,
+    "n_weak_and_changed": 0,
+    "warning": "Measured E numerical drift is a diagnostic comparator, not a proven bound on 28F drift."
+  },
+  "uncertainty": {
+    "status": "INCOMPLETE_AUTHENTIC_PROMPT_COMPONENTS_NOT_SUPPLIED"
+  },
+  "frozen_status": "Original System E Q960 failure remains; no frozen primary certification and no promotion.",
+  "per_class_f1_delta_local28_minus23": {
+    "angry": 0.004434201697832596,
+    "happy": 0.0006037605658099077,
+    "neutral": 0.0011956420907245358,
+    "sad": 0.00799120966936362
+  },
+  "local_23F_to_28F_corrected_ids": [
+    40,
+    67,
+    322,
+    485,
+    693,
+    1018
+  ],
+  "local_23F_to_28F_broken_ids": [
+    152,
+    712,
+    816
+  ],
+  "local_23F_to_28F_changed_ids": [
+    40,
+    67,
+    152,
+    322,
+    359,
+    485,
+    693,
+    712,
+    816,
+    1018
+  ],
+  "changed_candidate_near_numeric_drift_ids": [],
+  "scientific_disposition": "REJECT_LOCAL_COMPARISON"
+}
