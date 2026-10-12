@@ -1,0 +1,37 @@
+{
+  "rows": 826,
+  "errors": 102,
+  "true_second": 74,
+  "errors_acoustic_disagreement": 65,
+  "errors_correct_new_semantic": 32,
+  "errors_correct_e2v": 27,
+  "errors_correct_xlsr": 29,
+  "both_acoustic_wrong": 50,
+  "all_five_experts_wrong": 19,
+  "confusion": [
+    [
+      190,
+      3,
+      3,
+      9
+    ],
+    [
+      6,
+      165,
+      19,
+      2
+    ],
+    [
+      4,
+      10,
+      186,
+      17
+    ],
+    [
+      10,
+      2,
+      17,
+      183
+    ]
+  ]
+}
