@@ -1,82 +1,39 @@
-# DEFHS — Detecting Emotions from Hindi Speech
+# DEFHS — Hindi Speech Emotion Recognition
 
-Canonical research repository for the Kaggle competition:
+**Research-engineering case study | October 2026 | Competition completed**
 
-`dataverse-detecting-emotions-from-hindi-speech`
+**826 labeled recordings · 209 unlabeled test recordings · 4 classes · macro-F1**
 
-## Objective
+Developed and evaluated a low-data multimodal speech-emotion recognition pipeline combining **emotion2vec, XLS-R, Hindi ASR and Qwen-based semantic inference**, with explicit duplicate-safe validation, nested fusion, distribution-shift stress testing and reproducible inference.
 
-Maximize macro-F1 on the exact **209 supplied unlabeled test WAV files**, using
-the **826 labeled training WAVs** and predicting:
+## Results at a glance
 
-- angry
-- happy
-- neutral
-- sad
+| Frozen PRIMARY_CV model | Macro-F1 |
+|---|---:|
+| emotion2vec acoustic baseline | 0.73837 |
+| emotion2vec + XLS-R fixed pair | 0.77682 |
+| System D, acoustic–semantic ensemble | 0.83965 |
+| **System E, additional Qwen3-ASR semantic evidence** | **0.87741** |
 
-## Start here
+System E improved over D by **+0.03776 macro-F1** across the 826 labeled samples, with positive gains in all five original folds. An authenticated paired component-bootstrap interval was positive. **However, System E failed a predeclared quantization-related subgroup stress gate and was not scientifically promoted.** Its byte-reproduced 209-row inference is archived as an exploratory candidate.
 
-A fresh SS/RS should read these compact files, in this order:
+Recorded public leaderboard scores were **0.88227 (D)** and **0.89505 (E)**, based on user-reported competition observations; they are not a final private leaderboard result, and this repository does **not** claim first place or a completed System F.
 
-1. [ACTIVE_COMPETITION_STATE](docs/ACTIVE_COMPETITION_STATE.md)
-2. [ACTIVE_VALIDATION](docs/ACTIVE_VALIDATION.md)
-3. [TARGET209_STRATEGY](docs/TARGET209_STRATEGY.md)
+### Start here
 
-The active evidence hierarchy is **PRIMARY_CV → TARGET209_ANALYSIS → PUBLIC_LB**.
-PRIMARY_CV is the unchanged historical V-B under a simpler alias. The three
-active model families are WAVEFORM, SPECTROGRAM and SEMANTIC; dataset structure
-is auxiliary evidence.
+- **[Research case study](docs/RESEARCH_PORTFOLIO.md):** objectives, data, architecture, results, ablations, robustness limits and evidence links.
+- **[Post-competition archive checklist](docs/POST_COMPETITION_ARCHIVE_CHECKLIST.md):** preserved branches, external SHA256 manifests, pending local files and public-release requirements.
+- [Validation authority](docs/ACTIVE_VALIDATION.md) — 5-fold duplicate-family-safe frozen V-B / PRIMARY_CV.
+- [System E scientific report](runs/RS-DEFHS-FINAL-BREAKTHROUGH-001/SYSTEM_E_FINAL_SS_REPORT.md) — rigorous gains and explicit stress-gate failure.
+- [System E 209-row production replay](runs/SS-DEFHS-SYSTEM-E-EXPLORATORY-DEPLOYMENT-001/TARGET209_FINAL_CANONICAL_VERDICT.md) — reproducibility and 78 certified retrieval assignments.
+- [Source](scripts/) · [Kaggle execution packages](kaggle/) · [Tests](tests/) · [Experiment history](runs/).
 
-[PROJECT_STATE](docs/PROJECT_STATE.md) routes to current authority first and
-retains the full historical state below an explicit boundary. Use
-[HISTORICAL_VALIDATION_INDEX](docs/HISTORICAL_VALIDATION_INDEX.md) only when a
-specific risk question requires old evidence. **Do not recursively read
-historical runs unless a concrete scientific question requires them.**
-Before execution, apply [WORKFLOW](WORKFLOW.md) and the current mission / SS
-handoff. The [original objective lock](docs/OBJECTIVE_LOCK.md) remains preserved
-with an explicit mapping to current authority.
+### Scope and reproducibility
 
-## Authority model
+This repository stores original code, experimental protocols, reproducibility tests, audits, lightweight results and artifact manifests. Third-party datasets, model weights and larger representations are not bundled; consult the [archive checklist](docs/POST_COMPETITION_ARCHIVE_CHECKLIST.md) for authenticated prerequisites. Experimental code is **not** evidence that an experiment completed or that its candidate improved the deployed model.
 
-GitHub contains project logic and scientific state:
+**Visibility: private.** A cleaned public portfolio requires a separate review of competition rules, third-party rights, derivative data and repository history. The project used AI-assisted coding and research; only empirically verified outcomes are reported as findings.
 
-- source code;
-- configs;
-- validation definitions;
-- tests;
-- lightweight reports;
-- manifests;
-- mission history.
+### Historical scientific workflow
 
-Heavy artifacts live under Google Drive:
-
-`/DEFHS/`
-
-Detailed historical scientific evidence is preserved under:
-
-`runs/`
-
-The compact active documents define the current competition objective and
-evidence roles. `docs/PROJECT_STATE.md` preserves scientific state and routes
-workers to those documents before historical detail.
-
-## Repository map
-
-- `WORKFLOW.md` — governing workflow
-- `docs/ACTIVE_COMPETITION_STATE.md` — current TARGET209 objective and model families
-- `docs/ACTIVE_VALIDATION.md` — PRIMARY_CV alias and active evidence hierarchy
-- `docs/TARGET209_STRATEGY.md` — canonical prediction-matrix specification
-- `docs/TEST209_PREDICTION_MATRIX.csv` — populated 209-row evidence matrix; unavailable probability families stay empty
-- `docs/HISTORICAL_VALIDATION_INDEX.md` — on-demand archive/diagnostic map
-- `docs/OBJECTIVE_LOCK.md` — preserved original objective and current-authority mapping
-- `docs/PROJECT_STATE.md` — active entry point followed by preserved state history
-- `docs/EXTERNAL_DATA_POLICY.md` — external-data policy
-- `runs/` — detailed mission history and frozen scientific evidence
-- `experiments/` — experiment registry
-- `configs/` — configuration
-- `scripts/` — reproducible execution utilities
-- `src/defhs/` — reusable project code
-- `kaggle/` — Kaggle execution packages
-- `manifests/` — lightweight external-artifact manifests
-- `requirements/` — mission-specific environments
-- `tests/` — tests
+For the original step-by-step experimental authorities, see [WORKFLOW.md](WORKFLOW.md), [PROJECT_STATE.md](docs/PROJECT_STATE.md) and [HISTORICAL_VALIDATION_INDEX.md](docs/HISTORICAL_VALIDATION_INDEX.md). These documents describe the historical competition-time workflow rather than an active competition.
